@@ -1,4 +1,0 @@
-
-# Multiplayer
-
-About GameSparks.

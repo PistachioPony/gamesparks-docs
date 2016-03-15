@@ -1,4 +1,0 @@
-
-# Social Features
-
-About GameSparks.

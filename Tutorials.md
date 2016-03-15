@@ -1,5 +1,0 @@
----
-author: Amar Albadry
----
-
-# Tutorials
