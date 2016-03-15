@@ -2,11 +2,11 @@
 
 [toc]
 
-## **Introduction**
+## *Introduction*
 
 Once a Challenge has been created, it needs to be tested to ensure it behaves the intended way. This tutorial will explain the best practices to follow so that a Challenge and the associated Players can be verified before it is integrated into the SDK.
 
-## **Understanding Challenges**
+## *Understanding Challenges*
 
 Before testing a Challenge, there are certain aspects to be learned, which will help to construct more effective Challenges to meet the needs of the application.
 
@@ -14,30 +14,30 @@ Before testing a Challenge, there are certain aspects to be learned, which will 
 
 The challenge states are as follows:
 
-  * **WAITING** : The challenge has past the expiry time with the right conditions to start but the start time hasn't been met.
-  * **RUNNING** : The challenge is active.
-  * **ISSUED **: The challenge has been issued by the challenger and is now waiting for the start condition to be met or expiry time to be met to transition to "WAITING" or go straight into "RUNNING".
-  * **EXPIRED: **Expiry time has been met before start conditions could be met.
-  * **COMPLETE** : The challenge has completed.
-  * **RECEIVED** : The challenge has been issued to the current player and is waiting to be accepted. (Private challenge)
-  * **DECLINED** : The challenge has been issued by the current player and has been declined. (Private challenge)
-  Challenge transition from "**ISSUED**" state to "**RUNNING**" state:
+  * *WAITING* : The challenge has past the expiry time with the right conditions to start but the start time hasn't been met.
+  * *RUNNING* : The challenge is active.
+  * *ISSUED* : The challenge has been issued by the challenger and is now waiting for the start condition to be met or expiry time to be met to transition to "WAITING" or go straight into "RUNNING".
+  * *EXPIRED:* Expiry time has been met before start conditions could be met.
+  * *COMPLETE* : The challenge has completed.
+  * *RECEIVED* : The challenge has been issued to the current player and is waiting to be accepted. (Private challenge)
+  * *DECLINED* : The challenge has been issued by the current player and has been declined. (Private challenge)
+  Challenge transition from "*ISSUED*" state to "*RUNNING*" state:
 
   * Declaring a start time won't start the challenge if min players are met - you need to manually run it through cloud code using getChallenge(ChallengeID).startChallenge().
   * Not declaring a start time will start the game if the minimum amount of players are met, if minimum players is not declared, challenge will start when at least one player joins the challenger.
   * If "autoStartJoinedChallengeOnMaxPlayers" = true then challenge will start when maxPlayers value is met (If start time is declared, if not then the game will start when minimum players is met).
-Challenge transition from "**ISSUED**" state to "**EXPIRED**" state:
+Challenge transition from "*ISSUED*" state to "*EXPIRED*" state:
 
   * When challenge conditions are not met before the expiry time is met.
   * If challenge has a start time and "autoStartJoinedChallengeOnMaxPlayers" = false and the challenger doesn't start the challenge manually before the expiry time is met.
   * if challenge has a start time and "autoStartJoinedChallengeOnMaxPlayers" = true and max players condition is not met before the expiry time is met.
-Challenge transition from "**ISSUED**" to "**WAITING**":
+Challenge transition from "*ISSUED*" to "*WAITING*":
 
   * Start conditions and expiry time have been met but the start time is yet to be met.
-Challenge transition from "**WAITING**" to "**RUNNING**":
+Challenge transition from "*WAITING*" to "*RUNNING*":
 
   * When start time is met.
-Challenge transition from "**RUNNING**" to "**COMPLETE**":
+Challenge transition from "*RUNNING*" to "*COMPLETE*":
 
   * When all players participating in the challenge have spent their turn counts.
   * When the end time is met.
@@ -57,23 +57,27 @@ By using cloud code through challenge event logs you can pass in the challenge I
   * You can save, track, use and remove persistent data saved on a challenge to do your own custom logic to determine who wins, who loses and what sequences of logic is followed by your challenge using scriptData. You can manipulate scriptData using getscriptData(), setscriptData() and removescriptData() methods.
  
 
-## **Testing your challenge**
+## *Testing your challenge*
 
 To simulate multiple players interaction with a challenge we recommend that you open a number of tabs on your browser and use the test harness to simulate interaction from clients. For this test, open three tabs on your browser and authenticate a player on every tab.
 
 First authenticated player will create a challenge, for this example we'll make it a public challenge which will start when the maximum amount of players is met.
+
 ![](/wp-content/uploads/2015/11/ChallengerCreating-300x160.jpg)
 
 Second authenticated player joins the challenge using challenge ID.
+
 ![FirstPublicJoin](/wp-content/uploads/2015/11/FirstPublicJoin-300x160.jpg)
 
 When you switch to the first authenticated player's tab you can see a message (In orange, these messages can be caught by listeners) indicating that a player has joined the challenge. The challenge state will remain "ISSUED" until the max amount of players join the challenge.
+
 ![AfterFirstPublicJoined](/wp-content/uploads/2015/11/AfterFirstPublicJoined-300x159.jpg)
 
 Finally after the third authenticated player join the challenge through the third tab the other two players will recieve a message (In orange) indicating that a player has joined the challenge and the state of the challenge would change to "RUNNING" because the maximum amount of players has been achieved.
+
 ![](/wp-content/uploads/2015/11/AfterSecondPublicJoin-300x172.jpg)
  
 
-## **Challenge Chat**
+## *Challenge Chat*
 
 You can use the challenge ID to reference a challenge and send a message to everyone involved. The message contains a string determined by the player , the rest is information about who sent the message and the challenge details. Simply calling the request and supplying it with a message string will take care of distributing it to the rest of the players involved. Use challenge message listeners to intercept these messages, extracting the message string and who from and view them to players in-game.

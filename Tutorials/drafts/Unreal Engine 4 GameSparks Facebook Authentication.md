@@ -6,33 +6,32 @@ GameSparks allows you to use social authentication to keep track of your players
 
 ## Setting up your project
 
-##
 
-### **Unreal Setup**
+### *Unreal Setup*
 
  
 
-#### **DefaultEngine.ini**
+#### *DefaultEngine.ini*
 
 First you need to configure your game for the  Facebook online subsystem. For this you need to have a Facebook AppID which you can get from the Facebook developer page.
 
 
-
+```
     [OnlineSubsystemFacebook]
     bEnabled = true
 
     [OnlineSubsystemFacebook.OnlineIdentityFacebook]
     ClientId = Your Facebook AppID
-
+```
 
  
 
-#### **YourProject.Build.cs**
+#### *YourProject.Build.cs*
 
 In your project's build file, you need to include extra modules which will allow you to activate the interface to online subsystems and allow you to use the API to integrate Facebook into your project.
 
 
-
+```
     using UnrealBuildTool;
 
     public class YourProjectName: ModuleRules
@@ -61,24 +60,27 @@ In your project's build file, you need to include extra modules which will allow
     }
     }
     }
-
+```
 
  
 
-#### **Refresh your visual studio project through the editor**
+#### *Refresh your visual studio project through the editor*
 
 After you include the modules into your project refresh your C++ files through the Editor so the changes are recognised in your project. Failing to do this step will result in your "Online.h" and "OnlineSubsystemFacebook.h" not being recognised.
-![](/wp-content/uploads/2015/12/bandicam-2015-12-16-16-20-18-587-300x177.jpg)
+
+
+![](img\UE4FB\1.jpg)
  
 
-### **Facebook App Settings**
+### *Facebook App Settings*
 
  
 
 In your Facebook settings advanced tab flip the button to state that your app is a native one if you're developing or debugging on desktop. For 'Valid OAuth redirect URIs' ensure that you add https://www.facebook.com/connect/login_success.htmlThat is all you need, in the images you can see how we setup our App.
 
-![](/wp-content/uploads/2015/12/bandicam-2015-12-16-15-32-11-581-300x276.jpg)
-![](/wp-content/uploads/2015/12/bandicam-2015-12-16-15-32-54-179-300x276.jpg)
+![](img\UE4FB\2.jpg)
+
+![](img\UE4FB\3.jpg)
 
 To use Facebook authentication with GameSparks follow the tutorial to setup Unreal for GameSpark integration, [here](/tutorials/unreal-setup).
    
@@ -87,11 +89,11 @@ To use Facebook authentication with GameSparks follow the tutorial to setup Unre
 
  
 
-### **Header**
+### *Header*
 
 This is the component which will expose the Online Subsystem API to the Blueprints. Exposing the API through a component allows us to use delegates comfortably and allows us to call the functions through GetGameMode->FBAPIComponent->Function from anywhere in BluePrint.
 
-
+```
     	//GameSparks LTD
     #pragma once
 
@@ -143,49 +145,90 @@ This is the component which will expose the Online Subsystem API to the Blueprin
     	virtual void TickComponent( float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction ) override;
 
     };
-
+```
 
  
 
-### **CPP**
+### *CPP*
 
+```
+//GameSparks LTD
 
-     //GameSparks LTD
+#include "FacebookTest.h" //Your project name
+#include "FBAPIComponent.h" // The header of this CPP
 
-    #include "FacebookTest.h" //Your project name
-    #include "FBAPIComponent.h" // The header of this CPP
+// Sets default values for this component's properties
+UFBAPIComponent::UFBAPIComponent()
+{
+	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
+	// off to improve performance if you don't need them.
+	bWantsBeginPlay = true;
+	PrimaryComponentTick.bCanEverTick = true;
 
+	// ...
+}
 
-    // Sets default values for this component's properties
-    UFBAPIComponent::UFBAPIComponent()
-    {
-    	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
-    	// off to improve performance if you don't need them.
-    	bWantsBeginPlay = true;
-    	PrimaryComponentTick.bCanEverTick = true;
+// Called when the game starts
+void UFBAPIComponent::BeginPlay()
+{
+	Super::BeginPlay();
 
-    	// ...
-    }
+	//Make instance of online subsystem
+	FBSubSystem = IOnlineSubsystem::Get(TEXT("Facebook"));
 
+	//Init Subsystem
+	FBSubSystem->Init();
 
-    // Called when the game starts
-    void UFBAPIComponent::BeginPlay()
-    {
-    	Super::BeginPlay();
+	//Assign Delegate Function to handle login
+	FBSubSystem->GetIdentityInterface()->AddOnLoginCompleteDelegate_Handle(0, FOnLoginCompleteDelegate::CreateUObject(this, &UFBAPIComponent::ReturnAuthToken));
 
-    	//Make instance of online subsystem
-    	FBSubSystem = IOnlineSubsystem::Get(TEXT("Facebook"));
+}
 
-    	//Init Subsystem
-    	FBSubSystem->Init();
+void UFBAPIComponent::ReturnAuthToken(int32 LocalUserNum, bool bWasSuccessful, const FUniqueNetId& UserId, const FString& Error)
+{
+	//Returns AuthToken
+	AuthToken = FBSubSystem->GetIdentityInterface()->GetAuthToken(0);
+	//Broadcast this delegate which will contain the AuthToken to be used by the GSFacebookConnectRequest node
+	OnAuthChangeDelegate.Broadcast(AuthToken);
+}
 
-    	//Assign Delegate Function to handle login
-    	FBSubSystem->GetIdentityInterface()->AddOnLoginCompleteDelegate_Handle(0, FOnLoginCompleteDelegate::CreateUObject(this, &UFBAPIComponent::ReturnAuthToken));
+void UFBAPIComponent::FacebookLogin(FString UserName, FString Password)
+{
+	//Exposed to Blueprint so UserName and Password can be passed in. Account type must be 'facebook' so the subsystem recognises which authentication process to use.
+	NewAccount = new FOnlineAccountCredentials;
+	NewAccount->Id = UserName;
+	NewAccount->Token = Password;
+	NewAccount->Type = "facebook";
 
-    }
+	//Use native subsystems' login
+	FBSubSystem->GetIdentityInterface()->Login(0, *NewAccount);
+}
 
-    void UFBAPIComponent::ReturnAuthToken(int32 LocalUserNum, bool bWasSuccessful, const FUniqueNetId& UserId, const FString& Error)
-    {
-    	//Returns AuthToken
-    	AuthToken = FBSubSystem->GetIdentityInterface()->GetAuthToken(0);
-    	//Broadcast this delegate which will contain the AuthToken to be used by the GSFacebookConnectRequest node
+// Called every frame
+void UFBAPIComponent::TickComponent( float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction )
+{
+	Super::TickComponent( DeltaTime, TickType, ThisTickFunction );
+
+	// ...
+}
+
+```
+
+## Unreal Engine Editor and Blueprint
+
+To get the Facebook authentication to work for Blueprint:
+
+*   Open your GameMode and add a GameSparks component and the FBAPI Component.
+*   Follow the instructions to setting up GameSparks.
+*   Drop a reference of the FBAPI component in the event graph and access its functions.
+*   For the FBAPI Component you'll need an event or function which will call the C++ login function which takes a username and password parameters.
+*   Click on the FBAPI component on the components list of your GameMode screen and in the details window add the 'On Auth Change' event. Connect the GameSparks Facebook Authentication Request node to the event, connecting the Auth token from the event to the access token slot in the GameSparks request node.
+*   Design a way for your users to input their details or manually do so for testing.
+
+We have attached uassets which show an example of this working with a UMG Widget interface.
+
+![](img\UE4FB\4.jpg)
+
+## DefaultEngine Config file, ProjectBuild file, FBAPIComponent CPP, Header, Gamemode blueprint and Widget blueprint examples
+
+Downloadables
