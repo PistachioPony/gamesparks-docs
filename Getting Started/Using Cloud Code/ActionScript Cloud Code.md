@@ -1,7 +1,5 @@
 # ActionScript Cloud Code
 
-[toc]
-
 ## *Introduction*
 
 After making the *Set_Pos* and *Get_Pos* Events in the portal, it's time to call them from your game. In this tutorial you will learn how to use a persistent variable saved against the Player to change their sprite location. *Setting up your Set and Get Functions*

@@ -1,7 +1,5 @@
 # Unreal Virtual Goods
 
-[toc]
-
 ## Introduction
 
 After following the tutorial [Creating a Virtual Good](..\Creating A Virtual Good.html), you can now create the ability to buy them, consume them and retrieve a list of what exactly your authenticated player has in their inventory. * Setting up the Shop Screen*

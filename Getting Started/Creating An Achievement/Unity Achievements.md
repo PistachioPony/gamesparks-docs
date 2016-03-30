@@ -1,7 +1,5 @@
 # Unity Achievements
 
-[toc]
-
 ## Introduction
 
 In this tutorial you will you will be introduced to Achievements using the GameSparks platform. This tutorial assumes that you are already familiar with creating Events and setting up message-listeners in Unity. You can check out tutorials on these topics [here](../Creating A Leaderboard\Unity Leaderboard.html). It also assumes that you followed the [previous](..\Creating An Achievement.html) tutorial on creating an Achievement and the Event that will be used to reward the Achievement. You don’t need anything extra to follow this tutorial, but if you’d like to see the project you can download it here.

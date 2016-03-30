@@ -1,7 +1,4 @@
-
 # Unity Leaderboard
-
-[toc]
 
 ## Introduction
 

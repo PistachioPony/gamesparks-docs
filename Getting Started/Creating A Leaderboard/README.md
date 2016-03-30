@@ -1,7 +1,5 @@
 # Creating a Leaderboard
 
-[toc]
-
 ## Introduction
 
 The Leaderboards functionality on the GameSparks platform is not limited to Leaderboards in their traditional sense. This functionality allows you to monitor any comparisons of players performance and then support artefacts in-game that flexibly display this information in a meaningful form to players. GameSparks Leaderboards functionality also allows support for complex, contextual displays of information about other players and also provides the framework for many social and competitive features of your game. In this tutorial we will go over the simple processes involved in creating an Event, attaching it to a Leaderboard, posting a score, and receiving a HighScore Message.

@@ -1,7 +1,0 @@
-# A/B Testing using Experiments
-
-In this tutorial, you will successfully create an Experiment and include Players within that Experiment, seeing the results it produces when the Players interact with the platform configuration affected by the Experiment, in comparison to that outside of the Experiment.    
-
-## Creating an Experiment
-
-*1. *To create an Experiment, navigate to the Portal's *Manage *and go to the *Experiments* Screen. ![Screen Shot 2016-01-28 at 15.08.16](/wp-content/uploads/2016/01/Screen-Shot-2016-01-28-at-15.08.161.png) *2. *In the *Experiments* Screen, select the *Add New* button on the *Future Experiments *section. ![Screen Shot 2016-02-02 at 11.05.10](https://docs.gamesparks.net/wp-content/uploads/2016/01/Screen-Shot-2016-02-02-at-11.05.10.png) *3. *In the *Create Experiment *form, specify the *Name* and *Description* of your Experiment as well as the *Start Date*, *End Date* and *Percentage Hash*. All the Players on my game have a username beginning with "player".  I have set a user query to include all the Players will be part of the Experiment.  However, 50% of them will be in variant and the other 50% will be in variant02. In variant01, the cost of the Gold Virtual Good is reduced by 50% across all currencies. ![Screen Shot 2016-02-02 at 10.56.02](https://docs.gamesparks.net/wp-content/uploads/2016/01/Screen-Shot-2016-02-02-at-10.56.02.png)   In variant02, the cost of the Gold Virtual Good is reduced by 25% across all currencies, as well as having a different tag and name.

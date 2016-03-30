@@ -1,14 +1,13 @@
 # User Password Change
 
-[toc]
 
-## *Introduction*
+## Introduction
 
 If one of your users loses or forgets their password you'll want an automated way for them to retrieve it. This tutorial will show you how to set up cloud code to do just that. This setup is the most basic way users have access to your platform without them having to be authenticated and can be developed for more advanced and specific applications.    
 
-## *Cloud Code Section*
+## Cloud Code Section
 
-### *Choosing our sequence of actions and passing in scriptData*
+### Choosing our sequence of actions and passing in scriptData
 
 Navigate to the *Configurator* ->* Cloud Code* and find the Authentication Request under the requests tab and start editing it. This will allow users to run the password recovery logic without having an authenticated account.The first thing the *Cloud* *code* will need to work is the '*action*' variable. The '*action*' variable will determine which sequence of instructions to perform. In this example we have two sequences, password recovery and password reset. Password recovery will generate a token which will be sent via email and password reset will take this token and a password and change the password.The '*status*' variable will help you debug and determine whether the function was successfully completed and if not, it'll help you print out why not.
 
@@ -36,7 +35,7 @@ Navigate to the *Configurator* ->* Cloud Code* and find the Authentication Reque
     }
 ```  
 
-### *Password Recovery Sequence*
+### Password Recovery Sequence
 
 You'll need to link the user account to an E-mail. This can either be done through the initial authentication using *scriptData* or later on through an event by saving it on the player using *setScriptData*.If the email passed in is linked to an account then a unique token will be generated, linked to the account and the email sending function will be called which sends an email which contains the token to be used in the reset password sequence to change the password.
 
@@ -61,7 +60,7 @@ You'll need to link the user account to an E-mail. This can either be done throu
 ```  	
 
 
-### *Token Generation*
+### Token Generation
 
 This is our example of a token generating function. Yours could be anything you want it to be, but be careful that there aren't any duplicates otherwise that would cause you a lot of problems. This is a simple string, which retrieves the date combined with "*randomlyGeneratedToken-*" which can easily be taken advantage of.
 
@@ -70,7 +69,7 @@ This is our example of a token generating function. Yours could be anything you 
         return "randomlyGeneratedToken-" + new Date().getTime();} // this should be cryptographically strong, not simply date-based
 
 
-### *Sending out the E-Mail*
+### Sending out the E-Mail
 
 We have full integration with *SendGrid* services. If you plan to use it to send your E-Mails then create an account with them and wait for their "Your SendGrid account has been provisioned!" E-Mail which will allow you to start sending emails, it might take up to 24 hours to receive it. You'll need: The E-Mail to send to, the E-Mail sent from, Subject, E-Mail contents and finally to send the E-Mail.
 
@@ -91,7 +90,7 @@ We have full integration with *SendGrid* services. If you plan to use it to send
     }
 ```    
 
-### *Password Reset Sequence*
+### Password Reset Sequence
 
 Finally you have the password reset function which takes a token and password parameter and checks to see if the Token is linked to an account, if it is then it sets the password of that account to the new password passed in.
 
@@ -119,15 +118,15 @@ Finally you have the password reset function which takes a token and password pa
 
  
 
-## *Changing Password Using The SDK*
+## Changing Password Using The SDK
 
  
 
-### *Sending E-Mail*
+### Sending E-Mail
 
 For this step you'll have to allow the user to input their E-Mail. Once they've passed in their E-Mail you will need to have a function which creates an *object* (New Object,GSData,GSRequestData) which stores the '*email*' and '*action*' variables. The '*action*' string variable will be set to "*passwordRecoveryRequest*". When both variables have been set and stored in in the object, call the Authentication Request and send that object as *scriptData*. Make sure you leave spaces or quotes for both Username and Password fields for the Authentication request.
 
 
-### *Changing Password*
+### Changing Password
 
 After the player has been sent a token, they'll want to be able to change their password. Allow the player to input their token and a new password. Once the player has passed these values through, create an object which stores the variable '*token*' as a string , '*password*' as a string which will store the value of the password passed in and '*action*' as a string set as "*resetpassword*". Once the object has been set, send it as *scriptData* using the Authentication request. Make sure you leave spaces or quotes for both Username and Password fields for the Authentication request.

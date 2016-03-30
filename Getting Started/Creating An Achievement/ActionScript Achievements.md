@@ -1,7 +1,5 @@
 # ActionScript Achievements
 
-[toc]
-
 ## *Introduction*
 
 After making an Event that awards your Player an Achievement using Cloud Code in the Portal, you can now incorporate them into your game. This tutorial will show you how to award the Player an Achievement and a way to check the Achievements a Player has earned in-game.

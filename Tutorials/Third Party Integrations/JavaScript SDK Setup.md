@@ -2,8 +2,6 @@
 
 The GameSparks JavaScript SDK allows you to interact with the GameSparks platform from any JavaScript environment.
 
-[toc]
-
 ## Getting the SDK
 
 Download the SDK, and example HTML here:

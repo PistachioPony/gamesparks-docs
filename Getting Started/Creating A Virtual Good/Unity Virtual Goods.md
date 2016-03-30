@@ -1,7 +1,5 @@
 # Unity Virtual Goods
 
-[toc]
-
 ## Introduction
 
 In this tutorial we are going to show you how to buy and consume Virtual Goods using the GameSparks platform. You will also look at how to get a list of what Virtual Goods are owned by the player. Before following this tutorial, make sure you have checked out the previous tutorial '[Creating Virtual Goods](..\Creating A Virtual Good.html)'. Nothing else is needed to carry out this tutorial. However, if you would like to see the project you can download it here.

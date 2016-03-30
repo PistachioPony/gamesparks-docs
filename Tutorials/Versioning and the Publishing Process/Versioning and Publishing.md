@@ -1,6 +1,6 @@
 # Versioning and Publishing
 
-### Versioning
+## Versioning
 
 You can create versions of your game configuration whenever you like. There are a number of reasons you might want to create a version, including:
 

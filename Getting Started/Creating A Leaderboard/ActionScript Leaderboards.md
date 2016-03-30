@@ -1,7 +1,5 @@
 # ActionScript Leaderboards
 
-[toc]
-
 ## *Introduction*
 
 The previous tutorial taught you how to [create a Leaderboard](..\Creating A Leaderboard.html) and Event that submits your Player's score. Now you can incorporate them into your ActionScript project. For the sake of this tutorial we have created a sample game that runs for 10 seconds. In those 10 seconds the Player must collect as many points as possible. If the Player beats the current high score, they will be notified by a message.
