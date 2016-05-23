@@ -2,7 +2,7 @@
 
 From the NoSQL tab you have the ability to interact with the data stored on the platform.
 
-![](img\NoSQL\1.png)
+![](img/1.png)
 
 You can select the database you wish to look at from the drop down in the top left of the page (as highlighed above). For any given game there will be a PREVIEW listing in this list, along with an optional LIVE listing if your game is in the published state.
 
@@ -10,11 +10,11 @@ You can select the database you wish to look at from the drop down in the top le
 
 Each actions tab has a drop down menu containing the list of collections that are available in your database. The collection filter switches allow you to turn sections of the drop down menu on and off to make the list more manageable.
 
-![](img\NoSQL\2.png)
+![](img/2.png)
 
 The collection drop down can also be filtered manually be typing the name of the collection you are looking for in the field. The results are dynamically updated as you type.
 
-![](img\NoSQL\3.png)
+![](img/3.png)
 
 ## Actions
 

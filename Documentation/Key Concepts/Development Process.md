@@ -2,7 +2,7 @@
 
 The GameSparks platform follows best practice in content management processes and provides you a simple workflow for managing the life cycle of your game.
 
-![](img\Develop\1.png)
+![](img\DevelopmentProcess\1.png)
 
 When you initially create your game within the platform it is in a *preview* state. This means the game is not yet available to the public and is accessed via a private url. Load is restricted to 100 concurrent connections by default (this number can be increased on request).
 
