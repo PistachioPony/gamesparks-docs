@@ -1,4 +1,8 @@
-# Hearthstone tutorial 2: Matchmaking
+---
+nav_sort: 2
+---
+
+# Matchmaking
 
 ## The procedure
 
@@ -10,11 +14,11 @@ Before we can continue we need to create a match and a challenge. These will be 
 
 The match:
 
-![](img\HearthstoneMatchMaking\1.jpg)
+![](img\1.jpg)
 
 The challenge:
 
-![](img\HearthstoneMatchMaking\2.jpg)
+![](img\2.jpg)
 
 Make sure that the challenge is turn based.
 

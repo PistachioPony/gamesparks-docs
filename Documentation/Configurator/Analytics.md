@@ -1,3 +1,6 @@
+---
+nav_sort: 1
+---
 # Analytics
 
 GameSparks provides several components of the analytics stack needed to operate a game as a service:

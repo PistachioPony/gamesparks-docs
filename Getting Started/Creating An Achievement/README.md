@@ -4,8 +4,6 @@ nav_sort: 5
 
 # Creating an Achievement
 
-[toc]
-
 ## Introduction
 
 GameSparks Achievements help to support the rewarding of players for accomplishments within a game and are highly configurable with respect to both the reward, and the criteria for when it is delivered. This feature can support traditional achievements systems where virtual goods (E.g. badges or items) are won for particular tasks, or combination of tasks, being completed. They can also be used to reward level completion or XP progress bonuses, basic “crafting”, and rewards for breaking into the top [x] of a Leaderboard.
@@ -26,19 +24,19 @@ First you will need to navigate to the Achievements page in your Configurator.�
   * Currency 1-6 - The amount of each currency that will be awarded when the Achievement is earned.
   * Leaderboard - This field is used to either setup a Leaderboard or Script Trigger, for us it's Script.
 
-![](Creating An Achievement/img/Create/1.png)
+![](img/Create/1.png)
 
 ## Event
 
 Following the Achievement Creation, you will need to create a new Event, reference back to [Creating a Leaderboard](/uncategorized/creating-a-leaderboard) if needed.
 
-![](Creating An Achievement/img/Create/2.png)
+![](img/Create/2.png)
 
 ## Cloud Code
 
 After the Event has been configured, you'll need to attach some custom Cloud Code to it to award the Achievement when the Event is called. To do so, Navigate to the Configurator > Cloud Code > Events > Award Achievement (That's the Name of the Event). At this point you will notice the Cloud Code editor open for the Event. This is where you will need to add your custom Cloud Code. Simply click save and you should see a *Success* alert.
 
-![](Creating An Achievement/img/Create/3.png)
+![](img/Create/3.png)
 
 This piece of Cloud Code takes hold of the player object that is currently authenticated:
 
@@ -56,18 +54,18 @@ Hit save and at that point the Achievement is fully configured to be awarded.
 
 Now since everything is set up, you will now need to navigate to the Test Harness and authenticate with one of the players you have previously [registered](/uncategorized/using-authentication). At this point the Achievement you have configured awards some currency, and now you need to validate that the player currently doesn't have any currency associated with their account. To do this you will need to select Player tab and send an [AccountDetailsRequest](https://docs.gamesparks.net/documentation/request-api/player-request-api/accountdetailsrequest).
 
-![](Creating An Achievement/img/Create/4.png)
+![](img/Create/4.png)
 
 Now you will need to send the [LogEventRequest](/documentation/request-api/player-request-api/logeventrequest) for the Event you've configured earlier called "*Award_Achievement*". This will award the Achievement to the currently authenticated player and send the [AchievementEarnedMessage](https://docs.gamesparks.net/documentation/message-api/player-message-api/achievementearnedmessage). Additionally if you have debug mode enabled on your requests, the debugger should activate and you will be able to step through your Cloud Code. This only happens if your Requests/Responses/Messages have Cloud Code attached to them. You can read more about debugging Cloud Code [here](https://docs.gamesparks.net/documentation/gamesparks-debugger). After you've stepped through or exited the debugger, your player will be awarded the Achievement you've configured.
 
-![](Creating An Achievement/img/Create/5.png)
+![](img/Create/5.png)
 
 Finally you can validate that the currency was awarded by calling the [AccountDetailsRequest](/documentation/request-api/player-request-api/accountdetailsrequest).
 
-![](Creating An Achievement/img/Create/6.png)
+![](img/Create/6.png)
    
 
-## * Continue the tutorial for your chosen SDK:*
+Continue the tutorial for your chosen SDK:
 
-|[![](img/URLogo.png)](Creating An Achievement\Unreal Achievements.html)   |[![](img/UTLogo.png)](Creating An Achievement\Unity Achievements.html)   |[![](img/ASLogo.png)](Creating An Achievement\ActionScript Achievements.html)   |
+|[![](../img/URLogo.png)](Creating An Achievement\Unreal Achievements.html)   |[![](../img/UTLogo.png)](Creating An Achievement\Unity Achievements.html)   |[![](../img/ASLogo.png)](Creating An Achievement\ActionScript Achievements.html)   |
 |---|---|---|

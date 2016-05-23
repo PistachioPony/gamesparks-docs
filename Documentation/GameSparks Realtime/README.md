@@ -1,4 +1,7 @@
-# GameSparks RealTime Services
+---
+nav_sort: 1
+---
+# Introduction
 
 We've recently enhanced our product offering by adding a new set of services for facilitating realtime multiplayer.
 
@@ -7,19 +10,11 @@ GameSparksRT is a low latency socket server designed specifically for realtime g
  This service is currently in trial with selected customers.  If you would like to take part in the trial please contact info@gamesparks.com and we'll add you to the waiting list.
   The current trial focuses on Unity and the RT SDK operates with near zero memory allocation.  SDKs are in the process of being built for other engines. The process to get up and running is as follows:
 
-### 1\. Let us know which of your games needs realtime services enabling
-
-As the service is currently in trial, only games with realtime service manually enabled (by us) will receive details of realtime servers in matchmaking responses. Once the request is approved we can add these services to your game, and this process will only take a few minutes.
-
-### 2\. Download the GameSparksRT Unity package and import it into your project
-
-GameSparksRT.unitypackage contains a RealTime session manager (GameSparksRTUnity) that can be used to control and manage realtime sessions.
-
-### 3\. Set up matchmaking rules on the GameSparks platform
+## Set up matchmaking rules
 
 https://docs.gamesparks.net/tutorials/how-to-match-players describes the process for setting up matchmaking rules on the platform.
 
-### 4. Connect to the realtime servers
+## Connect to the realtime servers
 
 Using FindMatchRequest
 
@@ -58,7 +53,7 @@ Using MatchFoundMessage
 
     });
 ```
-### 5\. Send realtime data
+## Send realtime data
 
 Sending data to the other players in the session is performed using the SendData method on GameSparksRTUnity.Instance
 
@@ -104,7 +99,7 @@ To reduce GC overhead, RTData objects are pooled and implement IDisposable. When
     }
 ```
 
-### 5\. Receive realtime data
+## Receive realtime data
 
 When you configured the session manager in step 4 you provided a callback that should be called when a packet is received. The Packet struct has the following definition:
 

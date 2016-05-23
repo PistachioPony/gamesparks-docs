@@ -1,3 +1,7 @@
+---
+nav_sort: 3
+---
+
 # Events
 
 Events give you the ability to define custom data structures that you want to pass into the platform via the [LogEventRequest](/?p=2254) and [LogChallengeEventRequest](/?p=2234) API calls.

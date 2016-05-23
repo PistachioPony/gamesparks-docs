@@ -4,7 +4,7 @@ nav_sort: 3
 
 # ActionScript Virtual Goods
 
-## *Introduction*
+## Introduction
 
 Once you have created [Virtual Goods](..\Creating A Virtual Good.html) on the Portal, you can now incorporate them in your game. This tutorial will show you how to buy and consume goods using a shop interface.
 
@@ -28,7 +28,7 @@ Once you have created [Virtual Goods](..\Creating A Virtual Good.html) on the Po
   * Launch your game, buy and consume Virtual Goods to see your details being updated accordingly.
 [wpdm_file id=38 title="true" ]
 
-## *Creating the 'Grant Currency' Event*
+## Creating the 'Grant Currency' Event
 
 Create an Event that credits the authenticated player with extra *currency*. Add an *attribute* that will be used to indicate the amount to credit. You will log this Event whenever the authenticated player *consumes* a Gold Coin (Virtual Good).
 
@@ -40,7 +40,7 @@ In the Event *Cloud Code* create a variable that holds the amount being passed i
 ![l](img\AS\2.png)
  
 
-## *Creating the Buy and Consume functions*
+## Creating the Buy and Consume functions
 
 Create a function which will log a *buy Request* when called by using *BuyVirtualGoods* request. The *BuyVirtualGoods* request needs a *currency* type, a *quantity* and the *Short code* for the item to be purchased.
 
@@ -97,7 +97,7 @@ Now you can make the *response* *handler* functions for your *consume* and *buy*
     			}
 ```
 
-## *Keeping track of player details*
+## Keeping track of player details
 
 To update the shop details, request the *account* *details* for the currently authenticated player. For the *currency* it's a simple text display. For the *Virtual* *Goods,* retrieve the *Virtual Goods* through *getVirtualGoods()* method, followed by the *Short code* of your *Virtual Good* which retrieves a *Number* of the *Virtual Good* of that type.
 
@@ -109,7 +109,7 @@ To update the shop details, request the *account* *details* for the currently au
     			}
 ```
 
-## *Testing Virtual Goods*
+## Testing Virtual Goods
 
 Create a way for the player to *buy* and *consume* Virtual Goods in your project. Test your shop to make sure that when you click *buy*, the *currency* depletes in exchange for an increased amount of Virtual Goods. When you *consume* items the *currency* should go up but the amount of Virtual Goods owned should decrease.
 

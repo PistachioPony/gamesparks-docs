@@ -1,4 +1,8 @@
-# Hearthstone tutorial 1: Initilisation and Ranking
+---
+nav_sort: 1
+---
+
+# Initialisation and Ranking
 
 ## First thing's first, the cards
 

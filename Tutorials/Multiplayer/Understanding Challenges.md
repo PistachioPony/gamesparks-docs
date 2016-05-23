@@ -1,11 +1,11 @@
-# Setting up and understanding Challenges
+# Understanding Challenges
 
 
-## *Introduction*
+## Introduction
 
 Once a Challenge has been created, it needs to be tested to ensure it behaves the intended way. This tutorial will explain the best practices to follow so that a Challenge and the associated Players can be verified before it is integrated into the SDK.
 
-## *Understanding Challenges*
+## Understanding Challenges
 
 Before testing a Challenge, there are certain aspects to be learned, which will help to construct more effective Challenges to meet the needs of the application.
 
@@ -61,7 +61,7 @@ By using cloud code through challenge event logs you can pass in the challenge I
   * You can save, track, use and remove persistent data saved on a challenge to do your own custom logic to determine who wins, who loses and what sequences of logic is followed by your challenge using scriptData. You can manipulate scriptData using getscriptData(), setscriptData() and removescriptData() methods.
  
 
-## *Testing your challenge*
+## Testing your challenge
 
 To simulate multiple players interaction with a challenge we recommend that you open a number of tabs on your browser and use the test harness to simulate interaction from clients. For this test, open three tabs on your browser and authenticate a player on every tab.
 
@@ -82,6 +82,6 @@ Finally after the third authenticated player join the challenge through the thir
 ![](\img\UnderstandingChallenges\4.jpg)
  
 
-## *Challenge Chat*
+## Challenge Chat
 
 You can use the challenge ID to reference a challenge and send a message to everyone involved. The message contains a string determined by the player , the rest is information about who sent the message and the challenge details. Simply calling the request and supplying it with a message string will take care of distributing it to the rest of the players involved. Use challenge message listeners to intercept these messages, extracting the message string and who from and view them to players in-game.

@@ -10,9 +10,9 @@ Through this series of tutorials you will be able to create a game that authenti
 
 The tutorials are in order, so we strongly suggest that you follow them in order to have a complete fundamental understanding of the platform. Each tutorial introduces important pieces that come together to allow you to debug and achieve your development aims on the Platform and on the SDKs.
 
-*The Getting Started tutorials are:*
+The Getting Started tutorials are:
 
-  *_*Creating your Game* - Teaches you to create your first game on the platform and set up your SDK so you're ready to start using GameSparks.
+  * *Creating your Game* - Teaches you to create your first game on the platform and set up your SDK so you're ready to start using GameSparks.
   * *Using Authentication* - How to register and authenticate players as well as introducing the test harness.
   * *Using Cloud Code* - Creating events on the platform and linking them to some logic using Cloud Code and calling them through the SDKs.
   * *Creating a Leaderboard* - Creating a leaderboard, uploading a score to it and setting up listeners in the SDKs.

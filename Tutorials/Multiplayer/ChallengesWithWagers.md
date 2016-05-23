@@ -1,4 +1,4 @@
-# Challenges - Wagers
+# Challenges With Wagers
 
 ## Introduction
 

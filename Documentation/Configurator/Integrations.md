@@ -1,3 +1,7 @@
+---
+nav_sort: 15
+---
+
 # Integrations
 
 The Integrations page allows you to configure a multitude of external, social authentications within GameSparks platform. Most of the Integrations only require the App Id and the Secret for your game.

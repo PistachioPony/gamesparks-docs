@@ -1,3 +1,7 @@
+---
+nav_sort: 9
+---
+
 # Challenges
 
 Challenges allow you to set up multiplayer game mechanics to encourage players to get their friends to play with each other. Challenges can be configured with a wide variety of options. They can be between one or more players and they can have start and end dates associated with them. You can also limit the number of game plays that can be posted against each Challenge. The platform manages all of this for you and issues appropriate messages which are triggered by challenge events.
@@ -18,7 +22,7 @@ The icons (highlighted above) give you the following capabilities:
 
 To create a new challenge select the icon and you will be presented with the following overlay:
 
-![](img\Challenges\2.png)
+![](img\Challenges\2.jpg)
 
   * *Short Code* \- The Short Code is a mandatory field used to give the Challenge a unique identifier for use elsewhere in the Portal and in Cloud Code.
   * *Name* \- The Name field is a mandatory field used as an identifier to help the user find the challenge in the Portal.

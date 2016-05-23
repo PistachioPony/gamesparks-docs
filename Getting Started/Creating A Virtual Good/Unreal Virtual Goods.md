@@ -28,7 +28,7 @@ After following the tutorial [Creating a Virtual Good](..\Creating A Virtual Goo
 
 ## Using Virtual Goods
 
-### *Creating the 'Grant Currency' Event*
+### Creating the 'Grant Currency' Event
 
 Create an Event that credits the *authenticated* player with extra currency. Add an *attribute* that will be used to indicate the amount to credit. This event will be logged whenever the *authenticated* player *consumes* a Gold Coin Virtual Good.
 
@@ -38,7 +38,7 @@ In the Events *Cloud Code,* create a variable that holds the amount being passe
 
 ![l](img\UR\2.png)
 
-### *Setting up the Shop Screen*
+### Setting up the Shop Screen
 
 Create a shop screen in your game, with one item for sale, the Gold Coin. The *authenticated* player is going to have the option to *buy* and *consume* gold coins. The* player* will also be able to see how many Gold Coins the they have in their inventory and how much *currency* they hold in their Currency1 slot.
 
@@ -48,19 +48,19 @@ When the player transitions to the shop screen, the values for players Display
 
 ![l](img\UR\4.png)
 
-### *Clicking Buy*
+### Clicking Buy
 
 When the *Buy* button is clicked, a Gold Coin needs to be purchased. To buy a Virtual Good, call the *BuyVirtualGoodRequest* node which takes the type of *currency*, *quantity* and the *Short code* for the item being bought, which in this case is "*Gold_Coin*". After the player has purchased a Virtual Good, update their details so they are aware of the change.
 
 ![l](img\UR\5.png)
 
-### *Clicking Consume*
+### Clicking Consume
 
 Check to see if the player has Gold Coins to consume. If the player has enough Gold Coins, call the *GS ConsumeVirtualGoodRequest *node which takes a *quantity* and the *Short* *Code* of the Virtual Good.* *The *ConsumeVirtualGood* Event* *automatically decrements the overall *quantity* owned in the players inventory. After the Gold Coin is *consumed,* log the '*Grant_Currency*' event to accredit the *authenticated* player with a value of 1 passed through the '*CASH' *attribute*.*
 
 ![l](img\UR\6.png)
 
-### *Using the Shop*
+### Using the Shop
 
 If the *authenticated* player uses the shop they should be able to *buy* and *consume* the Gold Coin Virtual Good and see their information update correctly.
 

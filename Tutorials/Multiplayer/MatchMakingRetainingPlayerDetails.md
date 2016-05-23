@@ -1,4 +1,5 @@
-## Match Making Basics- Retaining player details
+
+# Retaining Player Details
 
 ## Introduction
 

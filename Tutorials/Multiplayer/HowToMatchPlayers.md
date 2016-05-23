@@ -8,12 +8,12 @@ In this tutorial, you will create Match configuration with customised Thresholds
 
 *2.* In the *Multiplayer* section, select the *Matches* tab and click the *Add* button to create a new Match.
 
-![](img\HowMatch\1.png)  
+![](img\HowToMatchPlayers\1.png)  
 
 *3.* In the *Create Match* form, specify the Short Code, Name and Description of your Match and select the *Add* button to create the desired number of thresholds you want in the Match.
 
 
-![](img\HowMatch\2.png)  
+![](img\HowToMatchPlayers\2.png)  
 
 The *Create Form* contains the following fields:
 
@@ -36,7 +36,7 @@ Multiplayer Matching is based on synchronous messages that match Players based o
 
 Thresholds are used to define how precise we want our matches to be, and for how long we want them to search for a Match. Thresholds use a combination of Periods of time and Match Types to calibrate the precision of our Match.
 
-![](img\HowMatch\3.png)  
+![](img\HowToMatchPlayers\3.png)  
 
 ### Match Types
 

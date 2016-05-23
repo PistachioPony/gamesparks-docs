@@ -1,4 +1,4 @@
-# Match Making Basics - From Match to Challenge
+# Match Based Challenges
 
 ## Introduction
 

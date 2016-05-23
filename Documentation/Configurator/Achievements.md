@@ -1,3 +1,7 @@
+---
+nav_sort: 8
+---
+
 # Achievements
 
 GameSparks Achievements support the rewarding of players for accomplishments within the game and are highly configurable with respect to both the reward and the criteria for when it is delivered.  This can support traditional achievements systems where virtual goods (e.g. badges or items) are won for particular tasks or combination of tasks being completed, but uses extend beyond this to level completion or XP progress bonuses, basic 'crafting', and rewards for breaking into the top [x] of a Leaderboard etc. They are cross-platform, meaning a significant convenience benefit (you don't have to set them up in each store) and support for cross-platform play, because game-progress can be tracked, and the reward can be used, across multiple platforms. Achievements can be awarded based a) on a Leaderboard event or b) they can be awarded based on some custom logic defined in Cloud Code. The reward delivered when an achievement is reached can be a) a virtual good, or b) an amount of any of the in-game currencies set up in the Virtual Goods section. Achievements can be awarded automatically by setting up triggers.  Achievement triggers are based around Leaderboard as all scoring events result in a Leaderboard being updated.  For example, to automatically award an achievement for someone hitting a specific score, you would add a trigger and set the Leaderboard up with a filter that indicates the achievement is awarded when a score is posted to the Leaderboard with a value that meets the filter criteria.

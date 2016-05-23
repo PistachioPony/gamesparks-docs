@@ -1,3 +1,7 @@
+---
+nav_sort: 4
+---
+
 # Running Totals
 
 [toc]

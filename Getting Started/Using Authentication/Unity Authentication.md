@@ -12,7 +12,7 @@ This tutorial will get your Unity project communicating with GameSparks by regis
 
 Before you start adding players to your game, you need to make sure that the GameSparks SDK is set up as a persistent object. This is so you don’t get multiple instances of the SDK running as you load between levels. To begin with, you need to add a new *GameObject* to the scene. Call this *GameObject* *GameSparksManager*, and drop the script called *GameSparksUnity.cs *onto that object. You can find the script in the GameSparks folder of your project. It’s a good idea to add this to whatever your launch-scene is. For example, if you have a loading scene or splash scene. Likewise, if you have a *Game State Manager* in your game, you could drop the script directly on your GSM. So long as your GSM is persistent, you will be good to go.
 
-## Apply Settings to the GameSparks Manager
+## Apply Settings to GameSparks Manager
 
 ![l](img\UT\1.png)
 You can see that the *GameSparksUnity* script expects a settings file. This file was automatically generated when you ran the Test-Scene in the previous tutorial. You can find the settings file in the *GameSparks -> Resources* folder.Apply them to the Settings in the *GameSparksUnity* script.

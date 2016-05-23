@@ -1,3 +1,6 @@
+---
+nav_sort: 13
+---
 # Downloadables
 
 This section of the Configurator allows you to upload and manage binary data (e.g. content, such as new levels).  You just need to upload the file and assign it a short code.  Once an object has been added you can then access it from within Cloud Code and do whatever you want with it (e.g. distribute it to certain players under certain conditions).

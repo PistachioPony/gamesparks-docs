@@ -1,3 +1,6 @@
+---
+nav_sort: 5
+---
 # Leaderboards
 
 The Leaderboards functionality on the GameSparks platform is not limited to Leaderboards in their traditional sense. Rather, it is functionality that allows you to keep track of any comparisons of player performance and then support artifacts in-game that flexibly display this information in a meaningful form to players. This allows support for complex, contextual display of information about other players and also provides the framework for many social and competitive features.
@@ -14,7 +17,7 @@ You can also partition Leaderboards. This allows you to set up a single Leaderbo
 
 The Configurator Leaderboard page displays the list of Leaderboards and allows you to create new Leaderboards and edit or delete existing ones.
 
-![](img\LDR\1.jpg)
+![](img\Leaderboards\1.png)
 
 The icons (highlighted above) give you the following capabilities:
 
@@ -26,7 +29,7 @@ The icons (highlighted above) give you the following capabilities:
 
 Press the icon to create a new Leaderboard.
 
-![](img\LDR\2.jpg)
+![](img\Leaderboards\2.jpg)
 
   * *Short Code* \-The Short Code is a mandatory field used to give the Leaderboard a unique identifier for use elsewhere in the Portal and in Cloud Code.
   * *Name* \-The Name field is a mandatory field used as an identifier to help the user find the Leaderboard in the Portal.
@@ -49,7 +52,7 @@ Press the icon to create a new Leaderboard.
 
 Each Leaderboard configuration has a list of fields. Each field refers to an Event Attribute / Running Total Summary. Press the icon on the Edit Leaderboard dialog to add fields to a Leaderboard.
 
-![](img\LDR\3.jpg)
+![](img\Leaderboards\3.jpg)
 
   * *Running Total* \- Contains a list of your Running Totals.
   * *Summary* \- Contains the list of Running Total Summaries that are related to the chosen Running Total.

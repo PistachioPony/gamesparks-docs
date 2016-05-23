@@ -5,16 +5,16 @@ Experiments allow users to A/B test certain configuration changes on a selective
 The Experiments feature lies within the Manage section, in the form of an Admin Screen.
 
 
-![](img/1.png)
+![](img/Experiments/1.png)
 
 
 The Experiments Screen is the main area where all Experiments are created and managed.  It consists of Future, Running and Complete Experiments.  As they are created in the Future Experiments section and scheduled to run, they move from left to right in the flow process until they are completed.
 
-![](img/2.png)
+![](img/Experiments/2.png)
 
 Adding a new Experiment brings up a new form:
 
-![](img/3.png)
+![](img/Experiments/3.png)
 
 The form is very detailed, but divided into sections – Configuration, Player Base, Variant Configuration and Measurements.
 
@@ -50,12 +50,12 @@ Variant Configuration
 Experiments will either start at their scheduled time or can be started immediately using the Play button.  Similarly, they can also be stopped using the Stop button. NOTE:  Once Experiments have been created or have passed their Start Date, they cannot be edited.  They can, however, be modified up until that Start Date. All stopped or expired Experiments will move to the Complete section.
 
 ## Viewing the Results
-Once your Experiment has completed, you can check the results of your Experiment and the impact it has had on the pool of Players who were affected by this Experiment. ![](img/4.png)
+Once your Experiment has completed, you can check the results of your Experiment and the impact it has had on the pool of Players who were affected by this Experiment. ![](img/Experiments/4.png)
 
 
 
-The results page displays graphs which are based on the time duration of the running Experiment and how many Players interacted with the variants on that Experiment. Screen ![](img/5.png)
+The results page displays graphs which are based on the time duration of the running Experiment and how many Players interacted with the variants on that Experiment. Screen ![](img/Experiments/5.png)
 
 
 
-This is shown in two different graphs, which show both the impact of the Experiment on the entire Player population, as well as the number of Players that interacted with each variant on the Experiment. ![](img/6.png)
+This is shown in two different graphs, which show both the impact of the Experiment on the entire Player population, as well as the number of Players that interacted with each variant on the Experiment. ![](img/Experiments/6.png)

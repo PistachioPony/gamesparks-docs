@@ -1,4 +1,8 @@
-# Hearthstone Tutorial 3: The Challenge
+---
+nav_sort: 3
+---
+
+# Challenge
 
 This section will heavily rely on Challenge events, there will be a lot of calls to retrieve and save the cards, stats, playingField and currentHand. Player Ids and Challenge Id will constantly be values to reference the rest of the game, these two Ids will allow you to do anything with the challenge. Create 4 events:
 
@@ -329,4 +333,4 @@ This also is a challenge event because it needs to make a reference to the event
 ```
 In combination these events and structure can start and end a game the same way Hearthstone works. You can add more cards, more effects and extra functionality easily as this example was built with modularity and expansion in mind. You can test this using the two tabs that have our test harness open. Registering two players and pitting them against each other (both controlled by you).
 
-This concludes the Hearthstone example. You can customise, add, remove and reinvent this system. This is only one way of achieving this kind of game but playing around with our components and further understanding the way they work you can achieve brilliant results. 
+This concludes the Hearthstone example. You can customise, add, remove and reinvent this system. This is only one way of achieving this kind of game but playing around with our components and further understanding the way they work you can achieve brilliant results.

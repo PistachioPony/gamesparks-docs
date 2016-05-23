@@ -1,10 +1,10 @@
-# How to find challenges for a player based on their eligibility
+# Challenge Eligibility
 
 ## Introduction
 
 In this tutorial we'll look at setting up matchmaking based on a player's segments. To do this we will use segmentation to group players together, and eligibility criteria to filter challenges for those players. We'll also see how we can override a current player's settings to allow the client to determine what available challenges to show at any time, and allow the player to join them. To start with let's set up a simple challenge, then we can look at how to match players up. Navigate to Challenges within the Configurator and let's add a new challenge. Give it a short code of SC1, and let's just call it "Simple Challenge".
 
- ![](img\Eligibility\1.png)
+ ![](img\ChallengeEligibility\1.png)
 
  That's all we need for the purposes of this tutorial so let's head over to the test harness and get our players set up.
 

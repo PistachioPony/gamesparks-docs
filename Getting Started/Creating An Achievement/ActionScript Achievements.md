@@ -22,7 +22,7 @@ After making an Event that awards your Player an Achievement using Cloud Code in
 
 [wpdm_file id=37 title="true" ]
 
-## *Setting up the Account Details Request and Earning an Achievement*
+## Setting up the Account Details Request and Earning an Achievement
 
 Before you award the authenticated Player an *Achievement* you'll have to give them the ability to check the *Achievements* that they've earned. To do that you must request *account details* using the *createAccountDetailsRequest* using the *requestBuilder*.
 
@@ -70,7 +70,7 @@ Finally, to finish the *Achievement* setup, all you have to do is call the Event
 
  
 
-## *Testing the Achievement*
+## Testing the Achievement
 
 Log in a Player and request the details to see everything is in order. You should receive the Player's *Display name, currency, location* and zero *Achievements*.
 

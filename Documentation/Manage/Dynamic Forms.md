@@ -37,7 +37,7 @@ This is Dummy Data
 
 You can open the Screen Builder by clicking the Edit Code ![Screen Shot 2015-01-27 at 10.48.54](https://docs.gamesparks.net/wp-content/uploads/2015/01/Screen-Shot-2015-01-27-at-10.48.54.png) icon, and you can preview the rendered output by pressing the ![play](https://docs.gamesparks.net/wp-content/uploads/2015/01/play.jpg) icon before deciding to save your changes.
 
-![](img/DynamicForms/4.png)
+![](img/DynamicForms/4.jpg)
 
 *4.* Once you've saved your Screen, navigate to the newly created Players Screen where you will see the same rendered output as before.  
 
@@ -55,7 +55,7 @@ The Snippet Builder view is divided into 4 quadrants. Moving around the view clo
 
 *6.* Edit the Snippet code using the same GSML that we set for the Players Screen previously. Put this in the top-right quadrant, named Handlebars and save the changes.
 
-![](img/DynamicForms/5.png)
+![](img/DynamicForms/5.jpg)
 
 Although there are many ways of writing the logic in Snippets, one of the more important things to consider when creating Snippets, is that ideally they should be self-contained and not dependent on other Snippets. This logic will be explained in more detail later on.
 
@@ -78,7 +78,7 @@ The next step is to remove the logic from the Screen itself, retaining only this
 <gs-snippet snippet="player_search"></gs-snippet>
 ```
 
-![](img/DynamicForms/6.png)
+![](img/DynamicForms/6.jpg)
 
 As seen above, the Screen no longer contains any logic. It simply calls the Snippet using the *<gs-snippet>* tag with the value pointing at the *player_search* Snippet. Since there's no target provided, it will render the output across the entire page.
 

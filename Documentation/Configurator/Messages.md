@@ -1,3 +1,6 @@
+---
+nav_sort: 12
+---
 # Messages
 
 The GameSparks platform allows you to send messages to your players.  These can be either a). in-game messages when a player is playing the game, or b). push notifications when they are not playing the game (including email if desired, via an integration with SendGrid). This section allows you to set up and configure these messages.

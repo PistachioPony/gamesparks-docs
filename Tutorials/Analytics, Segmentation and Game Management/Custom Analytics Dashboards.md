@@ -1,4 +1,4 @@
-# Custom Analytics Dashboard Tutorial using Dynamic Forms
+# Custom Analytics Dashboards
 
 With the recent introduction of Dynamic Forms, you can easily build Custom Analytics Dashboard that will have nearly limitless expandability, and suit your personal needs within minutes. However it's highly advisable to read the [Dynamic Forms API](../Analytics, Segmentation and Game Management\Dynamic Forms API.html) as well as take a look at the [Dynamic Forms Tutorial](..\Analytics, Segmentation and Game Management\Dynamic Forms.html) before starting.  
 
@@ -14,7 +14,7 @@ With the recent introduction of Dynamic Forms, you can easily build Custom Analy
 
 This chart was created in the Charts tab of the management section and we used *new_players* shortCode. The chart represents the new players entering the game, this is done by grabbing a successful *RegistrationRequest* as well as a successful *DeviceAuthenticationRequest* that has been done by a new player (Device Authentication, as well as External Authentications act as a registration for new players). We will display the chart as a histogram, without a grouping, counting only unique player Ids, showing a tool tip and displaying the results spread out daily.
 
-![](img/CustomAna/1.jpg)
+![](img/CustomAnalyticsDashboards/1.jpg)
 
 As seen, clicking Test will generate the chart preview as well as the GSML code, that can be copied and pasted into our Screen later on.
 
@@ -22,7 +22,7 @@ As seen, clicking Test will generate the chart preview as well as the GSML code,
 
 Much like New Players, we want to keep track of daily total player logins for the game for this we need to create a chart with shortCode *total_players*, get all different types of authentication and make sure the calculation is set to count unique players, bear in mind that you will most likely have different Authentications, again, this is per-game basis.
 
-![](img/CustomAna/2.jpg)
+![](img/CustomAnalyticsDashboards/2.jpg)
 
 ### Errors
 
@@ -30,11 +30,11 @@ This chart will be used to display a pie chart and a data table of the error res
 
 The first chart will display the visual representation of the error count that has occurred.  
 
-![](img/CustomAna/3.jpg)
+![](img/CustomAnalyticsDashboards/3.jpg)
 
 The second chart will display and allow viewing of the actual error responses.
 
-![](img/CustomAna/4.jpg)
+![](img/CustomAnalyticsDashboards/4.jpg)
 
 Note: The only difference between these two charts, is how the chart will be accessed by our GSML.
 
@@ -79,6 +79,6 @@ The GSML in the *Analytics* Screen:
 
 The final view:
 
-![](img/CustomAna/5.jpg)
+![](img/CustomAnalyticsDashboards/5.jpg)
 
 *** NOTE: *All data shown within these forms is time-limited.  Player request data is not kept forever and it is very likely that when a player has had inactivity for a certain amount of time, the above form can appear empty.* ***
