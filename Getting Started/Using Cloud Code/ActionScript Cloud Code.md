@@ -1,19 +1,24 @@
+---
+nav_sort: 3
+---
+
 # ActionScript Cloud Code
 
-## *Introduction*
+## Introduction
 
 After making the *Set_Pos* and *Get_Pos* Events in the portal, it's time to call them from your game. In this tutorial you will learn how to use a persistent variable saved against the Player to change their sprite location. *Setting up your Set and Get Functions*
 
   * Create the set function which logs the Set_Pos Event from the portal to pass through the Player's current location.
   * Create the get function which logs the Get_Pos from the portal.
   * Create a response handle for the Get_Pos Event which retrieves the the Player's saved location.
-*Testing the Set and Get Functions*
+
+## Testing the Set and Get Functions
 
   * Create a game or scenario to test your new functions on.
 
 [wpdm_file id=35 title="true" ]
 
-## *Setting up your Set and Get Functions*
+## Setting up your Set and Get Functions
 
 You'll notice that from here on the tutorials will automatically connect to the Portal. You can set your *URL* and *API* *Secret* before the game launches.
 
@@ -82,7 +87,7 @@ In the response handler for the *Get_Pos* Event you will need to break down the 
 
  
 
-## *Testing your Set and Get Functions*
+## Testing your Set and Get Functions
 
 Set up your game to Set and Get your Player's position. Here we have made a simple game where you can save and load the sprite's location. Make sure you *authenticate* your Player as the location will be saved against their database. Having no Player authenticated means you cannot call the Events on the Portal, even if you are connected to that Portal.
 

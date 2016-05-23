@@ -1,3 +1,7 @@
+---
+nav_sort: 1
+---
+
 # Unity Leaderboard
 
 ## Introduction

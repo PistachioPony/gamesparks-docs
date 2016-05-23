@@ -1,3 +1,7 @@
+---
+nav_sort: 6
+---
+
 # Creating a Virtual Good
 
 [toc]

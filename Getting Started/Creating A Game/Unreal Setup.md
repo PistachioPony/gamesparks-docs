@@ -1,3 +1,7 @@
+---
+nav_sort: 2
+---
+
 # Unreal Setup
 
 ## Introduction
@@ -18,7 +22,7 @@ Once you've downloaded the required tools and installed them successfully, you a
 
 ## Creating a New Mixed Project
 
-![l](img/UR/1.png)
+![l](img/UR/1.jpg)
 
 Launch the Unreal Engine from the Epic Launcher and you will be prompted with the Unreal Engine project browser. Here, select the "New Project" tab, and then select the C++ tab. You will then need to select your game template (we've used Third Person Template in our Tutorials), name your project and click "Create Project". You have now successfully created a Mixed Project and you can skip the Blueprint Only Project tab and move on to the Mixed Project tutorial.
 

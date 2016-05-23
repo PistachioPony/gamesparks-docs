@@ -1,4 +1,8 @@
-#AndroidSDK Setup
+---
+nav_sort: 4
+---
+
+# AndroidSDK Setup
 
 This tutorial will walk you through integrating GameSparks with your android project on the Android Builder IDE.the GameSparks Android SDK requires API 8 or greater and the Test Harness requires API 11 or greater for the example test harness project that we supply as a sample.
 

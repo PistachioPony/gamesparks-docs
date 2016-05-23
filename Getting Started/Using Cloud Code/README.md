@@ -1,3 +1,7 @@
+---
+nav_sort: 3
+---
+
 # Using Cloud Code
 
 ## Introduction
@@ -6,15 +10,15 @@ Using Cloud Code is an important part of the GameSparks Services. Cloud Code he
 
 ## Event Creation
 
-![](Using Cloud Code/img/Cloud/1.png)
+![](img/Cloud/1.png)
 
 Since you will be Setting data to and Getting data from the database, you should create two events using the Events Configurator. Simply navigate to the *Configurator* and click *Add New*. You will then be greeted by the Event Creation Form.
 
-![](Using Cloud Code/img/Cloud/2.png)
+![](img/Cloud/2.png)
 
 The first Event will be used to Set the Coordinates. For this tutorial, we have chosen* 'Set_Pos'* as our Short Code. After you've filled in the Name and the Description, you will need to add an *attribute* to your Event. This is a parameter necessary for the Event to be executed. We've used *'POS'* as the attribute Short Code, this is the value you'll be passing in via either an SDK or the Test Harness. Make this attribute a *JSON* because you will be passing in a few variables into the Event as a JSON object. You can also set a *Default Value*, which will be useful when running your tests.
 
-![](Using Cloud Code/img/Cloud/3.png)
+![](img/Cloud/3.png)
 
 After you finish making the Set Event, go ahead and make the Get Event. The Get Event does not need any *attributes* because no values will be passed in. We used* 'Get_Pos'* as the Short Code for this Event.
 

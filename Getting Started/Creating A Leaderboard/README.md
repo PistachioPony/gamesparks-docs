@@ -1,3 +1,7 @@
+---
+nav_sort: 4
+---
+
 # Creating a Leaderboard
 
 ## Introduction

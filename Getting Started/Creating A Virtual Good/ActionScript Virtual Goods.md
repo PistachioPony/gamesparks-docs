@@ -1,3 +1,7 @@
+---
+nav_sort: 3
+---
+
 # ActionScript Virtual Goods
 
 ## *Introduction*
