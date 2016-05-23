@@ -37,9 +37,12 @@ You should then create a new panel inside this canvas called ‘Top Panel’. Th
 ![](img/Matchmaking2.png)
 
 The next step is to create variables for these fields in our LobbyManager.cs class and link those variables to these objects.
+
 We will create two public Text variables in the LobbyManager.cs class.
 
-![](img/Matchmaking3.png)
+```cs
+  public Text userId, connectionStatus;
+```
 
 **If you cannot see the Text object or it is causing a compiling error, you can right-click on the word and select Resolve-> Using UnityEngine.UI**
 
@@ -51,7 +54,10 @@ Next we will create a larger panel with two input-fields called userNameInput an
 
 And in our LobbyManager.cs we will create two public InputField variables and link them to the objects we have just created. We will also need one more variable, a public GameObject that we will link to the panel so that when GameSparks has logged the player in, we can switch from the login panel to the matchmaking panel.
 
-![](img/Matchmaking5.png)
+```cs
+public InputField userNameInput, passwordInput;
+public GameObject loginPanel;
+```
 
 ### Bottom Panel
 
@@ -61,19 +67,23 @@ For the bottom panel we are going to have several buttons, which will enable/dis
 
 In our LobbyManager.cs script we will then add three public Button variables and link these three buttons in the editor up to those variables.
 
-![](img/Matchmaking7.png)
+```cs
+public Button loginBttn, matchmakingBttn, startGameBttn;
+```
 
 ### Match Details Panel
 
 The last panel will display the details of the match we have found through the matchmaking. All we need in this case is a text-field, which is where we will print out these details.
 
-![](img/Matchmaking8.png)
+```cs
+public Text userId, connectionStatus;
+```
 
 And in our LobbyManager.cs script we will create a public Text variable called matchDetails and a public GameObject, which will act as a reference to this panel so it can be enabled/disabled upon login.
 
 ```cs
-  public Text matchDetails;
-  public GameObject matchDetailsPanel;
+public Text matchDetails;
+public GameObject matchDetailsPanel;
 ```
 
 Now we are ready to start logging players in and finding matches for our main game.
@@ -98,20 +108,20 @@ We are going to make a singleton in this class so that we can access the GameSpa
 
 ```cs
 /// <summary>The GameSparks Manager singleton</summary>
-    private static GameSparksManager instance = null;
-    /// <summary>This method will return the current instance of this class </summary>
-    public static GameSparksManager Instance(){
-        if (instance != null) {
-            return instance; // return the singleton if the instance has been setup
-        } else { // otherwise return an error
-            Debug.LogError ("GSM| GameSparksManager Not Initialized...");
-        }
-        return null;
-    }
-    void Awake() {
-        instance = this; // if not, give it a reference to this class...
-        DontDestroyOnLoad(this.gameObject); // and make this object persistent as we load new scenes
-    }
+private static GameSparksManager instance = null;
+/// <summary>This method will return the current instance of this class </summary>
+public static GameSparksManager Instance(){
+  if (instance != null) {
+    return instance; // return the singleton if the instance has been setup
+  } else { // otherwise return an error
+    Debug.LogError ("GSM| GameSparksManager Not Initialized...");
+  }
+  return null;
+}
+void Awake() {
+  instance = this; // if not, give it a reference to this class...
+  DontDestroyOnLoad(this.gameObject); // and make this object persistent as we load new scenes
+}
 ```
 
 ### Authentication
@@ -131,20 +141,20 @@ So we are using a callback to allow the lobby manager to update the user's ID an
 
 ```cs
 #region Login & Registration
-    public delegate void AuthCallback(AuthenticationResponse _authresp2);
-    public delegate void RegCallback(RegistrationResponse _authResp);
-    /// <summary>
-    /// Sends an authentication request or registration request to GS.
-    /// </summary>
-    /// <param name="_callback1">Auth-Response</param>
-    /// <param name="_callback2">Registration-Response</param>
-    public void AuthenticateUser (string _userName, string _password, RegCallback _regcallback, AuthCallback _authcallback)
-    {
-        new GameSparks.Api.Requests.RegistrationRequest()
-        // this login method first attempts a registration //
-        // if the player is not new, we will be able to tell as the registrationResponse has a bool 'NewPlayer' which we can check
-        // for this example we use the user-name was the display name also //
-            .SetDisplayName(_userName)
+public delegate void AuthCallback(AuthenticationResponse _authresp2);
+public delegate void RegCallback(RegistrationResponse _authResp);
+/// <summary>
+/// Sends an authentication request or registration request to GS.
+/// </summary>
+/// <param name="_callback1">Auth-Response</param>
+/// <param name="_callback2">Registration-Response</param>
+public void AuthenticateUser (string _userName, string _password, RegCallback _regcallback, AuthCallback _authcallback)
+{
+  new GameSparks.Api.Requests.RegistrationRequest()
+  // this login method first attempts a registration //
+  // if the player is not new, we will be able to tell as the registrationResponse has a bool 'NewPlayer' which we can check
+  // for this example we use the user-name was the display name also //
+            .SetDisplayName(_userName)
             .SetUserName(_userName)
             .SetPassword(_password)
             .Send((regResp) => {
@@ -168,12 +178,13 @@ So we are using a callback to allow the lobby manager to update the user's ID an
                                 }
                             });
                     }else{
-                        Debug.LogWarning("GSM| Error Authenticating User \n"+regResp.Errors.JSON); // if there is another error, then the registration must have failed
+                      // if there is another error, then the registration must have failed
+                      Debug.LogWarning("GSM| Error Authenticating User \n"+regResp.Errors.JSON); 
                     }
                 }
             });
     }
-    #endregion
+#endregion
 ```
 
 **If AuthenticationResponse or RegistrationResponse are not recognized or are throwing a complier error, you can fix this by right clicking on them and selecting Resolve-> using GameSparks.Api.Responses.**
