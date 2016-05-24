@@ -78,6 +78,7 @@ Key | Value | Description
 --------- | ----------- | -----------
 externalPlayerId | ACCOUNT_ALREADY_LINKED | The current user has a GameCenter profile and it's not the profile they have just tried to log in with
 signature | NOTAUTHENTICATED | The system was unable to validate the request
+externalPlayerId | NOTAUTHENTICATED | The system was unable to validate the external player ID
 publicKeyUrl | REQUIRED | The publicKeyUrl is required but not provided
 timestamp | REQUIRED | The timestamp is required but not provided
 timestamp | EXPIRED | The request expired

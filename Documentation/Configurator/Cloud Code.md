@@ -5,19 +5,19 @@ nav_sort: 11
 
 The Cloud Code section of the Configurator lists all the potential interception points that Cloud Code can be bound to, and has a JavaScript editor in which the interception code can be written. The Bindings section is split into eight sub-categories, further explained in the sections below.
 
-![](img\CloudCode\1.jpg)
+![](img/CloudCode/1.jpg)
 
 To access the JavaScript editor select the name of the script from one of the eight drop down menus in the Bindings section.  Use the Delete, Close and Save buttons at the bottom of the editor to manage your scripts.
 
 *Note*: You can also save your scripts using standard key press combinations, CMD+S on OSX and CTRL+S on Windows and Linux.
 
-![](img\CloudCode\2.jpg)
+![](img/CloudCode/2.jpg)
 
 ### Events
 
 This list contains an entry for each Event you have created within the GameSparks platform. When a [LogEventRequest](/?p=2254) is received, the corresponding script is executed allowing you to run custom code on the platform. You can access the current player making the request using  Spark.getPlayer(). The Create New Event button allows you to quickly create a new Event from the Cloud Code section of the Configurator.
 
-![](img\CloudCode\3.jpg)
+![](img/CloudCode/3.jpg)
 
 Clicking the *+* button will open the same Form as in the [Events](..\Cloud Code, and the Test Harness\Events.html) page to allow Event creation .
 
@@ -67,7 +67,7 @@ Using require, you can load a module into the current execution context. This is
 
 To create a new module click the Create New Module button, then enter a short code to uniquely identify this module script.
 
-![](img\CloudCode\4.jpg)
+![](img/CloudCode/4.jpg)
 
 ### System
 

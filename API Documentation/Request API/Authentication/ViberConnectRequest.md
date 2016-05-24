@@ -25,6 +25,7 @@ Parameter | Required | Type | Description
 --------- | -------- | ---- | -----------
 accessToken | Yes | string | The accessToken represents a player's permission to share access to their account with your application.
 doNotLinkToCurrentPlayer | No | boolean | Indicates that the server should not try to link the external profile with the current player.  If false, links the external profile to the currently signed in player.  If true, creates a new player and links the external profile to them.  Defaults to false.
+doNotRegisterForPush | No | boolean | Does not automatocally register this user for push notifications. Defaults to false.
 errorOnSwitch | No | boolean | Indicates whether the server should return an error if an account switch would have occurred, rather than switching automatically.  Defaults to false.
 segments | No | JSON | An optional segment configuration for this request.
 switchIfPossible | No | boolean | Indicates that the server should switch to the supplied profile if it isalready associated to a player. Defaults to false.
@@ -89,6 +90,7 @@ accessToken | REQUIRED | Parameter accessToken is required but was not provided
 	new ViberConnectRequest()
 		.SetAccessToken(accessToken)
 		.SetDoNotLinkToCurrentPlayer(doNotLinkToCurrentPlayer)
+		.SetDoNotRegisterForPush(doNotRegisterForPush)
 		.SetErrorOnSwitch(errorOnSwitch)
 		.SetSegments(segments)
 		.SetSwitchIfPossible(switchIfPossible)
@@ -116,6 +118,7 @@ accessToken | REQUIRED | Parameter accessToken is required but was not provided
 	    .createViberConnectRequest()
 		.setAccessToken(accessToken)
 		.setDoNotLinkToCurrentPlayer(doNotLinkToCurrentPlayer)
+		.setDoNotRegisterForPush(doNotRegisterForPush)
 		.setErrorOnSwitch(errorOnSwitch)
 		.setSegments(segments)
 		.setSwitchIfPossible(switchIfPossible)
@@ -139,6 +142,7 @@ accessToken | REQUIRED | Parameter accessToken is required but was not provided
 	GSViberConnectRequest* request = [[GSViberConnectRequest alloc] init];
 	[request setAccessToken:accessToken;
 	[request setDoNotLinkToCurrentPlayer:doNotLinkToCurrentPlayer;
+	[request setDoNotRegisterForPush:doNotRegisterForPush;
 	[request setErrorOnSwitch:errorOnSwitch;
 	[request setSegments:segments;
 	[request setSwitchIfPossible:switchIfPossible;
@@ -177,6 +181,7 @@ accessToken | REQUIRED | Parameter accessToken is required but was not provided
 	ViberConnectRequest request(gsInstance);
 	request.SetAccessToken(accessToken)
 	request.SetDoNotLinkToCurrentPlayer(doNotLinkToCurrentPlayer)
+	request.SetDoNotRegisterForPush(doNotRegisterForPush)
 	request.SetErrorOnSwitch(errorOnSwitch)
 	request.SetSegments(segments)
 	request.SetSwitchIfPossible(switchIfPossible)
@@ -195,6 +200,7 @@ import com.gamesparks.sdk.api.GSEventListener;
 gs.getRequestBuilder().createViberConnectRequest()
 	.setAccessToken(accessToken)
 	.setDoNotLinkToCurrentPlayer(doNotLinkToCurrentPlayer)
+	.setDoNotRegisterForPush(doNotRegisterForPush)
 	.setErrorOnSwitch(errorOnSwitch)
 	.setSegments(segments)
 	.setSwitchIfPossible(switchIfPossible)
@@ -219,6 +225,7 @@ gs.getRequestBuilder().createViberConnectRequest()
 	var request = new SparkRequests.ViberConnectRequest();
 	request.accessToken = ...;
 	request.doNotLinkToCurrentPlayer = ...;
+	request.doNotRegisterForPush = ...;
 	request.errorOnSwitch = ...;
 	request.segments = ...;
 	request.switchIfPossible = ...;

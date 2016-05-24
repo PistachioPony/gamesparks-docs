@@ -10,7 +10,7 @@ Returns a list of the current player's transaction history.
 Parameter | Required | Type | Description
 --------- | -------- | ---- | -----------
 dateFrom | No | date | Optional date constraint to list transactions from
-dateTo | No | date | Optional date constraint to list transactions from
+dateTo | No | date | Optional date constraint to list transactions to
 entryCount | No | number | The number of items to return in a page (default=50)
 include | No | string | An optional filter that limits the transaction types returned
 offset | No | number | The offset (page number) to start from (default=0)
@@ -23,9 +23,25 @@ A response listing transactions for the player
 Parameter | Type | Description
 --------- | ---- | -----------
 scriptData | ScriptData | A JSON Map of any data added either to the Request or the Response by your Cloud Code
-transactionList | JSON[] | A list of JSON objects containing player transactions
+transactionList | [PlayerTransaction[]](#playertransaction) | A list of JSON objects containing player transactions
 
 ## Nested types
+
+### PlayerTransaction
+
+A nested object that represents a player transaction.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+items | [PlayerTransactionItem[]](#playertransactionitem) | The items (currency or virtual goods) involved in this transaction
+playerId | string | The player ID
+reason | string | The reason for the transaction
+revokeDate | date | Gets the date when this transaction was revoked, if applicable
+revoked | boolean | Is true if the transaction was revoked
+script | string | The specific script in which this transaction occurred
+scriptType | string | The script type in which this transaction occurred (e.g. event)
+transactionId | string | The transaction ID of this purchase, if applicable
+when | date | The date of the transaction
 
 ### ScriptData
 
@@ -35,6 +51,16 @@ Parameter | Type | Description
 --------- | ---- | -----------
 myKey | string | An arbitrary data key
 myValue | JSON | An arbitrary data value.
+
+### PlayerTransactionItem
+
+A nested object that represents a single item in a transaction.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+amount | number | The amount of this item given to the player in the transaction
+newValue | number | The quantity the player possesses after the transaction completed
+type | string | The type of item
 
 
 ## Code Samples
@@ -53,7 +79,7 @@ myValue | JSON | An arbitrary data value.
 		.SetOffset(offset)
 		.Send((response) => {
 		GSData scriptData = response.ScriptData; 
-		IList<GSData> transactionList = response.TransactionList; 
+		GSEnumerable<var> transactionList = response.TransactionList; 
 		});
 
 ```
@@ -75,7 +101,7 @@ myValue | JSON | An arbitrary data value.
 		.setOffset(offset)
 		.send(function(response:com.gamesparks.api.responses.ListTransactionsResponse):void {
 		var scriptData:ScriptData = response.getScriptData(); 
-		var transactionList:Vector.<Object> = response.getTransactionList(); 
+		var transactionList:Vector.<PlayerTransaction> = response.getTransactionList(); 
 		});
 
 ```
@@ -110,7 +136,7 @@ myValue | JSON | An arbitrary data value.
 	
 	void ListTransactionsRequest_Response(GS& gsInstance, const ListTransactionsResponse& response) {
 	GSData scriptData = response.getScriptData(); 
-	gsstl:vector<GSData> transactionList = response.getTransactionList(); 
+	gsstl:vector<Types::PlayerTransaction*> transactionList = response.getTransactionList(); 
 	}
 	......
 	
@@ -141,7 +167,7 @@ gs.getRequestBuilder().createListTransactionsRequest()
 		@Override
 		public void onEvent(ListTransactionsResponse response) {
 			GSData scriptData = response.getScriptData(); 
-			List<GSData> transactionList = response.getTransactionList(); 
+			List<PlayerTransaction> transactionList = response.getTransactionList(); 
 		}
 	});
 

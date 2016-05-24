@@ -20,8 +20,12 @@ A response to a player leaving a team
 
 Parameter | Type | Description
 --------- | ---- | -----------
+members | [Player[]](#player) | The team members
+owner | [Player](#player) | A summary of the owner
 scriptData | ScriptData | A JSON Map of any data added either to the Request or the Response by your Cloud Code
-team | [Team](#team) | A JSON object representing the team
+teamId | string | The Id of the team
+teamName | string | The team name
+teamType | string | The team type
 
 ## Nested types
 
@@ -33,18 +37,6 @@ Parameter | Type | Description
 --------- | ---- | -----------
 myKey | string | An arbitrary data key
 myValue | JSON | An arbitrary data value.
-
-### Team
-
-A nested object that represents the team.
-
-Parameter | Type | Description
---------- | ---- | -----------
-members | [Player[]](#player) | The team members
-owner | [Player](#player) | A summary of the owner
-teamId | string | The Id of the team
-teamName | string | The team name
-teamType | string | The team type
 
 ### Player
 
@@ -83,8 +75,12 @@ teamType&&ownerId | NOT_UNIQUE | The ownerId / teamType combination has multiple
 		.SetTeamId(teamId)
 		.SetTeamType(teamType)
 		.Send((response) => {
+		GSEnumerable<var> members = response.Members; 
+		var owner = response.Owner; 
 		GSData scriptData = response.ScriptData; 
-		var team = response.Team; 
+		string teamId = response.TeamId; 
+		string teamName = response.TeamName; 
+		string teamType = response.TeamType; 
 		});
 
 ```
@@ -103,8 +99,12 @@ teamType&&ownerId | NOT_UNIQUE | The ownerId / teamType combination has multiple
 		.setTeamId(teamId)
 		.setTeamType(teamType)
 		.send(function(response:com.gamesparks.api.responses.LeaveTeamResponse):void {
+		var members:Vector.<Player> = response.getMembers(); 
+		var owner:Player = response.getOwner(); 
 		var scriptData:ScriptData = response.getScriptData(); 
-		var team:Team = response.getTeam(); 
+		var teamId:String = response.getTeamId(); 
+		var teamName:String = response.getTeamName(); 
+		var teamType:String = response.getTeamType(); 
 		});
 
 ```
@@ -119,8 +119,12 @@ teamType&&ownerId | NOT_UNIQUE | The ownerId / teamType combination has multiple
 	[request setTeamId:teamId;
 	[request setTeamType:teamType;
 	[request setCallback:^ (GSLeaveTeamResponse* response) {
+	NSArray* members = [response getMembers]; 
+	GSPlayer* owner = [response getOwner]; 
 	NSDictionary* scriptData = [response getScriptData]; 
-	GSTeam* team = [response getTeam]; 
+	NSString* teamId = [response getTeamId]; 
+	NSString* teamName = [response getTeamName]; 
+	NSString* teamType = [response getTeamType]; 
 	}];
 	[gs send:request];
 
@@ -136,8 +140,12 @@ teamType&&ownerId | NOT_UNIQUE | The ownerId / teamType combination has multiple
 	...
 	
 	void LeaveTeamRequest_Response(GS& gsInstance, const LeaveTeamResponse& response) {
+	gsstl:vector<Types::Player*> members = response.getMembers(); 
+	Types::Player* owner = response.getOwner(); 
 	GSData scriptData = response.getScriptData(); 
-	Types::Team* team = response.getTeam(); 
+	gsstl::string teamId = response.getTeamId(); 
+	gsstl::string teamName = response.getTeamName(); 
+	gsstl::string teamType = response.getTeamType(); 
 	}
 	......
 	
@@ -163,8 +171,12 @@ gs.getRequestBuilder().createLeaveTeamRequest()
 	.send(new GSEventListener<LeaveTeamResponse>() {
 		@Override
 		public void onEvent(LeaveTeamResponse response) {
+			List<Player> members = response.getMembers(); 
+			Player owner = response.getOwner(); 
 			GSData scriptData = response.getScriptData(); 
-			Team team = response.getTeam(); 
+			String teamId = response.getTeamId(); 
+			String teamName = response.getTeamName(); 
+			String teamType = response.getTeamType(); 
 		}
 	});
 
@@ -179,8 +191,12 @@ gs.getRequestBuilder().createLeaveTeamRequest()
 	request.teamType = ...;
 	var response = request.Send();
 	
+var members = response.members; 
+var owner = response.owner; 
 var scriptData = response.scriptData; 
-var team = response.team; 
+var teamId = response.teamId; 
+var teamName = response.teamName; 
+var teamType = response.teamType; 
 ```
 
 

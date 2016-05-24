@@ -2,7 +2,11 @@
 # ChallengeLapsedMessage
 
 
+@Deprecated
+
 A message indicating that the challenge has reached its end time but was not yet started.
+
+This message is no longer used. Instead, a ChallengeExpiredMessage will be triggered.
 
 
 ## Request Parameters

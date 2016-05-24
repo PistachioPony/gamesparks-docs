@@ -2,6 +2,8 @@
 # FindMatchRequest
 
 
+@Deprecated. Use MatchmakingRequest instead.
+
 Find a match for this player, using the given skill and matchShortCode.
 
 Players looking for a match using the same matchShortCode will be considered for a match, based on the matchConfig.

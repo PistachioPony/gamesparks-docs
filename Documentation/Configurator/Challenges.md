@@ -10,7 +10,7 @@ Challenges allow you to set up multiplayer game mechanics to encourage players t
 
 The Configurator Multiplayer page displays the list of Challenges and allows you to create new Challenges and edit or delete existing ones.
 
-![](img\Challenges\1.png)
+![](img/Challenges/1.png)
 
 The icons (highlighted above) give you the following capabilities:
 
@@ -22,7 +22,7 @@ The icons (highlighted above) give you the following capabilities:
 
 To create a new challenge select the icon and you will be presented with the following overlay:
 
-![](img\Challenges\2.jpg)
+![](img/Challenges/2.jpg)
 
   * *Short Code* \- The Short Code is a mandatory field used to give the Challenge a unique identifier for use elsewhere in the Portal and in Cloud Code.
   * *Name* \- The Name field is a mandatory field used as an identifier to help the user find the challenge in the Portal.

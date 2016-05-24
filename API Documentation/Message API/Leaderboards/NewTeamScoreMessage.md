@@ -22,15 +22,6 @@ title | No | string | A textual title for the message.
 
 ## Nested types
 
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
-
 ### LeaderboardData
 
 Leaderboard entry data
@@ -66,6 +57,15 @@ socialFromPercent | number | The old social rank of the player as a percentage o
 socialTo | number | The Social Rank of the player in this leaderboard after the score was submitted.
 socialToPercent | number | The old global rank of the player as a percentage of the total number of friend scores in this leaderboard.
 topNPassed | [LeaderboardData[]](#leaderboarddata) | The leaderboard entries of the global players that were beaten as part of this score submission. Requires Top N to be configured on the leaderboard
+
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
 
 
 ## Code Samples

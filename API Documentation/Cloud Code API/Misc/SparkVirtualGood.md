@@ -119,6 +119,12 @@ _returns_ number</p>
 <b>validity</b> All Scripts
 Returns the max quantity of the virtual good
 
+## getBundledGoods
+_signature_ getBundledGoods()</p>
+_returns_ JSON</p>
+<b>validity</b> All Scripts
+Returns the bundled goods of the virtual good
+
 ## getPropertySet
 _signature_ getPropertySet()</p>
 _returns_ JSON</p>

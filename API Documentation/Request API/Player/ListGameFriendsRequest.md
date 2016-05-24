@@ -6,7 +6,7 @@ Returns the list of the current players game friends.
 
 A Game friend is someone in their social network who also plays the game.
 
-Against each friend, and indicator is supplied to show whether the friend is currently connected to the GameSparks service
+Against each friend, an indicator is supplied to show whether the friend is currently connected to the GameSparks service
 
 
 ## Request Parameters

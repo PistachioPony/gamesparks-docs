@@ -39,7 +39,7 @@ myValue | JSON | An arbitrary data value.
 
 Key | Value | Description
 --------- | ----------- | -----------
-deviceOS | IOS|ANDROID|WP8|W8|KINDLE | deviceOS is not a valid value
+deviceOS | IOS|ANDROID|WP8|W8|KINDLE|VIBER | deviceOS is not a valid value
 
 ## Code Samples
 

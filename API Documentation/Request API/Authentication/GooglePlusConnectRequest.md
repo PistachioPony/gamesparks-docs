@@ -2,7 +2,7 @@
 # GooglePlusConnectRequest
 
 
-Allows either a Google Plus access code to be used as an authentication mechanism.
+Allows either a Google Plus access code or an authentication token to be used as an authentication mechanism.
 
 Once authenticated the platform can determine the current players details from the Google Plus platform and store them within GameSparks.
 

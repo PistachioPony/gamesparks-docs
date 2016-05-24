@@ -36,4 +36,3 @@ Gets a number using the given index key, if the key contains a different type, o
 _signature_ getString(number index)</p>
 _returns_ string</p>
 Gets a string using the given index key, if the key contains a different type, or is empty a null will be returned
-

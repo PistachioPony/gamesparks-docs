@@ -17,7 +17,7 @@ e.g.
 
 ## limit
 _signature_ limit(number count)</p>
-_returns_ <a href="../Mongo/SparkMongoCursor">SparkMongoCursor</a></p>
+_returns_ [SparkMongoCursor](../Mongo/SparkMongoCursor.md)</p>
 Limits the number of elements returned.
 <b>params</b>
 count - the limit to set
@@ -26,7 +26,7 @@ count - the limit to set
 
 ## skip
 _signature_ skip(number count)</p>
-_returns_ <a href="../Mongo/SparkMongoCursor">SparkMongoCursor</a></p>
+_returns_ [SparkMongoCursor](../Mongo/SparkMongoCursor.md)</p>
 Discards a given number of elements at the beginning of the cursor.
 <b>params</b>
 count - the limit to set
@@ -49,7 +49,7 @@ Counts the number of objects matching the query this does take limit/skip into c
 
 ## sort
 _signature_ sort(JSON orderBy)</p>
-_returns_ <a href="../Mongo/SparkMongoCursor">SparkMongoCursor</a></p>
+_returns_ [SparkMongoCursor](../Mongo/SparkMongoCursor.md)</p>
 Sorts this cursor's elements. This method must be called before getting any object from the cursor.
 <b>example</b>
 <pre rel="highlighter" code-brush="js" contenteditable="false">var obj = collection.find( query ).sort( {"field" : 1} ).limit( 100 ).toArray();</pre>

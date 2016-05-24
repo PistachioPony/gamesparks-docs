@@ -8,7 +8,7 @@ e.g.
 
 
 ## createMatch
-_signature_ createMatch(<a href="../Spark/SparkPlayer">SparkPlayer</a>[] players)</p>
+_signature_ createMatch([SparkPlayer](../Spark/SparkPlayer.md)[] players)</p>
 _returns_ string</p>
 <b>validity</b> All Scripts
 Create a match between the given players.
@@ -32,7 +32,7 @@ The matchId if a match was successfully created, or null
 <pre rel="highlighter" code-brush="js" contenteditable="false">var matchId = Spark.getMultiplayer().createMatchById(playerId1, playerId2);</pre>
 
 ## createMatchWithMatchId
-_signature_ createMatchWithMatchId(string matchId, <a href="../Spark/SparkPlayer">SparkPlayer</a>[] players)</p>
+_signature_ createMatchWithMatchId(string matchId, [SparkPlayer](../Spark/SparkPlayer.md)[] players)</p>
 _returns_ string</p>
 <b>validity</b> All Scripts
 Create a match between the given players, using the given matchId.
@@ -59,7 +59,7 @@ The matchId if a match was successfully created, or null
 
 ## loadMatch
 _signature_ loadMatch(string matchId)</p>
-_returns_ <a href="../Spark/SparkMatch">SparkMatch</a></p>
+_returns_ [SparkMatch](../Spark/SparkMatch.md)</p>
 <b>validity</b> All Scripts
 Load the match with the given matchId
 <b>params</b>

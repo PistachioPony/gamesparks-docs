@@ -9,7 +9,7 @@ e.g.
 
 ## getPlayer
 _signature_ getPlayer()</p>
-_returns_ <a href="../Spark/SparkPlayer">SparkPlayer</a></p>
+_returns_ [SparkPlayer](../Spark/SparkPlayer.md)</p>
 <b>validity</b> All Scripts
 <b>returns</b>
 The SparkPlayer this participant represents

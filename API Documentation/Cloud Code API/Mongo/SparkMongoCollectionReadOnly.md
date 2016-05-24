@@ -87,7 +87,7 @@ optionsIN - index options
 
 ## find
 _signature_ find()</p>
-_returns_ <a href="../Mongo/SparkMongoCursor">SparkMongoCursor</a></p>
+_returns_ [SparkMongoCursor](../Mongo/SparkMongoCursor.md)</p>
 Returns a SparkMongoCursor of all documents in this collection
 <b>params</b>
 <b>example</b>
@@ -95,7 +95,7 @@ Returns a SparkMongoCursor of all documents in this collection
 
 
 _signature_ find(JSON query)</p>
-_returns_ <a href="../Mongo/SparkMongoCursor">SparkMongoCursor</a></p>
+_returns_ [SparkMongoCursor](../Mongo/SparkMongoCursor.md)</p>
 Returns a SparkMongoCursor of all documents in this collection that match the supplied query
 <b>params</b>
 query - a Mongo query
@@ -104,7 +104,7 @@ query - a Mongo query
 
 
 _signature_ find(JSON query, JSON fields)</p>
-_returns_ <a href="../Mongo/SparkMongoCursor">SparkMongoCursor</a></p>
+_returns_ [SparkMongoCursor](../Mongo/SparkMongoCursor.md)</p>
 Returns a SparkMongoCursor of all documents in this collection that match the supplied query.
 The returned documents only contain the fields supplied in the fieldsToReturn parameter. This reduces the document size when being returned.
 <b>params</b>

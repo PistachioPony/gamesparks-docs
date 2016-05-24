@@ -482,7 +482,7 @@ Show the player on current leaderboards, redisplaying any existing scores.  New 
 
 ## getPushRegistrations
 _signature_ getPushRegistrations()</p>
-_returns_ <a href="../Spark/SparkPushRegistration">SparkPushRegistration</a>[]</p>
+_returns_ [SparkPushRegistration](../Spark/SparkPushRegistration.md)[]</p>
 Gets push registrations of the player
 <b>example</b>
 <pre rel="highlighter" code-brush="js" contenteditable="false">Spark.getPlayer().getPushRegistrations();</pre>

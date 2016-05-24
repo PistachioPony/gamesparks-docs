@@ -8,6 +8,8 @@ Players looking for a match using the same matchShortCode will be considered for
 
 Each player must match the other for the match to be found.
 
+If the matchShortCode points to a match with realtime enabled, in order to minimise latency, the location of Players and their proximity to one another takes precedence over their reciprocal skill values.
+
 
 ## Request Parameters
 

@@ -23,7 +23,7 @@ Returns the shortCode of the segment
 
 ## getValues
 _signature_ getValues()</p>
-_returns_ <a href="../Misc/SparkSegmentValue">SparkSegmentValue</a>[]</p>
+_returns_ [SparkSegmentValue](../Misc/SparkSegmentValue.md)[]</p>
 <b>validity</b> All Scripts
 Returns the values configured against the segment
 

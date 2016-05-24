@@ -18,7 +18,7 @@ The id of this match
 
 ## getParticipants
 _signature_ getParticipants()</p>
-_returns_ <a href="../Spark/SparkParticipant">SparkParticipant</a>[]</p>
+_returns_ [SparkParticipant](../Spark/SparkParticipant.md)[]</p>
 <b>validity</b> All Scripts
 <b>returns</b>
 An array containing all of the participants of this match
@@ -27,7 +27,7 @@ An array containing all of the participants of this match
 
 ## getServer
 _signature_ getServer()</p>
-_returns_ <a href="../Spark/SparkRealtimeServer">SparkRealtimeServer</a></p>
+_returns_ [SparkRealtimeServer](../Spark/SparkRealtimeServer.md)</p>
 <b>validity</b> All Scripts
 <b>returns</b>
 The details of the realtime server on which this match will take place.
@@ -35,7 +35,7 @@ The details of the realtime server on which this match will take place.
 <pre rel="highlighter" code-brush="js" contenteditable="false">var server = match.getServer()</pre>
 
 ## addPlayers
-_signature_ addPlayers(<a href="../Spark/SparkPlayer">SparkPlayer</a>[] players)</p>
+_signature_ addPlayers([SparkPlayer](../Spark/SparkPlayer.md)[] players)</p>
 _returns_ void</p>
 <b>validity</b> All Scripts
 Add the given players to this match.
@@ -51,7 +51,7 @@ Add the players with the given playerIds to this match.
 <pre rel="highlighter" code-brush="js" contenteditable="false">match.addPlayersById(playerIdsToAdd)</pre>
 
 ## removePlayers
-_signature_ removePlayers(<a href="../Spark/SparkPlayer">SparkPlayer</a>[] players)</p>
+_signature_ removePlayers([SparkPlayer](../Spark/SparkPlayer.md)[] players)</p>
 _returns_ void</p>
 <b>validity</b> All Scripts
 Remove the given players from this match.
@@ -67,6 +67,15 @@ Remove the players with the given playerIds from this match.
 <pre rel="highlighter" code-brush="js" contenteditable="false">match.removePlayersById(playerIdsToRemove)</pre>
 
 ## enableRealtime
+_signature_ enableRealtime(string script)</p>
+_returns_ void</p>
+<b>validity</b> All Scripts
+If this match is not already realtime enabled, this method will enabled realtime.
+The realtime servers for this match will be configured to use the realtime script provided
+<b>example</b>
+<pre rel="highlighter" code-brush="js" contenteditable="false">match.enableRealtime('MY_RT_SCRIPT');</pre>
+
+
 _signature_ enableRealtime()</p>
 _returns_ void</p>
 <b>validity</b> All Scripts

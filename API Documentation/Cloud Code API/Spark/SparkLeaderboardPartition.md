@@ -45,14 +45,14 @@ The later can be the userId of a player or the id of a team.
 
 ## getEntries
 _signature_ getEntries()</p>
-_returns_ <a href="../Spark/SparkLeaderboardCursor">SparkLeaderboardCursor</a></p>
+_returns_ [SparkLeaderboardCursor](../Spark/SparkLeaderboardCursor.md)</p>
 Returns a cursor over all the entries in this leaderboard.
 <b>example</b>
 <pre rel="highlighter" code-brush="js" contenteditable="false">var cursor = Spark.getLeaderboards().getLeaderboard(shortCode).getEntries();</pre>
 
 
 _signature_ getEntries(number count, number offset)</p>
-_returns_ <a href="../Spark/SparkLeaderboardCursor">SparkLeaderboardCursor</a></p>
+_returns_ [SparkLeaderboardCursor](../Spark/SparkLeaderboardCursor.md)</p>
 Returns a cursor over <b>count</b> entries in this leaderboard, starting at <b>offset</b>.
 <b>params</b>
 count - the number of entries over which to obtain a cursor.
@@ -83,7 +83,7 @@ Deletes this leaderboard partition, removing it from the parent leaderboard and 
 
 ## getPartitions
 _signature_ getPartitions()</p>
-_returns_ <a href="../Spark/SparkLeaderboardPartition">SparkLeaderboardPartition</a>[]</p>
+_returns_ [SparkLeaderboardPartition](../Spark/SparkLeaderboardPartition.md)[]</p>
 Returns an array containing the partitions of this leaderboard if it is partitioned, otherwise an empty array is returned.
 <b>example</b>
 <pre rel="highlighter" code-brush="js" contenteditable="false">var partitions = Spark.getLeaderboards().getLeaderboard(shortCode).getPartitions();</pre>
@@ -110,24 +110,24 @@ See #drop.  Additionally deletes the underlying running total data, resetting an
 <b>example</b>
 <pre rel="highlighter" code-brush="js" contenteditable="false">leaderboard.drop(true);</pre>
 
-## getEntriesForItentifier
-_signature_ getEntriesForItentifier(string identifier, JSON customIdFilter)</p>
+## getEntriesForIdentifier
+_signature_ getEntriesForIdentifier(string identifier, JSON customIdFilter)</p>
 _returns_ SparkLeaderboardEntry[]</p>
 Returns the array of leaderboard entries that correspond to the supplied identifier and customIdFilter
 If the customIdFilter is null, the method returns all the entries in the leaderboard for the suplied identifier
 <b>example</b>
-<pre rel="highlighter" code-brush="js" contenteditable="false">leaderboard.getEntriesForItentifier(myPlayerId, {});</pre>
+<pre rel="highlighter" code-brush="js" contenteditable="false">leaderboard.getEntriesForIdentifier(myPlayerId, {});</pre>
 
 ## getEntriesFromPlayer
 _signature_ getEntriesFromPlayer(string playerId, number count)</p>
-_returns_ <a href="../Spark/SparkLeaderboardCursor">SparkLeaderboardCursor</a></p>
+_returns_ [SparkLeaderboardCursor](../Spark/SparkLeaderboardCursor.md)</p>
 Returns a cursor over the leaderboard entries starting from the highest score of the supplied playerId
 <b>example</b>
 <pre rel="highlighter" code-brush="js" contenteditable="false">leaderboard.getEntriesFromPlayer(myPlayerId, 50);</pre>
 
 ## getEntriesFromPlayerForCustomId
 _signature_ getEntriesFromPlayerForCustomId(string playerId, number count, JSON customIdFilter)</p>
-_returns_ <a href="../Spark/SparkLeaderboardCursor">SparkLeaderboardCursor</a></p>
+_returns_ [SparkLeaderboardCursor](../Spark/SparkLeaderboardCursor.md)</p>
 Returns a cursor over the leaderboard entries starting from the highest score of the supplied playerId and customIdFilter
 If the customId filter is not an object with valid ID fields, it will return an empty cursor
 <b>example</b>
@@ -200,7 +200,7 @@ _signature_ rebuildLeaderboard(boolean awardAchievements)</p>
 _returns_ void</p>
 Drops the current leaderboard and it rebuilds it from the running totals.
 The current leaderboard may not have valid ranks for the duration of this process.
-You can only rebuild realtime leaderboards.
+You can only rebuild realtime leaderboards. You cannot rebuild partitioned leaderboards, you can only rebuild the individual partitions.
 If the flag awardAchievements is set to true, at the end of the rebuild process the appropriate achievements will be awarded
 Please use with care, because during the rebuild process any new data coming from the players might temporarily have incorrect ranks
 <b>example</b>

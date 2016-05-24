@@ -6,8 +6,8 @@ A comparison operation on the owners (players in a player-based leaderboard, tea
 
 
 ## union
-_signature_ union(<a href="../Spark/SparkLeaderboard">SparkLeaderboard</a> rhs)</p>
-_returns_ <a href="../Spark/SparkLeaderboardOperations">SparkLeaderboardOperations</a></p>
+_signature_ union([SparkLeaderboard](../Spark/SparkLeaderboard.md) rhs)</p>
+_returns_ [SparkLeaderboardOperations](../Spark/SparkLeaderboardOperations.md)</p>
 <b>validity</b> All Scripts
 Performs a union on the set of owners returned as result of evaluating this operation and the owners of entries within the given leaderboard.
 Returns a new SparkLeaderboardOperations object to allow further operations to be chained before evaluation.
@@ -18,8 +18,8 @@ rhs - the the right-hand side of the operation.
 <pre rel="highlighter" code-brush="js" contenteditable="false">var inAny = operation.union(rhs).evaluate();</pre>
 
 
-_signature_ union(<a href="../Spark/SparkLeaderboardOperations">SparkLeaderboardOperations</a> rhs)</p>
-_returns_ <a href="../Spark/SparkLeaderboardOperations">SparkLeaderboardOperations</a></p>
+_signature_ union([SparkLeaderboardOperations](../Spark/SparkLeaderboardOperations.md) rhs)</p>
+_returns_ [SparkLeaderboardOperations](../Spark/SparkLeaderboardOperations.md)</p>
 <b>validity</b> All Scripts
 Performs a union on the set of owners returned as result of evaluating this operation and the set of owners returned as result of evaluating the given operation.
 Returns a new SparkLeaderboardOperations object to allow further operations to be chained before evaluation.
@@ -30,8 +30,8 @@ rhs - the the right-hand side of the operation.
 <pre rel="highlighter" code-brush="js" contenteditable="false">var inAny = operation.union(rhs).evaluate();</pre>
 
 ## intersection
-_signature_ intersection(<a href="../Spark/SparkLeaderboard">SparkLeaderboard</a> rhs)</p>
-_returns_ <a href="../Spark/SparkLeaderboardOperations">SparkLeaderboardOperations</a></p>
+_signature_ intersection([SparkLeaderboard](../Spark/SparkLeaderboard.md) rhs)</p>
+_returns_ [SparkLeaderboardOperations](../Spark/SparkLeaderboardOperations.md)</p>
 <b>validity</b> All Scripts
 Performs an intersection on the set of owners returned as result of evaluating this operation and the owners of entries within the given leaderboard.
 Returns a new SparkLeaderboardOperations object to allow further operations to be chained before evaluation.
@@ -42,8 +42,8 @@ rhs - the the right-hand side of the operation.
 <pre rel="highlighter" code-brush="js" contenteditable="false">var inBoth = operation.intersection(rhs).evaluate();</pre>
 
 
-_signature_ intersection(<a href="../Spark/SparkLeaderboardOperations">SparkLeaderboardOperations</a> rhs)</p>
-_returns_ <a href="../Spark/SparkLeaderboardOperations">SparkLeaderboardOperations</a></p>
+_signature_ intersection([SparkLeaderboardOperations](../Spark/SparkLeaderboardOperations.md) rhs)</p>
+_returns_ [SparkLeaderboardOperations](../Spark/SparkLeaderboardOperations.md)</p>
 <b>validity</b> All Scripts
 Performs an intersection on the set of owners returned as result of evaluating this operation and the set of owners returned as result of evaluating the given operation.
 Returns a new SparkLeaderboardOperations object to allow further operations to be chained before evaluation.
@@ -54,8 +54,8 @@ rhs - the the right-hand side of the operation.
 <pre rel="highlighter" code-brush="js" contenteditable="false">var inBoth = operation.intersection(rhs).evaluate();</pre>
 
 ## difference
-_signature_ difference(<a href="../Spark/SparkLeaderboard">SparkLeaderboard</a> rhs)</p>
-_returns_ <a href="../Spark/SparkLeaderboardOperations">SparkLeaderboardOperations</a></p>
+_signature_ difference([SparkLeaderboard](../Spark/SparkLeaderboard.md) rhs)</p>
+_returns_ [SparkLeaderboardOperations](../Spark/SparkLeaderboardOperations.md)</p>
 <b>validity</b> All Scripts
 Performs a difference on the set of owners returned as result of evaluating this operation and the owners of entries within the given leaderboard.
 Returns a new SparkLeaderboardOperations object to allow further operations to be chained before evaluation.
@@ -66,8 +66,8 @@ rhs - the the right-hand side of the operation.
 <pre rel="highlighter" code-brush="js" contenteditable="false">var onlyInFirst = operation.difference(rhs).evaluate();</pre>
 
 
-_signature_ difference(<a href="../Spark/SparkLeaderboardOperations">SparkLeaderboardOperations</a> rhs)</p>
-_returns_ <a href="../Spark/SparkLeaderboardOperations">SparkLeaderboardOperations</a></p>
+_signature_ difference([SparkLeaderboardOperations](../Spark/SparkLeaderboardOperations.md) rhs)</p>
+_returns_ [SparkLeaderboardOperations](../Spark/SparkLeaderboardOperations.md)</p>
 <b>validity</b> All Scripts
 Performs a difference on the set of owners returned as result of evaluating this operation and the set of owners returned as result of evaluating the given operation.
 Returns a new SparkLeaderboardOperations object to allow further operations to be chained before evaluation.
