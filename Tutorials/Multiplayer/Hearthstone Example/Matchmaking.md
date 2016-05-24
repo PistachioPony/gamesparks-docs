@@ -14,11 +14,11 @@ Before we can continue we need to create a match and a challenge. These will be 
 
 The match:
 
-![](img\1.jpg)
+![](img/1.jpg)
 
 The challenge:
 
-![](img\2.jpg)
+![](img/2.jpg)
 
 Make sure that the challenge is turn based.
 

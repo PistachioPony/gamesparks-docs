@@ -14,7 +14,7 @@ Before you start adding players to your game, you need to make sure that the G
 
 ## Apply Settings to GameSparks Manager
 
-![l](img\UT\1.png)
+![l](img/UT/1.png)
 You can see that the *GameSparksUnity* script expects a settings file. This file was automatically generated when you ran the Test-Scene in the previous tutorial. You can find the settings file in the *GameSparks -> Resources* folder.Apply them to the Settings in the *GameSparksUnity* script.
 
 
@@ -114,4 +114,4 @@ For each request you send you will get a response from the server. You have alre
 
  One of the most useful and trusty tools on GameSparks portal is the *NoSQL Explorer*. By using this you can check all of the mongo information you have saved for your game. You can check results and filter information for whatever you need (check out [this](https://docs.gamesparks.net/developer-portal/nosql) tutorial for more info). You may want to check that your players have been authenticated properly, or later on, when your game is live, check your player-data. To do so, simply navigate to the *NoSQL* tab in your GameSparks portal, select the *player* collection from the Collection list, then click on the *Find* button. In the output panel you can see the player details for any player you have authenticated.Now you are setup and connected with GameSparks and you are ready to send and receive some data. Check out the next tutorial on Events and Cloud Code [here](https://docs.gamesparks.net/developer-portal/cloud-code/using-cloud-code "Using Cloud Code").
 
-![l](img\UT\6.png)
+![l](img/UT/6.png)

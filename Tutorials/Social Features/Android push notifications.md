@@ -6,29 +6,29 @@ Google allows push notifications through its Google Cloud Messaging service (GCM
 
 Firstly, you need to set up an application with [Google Developers Console](https://console.developers.google.com/). Click "Create Project", give your project a name, and click "Create".
 
-![](img\AndroidPush\1.png)
+![](img/AndroidPush/1.png)
 
 Once your application has been created you should be able to click the link to it, and be presented with the "Overview" page. Next let's enable GCM for android. Click "APIs & auth" and scroll down until you can see "Google Cloud Messaging for Android". Click the button to turn it on (it'll now move to the top of the list).
 
-![](img\AndroidPush\2.png)
+![](img/AndroidPush/2.png)
 
 Now you need to create a server key to authenticate the sender of notifications. Click "Credentials", and under "Public API access" click "Create New Key". Select "Server key", and then click "Create".
 
-![](img\AndroidPush\3.png)
+![](img/AndroidPush/3.png)
 
 You should now have an api key that can be used to send push notifications to an android client for your game.
 
-![](img\AndroidPush\4.png)
+![](img/AndroidPush/4.png)
 
 ## Configuring your GameSparks game
 
 Now that you have the api key, it's time to configure you GameSparks game to enable us to send push notifications on your behalf. Go to [the GameSparks developer portal](https://portal.gamesparks.net) and under "Configurator", click "Notifications".
 
-![](img\AndroidPush\5.png)
+![](img/AndroidPush/5.png)
 
 Click "Push Notification" > "Android", and then "Edit".
 
-![](img\AndroidPush\6.png)
+![](img/AndroidPush/6.png)
 
 Developers Console as "GCM Server API Key", and click "Save".
 

@@ -9,7 +9,7 @@ Matchmaking allows Players to be matched in real-time based on common attributes
 
 The Multiplayer page in the Configurator section of the Portal, displays the list of Matches and allows you to create new Matches and edit or delete existing ones.
 
-![](img\Matches\1.png)  
+![](img/Matches/1.png)  
 
 The icons (highlighted above) give you the following capabilities:
 
@@ -21,7 +21,7 @@ The icons (highlighted above) give you the following capabilities:
 
 To create a new Match, select the *Add* (*+*) icon and you will be presented with the following overlay:
 
- ![](img\Matches\2.png)    
+ ![](img/Matches/2.png)    
 
   * *Short Code* \- The Short Code is a mandatory field used to give the Match a unique identifier for use elsewhere in the Portal, in Cloud Code and the Test Harness.
   * *Name* \- The Name field is a mandatory field used as an identifier to help the user find the Match in the Portal.

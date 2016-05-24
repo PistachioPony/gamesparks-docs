@@ -74,8 +74,8 @@ Finally, to finish the *Achievement* setup, all you have to do is call the Event
 
 Log in a Player and request the details to see everything is in order. You should receive the Player's *Display name, currency, location* and zero *Achievements*.
 
-![l](img\AS\1.jpg)
+![l](img/AS/1.jpg)
 
 Play the game and beat the highscore. Once the you've received a message informing you that you've beaten the highscore, you should automatically receive the *Achievement*. Request the account details again and check to see if the account has earned the *Achievement*.
 
-![l](img\AS\2.jpg)
+![l](img/AS/2.jpg)

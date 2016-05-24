@@ -19,13 +19,13 @@ The GameSparks platform uses the concept of interceptors to trigger the executio
 
 ## Event / Challenge Event Interceptors
 
-![](img\CloudCode\2.png)
+![](img/CloudCode/2.png)
 
 Event and Challenge Event processors are specialised versions of the standard Request interceptors. They are executed against LogEventRequest and LogChallengeEventRequest objects. The binding is based on the event key specified when the event type was set up. This allows you to have separate scripts for each event type, rather than having a single script that is bound to the LogEventRequest and the LogChallengeEventRequest.
 
 ## Message Interceptors
 
-![](img\CloudCode\3.png)
+![](img/CloudCode/3.png)
 
 When a message is created in the GameSparks platform it contains a list of target players the message should be sent to. A player message object is then created for each player and sent directly to them. This process allows you to bind code to both global message creation and player message delivery. A good example of where this is useful is when a challenge starts - a single ChallengeStartedMessage is created that you can execute script against to ensure a particular set of code is only executed once for a challenge.
 

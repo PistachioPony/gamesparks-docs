@@ -16,23 +16,23 @@ GameSparks requires two pieces of information to integrate with WNS, the Package
 
 First log in to the Dashboard and select your app. Then select *Services*.
 
-![](img\WinPush\1.png)
+![](img/WinPush/1.png)
 
 On the Services page, select *Live Services site* found under the Windows Azure Mobile Services section.
 
-![](img\WinPush\2.png)
+![](img/WinPush/2.png)
 
 On the Push notifications and Live Connect services info page, select *Identifying your app*.
 
-![](img\WinPush\3.png)
+![](img/WinPush/3.png)
 
 Click *Authenticating your service* at the bottom of that same Identifying your app page.
 
-![](img\WinPush\4.png)
+![](img/WinPush/4.png)
 
 The Authenticating your service page provides your SID and client secret.
 
-![](img\WinPush\5.png)
+![](img/WinPush/5.png)
 
   1. Make a note of the SID and client secret and navigate to the GameSparks Portal.
   2. Select *Configuration* then [Integrations](../Social Features\Integrations.html) from the Left Hand Navigation.
@@ -47,8 +47,8 @@ The Authenticating your service page provides your SID and client secret.
 
 To edit a message select the edit option next to the desired message.
 
-![](img\WinPush\6.jpg)
+![](img/WinPush/6.jpg)
 
 You can then toggle if you want the messages to be sent as push notifications:
 
-![](img\WinPush\7.jpg)
+![](img/WinPush/7.jpg)

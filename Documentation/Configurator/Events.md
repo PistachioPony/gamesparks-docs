@@ -10,7 +10,7 @@ Events give you the ability to define custom data structures that you want to pa
 
 The Configurator Event page displays the list of Event and allows you to create new Event and edit or delete existing ones.
 
-![](img\Events\1.jpg)
+![](img/Events/1.jpg)
 
 The icons (highlighted above) give you the following capabilities:
 
@@ -20,7 +20,7 @@ The icons (highlighted above) give you the following capabilities:
 
 ## Creating a new Event configuration
 
-![](img\Events\2.jpg)
+![](img/Events/2.jpg)
 
 The Create/Edit screen contains the following fields:
 
@@ -32,7 +32,7 @@ The Create/Edit screen contains the following fields:
 
 Each event can have a number of attributes associated with it.
 
-![](img\Events\3.jpg)
+![](img/Events/3.jpg)
 
 Add an attribute by clicking on the plus icon *+*.  Each attribute has a number of different configuration options that can be defined within the form:
 

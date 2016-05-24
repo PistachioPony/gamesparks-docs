@@ -7,7 +7,7 @@ This section of the Configurator allows you to upload and manage binary data (e.
 
 **Note*: The platform also supports the upload of binary content directly from your game using the API which allows player-created content (e.g. photos,custom levels) to be uploaded and stored.**
 
-![](img\Downloadables\1.jpg)
+![](img/Downloadables/1.jpg)
 
 * __ Amend the Downloadable.
 * __ Delete the Downloadable.
@@ -16,7 +16,7 @@ This section of the Configurator allows you to upload and manage binary data (e.
 
 To create a new piece of Downloadable content click on the __ icon as highlighted above. Next fill in a meaningful short code and then select the downloadable file.
 
-![](img\Downloadables\1.jpg)
+![](img/Downloadables/1.jpg)
 
 *API Request*
 

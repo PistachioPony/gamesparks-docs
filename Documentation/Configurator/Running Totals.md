@@ -12,7 +12,7 @@ Running Totals allow you to process events using the GameSparks scoring and ran
 
 The Configurator Leaderboards page displays the list of Running Totals and allows you to create new Running Totals and edit or delete (non-system type) existing ones.
 
-![](img\RunningTotals\1.png)
+![](img/RunningTotals/1.png)
 
 When a player posts an Event to the platform, all Running Totals associated with the Event are processed. An important concept is that of a *Group* attribute.
 
@@ -38,12 +38,12 @@ You can add summary fields to the running total by clicking on the plus icon. Ea
     * *Last *\- the Running Total will be created to track the last value posted.
   * *Filter Type & Filter Value* - allows you to control an optional filter for values tracked (<,>,* etc). Events posted that do not match the filter are ignored
 
-![](img\RunningTotals\2.jpg)
+![](img/RunningTotals/2.jpg)
 
 *Filter Examples* Some useful examples of using filters are described below. *Only process scores over 100*
 
-![](img\RunningTotals\3.png)
+![](img/RunningTotals/3.png)
 
 *Only include scores from levels 10 - 20.*
 
-![](img\RunningTotals\4.jpg)
+![](img/RunningTotals/4.jpg)

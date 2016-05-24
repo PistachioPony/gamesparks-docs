@@ -14,7 +14,7 @@ We'll go through the process of creating a "Highest score in the last 30 days" L
 
 To get started, we need to start tracking in our running total the day a particular score was made. We'll create a new event with a SCORE attribute, and another attribute to hold the day of the score.
 
-![](img\TimeLDR\1.jpg)
+![](img/TimeLDR/1.jpg)
 
 You notice we've added a default value to the "DAY" attribute, the addition of this default value mean you do not need to pass a DAY attribute as part of the [LogEventRequest](https://docs.gamesparks.net/documentation/request-api/player-request-api/logeventrequest) and the platform will calculate it.
 
@@ -24,7 +24,7 @@ You also notice we are using an expression (starting with $). There are a few ex
 
 Once we have the event configured we need to create a custom running total for this event, to allow us to have an entry for each player and day combination.
 
-![](img\TimeLDR\2.jpg)
+![](img/TimeLDR/2.jpg)
 
 In this running total, note we've included "Day" in the Group section, this will cause the running total to keep a track of the players scores for each day.
 
@@ -32,7 +32,7 @@ In this running total, note we've included "Day" in the Group section, this will
 
 We can now create the Leaderboard to consume the running total data we can configured. As it's a time based one we'll create a scheduled Leaderboard that runs once a month, and then only consumes data for the last 30 days when being built.
 
-![](img\TimeLDR\3.jpg)
+![](img/TimeLDR/3.jpg)
 
 We've configured this Leaderboard to be built every month by setting "Update Schedule" to "Calculate monthly" and we've configured it to only consume the last 30 days by adding another expression into the "Filter Value" of ${today:minusDays(30)}.
 

@@ -8,11 +8,11 @@ Imagine the scenario where you want to allow your players to plant virtual seeds
 
 First let's create an Event that the game code can trigger to indicate that the player has planted the seed. Log in to the GameSparks Portal and navigate to Configurator-> Events. Click on the plus icon __ to add a new Event. Set up the Event as follows.
 
-![](img\Schedule\1.jpg)
+![](img/Schedule/1.jpg)
 
 Navigate to Configurator->Cloud Code->Bindings->Events and select the ‘Plant a seed’ item to open up the JavaScript editor for the Cloud Code associated with this Event.
 
-![](img\Schedule\2.jpg)
+![](img/Schedule/2.jpg)
 Copy the following script to the editor and click the Save button.
 
 ```    
@@ -89,7 +89,7 @@ The 'Plant a Seed' Cloud Code script will execute when GameSparks receives this 
 
 To see the results navigate to NoSQL Explorer, *NoSQL->Find *select the *script.field* collection and press the *Find* button.
 
-![](img\Schedule\3.jpg)
+![](img/Schedule/3.jpg)
 
 ## Scheduling a script via a system scheduler
 
@@ -101,7 +101,7 @@ The System tab in the Cloud Code section contains three time based triggers:
 
 These scripts execute at the top of every minute, hour and day respectively. Continuing our farm based example from above let's schedule a script that clears all the plants form the virtual field every hour. Navigate to Configurator->Cloud Code->System and select *Every Hour.*
 
-![](img\Schedule\4.jpg)
+![](img/Schedule/4.jpg)
 
 Copy the following script to the editor and click the Save button.
 

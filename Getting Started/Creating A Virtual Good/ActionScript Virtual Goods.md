@@ -33,11 +33,11 @@ Once you have created [Virtual Goods](..\Creating A Virtual Good.html) on the Po
 Create an Event that credits the authenticated player with extra *currency*. Add an *attribute* that will be used to indicate the amount to credit. You will log this Event whenever the authenticated player *consumes* a Gold Coin (Virtual Good).
 
 
-![l](img\AS\1.png)
+![l](img/AS/1.png)
 
 In the Event *Cloud Code* create a variable that holds the amount being passed in the Event through the 'CASH' attribute, and name it 'money'. Next get the Player object using *Spark.getPlayer()* and credit their *currency1* with the 'money' value.
 
-![l](img\AS\2.png)
+![l](img/AS/2.png)
  
 
 ## Creating the Buy and Consume functions
@@ -113,4 +113,4 @@ To update the shop details, request the *account* *details* for the currently au
 
 Create a way for the player to *buy* and *consume* Virtual Goods in your project. Test your shop to make sure that when you click *buy*, the *currency* depletes in exchange for an increased amount of Virtual Goods. When you *consume* items the *currency* should go up but the amount of Virtual Goods owned should decrease.
 
-![l](img\AS\3.jpg)
+![l](img/AS/3.jpg)

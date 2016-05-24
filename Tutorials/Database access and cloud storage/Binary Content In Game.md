@@ -35,7 +35,7 @@ Now that you have the upload URL you need to post the file. This is done using 
 
 In the Test Harness, once you've made a [GetUploadUrlRequest](/documentation/request-api/misc-request-api/getuploadurlrequest), you should see the upload URL populated within the Requests area. Now click 'Choose File', and select the file you want to upload. Once selected click 'Upload File'.
 
-![](img\Binary\1.png))
+![](img/Binary/1.png))
 
 Being an HTTP POST, this is not done through the WebSocket, but once complete the authenticated WebSocket that was used to request the upload URL will receive an [UploadCompleteMessage](https://docs.gamesparks.net/documentation/message-api/misc-message-api/uploadcompletemessage) indicating that the upload was successful.
 

@@ -112,18 +112,18 @@ The *Register* function is similar to the *Authenticate* function apart from an 
 
 ## *Testing Authentication and Registration*
 
-![l](img\AS\1.png)
+![l](img/AS/1.png)
 
 Attempt to login without connecting to the Portal. You should receive an alert asking you to connect to the Portal to ensure no exceptions are thrown. In future tutorials, connections will be done automatically without need for a trigger.
 
-![l](img\AS\2.png)
+![l](img/AS/2.png)
 
 Attempt to sign in with a user that doesn't exist. You should get a log back saying that the entered username or password is incorrect.
 
-![l](img\AS\3.png)
+![l](img/AS/3.png)
 
 Now register a new user.
 
-![l](img\AS\4.png)
+![l](img/AS/4.png)
 
 Log in using the details you just registered. The user should be recognised and you should now be authenticated.

@@ -67,19 +67,19 @@ To simulate multiple players interaction with a challenge we recommend that you 
 
 First authenticated player will create a challenge, for this example we'll make it a public challenge which will start when the maximum amount of players is met.
 
-![](\img\UnderstandingChallenges\1.jpg)
+![](/img/UnderstandingChallenges/1.jpg)
 
 Second authenticated player joins the challenge using challenge ID.
 
-![](\img\UnderstandingChallenges\2.jpg)
+![](/img/UnderstandingChallenges/2.jpg)
 
 When you switch to the first authenticated player's tab you can see a message (In orange, these messages can be caught by listeners) indicating that a player has joined the challenge. The challenge state will remain "ISSUED" until the max amount of players join the challenge.
 
-![](\img\UnderstandingChallenges\3.jpg)
+![](/img/UnderstandingChallenges/3.jpg)
 
 Finally after the third authenticated player join the challenge through the third tab the other two players will recieve a message (In orange) indicating that a player has joined the challenge and the state of the challenge would change to "RUNNING" because the maximum amount of players has been achieved.
 
-![](\img\UnderstandingChallenges\4.jpg)
+![](/img/UnderstandingChallenges/4.jpg)
  
 
 ## Challenge Chat

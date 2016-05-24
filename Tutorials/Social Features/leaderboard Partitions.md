@@ -6,7 +6,7 @@ There are times when you want multiple Leaderboards where the difference between
 
 We'll create a single event where the player is passing a score and a country code.
 
-![](img\Partition\1.jpg)
+![](img/Partition/1.jpg)
 
 Note, we've set the COUNTRY attribute to be grouped. This will cause the running total to group the entries by country, allowing us to partition the leaderboard in the next step.
 
@@ -14,7 +14,7 @@ Note, we've set the COUNTRY attribute to be grouped. This will cause the running
 
 Now we have the event configured, we can create the leaderboard to consume the event data.
 
-![](img\Partition\2.jpg)
+![](img/Partition/2.jpg)
 
 Note. We've set the Group value of Country to PARTITION, this option is available for attributes that are grouped in the running total, and tells the platform to create a new leaderboard each time it gets a new value for this field.
 

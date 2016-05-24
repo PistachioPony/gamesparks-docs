@@ -25,11 +25,11 @@ For the purpose of this article we will assume that the ghost race data can be r
 
 First we need to create an Event that allows the game to submit the JSON ghost race data, the track name and the race time (how long the race took). Log in to the GameSparks Portal and navigate to Configurator-> Events. Click on the plus icon to add a new Event. Set up the Event as follows.
 
-![](img\PlayerDataSharing\1.jpg)
+![](img/PlayerDataSharing/1.jpg)
 
 Next we create the Cloud Code script to store this data in a MongoDB collection. In the Portal navigate to Configurator->Cloud Code->Bindings->Events and select the Event we created in the previous section called 'Store race data'.
 
-![](img\PlayerDataSharing\2.jpg)
+![](img/PlayerDataSharing/2.jpg)
 
 Copy and paste in the following Cloud Code script in to the JavaScript editor and click the 'Save' button.
 
@@ -101,7 +101,7 @@ If successful you will have received a [LogEventResponse](/documentation/respons
 
 Navigate to the Developer Portal NoSQL Explorer and select the 'script.raceData' collection from the collection drop down then press the 'Submit' button. You will see the document that was saved as a result of our Cloud Code script executing when the Event was received. You can click on the document to expand, edit or delete it.
 
-![](img\PlayerDataSharing\3.jpg)
+![](img/PlayerDataSharing/3.jpg)
 
 Repeat the sending of the 'Store race data' Event but change the data each time, especially the TIME field. This will result in several documents being stored in MongoDB for Player1. Now register a second player, Player2, by sending a RegistrationRequest and repeat the sending of the 'Store race data' Event. Change the data each time, especially the TIME field. This will result in several documents being stored in MongoDB for Player2.
 
@@ -109,7 +109,7 @@ Repeat the sending of the 'Store race data' Event but change the data each time,
 
 Now we need to create an Event that allows the game to retrieve the fastest player's JSON ghost race data for a given track name. Log in to the GameSparks Portal and navigate to Configurator-> Events. Click on the plus icon to add a new Event. Set up the Event as follows.
 
-![](img\PlayerDataSharing\4.jpg)
+![](img/PlayerDataSharing/4.jpg)
 
 Next we create the Cloud Code script to retrieve the data from the MongoDB collection and return it in the [LogEventResponse](https://docs.gamesparks.net/documentation/response-api/player-response-api/logeventresponse). In the Portal navigate to Configurator->Cloud Code->Bindings->Events and select the Event we created in the previous section called 'Get race data' and copy and paste the following JavaScript code into it.
 

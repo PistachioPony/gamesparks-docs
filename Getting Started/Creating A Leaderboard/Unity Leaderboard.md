@@ -25,28 +25,28 @@ The first thing you need to do is create an Event that will push the player’s
 
 You can see more details about Events [here](..\..\Tutorials\Cloud Code, and the Test Harness\Events.html).
 
-![l](img\UT\1.png)
+![l](img/UT/1.png)
 
 
 ## Creating the Leaderboard
 
 Next you'll need to create your Leaderboard. You can do this by going to the *Configurator* panel in the GameSparks Portal and selecting the *Leaderboards* tab. Add a new Leaderboard by clicking on the *[+]* button. Most of the details you see here can be left as default but you can get more information about these attributes [here](..\..\Tutorials\Social Features\Leaderboards.html). The important variables for us are the *Short Code*, *Name* and *Description*. If this is the first event you have created in your own game you will see that the *Submit Score* Event already pops into that field. This is because it is the only applicable Event you have in your game at the moment.
 
-![l](img\UT\2.png)
+![l](img/UT/2.png)
 
 ## Testing the Leaderboard
 
 
 Now you are ready to send some scores to your Leaderboard, but before you go into Unity, you should test this Leaderboard in the *Test Harness*. After authenticating yourself as a Player, find your Event in the *LogEvent* tab, enter a score and send the Event. Immediately after you send the request, you will see orange message appear in the inspector on the left. This is a High Score Message and when you go back into Unity you are going to setup an Event listener to execute some code whenever a player gets this Message.
 
-![l](img\UT\4.png)
+![l](img/UT/4.png)
 
 
 ### Getting the Leaderboard Data
 
 You can also check your Leaderboard data entries from the test harness using the *LeaderboardDataRequest*. You can find this in the *Leaderboards* tab on your *Test Harness*. This request gives you a lot of control over the entries it will return, however you are only concerned with the leaderboard *Short Code*, and the *entry count* (the number of entries this request will return). You can check out more information about this request [here](https://api.gamesparks.net/#leaderboarddatarequest). When you send the request you will see the list of Leaderboard entries returned on the inspector on the right.Now you are ready to start sending and receiving Leaderboard data in Unity.
 
-![l](img\UT\4.png)
+![l](img/UT/4.png)
 
 ### Getting the Leaderboard Data in Unity
 
@@ -84,11 +84,11 @@ new GameSparks.Api.Requests.LeaderboardDataRequest().SetLeaderboardShortCode("HI
 The important thing here is to get the information back out of the Leaderboard Data. *response.Data* contains a collection of Leaderboard data you can iterate through and  get the entry details back. *LeaderboardData* has a lot of information you can access, and you can check out more information about it [here](https://api.gamesparks.net/#leaderboarddata). Now, running the Request will print out the details of each of the Leaderboard entries in the console.
 
 
-![l](img\UT\5.png)
+![l](img/UT/5.png)
 
-![l](img\UT\6.png)
+![l](img/UT/6.png)
 
-![l](img\UT\7.png)
+![l](img/UT/7.png)
 
 ## Message Listeners
 
@@ -105,8 +105,8 @@ void HighScoreMessageHandler(GameSparks.Api.Messages.NewHighScoreMessage _messag
 
 Now, to test this out, enter a new High Score for your player in the Unity sample project. You should see the “NEW HIGH SCORE” message appear in the console window.
 
-![l](img\UT\8.png)
+![l](img/UT/8.png)
 
-![l](img\UT\9.png)
+![l](img/UT/9.png)
 
-![l](img\UT\10.png)
+![l](img/UT/10.png)

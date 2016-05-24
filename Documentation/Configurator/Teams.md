@@ -8,7 +8,7 @@ The Teams functionality on the GameSparks platform allows you to define differe
 
 ### Managing your Team Types
 
-![](img\Teams\1.jpg)
+![](img/Teams/1.jpg)
 
 The Teams page shows you the list of teams you have configured in the platform, adding a new team follows the same pattern as the rest of the platform.
 
@@ -16,7 +16,7 @@ The Teams page shows you the list of teams you have configured in the platform, 
   * [editIcon] will open the team configuration editor.
   * [deleteIcon] will delete the team configuration.
 
-![](img\Teams\2.jpg)
+![](img/Teams/2.jpg)
 
 The options available on the form are:
 

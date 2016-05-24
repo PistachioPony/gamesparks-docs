@@ -21,11 +21,11 @@ A pre-compiled swc is available here :
 
 Right click your project and select "Properties"
 
-![](img\ActionScript\1.png)
+![](img/ActionScript/1.png)
 
 Select "Flex Build Path" or "ActionScript Build Path" (Depending on your project type). Add "gamesparks-as3-sdk.swc" to your library path.
 
-![](img\ActionScript\2.png) 
+![](img/ActionScript/2.png) 
 
 ## Initialising the SDK
 

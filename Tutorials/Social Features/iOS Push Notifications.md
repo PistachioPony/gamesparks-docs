@@ -26,11 +26,11 @@ Digital certificates are based on public-private key cryptography and certificat
 
 *2.* From the menu, navigate to *Keychain Access *-> *Certificate Assistant *-> and choose the option *Request a Certificate from a Certificate Authority…*
 
-![](img\IOSPush\1.png)
+![](img/IOSPush/1.png)
 
 If this menu option is not available or it says “Request a Certificate from a Certificate Authority With key”, you need to download and install the *WWDR Intermediate Certificate*. Also ensure no private key is selected in the main Keychain Access window, otherwise if key *XYZ* is already selected before going to the Certificate Assistant, you will see “Request a Certificate from a Certificate Authority With *XYZ*”. You should now see the following window:
 
-![](img\IOSPush\2.png)
+![](img/IOSPush/2.png)
 
 *3.* Enter an e-mail address and a descriptive Common Name, as this allows you to easily find the private key later.
 
@@ -38,7 +38,7 @@ If this menu option is not available or it says “Request a Certificate from a 
 
 *5.* In the Keys section of Keychain Access, you should now have a new private key in your keychain. Right click the *Private* key and choose *Export*.
 
-![](img\IOSPush\3.png)
+![](img/IOSPush/3.png)
 
 *7.* Save the *Private* key as *YourGamePushKey.p12* and enter a password. Choose a password that is easy to remember, or you won’t be able to use the private key later.  
 
@@ -46,59 +46,59 @@ If this menu option is not available or it says “Request a Certificate from a 
 
 *8.* Log in to the [iOS Dev Center](https://developer.apple.com/account/overview.action) and Select the* "Certificates, Identifiers & Profiles*” from the right panel.
 
-![](img\IOSPush\4.png)
+![](img/IOSPush/4.png)
 
 *9.* Select *Certificates* in the *iOS Developer Program* section.
 
-![](img\IOSPush\5.png)
+![](img/IOSPush/5.png)
 
 Now we need to make a new App ID. Each game requires its own unique ID as push notifications are sent to a specific application.
 
 *10.* Go to *App IDs* in the sidebar and click the *+* button.
 
-![](img\IOSPush\6.png)
+![](img/IOSPush/6.png)
 
 *11.* Enter a meaningful *App ID Description*, check the *Push Notifications* checkbox and put your app’s Bundle Identifier in the *Explicit App ID* field (it must be the same as the bundle ID in your Xcode project).
 
-![](img\IOSPush\7.png)
+![](img/IOSPush/7.png)
 
 *12.* Once all the details are filled in press *Continue*. *13. *Verify the details of the app is and click *Submit *then select *Done*. App registration will now be complete.
 
-![](img\IOSPush\8.png)
+![](img/IOSPush/8.png)
 
 You can now generate the SSL certificate that GameSparks uses to make a secure connection to the Apple Push Notification Service. The certificate will be linked to your App ID. The *App ID* will now appear in the list:
 
-![](img\IOSPush\9.png)
+![](img/IOSPush/9.png)
 
 *14.* Select the App ID from the list. *15. *Click on the *Edit* button to configure the Push Notifications.
 
-![](img\IOSPush\10.png)
+![](img/IOSPush/10.png)
 
 *16. *In the *Push Notifications* section select the *Create Certificate* button under the *Development SSL Certificate* title. The *Add iOS Certificate* wizard will appear.
 
-![](img\IOSPush\11.png)
+![](img/IOSPush/11.png)
 
 *17.* As we have already generated a *Certificate Signing Request* we can click *Continue*.
 
-![](img\IOSPush\12.png)
+![](img/IOSPush/12.png)
 
 *18.* Choose the CSR file generated earlier and click *Generate*.
 
-![](img\IOSPush\13.png)
+![](img/IOSPush/13.png)
 
 *19.* After the SSL certificate has been generated (this may take a while) click *Continue*. *20. *Click *Download* to get the certificate named *aps_development.cer*.
 
-![](img\IOSPush\14.png)
+![](img/IOSPush/14.png)
 
 The certificate is now available for development. You can download the certificate again if needed. Each development certificate is valid for 3 months. Repeat this process when you release your game. *Production certificates are valid for a year only and must be renewed*.
 
 *21. *Add the certificate to your Keychain by double-clicking the downloaded *aps_development.cer* file. This will now be associated with the private key. You can check this in the *My Certificates* category.
 
-![](img\IOSPush\15.png)
+![](img/IOSPush/15.png)
 
 *22.* In the *Keys* section, select only the *certificate* inside the private key associated with it, and right click on the selection to export it to a *.p12* file.
 
-![](img\IOSPush\16.png)
+![](img/IOSPush/16.png)
 
 The p12 file and password will be used in the GameSparks Portal to Setup Push Notifications for your game.
 
@@ -108,7 +108,7 @@ The p12 file and password will be used in the GameSparks Portal to Setup Push No
 
 *23.* Log in to the GamesSparks Portal and navigate to *Configurator* -> *Integrations*.
 
-![](img\IOSPush\17.png)
+![](img/IOSPush/17.png)
 
 *24.* Select the *Apple* tab and click the *Edit* button.
 
@@ -120,17 +120,17 @@ The p12 file and password will be used in the GameSparks Portal to Setup Push No
 
 *28.* Once you have entered in all required details click the *Save* button.
 
-![](img\IOSPush\18.png)
+![](img/IOSPush/18.png)
 
 **NOTE: When you release your app you will have to repeat these steps for the iOS Production Certificate.**
 
-![](img\IOSPush\19.png)
+![](img/IOSPush/19.png)
 
 ### Editing Push Notification Messages
 
 *29.* To edit a Message, select the Edit option next to the desired message
 
-![](img\IOSPush\20.png)
+![](img/IOSPush/20.png)
 
 *30.* Ensure the *Send As Push* toggle switch is enabled for your app. The Push toggle enables the message to be pushed to users, you may not need all messages to be pushed.
 
@@ -140,25 +140,25 @@ The p12 file and password will be used in the GameSparks Portal to Setup Push No
 
 To test push notifications with your App you will need to create a Provisioning Profile. *31.* Navigate back to the iOS Dev Center and click the *Provisioning Profiles* button in the sidebar then click the *+* button. This will open up the iOS provisioning profile wizard.
 
-![](img\IOSPush\21.png)
+![](img/IOSPush/21.png)
 
 *32.* Select the *iOS App development* option button in the first step of the wizard and press *Continue*.
 
 *33.* Select the App ID and click *Continue*.
 
-![](img\IOSPush\22.png)
+![](img/IOSPush/22.png)
 
 *34.* Select the certificates you want to include in this Provisioning Profile and click *Continue*.
 
-![](img\IOSPush\23.png)
+![](img/IOSPush/23.png)
 
 *35.* Select the devices you want to include in this Provisioning Profile and press *Continue*
 
-![](img\IOSPush\24.png)
+![](img/IOSPush/24.png)
 
 *36.* Set the provisioning profile name and click *Generate*.
 
-![](img\IOSPush\25.png)
+![](img/IOSPush/25.png)
 
 *37.* Press the *Download* button and save the profile to your local machine.
 
@@ -166,7 +166,7 @@ To test push notifications with your App you will need to create a Provisioning 
 
 It is assumed that you are familiar with Xcode and and have an Xcode project already created. We can now add the Provision Profile we have just created to Xcode by double-clicking it or dragging it onto the Xcode icon.
 
-![](img\IOSPush\26.png)
+![](img/IOSPush/26.png)
 
 **NOTE: Once again, when you release your app you will have to repeat this process with an Ad Hoc or App Store distribution profile.**
 
@@ -213,6 +213,6 @@ Your App can now receive Push Notifications via the GameSparks service!
 
 Hopefully Xcode will automatically select the new Provisioning Profile. However, if you get a code sign error, ensure the proper profile is selected in the Code Signing build settings. When the app starts and registers for push notifications, it shows a message to inform the user that this app wishes to send push notifications.
 
-![](img\IOSPush\27.png)
+![](img/IOSPush/27.png)
 
  The app asks this only once (on the initial start of the app). If the user selects *OK*, then it is possible to send push notifications to them. App notification settings can be changed by the user in the Device settings.

@@ -10,15 +10,15 @@ You can create versions of your game configuration whenever you like. There are 
 
 You create a version by taking a 'snapshot' of the configuration. The process collects all your configuration information and stores it into a configuration set. This set also contains any data you have in your metadata collections. To create a snapshot, go to Configurator/Overview and click the plus icon in the Snapshots section.
 
-![](img\Versioning\1.jpg)
+![](img/Versioning/1.jpg)
 
 You'll then be prompted to give a description to your snapshot. Choose something meaningful so you will be able to identify it in future when you may have several available.
 
-![](img\Versioning\2.png)
+![](img/Versioning/2.png)
 
 Once you've saved the snapshot it's available in the Snapshots list in Configurator/Overview.
 
-![](img\Versioning\3.jpg)
+![](img/Versioning/3.jpg)
 
 From here you can perform the following actions (by clicking on the icons to the right of the description):
 

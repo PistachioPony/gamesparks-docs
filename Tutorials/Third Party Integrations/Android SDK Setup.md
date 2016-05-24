@@ -10,7 +10,7 @@ The steps described below detail how to setup the GameSparks Android SDK and Tes
 
 Go to the menu option, *File->Import then select General->Existing Projects into Workspace.* Browse to the directory where you unzipped the SDK bundle. Select the GameSparksSDKLibrary directory.
 
-![](img\Android\1.jpg)
+![](img/Android/1.jpg)
 
 Click *Finish* to import the project in to your workspace. If there are build errors in the Eclipse Problems view then select *Project->Clean->Clean All Projects* and click *OK*. The GameSparksSDKLibrary supports Android 2.2 (API 8) and above.
 
@@ -18,7 +18,7 @@ Click *Finish* to import the project in to your workspace. If there are build er
 
 Go to the menu option, *File->Import then select General->Existing Projects into Workspace.* Browse to the directory where you unzipped the SDK bundle. Select the GameSparksSDKTestHarness directory.
 
-![](img\Android\2.jpg)
+![](img/Android/2.jpg)
 
 Click Finish to import the project in to your workspace. The GameSparksSDKTestHarness supports Android 3.0 (API 11) and above.
 
@@ -26,15 +26,15 @@ Click Finish to import the project in to your workspace. The GameSparksSDKTestHa
 
 Use the GameSparks Developer portal, *Configurator->Overview* to find your game API Secret.
 
-![](img\Android\3.png)
+![](img/Android/3.png)
 
 Use the GameSparks Developer portal, *Test Harness* to find your game service URL.
 
-![](img\Android\4.png)
+![](img/Android/4.png)
 
 Locate the MainActivity.java class in the GameSparksSDKTestHarness project.
 
-![](img\Android\5.jpg)
+![](img/Android/5.jpg)
 
 Edit the two static constants at the top of the file to use your game’s Service URL and API Secret.
 
@@ -47,7 +47,7 @@ private static final String GAMESPARKS_API_SECRET = "<Enter your game API secret
 
 Right click on the GameSparksSDKTestHarness project and select *Run As->Android Application*. Select the [DeviceAuthenticationRequest](/documentation/request-api/authentication-request-api/deviceauthenticationrequest) item in the Advanced section of the left hand menu and press the Send button.
 
-![](img\Android\6.jpg)
+![](img/Android/6.jpg)
 
 If all is well you should see a response like the one above with a valid authToken returned from the server. You can now try out any of the other GameSparks API methods that the test harness supports.
 
@@ -57,7 +57,7 @@ If all is well you should see a response like the one above with a valid authTok
 
 Given that you have you own game project in the Eclipse ADT IDE, right click on the project and select Properties then select the Android. In the Library section click the Add button and select the GameSparksSDKLibrary, click OK to add the SDK as a library reference to your project. Click OK to close the properties dialog.
 
-![](img\Android\7.jpg)
+![](img/Android/7.jpg)
 
 ### Using GameSparks SDK API in your game
 

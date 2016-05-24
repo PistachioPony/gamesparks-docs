@@ -6,7 +6,7 @@ nav_sort: 7
 
 The Test Harness allows you to send API requests into the GameSpark platform in their raw form to see the responses that the server returns for any given request.  As the browser uses WebSockets for communication, the Test Harness can mimic a connected device by receiving asynchronous messages when they are generated by the platform.  The Test Harness is an invaluable tool for testing your game configuration.  We recommend that you always try out any game configuration changes that you make in the Test Harness before writing the game client code that uses it. Access the Test Harness from the left hand navigation menu in the Developer Portal.
 
-![](img\TestHarness\1.jpg)
+![](img/TestHarness/1.jpg)
 
 There are several sections in the Test Harness:
 
@@ -26,11 +26,11 @@ When you first access the Test Harness page within the Developer Portal it will 
 
 To issue a request from the Test Harness simply enter the JSON for the request into the *JSON* section and press the play icon {playIcon}.
 
-![](img\TestHarness\2.png)
+![](img/TestHarness/2.png)
 
 The *Inspector* section will show the request (in green), and the response (in blue).
 
-![](img\TestHarness\3.png)
+![](img/TestHarness/3.png)
 
 The *Requests* section contains a selection of buttons which will populate the *JSON* section with the correctly formatted text for a given request.  The requests are grouped by functional area.  Click on the group name to display a submenu of buttons for each request.  These groups are:
 
@@ -47,38 +47,38 @@ The *Requests* section contains a selection of buttons which will populate the 
 
 For example click on the *Player* group button to display the player related requests and then click the *ChangeUserDetailsRequest* button to populate the JSON section with the request.
 
-![](img\TestHarness\4.png)
+![](img/TestHarness/4.png)
 
 Make any changes to the request that you require, such as removing optional fields or changing the default data values and then press the play icon __ to send the request. You can also issue several requests at once simply by creating a JSON array of requests in the *JSON* section.  For example to authenticate a player and then query their details include the two requests in a JSON array such as this.
 
-![](img\TestHarness\5.png)
+![](img/TestHarness/5.png)
 
 ## Saving requests as a scenario
 
 To save an individual request click on the disk icon __ in the *JSON* section.
 
-![](img\TestHarness\6.png)
+![](img/TestHarness/6.png)
 
 Give your scenario a meaningful name and click the *Save* button.
 
-![](img\TestHarness\7.png)
+![](img/TestHarness/7.png)
 
 The scenario is saved to *Scenarios* group of the *Request* section and can be recalled to the *JSON* section in the future.
 
-![](img\TestHarness\8.png)
+![](img/TestHarness/8.png)
 
 ## Recording multi-request scenarios
 
 You can also record a sequence of requests with the Test Harness. Enter the first request in to the *JSON* section then click the microphone icon __ which will change colour to red to indicate that the Test Harness is now recording subsequent requests.
 
-![](img\TestHarness\9.png)
+![](img/TestHarness/9.png)
 
 Issue the command as normal with the Play icon  and then choose your next command.
 
-![](img\TestHarness\10.png)
+![](img/TestHarness/10.png)
 
 Once you have entered and sent all the requests in your scenario click the red microphone icon  a second time to stop recording.  The JSON section will be populated with an array of all the requests that you sent whilst recording.
 
-![](img\TestHarness\11.png)
+![](img/TestHarness/11.png)
 
 This scenario can now be saved as described in the previous section.

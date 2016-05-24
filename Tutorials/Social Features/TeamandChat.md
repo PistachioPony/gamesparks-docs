@@ -17,7 +17,7 @@ To set up a team type, head to the Teams tab in the configurator and click the '
 
 Once you're happy with your configuration. That's all you have to do to create a Team type for your players to use. More details on team type creation and management, click [here](..\Social Features\Teams.html).
 
-[![](img\TeamChat\1.png)
+[![](img/TeamChat/1.png)
 
 
 ### Creating a Team

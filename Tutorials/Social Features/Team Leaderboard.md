@@ -6,7 +6,7 @@ Using the GameSparks platform, you can create Leaderboards that show the perform
 
 From the Teams menu in the Configurator, click the add icon to create your team type.
 
-![](img\TeamLDR\1.jpg)
+![](img/TeamLDR/1.jpg)
 
 We've set the team to have a Maximum Members number of 5.
 
@@ -14,7 +14,7 @@ We've set the team to have a Maximum Members number of 5.
 
 We'll create a simple high score event that takes a single score parameter.
 
-![](img\TeamLDR\2.jpg)
+![](img/TeamLDR/2.jpg)
 
 In this example, the score we are passing should be added to all the previous scores submitted towards that team. So we've set the "_Default Calc_" to sum them up. This will create the default Running Total for the event, allowing us to track the score for a player.
 
@@ -22,7 +22,7 @@ In this example, the score we are passing should be added to all the previous sc
 
 We also want to track the score for the team. We'll need to create another Running Total for the high score event, that tracks the value for a team rather than for a player.
 
-![](img\TeamLDR\3.jpg)
+![](img/TeamLDR/3.jpg)
 
 The key change in this running total is that we have set the "_Type_" parameter to the team type we want this running total to track. We are now in a position where the GameSparks platform is going to track a running total for each Squad, and will sum together each score submitted by each member.
 
@@ -30,7 +30,7 @@ The key change in this running total is that we have set the "_Type_" parameter 
 
 We create the leaderboard in the same we we would for personal leaderboards, but we'll specify the team type the leaderboard is for in the "_Type_" parameter.
 
-![](img\TeamLDR\4.jpg)
+![](img/TeamLDR/4.jpg)
 
 ## Team Notifications
 

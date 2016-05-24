@@ -6,7 +6,7 @@ Indexes on collections allow MongoDB to process queries more efficiently and wil
 
 First lets create a runtime collection using the [NoSQL Explorer](..\Database access and cloud storag\NoSQL Explorer.html). Navigate to the *NoSQL* page in the developer portal and select the *Create* tab. Enter a name for your collection and select the Runtime collection type. Press the Submit button to create your custom collection.
 
-![](img\CustomIndex\1.png)
+![](img/CustomIndex/1.png)
 
 This will have created a new collection called script.playerChatHistory which your game can use to store data custom in. For this example lets assume that this collection contains documents that look like this:
 
@@ -24,7 +24,7 @@ This will have created a new collection called script.playerChatHistory which yo
 The next step is to write some Cloud Code that will create an index on this collection. A sensible place to attach this type of script is the Game Published event. Navigate to the *Configurator->Cloud Code* page in the developer portal and select the *System* bindings menu. Click on the *Game Published* option to access that script.
 
 
-![](img\CustomIndex\2.png)
+![](img/CustomIndex/2.png)
 
 Enter the following Javascript in the editor window and click the *Save* button.
 
@@ -44,14 +44,14 @@ You can also create compound index across multiple fields. For example:
 
 To test our script we need to publish the game. Navigate to the *Configurator->Overview* page and click on the __ icon to create a new snapshot.
 
-![](img\CustomIndex\3.png)
+![](img/CustomIndex/3.png)
 
 Enter a name for your new snapshot.
 
-![](img\CustomIndex\4.png)
+![](img/CustomIndex/4.png)
 
 Now publish the snapshot by clicking on the __ icon.
 
-![](img\CustomIndex\5.png)
+![](img/CustomIndex/5.png)
 
 Publishing the game will have triggered the Cloud Code script that we attached to the Game Published event. Tip: you can check for Cloud Code script errors in the script.log collection from within the NoSQL Explorer tool.

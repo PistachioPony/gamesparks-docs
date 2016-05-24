@@ -91,4 +91,4 @@ In the response handler for the *Get_Pos* Event you will need to break down the 
 
 Set up your game to Set and Get your Player's position. Here we have made a simple game where you can save and load the sprite's location. Make sure you *authenticate* your Player as the location will be saved against their database. Having no Player authenticated means you cannot call the Events on the Portal, even if you are connected to that Portal.
 
-![l](img\AS\1.gif)
+![l](img/AS/1.gif)

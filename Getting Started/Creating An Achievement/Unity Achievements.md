@@ -25,7 +25,7 @@ Once you have your Achievement setup, you have to call a *LogEventRequest* for t
 
 By running this code in the sample project, you should get the “AWARDED ACHIEVEMENT” message in the console.
 
-![l](img\UT\1.png)
+![l](img/UT/1.png)
 
 ## Checking Achievements Earned
 
@@ -56,4 +56,4 @@ If you want to check to see if the Achievement was actually earned you can use t
 
 You can also test this out in the *Test Harness* by going to the *Player* tab and sending an *AccountDetailsRequest*.
 
-![l](img\UR\2.png)
+![l](img/UR/2.png)

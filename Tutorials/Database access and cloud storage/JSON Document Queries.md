@@ -25,7 +25,7 @@ There are times where you want to maintain a complex JSON document in a mongo co
 
 We are creating a generic event for updating a document, this event will contain the path of the document we want to update, and the value we want to set at that path. If this sounds a little complex, bear with us and work through the example, it should be clear at then end :). We'll add a new event in the portal that looks like this:
 
-![](img\Partial\1.png)
+![](img/Partial/1.png)
 
 ## Creating the script to process the update event
 
@@ -58,7 +58,7 @@ We'll use the same pattern here for querying the document.  For the query event
 
 We'll add a new event in the portal that looks like this:
 
-![](img\Partial\2.png)
+![](img/Partial/2.png)
 
 
 ## Creating the script to process the query event

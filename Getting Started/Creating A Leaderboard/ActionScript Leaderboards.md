@@ -61,4 +61,4 @@ Create the function which deals with the *message*. The parameters of the functi
 
 Run your game and try to beat the high score. If you do, you will receive a message informing you that you have beaten the high score in that Leaderboard.
 
-![l](img\AS\1.jpg)
+![l](img/AS/1.jpg)

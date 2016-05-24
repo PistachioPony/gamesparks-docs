@@ -12,11 +12,11 @@ Google+ authentication allows you to provide your players with a simple way to s
 
 *3.  *While setting up your application in the *Google Play Developer Console*, also add a "Web" linked application.  This will serve as our "Server" client in later steps. It's important that this be created through the [Google *Play* Developer Console](https://play.google.com/apps/publish/) (rather than the standard Google *Developer* Console), otherwise when we try to get a token later it will fail to work correctly.
 
-![](img\AuthGoogle\1.png)  
+![](img/AuthGoogle/1.png)  
 
 *4.* Make a note of the *OAuth Client Id* that is generated once the application is set up.
 
-![](img\AuthGoogle\2.png)
+![](img/AuthGoogle/2.png)
   
 *5.* After setting up the application, follow the steps from the [Google+ documentation](https://developers.google.com/+/). The relevant section is "Enable server-side API access for your app", located [here for Android](https://developers.google.com/+/mobile/android/sign-in#enable_server-side_api_access_for_your_app) and [here for iOS](https://developers.google.com/+/mobile/ios/sign-in#enable_server-side_api_access_for_your_app) (for a web application the relevant section is under [Server Side Flow](https://developers.google.com/+/web/signin/server-side-flow)). This will show you how you are going to get hold of the access code that we need to pass through to the server later on.
 
@@ -26,7 +26,7 @@ Wherever the instructions talk about "your server's client ID", is where we need
 
 *7.* Fill in the *Email Address* and *Product Name* fields, click *Save*. Again, without doing this we can end up with some failures later on.
 
-![](img\AuthGoogle\3.png)  
+![](img/AuthGoogle/3.png)  
 
 ## Configuring your GameSparks game
 
@@ -36,15 +36,15 @@ Now we've done that, here comes the easy part.
 
 *9.* Select the Google* tab and click *Edit*.
 
-![](img\AuthGoogle\4.png)  
+![](img/AuthGoogle/4.png)  
 
 While you can view the Application Client Id through the [Google *Play* Developer Console](https://play.google.com/apps/publish/), you can only access the Client Secret under the standard [Google *Developer* Console](https://console.developers.google.com), see screenshot below).
 
-![](img\AuthGoogle\5.png)  
+![](img/AuthGoogle/5.png)  
 
 *10.* Fill in the fields *Application Client Id* and *Application Client Secret* using the *Oauth Client Id* and *Secret* from your Google Web Application and click *Save*.
 
-![](img\AuthGoogle\6.png)  
+![](img/AuthGoogle/6.png)  
 
 That's all there is to it. Now we're ready to make a *GooglePlusConnectRequest*.
 
@@ -111,14 +111,14 @@ function signInCallback(authResult) {
 
 *14.* Save the changes to the HTML file and load the page through your web server.  You will see a Google *Sign in* button:
 
-![](img\AuthGoogle\7.png)  
+![](img/AuthGoogle/7.png)  
 
 *15.* Click the *Sign in* button.  A popup window will open informing you that your game would like to have offline access.  Select *Accept*.
-![](img\AuthGoogle\8.png)  
+![](img/AuthGoogle/8.png)  
 
 The POST response from the page will contain an access code (as well as an access token) that can be used to authenticate:
 
-![](img\AuthGoogle\9.png)  
+![](img/AuthGoogle/9.png)  
 
 *16.* Go to the *Test Harness* in the GameSparks Portal.
 
@@ -157,11 +157,11 @@ As well as being able to establish manual authentication by using the Client ID 
 
 *20.* Find the *Google+ Domains API*  service by searching for it and select it.
 
-![](img\AuthGoogle\10.png)  
+![](img/AuthGoogle/10.png)  
 
 *21.* Select *Enable API.*
 
-![](img\AuthGoogle\11.png)  
+![](img/AuthGoogle/11.png)  
 
 To use this alternative type of authentication, we need to create a separate Client ID for our game based on a *Service account*.
 
@@ -169,15 +169,15 @@ To use this alternative type of authentication, we need to create a separate Cli
 
 *23.* In the OAuth* of the page, select *Create New Client ID*.
 
-![](img\AuthGoogle\12.png)  
+![](img/AuthGoogle/12.png)  
 
 *24.* In the *Application type* section, select *Service account*.  In the *Key type* section, select *P12* key then finally select *Create Client ID*.
 
-![](img\AuthGoogle\13.png)  
+![](img/AuthGoogle/13.png)  
 
  *25.* A prompt will be displayed to download the certificate key (.p12 file) to the local machine.  Save the file and make a note of the certificate password displayed on screen in case you may ever need it.  It will not be required to authenticate to the GameSparks platform.  The new Service account Client ID will appear in the list:
 
- ![](img\AuthGoogle\14.png)  
+ ![](img/AuthGoogle/14.png)  
 
  *26.* Go into the [GameSparks Developer Portal](https://portal.gamesparks.net/) and for your game, and go to *Configurator* > *Integrations*.
 
@@ -185,7 +185,7 @@ To use this alternative type of authentication, we need to create a separate Cli
 
  *28.* Fill in the fields, *Service Certificate* and *Service Email Address* using the downloaded certificate key and the *Email address* from your Google Web Application and click *Save*.  Choose the downloaded .p12 certificate key to be uploaded into the *Service Certificate* *field* and select *Save.*
 
- ![](img\AuthGoogle\15.png)  
+ ![](img/AuthGoogle/15.png)  
 
  *NOTE:* If this type of authentication is to always be used, then the *Application Client Secret* is no longer required.  It can be removed from the form if desired.  
 

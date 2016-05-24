@@ -57,7 +57,7 @@ gs-title-block is a title block styled to match the rest of Gamesparks portal st
 
 #### Output
 
-![](img\DynamicAPI\1.jpg)
+![](img/DynamicAPI/1.jpg)
 
 
 ## gs-placeholder
@@ -105,7 +105,7 @@ gs-form is a HTML form that can be submitted to a snippet, passing in some inpu
 
 #### Output
 
-![](img\DynamicAPI\2.jpg)
+![](img/DynamicAPI/2.jpg)
 
 Clicking *Submit* in this form will:
 
@@ -142,7 +142,7 @@ gs-submit is a custom form submit button, the functionality behind gs-submit al
 
 #### Output
 
-![](img\DynamicAPI\3.jpg)
+![](img/DynamicAPI/3.jpg)
 
 By clicking *Submit* button, you will submit the form to the snippet with shortcode: *snippet_shortcode* and render the output at the placeholder Id: *unique__placeholder*. By clicking the *Plus* icon, you will submit the form to the snippet with shortcode : *another_shortcode* and render the output at the placeholder Id: *another__placeholder*, additionally you will submit a parameter to the snippet *plus* = true.
 
@@ -186,7 +186,7 @@ Clicking this link will execute a snippet with shortcode: *snippet_shortcode *
 
 #### Output
 
-![](img\DynamicAPI\4.jpg)
+![](img/DynamicAPI/4.jpg)
 
 
 ## gs-snippet
@@ -267,11 +267,11 @@ gs-query is an elaborate way of building dynamic mongodb queries. gs-query conta
 
 #### Output
 
-![](img\DynamicAPI\5.jpg)
+![](img/DynamicAPI/5.jpg)
 
 #### Usability
 
-![](img\DynamicAPI\6.jpg)
+![](img/DynamicAPI/6.jpg)
 
 The above query would read: Return results where (Country is not "Afghanistan" *AND* Last Seen is before "2015/01/13") *AND *(User Name begins with "gam" *OR* Facebook ID doesn't exist)
 

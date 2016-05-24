@@ -14,7 +14,7 @@ In this tutorial we are going to show you how to buy and consume Virtual Goods 
 
 To begin with, you will need to create a new Event with some Cloud Code that will grant the player some currency.
 
-![l](img\UT\1.png)
+![l](img/UT/1.png)
 
 ## Setting up the Shop
 
@@ -36,14 +36,14 @@ When the Shop is selected or transitioned, you need to call the *AccountDetailsR
     	}
     });
 ```
-    ![l](img\UT\2.png)
+    ![l](img/UT/2.png)
 
 ### Awarding the Player some Virtual Goods
 
 So before you can buy Virtual Goods you need make sure your player has some currency to spend. In this case, the gold coins are going to cost one *currency1* each. At the start of this tutorial you created an Event that will give the player some currency. You need to call this event using the *LogEventRequest* either in Unity, or in the *Test harness* of the GameSparks platform. If you need a recap on how to use the *LogEventRequest* check out the tutorial [here](..\Using Cloud Code\Unity Cloud Code.html).
 
 
-![l](img\UT\3.png)
+![l](img/UT/3.png)
 
 ### Buying Virtual Goods
 
@@ -60,7 +60,7 @@ In order to buy Virtual Goods you need to call the *BuyVirtualGoodsRequest*. T
     });
 ```
 
-    ![l](img\UT\4.png)
+    ![l](img/UT/4.png)
 
 ### Consuming Virtual Goods
 
@@ -76,10 +76,10 @@ The next thing to do is give your player the ability to use their Virtual Goods 
     	}
     });
 ```
-![l](img\UT\5.png)
+![l](img/UT/5.png)
 
 ### Testing Your Shop
 
 You will now have the ability to buy and consume Virtual Goods, as well as grant your players some currency and retrieve and update the account details each time an action is taken. If you are working from the GameSparks sample project for this tutorial, you will see the following screen.
 
-![l](img\UT\6.png)
+![l](img/UT/6.png)
