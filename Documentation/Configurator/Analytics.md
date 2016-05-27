@@ -5,8 +5,8 @@ nav_sort: 1
 
 GameSparks provides several components of the analytics stack needed to operate a game as a service:
 
-  1. The backend, i.e. the NoSQL database (see [NoSQL Explorer](..\Database access and cloud storage\NoSQL Explorer.html) in this Manual for details).
-  2. The events library, with the ability to record any custom event (see [Events](..\Cloud Code, and the Test Harness\Events.html) in this Manual for details).
+  1. The backend, i.e. the NoSQL database (see [NoSQL Explorer](/API Documentation/NoSQL REST API.md) in this Manual for details).
+  2. The events library, with the ability to record any custom event (see [Events](./Events.md) in this Manual for details).
   3. The analytics user interface in the developer portal that cover common games reporting requirements, which should be sufficient for most indie developers.
   4. Export to third party front end tools (such as Tableau or Qlikview) or direct ad hoc querying of the NoSQL database for detailed analysis.
 
@@ -59,7 +59,7 @@ There are three drop down menus on the overview page that allow you to control t
 
 ![](img/Analytics/5.png)
 
- This tab contains graphs which show the data gathered as a result of your game sending an [AnalyticsRequest](/?p=2218) to the GameSparks platform.
+ This tab contains graphs which show the data gathered as a result of your game sending an [AnalyticsRequest](/API Documentation/Request API/Analytics/AnalyticsRequest.md) to the GameSparks platform.
 
   * Count - shows the number of times a given custom key has been sent via the AnalyticsRequest
   * Average per Player - shows the average number of times per player that a given custom key has been sent via the AnalyticsRequest
@@ -73,7 +73,7 @@ This tab displays a number of performance related graphs.
 
   * Average Requests per Player - shows the average number of request generated per player within you game.
   * Average Response Time - show the average response time (in milliseconds) that the GameSparks platform has taken to respond to API request calls.
-  * Average Javascript Execution Time - show the average time (in milliseconds) that the GameSparks platform has spent executing you [Cloud Code](../Cloud Code, and the Test Harness\Cloud Code.html) JavaScript code.
+  * Average Javascript Execution Time - show the average time (in milliseconds) that the GameSparks platform has spent executing your Cloud Code.
   * Average Storage per Player - shows the average amount of cloud data per player that your game is using.
   * Average Bandwidth per Player - shows the average amount of bandwidth per player that your game is using.
 

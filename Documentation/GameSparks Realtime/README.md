@@ -1,10 +1,9 @@
 ---
 nav_sort: 1
 ---
-# Introduction
+# GameSparks Realtime
 
 We've recently enhanced our product offering by adding a new set of services for facilitating realtime multiplayer.
-
 GameSparksRT is a low latency socket server designed specifically for realtime games where high throughput and low transmission sizes are required.
 
  This service is currently in trial with selected customers.  If you would like to take part in the trial please contact info@gamesparks.com and we'll add you to the waiting list.
@@ -12,7 +11,7 @@ GameSparksRT is a low latency socket server designed specifically for realtime g
 
 ## Set up matchmaking rules
 
-https://docs.gamesparks.net/tutorials/how-to-match-players describes the process for setting up matchmaking rules on the platform.
+[See here](/Tutorials/Multiplayer/HowToMatchPlayers.md) for a document that describes the process for setting up matchmaking rules on the platform.
 
 ## Connect to the realtime servers
 

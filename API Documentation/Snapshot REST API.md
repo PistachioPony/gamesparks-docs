@@ -1,6 +1,6 @@
 # Snapshot REST API
 
-The GameSparks platform allows you to manage game snapshots via a REST interface, this is useful to allow you to control publishing between environments and have this managed by your own software. The REST endpoint requires Basic Auth, see [here](../Cloud Code, and the Test Harness\Game REST API.html) for details
+The GameSparks platform allows you to manage game snapshots via a REST interface, this is useful to allow you to control publishing between environments and have this managed by your own software. The REST endpoint requires Basic Auth, see [here](./GameSparks REST API.md) for details
 
 ## Create a Snapshot
 
