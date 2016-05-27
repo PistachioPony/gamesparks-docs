@@ -15,15 +15,15 @@ To access the JavaScript editor select the name of the script from one of the ei
 
 ### Events
 
-This list contains an entry for each Event you have created within the GameSparks platform. When a [LogEventRequest](/?p=2254) is received, the corresponding script is executed allowing you to run custom code on the platform. You can access the current player making the request using  Spark.getPlayer(). The Create New Event button allows you to quickly create a new Event from the Cloud Code section of the Configurator.
+This list contains an entry for each Event you have created within the GameSparks platform. When a [LogEventRequest](../../API Documentation/Request API/Player/LogEventRequest.md) is received, the corresponding script is executed allowing you to run custom code on the platform. You can access the current player making the request using  Spark.getPlayer(). The Create New Event button allows you to quickly create a new Event from the Cloud Code section of the Configurator.
 
 ![](img/CloudCode/3.jpg)
 
-Clicking the *+* button will open the same Form as in the [Events](..\Cloud Code, and the Test Harness\Events.html) page to allow Event creation .
+Clicking the *+* button will open the same Form as in the [Events](./Events.html) page to allow Event creation .
 
 ### Challenge Events
 
-This list contains an entry for each Event you have created within the GameSparks platform. When a [LogChallengeEventRequest](/?p=2234) is received, the corresponding script is executed allowing you to run custom code on the platform. LogChallengeEventRequest contains an attribute "challengeId", it's useful to get this value for keying your own data, to access the value you can call Spark.data.challengeId. To get the challenge object stored within GameSparks the following call should be executed:
+This list contains an entry for each Event you have created within the GameSparks platform. When a [LogChallengeEventRequest](../../API Documentation/Request API/Multiplayer/LogChallengeEventRequest.md) is received, the corresponding script is executed allowing you to run custom code on the platform. LogChallengeEventRequest contains an attribute "challengeId", it's useful to get this value for keying your own data, to access the value you can call Spark.data.challengeId. To get the challenge object stored within GameSparks the following call should be executed:
 
 ```    
     var myChallenge = Spark.getChallenge(Spark.data.challengeId);
@@ -33,7 +33,7 @@ You can also access the current player making the request using `Spark.getPlaye
 
 ### Requests
 
-This list contains an entry for each Request you can call within the GameSparks platform. When a Request is received, the corresponding script is executed allowing you to run custom code on the platform. It should be noted that [LogEventRequest](/?p=2254) and [LogChallengeEventRequest](/?p=2234) are global scripts that will be executed for these request types before a specific script is called for each event. This allows you to add a common functionality to all Events. You can access the current player making the request using `Spark.getPlayer()`.
+This list contains an entry for each Request you can call within the GameSparks platform. When a Request is received, the corresponding script is executed allowing you to run custom code on the platform. It should be noted that LogEventRequest and LogChallengeEventRequest are global scripts that will be executed for these request types before a specific script is called for each event. This allows you to add a common functionality to all Events. You can access the current player making the request using `Spark.getPlayer()`.
 
 ### Responses
 
@@ -73,7 +73,7 @@ To create a new module click the Create New Module button, then enter a short co
 
 The System tab contains a number of System Events that are able to trigger some JavaScript Cloud Code:
 
-  * *Callback Url* - This script is executed whenever something hits the [Callback Url](..\Cloud Code, and the Test Harness\How to implement external HTTP Callbacks.html).
+  * *Callback Url* - This script is executed whenever something hits the [Callback Url](/Tutorials/Cloud Code, and the Test Harness/External HTTP Callbacks.md).
   * *Every Day* - This script is executed at 12:00am UTC each day.
   * *Every Hour* - This script is executed on the hour, every hour.
   * *Every Minute* - This script is executed on the minute, every minute.
