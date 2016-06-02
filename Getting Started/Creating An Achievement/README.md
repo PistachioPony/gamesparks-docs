@@ -16,7 +16,7 @@ In this section you will learn how to award an Achievement using custom Cloud Co
 
 ## Achievement
 
-First you will need to navigate to the Achievements page in your Configurator. Next, add a new Achievement with the following parameters (shown below). For an in-depth guide about Achievements click [here](/developer-portal/achievements). All parameters that are not listed below can be left as default.
+First you will need to navigate to the Achievements page in your Configurator. Next, add a new Achievement with the following parameters (shown below). For an in-depth guide about Achievements click [here](/Documentation/Configurator/Achievements.md). All parameters that are not listed below can be left as default.
 
   * Short Code - This is the reference by which we will award the Achievement, these are always unique.
   * Name - This field is used when listing Achievements in all of the Returns.
@@ -28,7 +28,7 @@ First you will need to navigate to the Achievements page in your Configurator.�
 
 ## Event
 
-Following the Achievement Creation, you will need to create a new Event, reference back to [Creating a Leaderboard](/uncategorized/creating-a-leaderboard) if needed.
+Following the Achievement Creation, you will need to create a new Event, reference back to [Creating a Leaderboard](/Getting Started/Creating A Leaderboard/README.md) if needed.
 
 ![](img/Create/2.png)
 
@@ -52,15 +52,15 @@ Hit save and at that point the Achievement is fully configured to be awarded.
 
 ## Test Harness
 
-Now since everything is set up, you will now need to navigate to the Test Harness and authenticate with one of the players you have previously [registered](/uncategorized/using-authentication). At this point the Achievement you have configured awards some currency, and now you need to validate that the player currently doesn't have any currency associated with their account. To do this you will need to select Player tab and send an [AccountDetailsRequest](https://docs.gamesparks.net/documentation/request-api/player-request-api/accountdetailsrequest).
+Now since everything is set up, you will now need to navigate to the Test Harness and authenticate with one of the players you have previously [registered](/Getting Started/Using Authentication/README.md). At this point the Achievement you have configured awards some currency, and now you need to validate that the player currently doesn't have any currency associated with their account. To do this you will need to select Player tab and send an [AccountDetailsRequest](/API Documentation/Request API/Player/AccountDetailsRequest.md).
 
 ![](img/Create/4.png)
 
-Now you will need to send the [LogEventRequest](/documentation/request-api/player-request-api/logeventrequest) for the Event you've configured earlier called "*Award_Achievement*". This will award the Achievement to the currently authenticated player and send the [AchievementEarnedMessage](https://docs.gamesparks.net/documentation/message-api/player-message-api/achievementearnedmessage). Additionally if you have debug mode enabled on your requests, the debugger should activate and you will be able to step through your Cloud Code. This only happens if your Requests/Responses/Messages have Cloud Code attached to them. You can read more about debugging Cloud Code [here](https://docs.gamesparks.net/documentation/gamesparks-debugger). After you've stepped through or exited the debugger, your player will be awarded the Achievement you've configured.
+Now you will need to send the [LogEventRequest](/API Documentation/Request API/Player/LogEventRequest.md) for the Event you've configured earlier called "*Award_Achievement*". This will award the Achievement to the currently authenticated player and send the [AchievementEarnedMessage](/API Documentation/Message API/Player/AchievementEarnedMessage.md). Additionally if you have debug mode enabled on your requests, the debugger should activate and you will be able to step through your Cloud Code. This only happens if your Requests/Responses/Messages have Cloud Code attached to them. You can read more about debugging Cloud Code [here](/Documentation/Test Harness/Debugger.md). After you've stepped through or exited the debugger, your player will be awarded the Achievement you've configured.
 
 ![](img/Create/5.png)
 
-Finally you can validate that the currency was awarded by calling the [AccountDetailsRequest](/documentation/request-api/player-request-api/accountdetailsrequest).
+Finally you can validate that the currency was awarded by calling the [AccountDetailsRequest](/API Documentation/Request API/Player/AccountDetailsRequest.md).
 
 ![](img/Create/6.png)
    

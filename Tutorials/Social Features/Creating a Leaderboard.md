@@ -52,7 +52,7 @@ Repeat the registration step for four additional users.
 
 ### Authentication Test Player
 
-Now authorise Player1. Select the [AuthenticationRequest](/documentation/request-api/authentication-request-api/authenticationrequest) from the Authentication menu and change the userName to 'Player1' as shown below. Press the Play icon to send the request.
+Now authorise Player1. Select the AuthenticationRequest from the Authentication menu and change the userName to 'Player1' as shown below. Press the Play icon to send the request.
 
 ![](img/CreateUseLDR/10.png)
 
@@ -62,15 +62,15 @@ To log a score for Player1, select SCORE_EVT from the LogEvent menu - this is th
 
 ![](img/CreateUseLDR/11.png)
 
-Note that as well as the request and response shown in the Inspector that there is also an asynchronous [NewHighScoreMessage](https://docs.gamesparks.net/documentation/message-api/leaderboards-message-api/newhighscoremessage) message (in orange text). This message includes the score posted as well as the global rank details. Every time a player beats their previous best they will receive a message of this type. If Player1 logs another score that is 10 or less they will not receive a [NewHighScoreMessage](https://docs.gamesparks.net/documentation/message-api/leaderboards-message-api/newhighscoremessage). Now repeat the authorisation and log event step for the other four users that you registered. Use an increasing score for each user, e.g. 200 for Player2, 300 for Player3 etc.
+Note that as well as the request and response shown in the Inspector that there is also an asynchronous NewHighScoreMessage message (in orange text). This message includes the score posted as well as the global rank details. Every time a player beats their previous best they will receive a message of this type. If Player1 logs another score that is 10 or less they will not receive a NewHighScoreMessage. Now repeat the authorisation and log event step for the other four users that you registered. Use an increasing score for each user, e.g. 200 for Player2, 300 for Player3 etc.
 
 ### Retrieve Leaderboard Data
 
-To view the Leaderboard select [LeaderBoardDataRequest](/documentation/request-api/leaderboards-request-api/leaderboarddatarequest) from the Leaderboards menu. Change the leaderboardShortCode in the JSON request to HIGH_SCORE_LB, which is the short code that you used when you created the Leaderboard. Then click the Play icon. The response message can be seen in the Inspector and should contain entries for all five users that you logged score events for in the previous steps along with their ranks.
+To view the Leaderboard select LeaderBoardDataRequest from the Leaderboards menu. Change the leaderboardShortCode in the JSON request to HIGH_SCORE_LB, which is the short code that you used when you created the Leaderboard. Then click the Play icon. The response message can be seen in the Inspector and should contain entries for all five users that you logged score events for in the previous steps along with their ranks.
 
 ![](img/CreateUseLDR/12.png)
 
-To control the number of entries returned by the [LeaderBoardDataRequest](https://docs.gamesparks.net/documentation/request-api/leaderboards-request-api/leaderboarddatarequest "LeaderboardDataRequest") set the entryCount field to the required value. Also to view a different part of the Leaderboard set the offset field. The offset is relative to the current authorised player's position in the Leaderboard.
+To control the number of entries returned by the LeaderBoardDataRequest set the entryCount field to the required value. Also to view a different part of the Leaderboard set the offset field. The offset is relative to the current authorised player's position in the Leaderboard.
 
 ![](img/CreateUseLDR/13.png)
 
@@ -80,8 +80,8 @@ If the current authorised player was linked to their Facebook account in the Gam
 
 ### Getting Players "Around Me"
 
-Authenticate Player3 (go to Authentication/AuthenticationRequest and then change the userName in the JSON request to "Player3"). Next select the [AroundMeLeaderboardRequest](https://docs.gamesparks.net/documentation/request-api/leaderboards-request-api/aroundmeleaderboardrequest "AroundMeLeaderboardRequest") on the Leaderboards menu. In the JSON request set the count field to 1 to show the Leaderboard entries either side of Player3 (the currently authorised player). Notice that the player's rank and score are included in the response.
+Authenticate Player3 (go to Authentication/AuthenticationRequest and then change the userName in the JSON request to "Player3"). Next select the AroundMeLeaderboardRequest on the Leaderboards menu. In the JSON request set the count field to 1 to show the Leaderboard entries either side of Player3 (the currently authorised player). Notice that the player's rank and score are included in the response.
 
 ![](img/CreateUseLDR/15.png)
 
-If you were to authenticate Player1 and repeat the [AroundMeLeaderboardRequest](https://docs.gamesparks.net/documentation/request-api/leaderboards-request-api/aroundmeleaderboardrequest "AroundMeLeaderboardRequest") the response would only include two entries. This is because Player1 is at the bottom of the Leaderboard so only the player one rank higher than Player1 is shown.
+If you were to authenticate Player1 and repeat the AroundMeLeaderboardRequest the response would only include two entries. This is because Player1 is at the bottom of the Leaderboard so only the player one rank higher than Player1 is shown.

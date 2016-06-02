@@ -55,15 +55,15 @@ The Get Position Event is essentially a reverse of the Set Position Event. Here 
 
 ![](img/UsingCloudCode/6.png)
 
-Firstly, you will need to Register a new player. This can be achieved by using the [RegistrationRequest](/documentation/request-api/authentication-request-api/registrationrequest). To do so, you will need to navigate to the Test Harness, select the RegistrationRequest, fill in the JSON details and hit play.
+Firstly, you will need to Register a new player. This can be achieved by using the [RegistrationRequest](/API Documentation/Request API/Authentication/RegistrationRequest.md). To do so, you will need to navigate to the Test Harness, select the RegistrationRequest, fill in the JSON details and hit play.
 
 ![](img/UsingCloudCode/7.png)
 
-Now you'll want to Call the Set Position Event to set the X, Y and Z coordinates in the Players Script Data. To do so, go to the LogEvent and select your Event. Fill in the JSON details and hit play. Don't worry if your response contains no data, as none has been set. Note: If you had the Requests debugger ticked, it will open at this point. This only happens if the Request has some Cloud Code set on it. Either step through the code or stop debugging. You can read more about the debugger [here](..\..\Tutorials\Cloud Code, and the Test Harness\GameSparks Debugger.html).
+Now you'll want to Call the Set Position Event to set the X, Y and Z coordinates in the Players Script Data. To do so, go to the LogEvent and select your Event. Fill in the JSON details and hit play. Don't worry if your response contains no data, as none has been set. Note: If you had the Requests debugger ticked, it will open at this point. This only happens if the Request has some Cloud Code set on it. Either step through the code or stop debugging. You can read more about the debugger [here](/Documentation/Test Harness/Debugger.md).
 
 ![](img/UsingCloudCode/8.png)
 
-You can now validate that the POS has been set in the players Script Data by Calling an [AccountDetailsRequest](/documentation/request-api/player-request-api/accountdetailsrequest).
+You can now validate that the POS has been set in the players Script Data by Calling an [AccountDetailsRequest](/Getting Started/Using Cloud Code/README.md).
 
 ![](img/UsingCloudCode/9.png)
 

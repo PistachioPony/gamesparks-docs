@@ -20,7 +20,7 @@ And that's it, you now have a Twitter application. There are various configurati
 
  In a separate tab/window head over to [the GameSparks developer portal](https://portal.gamesparks.net) and click the overview of your game. Click the 'Edit' icon and enter the API Key and API Secret from the Twitter portal into the fields "Twitter App ID" and "Twitter App Secret" and then click "Save".
 
-  In a separate tab/window head over to the [Integrations](..\Social Features\Integrations.html) page, click to edit the Twitter Integration enter the API Key and API Secret from the Twitter portal into the fields "Twitter App ID" and "Twitter App Secret" and then click "Save".
+  In a separate tab/window head over to the [Integrations](/Documentation/Configurator/Integrations.md) page, click to edit the Twitter Integration enter the API Key and API Secret from the Twitter portal into the fields "Twitter App ID" and "Twitter App Secret" and then click "Save".
 
 ![](img/AuthTwit/4.png)
 
@@ -28,7 +28,7 @@ And that's it, you now have a Twitter application. There are various configurati
 
 ## Authenticating a player using their Twitter account
 
-Authentication via Twitter is done using the "[TwitterConnectRequest](/documentation/request-api/authentication-request-api/twitterconnectrequest)". To do this you need to obtain an Access Token and an Access Secret for your player. Twitter authentication uses oAuth 1.0 which, when negotiated correctly, results in the client receiving an Access Token and Access Secret. There are numerous client libraries that have been written to make this easier, Twitter provide a list of some of these [here](https://dev.twitter.com/docs/twitter-libraries). What they have in common is that they provide a mechanism where you supply your Twitter API Key and API Secret, obtain a token, submit that token to Twitter at which point the player is prompted to allow access to your application. Once granted they return with the Access Token and Access Secret needed for GameSparks to connect to the player's Twitter profile.
+Authentication via Twitter is done using the "[TwitterConnectRequest](/API Documentation/Request API/Authentication/TwitterConnectRequest.md)". To do this you need to obtain an Access Token and an Access Secret for your player. Twitter authentication uses oAuth 1.0 which, when negotiated correctly, results in the client receiving an Access Token and Access Secret. There are numerous client libraries that have been written to make this easier, Twitter provide a list of some of these [here](https://dev.twitter.com/docs/twitter-libraries). What they have in common is that they provide a mechanism where you supply your Twitter API Key and API Secret, obtain a token, submit that token to Twitter at which point the player is prompted to allow access to your application. Once granted they return with the Access Token and Access Secret needed for GameSparks to connect to the player's Twitter profile.
 
 For the purpose of this guide you can just get hold of the access token and access secret for the user who owns the game you created. Back on the "API Keys" tab for your Twitter app, at the bottom of the page is an option to generate your access token.
 
@@ -81,4 +81,4 @@ Click on "User" > "ListInviteFriendsRequest" and you should see a list of friend
 ]
 }
 ```
-Now head on over to [Social Capabilities](..\Social Features\Social Capabilities.html) to see how you can make the most of social integration.
+Now head on over to [Social Capabilities](/Documentation/Key Concepts/Social Capabilities.md) to see how you can make the most of social integration.

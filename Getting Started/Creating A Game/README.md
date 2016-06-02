@@ -16,7 +16,7 @@ efore getting started as a new user, you will need to [Register](https://portal
 
 ![l](img/CreatingGame/2.png)
 
-After hitting *Save* you will be taken to the [Overview](..\..\Tutorials\Analytics, Segmentation and Game Management\Overview.html) section, where your game is now ready to be configured. At this point you should take note of your *GameSparks API Key* and *GameSparks API Secret* as these will be used in the upcoming set up of your chosen SDK.
+After hitting *Save* you will be taken to the [Overview](/Documentation/Configurator/Overview.md) section, where your game is now ready to be configured. At this point you should take note of your *GameSparks API Key* and *GameSparks API Secret* as these will be used in the upcoming set up of your chosen SDK.
 
 ## Publishing for Launch
 

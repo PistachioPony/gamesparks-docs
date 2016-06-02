@@ -60,7 +60,7 @@ We will now use the Portal Test Harness and NoSQL Explorer to test the configura
   }
 ```
 
-Now send a 'Store race data' Event by sending the following [LogEventRequest](/documentation/request-api/player-request-api/logeventrequest). For simplicity we are only sending an array of ghost data containing three items in this article but in reality this array would be much larger.
+Now send a 'Store race data' Event by sending the following LogEventRequest. For simplicity we are only sending an array of ghost data containing three items in this article but in reality this array would be much larger.
 
 ```    
   {
@@ -90,7 +90,7 @@ Now send a 'Store race data' Event by sending the following [LogEventRequest](/d
    "TIME": "90"
   }
 ```
-If successful you will have received a [LogEventResponse](/documentation/response-api/player-response-api/logeventresponse) similar to this.
+If successful you will have received a LogEventResponse similar to this.
 
 ```    
   {
@@ -111,7 +111,7 @@ Now we need to create an Event that allows the game to retrieve the fastest pl
 
 ![](img/PlayerDataSharing/4.jpg)
 
-Next we create the Cloud Code script to retrieve the data from the MongoDB collection and return it in the [LogEventResponse](https://docs.gamesparks.net/documentation/response-api/player-response-api/logeventresponse). In the Portal navigate to Configurator->Cloud Code->Bindings->Events and select the Event we created in the previous section called 'Get race data' and copy and paste the following JavaScript code into it.
+Next we create the Cloud Code script to retrieve the data from the MongoDB collection and return it in the LogEventResponse. In the Portal navigate to Configurator->Cloud Code->Bindings->Events and select the Event we created in the previous section called 'Get race data' and copy and paste the following JavaScript code into it.
 
 ```    
   // Get the incoming Event Attribute

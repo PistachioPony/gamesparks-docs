@@ -69,7 +69,7 @@ In your project's build file, you need to include extra modules which will allow
 After you include the modules into your project refresh your C++ files through the Editor so the changes are recognised in your project. Failing to do this step will result in your "Online.h" and "OnlineSubsystemFacebook.h" not being recognised.
 
 
-![](/wp-content/uploads/2015/12/bandicam-2015-12-16-16-20-18-587-300x177.jpg)
+![](img/UE4FB/1.jpg)
  
 
 ### *Facebook App Settings*
@@ -78,11 +78,11 @@ After you include the modules into your project refresh your C++ files through t
 
 In your Facebook settings advanced tab flip the button to state that your app is a native one if you're developing or debugging on desktop. For 'Valid OAuth redirect URIs' ensure that you add https://www.facebook.com/connect/login_success.htmlThat is all you need, in the images you can see how we setup our App.
 
-![](/wp-content/uploads/2015/12/bandicam-2015-12-16-15-32-11-581-300x276.jpg)
+![](img/UE4FB/2.jpg)
 
-![](/wp-content/uploads/2015/12/bandicam-2015-12-16-15-32-54-179-300x276.jpg)
+![](img/UE4FB/3.jpg)
 
-To use Facebook authentication with GameSparks follow the tutorial to setup Unreal for GameSpark integration, [here](/tutorials/unreal-setup).
+To use Facebook authentication with GameSparks follow the tutorial to setup Unreal for GameSpark integration, [here](/Getting Started/Creating A Game/Unreal Setup.md).
    
 
 ## Facebook API Component
@@ -227,7 +227,7 @@ To get the Facebook authentication to work for Blueprint:
 
 We have attached uassets which show an example of this working with a UMG Widget interface.
 
-[![](https://docs.gamesparks.net/wp-content/uploads/2015/12/bandicam-2015-12-18-09-54-46-480-300x194.jpg)](https://docs.gamesparks.net/wp-content/uploads/2015/12/bandicam-2015-12-18-09-54-46-480.jpg)
+[![](img/UE4FB/4.jpg)
 
 ## DefaultEngine Config file, ProjectBuild file, FBAPIComponent CPP, Header, Gamemode blueprint and Widget blueprint examples
 

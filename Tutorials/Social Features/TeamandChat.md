@@ -15,7 +15,7 @@ To set up a team type, head to the Teams tab in the configurator and click the '
 5.  Social options - If enabled, these options will regard the owner as a friend of the player joining or/and other players already in the Team.
 6.  Max Ownership - How many teams of the same type can the owner have simultaneously.
 
-Once you're happy with your configuration. That's all you have to do to create a Team type for your players to use. More details on team type creation and management, click [here](..\Social Features\Teams.html).
+Once you're happy with your configuration. That's all you have to do to create a Team type for your players to use. More details on team type creation and management, click [here](/Documentation/Configurator/Teams.md).
 
 [![](img/TeamChat/1.png)
 

@@ -4,7 +4,7 @@ Indexes on collections allow MongoDB to process queries more efficiently and wil
 
 ## Creating an index
 
-First lets create a runtime collection using the [NoSQL Explorer](..\Database access and cloud storag\NoSQL Explorer.html). Navigate to the *NoSQL* page in the developer portal and select the *Create* tab. Enter a name for your collection and select the Runtime collection type. Press the Submit button to create your custom collection.
+First lets create a runtime collection using the [NoSQL Explorer](/Documentation/NoSQL Explorer.md). Navigate to the *NoSQL* page in the developer portal and select the *Create* tab. Enter a name for your collection and select the Runtime collection type. Press the Submit button to create your custom collection.
 
 ![](img/CustomIndex/1.png)
 
@@ -33,7 +33,7 @@ Enter the following Javascript in the editor window and click the *Save* button.
     playerChatHistoryCollection.ensureIndex({"dateOfChat" : -1});
 ```
 
-This script uses the [SparkMongoCollectionReadWrite](/documentation/cloud-code-api/mongo-cloud-code-api/sparkmongocollectionreadwrite) API *ensureIndex* method to add an index to the collection on the chatDate field. The ensureIndex method only creates an index if an index of the same specification does not already exist. A value of 1 specifies that the index orders items in ascending order. A value of -1 specifies an index that orders items in descending order. This index will support queries that use the chatDate field.
+This script uses the [SparkMongoCollectionReadWrite](/API Documentation/Cloud Code API/Mongo/SparkMongoCollectionReadWrite.md) API *ensureIndex* method to add an index to the collection on the chatDate field. The ensureIndex method only creates an index if an index of the same specification does not already exist. A value of 1 specifies that the index orders items in ascending order. A value of -1 specifies an index that orders items in descending order. This index will support queries that use the chatDate field.
 
 You can also create compound index across multiple fields. For example:
 

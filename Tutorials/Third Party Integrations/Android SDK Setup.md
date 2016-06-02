@@ -45,7 +45,7 @@ private static final String GAMESPARKS_API_SECRET = "<Enter your game API secret
 
 ## Testing the Configuration
 
-Right click on the GameSparksSDKTestHarness project and select *Run As->Android Application*. Select the [DeviceAuthenticationRequest](/documentation/request-api/authentication-request-api/deviceauthenticationrequest) item in the Advanced section of the left hand menu and press the Send button.
+Right click on the GameSparksSDKTestHarness project and select *Run As->Android Application*. Select the [DeviceAuthenticationRequest](/API Documentation/Request API/Authentication/DeviceAuthenticationRequest.md) item in the Advanced section of the left hand menu and press the Send button.
 
 ![](img/Android/6.jpg)
 

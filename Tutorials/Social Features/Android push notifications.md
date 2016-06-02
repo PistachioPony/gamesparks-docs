@@ -47,7 +47,7 @@ private void sendRegistrationIdToBackend() {
 
 ## Registering a device for push notifications
 
-The final step required to actually deliver a push notification is for the GameSparks service to be able to identify your player's device to be able to send the notifications. This is accomplished with a [PushRegistrationRequest](/documentation/request-api/misc-request-api/pushregistrationrequest).
+The final step required to actually deliver a push notification is for the GameSparks service to be able to identify your player's device to be able to send the notifications. This is accomplished with a [PushRegistrationRequest](/API Documentation/Request API/Misc/PushRegistrationRequest.md).
 
 For an authenticated player in the GameSparks Test Harness, send:
 
@@ -59,4 +59,4 @@ For an authenticated player in the GameSparks Test Harness, send:
 
 ```
 
-Where *DEVICE_REGISTRATION_ID* is the registration id returned from the call to *GoogleCloudMessaging.register* in the client. The GameSparks platform is now capable of pushing message to this player, even while they're not playing your game. For more details on push notifications within the GameSparks platform, check out [Messaging](..\Authentication and Player Profile\Messaging.html).
+Where *DEVICE_REGISTRATION_ID* is the registration id returned from the call to *GoogleCloudMessaging.register* in the client. The GameSparks platform is now capable of pushing message to this player, even while they're not playing your game. For more details on push notifications within the GameSparks platform, check out [Messaging](/Documentation/Key Concepts/Messaging.md).

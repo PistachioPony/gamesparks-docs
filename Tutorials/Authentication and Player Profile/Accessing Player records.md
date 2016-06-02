@@ -8,18 +8,18 @@ An important part of a back-end is the ability to access your player's info in r
 
 The NoSQL Explorer is a powerful tool used to access and find any collection of data you have in your game. It can be found in its own tab on the left side of the portal. To access player data from it, select the 'player' collection and query for specific players or run the search for every player. Once records are retrieved you can click on them to expand them. Once expanded you can see all the data that is linked to the player including data you can't normally see when you call an account details request. Data such as auth tokens, external IDs, reserved currency, private data which you may not see and use often. For more information about the SQL Explorer, click [here](https://docs.gamesparks.net/developer-portal/nosql).
 
-![](/img/PlayerRecords/1.jpg)
+![](img/PlayerRecords/1.jpg)
 
 
 An example of a newly created player's record.
 
-![](/img/PlayerRecords/2.jpg)
+![](img/PlayerRecords/2.jpg)
 
 ## Player Management Screen
 
 You can use the player management screen to offer a visual experience while you access player data and change variables realtime. The player management screen can be found in the manage section of the portal. This screen can be customised however you like through the dynamic forms builder. You can tailor your team's experience however you like. You can offer special screens for customer service for example where they are allowed to change certain values while programmers have access to a different screen. For more info about dynamic forms, click [here](https://docs.gamesparks.net/tutorials/dynamic-forms-tutorial).
 
-![](/img/PlayerRecords/3.jpg)
+![](img/PlayerRecords/3.jpg)
 
 ## Through Cloud Code
 

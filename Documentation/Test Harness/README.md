@@ -16,7 +16,7 @@ There are several sections in the Test Harness:
   * *JSON* \- enter your JSON request text here.  Send your request using the play icon {playIcon}.  Save a request using the disk icon. Record a scenario (a sequence of requests) using the microphone icon. Use the calendar icon __ to easily populate any date fields with the JSON request that you wish to send.
   * *Inspector* \- shows sent requests (in green), received responses (in blue) and asynchronous message received (in orange).
   * *Stage selector menu* \- the drop down menu in the top left of the screen allows you to select whether you are connecting to the preview or live stage of you game.
-  * *Debugger* \- Allows debugging the Cloud Code attached to your requests. Tutorial can be found [here](..\Cloud Code, and the Test Harness\GameSparks Debugger.html).
+  * *Debugger* \- Allows debugging the Cloud Code attached to your requests. Tutorial can be found [here](/Documentation/Test Harness/Debugger.md).
 
 When you first access the Test Harness page within the Developer Portal it will establish a session with the GameSparks platform and you will see a session id in the *Connection* section.  At this point the Test Harness is connected to GameSparks but no player is currently authenticated within this session.  The initial connection handshaking methods are shown in the *Inspector* section.
 
@@ -35,13 +35,13 @@ The *Inspector* section will show the request (in green), and the response (in
 The *Requests* section contains a selection of buttons which will populate the *JSON* section with the correctly formatted text for a given request.  The requests are grouped by functional area.  Click on the group name to display a submenu of buttons for each request.  These groups are:
 
   * Authentication \- contains requests relating to authentication and registration
-  * LogEvent \- contains a [LogEventRequest](/documentation/request-api/player-request-api/logeventrequest) for each of the [Events](https://docs.gamesparks.net/developer-portal/events) that you have defined in the Configurator
-  * LogChallengeEvent \-  contains a [LogChallengeEventRequest](/documentation/request-api/challenges-request-api/logchallengeeventrequest) for each of the [Events](https://docs.gamesparks.net/developer-portal/events) that you have defined in the Configurator
+  * LogEvent \- contains a [LogEventRequest](/API Documentation/Request API/Player/LogEventRequest.md) for each of the [Events](/Documentation/Configurator/Events.md) that you have defined in the Configurator
+  * LogChallengeEvent \-  contains a [LogChallengeEventRequest](/API Documentation/Request API/Multiplayer/LogChallengeEventRequest.md) for each of the Events that you have defined in the Configurator
   * Store \- contains requests relating to third party app stores such as Google play
   * Player \- contains requests relating to the Player
-  * Challenges \- contains requests relating to [Challenges](..\Multiplayer\Challenges.html)
-  * Leaderboards \- contains requests relating to [Leaderboards](..\Social Features\Leaderboards.html)
-  * Analytics \- contains requests relating to [Analytics](../Analytics, Segmentation and Game Management\Analytics.html)
+  * Challenges \- contains requests relating to Challenges
+  * Leaderboards \- contains requests relating to Leaderboards
+  * Analytics \- contains requests relating to Analytics
   * Misc \- contains requests that don't belong anywhere else!
   * Scenarios \- contains requests that you have saved for later use
 

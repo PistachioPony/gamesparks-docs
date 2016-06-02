@@ -12,7 +12,7 @@ Once you match players together you will have reference to other player's Player
   * Add a JSON attribute. This will be used to store and access an array of string to use in the Cloud Code.
   * Add a String attribute. This will be used to store and access the message string.
 
-![](/img/MatchMessage/1.jpg)
+![](img/MatchMessage/1.jpg)
  
 
 ### Cloud code

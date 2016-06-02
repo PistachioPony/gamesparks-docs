@@ -6,13 +6,13 @@ The GameSparks platform provides the capability for you to allow players to uplo
 2. Upload the content to the URL obtained in the previous step.
 3. Once uploaded you will want the player (or other players) to be able to retrieve the content for use.
 
-In this exercise we'll run through how you do each of the above with the GameSparks API, demonstrated using the [Test Harness](../Cloud Code, and the Test Harness\Test Harness.html). To finish, there is a brief note on using the GameSparks SDKs to perform these steps (which we've streamlined behind the scenes to make your life easier).
+In this exercise we'll run through how you do each of the above with the GameSparks API, demonstrated using the [Test Harness](/Documentation/Test Harness/README.md). To finish, there is a brief note on using the GameSparks SDKs to perform these steps (which we've streamlined behind the scenes to make your life easier).
 
 # Get an Upload URL
 
 The first step is to get an upload URL, after all you need somewhere to post your content. If you're following these steps in the Test Harness, these requests are available under the 'Misc' category (make sure you've authenticated as a player before making the first request).
 
-A [GetUploadUrlRequest](/documentation/request-api/misc-request-api/getuploadurlrequest) made by an authenticated player will result in a response containing a 'url' attribute. This is your upload URL, these are one-shot URLs that expire after a matter of minutes so don't hang onto them - if you don't use it right away throw it away and request another one.
+A [GetUploadUrlRequest](/API Documentation/Request API/Misc/GetUploadUrlRequest.md) made by an authenticated player will result in a response containing a 'url' attribute. This is your upload URL, these are one-shot URLs that expire after a matter of minutes so don't hang onto them - if you don't use it right away throw it away and request another one.
 
 ```
 {
@@ -33,7 +33,7 @@ A [GetUploadUrlRequest](/documentation/request-api/misc-request-api/getuploadurl
 
 Now that you have the upload URL you need to post the file. This is done using a multipart/form-data post - we'd recommend checking it out in the Test Harness as we've provided a widget that will do this for you, and when using the SDKs see the section further down on SDK Usage.
 
-In the Test Harness, once you've made a [GetUploadUrlRequest](/documentation/request-api/misc-request-api/getuploadurlrequest), you should see the upload URL populated within the Requests area. Now click 'Choose File', and select the file you want to upload. Once selected click 'Upload File'.
+In the Test Harness, once you've made a GetUploadUrlRequest, you should see the upload URL populated within the Requests area. Now click 'Choose File', and select the file you want to upload. Once selected click 'Upload File'.
 
 ![](img/Binary/1.png))
 
@@ -61,7 +61,7 @@ Within the message is an attribute 'uploadData' which contains all the data abou
 
 # Retrieve the Content
 
-The final step is to actually retrieve the content that has been uploaded. This is achieved using a [GetUploadedRequest](/documentation/request-api/misc-request-api/getuploadedrequest) which takes an uploadId (which we received from the [UploadCompleteMessage](https://docs.gamesparks.net/documentation/message-api/misc-message-api/uploadcompletemessage)).
+The final step is to actually retrieve the content that has been uploaded. This is achieved using a [GetUploadedRequest](/API Documentation/Request API/Misc/GetUploadedRequest.md) which takes an uploadId (which we received from the UploadCompleteMessage).
 
 ```
 {

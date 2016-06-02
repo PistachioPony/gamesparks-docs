@@ -35,7 +35,7 @@ The Authenticating your service page provides your SID and client secret.
 ![](img/WinPush/5.png)
 
   1. Make a note of the SID and client secret and navigate to the GameSparks Portal.
-  2. Select *Configuration* then [Integrations](../Social Features\Integrations.html) from the Left Hand Navigation.
+  2. Select *Configuration* then [Integrations](/Documentation/Configurator/Integrations.md) from the Left Hand Navigation.
   3. Select the *Windows Tab*, then select *Edit.*
   4. Enter the SID into the field titled *Windows Package SID*.
   5. Enter the client secret into the field titled Windows *Secret Key*.

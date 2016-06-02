@@ -105,4 +105,4 @@ Now obtain an access token for this new test user and send a Facebook connect re
 }
 ```
 
-Now head on over to [Social Capabilities](..\Social Features\Social Capabilities.html) to see how you can make the most of social integration.
+Now head on over to [Social Capabilities](/Documentation/Key Concepts/Social Capabilities.md) to see how you can make the most of social integration.

@@ -74,8 +74,6 @@ The Inspector shows the request (in green text) that was sent sent to the GameSp
 
 Go to Test Harness/LogEvent section, and select the CC_EVT event that we created above. Set each of attribute values in the JSON request as below. Note that the key names are the short codes of the Event Attributes that we created at the start of the exercise. The first attribute must be a String, the second a Number and the third attribute must be a JSON object. Click the Play icon to send the request to the GameSparks platform.
 
-![](img/CreateCloud/12.png)
+![](img/CreateCloud/12.jpg)
 
 The response is displayed in the Inspector in blue text. The scriptData property contains the fields that we added from within our Cloud Code script. The keys are eventAttr1, eventAttr2 and eventAttr3. 
-
-![](img/CreateCloud/13.jpg)

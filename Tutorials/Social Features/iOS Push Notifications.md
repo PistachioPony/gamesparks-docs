@@ -213,6 +213,4 @@ Your App can now receive Push Notifications via the GameSparks service!
 
 Hopefully Xcode will automatically select the new Provisioning Profile. However, if you get a code sign error, ensure the proper profile is selected in the Code Signing build settings. When the app starts and registers for push notifications, it shows a message to inform the user that this app wishes to send push notifications.
 
-![](img/IOSPush/27.png)
-
  The app asks this only once (on the initial start of the app). If the user selects *OK*, then it is possible to send push notifications to them. App notification settings can be changed by the user in the Device settings.

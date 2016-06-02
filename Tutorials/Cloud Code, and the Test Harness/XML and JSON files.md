@@ -1,10 +1,10 @@
 # How to process XML and JSON files
 
-You can use Cloud Code to process both XML files and JSON files, these may be delivered by a player using the [GetUploadUrlRequest](/documentation/request-api/misc-request-api/getuploadurlrequest) model, or be delivered via SFTP to the server from a third party.
+You can use Cloud Code to process both XML files and JSON files, these may be delivered by a player using the [GetUploadUrlRequest](/API Documentation/Request API/Misc/GetUploadUrlRequest.md) model, or be delivered via SFTP to the server from a third party.
 
 # Processing XML Files
 
-Both [UploadCompleteMessage](/documentation/message-api/misc-message-api/uploadcompletemessage), and the "File Delivered" Cloud Code scripts have access to an attribute that allows you to get the uploaded file so you can process it:
+Both [UploadCompleteMessage](/API Documentation/Message API/Misc/UploadCompleteMessage.md), and the "File Delivered" Cloud Code scripts have access to an attribute that allows you to get the uploaded file so you can process it:
 
   ```  
     var uploadedXml = Spark.uploadedXml( Spark.data.uploadId );

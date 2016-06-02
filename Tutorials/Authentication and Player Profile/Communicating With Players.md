@@ -9,7 +9,7 @@ You will need to be able to communicate to your players for various reasons. May
 Messages are used to notify your players with events or information. GameSparks includes many native messages such as earning a new achievement, acquiring a new highscore or losing a position on a leaderboard that you can customise or create new ones. Messages can be sent to your players through sockets, so players only receive them once they're authenticated and in-game which would be intercepted and outputted to the player using message listeners. Messages can also be sent to your players through push-notifications.You can update any of the native GameSparks native messages to suit your game and segment the messages depending on the player and display different message entirely. You can also format your message depending on OS and include or omit players with a specific OS.
 
 
-![](/img/PlayerCom/1.jpg)
+![](img/PlayerCom/1.jpg)
  
 
 ### Cloud Code

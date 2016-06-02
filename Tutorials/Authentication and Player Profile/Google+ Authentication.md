@@ -48,7 +48,7 @@ While you can view the Application Client Id through the [Google *Play* Develope
 
 That's all there is to it. Now we're ready to make a *GooglePlusConnectRequest*.
 
-*11.* Get an access code using the method described in the relevant Google documentation above, then go to the [Test Harness](..\Cloud Code, and the Test Harness\Test Harness.html).
+*11.* Get an access code using the method described in the relevant Google documentation above, then go to the [Test Harness](/Documentation/Test Harness/README.md).
 
 *12.* Under *Authentication*, choose the *GooglePlusConnectRequest*. You can now send the access code through as the "code" parameter, and your Google+ profile will be connected!
 

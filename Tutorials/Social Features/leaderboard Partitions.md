@@ -26,7 +26,7 @@ HSBC.<PARTITION_1_CODE>.<PARTITION_1_VALUE>.<PARTITION_2_CODE>.<PARTITION_2_VALU
 
 ## Testing the configuration.
 
-After authenticating pass the following [LogEventRequest](/documentation/request-api/player-request-api/logeventrequest).
+After authenticating pass the following LogEventRequest.
 
 ```    
     {
@@ -37,7 +37,7 @@ After authenticating pass the following [LogEventRequest](/documentation/request
      "requestId": "1403085343961"
     }
 ```
-This will automatically create the UK leaderboard and you'll receive a [NewHighScoreMessage](/documentation/message-api/leaderboards-message-api/newhighscoremessage).
+This will automatically create the UK leaderboard and you'll receive a NewHighScoreMessage.
 
   ```  
     {
@@ -75,7 +75,7 @@ You'll see the leaderborrdShortCode value is set to "HSBC.COUNTRY.UK" Sending a
     }
 ```
 
-The resulting [NewHighScoreMessage](/documentation/message-api/leaderboards-message-api/newhighscoremessage) is as follows:
+The resulting NewHighScoreMessage is as follows:
 
 ```    
     {
@@ -101,7 +101,7 @@ The resulting [NewHighScoreMessage](/documentation/message-api/leaderboards-mess
     }
 ```
 
-Again, you'll see a new leaderboard has been created with the shortcode "HSBC.COUNTRY.US" and the new score has been added to that. To validate the UK leaderboard has not been updated you can make the following [LeaderboardDataRequest](/documentation/request-api/leaderboards-request-api/leaderboarddatarequest).
+Again, you'll see a new leaderboard has been created with the shortcode "HSBC.COUNTRY.US" and the new score has been added to that. To validate the UK leaderboard has not been updated you can make the following LeaderboardDataRequest.
 
 ```    
     {

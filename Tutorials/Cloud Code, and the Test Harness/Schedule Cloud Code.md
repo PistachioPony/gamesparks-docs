@@ -1,6 +1,6 @@
 # How to schedule Cloud Code scripts
 
-There are two ways in which you can schedule Cloud Code scripts on the GameSparks platform, the first is the ability to schedule a Module script via the [SparkScheduler](/documentation/cloud-code-api/utils-cloud-code-api/sparkscheduler) Cloud Code object, the second is to use one of the predefined system schedulers.
+There are two ways in which you can schedule Cloud Code scripts on the GameSparks platform, the first is the ability to schedule a Module script via the [SparkScheduler](/API Documentation/Cloud Code API/Utils/SparkScheduler.md) Cloud Code object, the second is to use one of the predefined system schedulers.
 
 ## Scheduling a script via the SparkScheduler object
 
@@ -39,7 +39,7 @@ var fieldCollection = Spark.runtimeCollection('field');
 fieldCollection.insert({"item":"plant", "playerId" : playerId, "x": x, "y" : y});
 ```
 
-This script uses the [SparkMongoCollectionReadWrite](/documentation/cloud-code-api/mongo-cloud-code-api/sparkmongocollectionreadwrite) object to write the data to a runtime collection.
+This script uses the [SparkMongoCollectionReadWrite](/API Documentation/Cloud Code API/Mongo/SparkMongoCollectionReadWrite.md) object to write the data to a runtime collection.
 
 Let’s test out this configuration in the *Test Harness*. Navigate to the GameSparks developer portal Test Harness, copy the JSON request below into the JSON field and press the 'Send' icon {sendIcon}.
 
@@ -65,7 +65,7 @@ The GameSparks platform will return a response similar to this.
 }
 ```
 
-This player is now authenticated and could sign into later sessions using these credentials with an [AuthenticationRequest](/documentation/request-api/authentication-request-api/authenticationrequest).
+This player is now authenticated and could sign into later sessions using these credentials with an [AuthenticationRequest](/API Documentation/Request API/Authentication/AuthenticationRequest.md).
 
 Now make the PLANT_SEED Event call. Copy the JSON request below into the JSON field and press the 'Send' icon {sendIcon}.
 
