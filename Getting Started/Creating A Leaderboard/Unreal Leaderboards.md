@@ -6,7 +6,7 @@ nav_sort: 2
 
 ## Introduction
 
-If you have followed the Portal [Tutorial](..\Creating A Leaderboard.html) for making an Event and a Leaderboard, then for this tutorial all you will need to do is call your Event. Here is a basic overview of what will be achieved through this tutorial.
+If you have followed the Portal [Tutorial](./README.md) for making an Event and a Leaderboard, then for this tutorial all you will need to do is call your Event. Here is a basic overview of what will be achieved through this tutorial.
 
 *Gamesparks Message Listeners*
 

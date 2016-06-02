@@ -140,7 +140,7 @@ After making the purchase in the client, Google Play will invoke your response I
 String purchaseData = data.getStringExtra("INAPP_PURCHASE_DATA"); String dataSignature = data.getStringExtra("INAPP_DATA_SIGNATURE");
 ```
 
-You then send the data to the GameSparks platform using a [GooglePlayBuyGoodsRequest](/documentation/request-api/store-request-api/googleplaybuygoodsrequest):
+You then send the data to the GameSparks platform using a [GooglePlayBuyGoodsRequest](/API Documentation/Request API/Store/GooglePlayBuyGoodsRequest.md):
 
 ```
 { "@class": ".GooglePlayBuyGoodsRequest",

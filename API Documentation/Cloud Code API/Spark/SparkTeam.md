@@ -67,7 +67,7 @@ Returns true if the team has been dropped.
 
 ## listChatMessages
 _signature_ listChatMessages(number count, number offset)</p>
-_returns_ [ChatMessage](../Helper/ChatMessage.md)[]</p>
+_returns_ ChatMessage []</p>
 Lists the last <pre>count</pre> chat messages for this team, starting from the <pre>offset</pre>th message, most recent first.
 <b>example</b>
 <pre rel="highlighter" code-brush="js" contenteditable="false">var history = Spark.getTeams().getTeam(myTeamId).listChatMessages(50, 0);</pre>
@@ -86,4 +86,3 @@ Delete a message from the chat history by its id.
 Returns true if the message has been removed from the chat history.
 <b>example</b>
 <pre rel="highlighter" code-brush="js" contenteditable="false">var success = Spark.getTeams().getTeam(myTeamId).deleteChatMessage(chatMessageId);</pre>
-

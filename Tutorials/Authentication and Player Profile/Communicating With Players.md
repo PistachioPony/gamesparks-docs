@@ -6,7 +6,7 @@ You will need to be able to communicate to your players for various reasons. May
 
 ### Messages
 
-Messages are used to notify your players with events or information. GameSparks includes many native messages such as earning a new achievement, acquiring a new highscore or losing a position on a leaderboard that you can customise or create new ones. Messages can be sent to your players through sockets, so players only receive them once they're authenticated and in-game which would be intercepted and outputted to the player using message listeners. Messages can also be sent to your players through push-notifications.You can update any of the native GameSparks native messages to suit your game and segment the messages depending on the player and display different message entirely. You can also format your message depending on OS and include or omit players with a specific OS. For more information about messages, click [here](/developer-portal/notifications).
+Messages are used to notify your players with events or information. GameSparks includes many native messages such as earning a new achievement, acquiring a new highscore or losing a position on a leaderboard that you can customise or create new ones. Messages can be sent to your players through sockets, so players only receive them once they're authenticated and in-game which would be intercepted and outputted to the player using message listeners. Messages can also be sent to your players through push-notifications.You can update any of the native GameSparks native messages to suit your game and segment the messages depending on the player and display different message entirely. You can also format your message depending on OS and include or omit players with a specific OS.
 
 
 ![](/img/PlayerCom/1.jpg)
@@ -29,4 +29,4 @@ Cloud code is a great way to dynamically change strings/images/values within you
 
 ### E-mail/SendGrid
 
-GameSparks comes integrated with SendGrid which gives you the ability to send E-mails to your players but make sure to save E-mails against your player for reference. For an example of how to use SendGrid for a password retention process, click [here](/portal/user-password-change). For more information about SendGrid, click [here](https://docs.gamesparks.net/documentation/cloud-code-api/comms-cloud-code-api/sendgrid).
+GameSparks comes integrated with SendGrid which gives you the ability to send E-mails to your players but make sure to save E-mails against your player for reference. For an example of how to use SendGrid for a password retention process, click [here](/Tutorials/Cloud Code, and the Test Harness/Password Change.md). For more information about SendGrid, click [here](/API Documentation/Cloud Code API/Comms/SendGrid.md).

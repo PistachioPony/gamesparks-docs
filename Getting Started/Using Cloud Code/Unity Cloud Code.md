@@ -19,8 +19,6 @@ You can create Events in your GameSparks Portal by going to the *Events* tab and
 3. *Description* - A few details that explain the Event.
 4. *Attributes* - These are the values that the Event will take. Effectively the data the Event will take from the client to the server (from Unity to GameSparks). In this example we will save the player’s experience points, position and gold. We will load these later with another method.
 
-You can get more information about Events and Event attributes [here](..\..\Tutorials\Cloud Code, and the Test Harness\Events.html).
-
 ## Calling the Event Request
 
 You can call the Events in Unity using the *LogEventRequest* method. This a default method that will take some variable data depending on what you need. In contrast with the other requests you have used in previous tutorials, the *LogEventRequest* needs information about the attributes and keys before you send the request.

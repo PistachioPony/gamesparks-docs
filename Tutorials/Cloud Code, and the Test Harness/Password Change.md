@@ -1,6 +1,6 @@
 # How to change a players passwords
 
-If your game uses the [RegistrationRequest](/documentation/request-api/authentication-request-api/registrationrequest) GameSparks API method for signing up players to your game you may want to provide a way for them to change their password in the future. This article describes two possible ways to achieve this, the first using the [ChangeUserDetailsRequest](https://docs.gamesparks.net/documentation/request-api/player-request-api/changeuserdetailsrequest) API method and the second using the [SparkPlayer](https://docs.gamesparks.net/documentation/cloud-code-api/spark-cloud-code-api/sparkplayer) Cloud Code object.
+If your game uses the [RegistrationRequest](/API Documentation/Request API/Authentication/RegistrationRequest.md) GameSparks API method for signing up players to your game you may want to provide a way for them to change their password in the future. This article describes two possible ways to achieve this, the first using the [ChangeUserDetailsRequest](/API Documentation/Request API/Player/ChangeUserDetailsRequest.md) API method and the second using the [SparkPlayer](/API Documentation/Cloud Code API/Spark/SparkPlayer.md) Cloud Code object.
 
 # Changing the player's password via the ChangeUserDetailsRequest API call
 
@@ -27,7 +27,7 @@ The GameSparks platform will return a response similar to this.
     }
   ```  
 
-This player is now authenticated and could sign into later sessions using these credentials with an AuthenticationRequest. To change this player's password to a new one you make a [ChangeUserDetailsRequest](/documentation/request-api/player-request-api/changeuserdetailsrequest) call that provides the new password in the 'newPassword' field. In the Test Harness, copy the JSON request below into the JSON field and press the 'Send' icon.
+This player is now authenticated and could sign into later sessions using these credentials with an AuthenticationRequest. To change this player's password to a new one you make a ChangeUserDetailsRequest call that provides the new password in the 'newPassword' field. In the Test Harness, copy the JSON request below into the JSON field and press the 'Send' icon.
 
     ```
     {
@@ -45,7 +45,7 @@ The GameSparks platform will return a response similar to this.
     }
 ```
 
-For greater security you may require that the player enters their existing password along with the new one. If this is the case the [ChangeUserDetailsRequest](/documentation/request-api/player-request-api/changeuserdetailsrequest) call allows you to provide the old password which the GameSparks platform will verify before changing it to the new value. In the Test Harness, copy the JSON request below into the JSON field and press the 'Send' icon.
+For greater security you may require that the player enters their existing password along with the new one. If this is the case the ChangeUserDetailsRequest call allows you to provide the old password which the GameSparks platform will verify before changing it to the new value. In the Test Harness, copy the JSON request below into the JSON field and press the 'Send' icon.
 
 ```    
     {
@@ -72,7 +72,7 @@ In the GameSparks developer portal navigate to *Configurator->Events.* Click th
 
 Now navigate to *Configurator->Cloud Code->Bindings->Events* and select the 'Change password' item to open up the Javascript editor for the Cloud Code associated with this Event.
 
-![](img\PassChange\2.jpg) 
+![](img\PassChange\2.jpg)
 
 Copy the following script to the editor and click the *Save* button.
 
@@ -109,7 +109,7 @@ The GameSparks platform will return a registration response similar to this.
      "userId": "53808a96e4b02eeeac89e23a"
     }
 ```
-Now send the [LogEventRequest](/documentation/request-api/player-request-api/logeventrequest) containing the current password and the new one. The GameSparks platform will intercept this request and execute the Cloud Code script that we provided to validate and change the player's password.
+Now send the LogEventRequest containing the current password and the new one. The GameSparks platform will intercept this request and execute the Cloud Code script that we provided to validate and change the player's password.
 
 ```    
     {

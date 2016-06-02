@@ -30,7 +30,7 @@ Now fill in the leaderboard's details and click the Save button. Note that you w
 
 The Running Total field should be set to the 'Score Event' that we created in the previous section. A Running Total was automatically created when you created the event in the section above.
 
-[Running Totals](..\Social Features\Running Totals.html) are an advanced topic that we don't need to worry about for this exercise. In the Summary field select the event attribute 'Score Attribute'. The Filtering field is set to * (wildcard) so that all values are included. The Filter Value field is not relevant in this exercise. Finally the Sort field is set to DESC (descending) to order the Leaderboard from highest player score to lowest.
+Running Totals are an advanced topic that we don't need to worry about for this exercise. In the Summary field select the event attribute 'Score Attribute'. The Filtering field is set to * (wildcard) so that all values are included. The Filter Value field is not relevant in this exercise. Finally the Sort field is set to DESC (descending) to order the Leaderboard from highest player score to lowest.
 
 # Create an Achievement
 

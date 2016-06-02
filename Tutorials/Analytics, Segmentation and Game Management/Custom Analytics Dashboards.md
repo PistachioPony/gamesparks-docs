@@ -1,6 +1,6 @@
 # Custom Analytics Dashboards
 
-With the recent introduction of Dynamic Forms, you can easily build Custom Analytics Dashboard that will have nearly limitless expandability, and suit your personal needs within minutes. However it's highly advisable to read the [Dynamic Forms API](../Analytics, Segmentation and Game Management\Dynamic Forms API.html) as well as take a look at the [Dynamic Forms Tutorial](..\Analytics, Segmentation and Game Management\Dynamic Forms.html) before starting.  
+With the recent introduction of Dynamic Forms, you can easily build Custom Analytics Dashboard that will have nearly limitless expandability, and suit your personal needs within minutes. However it's highly advisable to read the [Dynamic Forms API](/API Documentation/Dynamic Forms API.md) as well as take a look at the [Dynamic Forms Tutorial](/Documentation/Manage/Dynamic Forms.md) before starting.  
 
  Since there's no need to over-complicate the full capabilities of Dynamic Forms and Charts in this tutorial, we will not use any Cloud Code in order to create our Dashboard, for this reason we will only need to create our Chart templates and Analytics Screen. In this tutorial we will create 3 charts:  
 

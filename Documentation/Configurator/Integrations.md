@@ -14,54 +14,54 @@ The Integrations panel allows you to configure any preferred configuration by na
 
 ### Facebook Integration
 
-Facebook Integrations tab allows you to set up [Facebook Authentication](/?p=2222) for your game, an in-depth tutorial can be found [here](..\Authentication and Player Profile\How to authenticate players using their Facebook accounts.html).
+Facebook Integrations tab allows you to set up Facebook Authentication for your game, an in-depth tutorial can be found [here](/Tutorials/Authentication and Player Profile/Facebook Authentication.md).
 
 ![](img/Integrations/2.jpg)
 
 ### Twitter Integration
 
-Twitter Integrations tab allows you to set up [Twitter Authentication](/?p=2224) for your game, an in-depth tutorial can be found [here](..\Authentication and Player Profile\How to authenticate a player using their Twitter account.html).
+Twitter Integrations tab allows you to set up Twitter Authentication for your game, an in-depth tutorial can be found [here](/Tutorials/Authentication and Player Profile/Twitter Authentication.md).
 
 ![](img/Integrations/3.jpg)
 
 ### Google Plus Integration
 
-Google Integrations tab allows you to set up [Google Plus Authentication](../Authentication and Player Profile\How to authenticate a player using their Twitter account.html) for your game, an in-depth tutorial can be found [here](..\Game engine integrations\How to authenticate a player using their Google+ account.html).
+Google Integrations tab allows you to set up Google Plus Authentication for your game, an in-depth tutorial can be found [here](/Tutorials/Authentication and Player Profile/Google+ Authentication.md).
 
 ![](img/Integrations/4.png)
 
 ### Apple Integration
 
-Apple Integrations tab allows configuring [IOS Push Notifications](/?p=2917) as well as [IOS IAPs](/?p=2259) for your game.
+Apple Integrations tab allows configuring [IOS Push Notifications](/Tutorials/Social Features/iOS Push Notifications.md) as well as [IOS IAPs](/Tutorials/Currencies, Virtual Goods and Achievements/In-App Purchases.md) for your game.
 
 ![](img/Integrations/5.jpg)
 
 ### Microsoft Integration
 
-Microsoft Integrations tab allows configuring [Windows Push Notifications](/?p=3901) as well as [Windows IAPs](/?p=2261) for your game.
+Microsoft Integrations tab allows configuring [Windows Push Notifications](/Tutorials/Social Features/Windows push notifications.md) as well as [Windows IAPs](/?p=2261) for your game.
 
 ![](img/Integrations/6.jpg)
 
 ### Amazon Integration
 
-Amazon Integrations tab allows you to set up [Amazon Authentication](/?p=5778) as well as [Amazon IAPs](/?p=5780) for your game.
+Amazon Integrations tab allows you to set up Amazon Authentication as well as Amazon IAPs for your game.
 
 ![](img/Integrations/7.jpg)
 
 ### Steam Integration
 
-Steam Integrations tab allows you to set up [Steam Authentication](/?p=5663).
+Steam Integrations tab allows you to set up Steam Authentication
 
 ![](img/Integrations/8.jpg)
 
 ### Twitch Integration
 
-Twitch Integrations tab allows you to set up Twitch Authentication, for your game, an in-depth tutorial can be found [here](/howtos/social-integration/how-to-authenticate-a-player-using-their-twitch-account).
+Twitch Integrations tab allows you to set up Twitch Authentication, for your game, an in-depth tutorial can be found [here](/Tutorials/Authentication and Player Profile/Twitch Authentication.md).
 
 ![](img/Integrations/9.png)
 
 ### Kongregate Integration
 
-Kongregate Integrations tab allows you to set up [Kongregate Authentication](/documentation/request-api/authentication-request-api/kongregateconnectrequest), for your game, an in-depth tutorial can be found [here](..\Authentication and Player Profile\How to authenticate a player using their Kongregate account.html).
+Kongregate Integrations tab allows you to set up Kongregate Authentication for your game, an in-depth tutorial can be found [here](/Tutorials/Authentication and Player Profile/Kongregate Authentication.md).
 
 ![](img/Integrations/10.png)

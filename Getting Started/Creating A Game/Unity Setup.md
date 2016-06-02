@@ -24,7 +24,7 @@ If the package was successfully added to project, you will see that two new fold
 
 ![l](img/UT/2.png)
 
-Now you have to link your Unity project with your GameSparks game. If you need instructions on how to create a new GameSparks game through the Portal check out the tutorial [here](../Creating A Game.html).  In the GameSparks folder, that has just appeared in your project, navigate to the *Test UI* folder, and open the *GameSparksTestUI* scene.  Go ahead and play this scene and see what happens.  You will most likely see something like the scene to the right.  You can see a dialogue box on the right and some buttons indicating different requests on the left.  You can see that you get an error here *GS: ERROR: UNKNOWN SERVICE*.
+Now you have to link your Unity project with your GameSparks game. If you need instructions on how to create a new GameSparks game through the Portal check out the tutorial [here](./README.md).  In the GameSparks folder, that has just appeared in your project, navigate to the *Test UI* folder, and open the *GameSparksTestUI* scene.  Go ahead and play this scene and see what happens.  You will most likely see something like the scene to the right.  You can see a dialogue box on the right and some buttons indicating different requests on the left.  You can see that you get an error here *GS: ERROR: UNKNOWN SERVICE*.
 
 ### Understanding Errors - Unknown Service Error
 

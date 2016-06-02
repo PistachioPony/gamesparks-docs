@@ -43,9 +43,9 @@ Press the icon to create a new Leaderboard.
     * Calculate Daily \- the Leaderboard data is updated every day.
     * Calculate Weekly \- the Leaderboard data is updated every week.
     * Calculate Monthly \- the Leaderboard data is updated every month.
-  * *High Score Notifications* \- A flag to indicate whether a [NewHighScoreMessage](/?p=1591) should be sent to the user when they submit a new high score.
-  * *Social Notifications* \- A flag to indicate whether a [SocialRankChangedMessage](/?p=1535) should be sent to friends when their scores are beaten.
-  * *Top N Notifications* \- Whether a [GlobalRankChangedMessage](/?p=2325) should be sent to players when their scores are beaten (if they are within the Top N Threshold).
+  * *High Score Notifications* \- A flag to indicate whether a NewHighScoreMessage should be sent to the user when they submit a new high score.
+  * *Social Notifications* \- A flag to indicate whether a SocialRankChangedMessage should be sent to friends when their scores are beaten.
+  * *Top N Notifications* \- Whether a GlobalRankChangedMessage should be sent to players when their scores are beaten (if they are within the Top N Threshold).
   * *Top N Threshold* \- Which global positions in the Leaderboard should be notified when they are beaten.
 
 ### Create Leaderboard fields
@@ -65,4 +65,4 @@ Each Leaderboard configuration has a list of fields. Each field refers to an Ev
     * SUM - Sum of the entries
     * COUNT - Number of entries
     * RANGE - Difference between MIN and MAX
-    * PARTITION - Partitions the Leaderboard on this Entry, more on that [here](/howtos/leaderboards-howtos/how-to-partition-leaderboards).
+    * PARTITION - Partitions the Leaderboard on this Entry, more on that [here](/Tutorials/Social Features/Leaderboard Partitions.md).

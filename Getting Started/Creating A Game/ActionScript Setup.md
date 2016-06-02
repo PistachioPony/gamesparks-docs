@@ -6,7 +6,7 @@ nav_sort: 3
 
 ## Introduction
 
-The previous tutorial [Creating a Game](../Creating A Game.html), took you through the beginning steps within the GameSparks platform. Now you can move forward and link your GameSparks game with your developing ActionScript project. This tutorial will show you how to set up your ActionScript project and establish a connection between the GS module and the Portal. *Setting up Your ActionScript Project*
+The previous tutorial [Creating a Game](./README.md), took you through the beginning steps within the GameSparks platform. Now you can move forward and link your GameSparks game with your developing ActionScript project. This tutorial will show you how to set up your ActionScript project and establish a connection between the GS module and the Portal. *Setting up Your ActionScript Project*
 
   * Create an ActionScript project.
   * Create a new folder for your project and name it 'lib'.

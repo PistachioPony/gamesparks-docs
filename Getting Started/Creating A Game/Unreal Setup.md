@@ -53,7 +53,7 @@ Now you will need to drag & drop the component into the Event Graph pane in Unre
 
 ![l](img/UR/7.png)
 
-For this tutorial we will be using the pre-built "*Begin Play*" Event to connect to the GameSparks Service. Because a reference to the GameSparks object is available in the Event Graph, you can "Drag Off" two functions from it, one should be "*Disconnect*" and the other one should be "*Connect*". Link everything together with "*Begin Play*" Event which can be seen below. Note: The "Connect" function will require your GameSparks *API* *Key* and *Secret* to work. If you've forgotten these, refer to the Game Setup guide which can be found [here](../Creating A Game.html).
+For this tutorial we will be using the pre-built "*Begin Play*" Event to connect to the GameSparks Service. Because a reference to the GameSparks object is available in the Event Graph, you can "Drag Off" two functions from it, one should be "*Disconnect*" and the other one should be "*Connect*". Link everything together with "*Begin Play*" Event which can be seen below. Note: The "Connect" function will require your GameSparks *API* *Key* and *Secret* to work. If you've forgotten these, refer to the Game Setup guide which can be found [here](./README.md).
 
 ![l](img/UR/8.png)
 

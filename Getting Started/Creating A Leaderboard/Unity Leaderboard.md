@@ -12,25 +12,25 @@ The Leaderboards functionality on the GameSparks platform is not limited to Lead
 
 ## Creating the Score Event
 
-The first thing you need to do is create an Event that will push the player’s score to the Leaderboard. If you need a reminder on how to create Events, check out the previous tutorial [here](../../Tutorials\Cloud Code, and the Test Harness\Cloud Code.html). For this tutorial, your new Event needs one attribute, which will be the score, and you can call the Event something like *Submit Score*. You can see the options for creating an Event are as follows:
+The first thing you need to do is create an Event that will push the player’s score to the Leaderboard. If you need a reminder on how to create Events, check out the previous tutorial [here](/Getting Started/Using Cloud Code/README.md). For this tutorial, your new Event needs one attribute, which will be the score, and you can call the Event something like *Submit Score*. You can see the options for creating an Event are as follows:
 
 *   *Short Code* – This field is the reference by which you will call the Event, these are always unique.
-*   *Name* – This field is used when representing the Event in Test Harness as well as in [Cloud Code](../../Tutorials\Cloud Code, and the Test Harness\Cloud Code.html).
+*   *Name* – This field is used when representing the Event in Test Harness as well as in Cloud Code.
 *   *Description* – This field is used to display what the Event is used for, this is primarily for your benefit in the Events Configurator.
 *   *Attribute Name* - This field is the name of the attribute you want to pass into the Event. In your case this will be ‘Score’.
 *   *Attribute Short* *Code* – This is the reference you'll be using to pass in an attribute into the Event from Unity. In your case this will be ‘SCORE’.
 *   *Data Type* – The type of data being passed in. E.g. String, Number, JSON.
-*   *Default Value* – This would be the default value that would be used for this Event attribute if it’s not passed into the [*LogEventRequest*](https://docs.gamesparks.net/documentation/request-api/player-request-api/logeventrequest), i.e. a score of zero would be default.
+*   *Default Value* – This would be the default value that would be used for this Event attribute if it’s not passed into the LogEventRequest , i.e. a score of zero would be default.
 *   *Default Calculation* – This determines how values are tracked in the Running Totals. In your case you want the score to record the maximum, which means the leaderboard will only record the player’s highest score. If they submit a lower score to the board, it will not be recorded.
 
-You can see more details about Events [here](..\..\Tutorials\Cloud Code, and the Test Harness\Events.html).
+You can see more details about Events [here](/Documentation/Configurator/Events.md).
 
 ![l](img/UT/1.png)
 
 
 ## Creating the Leaderboard
 
-Next you'll need to create your Leaderboard. You can do this by going to the *Configurator* panel in the GameSparks Portal and selecting the *Leaderboards* tab. Add a new Leaderboard by clicking on the *[+]* button. Most of the details you see here can be left as default but you can get more information about these attributes [here](..\..\Tutorials\Social Features\Leaderboards.html). The important variables for us are the *Short Code*, *Name* and *Description*. If this is the first event you have created in your own game you will see that the *Submit Score* Event already pops into that field. This is because it is the only applicable Event you have in your game at the moment.
+Next you'll need to create your Leaderboard. You can do this by going to the *Configurator* panel in the GameSparks Portal and selecting the *Leaderboards* tab. Add a new Leaderboard by clicking on the *[+]* button. Most of the details you see here can be left as default but you can get more information about these attributes [here](/Documentation/Configurator/Leaderboards.md). The important variables for us are the *Short Code*, *Name* and *Description*. If this is the first event you have created in your own game you will see that the *Submit Score* Event already pops into that field. This is because it is the only applicable Event you have in your game at the moment.
 
 ![l](img/UT/2.png)
 
@@ -51,7 +51,7 @@ You can also check your Leaderboard data entries from the test harness using th
 ### Getting the Leaderboard Data in Unity
 
 
-You have already seen how to send a logEventRequest, in Unity, in the previous tutorial on Cloud Code. You can check out [here](../Using Cloud Code\Unity Cloud Code.html). The code is as follows:
+You have already seen how to send a logEventRequest, in Unity, in the previous tutorial on Cloud Code. You can check out [here](/Getting Started/Using Cloud Code/Unreal Cloud Code.md). The code is as follows:
 
 ```
 new GameSparks.Api.Requests.LogEventRequest().SetEventKey("SUBMIT_SCORE").SetEventAttribute("SCORE", "1234").Send((response) => {

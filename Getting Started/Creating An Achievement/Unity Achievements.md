@@ -6,13 +6,13 @@ nav_sort: 1
 
 ## Introduction
 
-In this tutorial you will you will be introduced to Achievements using the GameSparks platform. This tutorial assumes that you are already familiar with creating Events and setting up message-listeners in Unity. You can check out tutorials on these topics [here](../Creating A Leaderboard\Unity Leaderboard.html). It also assumes that you followed the [previous](..\Creating An Achievement.html) tutorial on creating an Achievement and the Event that will be used to reward the Achievement. You don’t need anything extra to follow this tutorial, but if you’d like to see the project you can download it here.
+In this tutorial you will you will be introduced to Achievements using the GameSparks platform. This tutorial assumes that you are already familiar with creating Events and setting up message-listeners in Unity. You can check out tutorials on these topics [here](/Getting Started/Creating A Leaderboard/README.md). It also assumes that you followed the [previous](/Getting Started/Creating An Achievement/README.md) tutorial on creating an Achievement and the Event that will be used to reward the Achievement. You don’t need anything extra to follow this tutorial, but if you’d like to see the project you can download it here.
 
 [wpdm_file id=26 title="true" ]
 
 ## Awarding Achievements
 
-Once you have your Achievement setup, you have to call a *LogEventRequest* for the Event you created previously. You can check out how to send these kinds of requests in a previous tutorial [here](..\Unity Cloud Code.html). Once you have called the *LogEventRequest* awarding your player the Achievement, you should see the Achievement Earned Message popup in the console. The next step is to hook up the *AchievementEarnedMessage* listener so you can have some custom code execute when your player is awarded an Achievement.
+Once you have your Achievement setup, you have to call a *LogEventRequest* for the Event you created previously. You can check out how to send these kinds of requests in a previous tutorial [here](/Getting Started/Using Cloud Code/README.md). Once you have called the *LogEventRequest* awarding your player the Achievement, you should see the Achievement Earned Message popup in the console. The next step is to hook up the *AchievementEarnedMessage* listener so you can have some custom code execute when your player is awarded an Achievement.
 
 ```
     void Awake() {

@@ -82,9 +82,6 @@ new GameSparks.Api.Requests.AuthenticationRequest().SetUserName("Test User 1").S
 });
 ```    
 
-You can see more information about the authentication request [here](/documentation/request-api/authentication-request-api/authenticationrequest).
-
-
 ### Device Authentication
 
 You can also authenticate your player from the device they are currently using. To do so, you can use the *DeviceAuthenticationRequest*. By using this authentication method you can bypass the user registration, and just call this request. It will register the device and authenticate it at the same time.

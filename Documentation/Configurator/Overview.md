@@ -40,7 +40,7 @@ The icons in the Snapshot panels give you the following capabilities:
   * __ \- Delete this Snapshot.
   * __ \- Publish this Snapshot to the live servers.
   * __ \- Revert the portal to the version contained in the Snapshot.
-Click [here](..\Versioning and the Publishing Process\20150424-snapshots.html) for more information about Snapshots, Versioning and Publishing.
+Click [here](/Documentation/Key Concepts/Snapshots.md) for more information about Snapshots, Versioning and Publishing.
 
 ### Access Secrets
 
@@ -53,4 +53,4 @@ A number of secrets exist for different types of connections:
 
 ### Collaborators
 
-This area allows the creation of game collaborators, these will be people that can log in with their user and view/edit the game, depending on the security settings set for them. An in-depth tutorial can be found [here](..\Analytics, Segmentation and Game Management\Capabilities.html).
+This area allows the creation of game collaborators, these will be people that can log in with their user and view/edit the game, depending on the security settings set for them. An in-depth tutorial can be found [here](/Documentation/Configurator/Capabilities.md).

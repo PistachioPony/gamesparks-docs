@@ -6,7 +6,7 @@ nav_sort: 3
 
 ## Introduction
 
-The previous tutorial showed us how to [Authenticate players](..\Using Authentication.html) with the platform using basic username/password Registration and Authentication. These next steps will show you how to set up ActionScript Authentication with GameSparks, teaching you how to set up a login and registration form with logic to go with them.
+The previous tutorial showed us how to [Authenticate players](/Getting Started/Using Authentication/README.md) with the platform using basic username/password Registration and Authentication. These next steps will show you how to set up ActionScript Authentication with GameSparks, teaching you how to set up a login and registration form with logic to go with them.
 
 *Setting up the Authentication and Registration*
 

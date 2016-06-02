@@ -6,7 +6,7 @@ nav_sort: 2
 
 ## Introduction
 
-Previously, we learnt how to use [Cloud Code](..\..\Tutorials\Cloud Code, and the Test Harness\Cloud Code.html) in the GameSparks Portal. Now we are going to show you how to use the GameSparks nodes that log Events that have been set up in your Portal. In this tutorial the Player logs the* 'Get_Pos'* event which retrieves the location that was last saved on the player's database. It's useful to use the Test harness and send a default value for the player's initial location, this can be a pawn's initial spawn location in your game. The second part of the tutorial will feature saving the player's pawn location using a key input that logs the *'Set_Pos'* event.
+Previously, we learnt how to use Cloud Code in the GameSparks Portal. Now we are going to show you how to use the GameSparks nodes that log Events that have been set up in your Portal. In this tutorial the Player logs the* 'Get_Pos'* event which retrieves the location that was last saved on the player's database. It's useful to use the Test harness and send a default value for the player's initial location, this can be a pawn's initial spawn location in your game. The second part of the tutorial will feature saving the player's pawn location using a key input that logs the *'Set_Pos'* event.
 
 *Default location*
 

@@ -6,7 +6,7 @@ nav_sort: 3
 
 ## Introduction
 
-Once you have created [Virtual Goods](..\Creating A Virtual Good.html) on the Portal, you can now incorporate them in your game. This tutorial will show you how to buy and consume goods using a shop interface.
+Once you have created [Virtual Goods](./README.md) on the Portal, you can now incorporate them in your game. This tutorial will show you how to buy and consume goods using a shop interface.
 
 *Creating a 'Grant Currency' Event*
 

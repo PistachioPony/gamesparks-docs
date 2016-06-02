@@ -4,7 +4,7 @@ nav_sort: 3
 
 # Events
 
-Events give you the ability to define custom data structures that you want to pass into the platform via the [LogEventRequest](/?p=2254) and [LogChallengeEventRequest](/?p=2234) API calls.
+Events give you the ability to define custom data structures that you want to pass into the platform via the LogEventRequest and LogChallengeEventRequest API calls.
 
 ## Managing Event configurations
 
@@ -48,4 +48,4 @@ Add an attribute by clicking on the plus icon *+*.  Each attribute has a number
     * *Used In Script* \- the event will not be used in a running total.
     * *Grouped* \- the running total will use this attribute to group other attributes. This will lead to a running total with an entry per attribute/user combination.
 
-Note:  [Running Totals](..\Social Features\Running Totals.html) is a concept explained further in the next post.
+Note:  [Running Totals](./Running Totals.html) is a concept explained further in the next post.

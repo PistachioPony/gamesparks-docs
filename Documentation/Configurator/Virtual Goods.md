@@ -28,6 +28,6 @@ Press the __ icon to create a new Virtual Good.
   * *Description* \- The Description is a mandatory field which should be used to describe the Virtual Good.
   * *Currencies* \- The amount of each of the currency needed to buy the Virtual Good.
   * *Product IDs* \- The ID of the item that has been created in the appropriate store.
-  * *Max Quantity* \- The maximum quantity of this good that the player can own at any one time. Only enforced on [BuyVirtualGoodsRequests](/documentation/request-api/store-request-api/buyvirtualgoodsrequest) using virtual currency. Purchases from external stores will still be awarded even if they result in this maximum being exceeded.
+  * *Max Quantity* \- The maximum quantity of this good that the player can own at any one time. Only enforced on BuyVirtualGoodsRequests using virtual currency. Purchases from external stores will still be awarded even if they result in this maximum being exceeded.
   * *Tags* \- Tags associated with the Virtual Good.
   * *Type* \- Is this a Virtual Good or a Currency Pack.
