@@ -23,7 +23,7 @@ First you will need to navigate to the Virtual Goods page in your Configurator.
 
 ## Test Harness
 
-Now everything is set up, you will need to navigate to the Test Harness and authenticate with one of the players you have [registered](Using Authentication.html) previously. The [previous](/Getting Started/Creating An Achievement/README.md) tutorial showed you how to award your player with some currency via an Achievement. Now you are ready to purchase your first Virtual Good. Just to be sure, let's validate that the player has enough of Currency *1* to purchase the Virtual Good using the [AccountDetailsRequest](/API Documentation/Request API/Player/AccountDetailsRequest.md).
+Now everything is set up, you will need to navigate to the Test Harness and authenticate with one of the players you have [registered](/Getting Started/Using Authentication/README.md) previously. The [previous](/Getting Started/Creating An Achievement/README.md) tutorial showed you how to award your player with some currency via an Achievement. Now you are ready to purchase your first Virtual Good. Just to be sure, let's validate that the player has enough of Currency *1* to purchase the Virtual Good using the [AccountDetailsRequest](/API Documentation/Request API/Player/AccountDetailsRequest.md).
 
 ![](img/Create/2.png)
 
@@ -43,5 +43,5 @@ Although receiving a successful BuyVirtualGoodsResponse is a good indication ev
 
 Continue the tutorial for your chosen SDK:
 
-|[![](../img/URLogo.png)](./Unreal Virtual Goods.html)   |[![](../img/UTLogo.png)](./Unity Virtual Goods.html)   |[![](../img/ASLogo.png)](./ActionScript Virtual Goods.html)   |
+|[![](../img/URLogo.png)](/Getting Started/Creating A Virtual Good/Unreal Virtual Goods.md)   |[![](../img/UTLogo.png)](/Getting Started/Creating A Virtual Good/Unity Virtual Goods.md)   |[![](../img/ASLogo.png)](/Getting Started/Creating A Virtual Good/ActionScript Virtual Goods.md)   |
 |---|---|---|

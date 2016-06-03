@@ -13,7 +13,7 @@ This object is immutable, to create a new one you should use RTSession.getRTData
 
 ## getData
 _signature_ getData(number index)</p>
-_returns_ [RTData](RTData.md)</p>
+_returns_ [RTData](/API Documentation/Realtime API/RTData.md)</p>
 Gets an RTData object using the given index key, if the key contains a different type, or is empty a null will be returned
 
 ## getDouble
@@ -40,3 +40,4 @@ Gets a number using the given index key, if the key contains a different type, o
 _signature_ getString(number index)</p>
 _returns_ string</p>
 Gets a string using the given index key, if the key contains a different type, or is empty a null will be returned
+

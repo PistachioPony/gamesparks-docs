@@ -72,5 +72,5 @@ Finally you can Retrieve the data stored in the players Script Data by running t
 
 ## SDK Instructions
 
-|[![](../img/URLogo.png)](Unreal Cloud Code.md)   |[![](../img/UTLogo.png)](Unity Cloud Code.md)   |[![](../img/ASLogo.png)](ActionScript Cloud Code.md)   |
+|[![](../img/URLogo.png)](/Getting Started/Using Cloud Code/Unreal Cloud Code.md)   |[![](../img/UTLogo.png)](/Getting Started/Using Cloud Code/Unity Cloud Code.md)   |[![](../img/ASLogo.png)](/Getting Started/Using Cloud Code/ActionScript Cloud Code.md)   |
 |---|---|---|

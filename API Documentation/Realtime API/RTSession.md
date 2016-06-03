@@ -19,17 +19,17 @@ Clears a timeout using the id returned from a previous setTimeout call
 
 ## getLogger
 _signature_ getLogger()</p>
-_returns_ [RTLogger](RTLogger.md)</p>
+_returns_ [RTLogger](/API Documentation/Realtime API/RTLogger.md)</p>
 Gets the logger object. Log records are written to the GameSparks collection " realtime.log"
 
 ## newData
 _signature_ newData()</p>
-_returns_ [RTDataBuilder](RTDataBuilder.md)</p>
+_returns_ [RTDataBuilder](/API Documentation/Realtime API/RTDataBuilder.md)</p>
 Creates a new builder object to construct RTData objects
 
 ## newPacket
 _signature_ newPacket()</p>
-_returns_ [RTPacketBuilder](RTPacketBuilder.md)</p>
+_returns_ [RTPacketBuilder](/API Documentation/Realtime API/RTPacketBuilder.md)</p>
 Creates a new builder object to construct RTPacket objects
 
 ## newRequest
@@ -54,12 +54,12 @@ Register a callback to be invoked when a player disconnects from the session
 
 ## getPlayer
 _signature_ getPlayer(number peerId)</p>
-_returns_ [RTPlayer](RTPlayer.md)</p>
+_returns_ [RTPlayer](/API Documentation/Realtime API/RTPlayer.md)</p>
 Gets a player by peerId
 
 ## getPlayers
 _signature_ getPlayers()</p>
-_returns_ [RTPlayer](RTPlayer.md)[]</p>
+_returns_ [RTPlayer](/API Documentation/Realtime API/RTPlayer.md)[]</p>
 Gets all connected players
 
 ## getSessionId

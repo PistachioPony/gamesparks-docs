@@ -29,5 +29,5 @@ When creating a game, the game goes into a *PREVIEW* stage.  There are two stag
 
 ## SDK Instructions
 
-|[![](../img/URLogo.png)](Unreal Setup.md)   |[![](../img/UTLogo.png)](Unity Setup.html)   |[![](../img/ASLogo.png)](ActionScript Setup.html)   |
+|[![](../img/URLogo.png)](/Getting Started/Creating A Game/Unreal Setup.md)   |[![](../img/UTLogo.png)](/Getting Started/Creating A Game/Unity Setup.md)   |[![](../img/ASLogo.png)](/Getting Started/Creating A Game/ActionScript Setup.md)   |
 |---|---|---|

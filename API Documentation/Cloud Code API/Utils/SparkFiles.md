@@ -19,7 +19,7 @@ uploadId - the id of the uploaded file
 
 ## uploadedXml
 _signature_ uploadedXml(string uploadId)</p>
-_returns_ [SparkXmlReader](../Utils/SparkXmlReader.md)</p>
+_returns_ [SparkXmlReader](/API Documentation/Cloud Code API/Utils/SparkXmlReader.md)</p>
 <b>validity</b> All Scripts
 Provides access to an uploaded file via a SparkXmlReader interface
 <b>params</b>
@@ -41,7 +41,7 @@ A JSON object
 
 ## downloadableXml
 _signature_ downloadableXml(string shortCode)</p>
-_returns_ [SparkXmlReader](../Utils/SparkXmlReader.md)</p>
+_returns_ [SparkXmlReader](/API Documentation/Cloud Code API/Utils/SparkXmlReader.md)</p>
 <b>validity</b> All Scripts
 Provides access to a downloadable file via a SparkXmlReader interface
 <b>params</b>

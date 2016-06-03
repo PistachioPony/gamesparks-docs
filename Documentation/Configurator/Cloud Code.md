@@ -17,15 +17,15 @@ To access the JavaScript editor select the name of the script from one of the ei
 
 ### Events
 
-This list contains an entry for each Event you have created within the GameSparks platform. When a [LogEventRequest](../../API Documentation/Request API/Player/LogEventRequest.md) is received, the corresponding script is executed allowing you to run custom code on the platform. You can access the current player making the request using  Spark.getPlayer(). The Create New Event button allows you to quickly create a new Event from the Cloud Code section of the Configurator.
+This list contains an entry for each Event you have created within the GameSparks platform. When a [LogEventRequest](/API Documentation/Request API/Player/LogEventRequest.md) is received, the corresponding script is executed allowing you to run custom code on the platform. You can access the current player making the request using  Spark.getPlayer(). The Create New Event button allows you to quickly create a new Event from the Cloud Code section of the Configurator.
 
 ![](img/CloudCode/3.jpg)
 
-Clicking the *+* button will open the same Form as in the [Events](./Events.html) page to allow Event creation .
+Clicking the *+* button will open the same Form as in the [Events](/Documentation/Configurator/Events.md) page to allow Event creation .
 
 ### Challenge Events
 
-This list contains an entry for each Event you have created within the GameSparks platform. When a [LogChallengeEventRequest](../../API Documentation/Request API/Multiplayer/LogChallengeEventRequest.md) is received, the corresponding script is executed allowing you to run custom code on the platform. LogChallengeEventRequest contains an attribute "challengeId", it's useful to get this value for keying your own data, to access the value you can call Spark.data.challengeId. To get the challenge object stored within GameSparks the following call should be executed:
+This list contains an entry for each Event you have created within the GameSparks platform. When a [LogChallengeEventRequest](/API Documentation/Request API/Multiplayer/LogChallengeEventRequest.md) is received, the corresponding script is executed allowing you to run custom code on the platform. LogChallengeEventRequest contains an attribute "challengeId", it's useful to get this value for keying your own data, to access the value you can call Spark.data.challengeId. To get the challenge object stored within GameSparks the following call should be executed:
 
 ```    
     var myChallenge = Spark.getChallenge(Spark.data.challengeId);

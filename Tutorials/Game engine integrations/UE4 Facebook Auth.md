@@ -11,11 +11,11 @@ GameSparks allows you to use social authentication to keep track of your players
 ## Setting up your project
 
 
-### *Unreal Setup*
+### Unreal Setup
 
  
 
-#### *DefaultEngine.ini*
+#### DefaultEngine.ini
 
 First you need to configure your game for the  Facebook online subsystem. For this you need to have a Facebook AppID which you can get from the Facebook developer page.
 
@@ -30,7 +30,7 @@ First you need to configure your game for the  Facebook online subsystem. For t
 
  
 
-#### *YourProject.Build.cs*
+#### YourProject.Build.cs
 
 In your project's build file, you need to include extra modules which will allow you to activate the interface to online subsystems and allow you to use the API to integrate Facebook into your project.
 
@@ -40,35 +40,35 @@ In your project's build file, you need to include extra modules which will allow
 
     public class YourProjectName: ModuleRules
     {
-    public YourProjectName(TargetInfo Target)
-    {
-    PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
+        public YourProjectName(TargetInfo Target)
+        {
+            PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
 
-    PublicDependencyModuleNames.AddRange(new string[] { "OnlineSubsystem", "OnlineSubsystemUtils", "Networking", "Sockets" });
+            PublicDependencyModuleNames.AddRange(new string[] { "OnlineSubsystem", "OnlineSubsystemUtils", "Networking", "Sockets" });
 
-    PrivateDependencyModuleNames.AddRange(new string[] { "OnlineSubsystem", "Networking", "Sockets" });
+            PrivateDependencyModuleNames.AddRange(new string[] { "OnlineSubsystem", "Networking", "Sockets" });
 
-    PrivateDependencyModuleNames.Add("OnlineSubsystem");
+            PrivateDependencyModuleNames.Add("OnlineSubsystem");
 
-    //Add IOS if you're using it
-    if ((Target.Platform == UnrealTargetPlatform.Win32) || (Target.Platform == UnrealTargetPlatform.Win64 ))
-    {
-    //Facebook API
-    PublicDependencyModuleNames.AddRange(new string[] { "Facebook" });
-    //Facebook Subsystem
-    PrivateDependencyModuleNames.Add("OnlineSubsystemFacebook");
+            //Add IOS if you're using it
+            if ((Target.Platform == UnrealTargetPlatform.Win32) || (Target.Platform == UnrealTargetPlatform.Win64 ))
+            {
+                //Facebook API
+                PublicDependencyModuleNames.AddRange(new string[] { "Facebook" });
+                //Facebook Subsystem
+                PrivateDependencyModuleNames.Add("OnlineSubsystemFacebook");
 
-    //Include
-    PublicIncludePaths.Add("Runtime/Online/OnlineSubsystemFacebook/Public");
-    PublicIncludePaths.Add("Runtime/Online/OnlineSubsystemFacebook/Private/Windows");
-    }
-    }
+                //Include
+                PublicIncludePaths.Add("Runtime/Online/OnlineSubsystemFacebook/Public");
+                PublicIncludePaths.Add("Runtime/Online/OnlineSubsystemFacebook/Private/Windows");
+            }
+        }
     }
 ```
 
  
 
-#### *Refresh your visual studio project through the editor*
+#### Refresh your visual studio project through the editor
 
 After you include the modules into your project refresh your C++ files through the Editor so the changes are recognised in your project. Failing to do this step will result in your "Online.h" and "OnlineSubsystemFacebook.h" not being recognised.
 
@@ -76,11 +76,11 @@ After you include the modules into your project refresh your C++ files through t
 ![](img/UE4FB/1.jpg)
  
 
-### *Facebook App Settings*
+### Facebook App Settings
 
  
 
-In your Facebook settings advanced tab flip the button to state that your app is a native one if you're developing or debugging on desktop. For 'Valid OAuth redirect URIs' ensure that you add https://www.facebook.com/connect/login_success.htmlThat is all you need, in the images you can see how we setup our App.
+In your Facebook settings advanced tab flip the button to state that your app is a native one if you're developing or debugging on desktop. For 'Valid OAuth redirect URIs' ensure that you add https://www.facebook.com/connect/login_success.html That is all you need, in the images you can see how we setup our App.
 
 ![](img/UE4FB/2.jpg)
 
@@ -233,6 +233,12 @@ We have attached uassets which show an example of this working with a UMG Widget
 
 [![](img/UE4FB/4.jpg)
 
-## DefaultEngine Config file, ProjectBuild file, FBAPIComponent CPP, Header, Gamemode blueprint and Widget blueprint examples
+## TODO
+DefaultEngine Config file,
+ProjectBuild file,
+FBAPIComponent CPP,
+Header,
+Gamemode blueprint and
+Widget blueprint examples
 
 Downloadables

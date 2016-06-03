@@ -15,7 +15,7 @@ e.g.
 
 ## addTo
 _signature_ addTo(string email, string name)</p>
-_returns_ [SendGrid](../Comms/SendGrid.md)</p>
+_returns_ [SendGrid](/API Documentation/Cloud Code API/Comms/SendGrid.md)</p>
 Adds a recipient to this email
 <b>params</b>
 email - The email address of the recipient
@@ -36,7 +36,7 @@ The response from SendGrid
 
 ## setFrom
 _signature_ setFrom(string email, string name)</p>
-_returns_ [SendGrid](../Comms/SendGrid.md)</p>
+_returns_ [SendGrid](/API Documentation/Cloud Code API/Comms/SendGrid.md)</p>
 Sets the from address of this email
 <b>params</b>
 email - The email address of the sender
@@ -48,7 +48,7 @@ This SendGrid object
 
 ## setReplyTo
 _signature_ setReplyTo(string email)</p>
-_returns_ [SendGrid](../Comms/SendGrid.md)</p>
+_returns_ [SendGrid](/API Documentation/Cloud Code API/Comms/SendGrid.md)</p>
 Sets the replyTo address of this email
 <b>params</b>
 email - The email address to replyTo
@@ -59,7 +59,7 @@ This SendGrid object
 
 ## setBcc
 _signature_ setBcc(string bcc)</p>
-_returns_ [SendGrid](../Comms/SendGrid.md)</p>
+_returns_ [SendGrid](/API Documentation/Cloud Code API/Comms/SendGrid.md)</p>
 Sets a bcc address to this email. SendGrid only allows one address in this field
 <b>params</b>
 email - The email address to add as bcc
@@ -70,7 +70,7 @@ This SendGrid object
 
 ## setSubject
 _signature_ setSubject(string subject)</p>
-_returns_ [SendGrid](../Comms/SendGrid.md)</p>
+_returns_ [SendGrid](/API Documentation/Cloud Code API/Comms/SendGrid.md)</p>
 Sets the subject of this email
 <b>params</b>
 subject - The subject of the email
@@ -81,7 +81,7 @@ This SendGrid object
 
 ## setText
 _signature_ setText(string text)</p>
-_returns_ [SendGrid](../Comms/SendGrid.md)</p>
+_returns_ [SendGrid](/API Documentation/Cloud Code API/Comms/SendGrid.md)</p>
 Sets the text body of this email. If html is set this value is ignored.
 <b>params</b>
 text - The body of the email
@@ -92,7 +92,7 @@ This SendGrid object
 
 ## setHtml
 _signature_ setHtml(string html)</p>
-_returns_ [SendGrid](../Comms/SendGrid.md)</p>
+_returns_ [SendGrid](/API Documentation/Cloud Code API/Comms/SendGrid.md)</p>
 Sets the html body of this email.
 <b>params</b>
 html - The html body of the email
@@ -103,7 +103,7 @@ This SendGrid object
 
 ## addUploaded
 _signature_ addUploaded(string uploadId)</p>
-_returns_ [SendGrid](../Comms/SendGrid.md)</p>
+_returns_ [SendGrid](/API Documentation/Cloud Code API/Comms/SendGrid.md)</p>
 Adds an uploaded file to the email as an attachment
 <b>params</b>
 uploadId - The id of the uploaded file
@@ -114,7 +114,7 @@ This SendGrid object
 
 ## addDownloadable
 _signature_ addDownloadable(string shortCode)</p>
-_returns_ [SendGrid](../Comms/SendGrid.md)</p>
+_returns_ [SendGrid](/API Documentation/Cloud Code API/Comms/SendGrid.md)</p>
 Adds an downloadable file to the email as an attachment
 <b>params</b>
 shortCode - The shortCode of the downloadable
@@ -125,7 +125,7 @@ This SendGrid object
 
 ## addHeader
 _signature_ addHeader(string key, string value)</p>
-_returns_ [SendGrid](../Comms/SendGrid.md)</p>
+_returns_ [SendGrid](/API Documentation/Cloud Code API/Comms/SendGrid.md)</p>
 Adds an custom SMTP header to this email
 <b>params</b>
 name - The header name to set

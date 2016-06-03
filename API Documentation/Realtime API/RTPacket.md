@@ -9,12 +9,12 @@ An object representing a packet sent by a client
 
 ## getData
 _signature_ getData()</p>
-_returns_ [RTData](RTData.md)</p>
+_returns_ [RTData](/API Documentation/Realtime API/RTData.md)</p>
 Gets the RTData sent with the packet (if available)
 
 ## getSender
 _signature_ getSender()</p>
-_returns_ [RTPlayer](RTPlayer.md)</p>
+_returns_ [RTPlayer](/API Documentation/Realtime API/RTPlayer.md)</p>
 Gets the player who sent the packet
 
 ## getTargetPlayers

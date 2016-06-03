@@ -30,6 +30,16 @@ transactionList | [PlayerTransaction[]](#playertransaction) | A list of JSON obj
 
 ## Nested types
 
+### PlayerTransactionItem
+
+A nested object that represents a single item in a transaction.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+amount | number | The amount of this item given to the player in the transaction
+newValue | number | The quantity the player possesses after the transaction completed
+type | string | The type of item
+
 ### PlayerTransaction
 
 A nested object that represents a player transaction.
@@ -54,16 +64,6 @@ Parameter | Type | Description
 --------- | ---- | -----------
 myKey | string | An arbitrary data key
 myValue | JSON | An arbitrary data value.
-
-### PlayerTransactionItem
-
-A nested object that represents a single item in a transaction.
-
-Parameter | Type | Description
---------- | ---- | -----------
-amount | number | The amount of this item given to the player in the transaction
-newValue | number | The quantity the player possesses after the transaction completed
-type | string | The type of item
 
 
 ## Code Samples

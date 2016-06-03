@@ -486,7 +486,7 @@ Show the player on current leaderboards, redisplaying any existing scores.  New 
 
 ## getPushRegistrations
 _signature_ getPushRegistrations()</p>
-_returns_ [SparkPushRegistration](../Spark/SparkPushRegistration.md)[]</p>
+_returns_ [SparkPushRegistration](/API Documentation/Cloud Code API/Spark/SparkPushRegistration.md)[]</p>
 Gets push registrations of the player
 <b>example</b>
 <pre rel="highlighter" code-brush="js" contenteditable="false">Spark.getPlayer().getPushRegistrations();</pre>
@@ -583,6 +583,31 @@ _returns_ boolean</p>
 Checks if this player would be returned by the given mongo query (as a string).
 <b>example</b>
 <pre rel="highlighter" code-brush="js" contenteditable="false">Spark.getPlayer().matchesMongoQueryString("");</pre>
+
+## getExperimentSegments
+_signature_ getExperimentSegments()</p>
+_returns_ [SparkPlayerExperimentSegment](/API Documentation/Cloud Code API/Spark/SparkPlayerExperimentSegment.md)[]</p>
+Returns the current experiment segments of the player.
+<b>example</b>
+<pre rel="highlighter" code-brush="js" contenteditable="false">Spark.getPlayer().getExperimentSegments();</pre>
+
+## removeExperiment
+_signature_ removeExperiment(number experimentId)</p>
+_returns_ boolean</p>
+Removes the player from the given experiment.
+<b>returns</b>
+ true if the player was part of the experiment, false if the player was not part of the experiment
+<b>example</b>
+<pre rel="highlighter" code-brush="js" contenteditable="false">Spark.getPlayer().removeExperiment();</pre>
+
+## setExperimentSegment
+_signature_ setExperimentSegment(number experimentId, string experimentSegmentName)</p>
+_returns_ boolean</p>
+Sets the experiment segment for the player.
+<b>returns</b>
+ true if the experiment segment was added to the player, false if the player already had the experiment segment
+<b>example</b>
+<pre rel="highlighter" code-brush="js" contenteditable="false">Spark.getPlayer().setExperimentSegment(47, "FireSale");</pre>
 
 ## getPrivateData
 _signature_ getPrivateData(string name)</p>

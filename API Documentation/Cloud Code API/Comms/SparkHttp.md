@@ -13,7 +13,7 @@ e.g.
 
 ## setBasicAuth
 _signature_ setBasicAuth(string username, string password)</p>
-_returns_ [SparkHttp](../Comms/SparkHttp.md)</p>
+_returns_ [SparkHttp](/API Documentation/Cloud Code API/Comms/SparkHttp.md)</p>
 Sets credentials to be used for Basic Auth
 <b>params</b>
 userName - the username to use
@@ -23,7 +23,7 @@ password - the password to use
 
 ## setHeaders
 _signature_ setHeaders(JSON headers)</p>
-_returns_ [SparkHttp](../Comms/SparkHttp.md)</p>
+_returns_ [SparkHttp](/API Documentation/Cloud Code API/Comms/SparkHttp.md)</p>
 Add custom header to the request
 <b>params</b>
 headers - A JSON object
@@ -32,14 +32,14 @@ headers - A JSON object
 
 ## get
 _signature_ get()</p>
-_returns_ [SparkHttpResponse](../Comms/SparkHttpResponse.md)</p>
+_returns_ [SparkHttpResponse](/API Documentation/Cloud Code API/Comms/SparkHttpResponse.md)</p>
 Perform a HTTP GET request
 <b>example</b>
 <pre rel="highlighter" code-brush="js" contenteditable="false">var response = Spark.getHttp(url).get();</pre>
 
 ## postForm
 _signature_ postForm(JSON form)</p>
-_returns_ [SparkHttpResponse](../Comms/SparkHttpResponse.md)</p>
+_returns_ [SparkHttpResponse](/API Documentation/Cloud Code API/Comms/SparkHttpResponse.md)</p>
 Perform a HTTP POST using a JSON form object
 <b>params</b>
 form - the HTTP form data
@@ -48,7 +48,7 @@ form - the HTTP form data
 
 ## postXml
 _signature_ postXml(XMLObject form)</p>
-_returns_ [SparkHttpResponse](../Comms/SparkHttpResponse.md)</p>
+_returns_ [SparkHttpResponse](/API Documentation/Cloud Code API/Comms/SparkHttpResponse.md)</p>
 Perform a HTTP POST using an XML form object
 <b>params</b>
 form - the HTTP form data
@@ -57,7 +57,7 @@ form - the HTTP form data
 
 ## postJson
 _signature_ postJson(JSON form)</p>
-_returns_ [SparkHttpResponse](../Comms/SparkHttpResponse.md)</p>
+_returns_ [SparkHttpResponse](/API Documentation/Cloud Code API/Comms/SparkHttpResponse.md)</p>
 Perform a HTTP POST using a JSON form object
 <b>params</b>
 form - the HTTP form data
@@ -66,7 +66,7 @@ form - the HTTP form data
 
 ## postString
 _signature_ postString(string data)</p>
-_returns_ [SparkHttpResponse](../Comms/SparkHttpResponse.md)</p>
+_returns_ [SparkHttpResponse](/API Documentation/Cloud Code API/Comms/SparkHttpResponse.md)</p>
 Perform a HTTP POST using a string
 <b>params</b>
 data - the HTTP POST data

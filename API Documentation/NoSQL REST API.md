@@ -4,9 +4,9 @@ src: API Documentation/NoSQL REST API.md
 
 # NoSQL Explorer REST API
 
-The GameSparks platform allows you to manage your NoSQL data via a REST interface, this is useful to allow you to control your game data via your own software. This REST API provides the same features found in the GameSparks Developer Portal [NoSQL Explorer](../Documentation/NoSQL Explorer.md).
+The GameSparks platform allows you to manage your NoSQL data via a REST interface, this is useful to allow you to control your game data via your own software. This REST API provides the same features found in the GameSparks Developer Portal [NoSQL Explorer](/Documentation/NoSQL Explorer.md).
 
-The REST endpoint requires Basic Auth, see [here](./GameSparks REST API.md) for details.
+The REST endpoint requires Basic Auth, see [here](/API Documentation/GameSparks REST API.md) for details.
 
 ## Find data
 

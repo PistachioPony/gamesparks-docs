@@ -32,7 +32,7 @@ Requests such as SendFriendMessageRequest and ChatOnChallengeRequest are explici
 
 2. Event message
 
-Certain events that occur within the platform will trigger a message to be sent to the relevant players. For example, a message will be sent to a player when they post the new high score on a leaderboard, or once a challenge they are participating in has officially started. The content of the message is determined by [message templates](../Configurator/Messages.md) configured within the GameSparks Developer Portal.
+Certain events that occur within the platform will trigger a message to be sent to the relevant players. For example, a message will be sent to a player when they post the new high score on a leaderboard, or once a challenge they are participating in has officially started. The content of the message is determined by [message templates](/Documentation/Configurator/Configurator/Messages.md) configured within the GameSparks Developer Portal.
 
 3. Script message
 

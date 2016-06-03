@@ -22,12 +22,18 @@ When using device authentication, there is no display name stored against the pl
 
 If you don't want players to create a userName / password combination you can delegate authentication to one of the social providers. Currently these are:
 
-* [Amazon](/?p=5778)
-* [Facebook](/?p=2222)
-* [Google Plus](/?p=5555)
-* [Steam](/?p=5663)
-* [Twitter](/?p=2224)
-* [XBOX Live](/?p=6024)
+* [Amazon](/API Documentation/Request API/Authentication/AmazonConnectRequest.md)
+* [Facebook](/API Documentation/Request API/Authentication/FacebookConnectRequest.md)
+* [Google Plus](/API Documentation/Request API/Authentication/GooglePlusConnectRequest.md)
+* [Steam](/API Documentation/Request API/Authentication/SteamConnectRequest.md)
+* [Twitter](/API Documentation/Request API/Authentication/TwitterConnectRequest.md)
+* [XBOX Live](/API Documentation/Request API/Authentication/XBOXLiveConnectRequest.md)
+* [Twitch](/API Documentation/Request API/Authentication/TwitchConnectRequest.md)
+* [Kongregate](/API Documentation/Request API/Authentication/KongregateConnectRequest.md)
+* [PSN](/API Documentation/Request API/Authentication/PSNConnectRequest.md)
+* [Viber](/API Documentation/Request API/Authentication/ViberConnectRequest.md)
+* [WeChat](/API Documentation/Request API/Authentication/WeChatConnectRequest.md)
+* [QQ](/API Documentation/Request API/Authentication/QQConnectRequest.md)
 
 These methods create a player on the platform, and also get their list of friends from the provider. This list of friends can then be used for linking players with their friends who also play your game. There are some rules that come into play when the player is already authenticated, or the social profile is already in use:
 

@@ -71,7 +71,7 @@ Returns the property set associated with the achievement
 
 ## getVirtualGoodAward
 _signature_ getVirtualGoodAward()</p>
-_returns_ [SparkVirtualGood](../Misc/SparkVirtualGood.md)</p>
+_returns_ [SparkVirtualGood](/API Documentation/Cloud Code API/Misc/SparkVirtualGood.md)</p>
 <b>validity</b> All Scripts
 Returns the virtual good award of the achievement
 

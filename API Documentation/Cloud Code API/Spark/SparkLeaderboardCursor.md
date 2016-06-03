@@ -20,7 +20,7 @@ Returns true if there are more entries available.
 
 ## next
 _signature_ next()</p>
-_returns_ [SparkLeaderboardEntry](../Spark/SparkLeaderboardEntry.md)</p>
+_returns_ [SparkLeaderboardEntry](/API Documentation/Cloud Code API/Spark/SparkLeaderboardEntry.md)</p>
 Returns the entry the cursor is at and moves the cursor ahead by one.
 <b>example</b>
 <pre rel="highlighter" code-brush="js" contenteditable="false">var entry = cursor.next();</pre>

@@ -43,7 +43,7 @@ Can be useful when block or code should only run for a particular challenge type
 <pre rel="highlighter" code-brush="js" contenteditable="false">var shortCode = Spark.getChallenge(mychallengeid).getShortCode();</pre>
 
 ## winChallenge
-_signature_ winChallenge([SparkPlayer](../Spark/SparkPlayer.md) winner)</p>
+_signature_ winChallenge([SparkPlayer](/API Documentation/Cloud Code API/Spark/SparkPlayer.md) winner)</p>
 _returns_ void</p>
 Complete the challenge and uses the provided SparkPlayer as the winner.
 If the supplied SparkPlayer is not part of the challenge this call will be ignored (silently)

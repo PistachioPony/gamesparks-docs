@@ -49,14 +49,14 @@ The later can be the userId of a player or the id of a team.
 
 ## getEntries
 _signature_ getEntries()</p>
-_returns_ [SparkLeaderboardCursor](../Spark/SparkLeaderboardCursor.md)</p>
+_returns_ [SparkLeaderboardCursor](/API Documentation/Cloud Code API/Spark/SparkLeaderboardCursor.md)</p>
 Returns a cursor over all the entries in this leaderboard.
 <b>example</b>
 <pre rel="highlighter" code-brush="js" contenteditable="false">var cursor = Spark.getLeaderboards().getLeaderboard(shortCode).getEntries();</pre>
 
 
 _signature_ getEntries(number count, number offset)</p>
-_returns_ [SparkLeaderboardCursor](../Spark/SparkLeaderboardCursor.md)</p>
+_returns_ [SparkLeaderboardCursor](/API Documentation/Cloud Code API/Spark/SparkLeaderboardCursor.md)</p>
 Returns a cursor over <b>count</b> entries in this leaderboard, starting at <b>offset</b>.
 <b>params</b>
 count - the number of entries over which to obtain a cursor.
@@ -87,7 +87,7 @@ Deletes this leaderboard partition, removing it from the parent leaderboard and 
 
 ## getPartitions
 _signature_ getPartitions()</p>
-_returns_ [SparkLeaderboardPartition](../Spark/SparkLeaderboardPartition.md)[]</p>
+_returns_ [SparkLeaderboardPartition](/API Documentation/Cloud Code API/Spark/SparkLeaderboardPartition.md)[]</p>
 Returns an array containing the partitions of this leaderboard if it is partitioned, otherwise an empty array is returned.
 <b>example</b>
 <pre rel="highlighter" code-brush="js" contenteditable="false">var partitions = Spark.getLeaderboards().getLeaderboard(shortCode).getPartitions();</pre>
@@ -124,14 +124,14 @@ If the customIdFilter is null, the method returns all the entries in the leaderb
 
 ## getEntriesFromPlayer
 _signature_ getEntriesFromPlayer(string playerId, number count)</p>
-_returns_ [SparkLeaderboardCursor](../Spark/SparkLeaderboardCursor.md)</p>
+_returns_ [SparkLeaderboardCursor](/API Documentation/Cloud Code API/Spark/SparkLeaderboardCursor.md)</p>
 Returns a cursor over the leaderboard entries starting from the highest score of the supplied playerId
 <b>example</b>
 <pre rel="highlighter" code-brush="js" contenteditable="false">leaderboard.getEntriesFromPlayer(myPlayerId, 50);</pre>
 
 ## getEntriesFromPlayerForCustomId
 _signature_ getEntriesFromPlayerForCustomId(string playerId, number count, JSON customIdFilter)</p>
-_returns_ [SparkLeaderboardCursor](../Spark/SparkLeaderboardCursor.md)</p>
+_returns_ [SparkLeaderboardCursor](/API Documentation/Cloud Code API/Spark/SparkLeaderboardCursor.md)</p>
 Returns a cursor over the leaderboard entries starting from the highest score of the supplied playerId and customIdFilter
 If the customId filter is not an object with valid ID fields, it will return an empty cursor
 <b>example</b>

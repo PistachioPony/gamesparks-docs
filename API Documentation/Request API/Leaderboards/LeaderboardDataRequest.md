@@ -45,6 +45,15 @@ scriptData | ScriptData | A JSON Map of any data added either to the Request or 
 
 ## Nested types
 
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
+
 ### LeaderboardData
 
 Leaderboard entry data
@@ -56,20 +65,10 @@ Parameter | Type | Description
 city | string | The city where the player was located when they logged this leaderboard entry.
 country | string | The country code where the player was located when they logged this leaderboard entry.
 externalIds | JSON | The players rank.
-id | string | The unique leaderboard id.
 rank | number | The players rank.
 userId | string | The unique player id for this leaderboard entry.
 userName | string | The players display name.
 when | string | The date when this leaderboard entry was created.
-
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
 
 ## Error Codes
 

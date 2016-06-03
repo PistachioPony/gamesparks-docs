@@ -33,6 +33,20 @@ teams | [Team[]](#team) | A JSON array of teams.
 
 ## Nested types
 
+### Player
+
+A nested object that represents a player.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+achievements | string[] | The achievements of the Player
+displayName | string | The display name of the Player
+externalIds | JSON | The external Id's of the Player
+id | string | The id of the Player
+online | boolean | The online status of the Player
+scriptData | JSON | The script data of the Player
+virtualGoods | string[] | The virtual goods of the Player
+
 ### ScriptData
 
 A collection of arbitrary data that can be added to a message via a Cloud Code script.
@@ -53,20 +67,6 @@ owner | [Player](#player) | A summary of the owner
 teamId | string | The Id of the team
 teamName | string | The team name
 teamType | string | The team type
-
-### Player
-
-A nested object that represents a player.
-
-Parameter | Type | Description
---------- | ---- | -----------
-achievements | string[] | The achievements of the Player
-displayName | string | The display name of the Player
-externalIds | JSON | The external Id's of the Player
-id | string | The id of the Player
-online | boolean | The online status of the Player
-scriptData | JSON | The script data of the Player
-virtualGoods | string[] | The virtual goods of the Player
 
 ## Error Codes
 

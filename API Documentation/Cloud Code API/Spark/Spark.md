@@ -19,7 +19,7 @@ To return a JSON representation of the Object being acted upon
 
 ## getPlayer
 _signature_ getPlayer()</p>
-_returns_ [SparkPlayer](../Spark/SparkPlayer.md)</p>
+_returns_ [SparkPlayer](/API Documentation/Cloud Code API/Spark/SparkPlayer.md)</p>
 <b>validity</b> All except Global Message Scripts
 Returns a SparkPlayer object that represents the player who either sent, or is going to receive the object that is invoking this script.
 <b>example</b>
@@ -27,7 +27,7 @@ Returns a SparkPlayer object that represents the player who either sent, or is g
 
 ## loadPlayer
 _signature_ loadPlayer(string playerId)</p>
-_returns_ [SparkPlayer](../Spark/SparkPlayer.md)</p>
+_returns_ [SparkPlayer](/API Documentation/Cloud Code API/Spark/SparkPlayer.md)</p>
 <b>validity</b> All Scripts
 Returns a SparkPlayer object that represents the player with the supplied ID.
 <b>params</b>
@@ -37,7 +37,7 @@ playerId - the unique player identifier.
 
 ## getChallenge
 _signature_ getChallenge(string challengeInstanceId)</p>
-_returns_ [SparkChallenge](../Spark/SparkChallenge.md)</p>
+_returns_ [SparkChallenge](/API Documentation/Cloud Code API/Spark/SparkChallenge.md)</p>
 <b>validity</b> All Scripts
 Allows a script to load a SparkChallenge object by it's ID.
 This is mainly used on LogChallengeEventRequests where the ID of the SparkChallenge can be retrieved using Spark.data.challengeId.
@@ -47,7 +47,7 @@ challengeInstanceId - the unique challenge identifier.
 <pre rel="highlighter" code-brush="js" contenteditable="false">var myChallenge = Spark.getChallenge(Spark.data.challengeId);</pre>
 
 ## sendMessage
-_signature_ sendMessage(JSON data, [SparkPlayer](../Spark/SparkPlayer.md)[] players)</p>
+_signature_ sendMessage(JSON data, [SparkPlayer](/API Documentation/Cloud Code API/Spark/SparkPlayer.md)[] players)</p>
 _returns_ void</p>
 <b>DEPRECATED use Spark.message(extCode)</b>
 <b>validity</b> All Scripts
@@ -60,7 +60,7 @@ players - the SparkPlayer array to send the message to.
 <pre rel="highlighter" code-brush="js" contenteditable="false">Spark.sendMessage({"alert" : "You've just won a car!"}, myplayers);</pre>
 
 ## sendMessageExt
-_signature_ sendMessageExt(JSON data, string extCode, [SparkPlayer](../Spark/SparkPlayer.md)[] players)</p>
+_signature_ sendMessageExt(JSON data, string extCode, [SparkPlayer](/API Documentation/Cloud Code API/Spark/SparkPlayer.md)[] players)</p>
 _returns_ void</p>
 <b>DEPRECATED use Spark.message(extCode)</b>
 <b>validity</b> All Scripts
@@ -75,7 +75,7 @@ players - the SparkPlayer array to send the message to. If empty or null no mess
 <pre rel="highlighter" code-brush="js" contenteditable="false">Spark.sendMessageExt({"alert" : "You've just won a car!"},"CODE1" ,myplayers);</pre>
 
 ## sendMessageWithoutPush
-_signature_ sendMessageWithoutPush(JSON data, [SparkPlayer](../Spark/SparkPlayer.md)[] players)</p>
+_signature_ sendMessageWithoutPush(JSON data, [SparkPlayer](/API Documentation/Cloud Code API/Spark/SparkPlayer.md)[] players)</p>
 _returns_ void</p>
 <b>DEPRECATED use Spark.message(extCode)</b>
 <b>validity</b> All Scripts
@@ -130,7 +130,7 @@ playerIds - An array of player id strings to send the message to.
 
 ## message
 _signature_ message(string extCode)</p>
-_returns_ [SparkMessage](../Utils/SparkMessage.md)</p>
+_returns_ [SparkMessage](/API Documentation/Cloud Code API/Utils/SparkMessage.md)</p>
 <b>validity</b> All Scripts
 Creates a SparkMessage object using the default configuration from the portal.
 Providing an ext code allows different configurations to be used as th template.
@@ -197,7 +197,7 @@ The result of the query, can be a simple document or a list
 <pre rel="highlighter" code-brush="js" contenteditable="false">Spark.find("myCollection", {"key":"value"}, {"projectionKey":"projectionValue"});</pre>
 
 ## lock
-_signature_ lock([SparkChallenge](../Spark/SparkChallenge.md) challenge)</p>
+_signature_ lock([SparkChallenge](/API Documentation/Cloud Code API/Spark/SparkChallenge.md) challenge)</p>
 _returns_ void</p>
 <b>validity</b> All Scripts
 Locks a challenge for writing. Whilst the script 'owns' this lock no other script can modify the challenge
@@ -210,7 +210,7 @@ challenge - the challenge to lock
 <pre rel="highlighter" code-brush="js" contenteditable="false">Spark.lock(mychallenge);</pre>
 
 ## unlock
-_signature_ unlock([SparkChallenge](../Spark/SparkChallenge.md) challenge)</p>
+_signature_ unlock([SparkChallenge](/API Documentation/Cloud Code API/Spark/SparkChallenge.md) challenge)</p>
 _returns_ void</p>
 <b>validity</b> All Scripts
 Unlocks the challenge.
@@ -270,7 +270,7 @@ Removes all script errors that have been set
 
 ## getLog
 _signature_ getLog()</p>
-_returns_ [SparkLog](../Utils/SparkLog.md)</p>
+_returns_ [SparkLog](/API Documentation/Cloud Code API/Utils/SparkLog.md)</p>
 <b>validity</b> All Scripts
 Provides access to a SparkLog interface
 <b>example</b>
@@ -301,7 +301,7 @@ Can be useful to post a score to a global leaderboard when a score has been post
 
 ## getHttp
 _signature_ getHttp(string url)</p>
-_returns_ [SparkHttp](../Comms/SparkHttp.md)</p>
+_returns_ [SparkHttp](/API Documentation/Cloud Code API/Comms/SparkHttp.md)</p>
 <b>validity</b> All Scripts
 <b>params</b>
 Provides access to a SparkHttp interface
@@ -323,7 +323,7 @@ true if the message was dismissed
 
 ## runtimeCollection
 _signature_ runtimeCollection(string collectionName)</p>
-_returns_ [SparkMongoCollectionReadWrite](../Mongo/SparkMongoCollectionReadWrite.md)</p>
+_returns_ [SparkMongoCollectionReadWrite](/API Documentation/Cloud Code API/Mongo/SparkMongoCollectionReadWrite.md)</p>
 <b>validity</b> All Scripts
 Gets a runtime collection by name, this collection has bot read and write access and can be interacted with using SparkMongoCollectionReadOnly and SparkMongoCollectionReadWrite methods.
 <b>params</b>
@@ -333,7 +333,7 @@ collectionName - the name of the collection you wish to access
 
 ## metaCollection
 _signature_ metaCollection(string collectionName)</p>
-_returns_ [SparkMongoCollectionReadOnly](../Mongo/SparkMongoCollectionReadOnly.md)</p>
+_returns_ [SparkMongoCollectionReadOnly](/API Documentation/Cloud Code API/Mongo/SparkMongoCollectionReadOnly.md)</p>
 <b>validity</b> All Scripts
 Gets a metadata collection by name, this collection is read only and can be queried using the methods defined in the SparkMongoCollectionReadOnly object.
 <b>params</b>
@@ -343,7 +343,7 @@ collectionName - the name of the collection you wish to access
 
 ## getFiles
 _signature_ getFiles()</p>
-_returns_ [SparkFiles](../Utils/SparkFiles.md)</p>
+_returns_ [SparkFiles](/API Documentation/Cloud Code API/Utils/SparkFiles.md)</p>
 <b>validity</b> All Scripts
 Provides access to file operations via a SparkFiles interface
 <b>example</b>
@@ -351,7 +351,7 @@ Provides access to file operations via a SparkFiles interface
 
 ## uploadedXml
 _signature_ uploadedXml(string uploadId)</p>
-_returns_ [SparkXmlReader](../Utils/SparkXmlReader.md)</p>
+_returns_ [SparkXmlReader](/API Documentation/Cloud Code API/Utils/SparkXmlReader.md)</p>
 <b>DEPRECATED use Spark.getFiles().uploadedXml(uploadId)</b>
 <b>validity</b> All Scripts
 Provides access to an uploaded file via a SparkXmlReader interface
@@ -375,7 +375,7 @@ A JSON object
 
 ## downloadableXml
 _signature_ downloadableXml(string shortCode)</p>
-_returns_ [SparkXmlReader](../Utils/SparkXmlReader.md)</p>
+_returns_ [SparkXmlReader](/API Documentation/Cloud Code API/Utils/SparkXmlReader.md)</p>
 <b>DEPRECATED use Spark.getFiles().downloadableXml(shortCode)</b>
 <b>validity</b> All Scripts
 Provides access to a downloadable file via a SparkXmlReader interface
@@ -399,7 +399,7 @@ shortCode - the short code for the downloadable file
 
 ## sendGrid
 _signature_ sendGrid(string username, string password)</p>
-_returns_ [SendGrid](../Comms/SendGrid.md)</p>
+_returns_ [SendGrid](/API Documentation/Cloud Code API/Comms/SendGrid.md)</p>
 <b>validity</b> All Scripts
 Send an email via the SendGrid email delivery provider
 <b>params</b>
@@ -410,7 +410,7 @@ password - your SendGrid account password
 
 ## getScheduler
 _signature_ getScheduler()</p>
-_returns_ [SparkScheduler](../Utils/SparkScheduler.md)</p>
+_returns_ [SparkScheduler](/API Documentation/Cloud Code API/Utils/SparkScheduler.md)</p>
 <b>validity</b> All Scripts
 Utility to schedule execution of a module in the future
 <b>example</b>
@@ -418,7 +418,7 @@ Utility to schedule execution of a module in the future
 
 ## getCache
 _signature_ getCache()</p>
-_returns_ [SparkCache](../Utils/SparkCache.md)</p>
+_returns_ [SparkCache](/API Documentation/Cloud Code API/Utils/SparkCache.md)</p>
 <b>validity</b> All Scripts
 Utility to cache complex objects in memory
 <b>example</b>
@@ -446,7 +446,7 @@ returns - The response as would be returned to the client
 
 ## getRedis
 _signature_ getRedis()</p>
-_returns_ [SparkRedis](../Spark/SparkRedis.md)</p>
+_returns_ [SparkRedis](/API Documentation/Cloud Code API/Spark/SparkRedis.md)</p>
 <b>validity</b> All Scripts
 Returns a reference to a SparkRedis object
 <b>example</b>
@@ -454,7 +454,7 @@ Returns a reference to a SparkRedis object
 
 ## getLeaderboards
 _signature_ getLeaderboards()</p>
-_returns_ [SparkLeaderboards](../Spark/SparkLeaderboards.md)</p>
+_returns_ [SparkLeaderboards](/API Documentation/Cloud Code API/Spark/SparkLeaderboards.md)</p>
 <b>validity</b> All Scripts
 Returns a reference to a SparkLeaderboards object, used to access the leaderboards for this game.
 <b>example</b>
@@ -462,7 +462,7 @@ Returns a reference to a SparkLeaderboards object, used to access the leaderboar
 
 ## getConfig
 _signature_ getConfig()</p>
-_returns_ [SparkConfig](../Misc/SparkConfig.md)</p>
+_returns_ [SparkConfig](/API Documentation/Cloud Code API/Misc/SparkConfig.md)</p>
 <b>validity</b> All Scripts
 Returns configuration information about the currently published game.
 <b>example</b>
@@ -470,7 +470,7 @@ Returns configuration information about the currently published game.
 
 ## getTeams
 _signature_ getTeams()</p>
-_returns_ [SparkTeams](../Spark/SparkTeams.md)</p>
+_returns_ [SparkTeams](/API Documentation/Cloud Code API/Spark/SparkTeams.md)</p>
 <b>validity</b> All Scripts
 Returns a reference to a SparkTeams object, used to access the teams for this game.
 <b>example</b>
@@ -478,7 +478,7 @@ Returns a reference to a SparkTeams object, used to access the teams for this ga
 
 ## getMultiplayer
 _signature_ getMultiplayer()</p>
-_returns_ [SparkMultiplayer](../Spark/SparkMultiplayer.md)</p>
+_returns_ [SparkMultiplayer](/API Documentation/Cloud Code API/Spark/SparkMultiplayer.md)</p>
 <b>validity</b> All Scripts
 Returns a reference to a SparkMultiplayer object, used to access the platform's multiplayer capabilities.
 <b>example</b>
@@ -486,7 +486,7 @@ Returns a reference to a SparkMultiplayer object, used to access the platform's 
 
 ## getProperties
 _signature_ getProperties()</p>
-_returns_ [SparkProperties](../Spark/SparkProperties.md)</p>
+_returns_ [SparkProperties](/API Documentation/Cloud Code API/Spark/SparkProperties.md)</p>
 <b>validity</b> All Scripts
 Returns a reference to a SparkProperties object, used to access the Properties and Property Sets configured against a game.
 <b>example</b>
@@ -494,7 +494,7 @@ Returns a reference to a SparkProperties object, used to access the Properties a
 
 ## getBulkScheduler
 _signature_ getBulkScheduler()</p>
-_returns_ [SparkBulkScheduler](../Spark/SparkBulkScheduler.md)</p>
+_returns_ [SparkBulkScheduler](/API Documentation/Cloud Code API/Spark/SparkBulkScheduler.md)</p>
 <b>validity</b> All Scripts
 Returns a reference to a SparkBulkScheduler object, used to perform operations on multiple players at once.
 <b>example</b>

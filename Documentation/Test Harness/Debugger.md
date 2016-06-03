@@ -30,7 +30,7 @@ The Context menu (centre) is where all your variables and objects will be shown.
 
 ![](img/GSDebugger/7.png) *Stop* - Stops the debugging session, the script will be executed and the debug session will stop.
 
-Objects that you create in your Cloud Code will appear as hierarchical trees in the context menu so you can expand and minimise them to view their variables. [SendRequests](/API Documentation/Cloud Code API/Spark/Spark.html#sendrequest) are also shown as hierarchical trees in which you can check the responses by expanding them in the Context menu.  Responses to SendRequests within Cloud Code viewed within the Debugger, are displayed similar to the way the Test Harness Inspector displays them. Here, the Cloud Code calls an AuthenticationRequest ](/API Documentation/Request API/Authentication/AuthenticationRequest.html) and an AuthenticationResponse. The values attributed to the Request and Response and are shown as child properties of that object:
+Objects that you create in your Cloud Code will appear as hierarchical trees in the context menu so you can expand and minimise them to view their variables. All requests are also shown as hierarchical trees in which you can check the responses by expanding them in the Context menu.  Responses to SendRequests within Cloud Code viewed within the Debugger, are displayed similar to the way the Test Harness Inspector displays them. Here, the Cloud Code calls an [AuthenticationRequest](/API Documentation/Request API/Authentication/AuthenticationRequest.md) and an AuthenticationResponse. The values attributed to the Request and Response and are shown as child properties of that object:
 
 ![](img/GSDebugger/8.png)
 

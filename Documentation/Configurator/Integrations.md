@@ -39,7 +39,7 @@ Apple Integrations tab allows configuring [IOS Push Notifications](/Tutorials/S
 
 ### Microsoft Integration
 
-Microsoft Integrations tab allows configuring [Windows Push Notifications](/Tutorials/Social Features/Windows push notifications.md) as well as [Windows IAPs](/?p=2261) for your game.
+Microsoft Integrations tab allows configuring [Windows Push Notifications](/Tutorials/Social Features/Windows push notifications.md) as well as [Windows IAPs](/API Documentation/Request API/Store/WindowsBuyGoodsRequest.md) for your game.
 
 ![](img/Integrations/6.jpg)
 

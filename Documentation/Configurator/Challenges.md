@@ -32,5 +32,5 @@ To create a new challenge select the icon and you will be presented with the fo
   * *Turn Based* \- Use this switch to enable turn based games, Tic-Tac-Toe for example.
   * *Turn/Attempt Consumers* \- If you have set the *Turn Based* switch to true (or create the challenge with a max attempt set), you can have turns/attempts consumed by any event selected in this list.
   * *Leaderboard* \- The outcome of a challenge can be determined by a specially configured Leaderboard or a custom Cloud Code Script. Use this drop down to pick the appropriate option.
-  * *Global* \- If this is off, only [LogChallengeEventRequests](/?p=2234) will affect this challenge.
+  * *Global* \- If this is off, only [LogChallengeEventRequests](/API Documentation/Request API/Multiplayer/LogChallengeEventRequest.md) will affect this challenge.
   * *First to achievement* \- If this field is set, the winner will be the first to reach the selected achievement.

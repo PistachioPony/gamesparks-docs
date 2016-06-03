@@ -13,7 +13,7 @@ e.g.
 
 ## getPlayer
 _signature_ getPlayer()</p>
-_returns_ [SparkPlayer](../Spark/SparkPlayer.md)</p>
+_returns_ [SparkPlayer](/API Documentation/Cloud Code API/Spark/SparkPlayer.md)</p>
 <b>validity</b> All Scripts
 <b>returns</b>
 The SparkPlayer this participant represents

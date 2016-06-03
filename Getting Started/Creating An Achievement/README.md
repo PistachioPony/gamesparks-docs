@@ -68,5 +68,5 @@ Finally you can validate that the currency was awarded by calling the [AccountD
 
 Continue the tutorial for your chosen SDK:
 
-|[![](../img/URLogo.png)](Creating An Achievement\Unreal Achievements.html)   |[![](../img/UTLogo.png)](Creating An Achievement\Unity Achievements.html)   |[![](../img/ASLogo.png)](Creating An Achievement\ActionScript Achievements.html)   |
+|[![](../img/URLogo.png)](/Getting Started/Creating An Achievement/Unreal Achievements.md)   |[![](../img/UTLogo.png)](/Getting Started/Creating An Achievement/Unity Achievements.md)   |[![](../img/ASLogo.png)](/Getting Started/Creating An Achievement/ActionScript Achievements.md)   |
 |---|---|---|

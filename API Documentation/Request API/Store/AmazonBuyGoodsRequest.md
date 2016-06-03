@@ -67,9 +67,11 @@ Key | Value | Description
 --------- | ----------- | -----------
 receiptId | REQUIRED | The receiptId is missing
 amazonUserId | REQUIRED | The amazonUserId is missing
-verificationError | 4 | The Amazon purchase secret is not configured against the game
+verificationError | 1 | No matching virtual good can be found
 verificationError | 2 | The receiptId is not valid for the given userId and secret
-verificationError | 1 | The receiptId has previously been processed
+verificationError | 3 | There was an error connecting to the Amazon service
+verificationError | 4 | The Amazon purchase secret is not configured against the game
+verificationError | 5 | The receiptId has previously been processed
 
 ## Code Samples
 

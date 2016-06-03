@@ -49,4 +49,4 @@ Add an attribute by clicking on the plus icon *+*.  Each attribute has a number
     * *Used In Script* \- the event will not be used in a running total.
     * *Grouped* \- the running total will use this attribute to group other attributes. This will lead to a running total with an entry per attribute/user combination.
 
-Note:  [Running Totals](./Running Totals.html) is a concept explained further in the next post.
+Note:  [Running Totals](/Documentation/Configurator/Running Totals.md) is a concept explained further in the next post.
