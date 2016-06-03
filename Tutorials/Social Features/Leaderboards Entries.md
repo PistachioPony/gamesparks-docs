@@ -1,3 +1,7 @@
+---
+src: Tutorials/Social Features/Leaderboards Entries.md
+---
+
 # Leaderboards - Listing Entries
 
 ## Introduction

@@ -1,3 +1,7 @@
+---
+src: Tutorials/Authentication and Player Profile/Kongregate Authentication.md
+---
+
 # How to authenticate a player using their Kongregate account
 
 Kongregate authentication allows you to provide your players with a simple way to sign in with their Kongregate account, and allows GameSparks platform to then use the players profile to drive its social features. In this exercise you’ll go through setting up the necessary configuration with Kongregate and how you can then use that to connect your players.

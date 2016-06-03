@@ -1,3 +1,7 @@
+---
+src: Tutorials/Authentication and Player Profile/Communicating With Players.md
+---
+
 # Understanding the main ways of communicating to your players
 
 ### Introduction

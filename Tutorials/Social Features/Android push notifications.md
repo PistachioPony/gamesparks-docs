@@ -1,3 +1,7 @@
+---
+src: Tutorials/Social Features/Android push notifications.md
+---
+
 # How to configure Android push notifications
 
 Google allows push notifications through its Google Cloud Messaging service (GCM). In this exercise you'll learn how to set up your application with GCM, enabling push notifications and getting your GameSparks game set up to allow it to send notifications to your players on your behalf.

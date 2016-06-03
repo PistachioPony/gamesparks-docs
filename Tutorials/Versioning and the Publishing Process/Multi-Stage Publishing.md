@@ -1,3 +1,7 @@
+---
+src: Tutorials/Versioning and the Publishing Process/Multi-Stage Publishing.md
+---
+
 # Multi-Stage Publishing
 
 Sometimes it's not enough to have just a Preview and LIVE environment, and you may want some intermediate environment for testing before the configuration is published to LIVE. This tutorial explains how you can achieve this, and make your game more robust. The diagram below shows you how to easily manage your game.

@@ -1,3 +1,7 @@
+---
+src: Documentation/Key Concepts/Snapshots.md
+---
+
 # Snapshots
 
 Snapshots feature allows you to *Create*, *Copy*, *Delete*, *Publish*, *Revert* and *Preview* the configuration of your Game, allowing for in-depth management of each stage of the release.

@@ -1,3 +1,7 @@
+---
+src: Tutorials/Cloud Code, and the Test Harness/Leaderboards Cloud Code.md
+---
+
 # How to access Leaderboards via Cloud Code
 
 Imagine the scenarios where you want to determine the position of given player within a Leaderboard or that you want to get the player id of whoever is at a given position. You can implement these two features using the Cloud Code SparkRequests API, the API allows requests to be sent either as the current player or as any other player within your game.

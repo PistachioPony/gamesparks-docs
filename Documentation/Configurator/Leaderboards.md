@@ -1,6 +1,8 @@
 ---
 nav_sort: 5
+src: Documentation/Configurator/Leaderboards.md
 ---
+
 # Leaderboards
 
 The Leaderboards functionality on the GameSparks platform is not limited to Leaderboards in their traditional sense. Rather, it is functionality that allows you to keep track of any comparisons of player performance and then support artifacts in-game that flexibly display this information in a meaningful form to players. This allows support for complex, contextual display of information about other players and also provides the framework for many social and competitive features.

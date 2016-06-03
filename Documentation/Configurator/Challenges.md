@@ -1,5 +1,6 @@
 ---
 nav_sort: 9
+src: Documentation/Configurator/Challenges.md
 ---
 
 # Challenges

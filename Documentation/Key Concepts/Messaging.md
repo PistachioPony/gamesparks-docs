@@ -1,3 +1,7 @@
+---
+src: Documentation/Key Concepts/Messaging.md
+---
+
 # Messaging
 
 Messaging is one of the core features of the GameSparks platform. Messages are primarily used to keep your players informed about events occurring within your game, as they occur.

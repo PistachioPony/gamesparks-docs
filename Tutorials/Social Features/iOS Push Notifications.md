@@ -1,3 +1,7 @@
+---
+src: Tutorials/Social Features/iOS Push Notifications.md
+---
+
 # How to configure iOS Push Notifications
 
 ## *Introduction*

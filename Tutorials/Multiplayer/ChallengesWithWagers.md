@@ -1,3 +1,7 @@
+---
+src: Tutorials/Multiplayer/ChallengesWithWagers.md
+---
+
 # Challenges With Wagers
 
 ## Introduction

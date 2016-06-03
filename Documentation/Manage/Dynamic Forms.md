@@ -1,3 +1,7 @@
+---
+src: Documentation/Manage/Dynamic Forms.md
+---
+
 # Dynamic Forms
 
 This tutorial is a step-by-step guide to creating Dynamic Forms. For this Tutorial, we will create Dynamic Forms for the management of Players in our game. Before starting this tutorial, it's vital to understand the [Dynamic Forms API](https://docs.gamesparks.net/dynamic-forms-api/dynamic-forms-api "Dynamic Forms API").

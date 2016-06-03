@@ -1,6 +1,8 @@
 ---
 nav_sort: 11
+src: Documentation/Configurator/Cloud Code.md
 ---
+
 # Cloud Code
 
 The Cloud Code section of the Configurator lists all the potential interception points that Cloud Code can be bound to, and has a JavaScript editor in which the interception code can be written. The Bindings section is split into eight sub-categories, further explained in the sections below.

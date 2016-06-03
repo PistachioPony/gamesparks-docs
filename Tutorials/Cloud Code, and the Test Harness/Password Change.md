@@ -1,3 +1,7 @@
+---
+src: Tutorials/Cloud Code, and the Test Harness/Password Change.md
+---
+
 # How to change a players passwords
 
 If your game uses the [RegistrationRequest](/API Documentation/Request API/Authentication/RegistrationRequest.md) GameSparks API method for signing up players to your game you may want to provide a way for them to change their password in the future. This article describes two possible ways to achieve this, the first using the [ChangeUserDetailsRequest](/API Documentation/Request API/Player/ChangeUserDetailsRequest.md) API method and the second using the [SparkPlayer](/API Documentation/Cloud Code API/Spark/SparkPlayer.md) Cloud Code object.

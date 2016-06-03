@@ -1,3 +1,7 @@
+---
+src: Tutorials/Third Party Integrations/ActionScript SDK Setup.md
+---
+
 # ActionScript SDK Setup
 
 The GameSparks ActionScript SDK allows you to interact with the GameSparks platform from any ActionScript environment(Flash, Flex, Air etc.)

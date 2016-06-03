@@ -1,3 +1,7 @@
+---
+src: Tutorials/Database access and cloud storage/Binary Content In Game.md
+---
+
 # How to upload binary content directly from your game
 
 The GameSparks platform provides the capability for you to allow players to upload binary content, to be hosted on the GameSparks platform and from there shareable with other players. To do so is fairly simple, but requires a few steps to be completed as follows:

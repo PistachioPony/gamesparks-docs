@@ -1,3 +1,7 @@
+---
+src: Documentation/Key Concepts/Development Process.md
+---
+
 # Development Process
 
 The GameSparks platform follows best practice in content management processes and provides you a simple workflow for managing the life cycle of your game.

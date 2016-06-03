@@ -1,3 +1,7 @@
+---
+src: Tutorials/Cloud Code, and the Test Harness/External HTTP Callbacks.md
+---
+
 # How to implement external HTTP Callbacks
 
 You have the ability to get external servers (or your own processes) to make HTTP calls into the GameSparks platform, and when these calls are made you can execute some custom cloud code to do whatever processing you need. The HTTP request can either be a GET or POST request, and all parameters passed to the server are accessible via the Spark.getData() function. It should be noted that if you pass query string parameters on a POST request both sets of values are accessible. Single parameters are passed to javascript as Strings, and in the case of multiple parameters with the same name, these values are passed to JavaScript as a String array. POST parameters are only interpreted into the data object when the content type of the request is "multipart/form-data", for other usages see the section "Reading POST Data" at the bottom of this article

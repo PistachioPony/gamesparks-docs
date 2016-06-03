@@ -1,5 +1,6 @@
 ---
 nav_sort: 6
+src: Getting Started/Creating A Virtual Good/README.md
 ---
 
 # Creating a Virtual Good

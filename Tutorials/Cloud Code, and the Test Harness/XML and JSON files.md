@@ -1,3 +1,7 @@
+---
+src: Tutorials/Cloud Code, and the Test Harness/XML and JSON files.md
+---
+
 # How to process XML and JSON files
 
 You can use Cloud Code to process both XML files and JSON files, these may be delivered by a player using the [GetUploadUrlRequest](/API Documentation/Request API/Misc/GetUploadUrlRequest.md) model, or be delivered via SFTP to the server from a third party.

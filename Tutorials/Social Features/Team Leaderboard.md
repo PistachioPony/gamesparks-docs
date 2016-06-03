@@ -1,3 +1,7 @@
+---
+src: Tutorials/Social Features/Team Leaderboard.md
+---
+
 # How to create a team Leaderboard
 
 Using the GameSparks platform, you can create Leaderboards that show the performance of a team, rather than the performance of a single players. For team-based Leaderboards, you need a few things in place. This post will take you through the process of getting them set up. In this example we'll create a team type called "Squad". When a player posts a score, the team they are in will be attributed with the score, and this can then be used on a Leaderboard for the team.

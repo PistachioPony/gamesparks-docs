@@ -1,3 +1,7 @@
+---
+src: API Documentation/Cloud Code API/Spark/SparkBulkScheduler.md
+---
+
 # SparkBulkScheduler
 
 Provides access to the bulk scheduler.

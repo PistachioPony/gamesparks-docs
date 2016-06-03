@@ -1,3 +1,7 @@
+---
+src: Tutorials/Third Party Integrations/iOS SDK Setup.md
+---
+
 # iOS SDK Setup
 
 # GameSparks Objective-C SDK

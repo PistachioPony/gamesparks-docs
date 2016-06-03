@@ -1,3 +1,7 @@
+---
+src: Tutorials/Social Features/Creating a Leaderboard.md
+---
+
 # How to create and use a Leaderboard
 
 In this exercise we create an Event with which to log player scores, then create a high score table using Leaderboards, and then test the configuration via the Test Harness.

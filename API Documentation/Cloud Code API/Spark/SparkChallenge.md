@@ -1,3 +1,7 @@
+---
+src: API Documentation/Cloud Code API/Spark/SparkChallenge.md
+---
+
 # SparkChallenge
 
 Provides access to a challenge's details.

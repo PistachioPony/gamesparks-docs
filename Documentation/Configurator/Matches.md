@@ -1,6 +1,8 @@
 ---
 nav_sort: 10
+src: Documentation/Configurator/Matches.md
 ---
+
 # Matches
 
 Matchmaking allows Players to be matched in real-time based on common attributes they share within a game. Using entirely customised threshold criteria and time-based rounds of matching, Players can be strictly or loosely matched with an unlimited level of precision.

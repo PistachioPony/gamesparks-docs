@@ -1,3 +1,7 @@
+---
+src: Tutorials/Currencies, Virtual Goods and Achievements/In-app purchases.md
+---
+
 # How to do in-app purchases
 
 In this exercise we'll cover a few different scenarios around purchasing. To start with we'll look at setting up a Virtual Good to be purchased using a Virtual Currency. We'll then go on to look at how you set up your Virtual Goods so you can also do purchases through third-party stores (Google Play, iOS App Store, Windows Store).

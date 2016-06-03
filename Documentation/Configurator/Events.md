@@ -1,5 +1,6 @@
 ---
 nav_sort: 3
+src: Documentation/Configurator/Events.md
 ---
 
 # Events

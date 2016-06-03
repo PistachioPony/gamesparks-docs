@@ -1,3 +1,7 @@
+---
+src: Documentation/Key Concepts/Authentication.md
+---
+
 # Authentication
 
 Before a player can perform any operations they need to authenticate with the platform. There are a few authentication options, and some can be used in combination with others. These options are described below.

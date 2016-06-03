@@ -1,3 +1,7 @@
+---
+src: Documentation/NoSQL Explorer.md
+---
+
 # NoSQL Explorer
 
 From the NoSQL tab you have the ability to interact with the data stored on the platform.

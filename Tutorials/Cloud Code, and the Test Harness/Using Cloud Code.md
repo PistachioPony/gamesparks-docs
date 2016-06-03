@@ -1,3 +1,7 @@
+---
+src: Tutorials/Cloud Code, and the Test Harness/Using Cloud Code.md
+---
+
 # How to create and use Cloud Code
 
 In this exercise we use the Configurator to create an event that will then trigger a simple piece of Cloud Code. The event will contain three attributes - a String, a Number and a JSON field. The Cloud Code (a piece of JavaScript) will manipulate these values and echo them back in the event response. We will use the Test Harness to try out the Cloud Code script and the event.

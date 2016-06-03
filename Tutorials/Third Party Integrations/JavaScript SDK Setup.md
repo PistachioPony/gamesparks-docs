@@ -1,3 +1,7 @@
+---
+src: Tutorials/Third Party Integrations/JavaScript SDK Setup.md
+---
+
 # JavaScript SDK Setup
 
 The GameSparks JavaScript SDK allows you to interact with the GameSparks platform from any JavaScript environment.

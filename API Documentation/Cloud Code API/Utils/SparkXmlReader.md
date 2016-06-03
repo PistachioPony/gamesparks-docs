@@ -1,3 +1,7 @@
+---
+src: API Documentation/Cloud Code API/Utils/SparkXmlReader.md
+---
+
 # SparkXmlReader
 
 Provides read only access to an Xml document in gamesparks storage.

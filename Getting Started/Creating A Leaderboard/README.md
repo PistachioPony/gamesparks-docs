@@ -1,5 +1,6 @@
 ---
 nav_sort: 4
+src: Getting Started/Creating A Leaderboard/README.md
 ---
 
 # Creating a Leaderboard

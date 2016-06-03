@@ -1,3 +1,7 @@
+---
+src: Tutorials/Authentication and Player Profile/Accessing Player records.md
+---
+
 #Acessing and updating player records
 
 ## Introduction

@@ -1,3 +1,7 @@
+---
+src: API Documentation/Cloud Code API/Spark/SparkTeam.md
+---
+
 # SparkTeam
 
 Provides access to an instance of a team

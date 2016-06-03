@@ -1,5 +1,6 @@
 ---
 nav_sort: 3
+src: Getting Started/Creating A Leaderboard/ActionScript Leaderboards.md
 ---
 
 # ActionScript Leaderboards

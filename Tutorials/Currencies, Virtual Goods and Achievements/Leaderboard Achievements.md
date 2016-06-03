@@ -1,3 +1,7 @@
+---
+src: Tutorials/Currencies, Virtual Goods and Achievements/Leaderboard Achievements.md
+---
+
 # How to create and award Achievements via a Leaderboard?
 
 In this exercise we will create an Achievement that is awarded to a player when they beat their current high score in a game. As well as the Achievement we will need to create an Event and a Leaderboard. We will then test the configuration via the Test Harness.

@@ -1,3 +1,7 @@
+---
+src: API Documentation/Cloud Code API/Spark/SparkLeaderboard.md
+---
+
 # SparkLeaderboard
 
 Provides access to the entries of a leaderboard.

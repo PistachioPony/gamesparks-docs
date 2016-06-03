@@ -1,3 +1,7 @@
+---
+src: API Documentation/Cloud Code API/Spark/Spark.md
+---
+
 # Spark
 
 The Spark object that is available to all scripts is the entry point into the GameSparks API.

@@ -1,3 +1,7 @@
+---
+src: API Documentation/Cloud Code API/Misc/SparkTeamType.md
+---
+
 # SparkTeamType
 
 Contains configuration information for the teams

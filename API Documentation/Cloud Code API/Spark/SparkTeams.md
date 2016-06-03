@@ -1,3 +1,7 @@
+---
+src: API Documentation/Cloud Code API/Spark/SparkTeams.md
+---
+
 # SparkTeams
 
 Provides access to teams for the current game.

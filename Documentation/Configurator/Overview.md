@@ -1,6 +1,8 @@
 ---
 nav_sort: 2
+src: Documentation/Configurator/Overview.md
 ---
+
 # Overview
 
 From the Overview page you:

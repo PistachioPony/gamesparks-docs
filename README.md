@@ -1,3 +1,7 @@
+---
+src: README.md
+---
+
 # The GameSparks homepage.
 
 ## Gabs

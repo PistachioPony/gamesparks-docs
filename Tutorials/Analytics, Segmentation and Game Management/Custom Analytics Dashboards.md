@@ -1,3 +1,7 @@
+---
+src: Tutorials/Analytics, Segmentation and Game Management/Custom Analytics Dashboards.md
+---
+
 # Custom Analytics Dashboards
 
 With the recent introduction of Dynamic Forms, you can easily build Custom Analytics Dashboard that will have nearly limitless expandability, and suit your personal needs within minutes. However it's highly advisable to read the [Dynamic Forms API](/API Documentation/Dynamic Forms API.md) as well as take a look at the [Dynamic Forms Tutorial](/Documentation/Manage/Dynamic Forms.md) before starting.  

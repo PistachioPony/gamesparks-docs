@@ -1,3 +1,7 @@
+---
+src: Tutorials/Multiplayer/Challenge Eligibility.md
+---
+
 # Challenge Eligibility
 
 ## Introduction

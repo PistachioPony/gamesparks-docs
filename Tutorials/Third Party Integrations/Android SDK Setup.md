@@ -1,3 +1,7 @@
+---
+src: Tutorials/Third Party Integrations/Android SDK Setup.md
+---
+
 # Android SDK Setup
 
 The steps described below detail how to setup the GameSparks Android SDK and Test Harness application in the Eclipse Android Developer Tools IDE. You will need to have already setup Eclipse ADT with the Android SDK (the GameSparks Android SDK requires API 8 or greater and the Test Harness requires API 11 or greater) and have a working emulator setup or a real device on which to run the Test Harness application.

@@ -1,3 +1,7 @@
+---
+src: Tutorials/Social Features/Chat Messages.md
+---
+
 # Match Making Basics - Chat Messages
 
 ## Introduction

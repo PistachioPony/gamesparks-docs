@@ -1,3 +1,7 @@
+---
+src: Tutorials/Game engine integrations/SetDurable.md
+---
+
 # SetDurable
 
 SetDurable is a function paramater in the Unity version of the GameSparks SDK. When you send a Request with .SetDurable(true) it will store your request in a queue to be sent to GameSparks in the event of your device being disconnected from the network.

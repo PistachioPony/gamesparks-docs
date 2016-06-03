@@ -1,3 +1,7 @@
+---
+src: Documentation/Manage/Experiments.md
+---
+
 # Experiments
 Experiments allow users to A/B test certain configuration changes on a selective range of Players within the game.  For example, a user could experiment with the costs of Virtual Goods for a small range of Players on the game for a specified period of time.  The costs could be increased or decreased marginally or drastically, to see how Players would respond to these changes.  This allows the user to fine-tune their configuration to make their Players more responsive to it.
 

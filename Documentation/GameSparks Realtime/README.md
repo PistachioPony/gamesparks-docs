@@ -1,6 +1,8 @@
 ---
 nav_sort: 1
+src: Documentation/GameSparks Realtime/README.md
 ---
+
 # GameSparks Realtime
 
 We've recently enhanced our product offering by adding a new set of services for facilitating realtime multiplayer.

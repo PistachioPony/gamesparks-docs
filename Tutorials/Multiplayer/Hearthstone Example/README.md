@@ -1,5 +1,6 @@
 ---
 nav_sort: 1
+src: Tutorials/Multiplayer/Hearthstone Example/README.md
 ---
 
 # Hearthstone example

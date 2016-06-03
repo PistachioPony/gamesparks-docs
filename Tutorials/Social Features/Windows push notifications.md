@@ -1,3 +1,7 @@
+---
+src: Tutorials/Social Features/Windows push notifications.md
+---
+
 # How to configure Windows Phone push notifications
 
 ## Introduction

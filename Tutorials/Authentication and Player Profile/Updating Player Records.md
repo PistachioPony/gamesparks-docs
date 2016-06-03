@@ -1,3 +1,7 @@
+---
+src: Tutorials/Authentication and Player Profile/Updating Player Records.md
+---
+
 ### Introduction
 
 After a player has been created, you as the developer or the player may want to change details associated with the account such as password, userName, displayName etc This tutorial will demonstrate how to use the ChangeDetails request in cloud code.  

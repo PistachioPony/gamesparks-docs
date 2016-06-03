@@ -1,3 +1,7 @@
+---
+src: Tutorials/Cloud Code, and the Test Harness/Game REST API.md
+---
+
 # Game REST API
 
 The game REST API allows you to retrieve, create or update the full configuration for your game in JSON format.

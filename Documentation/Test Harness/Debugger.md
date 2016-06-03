@@ -1,3 +1,7 @@
+---
+src: Documentation/Test Harness/Debugger.md
+---
+
 # GameSparks Debugger
 
 The GameSparks Debugger allows you to test your [Cloud Code](/Documentation/Key Concepts/Cloud Code.md). If you have a an Event, Request, Response or Message that has custom Cloud Code written to it. By enabling the GameSparks Debugger, you can step through your code to examine what's happening, as it's happening.

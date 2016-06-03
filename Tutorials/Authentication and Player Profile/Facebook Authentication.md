@@ -1,3 +1,7 @@
+---
+src: Tutorials/Authentication and Player Profile/Facebook Authentication.md
+---
+
 # How to authenticate players using their Facebook accounts
 
 Facebook authentication allows you to provide your players with a simple way to sign in with their Facebook account details, and allows the GameSparks platform to then use the player’s profile to drive its social features.  In this exercise you’ll go through setting up the necessary configuration with Facebook and how you can then use that to connect your players.

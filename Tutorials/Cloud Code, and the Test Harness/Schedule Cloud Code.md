@@ -1,3 +1,7 @@
+---
+src: Tutorials/Cloud Code, and the Test Harness/Schedule Cloud Code.md
+---
+
 # How to schedule Cloud Code scripts
 
 There are two ways in which you can schedule Cloud Code scripts on the GameSparks platform, the first is the ability to schedule a Module script via the [SparkScheduler](/API Documentation/Cloud Code API/Utils/SparkScheduler.md) Cloud Code object, the second is to use one of the predefined system schedulers.

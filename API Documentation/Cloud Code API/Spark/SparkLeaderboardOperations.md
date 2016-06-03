@@ -1,3 +1,7 @@
+---
+src: API Documentation/Cloud Code API/Spark/SparkLeaderboardOperations.md
+---
+
 # SparkLeaderboardOperations
 
 A comparison operation on the owners (players in a player-based leaderboard, teams in a team-based leaderboard) of entries within leaderboards.

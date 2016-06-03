@@ -1,3 +1,7 @@
+---
+src: API Documentation/Cloud Code API/Spark/SparkLeaderboardPartition.md
+---
+
 # SparkLeaderboardPartition
 
 Represents a single partition of a leaderboard.  A partition is also a SparkLeaderboard and can be used wherever a SparkLeaderboard is used.

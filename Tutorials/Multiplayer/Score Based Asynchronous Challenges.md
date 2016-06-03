@@ -1,3 +1,7 @@
+---
+src: Tutorials/Multiplayer/Score Based Asynchronous Challenges.md
+---
+
 # Score Based Asynchronous Challenges
 
 Turn-based multiplayer gameplay between two or more players that can check in and play their turn when it's convenient. Similar to play-by-mail games and, more electronically, play-by-email.

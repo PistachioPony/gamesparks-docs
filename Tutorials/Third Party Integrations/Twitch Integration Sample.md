@@ -1,3 +1,7 @@
+---
+src: Tutorials/Third Party Integrations/Twitch Integration Sample.md
+---
+
 # Twitch Integration Sample
 
 # TwitchTV SDK Integration Test

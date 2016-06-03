@@ -1,3 +1,7 @@
+---
+src: Tutorials/Multiplayer/HowToMatchPlayers.md
+---
+
 # How to Match Players
 
 In this tutorial, you will create Match configuration with customised Thresholds in the GameSparks Portal and perform a Match in the Test Harness that will match Players in the game. As a brief example of these features, I may want to match Players based on their similar skill level in my game, so that Players can play against someone of equal ability to make it more enjoyable for all.  

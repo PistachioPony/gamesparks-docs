@@ -1,3 +1,7 @@
+---
+src: Tutorials/Third Party Integrations/Git Sync with Cloud Code.md
+---
+
 # Git Synchronisation with Cloud Code Import / Export
 
 If you're using GitHub for your repositories, Good News! It is possible to synchronise your Cloud Code with GitHub via the Import / Export features available in the platform.

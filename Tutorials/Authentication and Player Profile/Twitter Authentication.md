@@ -1,3 +1,7 @@
+---
+src: Tutorials/Authentication and Player Profile/Twitter Authentication.md
+---
+
 # How to authenticate a player using their Twitter account
 
 Twitter authentication allows you to provide your players with a simple way to sign in with their Twitter account, and allows the GameSparks platform to then use the player's profile to drive its social features. In this exercise you'll go through setting up the necessary configuration with Twitter and how you can then use that to connect your players.

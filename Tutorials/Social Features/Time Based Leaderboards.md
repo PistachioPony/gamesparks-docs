@@ -1,3 +1,7 @@
+---
+src: Tutorials/Social Features/Time Based Leaderboards.md
+---
+
 # How to create time based Leaderboards
 
 You can use the GameSparks platform to create Leaderboards that are based on time. Some examples of these are:

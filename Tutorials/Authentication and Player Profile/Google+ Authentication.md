@@ -1,3 +1,7 @@
+---
+src: Tutorials/Authentication and Player Profile/Google+ Authentication.md
+---
+
 # How to authenticate a player using their Google+ account
 
 Google+ authentication allows you to provide your players with a simple way to sign in with their Google+ account, and allows the GameSparks platform to then use the player's profile to drive its social features. In this exercise you'll go through setting up the necessary configuration with Google and how you can then use that to connect your players.

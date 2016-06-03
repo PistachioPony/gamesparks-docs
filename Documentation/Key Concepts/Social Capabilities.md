@@ -1,3 +1,7 @@
+---
+src: Documentation/Key Concepts/Social Capabilities.md
+---
+
 # Social Capabilities
 
 The GameSparks platform allows you to make use of players' existing social media relationships to build a truly social gaming experience.

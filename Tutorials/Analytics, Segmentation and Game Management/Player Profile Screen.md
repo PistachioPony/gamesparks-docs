@@ -1,3 +1,7 @@
+---
+src: Tutorials/Analytics, Segmentation and Game Management/Player Profile Screen.md
+---
+
 # Player Profile Screen
 
 ## Introduction

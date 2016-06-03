@@ -1,6 +1,8 @@
 ---
 nav_sort: 14
+src: Documentation/Configurator/Segments.md
 ---
+
 # Segments
 
 ## What are Segments?

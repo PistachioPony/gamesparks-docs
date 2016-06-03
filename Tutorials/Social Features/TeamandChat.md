@@ -1,3 +1,7 @@
+---
+src: Tutorials/Social Features/TeamandChat.md
+---
+
 # Setting up a Team/Party with chat
 
 ## Introduction

@@ -1,5 +1,6 @@
 ---
 nav_sort: 4
+src: Documentation/Configurator/Running Totals.md
 ---
 
 # Running Totals
