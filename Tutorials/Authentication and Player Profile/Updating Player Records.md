@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Authentication and Player Profile/Updating Player Records.md
+src: /Tutorials/Authentication and Player Profile/Updating Player Records.md
 ---
 
 ### Introduction

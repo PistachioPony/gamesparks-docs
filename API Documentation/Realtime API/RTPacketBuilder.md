@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Realtime API/RTPacketBuilder.md
+src: /API Documentation/Realtime API/RTPacketBuilder.md
 ---
 
 # RTPacketBuilder

@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Message API/Misc/UploadCompleteMessage.md
+src: /API Documentation/Message API/Misc/UploadCompleteMessage.md
 ---
 
 # UploadCompleteMessage

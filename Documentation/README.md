@@ -1,6 +1,6 @@
 ---
 nav_sort: 2
-src: Documentation/README.md
+src: /Documentation/README.md
 ---
 
 # Documentation

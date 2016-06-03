@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Multiplayer/DeclineChallengeRequest.md
+src: /API Documentation/Request API/Multiplayer/DeclineChallengeRequest.md
 ---
 
 # DeclineChallengeRequest

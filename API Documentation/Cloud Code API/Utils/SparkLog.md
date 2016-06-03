@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Cloud Code API/Utils/SparkLog.md
+src: /API Documentation/Cloud Code API/Utils/SparkLog.md
 ---
 
 # SparkLog

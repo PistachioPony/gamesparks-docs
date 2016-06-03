@@ -1,5 +1,5 @@
 ---
-src: Documentation/Configurator/Capabilities.md
+src: /Documentation/Configurator/Capabilities.md
 ---
 
 # Capabilities

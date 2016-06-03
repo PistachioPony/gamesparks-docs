@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Store/PsnBuyGoodsRequest.md
+src: /API Documentation/Request API/Store/PsnBuyGoodsRequest.md
 ---
 
 # PsnBuyGoodsRequest

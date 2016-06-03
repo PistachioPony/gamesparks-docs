@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Message API/Multiplayer/ChallengeChatMessage.md
+src: /API Documentation/Message API/Multiplayer/ChallengeChatMessage.md
 ---
 
 # ChallengeChatMessage

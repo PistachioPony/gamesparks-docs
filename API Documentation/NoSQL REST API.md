@@ -1,5 +1,5 @@
 ---
-src: API Documentation/NoSQL REST API.md
+src: /API Documentation/NoSQL REST API.md
 ---
 
 # NoSQL Explorer REST API

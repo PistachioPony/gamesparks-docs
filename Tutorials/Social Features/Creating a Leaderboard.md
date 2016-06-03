@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Social Features/Creating a Leaderboard.md
+src: /Tutorials/Social Features/Creating a Leaderboard.md
 ---
 
 # How to create and use a Leaderboard

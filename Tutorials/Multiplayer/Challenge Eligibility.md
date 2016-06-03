@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Multiplayer/Challenge Eligibility.md
+src: /Tutorials/Multiplayer/Challenge Eligibility.md
 ---
 
 # Challenge Eligibility

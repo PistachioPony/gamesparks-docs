@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Third Party Integrations/ActionScript SDK Setup.md
+src: /Tutorials/Third Party Integrations/ActionScript SDK Setup.md
 ---
 
 # ActionScript SDK Setup

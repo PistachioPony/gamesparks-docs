@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Authentication/AuthenticationRequest.md
+src: /API Documentation/Request API/Authentication/AuthenticationRequest.md
 ---
 
 # AuthenticationRequest

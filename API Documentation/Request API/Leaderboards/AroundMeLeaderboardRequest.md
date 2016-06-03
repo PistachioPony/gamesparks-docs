@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Leaderboards/AroundMeLeaderboardRequest.md
+src: /API Documentation/Request API/Leaderboards/AroundMeLeaderboardRequest.md
 ---
 
 # AroundMeLeaderboardRequest

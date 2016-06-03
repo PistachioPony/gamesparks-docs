@@ -1,6 +1,6 @@
 ---
 nav_sort: 2
-src: Getting Started/Creating An Achievement/Unreal Achievements.md
+src: /Getting Started/Creating An Achievement/Unreal Achievements.md
 ---
 
 # Unreal Achievements

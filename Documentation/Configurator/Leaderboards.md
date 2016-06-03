@@ -1,6 +1,6 @@
 ---
 nav_sort: 5
-src: Documentation/Configurator/Leaderboards.md
+src: /Documentation/Configurator/Leaderboards.md
 ---
 
 # Leaderboards

@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Multiplayer/ListChallengeTypeRequest.md
+src: /API Documentation/Request API/Multiplayer/ListChallengeTypeRequest.md
 ---
 
 # ListChallengeTypeRequest

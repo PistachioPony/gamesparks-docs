@@ -1,6 +1,6 @@
 ---
 nav_sort: 7
-src: Documentation/Configurator/Virtual Goods.md
+src: /Documentation/Configurator/Virtual Goods.md
 ---
 
 # Virtual Goods

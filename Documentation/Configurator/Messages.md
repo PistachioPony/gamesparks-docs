@@ -1,6 +1,6 @@
 ---
 nav_sort: 12
-src: Documentation/Configurator/Messages.md
+src: /Documentation/Configurator/Messages.md
 ---
 
 # Messages

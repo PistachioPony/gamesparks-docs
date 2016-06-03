@@ -1,5 +1,5 @@
 ---
-src: Documentation/Key Concepts/Snapshots.md
+src: /Documentation/Key Concepts/Snapshots.md
 ---
 
 # Snapshots

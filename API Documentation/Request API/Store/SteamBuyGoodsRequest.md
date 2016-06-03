@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Store/SteamBuyGoodsRequest.md
+src: /API Documentation/Request API/Store/SteamBuyGoodsRequest.md
 ---
 
 # SteamBuyGoodsRequest

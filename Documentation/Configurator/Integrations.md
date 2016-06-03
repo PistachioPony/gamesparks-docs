@@ -1,6 +1,6 @@
 ---
 nav_sort: 15
-src: Documentation/Configurator/Integrations.md
+src: /Documentation/Configurator/Integrations.md
 ---
 
 # Integrations

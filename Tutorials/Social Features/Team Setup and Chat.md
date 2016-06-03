@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Social Features/Team Setup and Chat.md
+src: /Tutorials/Social Features/Team Setup and Chat.md
 ---
 
 # Setting up a Team/Clan/Party including Chat

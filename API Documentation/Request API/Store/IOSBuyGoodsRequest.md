@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Store/IOSBuyGoodsRequest.md
+src: /API Documentation/Request API/Store/IOSBuyGoodsRequest.md
 ---
 
 # IOSBuyGoodsRequest

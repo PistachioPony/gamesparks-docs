@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Cloud Code API/Spark/SparkPushRegistration.md
+src: /API Documentation/Cloud Code API/Spark/SparkPushRegistration.md
 ---
 
 # SparkPushRegistration

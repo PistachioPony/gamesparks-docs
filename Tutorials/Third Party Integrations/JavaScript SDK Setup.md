@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Third Party Integrations/JavaScript SDK Setup.md
+src: /Tutorials/Third Party Integrations/JavaScript SDK Setup.md
 ---
 
 # JavaScript SDK Setup

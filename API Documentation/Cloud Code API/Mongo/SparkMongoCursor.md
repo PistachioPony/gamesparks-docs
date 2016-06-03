@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Cloud Code API/Mongo/SparkMongoCursor.md
+src: /API Documentation/Cloud Code API/Mongo/SparkMongoCursor.md
 ---
 
 # SparkMongoCursor

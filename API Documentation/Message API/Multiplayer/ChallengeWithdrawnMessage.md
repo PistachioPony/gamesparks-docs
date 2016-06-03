@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Message API/Multiplayer/ChallengeWithdrawnMessage.md
+src: /API Documentation/Message API/Multiplayer/ChallengeWithdrawnMessage.md
 ---
 
 # ChallengeWithdrawnMessage

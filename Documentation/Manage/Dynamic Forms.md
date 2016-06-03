@@ -1,5 +1,5 @@
 ---
-src: Documentation/Manage/Dynamic Forms.md
+src: /Documentation/Manage/Dynamic Forms.md
 ---
 
 # Dynamic Forms

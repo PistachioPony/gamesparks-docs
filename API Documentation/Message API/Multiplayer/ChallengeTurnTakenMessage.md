@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Message API/Multiplayer/ChallengeTurnTakenMessage.md
+src: /API Documentation/Message API/Multiplayer/ChallengeTurnTakenMessage.md
 ---
 
 # ChallengeTurnTakenMessage

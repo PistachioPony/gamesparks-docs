@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Teams/JoinTeamRequest.md
+src: /API Documentation/Request API/Teams/JoinTeamRequest.md
 ---
 
 # JoinTeamRequest

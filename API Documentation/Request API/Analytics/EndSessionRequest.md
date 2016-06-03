@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Analytics/EndSessionRequest.md
+src: /API Documentation/Request API/Analytics/EndSessionRequest.md
 ---
 
 # EndSessionRequest

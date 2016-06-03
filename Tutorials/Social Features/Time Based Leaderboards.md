@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Social Features/Time Based Leaderboards.md
+src: /Tutorials/Social Features/Time Based Leaderboards.md
 ---
 
 # How to create time based Leaderboards

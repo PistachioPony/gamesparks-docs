@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Multiplayer/ChallengesWithWagers.md
+src: /Tutorials/Multiplayer/ChallengesWithWagers.md
 ---
 
 # Challenges With Wagers

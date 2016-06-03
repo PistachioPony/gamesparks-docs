@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Player/ChangeUserDetailsRequest.md
+src: /API Documentation/Request API/Player/ChangeUserDetailsRequest.md
 ---
 
 # ChangeUserDetailsRequest

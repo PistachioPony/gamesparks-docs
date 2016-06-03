@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Authentication/KongregateConnectRequest.md
+src: /API Documentation/Request API/Authentication/KongregateConnectRequest.md
 ---
 
 # KongregateConnectRequest

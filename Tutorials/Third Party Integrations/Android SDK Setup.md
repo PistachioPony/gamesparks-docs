@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Third Party Integrations/Android SDK Setup.md
+src: /Tutorials/Third Party Integrations/Android SDK Setup.md
 ---
 
 # Android SDK Setup

@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Multiplayer/Score Based Challenges.md
+src: /Tutorials/Multiplayer/Score Based Challenges.md
 ---
 
 # Score Based Challenges

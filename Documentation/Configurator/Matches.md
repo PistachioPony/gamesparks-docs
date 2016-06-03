@@ -1,6 +1,6 @@
 ---
 nav_sort: 10
-src: Documentation/Configurator/Matches.md
+src: /Documentation/Configurator/Matches.md
 ---
 
 # Matches

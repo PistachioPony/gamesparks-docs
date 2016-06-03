@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Analytics, Segmentation and Game Management/Segmented Properties.md
+src: /Tutorials/Analytics, Segmentation and Game Management/Segmented Properties.md
 ---
 
 # Segmented Properties

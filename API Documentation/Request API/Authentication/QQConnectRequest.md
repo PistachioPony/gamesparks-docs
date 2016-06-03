@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Authentication/QQConnectRequest.md
+src: /API Documentation/Request API/Authentication/QQConnectRequest.md
 ---
 
 # QQConnectRequest

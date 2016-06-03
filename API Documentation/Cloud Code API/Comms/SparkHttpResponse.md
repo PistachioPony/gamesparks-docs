@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Cloud Code API/Comms/SparkHttpResponse.md
+src: /API Documentation/Cloud Code API/Comms/SparkHttpResponse.md
 ---
 
 # SparkHttpResponse

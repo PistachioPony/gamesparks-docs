@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Player/AccountDetailsRequest.md
+src: /API Documentation/Request API/Player/AccountDetailsRequest.md
 ---
 
 # AccountDetailsRequest

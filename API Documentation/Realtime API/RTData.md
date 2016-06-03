@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Realtime API/RTData.md
+src: /API Documentation/Realtime API/RTData.md
 ---
 
 # RTData

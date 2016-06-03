@@ -1,5 +1,5 @@
 ---
-src: README.md
+src: /README.md
 ---
 
 # The GameSparks homepage.

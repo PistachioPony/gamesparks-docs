@@ -1,6 +1,6 @@
 ---
 nav_sort: 6
-src: Documentation/Configurator/Teams.md
+src: /Documentation/Configurator/Teams.md
 ---
 
 # Teams

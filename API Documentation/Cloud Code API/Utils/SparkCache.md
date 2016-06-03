@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Cloud Code API/Utils/SparkCache.md
+src: /API Documentation/Cloud Code API/Utils/SparkCache.md
 ---
 
 # SparkCache

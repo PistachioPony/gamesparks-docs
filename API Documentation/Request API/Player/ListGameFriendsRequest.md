@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Player/ListGameFriendsRequest.md
+src: /API Documentation/Request API/Player/ListGameFriendsRequest.md
 ---
 
 # ListGameFriendsRequest

@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Authentication/WeChatConnectRequest.md
+src: /API Documentation/Request API/Authentication/WeChatConnectRequest.md
 ---
 
 # WeChatConnectRequest

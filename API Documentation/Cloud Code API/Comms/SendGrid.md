@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Cloud Code API/Comms/SendGrid.md
+src: /API Documentation/Cloud Code API/Comms/SendGrid.md
 ---
 
 # SendGrid

@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Message API/Player/AchievementEarnedMessage.md
+src: /API Documentation/Message API/Player/AchievementEarnedMessage.md
 ---
 
 # AchievementEarnedMessage

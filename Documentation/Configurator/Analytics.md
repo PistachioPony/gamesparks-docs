@@ -1,6 +1,5 @@
 ---
-nav_sort: 1
-src: Documentation/Configurator/Analytics.md
+src: /Documentation/Configurator/Analytics.md
 ---
 
 # Analytics

@@ -1,5 +1,5 @@
 ---
-src: Documentation/NoSQL Explorer.md
+src: /Documentation/NoSQL Explorer.md
 ---
 
 # NoSQL Explorer

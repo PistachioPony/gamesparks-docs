@@ -1,6 +1,6 @@
 ---
 nav_sort: 5
-src: Getting Started/Creating An Achievement/README.md
+src: /Getting Started/Creating An Achievement/README.md
 ---
 
 # Creating an Achievement

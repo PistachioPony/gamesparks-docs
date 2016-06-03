@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Cloud Code API/Spark/SparkParticipant.md
+src: /API Documentation/Cloud Code API/Spark/SparkParticipant.md
 ---
 
 # SparkParticipant

@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Social Features/Leaderboards Entries.md
+src: /Tutorials/Social Features/Leaderboards Entries.md
 ---
 
 # Leaderboards - Listing Entries

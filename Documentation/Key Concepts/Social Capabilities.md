@@ -1,5 +1,5 @@
 ---
-src: Documentation/Key Concepts/Social Capabilities.md
+src: /Documentation/Key Concepts/Social Capabilities.md
 ---
 
 # Social Capabilities

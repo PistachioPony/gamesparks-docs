@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Admin/RevokePurchaseGoodsRequest.md
+src: /API Documentation/Request API/Admin/RevokePurchaseGoodsRequest.md
 ---
 
 # RevokePurchaseGoodsRequest

@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Cloud Code API/Spark/SparkLeaderboardCursor.md
+src: /API Documentation/Cloud Code API/Spark/SparkLeaderboardCursor.md
 ---
 
 # SparkLeaderboardCursor

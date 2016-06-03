@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Authentication/GameCenterConnectRequest.md
+src: /API Documentation/Request API/Authentication/GameCenterConnectRequest.md
 ---
 
 # GameCenterConnectRequest

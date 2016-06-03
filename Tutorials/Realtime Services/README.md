@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Realtime Services/README.md
+src: /Tutorials/Realtime Services/README.md
 ---
 
 # Realtime Services

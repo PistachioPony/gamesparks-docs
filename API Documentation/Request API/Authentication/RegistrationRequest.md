@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Authentication/RegistrationRequest.md
+src: /API Documentation/Request API/Authentication/RegistrationRequest.md
 ---
 
 # RegistrationRequest

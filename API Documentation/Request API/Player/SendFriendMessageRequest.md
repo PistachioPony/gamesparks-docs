@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Player/SendFriendMessageRequest.md
+src: /API Documentation/Request API/Player/SendFriendMessageRequest.md
 ---
 
 # SendFriendMessageRequest

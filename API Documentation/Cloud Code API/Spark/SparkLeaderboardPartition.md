@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Cloud Code API/Spark/SparkLeaderboardPartition.md
+src: /API Documentation/Cloud Code API/Spark/SparkLeaderboardPartition.md
 ---
 
 # SparkLeaderboardPartition

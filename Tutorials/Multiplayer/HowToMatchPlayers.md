@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Multiplayer/HowToMatchPlayers.md
+src: /Tutorials/Multiplayer/HowToMatchPlayers.md
 ---
 
 # How to Match Players

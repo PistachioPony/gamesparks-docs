@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Leaderboards/LeaderboardDataRequest.md
+src: /API Documentation/Request API/Leaderboards/LeaderboardDataRequest.md
 ---
 
 # LeaderboardDataRequest

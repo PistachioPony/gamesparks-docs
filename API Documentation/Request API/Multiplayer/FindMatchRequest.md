@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Multiplayer/FindMatchRequest.md
+src: /API Documentation/Request API/Multiplayer/FindMatchRequest.md
 ---
 
 # FindMatchRequest

@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Admin/ListBulkJobsAdminRequest.md
+src: /API Documentation/Request API/Admin/ListBulkJobsAdminRequest.md
 ---
 
 # ListBulkJobsAdminRequest

@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Authentication and Player Profile/Twitter Authentication.md
+src: /Tutorials/Authentication and Player Profile/Twitter Authentication.md
 ---
 
 # How to authenticate a player using their Twitter account

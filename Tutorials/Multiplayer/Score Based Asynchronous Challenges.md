@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Multiplayer/Score Based Asynchronous Challenges.md
+src: /Tutorials/Multiplayer/Score Based Asynchronous Challenges.md
 ---
 
 # Score Based Asynchronous Challenges

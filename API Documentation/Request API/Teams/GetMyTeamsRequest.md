@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Teams/GetMyTeamsRequest.md
+src: /API Documentation/Request API/Teams/GetMyTeamsRequest.md
 ---
 
 # GetMyTeamsRequest

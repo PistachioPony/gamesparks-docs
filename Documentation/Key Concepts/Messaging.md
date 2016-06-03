@@ -1,5 +1,5 @@
 ---
-src: Documentation/Key Concepts/Messaging.md
+src: /Documentation/Key Concepts/Messaging.md
 ---
 
 # Messaging

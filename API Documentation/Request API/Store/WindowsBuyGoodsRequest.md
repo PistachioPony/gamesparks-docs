@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Store/WindowsBuyGoodsRequest.md
+src: /API Documentation/Request API/Store/WindowsBuyGoodsRequest.md
 ---
 
 # WindowsBuyGoodsRequest

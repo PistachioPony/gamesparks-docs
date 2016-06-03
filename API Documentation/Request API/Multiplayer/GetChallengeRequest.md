@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Multiplayer/GetChallengeRequest.md
+src: /API Documentation/Request API/Multiplayer/GetChallengeRequest.md
 ---
 
 # GetChallengeRequest

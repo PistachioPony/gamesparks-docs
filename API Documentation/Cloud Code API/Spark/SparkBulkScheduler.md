@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Cloud Code API/Spark/SparkBulkScheduler.md
+src: /API Documentation/Cloud Code API/Spark/SparkBulkScheduler.md
 ---
 
 # SparkBulkScheduler

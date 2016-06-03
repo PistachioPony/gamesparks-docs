@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Store/BuyVirtualGoodsRequest.md
+src: /API Documentation/Request API/Store/BuyVirtualGoodsRequest.md
 ---
 
 # BuyVirtualGoodsRequest

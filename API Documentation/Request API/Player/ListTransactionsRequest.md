@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Player/ListTransactionsRequest.md
+src: /API Documentation/Request API/Player/ListTransactionsRequest.md
 ---
 
 # ListTransactionsRequest

@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Cloud Code API/Utils/SparkMessage.md
+src: /API Documentation/Cloud Code API/Utils/SparkMessage.md
 ---
 
 # SparkMessage

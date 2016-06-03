@@ -1,6 +1,6 @@
 ---
 nav_sort: 2
-src: Tutorials/Multiplayer/Hearthstone Example/Matchmaking.md
+src: /Tutorials/Multiplayer/Hearthstone Example/Matchmaking.md
 ---
 
 # Matchmaking

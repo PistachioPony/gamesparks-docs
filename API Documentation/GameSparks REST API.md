@@ -1,5 +1,5 @@
 ---
-src: API Documentation/GameSparks REST API.md
+src: /API Documentation/GameSparks REST API.md
 ---
 
 # GameSparks REST API

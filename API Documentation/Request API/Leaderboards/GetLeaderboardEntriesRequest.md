@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Leaderboards/GetLeaderboardEntriesRequest.md
+src: /API Documentation/Request API/Leaderboards/GetLeaderboardEntriesRequest.md
 ---
 
 # GetLeaderboardEntriesRequest

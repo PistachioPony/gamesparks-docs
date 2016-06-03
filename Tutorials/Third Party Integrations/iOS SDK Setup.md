@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Third Party Integrations/iOS SDK Setup.md
+src: /Tutorials/Third Party Integrations/iOS SDK Setup.md
 ---
 
 # iOS SDK Setup

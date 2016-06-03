@@ -1,6 +1,6 @@
 ---
 nav_sort: 1
-src: Getting Started/Creating A Game/README.md
+src: /Getting Started/Creating A Game/README.md
 ---
 
 # Creating a Game

@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Social Features/Team Leaderboard.md
+src: /Tutorials/Social Features/Team Leaderboard.md
 ---
 
 # How to create a team Leaderboard

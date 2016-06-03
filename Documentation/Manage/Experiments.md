@@ -1,5 +1,5 @@
 ---
-src: Documentation/Manage/Experiments.md
+src: /Documentation/Manage/Experiments.md
 ---
 
 # Experiments

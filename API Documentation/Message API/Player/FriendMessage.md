@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Message API/Player/FriendMessage.md
+src: /API Documentation/Message API/Player/FriendMessage.md
 ---
 
 # FriendMessage

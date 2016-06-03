@@ -1,5 +1,5 @@
 ---
-src: Documentation/Test Harness/Debugger.md
+src: /Documentation/Test Harness/Debugger.md
 ---
 
 # GameSparks Debugger

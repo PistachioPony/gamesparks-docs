@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Realtime API/RTDataBuilder.md
+src: /API Documentation/Realtime API/RTDataBuilder.md
 ---
 
 # RTDataBuilder

@@ -1,6 +1,6 @@
 ---
 nav_sort: 13
-src: Documentation/Configurator/Downloadables.md
+src: /Documentation/Configurator/Downloadables.md
 ---
 
 # Downloadables

@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Currencies, Virtual Goods and Achievements/Leaderboard Achievements.md
+src: /Tutorials/Currencies, Virtual Goods and Achievements/Leaderboard Achievements.md
 ---
 
 # How to create and award Achievements via a Leaderboard?

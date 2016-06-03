@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Multiplayer/MatchBasedChallenges.md
+src: /Tutorials/Multiplayer/MatchBasedChallenges.md
 ---
 
 # Match Based Challenges

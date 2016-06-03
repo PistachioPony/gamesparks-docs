@@ -1,6 +1,6 @@
 ---
 nav_sort: 3
-src: Getting Started/Using Cloud Code/README.md
+src: /Getting Started/Using Cloud Code/README.md
 ---
 
 # Using Cloud Code

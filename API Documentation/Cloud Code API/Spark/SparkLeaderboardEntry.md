@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Cloud Code API/Spark/SparkLeaderboardEntry.md
+src: /API Documentation/Cloud Code API/Spark/SparkLeaderboardEntry.md
 ---
 
 # SparkLeaderboardEntry

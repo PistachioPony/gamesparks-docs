@@ -1,6 +1,6 @@
 ---
 nav_sort: 3
-src: Tutorials/Multiplayer/Hearthstone Example/Challenge.md
+src: /Tutorials/Multiplayer/Hearthstone Example/Challenge.md
 ---
 
 # Challenge

@@ -1,6 +1,6 @@
 ---
 nav_sort: 1
-src: Documentation/Key Concepts/README.md
+src: /Documentation/Key Concepts/README.md
 ---
 
 # Key Concepts

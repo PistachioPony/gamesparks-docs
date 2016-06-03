@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Realtime API/RTPacket.md
+src: /API Documentation/Realtime API/RTPacket.md
 ---
 
 # RTPacket

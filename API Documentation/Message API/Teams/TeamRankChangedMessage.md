@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Message API/Teams/TeamRankChangedMessage.md
+src: /API Documentation/Message API/Teams/TeamRankChangedMessage.md
 ---
 
 # TeamRankChangedMessage

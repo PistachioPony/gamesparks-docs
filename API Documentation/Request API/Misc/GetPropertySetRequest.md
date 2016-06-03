@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Misc/GetPropertySetRequest.md
+src: /API Documentation/Request API/Misc/GetPropertySetRequest.md
 ---
 
 # GetPropertySetRequest

@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Cloud Code API/Misc/SparkVirtualGood.md
+src: /API Documentation/Cloud Code API/Misc/SparkVirtualGood.md
 ---
 
 # SparkVirtualGood

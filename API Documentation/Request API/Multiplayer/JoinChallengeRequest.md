@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Multiplayer/JoinChallengeRequest.md
+src: /API Documentation/Request API/Multiplayer/JoinChallengeRequest.md
 ---
 
 # JoinChallengeRequest

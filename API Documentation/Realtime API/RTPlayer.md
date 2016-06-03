@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Realtime API/RTPlayer.md
+src: /API Documentation/Realtime API/RTPlayer.md
 ---
 
 # RTPlayer

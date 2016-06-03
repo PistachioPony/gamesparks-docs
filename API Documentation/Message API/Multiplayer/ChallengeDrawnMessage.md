@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Message API/Multiplayer/ChallengeDrawnMessage.md
+src: /API Documentation/Message API/Multiplayer/ChallengeDrawnMessage.md
 ---
 
 # ChallengeDrawnMessage

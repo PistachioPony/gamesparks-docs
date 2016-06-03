@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Third Party Integrations/Git Sync with Cloud Code.md
+src: /Tutorials/Third Party Integrations/Git Sync with Cloud Code.md
 ---
 
 # Git Synchronisation with Cloud Code Import / Export

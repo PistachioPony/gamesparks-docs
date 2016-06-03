@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Misc/GetDownloadableRequest.md
+src: /API Documentation/Request API/Misc/GetDownloadableRequest.md
 ---
 
 # GetDownloadableRequest

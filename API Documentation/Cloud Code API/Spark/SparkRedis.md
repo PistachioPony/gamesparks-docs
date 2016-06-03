@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Cloud Code API/Spark/SparkRedis.md
+src: /API Documentation/Cloud Code API/Spark/SparkRedis.md
 ---
 
 # SparkRedis

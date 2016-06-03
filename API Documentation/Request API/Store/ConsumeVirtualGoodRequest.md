@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Store/ConsumeVirtualGoodRequest.md
+src: /API Documentation/Request API/Store/ConsumeVirtualGoodRequest.md
 ---
 
 # ConsumeVirtualGoodRequest

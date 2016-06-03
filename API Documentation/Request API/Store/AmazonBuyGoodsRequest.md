@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Store/AmazonBuyGoodsRequest.md
+src: /API Documentation/Request API/Store/AmazonBuyGoodsRequest.md
 ---
 
 # AmazonBuyGoodsRequest

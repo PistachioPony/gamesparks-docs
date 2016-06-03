@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Authentication and Player Profile/Twitch Authentication.md
+src: /Tutorials/Authentication and Player Profile/Twitch Authentication.md
 ---
 
 # How to authenticate a player using their Twitch account

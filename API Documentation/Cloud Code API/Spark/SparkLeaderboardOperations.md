@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Cloud Code API/Spark/SparkLeaderboardOperations.md
+src: /API Documentation/Cloud Code API/Spark/SparkLeaderboardOperations.md
 ---
 
 # SparkLeaderboardOperations

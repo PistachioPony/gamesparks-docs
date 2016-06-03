@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Realtime API/RTSession.md
+src: /API Documentation/Realtime API/RTSession.md
 ---
 
 # RTSession

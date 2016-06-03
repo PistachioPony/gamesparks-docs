@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Cloud Code API/Misc/SparkTeamType.md
+src: /API Documentation/Cloud Code API/Misc/SparkTeamType.md
 ---
 
 # SparkTeamType

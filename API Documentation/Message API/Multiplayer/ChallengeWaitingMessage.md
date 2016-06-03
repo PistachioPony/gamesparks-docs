@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Message API/Multiplayer/ChallengeWaitingMessage.md
+src: /API Documentation/Message API/Multiplayer/ChallengeWaitingMessage.md
 ---
 
 # ChallengeWaitingMessage

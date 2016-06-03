@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Player/GetMessageRequest.md
+src: /API Documentation/Request API/Player/GetMessageRequest.md
 ---
 
 # GetMessageRequest

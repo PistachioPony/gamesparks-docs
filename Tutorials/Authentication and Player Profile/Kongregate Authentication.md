@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Authentication and Player Profile/Kongregate Authentication.md
+src: /Tutorials/Authentication and Player Profile/Kongregate Authentication.md
 ---
 
 # How to authenticate a player using their Kongregate account

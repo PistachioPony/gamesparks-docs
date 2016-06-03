@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Cloud Code API/Spark/SparkPlayer.md
+src: /API Documentation/Cloud Code API/Spark/SparkPlayer.md
 ---
 
 # SparkPlayer

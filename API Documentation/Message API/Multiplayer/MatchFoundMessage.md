@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Message API/Multiplayer/MatchFoundMessage.md
+src: /API Documentation/Message API/Multiplayer/MatchFoundMessage.md
 ---
 
 # MatchFoundMessage

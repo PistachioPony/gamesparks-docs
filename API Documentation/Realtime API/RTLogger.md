@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Realtime API/RTLogger.md
+src: /API Documentation/Realtime API/RTLogger.md
 ---
 
 # RTLogger

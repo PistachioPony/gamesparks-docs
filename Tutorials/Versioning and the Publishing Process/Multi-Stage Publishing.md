@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Versioning and the Publishing Process/Multi-Stage Publishing.md
+src: /Tutorials/Versioning and the Publishing Process/Multi-Stage Publishing.md
 ---
 
 # Multi-Stage Publishing

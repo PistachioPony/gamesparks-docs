@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Versioning and the Publishing Process/Versioning and Publishing.md
+src: /Tutorials/Versioning and the Publishing Process/Versioning and Publishing.md
 ---
 
 # Versioning and Publishing

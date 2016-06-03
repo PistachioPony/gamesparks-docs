@@ -1,5 +1,5 @@
 ---
-src: Documentation/Key Concepts/Authentication.md
+src: /Documentation/Key Concepts/Authentication.md
 ---
 
 # Authentication

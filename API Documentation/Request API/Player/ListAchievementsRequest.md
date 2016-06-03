@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Player/ListAchievementsRequest.md
+src: /API Documentation/Request API/Player/ListAchievementsRequest.md
 ---
 
 # ListAchievementsRequest

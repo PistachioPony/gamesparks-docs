@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Authentication and Player Profile/Facebook Authentication.md
+src: /Tutorials/Authentication and Player Profile/Facebook Authentication.md
 ---
 
 # How to authenticate players using their Facebook accounts

@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Store/ListVirtualGoodsRequest.md
+src: /API Documentation/Request API/Store/ListVirtualGoodsRequest.md
 ---
 
 # ListVirtualGoodsRequest

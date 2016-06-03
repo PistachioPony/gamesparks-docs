@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Cloud Code API/Mongo/SparkMongoCollectionReadOnly.md
+src: /API Documentation/Cloud Code API/Mongo/SparkMongoCollectionReadOnly.md
 ---
 
 # SparkMongoCollectionReadOnly

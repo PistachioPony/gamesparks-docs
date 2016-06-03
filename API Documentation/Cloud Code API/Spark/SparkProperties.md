@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Cloud Code API/Spark/SparkProperties.md
+src: /API Documentation/Cloud Code API/Spark/SparkProperties.md
 ---
 
 # SparkProperties

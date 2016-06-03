@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Cloud Code API/Spark/SparkTeam.md
+src: /API Documentation/Cloud Code API/Spark/SparkTeam.md
 ---
 
 # SparkTeam

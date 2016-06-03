@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Admin/ScheduleBulkJobAdminRequest.md
+src: /API Documentation/Request API/Admin/ScheduleBulkJobAdminRequest.md
 ---
 
 # ScheduleBulkJobAdminRequest

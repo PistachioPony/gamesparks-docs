@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Authentication/GooglePlayConnectRequest.md
+src: /API Documentation/Request API/Authentication/GooglePlayConnectRequest.md
 ---
 
 # GooglePlayConnectRequest

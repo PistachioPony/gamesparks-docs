@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Analytics, Segmentation and Game Management/Custom Analytics Dashboards.md
+src: /Tutorials/Analytics, Segmentation and Game Management/Custom Analytics Dashboards.md
 ---
 
 # Custom Analytics Dashboards

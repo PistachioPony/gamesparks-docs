@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Cloud Code, and the Test Harness/Schedule Cloud Code.md
+src: /Tutorials/Cloud Code, and the Test Harness/Schedule Cloud Code.md
 ---
 
 # How to schedule Cloud Code scripts

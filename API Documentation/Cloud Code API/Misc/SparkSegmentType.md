@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Cloud Code API/Misc/SparkSegmentType.md
+src: /API Documentation/Cloud Code API/Misc/SparkSegmentType.md
 ---
 
 # SparkSegmentType

@@ -1,6 +1,5 @@
 ---
-nav_sort: 11
-src: Documentation/Configurator/Cloud Code.md
+src: /Documentation/Configurator/Cloud Code.md
 ---
 
 # Cloud Code

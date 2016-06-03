@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Cloud Code API/Misc/SparkChallengeType.md
+src: /API Documentation/Cloud Code API/Misc/SparkChallengeType.md
 ---
 
 # SparkChallengeType

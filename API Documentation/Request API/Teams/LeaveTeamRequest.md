@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Teams/LeaveTeamRequest.md
+src: /API Documentation/Request API/Teams/LeaveTeamRequest.md
 ---
 
 # LeaveTeamRequest

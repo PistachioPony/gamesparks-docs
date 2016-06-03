@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Store/GooglePlayBuyGoodsRequest.md
+src: /API Documentation/Request API/Store/GooglePlayBuyGoodsRequest.md
 ---
 
 # GooglePlayBuyGoodsRequest

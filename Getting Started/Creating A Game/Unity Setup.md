@@ -1,6 +1,6 @@
 ---
 nav_sort: 1
-src: Getting Started/Creating A Game/Unity Setup.md
+src: /Getting Started/Creating A Game/Unity Setup.md
 ---
 
 # Unity Setup

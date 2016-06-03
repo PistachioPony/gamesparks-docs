@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Message API/Misc/SessionTerminatedMessage.md
+src: /API Documentation/Message API/Misc/SessionTerminatedMessage.md
 ---
 
 # SessionTerminatedMessage

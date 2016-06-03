@@ -1,6 +1,6 @@
 ---
 nav_sort: 3
-src: Getting Started/Using Authentication/ActionScript Authentication.md
+src: /Getting Started/Using Authentication/ActionScript Authentication.md
 ---
 
 # ActionScript Authentication

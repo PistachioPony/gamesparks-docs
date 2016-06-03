@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Player/SocialDisconnectRequest.md
+src: /API Documentation/Request API/Player/SocialDisconnectRequest.md
 ---
 
 # SocialDisconnectRequest

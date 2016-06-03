@@ -1,5 +1,5 @@
 ---
-src: Tutorials/Cloud Code, and the Test Harness/Password Change.md
+src: /Tutorials/Cloud Code, and the Test Harness/Password Change.md
 ---
 
 # How to change a players passwords

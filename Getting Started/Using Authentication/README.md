@@ -1,6 +1,6 @@
 ---
 nav_sort: 2
-src: Getting Started/Using Authentication/README.md
+src: /Getting Started/Using Authentication/README.md
 ---
 
 # Using Authentication

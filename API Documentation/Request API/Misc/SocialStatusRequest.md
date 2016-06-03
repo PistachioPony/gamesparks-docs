@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Misc/SocialStatusRequest.md
+src: /API Documentation/Request API/Misc/SocialStatusRequest.md
 ---
 
 # SocialStatusRequest

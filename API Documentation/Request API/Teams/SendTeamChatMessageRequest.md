@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Teams/SendTeamChatMessageRequest.md
+src: /API Documentation/Request API/Teams/SendTeamChatMessageRequest.md
 ---
 
 # SendTeamChatMessageRequest

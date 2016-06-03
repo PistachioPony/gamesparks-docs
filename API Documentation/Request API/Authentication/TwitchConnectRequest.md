@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Authentication/TwitchConnectRequest.md
+src: /API Documentation/Request API/Authentication/TwitchConnectRequest.md
 ---
 
 # TwitchConnectRequest

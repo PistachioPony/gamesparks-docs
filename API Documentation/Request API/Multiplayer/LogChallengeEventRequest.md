@@ -1,5 +1,5 @@
 ---
-src: API Documentation/Request API/Multiplayer/LogChallengeEventRequest.md
+src: /API Documentation/Request API/Multiplayer/LogChallengeEventRequest.md
 ---
 
 # LogChallengeEventRequest
