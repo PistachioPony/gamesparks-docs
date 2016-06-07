@@ -1,5 +1,5 @@
 ---
-src: /Tutorials/Third Party Integrations/ActionScript SDK Setup.md
+src: /SDK Center/ActionScript.md
 ---
 
 # ActionScript SDK Setup
@@ -29,7 +29,7 @@ Right click your project and select "Properties"
 
 Select "Flex Build Path" or "ActionScript Build Path" (Depending on your project type). Add "gamesparks-as3-sdk.swc" to your library path.
 
-![](img/ActionScript/2.png) 
+![](img/ActionScript/2.png)
 
 ## Initialising the SDK
 
