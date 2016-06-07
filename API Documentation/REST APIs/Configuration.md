@@ -1,6 +1,4 @@
 ---
-iframe: /assets/swagger/config.html
-title: Configuration REST API
+swagger: https://portal.gamesparks.net/swagger/restConfigApiDocs
 src: /API Documentation/REST APIs/Configuration.md
 ---
-
