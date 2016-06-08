@@ -1,5 +1,4 @@
 ---
-nav_sort: 15
 src: /Documentation/Configurator/Integrations.md
 ---
 
@@ -33,7 +32,7 @@ Google Integrations tab allows you to set up Google Plus Authentication for 
 
 ### Apple Integration
 
-Apple Integrations tab allows configuring [IOS Push Notifications](/Tutorials/Social Features/iOS Push Notifications.md) as well as [IOS IAPs](/Tutorials/Currencies, Virtual Goods and Achievements/In App purchases.md) for your game.
+Apple Integrations tab allows configuring [IOS Push Notifications](/Tutorials/Social Features/iOS Push Notifications.md) as well as [IOS IAPs](/Tutorials/Currencies, Virtual Goods and Achievements/In App Purchases.md) for your game.
 
 ![](img/Integrations/5.jpg)
 

@@ -24,7 +24,7 @@ The *Visual* editor provides an error-free method of adding your JSON configurat
 
 Switching back and forth between the two views will update them accordingly, allowing you to use both views when writing either simpler or more complex parts of your JSON configuration.
 
-*3.* Give your property a Short Code, Name and Description. As usual you'll refer to the Property by its ShortCode when your accessing it programmatically.
+*3.* Give your property a Short Code, Name and Description. As usual, you refer to the Property by its ShortCode when you access it programmatically.
 
 ![](img/SegmentedProperties/2.png)
 

@@ -1,6 +1,6 @@
 ---
 nav_sort: 3
-src: /Getting Started/Creating An Achievement/ActionScript Achievements.md
+src: /Getting Started/Creating an Achievement/ActionScript Achievements.md
 ---
 
 # ActionScript Achievements

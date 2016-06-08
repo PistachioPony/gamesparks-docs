@@ -1,6 +1,6 @@
 ---
 nav_sort: 1
-src: /Getting Started/Creating A Game/README.md
+src: /Getting Started/Creating a Game/README.md
 ---
 
 # Creating a Game
@@ -9,8 +9,8 @@ The GameSparks interface has such a broad scope of capabilities, and this can ma
 
 ## Creating the Game
 ![l](img/CreatingGame/1.png)
-B
-efore getting started as a new user, you will need to [Register](https://portal.gamesparks.net/register.htm) an account on the Developer Portal, and you'll need to create a game. If this is your first time using the Portal, you will be greeted by the Welcome screen. Click the icon in the middle of the screen to create your first game. If you have used GameSparks before, click "Create Game" from the drop down menu in the top left of the screen. Give your game a name and a description then hit *Save*. The name and description allow you to identify the game in the portal, you can change them at any time so don’t worry about making any final decisions at this point.
+
+Before getting started as a new user, you will need to [Register](https://portal.gamesparks.net/register.htm) an account on the Developer Portal, and you'll need to create a game. If this is your first time using the Portal, you will be greeted by the Welcome screen. Click the icon in the middle of the screen to create your first game. If you have used GameSparks before, click "Create Game" from the drop down menu in the top left of the screen. Give your game a name and a description then hit *Save*. The name and description allow you to identify the game in the portal, you can change them at any time so don’t worry about making any final decisions at this point.
 
 
 ## Keys and Secrets
@@ -29,5 +29,5 @@ When creating a game, the game goes into a *PREVIEW* stage.  There are two stag
 
 ## SDK Instructions
 
-|[![](../img/URLogo.png)](/Getting Started/Creating A Game/Unreal Setup.md)   |[![](../img/UTLogo.png)](/Getting Started/Creating A Game/Unity Setup.md)   |[![](../img/ASLogo.png)](/Getting Started/Creating A Game/ActionScript Setup.md)   |
+|[![](../img/URLogo.png)](/Getting Started/Creating a Game/Unreal Setup.md)   |[![](../img/UTLogo.png)](/Getting Started/Creating a Game/Unity Setup.md)   |[![](../img/ASLogo.png)](/Getting Started/Creating a Game/ActionScript Setup.md)   |
 |---|---|---|

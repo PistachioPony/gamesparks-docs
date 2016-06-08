@@ -1,5 +1,5 @@
 ---
-src: /Tutorials/Cloud Code, and the Test Harness/Game REST API.md
+src: /Tutorials/Cloud Code and the Test Harness/Game REST API.md
 ---
 
 # Game REST API

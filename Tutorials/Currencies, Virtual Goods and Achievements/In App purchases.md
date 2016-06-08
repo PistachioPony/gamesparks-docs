@@ -1,12 +1,12 @@
 ---
-src: /Tutorials/Currencies, Virtual Goods and Achievements/In App purchases.md
+src: /Tutorials/Currencies, Virtual Goods and Achievements/In App Purchases.md
 ---
 
-# How to do in-app purchases
+# How to do In-App Purchases
 
 In this exercise we'll cover a few different scenarios around purchasing. To start with we'll look at setting up a Virtual Good to be purchased using a Virtual Currency. We'll then go on to look at how you set up your Virtual Goods so you can also do purchases through third-party stores (Google Play, iOS App Store, Windows Store).
 
-# Purchasing with a Virtual Currency
+## Purchasing with a Virtual Currency
 
 Log in to the [GameSparks Developer Portal](https://portal.gamesparks.net) and go to *Configurator > Virtual Goods*. Click __ to create a new Virtual Good.
 
@@ -120,7 +120,7 @@ The player can now consume a Heart, which will remove the Virtual Good from thei
 "scriptData": null }
 ```
 
-# Integrating with third-party stores
+## Integrating with third-party stores
 
 Using a virtual currency is one option when buying Virtual Goods, but what if you want to hook up to a third-party store to handle real money transactions? GameSparks supports integration with Google Play, the iOS App Store and Windows Store to allow you to do just that. The next steps will be broken into three sections to cover the specifics of integrating each store type with the GameSparks platform. In all cases the underlying flow is the same:
 

@@ -1,5 +1,5 @@
 ---
-src: /Tutorials/Social Features/Android push notifications.md
+src: /Tutorials/Social Features/Android Push Notifications.md
 ---
 
 # How to configure Android push notifications

@@ -1,6 +1,6 @@
 ---
 nav_sort: 3
-src: /Getting Started/Creating A Virtual Good/ActionScript Virtual Goods.md
+src: /Getting Started/Creating a Virtual Good/ActionScript Virtual Goods.md
 ---
 
 # ActionScript Virtual Goods

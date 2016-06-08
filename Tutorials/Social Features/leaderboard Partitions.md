@@ -1,5 +1,5 @@
 ---
-src: /Tutorials/Social Features/leaderboard Partitions.md
+src: /Tutorials/Social Features/Leaderboard Partitions.md
 ---
 
 # How to partition leaderboards
