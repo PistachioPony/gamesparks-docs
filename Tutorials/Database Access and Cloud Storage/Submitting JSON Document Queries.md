@@ -1,5 +1,5 @@
 ---
-src: /Tutorials/Database access and cloud storage/Submitting JSON Document Queries.md
+src: /Tutorials/Database Access and Cloud Storage/Submitting JSON Document Queries.md
 ---
 
 # How to do partial queries and updates to complex JSON document

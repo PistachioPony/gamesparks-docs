@@ -9,7 +9,7 @@ Here you can select from a wide range of in-depth tutorials we've put together t
 * [Authentication and Player Profile](/Tutorials/Authentication and Player Profile/README.md)
 * [Cloud Code, and the Test Harness](/Tutorials/Cloud Code and the Test Harness/README.md)
 * [Currencies, Virtual Goods and Achievements](/Tutorials/Currencies, Virtual Goods and Achievements/README.md)
-* [Database Access and Cloud Storage](/Tutorials/Database access and cloud storage/README.md)
+* [Database Access and Cloud Storage](/Tutorials/Database Access and Cloud Storage/README.md)
 * [Game Engine Integrations](/Tutorials/Game engine integrations/README.md)
 * [Multiplayer](/Tutorials/Multiplayer/README.md)
 * [Realtime Services](/Tutorials/Realtime Services/README.md)

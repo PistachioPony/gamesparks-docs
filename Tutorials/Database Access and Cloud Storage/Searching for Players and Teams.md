@@ -1,5 +1,5 @@
 ---
-src: /Tutorials/Database access and cloud storage/Searching for Players and Teams.md
+src: /Tutorials/Database Access and Cloud Storage/Searching for Players and Teams.md
 ---
 
 # Searching for Specific Players and Teams

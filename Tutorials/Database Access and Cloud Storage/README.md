@@ -1,5 +1,5 @@
 ---
-src: /Tutorials/Database access and cloud storage/README.md
+src: /Tutorials/Database Access and Cloud Storage/README.md
 ---
 
 # Database Access and Cloud Storage
