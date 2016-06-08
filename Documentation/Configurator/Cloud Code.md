@@ -70,6 +70,16 @@ To create a new module click the Create New Module button, then enter a short co
 
 ![](img/CloudCode/4.jpg)
 
+### Callbacks
+
+Callbacks contains an item for each custom Credential created.  Separate Callback URLs allow users to assign different Cloud Code scripts to different callbacks for the same game.
+
+Realtime Scripts can be created here and linked to Match configuration so that when a Match is found, the arbitrary Cloud Code script that communicates with the realtime client is triggered.  For more information on Realtime Services, read this.
+
+### Realtime Scripts
+
+Realtime Scripts can be created here and linked to Match configuration in the Multiplayer Section so that when a Match is found, the arbitrary Cloud Code script that communicates with the RealTime client is triggered.
+
 ### System
 
 The System tab contains a number of System Events that are able to trigger some JavaScript Cloud Code:

@@ -1,5 +1,5 @@
 ---
-src: /Tutorials/Currencies, Virtual Goods and Achievements/In App Purchases.md
+src: /Tutorials/Currencies, Virtual Goods and Achievements/In App purchases.md
 ---
 
 # How to do In-App Purchases

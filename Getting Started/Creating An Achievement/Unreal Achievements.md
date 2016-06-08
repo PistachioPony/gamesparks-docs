@@ -1,11 +1,13 @@
 ---
 nav_sort: 2
-src: /Getting Started/Creating an Achievement/Unreal Achievements.md
+src: /Getting Started/Creating An Achievement/Unreal Achievements.md
 ---
 
 # Unreal Achievements
 
-This tutorial assumes you have completed the '[Creating an Achievement](/Getting Started/Creating an Achievement/README.md)' tutorial and are ready to integrate the same functionality into your Unreal Engine Game. In this tutorial you will achieve the following: *Awarding an Achievement:*
+This tutorial assumes you have completed the '[Creating an Achievement](/Getting Started/Creating An Achievement/README.md)' tutorial and are ready to integrate the same functionality into your Unreal Engine Game. In this tutorial you will achieve the following: *Awarding an Achievement:*
+
+Example code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/UnrealAchievementsUassets.zip)
 
   * Execute a *GS LogEventRequest* and call the Event that will award the currently authenticated player an Achievement.
 *Account Details Response:*
@@ -13,10 +15,10 @@ This tutorial assumes you have completed the '[Creating an Achievement](/Getting
   * Create the *GSAccountDetailsResponse* node and *Break* the Account Details Response struct.
   * From the Account Details Response node retrieve the Achievements that the authenticated player has.
   * Print a message when the Achievement is unlocked.
+
 *Testing the Achievement:*
 
   * Play a game that will award you an Achievement if the conditions are met.
-[wpdm_file id=31 title="true" ]
 
 ### *Awarding An Achievement*
 

@@ -1,6 +1,6 @@
 ---
 nav_sort: 1
-src: /Getting Started/Creating a Virtual Good/Unity Virtual Goods.md
+src: /Getting Started/Creating A Virtual Good/Unity Virtual Goods.md
 ---
 
 # Unity Virtual Goods
@@ -9,7 +9,7 @@ src: /Getting Started/Creating a Virtual Good/Unity Virtual Goods.md
 
 In this tutorial we are going to show you how to buy and consume Virtual Goods using the GameSparks platform. You will also look at how to get a list of what Virtual Goods are owned by the player. Before following this tutorial, make sure you have checked out the previous tutorial '[Creating Virtual Goods](./README.md)'. Nothing else is needed to carry out this tutorial. However, if you would like to see the project you can download it here.
 
-[wpdm_file id=27 title="true" ]
+Example code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/UnityVirtualGoods_Tutorial.zip)
 
 ## Granting Currency
 
@@ -23,7 +23,7 @@ If you have downloaded the sample project for this tutorial, you will find that 
 
 ### Fetching Player Data
 
-When the Shop is selected or transitioned, you need to call the *AccountDetailsRequest* in order to get the player’s account details from GameSparks. You can then get and set the current currency and number of gold coins the player owns. You can find out more about *AccountDetailsRequest* [here](/API Documentation/Request API/Player/AccountDetailsRequest.md). If you have read the previous tutorial on [Achievements](/Getting Started/Creating an Achievement/Unity Achievements.md), you will be familiar with what data you can get back from the *AccountDetailsResponse*. One of the details in the Response is a list of Virtual Goods. You can get that data back using the Short Code for your gold coins and the *GetNumber()* method.
+When the Shop is selected or transitioned, you need to call the *AccountDetailsRequest* in order to get the player’s account details from GameSparks. You can then get and set the current currency and number of gold coins the player owns. You can find out more about *AccountDetailsRequest* [here](/API Documentation/Request API/Player/AccountDetailsRequest.md). If you have read the previous tutorial on [Achievements](/Getting Started/Creating An Achievement/Unity Achievements.md), you will be familiar with what data you can get back from the *AccountDetailsResponse*. One of the details in the Response is a list of Virtual Goods. You can get that data back using the Short Code for your gold coins and the *GetNumber()* method.
 
 ```
     new GameSparks.Api.Requests.AccountDetailsRequest().Send((response) => {

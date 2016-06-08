@@ -1,6 +1,6 @@
 ---
 nav_sort: 3
-src: /Getting Started/Creating an Achievement/ActionScript Achievements.md
+src: /Getting Started/Creating An Achievement/ActionScript Achievements.md
 ---
 
 # ActionScript Achievements
@@ -21,7 +21,7 @@ After making an Event that awards your Player an Achievement using Cloud Code in
   * Achieve the conditions to log the Event which awards the Player an Achievement. In this tutorial's game we will beat the highscore in the allotted time.
   * After meeting the condition to earn the Achievement, request the Player details to see that the account has earned the Achievement.
 
-[wpdm_file id=37 title="true" ]
+Example code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/ActionscriptAchievementsMXML.zip)
 
 ## Setting up the Account Details Request and Earning an Achievement
 

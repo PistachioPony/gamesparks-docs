@@ -1,5 +1,5 @@
 ---
-src: /Tutorials/Authentication and Player Profile/Communicating with Players.md
+src: /Tutorials/Authentication and Player Profile/Communicating With Players.md
 ---
 
 # Communicating with Players

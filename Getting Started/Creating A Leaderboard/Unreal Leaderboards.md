@@ -1,6 +1,6 @@
 ---
 nav_sort: 2
-src: /Getting Started/Creating a Leaderboard/Unreal Leaderboards.md
+src: /Getting Started/Creating A Leaderboard/Unreal Leaderboards.md
 ---
 
 # Unreal Leaderboards
@@ -21,7 +21,7 @@ If you have followed the Portal [Tutorial](./README.md) for making an Event an
   * Pass the SCORE value through to the Event.
   * Play the game and beat the High Score to receive feedback from the Service.
 
-[wpdm_file id=30 title="true" ]
+Example code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/UnrealLeaderboard_Tutorial.zip)
 
 ## Setting up the Message Listener
 

@@ -7,7 +7,9 @@ src: /Getting Started/Using Cloud Code/Unity Cloud Code.md
 
 ## Introduction
 
-GameSparks offers a lot of useful features out of the box, like Challenges, Leaderboards and Messaging systems. However, our Cloud Code also allows you to create your own custom Events to pass the data to and from the servers. In this tutorial you are going to use two Events to save and load some basic player information. You don’t need anything extra to follow this tutorial, but if you’d like to see our project example you can download it here. [wpdm_file id=25 title="true" ]
+GameSparks offers a lot of useful features out of the box, like Challenges, Leaderboards and Messaging systems. However, our Cloud Code also allows you to create your own custom Events to pass the data to and from the servers. In this tutorial you are going to use two Events to save and load some basic player information.
+
+Example code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/UnityCloudCode_Tutorial.zip)
 
 ## Creating Event
 

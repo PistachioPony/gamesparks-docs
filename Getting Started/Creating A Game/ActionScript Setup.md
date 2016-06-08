@@ -1,6 +1,6 @@
 ---
 nav_sort: 3
-src: /Getting Started/Creating a Game/ActionScript Setup.md
+src: /Getting Started/Creating A Game/ActionScript Setup.md
 ---
 
 # ActionScript Setup
@@ -21,7 +21,8 @@ The previous tutorial [Creating a Game](./README.md), took you through the begin
   * Create the Logger and Availability call back functions. These functions are necessary for debugging.
   * Build your ActionScript interface with a button to make the connection work correctly and a Logger to debug what's happening in the background.
   * Play your game and attempt to make a connection.
-[wpdm_file id=33 title="true" ]
+
+Example code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/ActionscriptSetupMXML.zip)
 
 ## *Setting up Your ActionScript Project*
 

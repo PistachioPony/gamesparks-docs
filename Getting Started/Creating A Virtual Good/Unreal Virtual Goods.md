@@ -1,6 +1,6 @@
 ---
 nav_sort: 2
-src: /Getting Started/Creating a Virtual Good/Unreal Virtual Goods.md
+src: /Getting Started/Creating A Virtual Good/Unreal Virtual Goods.md
 ---
 
 # Unreal Virtual Goods
@@ -25,7 +25,7 @@ After following the tutorial [Creating a Virtual Good](./README.md), you can now
   * Click the buy and consume buttons to change the currency and the number of Virtual Goods owned.
   * Ensure that details are being correctly updated.
 
-[wpdm_file id=32 title="true" ]
+Example code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/UnrealVirtualGoodsUassets.zip)
 
 ## Using Virtual Goods
 

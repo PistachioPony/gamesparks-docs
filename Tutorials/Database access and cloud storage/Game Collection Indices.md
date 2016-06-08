@@ -1,5 +1,5 @@
 ---
-src: /Tutorials/Database Access and Cloud Storage/Game Collection Indices.md
+src: /Tutorials/Database access and cloud storage/Game Collection Indices.md
 ---
 
 # How to create indexes for custom game collections

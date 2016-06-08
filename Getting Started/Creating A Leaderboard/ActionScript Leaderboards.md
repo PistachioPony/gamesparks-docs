@@ -1,6 +1,6 @@
 ---
 nav_sort: 3
-src: /Getting Started/Creating a Leaderboard/ActionScript Leaderboards.md
+src: /Getting Started/Creating A Leaderboard/ActionScript Leaderboards.md
 ---
 
 # ActionScript Leaderboards
@@ -8,6 +8,8 @@ src: /Getting Started/Creating a Leaderboard/ActionScript Leaderboards.md
 ## *Introduction*
 
 The previous tutorial taught you how to create a Leaderboard and Event that submits your Player's score. Now you can incorporate them into your ActionScript project. For the sake of this tutorial we have created a sample game that runs for 10 seconds. In those 10 seconds the Player must collect as many points as possible. If the Player beats the current high score, they will be notified by a message.
+
+Example code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/ActionscriptLeaderboardMXML.zip)
 
 *Setting up the Event Log Request*
 
@@ -21,8 +23,6 @@ The previous tutorial taught you how to create a Leaderboard and Event that subm
 *Testing the Leaderboard*
 
   * Play your game and beat the high score to receive a message.
-
-[wpdm_file id=36 title="true" ]
 
 ## *Setting up the Event Log Request*
 

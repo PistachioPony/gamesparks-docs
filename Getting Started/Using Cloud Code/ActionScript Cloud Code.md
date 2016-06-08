@@ -17,7 +17,7 @@ After making the *Set_Pos* and *Get_Pos* Events in the portal, it's time to call
 
   * Create a game or scenario to test your new functions on.
 
-[wpdm_file id=35 title="true" ]
+Example code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/ActionscriptCloudCodeMXML.zip)
 
 ## Setting up your Set and Get Functions
 

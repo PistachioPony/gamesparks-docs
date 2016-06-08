@@ -1,6 +1,6 @@
 ---
 nav_sort: 1
-src: /Getting Started/Creating a Game/README.md
+src: /Getting Started/Creating A Game/README.md
 ---
 
 # Creating a Game
@@ -29,5 +29,5 @@ When creating a game, the game goes into a *PREVIEW* stage.  There are two stag
 
 ## SDK Instructions
 
-|[![](../img/URLogo.png)](/Getting Started/Creating a Game/Unreal Setup.md)   |[![](../img/UTLogo.png)](/Getting Started/Creating a Game/Unity Setup.md)   |[![](../img/ASLogo.png)](/Getting Started/Creating a Game/ActionScript Setup.md)   |
+|[![](../img/URLogo.png)](/Getting Started/Creating A Game/Unreal Setup.md)   |[![](../img/UTLogo.png)](/Getting Started/Creating A Game/Unity Setup.md)   |[![](../img/ASLogo.png)](/Getting Started/Creating A Game/ActionScript Setup.md)   |
 |---|---|---|

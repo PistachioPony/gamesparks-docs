@@ -23,7 +23,7 @@ Previously, we learnt how to use Cloud Code in the GameSparks Portal. Now we a
 
   * Call the 'Set_Pos' Event from user input (In this example we use the *F* key).
 
-[wpdm_file id=29 title="true" ]
+Example code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/UnrealCloudCodeUassets.zip)
 
 ## Setting up Events
 

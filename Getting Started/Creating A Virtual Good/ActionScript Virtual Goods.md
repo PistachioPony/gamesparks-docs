@@ -1,6 +1,6 @@
 ---
 nav_sort: 3
-src: /Getting Started/Creating a Virtual Good/ActionScript Virtual Goods.md
+src: /Getting Started/Creating A Virtual Good/ActionScript Virtual Goods.md
 ---
 
 # ActionScript Virtual Goods
@@ -27,7 +27,8 @@ Once you have created [Virtual Goods](./README.md) on the Portal, you can now in
 *Testing Virtual Goods*
 
   * Launch your game, buy and consume Virtual Goods to see your details being updated accordingly.
-[wpdm_file id=38 title="true" ]
+
+Example code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/ActionscriptVirtualGoodsMXML.zip)
 
 ## Creating the 'Grant Currency' Event
 

@@ -11,15 +11,9 @@ These instructions will concentrate on how to use the SDK from Adobe Flash Build
 
 ## .Getting the SDK
 
-The SDK is available via BitBucket here :
+The SDK is available via BitBucket [here](https://bitbucket.org/gamesparks/gamesparks-as3-sdk)
 
-https://bitbucket.org/gamesparks/gamesparks-as3-sdk
-
-A pre-compiled swc is available here :
-
-[wpdm_file id=15]
-
-[toc]
+A pre-compiled swc is available [here](https://bitbucket.org/gamesparks/gamesparks-as3-sdk/raw/master/gamesparks-as3-sdk/bin/gamesparks-as3-sdk.swc)
 
 ## Adding the SDK to your project
 
