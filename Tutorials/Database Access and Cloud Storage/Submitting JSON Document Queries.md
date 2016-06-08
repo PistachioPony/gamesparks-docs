@@ -1,5 +1,5 @@
 ---
-src: /Tutorials/Database Access and Cloud Storage/JSON Document Queries.md
+src: /Tutorials/Database Access and Cloud Storage/Submitting JSON Document Queries.md
 ---
 
 # How to do partial queries and updates to complex JSON document
@@ -23,15 +23,15 @@ There are times where you want to maintain a complex JSON document in a mongo co
     }
 ```
 
-# Configuring the Game
+## Configuring the Game
 
-##  Creating the event for updating the document.
+###  Creating the event for updating the document.
 
 We are creating a generic event for updating a document, this event will contain the path of the document we want to update, and the value we want to set at that path. If this sounds a little complex, bear with us and work through the example, it should be clear at then end :). We'll add a new event in the portal that looks like this:
 
 ![](img/Partial/1.png)
 
-## Creating the script to process the update event
+### Creating the script to process the update event
 
 We now need to bind a cloud code script to this event to access the data and make the document updates. This script uses a little bit of mongo magic to create the document if it does not already exist, and sets the value you want at the path you ask for.
 
@@ -56,7 +56,7 @@ We now need to bind a cloud code script to this event to access the data and mak
       false // This query will only affect a single object (multi)
     );
 ```
-## Creating the event for querying the document
+### Creating the event for querying the document
 
 We'll use the same pattern here for querying the document.  For the query event only one attribute is required, the path of the document you want to retrieve.
 
@@ -65,7 +65,7 @@ We'll add a new event in the portal that looks like this:
 ![](img/Partial/2.png)
 
 
-## Creating the script to process the query event
+### Creating the script to process the query event
 
 This script is a little more involved. The basic mongo find operators do not support getting a partial document, however the aggregation framework does. We are using an undocumented feature of the JavaScript API to access the aggregation framework, whilst it works ok for cases where a single document is being processed, we have not fully completed the testing cycle for multiple documents (we'll keep you posted on that).
 
@@ -103,9 +103,9 @@ This script is a little more involved. The basic mongo find operators do not sup
     }
 ```
 
-# Execution of the configuration
+## Execution of the configuration
 
-## Register a user to use for the tests
+### Register a user to use for the tests
 
 ```    
     {
@@ -127,7 +127,7 @@ This script is a little more involved. The basic mongo find operators do not sup
         "userId": "5305e40f1c26ac2a6576c389"
     }
 ```
-## Start Playing Level 1
+### Start Playing Level 1
 
 We'll first check if the user has any data for level 1
 
@@ -150,7 +150,7 @@ We'll first check if the user has any data for level 1
 ```
 We can see now that the user has no data for level 1.
 
-## Reach a checkpoint on level 1
+### Reach a checkpoint on level 1
 
 We want to update the document to put the checkpoint reached into the document.
 
@@ -196,7 +196,7 @@ Once this request has been passsed in we can query the document to get the progr
     }
     }
 ```
-## Completing Level 1
+### Completing Level 1
 
 We'll assume the player has already reached every checkpoint, now we just need to update the "complete" attribute in the document.
 
