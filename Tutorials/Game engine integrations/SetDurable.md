@@ -1,5 +1,5 @@
 ---
-src: /Tutorials/Game engine integrations/SetDurable.md
+src: /Tutorials/Game Engine Integrations/SetDurable.md
 ---
 
 # SetDurable

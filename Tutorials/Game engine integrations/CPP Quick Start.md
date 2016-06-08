@@ -1,5 +1,5 @@
 ---
-src: /Tutorials/Game engine integrations/CPP Quick Start.md
+src: /Tutorials/Game Engine Integrations/CPP Quick Start.md
 ---
 
 # Cpp Quick Start
