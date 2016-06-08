@@ -10,7 +10,7 @@ You have the ability to get external servers (or your own processes) to make HTT
 
 To create a script to handle the request, from the cloud code page, select the "System" submenu and use the "Callback URL" menu entry.
 
-## The callback URL
+## The Callback URL
 
 https://{stage}.gamesparks.net/callback/{apiKey}/{serverSecret}/{playerId}
 
@@ -19,7 +19,7 @@ https://{stage}.gamesparks.net/callback/{apiKey}/{serverSecret}/{playerId}
   * *serverSecret* : The server secret of you game, accessible from the game overview page by clicking the __ icon
   * *playerId(optional)* : The ID of the player, it this is supplied then Spark.getPlayer()  will be the player specified
 
-## Adding parameters
+## Adding Parameters
 
 For  GET request, additional parameters can be added to the query string that are passed to your script. For example https://{stage}.gamesparks.net/callback/{apiKey}/{serverSecret}/{playerId}?attr1=abc&attr2=bcd&attr2=cde With this url the following code can be used to access these parameters
 
@@ -34,7 +34,7 @@ For  GET request, additional parameters can be added to the query string that a
     //attribute2[1] is cde
 ``
 
-## Producing output
+## Producing Output
 
 The scriptData object from the callback script is written to the output stream as a JSON document.
 
@@ -62,7 +62,7 @@ Will generate the response as :
 
     OK
 
-## Reading POST data
+## Reading POST Data
 
 There are instances where a remote server may not set the content-type header correctly, and the post data is not automatically translated into Spark.getData(). In these cases, the POST requests have an additional attribute set into Spark.getData() of "REQUEST_BODY". This is the body of the HTTP post request as a string, so you can do your own parsing of this value.
 

@@ -1,5 +1,5 @@
 ---
-src: /Tutorials/Database access and cloud storage/Binary Content In Game.md
+src: /Tutorials/Database Access and Cloud Storage/Uploading Binary Content from Game.md
 ---
 
 # How to upload binary content directly from your game
@@ -12,7 +12,7 @@ The GameSparks platform provides the capability for you to allow players to uplo
 
 In this exercise we'll run through how you do each of the above with the GameSparks API, demonstrated using the [Test Harness](/Documentation/Test Harness/README.md). To finish, there is a brief note on using the GameSparks SDKs to perform these steps (which we've streamlined behind the scenes to make your life easier).
 
-# Get an Upload URL
+## Get an Upload URL
 
 The first step is to get an upload URL, after all you need somewhere to post your content. If you're following these steps in the Test Harness, these requests are available under the 'Misc' category (make sure you've authenticated as a player before making the first request).
 
@@ -33,7 +33,7 @@ A [GetUploadUrlRequest](/API Documentation/Request API/Misc/GetUploadUrlRequest.
 }
 ```
 
-# Upload the Content
+## Upload the Content
 
 Now that you have the upload URL you need to post the file. This is done using a multipart/form-data post - we'd recommend checking it out in the Test Harness as we've provided a widget that will do this for you, and when using the SDKs see the section further down on SDK Usage.
 
@@ -63,7 +63,7 @@ Being an HTTP POST, this is not done through the WebSocket, but once complete th
 
 Within the message is an attribute 'uploadData' which contains all the data about the upload. Hold onto the uploadId, as we'll need it in the next step.
 
-# Retrieve the Content
+## Retrieve the Content
 
 The final step is to actually retrieve the content that has been uploaded. This is achieved using a [GetUploadedRequest](/API Documentation/Request API/Misc/GetUploadedRequest.md) which takes an uploadId (which we received from the UploadCompleteMessage).
 
@@ -87,9 +87,9 @@ The response to this request contains a URL we can use to download the content.
 
 Go ahead and test the URL you receive by pasting it into your address bar in the browser. You should be able to download the content you uploaded in the earlier step. The uploadId is not tied to a specific player, so if you were to send that uploadId to another player they too could use it to request a download URL. This means you can allow your players to share content by sending the uploadIds to other players.
 
-# SDK Usage
+## SDK Usage
 
-## Android and Unity
+### Android and Unity
 
 * #### Upload
 
@@ -99,6 +99,6 @@ For completeness we expose the method getUploadUrlRequest to build the request o
 
 As with the upload we expose the method getUploadedRequest to build the request object to get a URL to download the file however there is an additional method getUploadedFile which takes the uploadId and wraps up requesting the download URL and performing the download itself and presents them as a single operation.
 
-## Others
+### Others
 
 We haven't yet added the above convenience methods for any of the SDKs apart from the Android and Unity SDKs, so for now you'll need to implement the multipart post yourself. We won't go into the details of exactly how to implement this here as there are many great resources already available that cover this. What you do need to know is that the parameter name against which the binary content is posted is file.

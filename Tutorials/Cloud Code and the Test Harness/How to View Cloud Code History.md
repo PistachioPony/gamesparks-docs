@@ -6,7 +6,7 @@ src: /Tutorials/Cloud Code and the Test Harness/How to View Cloud Code History.m
 
 It's possible to manage your Cloud Code revisions between Snapshots. This allows us to review and revert to previous versions of Cloud Code that appears on events and provides us with a visual indicator to the differences in the Cloud Code.
 
-### Accessing Cloud Code History
+## Accessing Cloud Code History
 
 *1.* To access Cloud Code History, navigate to the *Cloud Code* section in the *Configurator* and select the *History* button, as seen below.
 
@@ -16,7 +16,7 @@ This opens the Cloud Code History tool. The interface consists of 2 columns to c
 
 ![](img/CloudHistory/2.png)
 
-### Comparing Snapshots
+## Comparing Snapshots
 
 In the left column named *Base*, we can see the current Workspace configuration and the latest saved Snapshot. In the right column, *Compare to*, we see every other Snapshot before them. This is because we decided to work from right-to-left, showing the latest version always in the left column, comparing it to the right which will always be something older than that selected in the left.
 
@@ -26,7 +26,7 @@ Selecting Snapshot *8* in the *Base* column ....... displays any older Snapshots
 
 Any green Snapshot is indicated as the one published to LIVE.
 
-### Differences
+## Differences
 
 In the far-right of the screen, there is a drop-down labelled *Differences.* Depending on the comparison of Snapshots, it will show the items (and their location) that differ between those Snapshots. For example, new events added, edited events, and ones that have been removed:
 
