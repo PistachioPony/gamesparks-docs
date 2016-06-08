@@ -1,5 +1,5 @@
 ---
-src: /Tutorials/Cloud Code, and the Test Harness/How to use Custom Callback Urls.md
+src: /Tutorials/Cloud Code and the Test Harness/How to use Custom Callback Urls.md
 ---
 
 Callbacks are used to allow custom and separate Cloud Code scripts to be run against different Callback URLs, which in turn, are individually linked to a custom Credential created in the Integrations section.  Previously, only one Callback URL could be created per game.  This has now been enhanced to allow as many custom Callback URLs to be created as there are custom Credentials.

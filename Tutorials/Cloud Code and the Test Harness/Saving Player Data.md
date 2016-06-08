@@ -22,4 +22,4 @@ PrivateData values are only ever available through cloud code, they will never b
 
 ## Using MongoDB to store custom data
 
-For more complex scenarios, or where you want responses to only include a subset of the data you have stored, we recommend creating a mongo collection to store this data. You can store all options in a single document, and use the partial update operations (Described [here](/Tutorials/Database Access and Cloud Storage/Submitting JSON Document Queries.md)
+For more complex scenarios, or where you want responses to only include a subset of the data you have stored, we recommend creating a mongo collection to store this data. You can store all options in a single document, and use the partial update operations (Described [here](/Tutorials/Database access and cloud storage/Submitting JSON Document Queries.md)

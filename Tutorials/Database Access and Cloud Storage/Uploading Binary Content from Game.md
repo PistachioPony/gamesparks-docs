@@ -1,5 +1,5 @@
 ---
-src: /Tutorials/Database Access and Cloud Storage/Uploading Binary Content from Game.md
+src: /Tutorials/Database access and cloud storage/Uploading Binary Content from Game.md
 ---
 
 # How to upload binary content directly from your game
