@@ -1,11 +1,11 @@
 ---
 nav_sort: 2
-src: /Getting Started/Creating An Achievement/Unreal Achievements.md
+src: /Getting Started/Creating an Achievement/Unreal Achievements.md
 ---
 
 # Unreal Achievements
 
-This tutorial assumes you have completed the '[Creating an Achievement](/Getting Started/Creating An Achievement/README.md)' tutorial and are ready to integrate the same functionality into your Unreal Engine Game. In this tutorial you will achieve the following: *Awarding an Achievement:*
+This tutorial assumes you have completed the '[Creating an Achievement](/Getting Started/Creating an Achievement/README.md)' tutorial and are ready to integrate the same functionality into your Unreal Engine Game. In this tutorial you will achieve the following: *Awarding an Achievement:*
 
   * Execute a *GS LogEventRequest* and call the Event that will award the currently authenticated player an Achievement.
 *Account Details Response:*

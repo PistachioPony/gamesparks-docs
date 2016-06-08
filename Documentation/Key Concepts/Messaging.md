@@ -40,4 +40,4 @@ Like the Request messages this is an explicit call to the platform to send a mes
 
 ## Messages and Cloud Code
 
-You can also tie Cloud Code scripts to the sending of messages to further customise the platform behaviour, for more information on this see [Cloud Code](/Tutorials/Cloud Code, and the Test Harness/Using Cloud Code.md).
+You can also tie Cloud Code scripts to the sending of messages to further customise the platform behaviour, for more information on this see [Cloud Code](/Tutorials/Cloud Code and the Test Harness/Using Cloud Code.md).

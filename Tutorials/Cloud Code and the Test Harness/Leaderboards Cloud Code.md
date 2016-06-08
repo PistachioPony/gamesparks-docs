@@ -1,5 +1,5 @@
 ---
-src: /Tutorials/Cloud Code, and the Test Harness/Leaderboards Cloud Code.md
+src: /Tutorials/Cloud Code and the Test Harness/Leaderboards Cloud Code.md
 ---
 
 # How to access Leaderboards via Cloud Code

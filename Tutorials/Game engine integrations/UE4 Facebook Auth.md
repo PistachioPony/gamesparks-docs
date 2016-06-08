@@ -1,5 +1,5 @@
 ---
-src: /Tutorials/Game engine integrations/UE4 Facebook Auth.md
+src: /Tutorials/Game Engine Integrations/UE4 Facebook Auth.md
 ---
 
 # Unreal Engine 4 GameSparks Facebook Authentication
@@ -86,7 +86,7 @@ In your Facebook settings advanced tab flip the button to state that your app is
 
 ![](img/UE4FB/3.jpg)
 
-To use Facebook authentication with GameSparks follow the tutorial to setup Unreal for GameSpark integration, [here](/Getting Started/Creating A Game/Unreal Setup.md).
+To use Facebook authentication with GameSparks follow the tutorial to setup Unreal for GameSpark integration, [here](/Getting Started/Creating a Game/Unreal Setup.md).
    
 
 ## Facebook API Component

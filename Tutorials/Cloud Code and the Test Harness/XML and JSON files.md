@@ -1,5 +1,5 @@
 ---
-src: /Tutorials/Cloud Code, and the Test Harness/XML and JSON files.md
+src: /Tutorials/Cloud Code and the Test Harness/XML and JSON files.md
 ---
 
 # How to process XML and JSON files

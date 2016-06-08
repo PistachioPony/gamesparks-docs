@@ -1,5 +1,5 @@
 ---
-src: /Tutorials/Cloud Code, and the Test Harness/External HTTP Callbacks.md
+src: /Tutorials/Cloud Code and the Test Harness/External HTTP Callbacks.md
 ---
 
 # How to implement external HTTP Callbacks

@@ -1,6 +1,6 @@
 ---
 nav_sort: 4
-src: /Getting Started/Creating A Game/AndroidSDK Setup.md
+src: /Getting Started/Creating a Game/AndroidSDK Setup.md
 ---
 
 # AndroidSDK Setup

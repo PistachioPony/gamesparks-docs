@@ -1,6 +1,6 @@
 ---
 nav_sort: 5
-src: /Getting Started/Creating An Achievement/README.md
+src: /Getting Started/Creating an Achievement/README.md
 ---
 
 # Creating an Achievement
@@ -29,7 +29,7 @@ First you will need to navigate to the Achievements page in your Configurator.�
 
 ## Event
 
-Following the Achievement Creation, you will need to create a new Event, reference back to [Creating a Leaderboard](/Getting Started/Creating A Leaderboard/README.md) if needed.
+Following the Achievement Creation, you will need to create a new Event, reference back to [Creating a Leaderboard](/Getting Started/Creating a Leaderboard/README.md) if needed.
 
 ![](img/Create/2.png)
 
@@ -68,5 +68,5 @@ Finally you can validate that the currency was awarded by calling the [AccountD
 
 Continue the tutorial for your chosen SDK:
 
-|[![](../img/URLogo.png)](/Getting Started/Creating An Achievement/Unreal Achievements.md)   |[![](../img/UTLogo.png)](/Getting Started/Creating An Achievement/Unity Achievements.md)   |[![](../img/ASLogo.png)](/Getting Started/Creating An Achievement/ActionScript Achievements.md)   |
+|[![](../img/URLogo.png)](/Getting Started/Creating an Achievement/Unreal Achievements.md)   |[![](../img/UTLogo.png)](/Getting Started/Creating an Achievement/Unity Achievements.md)   |[![](../img/ASLogo.png)](/Getting Started/Creating an Achievement/ActionScript Achievements.md)   |
 |---|---|---|

@@ -1,5 +1,5 @@
 ---
-src: /Getting Started/Creating A Leaderboard/README.md
+src: /Getting Started/Creating a Leaderboard/README.md
 ---
 
 # Creating a Leaderboard
@@ -60,5 +60,5 @@ ____
 
  To print out the entries of a leaderboard or entries specific to a player, follow this tutorial [here](/Tutorials/Social Features/Leaderboards Entries.md).
 
-|[![](../img/URLogo.png)](/Getting Started/Creating A Leaderboard/Unreal Leaderboards.md)   |[![](../img/UTLogo.png)](/Getting Started/Creating A Leaderboard/Unity Leaderboard.md)   |[![](../img/ASLogo.png)](/Getting Started/Creating A Leaderboard/ActionScript Leaderboards.md)   |
+|[![](../img/URLogo.png)](/Getting Started/Creating a Leaderboard/Unreal Leaderboards.md)   |[![](../img/UTLogo.png)](/Getting Started/Creating a Leaderboard/Unity Leaderboard.md)   |[![](../img/ASLogo.png)](/Getting Started/Creating a Leaderboard/ActionScript Leaderboards.md)   |
 |---|---|---|

@@ -1,5 +1,4 @@
 ---
-nav_sort: 5
 src: /Documentation/Configurator/Leaderboards.md
 ---
 
@@ -67,4 +66,4 @@ Each Leaderboard configuration has a list of fields. Each field refers to an Ev
     * SUM - Sum of the entries
     * COUNT - Number of entries
     * RANGE - Difference between MIN and MAX
-    * PARTITION - Partitions the Leaderboard on this Entry, more on that [here](/Tutorials/Social Features/leaderboard Partitions.md).
+    * PARTITION - Partitions the Leaderboard on this Entry, more on that [here](/Tutorials/Social Features/Leaderboard Partitions.md).
