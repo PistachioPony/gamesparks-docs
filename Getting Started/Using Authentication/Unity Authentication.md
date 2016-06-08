@@ -96,10 +96,6 @@ new GameSparks.Api.Requests.DeviceAuthenticationRequest().SetDisplayName("Randy"
 	}
 }); ```   
 
-### Facebook Authentication
-
-If your game has the Facebook SDK integrated, or you would like your player to be able to authenticate through Facebook and get social capability integrated into your GameSparks game, you might like this check out the following tutorial on authenticating with Facebook [here](https://docs.gamesparks.net/tutorials/unity-tutorials-challenges-part-2-facebook-login).
-
 ## Testing Registration & Authentication
 
 Before you are comfortable with the GameSparks API, you’ll probably want to check to see if your requests are working the way you want them to. There are several ways to check this.
@@ -110,6 +106,6 @@ For each request you send you will get a response from the server. You have alre
 
 ### NoSQL Explorer
 
- One of the most useful and trusty tools on GameSparks portal is the *NoSQL Explorer*. By using this you can check all of the mongo information you have saved for your game. You can check results and filter information for whatever you need (check out [this](https://docs.gamesparks.net/developer-portal/nosql) tutorial for more info). You may want to check that your players have been authenticated properly, or later on, when your game is live, check your player-data. To do so, simply navigate to the *NoSQL* tab in your GameSparks portal, select the *player* collection from the Collection list, then click on the *Find* button. In the output panel you can see the player details for any player you have authenticated.Now you are setup and connected with GameSparks and you are ready to send and receive some data. Check out the next tutorial on Events and Cloud Code [here](https://docs.gamesparks.net/developer-portal/cloud-code/using-cloud-code "Using Cloud Code").
+ One of the most useful and trusty tools on GameSparks portal is the *NoSQL Explorer*. By using this you can check all of the mongo information you have saved for your game. You can check results and filter information for whatever you need (check out [this](/Documentation/NoSQL Explorer.md) tutorial for more info). You may want to check that your players have been authenticated properly, or later on, when your game is live, check your player-data. To do so, simply navigate to the *NoSQL* tab in your GameSparks portal, select the *player* collection from the Collection list, then click on the *Find* button. In the output panel you can see the player details for any player you have authenticated.Now you are setup and connected with GameSparks and you are ready to send and receive some data. Check out the next tutorial on Events and Cloud Code [here](/Getting Started/Using Cloud Code/README.md "Using Cloud Code").
 
 ![l](img/UT/6.png)

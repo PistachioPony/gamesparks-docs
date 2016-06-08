@@ -1,4 +1,5 @@
 ---
+nav_sort: 1
 src: /Getting Started/README.md
 ---
 
