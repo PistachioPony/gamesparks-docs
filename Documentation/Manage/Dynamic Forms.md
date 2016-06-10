@@ -4,7 +4,7 @@ src: /Documentation/Manage/Dynamic Forms.md
 
 # Dynamic Forms
 
-This tutorial is a step-by-step guide to creating Dynamic Forms. For this Tutorial, we will create Dynamic Forms for the management of Players in our game. Before starting this tutorial, it's vital to understand the [Dynamic Forms API](https://docs.gamesparks.net/dynamic-forms-api/dynamic-forms-api "Dynamic Forms API").
+This tutorial is a step-by-step guide to creating Dynamic Forms. For this Tutorial, we will create Dynamic Forms for the management of Players in our game. Before starting this tutorial, it's vital to understand the [Dynamic Forms API](/API Documentation/Dynamic Forms API.md).
 
 # *Basics of Dynamic Forms*
 
@@ -20,7 +20,7 @@ Whenever creating Dynamic Forms, you should always start with a Screen. A Screen
 
 In Admin Screens, you will see that the screen is split between the Screen Builder and Snapshots panels. The Snapshots panel works in a similar way to the Snapshots feature on the Game Overview page. It will backup and restore the state of your created Screens and Snippets.  
 
-On the Screen Builder page, there are three sections. *Screens*, *Snippets* and *Charts*. Charts will not be covered here, instead you can find a separate tutorial on them [here](https://docs.gamesparks.net/tutorials/custom-analytics-dashboard-tutorial-using-dynamic-forms "Charts Tutorial"). And an introduction to Collaborators and Capabilities that can be set on Screens and Snippets can be found [here](https://docs.gamesparks.net/tutorials/capabilities "Capabilities").
+On the Screen Builder page, there are three sections. *Screens*, *Snippets* and *Charts*. Charts will not be covered here, instead you can find a separate tutorial on them [here](/Tutorials/Analytics, Segmentation and Game Management/Custom Analytics Dashboards.md). And an introduction to Collaborators and Capabilities that can be set on Screens and Snippets can be found [here](Documentation/Configurator/Capabilities.md).
 
 ![](img/DynamicForms/2.jpg)
 
@@ -39,7 +39,7 @@ This is Dummy Data
 
 ```
 
-You can open the Screen Builder by clicking the Edit Code ![Screen Shot 2015-01-27 at 10.48.54](https://docs.gamesparks.net/wp-content/uploads/2015/01/Screen-Shot-2015-01-27-at-10.48.54.png) icon, and you can preview the rendered output by pressing the ![play](https://docs.gamesparks.net/wp-content/uploads/2015/01/play.jpg) icon before deciding to save your changes.
+You can open the Screen Builder by clicking the Edit Code ![](/img/fa/code.png) icon, and you can preview the rendered output by pressing the ![play](/img/fa/play.png) icon before deciding to save your changes.
 
 ![](img/DynamicForms/4.jpg)
 
@@ -55,7 +55,7 @@ Snippets contain the logic of how your Dynamic Forms behave. Snippets should hav
 
 ## The Snippet Builder
 
-The Snippet Builder view is divided into 4 quadrants. Moving around the view clockwise, the top-left quadrant is for JavaScript or Cloud Code that provides the logic and behaviour of the Dynamic Form. The top-right quadrant is for HTML / GSML or Handlebars code that renders the view. The bottom-right quadrant is the preview panel where the Dynamic Form will be rendered, including the logic provided by the JavaScript panel, once the ![play](https://docs.gamesparks.net/wp-content/uploads/2015/01/play.jpg)  icon has been pressed. Finally, the bottom-right quadrant represents the JSON formatted response to the JavaScript / Cloud Code provided in the quadrant above it.
+The Snippet Builder view is divided into 4 quadrants. Moving around the view clockwise, the top-left quadrant is for JavaScript or Cloud Code that provides the logic and behaviour of the Dynamic Form. The top-right quadrant is for HTML / GSML or Handlebars code that renders the view. The bottom-right quadrant is the preview panel where the Dynamic Form will be rendered, including the logic provided by the JavaScript panel, once the ![play](/img/fa/play.png)  icon has been pressed. Finally, the bottom-right quadrant represents the JSON formatted response to the JavaScript / Cloud Code provided in the quadrant above it.
 
 *6.* Edit the Snippet code using the same GSML that we set for the Players Screen previously. Put this in the top-right quadrant, named Handlebars and save the changes.
 
@@ -66,9 +66,9 @@ Although there are many ways of writing the logic in Snippets, one of the more i
 ## Snippet Workflow
 
 Before we begin to design our Snippets, it's important to learn the flow of their creation using the Snippet Builder and the preferred order of using the quadrants. We can define variables for input values entered onto the corresponding Screen, or Script Data that needs to be accessed using Cloud Code. But, which one do we use first?  
-Normally, our first thought would be to know what Script Data the Snippet will require. Therefore, most Snippets will be initially created using the JavaScript quadrant *(1)*. To ensure we are getting the right data what is required for the Snippet at this stage, we can preview the Cloud Code using the ![play](https://docs.gamesparks.net/wp-content/uploads/2015/01/play.jpg)  icon. This will generate a JSON formatted response in the bottom-left Response JSON quadrant *(2)*.
+Normally, our first thought would be to know what Script Data the Snippet will require. Therefore, most Snippets will be initially created using the JavaScript quadrant *(1)*. To ensure we are getting the right data what is required for the Snippet at this stage, we can preview the Cloud Code using the ![play](/img/fa/play.png)  icon. This will generate a JSON formatted response in the bottom-left Response JSON quadrant *(2)*.
 
-Once we are happy that we have all the required data for the Snippet, we can design how it will be presented to the Screen by adding the HTML / GSML code for the elements we want to see *(3).* Using Handlebars, we can also access and manipulate the data from the JSON response. To test all of this, we can use the ![play](https://docs.gamesparks.net/wp-content/uploads/2015/01/play.jpg)  icon to preview the rendering of the Snippet *(4)*.
+Once we are happy that we have all the required data for the Snippet, we can design how it will be presented to the Screen by adding the HTML / GSML code for the elements we want to see *(3).* Using Handlebars, we can also access and manipulate the data from the JSON response. To test all of this, we can use the ![play](/img/fa/play.png)  icon to preview the rendering of the Snippet *(4)*.
 
 However, this order may not always be the preferred way. For example, we might design a Screen using the Handlebars quadrant first, then realise we need to retrieve some more Script Data, by then calling that information using the JavaScript quadrant. As mentioned earlier, there are many routes to creating Snippets.
 
@@ -194,7 +194,7 @@ function view(data){
 }
 ```
 
-After previewing the results using the ![play](https://docs.gamesparks.net/wp-content/uploads/2015/01/play.jpg)  icon, the Response JSON quadrant obtains the list of Achievements and Virtual Goods for the current game (if any), then passes them into Script Data, where later it can be accessed by the Handlebars quadrant.  
+After previewing the results using the ![play](/img/fa/play.png)  icon, the Response JSON quadrant obtains the list of Achievements and Virtual Goods for the current game (if any), then passes them into Script Data, where later it can be accessed by the Handlebars quadrant.  
 Here is the response from the code entered into the JavaScript quadrant, against a particular game:
 
 ![](img/DynamicForms/8.png)
@@ -304,7 +304,7 @@ The Achievement and Virtual Good Script Data that we retrieved earlier, will be 
 
 At the bottom of the GSML, we use Handlebars helpers (*if*, *each* and *unless*) to dynamically update the query display. The Handlebars code checks if an Achievement, Virtual Good, Segment exists and if so, iterates through each of them whilst refreshing the rendering of the GSML.
 
-*13.* Save the changes to the *user_query* Snippet and select Preview ![play](https://docs.gamesparks.net/wp-content/uploads/2015/01/play.jpg).
+*13.* Save the changes to the *user_query* Snippet and select Preview ![play](/img/fa/play.png).
 
 ![](img/DynamicForms/9.png)
 
@@ -330,7 +330,7 @@ Spark.setScriptData("query", JSON.stringify(query));
 
 *Spark.data.scriptData.*{_variable_} allows us to access the variable that's been passed into the Snippet.  
 
-*NOTE: *At this point, because the *player_search* Snippet hasn't been executed on our Players Screen, the variable in the example above (gsUserQuery) is null. Previewing ![play](https://docs.gamesparks.net/wp-content/uploads/2015/01/play.jpg) the *user_query* Snippet at this point, would not produce any results.  
+*NOTE: *At this point, because the *player_search* Snippet hasn't been executed on our Players Screen, the variable in the example above (gsUserQuery) is null. Previewing ![play](/img/fa/play.png) the *user_query* Snippet at this point, would not produce any results.  
 
 *Spark.setScriptData* allows Script Data to be produced that will be later used in GSML / Handlebars code without requiring other Snippets to be executed.   
 
@@ -666,7 +666,7 @@ The code above will check if action has been performed, and if so it will edit t
 
 ![](img/DynamicForms/14.png)
 
-## player_virtual_goods, player_achievements, player_details Snippets
+*player_virtual_goods, player_achievements, player_details Snippets*
 
 The remaining three Snippets behave just like the *player_currencies* Snippet, in that they all obtain their own respective Script Data that is required to be displayed for that particular player.  They then allow the editing of that data, by invoking themselves with additional variables and finally rendering the changes in the placeholders which are located within the *player_master* Master Snippet.   
 

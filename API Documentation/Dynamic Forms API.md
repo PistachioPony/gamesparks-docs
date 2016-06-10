@@ -12,11 +12,11 @@ In addition to regular HTML you are able to use Game Sparks Markup Language (GS
 
 gs-row is a HTML row container, by default it's set to width of 12. Note: gs-rows and gs-cols can be nested to create your preferred layout.
 
-#### Options
+*Options*
 
 gs-row takes no additional options.
 
-#### Example
+*Example*
 
 ```    
     <gs-row>
@@ -29,11 +29,11 @@ gs-row takes no additional options.
 
 gs-col is a HTML column. Note: gs-rows and gs-cols can be nested to create your preferred layout.
 
-#### Options
+*Options*
 
 *width* \- is the width of the column, this can be between 1 and 12. If not defined, the width will be 12. *align* \- is the alignment of the content within the column (left, right). If not defined, the content will be centered.
 
-#### Example
+*Example*
 
 ```    
     <gs-col width="6" align="left">
@@ -46,11 +46,11 @@ gs-col is a HTML column. Note: gs-rows and gs-cols can be nested to create your
 
 gs-title-block is a title block styled to match the rest of Gamesparks portal styling.
 
-#### Options
+*Options*
 
 *padding* - is the padding of the title block. If not defined, the padding will be 0. *margin* \- is the margin of the title block. If not defined, the margin will be 0. *title* \- the title of the title block. *height* \- height of the title block. When defined, any content outside of the bounds, will make the title block scrollable. *width* \- the width of the title block, this can be between 1 and 12. If not defined, the width will be 12.
 
-#### Example
+*Example*
 
 ```    
     <gs-title-block padding="5" margin="1" title="Title Block" height="40" width="6">
@@ -58,7 +58,7 @@ gs-title-block is a title block styled to match the rest of Gamesparks portal st
     </gs-title-block>
 ```
 
-#### Output
+*Output*
 
 ![](img/DynamicAPI/1.jpg)
 
@@ -67,11 +67,11 @@ gs-title-block is a title block styled to match the rest of Gamesparks portal st
 
 gs-placeholder is a placeholder within a form, this placeholder can be dynamically updated on the fly by targeting it with links, forms and snippets.
 
-#### Options
+*Options*
 
 *id* \- id should be a unique identifier, this identifier allows links, forms and snippets to locate and overwrite the placeholder.
 
-#### Example
+*Example*
 
 ```    
     <gs-placeholder id="unique__placeholder">
@@ -84,11 +84,11 @@ gs-placeholder is a placeholder within a form, this placeholder can be dynamical
 
 gs-form is a HTML form that can be submitted to a snippet, passing in some input data.
 
-#### Options
+*Options*
 
 *snippet* \- a snippet shortcode to call with the input values. Additionally you can also append values directly here. *target* \- this is the id of a placeholder, where the output of the snippet will be placed.
 
-#### Example
+*Example*
 
 ```
     <gs-form snippet="snippet_shortcode?update=true&upsert=false" target="unique__placeholder">
@@ -106,7 +106,7 @@ gs-form is a HTML form that can be submitted to a snippet, passing in some inpu
     </gs-form>
 ```
 
-#### Output
+*Output*
 
 ![](img/DynamicAPI/2.jpg)
 
@@ -121,12 +121,12 @@ Clicking *Submit* in this form will:
 
 gs-submit is a custom form submit button, the functionality behind gs-submit allows you to override where the form is going to be submitted to or where the output will be rendered at.
 
-#### Options
+*Options*
 
 * *snippet* \- this is an optional snippet shortcode, which allows the submit button override the snippet where the form is supposed to be submitted to.
 * *target* \- this is an optional placeholder id, which allows the submit button override the placeholder where the output is supposed to be rendered at.
 
-#### Example
+*Example*
 
 ```
     <gs-form snippet="snippet_shortcode" target="unique__placeholder">
@@ -143,7 +143,7 @@ gs-submit is a custom form submit button, the functionality behind gs-submit al
     </gs-form>
 ```
 
-#### Output
+*Output*
 
 ![](img/DynamicAPI/3.jpg)
 
@@ -154,11 +154,11 @@ By clicking *Submit* button, you will submit the form to the snippet with short
 
 gs-link is a HTML link that can execute a snippet upon clicking it.
 
-#### Options
+*Options*
 
 *snippet* - a snippet shortcode to execute, you can append parameters directly here. *target* - this is the id of a placeholder, where the output of the snippet will be placed.
 
-#### Example
+*Example*
 
 ```
     <gs-link snippet="snippet_shortcode?fromLink=true" target="unique__placeholder">Click me!</gs-link>
@@ -166,12 +166,12 @@ gs-link is a HTML link that can execute a snippet upon clicking it.
 
 Clicking this link will execute a snippet with shortcode: *snippet_shortcode *passing in a parameter *fromLink *= true and render the output at the placeholder with the Id: *unique__placeholder*. [/su_tab] [su_tab title="gs-alert"] gs-alert is useful for displaying simple alerts.
 
-#### Options
+*Options*
 
 * *type* \- type of the message to display, these can be success, warn and error.
 * *message* \- message to display.
 
-#### Example
+*Example*
 
 ```
     <gs-row>
@@ -187,7 +187,7 @@ Clicking this link will execute a snippet with shortcode: *snippet_shortcode *
     </gs-row>
 ```
 
-#### Output
+*Output*
 
 ![](img/DynamicAPI/4.jpg)
 
@@ -196,12 +196,12 @@ Clicking this link will execute a snippet with shortcode: *snippet_shortcode *
 
 gs-snippet is a way for you to automatically execute a snippet without any trigger, they are primarily used to initialize the base Dynamic Form.
 
-#### Options
+*Options*
 
 *snippet* \- a snippet shortcode to execute, you can append parameters directly here.
 *target* \- a placeholder Id, where to render the output of the snippet. If not defined, the snippets output will be rendered at the location it's been executed from.
 
-#### Example
+*Example*
 
 ```
 <pre class="lang:xhtml decode:true" title="gs-snippet"><gs-snippet snippet="snippet_shortcode?fromSnippet=true" target="unique__placeholder"></gs-snippet></pre>
@@ -213,11 +213,11 @@ This code will automatically execute a snippet with shortcode: *snippet_shortcod
 ## gs-query
 gs-query is an elaborate way of building dynamic mongodb queries. gs-query contains gs-query-fields that define the query criteria, these queries can have multiple groupings and rules.
 
-#### gs-query Options
+*Options*
 
 *name* - the name of the query, this will act as an identifier. *rules* - the raw rules can be passed into the query builder to pre-populate it.
 
-#### gs-query-field Options
+*gs-query-field Options*
 
 *id* \- id of the field to query. *type* \- type of the query field, these are:
 
@@ -232,7 +232,7 @@ gs-query is an elaborate way of building dynamic mongodb queries. gs-query conta
 *values* \- predefined values of the query.
 *operators* \- operators by which to determine queries results, these are: *equal*, *not_equal*, *exists*, *not_exits*, *begins_with*, *not_begins_with*, *between*, *less*, *less_or_equal*, *greater* and *greater_or_equal*.
 
-#### Example
+*Example*
 
 ```
 <gs-query name="gsUserQuery" rules="">
@@ -268,17 +268,17 @@ gs-query is an elaborate way of building dynamic mongodb queries. gs-query conta
 </gs-query>
 ```
 
-#### Output
+*Output*
 
 ![](img/DynamicAPI/5.jpg)
 
-#### Usability
+*Usability*
 
 ![](img/DynamicAPI/6.jpg)
 
 The above query would read: Return results where (Country is not "Afghanistan" *AND* Last Seen is before "2015/01/13") *AND *(User Name begins with "gam" *OR* Facebook ID doesn't exist)
 
-#### Submitting and Pre-Populating
+*Submitting and Pre-Populating*
 
 When you submit a form that contains gs-query, you will receive two json objects:
 
@@ -298,7 +298,7 @@ When you submit a form that contains gs-query, you will receive two json objects
 
 gs-chart displays the charts that you can define in Charts area
 
-#### Options
+*Options*
 
 * *Note*\ majority of the options will be displayed in the charts builder after pressing "Test", this will then display the full query to use in GSML in order to display that chart, for this reason you will rarely need to manually type these in.
 * *chartType* \- determines the chart type to display.
@@ -309,7 +309,7 @@ gs-chart displays the charts that you can define in Charts area
 * *pageSize* \- used for data charts to note how many results should be shown per page.
 * *query* \- this is the chart shortCode to use. Custom values can be passed into the chart as such: *gs_playerid="myPlayerId"* and accessed in the chart builder as *${playerid}*
 
-#### Example
+*Example*
 
 ```
 <gs-chart gs_playerid="{{playerId}}" chartType='data' pageSize='50' query='total_requests'></gs-chart>
@@ -329,7 +329,7 @@ With the introduction of Handlebars we can create dynamic GSML structures withi
 *   *math* - mathematical equations within HTML.
 *   *compare* - an extended version of the if statement, that allows comparison of the values set within Script Data object.
 
-#### Sending and accessing Data
+*Sending and accessing Data*
 
 Given that we've sent or set some variables to a Snippet using a Form, Link or any other method:
 
@@ -344,7 +344,7 @@ var fromLink = Spark.data.scriptData.fromLink;
 Spark.setScriptData("fromLink", fromLink);
 ```
 
-#### We can then access the data in Handlebars as follows:
+*We can then access the data in Handlebars as follows*
 
 ```
 {{fromLink}}
@@ -352,7 +352,7 @@ Spark.setScriptData("fromLink", fromLink);
 
 Our rendered HTML would be *true*
 
-#### if/else Example
+*if/else Example*
 
 Given that we have set our JavaScript Script Data in Snippet Builder as:
 
@@ -372,7 +372,7 @@ And set our Handlebars as follows:
 
 Our rendered HTML would be: *You have some data.*
 
-#### unless Example
+### unless Example
 
 Given that we've sent or set some variables to a Snippet using a Form, Link or any other method:
 
@@ -392,7 +392,7 @@ And set our Handlebars as follows:
 
 Our rendered HTML would be: *You have some data.*
 
-#### each Example
+### each Example
 
 Given that we've sent or set some variables to a Snippet using a Form, Link or any other method:
 
@@ -415,7 +415,7 @@ And set our Handlebars as follows:
 
 Our rendered HTML would be: *This is test1* *This is test2* *This is test3*
 
-#### get Example
+### get Example
 
 Given that we've sent or set some variables to a Snippet using a Form, Link or any other method:
 
@@ -431,7 +431,7 @@ And set our Handlebars as follows:
 ```
 Our rendered HTML would be: *value1*
 
-#### math Example
+### math Example
 
 Available operators: *+*, *-*, * \** , */*, *%* Given we've set our Handlebars as follows:
 
@@ -442,7 +442,7 @@ Available operators: *+*, *-*, * \** , */*, *%* Given we've set our Handlebars a
 
 Our rendered HTML would be: *4*
 
-#### compare Example
+### compare Example
 
 Available operators: *==*, *===*, *!=*, *!==*, *<*, *>*, *<=*, *>=*, *typeof* Given we've set our Handlebars as follows:
 
