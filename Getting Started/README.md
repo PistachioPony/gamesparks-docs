@@ -12,10 +12,10 @@ The tutorials are in order, so we strongly suggest that you follow them in order
 
 The Getting Started tutorials are:
 
-  * [Creating your Game](/Getting Started/Creating A Game/README.md) - Teaches you to create your first game on the platform and set up your SDK so you're ready to start using GameSparks.
+  * [Creating your Game](/Getting Started/Creating a Game/README.md) - Teaches you to create your first game on the platform and set up your SDK so you're ready to start using GameSparks.
   * [Using Authentication](/Getting Started/Using Authentication/README.md) - How to register and authenticate players as well as introducing the test harness.
   * [Using Cloud Code](/Getting Started/Using Cloud Code/README.md) - Creating events on the platform and linking them to some logic using Cloud Code and calling them through the SDKs.
-  * [Creating a Leaderboard](/Getting Started/Creating A Leaderboard/README.md) - Creating a leaderboard, uploading a score to it and setting up listeners in the SDKs.
-  * [Creating a Virtual Good](/Getting Started/Creating A Virtual Good/README.md) - Creating a virtual good and using currency to buy it through the SDKs.
+  * [Creating a Leaderboard](/Getting Started/Creating a Leaderboard/README.md) - Creating a leaderboard, uploading a score to it and setting up listeners in the SDKs.
+  * [Creating a Virtual Good](/Getting Started/Creating a Virtual Good/README.md) - Creating a virtual good and using currency to buy it through the SDKs.
 
 The tutorials are split into two parts. The first being the platform side of the implementation, the setup and use of the features which can be used through the GameSparks API on any supported SDK. The second part consists of using the API on the SDK which uses the features set up in the first part of the tutorial.

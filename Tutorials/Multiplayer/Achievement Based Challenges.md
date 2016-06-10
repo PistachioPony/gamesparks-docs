@@ -10,8 +10,6 @@ You can setup your challenge to determine a winner based on who triggers a parti
 
 ## The Setup
 
- 
-
 ### Event
 
 Create an event. In that event create an attribute of data type Number with the default calc set to maximum.

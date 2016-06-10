@@ -1,6 +1,6 @@
 ---
 nav_sort: 2
-src: /Getting Started/Creating A Virtual Good/Unreal Virtual Goods.md
+src: /Getting Started/Creating a Virtual Good/Unreal Virtual Goods.md
 ---
 
 # Unreal Virtual Goods

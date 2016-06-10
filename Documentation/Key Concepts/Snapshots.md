@@ -44,7 +44,7 @@ By pressing delete you will be prompted with a confirmation form. Press *Delete*
 
 # Publishing a Snapshot
 
-Publishing a Snapshot places the configuration of the game into the LIVE environment, where the game can then be accessed by your players. For in-depth tutorial on versioning read [here](/Tutorials/Versioning and the Publishing Process/Versioning and Publishing.md).
+Publishing a Snapshot places the configuration of the game into the LIVE environment, where the game can then be accessed by your players. For in-depth tutorial on versioning read [here](/Tutorials/Versioning and the Publishing Process/Versioning and Publishing a Game.md).
 
 ![](img/Snapshot/6.jpg)
 

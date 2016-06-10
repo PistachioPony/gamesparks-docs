@@ -6,7 +6,7 @@ src: /Tutorials/Realtime Services/README.md
 
 ## Introduction
 
-Welcome to our series of tutorials on GameSparks Real-Time services SDK. These tutorials are intended to give you an introduction to our Real-Time SDK, how it works, and to provide you with useful example on how our Real-Time might be implemented in a multiplayer game.
+Welcome to our series of tutorials on GameSparks Real-Time services SDK. These tutorials are intended to give you an introduction to our Real-Time SDK, how it works, and to provide you with a useful example on how our Real-Time might be implemented in a multiplayer game.
 
 The Real-Time services SDK is intended to work in conjunction with our other SDKs, in the case of this series of tutorials, the Unity3D SDK.  We will not be setting up these platform SDKs, so please consult our quick-start guide on setting up the Unity3D SDK here.
 
@@ -18,7 +18,7 @@ Our RT services are intended for use in multiplayer networked games where player
 
 We use a PvP model for our network programming. However we use a host server to relay communications between players. This allows our services to support a higher number of players than traditional PvP models, as well has giving you the option to host games in the regions of your choice to reduce latency issues.
 
-Our RT SDK is very lightweight, allowing the user a lot of flexibility on what and how they wish to send data. The benefit of this is not just give the developer control over what is sent and received, but it also keeps the packets as small as possible which makes transmission much more efficient.
+Our RT SDK is very lightweight, allowing the user a lot of flexibility on what and how they wish to send data. The benefit of this is not just to give the developer control over what is sent and received, but also to keep the packets as small as possible which makes transmission much more efficient.
 
 We will be covering the following topics:
 

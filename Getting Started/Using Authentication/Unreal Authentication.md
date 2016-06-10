@@ -8,8 +8,8 @@ src: /Getting Started/Using Authentication/Unreal Authentication.md
 
 This tutorial will guide you through the process of registering and authenticating a player to your game, allowing them to begin communicating with it. Requirements:
 
-  * Make sure you have a game [created](/Getting Started/Creating A Game/README.md).
-  * Make sure you are [connected](/Getting Started/Creating A Game/Unreal Setup.md) to your game.
+  * Make sure you have a game [created](/Getting Started/Creating a Game/README.md).
+  * Make sure you are [connected](/Getting Started/Creating a Game/Unreal Setup.md) to your game.
   * Have an input method to pass the user data into the GameSparks nodes. In this tutorial we're using Widgets. They are available for download below:
 
 Example code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/UnrealAuthenticationUassets.zip)
@@ -39,7 +39,7 @@ We can "Drag Off" a *Break* node from GSAuthenticationRequest node’s Authentic
 ## Testing
 
 ![l](img/UR/7.png)
-Now you can run your Unreal Engine game and test your Registration and Authentication. You will need to double check that the Game Mode [created previously](/Getting Started/Creating A Game/Unreal Setup.md) is running before proceeding. Try logging into the platform without having previously Registered, an error will then be shown.
+Now you can run your Unreal Engine game and test your Registration and Authentication. You will need to double check that the Game Mode [created previously](/Getting Started/Creating a Game/Unreal Setup.md) is running before proceeding. Try logging into the platform without having previously Registered, an error will then be shown.
 
 ![l](img/UR/8.png)
 Now navigate to the Registration widget and register a new Player.

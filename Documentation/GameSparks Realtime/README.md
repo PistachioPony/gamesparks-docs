@@ -1,5 +1,4 @@
 ---
-nav_sort: 1
 src: /Documentation/GameSparks Realtime/README.md
 ---
 
@@ -13,7 +12,7 @@ GameSparksRT is a low latency socket server designed specifically for realtime g
 
 ## Set up matchmaking rules
 
-[See here](/Tutorials/Multiplayer/HowToMatchPlayers.md) for a document that describes the process for setting up matchmaking rules on the platform.
+[See here](/Tutorials/Multiplayer/How to Match Players.md) for a document that describes the process for setting up matchmaking rules on the platform.
 
 ## Connect to the realtime servers
 
