@@ -1,6 +1,6 @@
 ---
-nav_sort: 9
-src: /Documentation/Configurator/Challenges.md
+nav_sort: 1
+src: /Documentation/Configurator/Multiplayer/Challenges.md
 ---
 
 # Challenges
@@ -15,9 +15,9 @@ The Configurator Multiplayer page displays the list of Challenges and allows yo
 
 The icons (highlighted above) give you the following capabilities:
 
-  * [addIcon] Add a new Challenge.
-  * [editIcon] Edit this Challenge.
-  * [deleteIcon] Delete this Challenge.
+  * ![](/img/fa/plus-circle.png) Add a new Challenge.
+  * ![](/img/fa/edit.png) Edit this Challenge.
+  * ![](/img/fa/trash.png) Delete this Challenge.
 
 ## Creating a new Challenge configuration
 

@@ -1,5 +1,5 @@
 ---
-nav_sort: 12
+nav_sort: 11
 src: /Documentation/Configurator/Messages.md
 ---
 
@@ -11,7 +11,7 @@ The GameSparks platform allows you to send messages to your players.  These can
 
 The Message Configuration box contains all the message types available on the platform.  Although most of these appear to relate to Challenges there are other categories supported (uploads, achievements, p2p messaging) and the 'ScriptMessage' option gives you full flexibility.
 
-### Message Configuration
+## Message Configuration
 
 You can configure each message type by clicking on the __ icon for the desired message. You will be presented with the following screen:
 
@@ -25,7 +25,7 @@ You can configure each message type by clicking on the __ icon for the desired m
 * *Title* \- The title of the Message.
 * *Subtitle* \- The subtitle of the Message.
 
-### Script Message Extensions
+## Script Message Extensions
 
 GameSparks allows you to create custom messages using Script Message Extensions, these messages can be sent from your Cloud Code.
 
@@ -33,13 +33,13 @@ GameSparks allows you to create custom messages using Script Message Extensions,
 
 These Messages are uniquely identified using a ShortCode.
 
-### Different message for different players
+## Different message for different players
 
 You can use segmentation to send player different messages through the segment configuration.. For example, you can create a segment for French players and send these players the same message but in French.
 
 ![](img/Noti/4.jpg)
 
-### Global, scheduled messages
+## Global, scheduled messages
 
 The platform allows you to execute code every day, hour and minute. This allows you to send scheduled global messages. Here is an example of how to set up the messages in Cloud code in the 'Every Day' event under 'System'.  
 
@@ -62,7 +62,7 @@ The platform allows you to execute code every day, hour and minute. This allows 
     Spark.sendMessageById({"Message": "Good day!"}, stringArr);
 ```
 
-### Sending specific messages to specific players
+## Sending specific messages to specific players
 
 What if you want to send a global message to specific type of player? The following loop is changed to take account the player segmentation.  
 

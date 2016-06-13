@@ -15,13 +15,13 @@ The Configurator Achievements page displays the list of Achievements and allow
 
 The icons (highlighted above) give you the following capabilities:
 
-* __ Add a new Achievements.
-* __ Edit this Achievements.
-* __ Delete this Achievements.
+* ![](/img/fa/plus-circle.png) Add a new Achievements.
+* ![](/img/fa/edit.png) Edit this Achievements.
+* ![](/img/fa/trash.png) Delete this Achievements.
 
 ## Creating a new Achievement configuration
 
-Click the __ icon to create a new achievement.
+Click the ![](/img/fa/plus-circle.png) icon to create a new achievement.
 
 ![](img/Achs/2.jpg)
 
@@ -35,7 +35,7 @@ Click the __ icon to create a new achievement.
 
 ## Creating Achievement Triggers
 
-Press the __ icon to add triggers for non-scripted Achievements.
+Press the ![](/img/fa/plus-circle.png) icon to add triggers for non-scripted Achievements.
 
 ![](img/Achs/3.jpg)
 

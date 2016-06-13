@@ -1,6 +1,6 @@
 ---
-nav_sort: 10
-src: /Documentation/Configurator/Matches.md
+nav_sort: 2
+src: /Documentation/Configurator/Multiplayer/Matches.md
 ---
 
 # Matches
@@ -15,9 +15,9 @@ The Multiplayer page in the Configurator section of the Portal, displays the lis
 
 The icons (highlighted above) give you the following capabilities:
 
-  * [addIcon] Add a new Match.
-  * [editIcon] Edit this Match.
-  * [deleteIcon] Delete this Match.
+  * ![](/img/fa/plus-circle.png) Add a new Match.
+  * ![](/img/fa/edit.png) Edit this Match.
+  * ![](/img/fa/trash.png) Delete this Match.
 
 ## Creating a new Match
 

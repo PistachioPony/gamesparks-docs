@@ -15,9 +15,9 @@ The Configurator Event page displays the list of Event and allows you to creat
 
 The icons (highlighted above) give you the following capabilities:
 
-  * __ Add a new Event.
-  * __ Edit this Event.
-  * __ Delete this Event.
+  * ![](/img/fa/plus-circle.png) Add a new Event.
+  * ![](/img/fa/edit.png) Edit this Event.
+  * ![](/img/fa/trash.png) Delete this Event.
 
 ## Creating a new Event configuration
 

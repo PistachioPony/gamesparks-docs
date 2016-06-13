@@ -11,7 +11,7 @@ This tutorial will walk you through integrating GameSparks with your android pro
 
 This tutorial will walk you through getting the Android SDK integrated to Android builder. The source repositories for the android libraries can be found here: [https://bitbucket.org/gamesparks/gamesparks-java-sdk](https://bitbucket.org/gamesparks/gamesparks-java-sdk) [https://bitbucket.org/gamesparks/gamesparks-android-sdk](https://bitbucket.org/gamesparks/gamesparks-android-sdk) To integrate GameSparks into your project:
 
-1.  In your Project's build.gradle add *classpath "com.github.dcendents:android-maven-gradle-plugin:1.3"* under buildscript dependencies and make sure you reference the latest plugin version number after colon. Add *maven {url "http://repo.gamesparks.net/mvn"}* under allprojects repositories.Our example looks like this:
+*1.*  In your Project's build.gradle add *classpath "com.github.dcendents:android-maven-gradle-plugin:1.3"* under buildscript dependencies and make sure you reference the latest plugin version number after colon. Add *maven {url "http://repo.gamesparks.net/mvn"}* under allprojects repositories.Our example looks like this:
 
 ```
     buildscript {
@@ -35,7 +35,7 @@ This tutorial will walk you through getting the Android SDK integrated to Androi
     }
 ```
 
-2.  In your module's build.gradle under dependencies add *compile 'com.gamesparks.sdk:gamesparks-android-client-sdk:0.0.2'* make sure you reference the latest SDK version number after the colon. Our sample looks like:
+*2.*  In your module's build.gradle under dependencies add *compile 'com.gamesparks.sdk:gamesparks-android-client-sdk:0.0.2'* make sure you reference the latest SDK version number after the colon. Our sample looks like:
 
 ```
     apply plugin: 'com.android.application'
@@ -65,7 +65,7 @@ This tutorial will walk you through getting the Android SDK integrated to Androi
     }
 ```
 
-3.  Finally, in regards to set up add the following to your AndroidManifest.xml:
+*3.*  Finally, in regards to set up add the following to your AndroidManifest.xml:
 ```
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>

@@ -5,7 +5,7 @@ src: /Tutorials/README.md
 
 # Tutorials
 
-Here you can select from a wide range of in-depth tutorials we've put together to help you with detailed aspects of the platform:
+Here you'll find a wide range of in-depth tutorials to help you with detailed aspects of the platform:
 * [Analytics, Segmentation and Game Management](/Tutorials/Analytics, Segmentation and Game Management/README.md)
 * [Authentication and Player Profile](/Tutorials/Authentication and Player Profile/README.md)
 * [Cloud Code, and the Test Harness](/Tutorials/Cloud Code and the Test Harness/README.md)

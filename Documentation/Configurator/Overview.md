@@ -5,23 +5,24 @@ src: /Documentation/Configurator/Overview.md
 
 # Overview
 
-From the Overview page you:
+From the Overview page you can:
 
-  * Have access to the top level information about your game.
-  * Can create and manage versions of your game configurations (Snapshots).
-  * Publish your game to the live servers.
+* View and edit the top level information and settings of your game.
+* Create and manage versions of your game configurations (Snapshots). Publish your game to the live servers.
+* Inspect access secrets for your game connection types.
+* Create Collaborators for your game and configure their security settings.
 
 ![](img/Overview/1.png)
 
 The icons in the top right of the top panel (highlighted above) give you the following capabilities:
 
-  * __ View your Games Access Secrets.
-  * __ Set this game as your favorite. This will mean each time you enter the portal the current game will be shown first without having to select it.
-  * __ Edit the Geo Restrictions for the game.
-  * __ Edit the top level information regarding your game.
-  * __ Delete this game.
+  * ![](/img/fa/lock.png) View your Games Access Secrets.
+  * ![](/img/fa/heart.png) Set this game as your favorite. This will mean each time you enter the portal the current game will be shown first without having to select it.
+  * ![](/img/fa/globe.png) Edit the Geo Restrictions for the game.
+  * ![](/img/fa/edit.png) Edit the top level information regarding your game.
+  * ![](/img/fa/trash.png) Delete this game.
 
-### Editing the top level information for your game
+### Editing Top Level Game Information
 
 ![](img/Overview/2.jpg)
 
@@ -37,11 +38,12 @@ The edit form has the following fields:
 
 The icons in the Snapshot panels give you the following capabilities:
 
-  * __ \- Create a new Snapshot of the configuration currently in the portal.
-  * __ \- Copy this Snapshot to another game.
-  * __ \- Delete this Snapshot.
-  * __ \- Publish this Snapshot to the live servers.
-  * __ \- Revert the portal to the version contained in the Snapshot.
+  * ![](/img/fa/plus-circle.png) Create a new Snapshot of the configuration currently in the portal.
+  * ![](/img/fa/copy.png) Copy this Snapshot to another game.
+  * ![](/img/fa/trash.png) Delete this Snapshot.
+  * ![](/img/fa/upload.png) Publish this Snapshot to the live servers.
+  * ![](/img/fa/random.png) Revert the portal to the version contained in the Snapshot.
+
 Click [here](/Documentation/Key Concepts/Snapshots.md) for more information about Snapshots, Versioning and Publishing.
 
 ### Access Secrets

@@ -1,5 +1,5 @@
 ---
-nav_sort: 13
+nav_sort: 12
 src: /Documentation/Configurator/Downloadables.md
 ---
 
@@ -11,19 +11,19 @@ This section of the Configurator allows you to upload and manage binary data (e.
 
 ![](img/Downloadables/1.jpg)
 
-* __ Amend the Downloadable.
-* __ Delete the Downloadable.
-* __ Download the Downloadable
+* ![](/img/fa/edit.png) Amend the Downloadable.
+* ![](/img/fa/trash.png) Delete the Downloadable.
+* ![](/img/fa/arrow-circle-o-down.png) Download the Downloadable
 
 
 To create a new piece of Downloadable content click on the __ icon as highlighted above. Next fill in a meaningful short code and then select the downloadable file.
 
 ![](img/Downloadables/1.jpg)
 
-*API Request*
+### API Request
 
 The GetDownloadableRequest returns a secure, time sensitive URL to allow the game to download a piece of downloadable content stored in the GameSparks platform. An example can be found [here](/API Documentation/Request API/Misc/GetDownloadableRequest.md).
 
-*Accessing the Downloadable from Cloud Code*
+### Accessing the Downloadable from Cloud Code
 
 Both XML and JSON Downloadables can be accessed via Cloud Code via the [SparkFiles](/API Documentation/Cloud Code API/Utils/SparkFiles.md) object;

@@ -1,16 +1,17 @@
 ---
-src: /Documentation/Manage/Dynamic Forms.md
+nav_sort: 1
+src: /Documentation/Manage/Working with Dynamic Forms.md
 ---
 
 # Dynamic Forms
 
 This tutorial is a step-by-step guide to creating Dynamic Forms. For this Tutorial, we will create Dynamic Forms for the management of Players in our game. Before starting this tutorial, it's vital to understand the [Dynamic Forms API](/API Documentation/Dynamic Forms API.md).
 
-# *Basics of Dynamic Forms*
+## Basics of Dynamic Forms
 
 This section will cover the creation of a basic Screen and Snippet, and how to link them together.
 
-## Creating a Screen
+### Creating a Screen
 
 Whenever creating Dynamic Forms, you should always start with a Screen. A Screen is powered by the structure of Snippets that you create. You can have as many Screens as you desire, however a Screen should have a meaningful name. In this tutorial, it will be called Players.
 
@@ -47,13 +48,13 @@ You can open the Screen Builder by clicking the Edit Code ![](/img/fa/code.png)
 
 As a rule of thumb, you want very little logic in the Screen itself as it should only act as a placeholder and an initiator for the Snippets.
 
-## Creating a Snippet
+### Creating a Snippet
 
 Snippets contain the logic of how your Dynamic Forms behave. Snippets should have meaningful names and Short Codes as Snippets are accessed by their Short Code. Following the trend where Screens shouldn't contain as little logic as possible, we'll create a Snippet that will execute the same Dummy Data as the Screen did before.
 
 *5.* Navigate to the Snippets tab and create a snippet, giving it a Short Code of *player_search*.
 
-## The Snippet Builder
+### The Snippet Builder
 
 The Snippet Builder view is divided into 4 quadrants. Moving around the view clockwise, the top-left quadrant is for JavaScript or Cloud Code that provides the logic and behaviour of the Dynamic Form. The top-right quadrant is for HTML / GSML or Handlebars code that renders the view. The bottom-right quadrant is the preview panel where the Dynamic Form will be rendered, including the logic provided by the JavaScript panel, once the ![play](/img/fa/play.png)  icon has been pressed. Finally, the bottom-right quadrant represents the JSON formatted response to the JavaScript / Cloud Code provided in the quadrant above it.
 
@@ -63,7 +64,7 @@ The Snippet Builder view is divided into 4 quadrants. Moving around the view clo
 
 Although there are many ways of writing the logic in Snippets, one of the more important things to consider when creating Snippets, is that ideally they should be self-contained and not dependent on other Snippets. This logic will be explained in more detail later on.
 
-## Snippet Workflow
+### Snippet Workflow
 
 Before we begin to design our Snippets, it's important to learn the flow of their creation using the Snippet Builder and the preferred order of using the quadrants. We can define variables for input values entered onto the corresponding Screen, or Script Data that needs to be accessed using Cloud Code. But, which one do we use first?  
 Normally, our first thought would be to know what Script Data the Snippet will require. Therefore, most Snippets will be initially created using the JavaScript quadrant *(1)*. To ensure we are getting the right data what is required for the Snippet at this stage, we can preview the Cloud Code using the ![play](/img/fa/play.png)  icon. This will generate a JSON formatted response in the bottom-left Response JSON quadrant *(2)*.
@@ -72,7 +73,7 @@ Once we are happy that we have all the required data for the Snippet, we can des
 
 However, this order may not always be the preferred way. For example, we might design a Screen using the Handlebars quadrant first, then realise we need to retrieve some more Script Data, by then calling that information using the JavaScript quadrant. As mentioned earlier, there are many routes to creating Snippets.
 
-## Linking the Screen to the Snippet
+### Linking the Screen to the Snippet
 
 The next step is to remove the logic from the Screen itself, retaining only this code within the Snippet. Instead, we want to use the Players Screen to call the Snippet.
 
@@ -86,15 +87,15 @@ The next step is to remove the logic from the Screen itself, retaining only this
 
 As seen above, the Screen no longer contains any logic. It simply calls the Snippet using the *<gs-snippet>* tag with the value pointing at the *player_search* Snippet. Since there's no target provided, it will render the output across the entire page.
 
-## Master Snippets
+### Master Snippets
 
 A Master Snippet is a Snippet that can hold multiple Snippets that both manipulate data and render forms. Typically, a Master Snippet is a collection of Snippets. It doesn't hold much logic of it's own, and merely serves as a container for other self-contained Snippets.
 
-# Dynamic Forms Player Search
+## Dynamic Forms Player Search
 
 Since Dynamic Forms are very flexible in the way you implement them, there certainly isn't one right way of creating them. The following tutorial will only provide an example of the preferred way of implementing Dynamic Forms, highlighting their key features. It is not required to finish the full tutorial and understand all of the concepts to begin developing Dynamic Forms. This tutorial highlights only the basic capabilities within Dynamic Forms.
 
-## Players Screen
+### Players Screen
 
 Our Players Screen will contain the code to execute the *player_search* Snippet as well as including the a placeholder for the *player_results* Snippet that will serve as a target where we want to render our search results.
 
@@ -117,7 +118,7 @@ Our Players Screen will contain the code to execute the *player_search* Snippet 
 
 The above code gives us two rows, one containing the yet-to-be-implemented Player Search title bar and another row that will contain the results of whatever our Snippets submit.
 
-## player_search Snippet
+### player_search Snippet
 
 This Snippet will be solely responsible for displaying the *gs-query* and passing on the query input to the next "processing" Snippet once the Submit button is pressed.
 
@@ -140,7 +141,7 @@ We can see our Submit button, as well as an area with an undefined error. This i
 
 It's also worth noting that in the code, *user_query* is contained within a form, so whatever output the Snippet renders, it will be submitted together with the form.
 
-## user_query Snippet
+### user_query Snippet
 
 We now want to create a *user_query* Snippet which we referred to earlier in our *player_search* Snippet.
 
@@ -316,7 +317,7 @@ The search feature is now complete.
 
 You can see that the *user_query* has been rendered within the form. This allows you to create form Snippets that you can re-use in any form.
 
-## player_search_results Snippet
+### player_search_results Snippet
 
 When we click the Submit button on the Players Screen, all the data input into the form that was built using *player_search* Snippet will be collected and passed to the *player_search_results* Snippet, which does not yet exist. As the target of the form is defined as *player_results*, the output of this Snippet will be rendered there. We can now test that the query we've built is submitted correctly into the *player_search_results* Snippet.
 
@@ -430,7 +431,7 @@ The above code will display the number of records that were found, and if there 
 
 When the link is clicked, it will execute the yet-to-be-implemented *player_master* Snippet, passing in the PlayerId of that player and rendering the results from the Snippet in a wide modal form.  
 
-## player_master Snippet
+### player_master Snippet
 
 *21.* Create a new Snippet called *player_master* and enter the following into the JavaScript quadrant:  
 
@@ -497,7 +498,7 @@ The *player_master* Snippet contains 4 other Snippets (*player_details*, *playe
 
 ![](img/DynamicForms/13.png)
 
-## player_currencies Snippet
+### player_currencies Snippet
 
 This Snippet is responsible for displaying the currencies for the given player.  
 
