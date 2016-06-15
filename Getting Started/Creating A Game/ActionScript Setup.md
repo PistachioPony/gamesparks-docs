@@ -1,6 +1,6 @@
 ---
 nav_sort: 3
-src: /Getting Started/Creating a Game/ActionScript Setup.md
+src: /Getting Started/Creating A Game/ActionScript Setup.md
 ---
 
 # ActionScript Setup

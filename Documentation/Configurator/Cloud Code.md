@@ -85,7 +85,7 @@ Realtime Scripts can be created here and linked to Match configuration in the Mu
 
 The System tab contains a number of System Events that are able to trigger some JavaScript Cloud Code:
 
-  * *Callback Url* - This script is executed whenever something hits the [Callback Url](/Tutorials/Cloud Code and the Test Harness/External HTTP Callbacks.md).
+  * *Callback Url* - This script is executed whenever something hits the [Callback Url](/Tutorials/Cloud Code and the Test Harness/Implementing External HTTP Callbacks.md).
   * *Every Day* - This script is executed at 12:00am UTC each day.
   * *Every Hour* - This script is executed on the hour, every hour.
   * *Every Minute* - This script is executed on the minute, every minute.

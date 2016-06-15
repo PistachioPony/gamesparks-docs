@@ -1,5 +1,5 @@
 ---
-src: /Getting Started/Creating a Leaderboard/Unity Leaderboards.md
+src: /Getting Started/Creating A Leaderboard/Unity Leaderboards.md
 ---
 
 # Unity Leaderboard

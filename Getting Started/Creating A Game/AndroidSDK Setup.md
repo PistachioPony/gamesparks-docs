@@ -1,6 +1,6 @@
 ---
 nav_sort: 4
-src: /Getting Started/Creating a Game/AndroidSDK Setup.md
+src: /Getting Started/Creating A Game/AndroidSDK Setup.md
 ---
 
 # AndroidSDK Setup
@@ -84,7 +84,7 @@ That will ensure that the API is ready to be used. Now to initialise the GS mod
 
 <pre>GSAndroidPlatform.initialise(this, "YOUR KEY", "YOUR SECRET", false, true);</pre>
 
-Now you need an API key and secret, which you given when you create a game on our platform, click [here](Getting Started/Creating A Game/README.md) for a quick guide to show you how. Once that's done, now you need to start the connection. To do that place this code in the activity's
+Now you need an API key and secret, which you given when you create a game on our platform, click [here](/Getting Started/Creating A Game/README.md) for a quick guide to show you how. Once that's done, now you need to start the connection. To do that place this code in the activity's
 
 ```
 @Override

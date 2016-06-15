@@ -33,13 +33,13 @@ Google Integrations tab allows you to set up Google Plus Authentication for 
 
 ### Apple Integration
 
-Apple Integrations tab allows configuring [IOS Push Notifications](/Tutorials/Social Features/iOS Push Notifications.md) as well as [IOS IAPs](/Tutorials/Currencies, Virtual Goods and Achievements/In App purchases.md) for your game.
+Apple Integrations tab allows configuring [IOS Push Notifications](/Tutorials/Social Features/Configuring iOS Push Notifications.md) as well as [IOS IAPs](/Tutorials/Currencies, Virtual Goods and Achievements/Managing In App purchases.md) for your game.
 
 ![](img/Integrations/5.jpg)
 
 ### Microsoft Integration
 
-Microsoft Integrations tab allows configuring [Windows Push Notifications](/Tutorials/Social Features/Windows push notifications.md) as well as [Windows IAPs](/API Documentation/Request API/Store/WindowsBuyGoodsRequest.md) for your game.
+Microsoft Integrations tab allows configuring [Windows Push Notifications](/Tutorials/Social Features/Configuring Windows Push Notifications.md) as well as [Windows IAPs](/API Documentation/Request API/Store/WindowsBuyGoodsRequest.md) for your game.
 
 ![](img/Integrations/6.jpg)
 

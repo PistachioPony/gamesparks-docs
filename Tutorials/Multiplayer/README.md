@@ -18,4 +18,4 @@ Challenge types:
 * [Score Based Challenges](/Tutorials/Multiplayer/Score Based Challenges.md)
 * [Score Based Asynchronous Challenges](/Tutorials/Multiplayer/Score Based Asynchronous Challenges.md)
 
-We've also included a worked example for creating a [Hearthstone](/Tutorials/Multiplayer/Hearthstone Example.md) style card game in which players are matched.
+We've also included a worked example for creating a [Hearthstone](/Tutorials/Multiplayer/Hearthstone Example/README.md) style card game in which players are matched.
