@@ -9,26 +9,27 @@ src: /Getting Started/Creating a Virtual Good/ActionScript Virtual Goods.md
 
 Once you have created [Virtual Goods](./README.md) on the Portal, you can now incorporate them in your game. This tutorial will show you how to buy and consume goods using a shop interface.
 
-*Creating a 'Grant Currency' Event*
+**Creating a 'Grant Currency' Event**
 
   * To help test the Virtual Goods, create an Event on the portal which takes an attribute of type NUMBER.
   * Using Cloud code, accredit the player an amount of currency passed in through the NUMBER attribute.
 
-*Creating the Buy and Consume functions*
+**Creating the Buy and Consume functions**
 
   * Create a function to log the BuyVirtualGoods request and one for the ConsumeVirtualGoods request.
   * Create a function to handle the BuyVirtualGoods request.
   * Create a function to handle the ConsumeVirtualGoods request which logs an Event to accredit the authenticated player with extra currency.
 
-*Keeping track of player details*
+**Keeping track of player details**
 
   * Create a function that updates the player's currency and amount of Virtual Goods owned by using the AccountDetails request.
 
-*Testing Virtual Goods*
+**Testing Virtual Goods**
 
   * Launch your game, buy and consume Virtual Goods to see your details being updated accordingly.
 
-Example code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/ActionscriptVirtualGoodsMXML.zip)
+</br>
+**Example ActionScript Vitual Goods** code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/ActionscriptVirtualGoodsMXML.zip)
 
 ## Creating the 'Grant Currency' Event
 

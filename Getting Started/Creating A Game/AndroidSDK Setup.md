@@ -5,13 +5,22 @@ src: /Getting Started/Creating a Game/AndroidSDK Setup.md
 
 # AndroidSDK Setup
 
-This tutorial will walk you through integrating GameSparks with your android project on the Android Builder IDE.the GameSparks Android SDK requires API 8 or greater and the Test Harness requires API 11 or greater for the example test harness project that we supply as a sample.
+## Introduction
 
-## Download the SDK
+This tutorial will walk you through integrating GameSparks with your android project on the Android Builder IDE. For the example test harness project that we supply as a sample:
+* The GameSparks Android SDK requires API 8 or greater.
+* The Test Harness requires API 11 or greater.
 
-This tutorial will walk you through getting the Android SDK integrated to Android builder. The source repositories for the android libraries can be found here: [https://bitbucket.org/gamesparks/gamesparks-java-sdk](https://bitbucket.org/gamesparks/gamesparks-java-sdk) [https://bitbucket.org/gamesparks/gamesparks-android-sdk](https://bitbucket.org/gamesparks/gamesparks-android-sdk) To integrate GameSparks into your project:
+## Source Repositories
 
-*1.*  In your Project's build.gradle add *classpath "com.github.dcendents:android-maven-gradle-plugin:1.3"* under buildscript dependencies and make sure you reference the latest plugin version number after colon. Add *maven {url "http://repo.gamesparks.net/mvn"}* under allprojects repositories.Our example looks like this:
+The source repositories for the android libraries can be found here:
+* [Java  SDK](https://bitbucket.org/gamesparks/gamesparks-java-sdk)
+* [Android SDK](https://bitbucket.org/gamesparks/gamesparks-android-sdk)
+
+## Integrating GameSparks into your project
+
+*1.*  In your Project's build.gradle add *classpath "com.github.dcendents:android-maven-gradle-plugin:1.3"* under buildscript dependencies and make sure you reference the latest plugin version number after colon. Add *maven {url "http://repo.gamesparks.net/mvn"}* under allprojects repositories.
+Our example looks like this:
 
 ```
     buildscript {

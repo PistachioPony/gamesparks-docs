@@ -5,7 +5,6 @@ src: /Documentation/Configurator/Running Totals.md
 
 # Running Totals
 
-[toc]
 
 Running Totals allow you to process events using the GameSparks scoring and ranking systems. You will not need to use this page where you are creating simple Leaderboards, because the Default Calc on the Event screen will have auto created your Running Total. But for more advanced scenarios (e.g. a Leaderboard for Most Improved Player in Last [x] Weeks) you'll need to add the new custom running totals through this interface.
 
@@ -22,7 +21,7 @@ When a player posts an Event to the platform, all Running Totals associated with
 
 ## Creating a new Running Totals
 
-Press the icon to create a new Running Total. The Edit/Create screen has the following fields.
+Press the ![](/img/fa/plus.png) icon to create a new Running Total. The Edit/Create screen has the following fields.
 
   * *Short Code* - the short code of the Running Total, used by the API to allow you to identify which Running Total you want to call.
   * *Name* \- the name of the Running Total. This is used to allow you to identify it in the portal if you have several.

@@ -6,13 +6,21 @@ src: /Tutorials/Multiplayer/Setting Up Challenge Eligibility.md
 
 ## Introduction
 
-In this tutorial we'll look at setting up matchmaking based on a player's segments. To do this we will use segmentation to group players together, and eligibility criteria to filter challenges for those players. We'll also see how we can override a current player's settings to allow the client to determine what available challenges to show at any time, and allow the player to join them. To start with let's set up a simple challenge, then we can look at how to match players up. Navigate to Challenges within the Configurator and let's add a new challenge. Give it a short code of SC1, and let's just call it "Simple Challenge".
+In this tutorial, we'll look at setting up matchmaking based on a player's segments. To do this, we'll use segmentation to group players together and we'll use eligibility criteria to filter challenges for those players. We'll also see how we can override a current player's settings to allow the client to determine what available challenges to show at any time, and allow the player to join them. To start with, let's set up a simple challenge. We can then look at how to match players up.
+
+1. Navigate to Challenges within the Configurator.
+
+2. Add a new challenge.
+
+3. Give it a short code of SC1.
+
+4. Give it a name. Let's just call it Simple Challenge:
 
  ![](img/ChallengeEligibility/1.png)
 
- That's all we need for the purposes of this tutorial so let's head over to the test harness and get our players set up.
+That's all we need for the purposes of this tutorial, so let's head over to the test harness and get our players set up.
 
-## Using a player's segments
+## Using a Player's Segments
 
 We're going to segment our players based on "level", with the aim of matching players who are the same level as each other to play against. Let's register our first two players, setting their level to "Newbie".
 
@@ -52,9 +60,9 @@ Leave yourself authenticated as challengePlayer2 and let's create the challenge 
 }
 ```
 
-What this means is that to be eligible to find or join this challenge you must have a segment called "level", with the value "Newbie". The eligibility criteria can be more complex than this, we'll go into some more detail on this later.
+What this means is that to be eligible to find or join this challenge you must have a segment called "level", with the value "Newbie". The eligibility criteria can be more complex than this: we'll go into some more detail on this later.
 
-So now we have our challenge instance, let's authenticate as challengePlayer1 and find it.
+Now we have our challenge instance, let's authenticate as challengePlayer1 and find it.
 
 Make a FindChallengeRequest specifying an accessType of PUBLIC and our challenge short code:
 ```
@@ -161,7 +169,7 @@ Create a challenge with challengePlayer3 as we did above, but this time set the 
 }
 ```
 
- And now do a FindChallengeRequest:
+ And now do a *FindChallengeRequest*:
 
 ```
 {
@@ -204,13 +212,13 @@ Create a challenge with challengePlayer3 as we did above, but this time set the 
 
  Not only do they see the "Advanced" challenge, but they don't see the "Newbie" challenge.
 
-## Overriding eligibility in the client
+## Overriding Eligibility in the Client
 
-So we've seen that we can use segments to categorise players, and match players based on this. What if we'd rather it was just the challenges that are categorised to make them more readily searchable, but any player could join them? No problem, we can do this as well.
+We've seen that we can use segments to categorise players, and match players based on this. What if we'd rather it was just the challenges that are categorised to make them more readily searchable, but any player could join them? No problem, we can do this as well.
 
- Let's go back to using challengePlayer1 and challengePlayer2. We're not going to be using "level" any more, so it doesn't actually matter which players we use for this.
+Let's go back to using challengePlayer1 and challengePlayer2. We're not going to be using "level" any more, so it doesn't actually matter which players we use for this.
 
-  Authenticate as challengePlayer2 and let's create another challenge, this time specifying some other segment name, let's call it "category" - this is an arbitrary choice, it could be anything.
+Authenticate as challengePlayer2 and let's create another challenge. This time specify some other segment name, let's call it "category" - this is an arbitrary choice, it could be anything:
 
 ```
   {
@@ -227,6 +235,7 @@ So we've seen that we can use segments to categorise players, and match players 
 ```
 
 Now authenticate as challengePlayer1 and let's try and find that challenge:
+
 ```
 {
 "@class": ".FindChallengeRequest",
@@ -235,7 +244,7 @@ Now authenticate as challengePlayer1 and let's try and find that challenge:
 }
 ```
 
-You can see the challenge we have just created doesn't show up. Let's modify that request slightly. Since we're using eligibility criteria to categorise challenges rather than to group players the client is going to own what the eligibility for the request is:
+You can see the challenge we have just created doesn't show up. Let's modify that request slightly. Since we're using eligibility criteria to categorise challenges rather than to group players, the client is going to own what the eligibility for the request is:
 
 ```
 {
@@ -263,11 +272,11 @@ You can see the challenge we have just created doesn't show up. Let's modify tha
 }
 ```
 
- We're telling the server what the eligibility should be, without it the player's segments would again be used.
+We're telling the server what the eligibility should be, without it the player's segments would again be used.
 
-## Advanced eligibility criteria
+## Advanced Eligibility Criteria
 
-The eligibility criteria specified in the CreateChallengeRequest can be more complex than a simple name and value of a segment. We currently support specifying multiple segments, and for each a list of values. So we could do something like this:
+The eligibility criteria specified in the *CreateChallengeRequest* can be more complex than a simple name and value of a segment. We currently support specifying multiple segments, and for each a list of values. So we could do something like this:
 
 ```
 {
@@ -284,7 +293,7 @@ The eligibility criteria specified in the CreateChallengeRequest can be more com
 }
 ```
 
-When multiple segments are specified a player must match ALL of them. In the above example my player would need to have both “level” AND “country” segments. When multiple segment values are specified, a player must match ONE of them (a player can only have one value for a segment, after all). So we could join the above challenge with the player:
+When multiple segments are specified a player must match **ALL** of them. In the above example, our player would need to have both “level” AND “country” segments. When multiple segment values are specified, a player must match **ONE** of them (a player can only have one value for a segment, after all). So we could join the above challenge with the player:
 
 ```
 {

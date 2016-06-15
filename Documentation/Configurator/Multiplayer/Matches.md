@@ -15,13 +15,13 @@ The Multiplayer page in the Configurator section of the Portal, displays the lis
 
 The icons (highlighted above) give you the following capabilities:
 
-  * ![](/img/fa/plus-circle.png) Add a new Match.
+  * ![](/img/fa/plus.png) Add a new Match.
   * ![](/img/fa/edit.png) Edit this Match.
   * ![](/img/fa/trash.png) Delete this Match.
 
 ## Creating a new Match
 
-To create a new Match, select the *Add* (*+*) icon and you will be presented with the following overlay:
+To create a new Match, click the ![](/img/fa/plus.png) icon and you will be presented with the following overlay:
 
  ![](img/Matches/2.png)    
 

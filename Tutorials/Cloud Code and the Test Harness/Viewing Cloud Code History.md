@@ -1,4 +1,5 @@
 ---
+nav_sort: 2
 src: /Tutorials/Cloud Code and the Test Harness/Viewing Cloud Code History.md
 ---
 
@@ -52,7 +53,7 @@ The *Base* column will only show Snapshots with Cloud Code that are independentl
 
 ![](img/CloudHistory/12.png) ![](img/CloudHistory/13.png)
 
-Setting the *Base *to Snapshot *6* will let us compare only to ...                                                 ... Snapshot *4* and earlier.
+Setting the *Base* to Snapshot *6* will let us compare only to Snapshot *4* and earlier.
 
 For example, in terms of the Cloud Code on my game, Snapshots *1* to *4* (including the AUTOSAVE Snapshot) are the same as each other. Actually, these Snapshots have little or no Cloud Code at all. Snapshots *6* to *11* are all different from one another. Snapshots *5* and *6* are the same as each other - I know this because if I select Snapshot *6* in the *Base* column, Snapshot *5 *is not available in the *Compare to* column.
 

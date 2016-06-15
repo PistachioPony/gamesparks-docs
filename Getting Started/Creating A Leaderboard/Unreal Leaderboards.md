@@ -9,19 +9,20 @@ src: /Getting Started/Creating a Leaderboard/Unreal Leaderboards.md
 
 If you have followed the Portal [Tutorial](./README.md) for making an Event and a Leaderboard, then for this tutorial all you will need to do is call your Event. Here is a basic overview of what will be achieved through this tutorial.
 
-*Gamesparks Message Listeners*
+**Gamesparks Message Listeners**
 
   * Creating a GS *MessageListeners* Component in your Game Mode class.
   * Retrieving the *OnNewHighScoreMessage* Event using the Listener.
   * Breaking the received message and printing out the name of the Leaderboard to the currently authenticated player.
 
-*Calling the Event*
+**Calling the Event**
 
   * Call an Event that is linked to the Leaderboard.
   * Pass the SCORE value through to the Event.
   * Play the game and beat the High Score to receive feedback from the Service.
 
-Example code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/UnrealLeaderboard_Tutorial.zip)
+</br>
+**Example Unreal Leaderboard** code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/UnrealLeaderboard_Tutorial.zip)
 
 ## Setting up the Message Listener
 

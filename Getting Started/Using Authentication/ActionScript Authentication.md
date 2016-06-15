@@ -9,22 +9,24 @@ src: /Getting Started/Using Authentication/ActionScript Authentication.md
 
 The previous tutorial showed us how to [Authenticate players](/Getting Started/Using Authentication/README.md) with the platform using basic username/password Registration and Authentication. These next steps will show you how to set up ActionScript Authentication with GameSparks, teaching you how to set up a login and registration form with logic to go with them.
 
-Example code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/ActionscriptAuthenticationMXML.zip)
 
-*Setting up the Authentication and Registration*
+**Setting up the Authentication and Registration**
 
   * Establish a way to ensure no requests are sent if the GS module is not connected.
   * Create a function which sends an *AuthenticationRequest* and a function to handle the response.
   * Create a function which sends a *RegistrationRequest* and a function to handle the response.
 
-*Testing the Authentication and Registration*
+**Testing the Authentication and Registration**
 
   * Attempt to login without connecting to the Portal.
   * Attempt to login with a user that doesn't exist.
   * Register a new user.
   * Log in with the new user.
 
-## *Setting up the Authentication and Registration*
+</br>
+**Example ActionScript Authentication MXML** code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/ActionscriptAuthenticationMXML.zip)
+
+## Setting up the Authentication and Registration
 
 Before creating any functions for *Authentication*, you will need a way to check if the GS module is connected to the Portal. Checking if a connection has been established before requesting any GameSparks API calls will stop exceptions being thrown. To do this, make a boolean which defaults to *false*. Once the GS module call back returns "available" upon connecting, set the boolean to *true*.
 
@@ -111,7 +113,7 @@ The *Register* function is similar to the *Authenticate* function apart from an 
     }
 ```
 
-## *Testing Authentication and Registration*
+## Testing Authentication and Registration
 
 ![l](img/AS/1.png)
 

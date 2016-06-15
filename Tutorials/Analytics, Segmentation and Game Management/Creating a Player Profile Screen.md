@@ -33,7 +33,7 @@ For this example we'll query players with 'Gold Coin' virtual good greater than 
 
 ![](img/PlayerProfileScreen/6.jpg)
 
-Once we hit 'submit' this will pull three records that match from our collection. We'll go ahead and click the edit  ![](img/PlayerProfileScreen/7.png)  button to access the player profile screen.
+Once we hit 'submit' this will pull three records that match from our collection. We'll go ahead and click the edit ![](/img/fa/edit.png) icon to access the player profile screen.
 
 
 
@@ -49,4 +49,4 @@ The default player profile screen has 7 sections. Those are:
 4. *Currencies* - where currency quantity and the ability to edit them are.
 5. *Total Requests* - How many and what type of requests were called throughout the timeline. When hovered shows the type of requests made.
 6. *Total Requests* - A chart version of the total requests section but shows percentage of request calls in comparision to each other instead of how many on a timeline.
-7. *The Request Log* - Where requests and responses can be reviewed. You can click the 'inspect' ![](img/PlayerProfileScreen/9.png) button to review individual requests from the history.
+7. *The Request Log* - Where requests and responses can be reviewed. You can click the inspect ![](/img/fa/search.png) icon to review individual requests from the history.

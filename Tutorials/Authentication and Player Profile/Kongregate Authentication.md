@@ -1,4 +1,5 @@
 ---
+nav_sort: 7
 src: /Tutorials/Authentication and Player Profile/Kongregate Authentication.md
 ---
 

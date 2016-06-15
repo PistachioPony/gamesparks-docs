@@ -39,7 +39,7 @@ Now that you have the upload URL you need to post the file. This is done using 
 
 In the Test Harness, once you've made a GetUploadUrlRequest, you should see the upload URL populated within the Requests area. Now click 'Choose File', and select the file you want to upload. Once selected click 'Upload File'.
 
-![](img/Binary/1.png))
+![](img/Binary/1.png)
 
 Being an HTTP POST, this is not done through the WebSocket, but once complete the authenticated WebSocket that was used to request the upload URL will receive an [UploadCompleteMessage](https://docs.gamesparks.net/documentation/message-api/misc-message-api/uploadcompletemessage) indicating that the upload was successful.
 
@@ -72,6 +72,7 @@ The final step is to actually retrieve the content that has been uploaded. This 
  "@class": ".GetUploadedRequest",
  "uploadId": "3d3cbd17d2584e8295756d021dd0888b"
 }
+
 ```
 
 The response to this request contains a URL we can use to download the content. As before, this URL is time-sensitive so don't hang onto it for long - request one as you need it.
@@ -91,11 +92,11 @@ Go ahead and test the URL you receive by pasting it into your address bar in th
 
 ### Android and Unity
 
-* #### Upload
+#### Upload
 
 For completeness we expose the method getUploadUrlRequest to build the request object to get a URL to post the upload to, however there is an additional method we provide called uploadFile that takes a file, fileName and optional metadata about the upload. This wraps the request to get an upload URL and the subsequent upload of the file and presents them as a single operation.
 
-* #### Download
+#### Download
 
 As with the upload we expose the method getUploadedRequest to build the request object to get a URL to download the file however there is an additional method getUploadedFile which takes the uploadId and wraps up requesting the download URL and performing the download itself and presents them as a single operation.
 

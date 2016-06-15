@@ -9,7 +9,7 @@ The GameSparks ActionScript SDK allows you to interact with the GameSparks platf
 
 These instructions will concentrate on how to use the SDK from Adobe Flash Builder
 
-## .Getting the SDK
+## Getting the SDK
 
 The SDK is available via BitBucket [here](https://bitbucket.org/gamesparks/gamesparks-as3-sdk)
 
@@ -38,6 +38,7 @@ import com.gamesparks.api.responses.*;
 import com.gamesparks.api.messages.*;
 
 private static var gs:GS = new GS();
+
 ```
 
 When using the builder methods, you should supply:
@@ -66,15 +67,15 @@ public function availabilityCallback(isAvailable : Boolean):void{
 
 ## Registering a callback for asynchronous messages
 
-Each GS instance has it's own asynchronous message handler, and you can attach a function to each message type you want to handle. To assign a fnction to a message type, you can use the getMessageHandler() function on GS to get the handler, you can then set the handler for a speficic type.
+Each GS instance has it's own asynchronous message handler, and you can attach a function to each message type you want to handle. To assign a function to a message type, you can use the *getMessageHandler()* function on GS to get the handler, you can then set the handler for a specific type.
 
-The following shows how to listen for ScriptMessage:
+The following shows how to listen for *ScriptMessage*:
 
 ```
 gs.getMessageHandler().setHandler(ScriptMessage.MESSAGE_TYPE,scriptMessageHandler);
 ```
 
-The function you attach should accept a single parameter of the same type that you are listening for, the definition of scriptMessageHandler in the example above is as follows :
+The function you attach should accept a single parameter of the same type that you are listening for, the definition of *scriptMessageHandler* in the example above is as follows :
 
 ```
 public function scriptMessageHandler(message:ScriptMessage):void{
@@ -86,7 +87,7 @@ public function scriptMessageHandler(message:ScriptMessage):void{
 
 ## Sending requests to GameSparks
 
-Each request type available on the platform has it's own class within the sdk. To create a new request, you use the createXXXRequest() methods within the request builder object that is attached to your GS instance. To send an authentication request with username "SDK_Tester" and password "password"the following line of code should be used:
+Each request type available on the platform has it's own class within the sdk. To create a new request, you use the *createXXXRequest()* methods within the request builder object that is attached to your GS instance. To send an authentication request with username "SDK_Tester" and password "password" the following line of code should be used:
 
 ```
 gs.getRequestBuilder()
@@ -96,7 +97,7 @@ gs.getRequestBuilder()
     .send(handleAuthenticationResponse);
 ```
 
-When calling send, you can optionally supply a callback that will be invoked when the response is received form the server. This function should take a single parameter of the response type you are expecting from the request.
+When calling send, you can optionally supply a callback that will be invoked when the response is received from the server. This function should take a single parameter of the response type you are expecting from the request.
 
 ```
 public function handleAuthenticationResponse(response:AuthenticationResponse):void {

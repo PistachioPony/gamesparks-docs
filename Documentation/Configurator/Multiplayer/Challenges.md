@@ -15,13 +15,13 @@ The Configurator Multiplayer page displays the list of Challenges and allows yo
 
 The icons (highlighted above) give you the following capabilities:
 
-  * ![](/img/fa/plus-circle.png) Add a new Challenge.
+  * ![](/img/fa/plus.png) Add a new Challenge.
   * ![](/img/fa/edit.png) Edit this Challenge.
   * ![](/img/fa/trash.png) Delete this Challenge.
 
 ## Creating a new Challenge configuration
 
-To create a new challenge select the icon and you will be presented with the following overlay:
+To create a new Challenge, click the ![](/img/fa/plus.png) icon and you will be presented with the following overlay:
 
 ![](img/Challenges/2.jpg)
 

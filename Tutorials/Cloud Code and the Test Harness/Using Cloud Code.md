@@ -1,4 +1,5 @@
 ---
+nav_sort: 1
 src: /Tutorials/Cloud Code and the Test Harness/Using Cloud Code.md
 ---
 
@@ -8,7 +9,7 @@ In this exercise we use the Configurator to create an event that will then trigg
 
 ## Create an Event
 
-Go to Configurator/Events and click the plus icon to bring up the Create Event dialog.
+Go to Configurator/Events and click the ![](/img/fa/plus.png) icon to bring up the Create Event dialog.
 
 ![](img/CreateCloud/1.png)
 
@@ -16,7 +17,7 @@ Now fill in the Event’s details and click the Save button.
 
 ![](img/CreateCloud/2.png)
 
-Next click the plus icon to add an Event Attribute.
+Next click the ![](/img/fa/plus.png) icon to add an Event Attribute.
 
 ![](img/CreateCloud/3.png)
 
@@ -56,7 +57,9 @@ Click Save at the bottom right hand corner. Your page should now look like this.
 
 The first three lines of the script use the Spark.getData function to access the attribute values of the incoming Event. Notice how these attributes match the values we gave the Event Attribute short codes in the previous section. The remaining lines use the Spark.setScriptData function to add three new fields to the response that is delivered to the calling client. The first line takes the first attribute and converts it to uppercase, the second multiplies the second attribute value by 10 and the final two lines add a new property to an incoming JSON object and assign that to the response. You're now ready to test the code via the Test Harness.
 
-## Testing the Cloud Code script and Event with the Test Harness
+## Testing the Cloud
+
+Code script and Event with the Test Harness
 
 In this section we will use the Test Harness to register a test player with the preview version of the game, authorise this player and post an event that will trigger our Cloud Code script. We will see the JSON requests and responses containing the data inserted by the script.
 
@@ -80,4 +83,4 @@ Go to Test Harness/LogEvent section, and select the CC_EVT event that we created
 
 ![](img/CreateCloud/12.jpg)
 
-The response is displayed in the Inspector in blue text. The scriptData property contains the fields that we added from within our Cloud Code script. The keys are eventAttr1, eventAttr2 and eventAttr3. 
+The response is displayed in the Inspector in blue text. The scriptData property contains the fields that we added from within our Cloud Code script. The keys are eventAttr1, eventAttr2 and eventAttr3.

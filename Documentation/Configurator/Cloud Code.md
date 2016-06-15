@@ -21,7 +21,7 @@ This list contains an entry for each Event you have created within the GameSpark
 
 ![](img/CloudCode/3.jpg)
 
-Clicking the *+* button will open the same Form as in the [Events](/Documentation/Configurator/Events.md) page to allow Event creation .
+Clicking the ![](/img/fa/plus.png) icon will open the same Form as in the [Events](/Documentation/Configurator/Events.md) page to allow Event creation .
 
 ### Challenge Events
 

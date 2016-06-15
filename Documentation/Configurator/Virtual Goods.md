@@ -15,13 +15,13 @@ The Configurator Virtual Goods page displays the list of Virtual Goods and all
 
 The icons (highlighted above) give you the following capabilities:
 
-  * ![](/img/fa/plus-circle.png) Add a new Virtual Good.
+  * ![](/img/fa/plus.png) Add a new Virtual Good.
   * ![](/img/fa/edit.png) Edit this Virtual Good.
   * ![](/img/fa/trash.png) Delete this Virtual Good.
 
 ## Creating a new Virtual Good configuration
 
-Press the ![](/img/fa/plus-circle.png) icon to create a new Virtual Good.
+Press the ![](/img/fa/plus.png) icon to create a new Virtual Good.
 
 ![](img/VGoods/2.jpg)
 

@@ -46,26 +46,32 @@ Thresholds are used to define how precise we want our matches to be, and for how
 
 A Match is built upon the different types of range criteria for the common attribute (i.e. skill level) that we want to match Players on. There are 3 different types of range criteria that can be used to fine-tune your Matches which make them more precise in matching Players with similar attributes:
 
-* *Absolute* \- Match Players that fall between the specified minimum and maximum range of absolute values. Example: the first Period in the screenshot above will only match two Players who have a skill level between the values of 19 and 21.
-* *Relative* \- Find a match between two Players where their values are no wider apart than the specified minimum and maximum values. Example: If Player 1 submits a *[MatchmakingRequest*](https://api.gamesparks.net/?jsonsdk#matchmakingrequest) with a skill level of X, Player 1 will only be matched to another Player who has a skill level 3 greater than or 3 less than X.
-* *Percentage* \- Similar to Relative, find a match between Players where their values are no wider apart than the specified minimum and maximum percentage values. Example: If Player 1 submits a *MatchmakingRequest* with a skill level of X, Player 1 will only be matched to another Player who has a skill level between 25 percent less than and 50 percent greater than X.
+* *Absolute* \- Match Players that fall between the specified minimum and maximum range of absolute values.
+
+  **Example:** The first Period in the screenshot above will only match two Players who have a skill level between the values of 19 and 21.
+* *Relative* \- Find a match between two Players where their values are no wider apart than the specified minimum and maximum values.
+
+  **Example:** If Player 1 submits a [MatchmakingRequest](https://api.gamesparks.net/?jsonsdk#matchmakingrequest) with a skill level of X, Player 1 will only be matched to another Player who has a skill level 3 greater than or 3 less than X.
+* *Percentage* \- Similar to Relative, find a match between Players where their values are no wider apart than the specified minimum and maximum percentage values.
+
+  **Example:** If Player 1 submits a *MatchmakingRequest* with a skill level of X, Player 1 will only be matched to another Player who has a skill level between 25 percent less than and 50 percent greater than X.
 * *Accept Min. Players* \- Selecting this for a particular threshold instructs the Match to match all the Players it has currently found after that selected threshold period is complete, on the condition that the number of Players found and matched is more than or equal to the value in the *Min. Players* field. If it hasn't found enough Players according to this value, the *Accept Min. Players* value is ignored and the Match continues to find Players in the next threshold.
 
-**Remember!  If *Accept Min. Players* is not selected for any threshold, and there aren't enough Players found in the Match to reach the *Max. Players* value, no Match will be found, even if there are more Players than the *Min. Players* value.**
+<q>**Remember!**  If *Accept Min. Players* is not selected for any threshold, and there aren't enough Players found in the Match to reach the *Max. Players* value, no Match will be found, even if there are more Players than the *Min. Players* value.</q>
 
 ### Periods of time
 
 We can specify how long we want to look for a Match Type before giving up. This can be done by creating Periods of time where we specify the Type on which we should match Players.
 
-We can create multiple Threshold periods during one Match and in those Periods of time, we can specify different Types on which we should match Players. In my example above, I have 3 Thresholds, all with different Periods of time (in seconds). Once the *MatchmakingRequest* is executed, if the first Period does not find a suitable match, the following periods will continue to subsequently find a match until their duration has expired. By having a combination of longer and shorter Periods, we can fine-tune our Match criteria to be stricter or relaxed as the time duration of the Match progresses.
+We can create multiple Threshold periods during one Match and, in those Periods of time, we can specify different Types on which we should match Players. In the examples above, we have 3 Thresholds, all with different Periods of time (in seconds). Once the *MatchmakingRequest* is executed, if the first Period does not find a suitable match, the following periods will continue to subsequently find a match until their duration has expired. By having a combination of longer and shorter Periods, we can fine-tune our Match criteria to be stricter or more relaxed, whilst the time duration of the Match progresses.
 
-In my example in the screenshot above, my first Threshold will try to find a match based on an *Absolute* Match Type for *10* seconds. My second and third Thresholds will try to find a *Relative *match for *20* seconds and a *Percentage* match for *30* seconds respectively, before the Match ends.  
+In the match example shown the screenshot above, the first Threshold will try to find a match based on an *Absolute* Match Type for *10* seconds. The second and third Thresholds will try to find a *Relative* match for *20* seconds and a *Percentage* match for *30* seconds respectively, before the Match ends.  
 
 ### Quick or Precise Matching?
 
 Currently, Matches become more precise with an increased number of Thresholds.
 
-For example, I have a simple Head-to-Head Match with 1 Threshold that has a minimum Relative value of *1 *and a maximum Relative value of *5.* If Player *1* submits a *MatchmakingRequest * first and has a skill of *15,* and Player *2* submits a *MatchmakingRequest *and has a skill of *20,  *there will be no Match even though Player *1*'s maximum Threshold matches Player *2*'s skill using these Threshold values, no reverse-matching occurs because Player *2*'s minimum Threshold value wouldn't match Player *1*'s skill.
+For example, suppose we have a simple Head-to-Head Match with a single Threshold that has a minimum Relative value of *1* and a maximum Relative value of *5*. If Player *1* submits a *MatchmakingRequest* first and has a skill of *15,* and Player *2* submits a *MatchmakingRequest* and has a skill of *20*, there will be no Match, even though Player *1*'s maximum Threshold matches Player *2*'s skill using these Threshold values: no reverse-matching occurs because Player *2*'s minimum Threshold value wouldn't match Player *1*'s skill.
 
 However, more precise matches can be achieved simply by adding more Thresholds.
 
@@ -73,11 +79,11 @@ However, more precise matches can be achieved simply by adding more Thresholds.
 
 In a more precise Head-to-Head Match, using Thresholds like the ones on *MULTI_MCH* above, would return a more accurate Match between Players than the previous example.
 
-If Players *1*, *2* and *3* had skills of *20*, *15*, and *17* respectively and submitted a *MatchmakingRequest* in that order, during the time of Player *1*'s first threshold period, Players *1* and *3* would be matched based on the second (Relative) Match Type.
+If Players *1*, *2*, and *3* had skills of *20*, *15*, and *17* respectively and submitted a *MatchmakingRequest* in that order, during the time of Player *1*'s first threshold period, Players *1* and *3* would be matched based on the second (Relative) Match Type.
 
-If Players *1*, *2* and *3* had skills of *20*, *15*, and *16* respectively and submitted a *MatchmakingRequest* in that order, during the time of Player *1*'s first threshold period, Players *2* and *3* would be matched based on the second (Relative) Match Type.
+If Players *1*, *2*, and *3* had skills of *20*, *15*, and *16* respectively and submitted a *MatchmakingRequest* in that order, during the time of Player *1*'s first threshold period, Players *2* and *3* would be matched based on the second (Relative) Match Type.
 
-If Players *1*, *2* and *3* had skills of *20*, *15*, and *16* respectively, and Player's *2* and *3* submitted a *MatchmakingRequest* in that order, during the time of Player 1's *second* threshold period, Players *1* and *3* would again be matched based on the *third* (Percent) Match Type.  
+If Players *1*, *2*, and *3* had skills of *20*, *15*, and *16* respectively, and Player's *2* and *3* submitted a *MatchmakingRequest* in that order, during the time of Player 1's *second* threshold period, Players *1* and *3* would again be matched based on the *third* (Percent) Match Type.  
 
 ## Multiplayer Matching
 

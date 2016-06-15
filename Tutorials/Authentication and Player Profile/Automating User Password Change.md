@@ -1,4 +1,5 @@
 ---
+nav_sort: 2
 src: /Tutorials/Authentication and Player Profile/Automating User Password Change.md
 ---
 

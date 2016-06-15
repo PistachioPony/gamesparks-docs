@@ -13,7 +13,7 @@ Once you match players together you will have reference to other player's Ids an
 To access player data from a list of opponents in a match:
 
   * Call the MatchDetails request using the matchId of the match which contains the players you wish to access.
-  * Once you receive the response You can access the opponent array which contains player data object which allow easy access to Achievements, Virtual Goods, Display name, online status, ID and scriptData so you don't have to load player information through ID but instead have a quick reference to commonly used data.
+  * Once you receive the response, you can access the opponent array which contains player data object. This gives you easy access to Achievements, Virtual Goods, Display name, online status, ID and scriptData, so you don't have to load player information through ID but instead have a quick reference to commonly used data.
  
 
   ```  

@@ -1,4 +1,5 @@
 ---
+nav_sort: 8
 src: /Tutorials/Authentication and Player Profile/Twitch Authentication.md
 ---
 

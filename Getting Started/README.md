@@ -7,8 +7,8 @@ src: /Getting Started/README.md
 
 Follow these tutorials in sequence to get quickly powered-up with the GameSparks platform.
 
-First off, the platform side of the implementation, includeing setup and use of features which can be used through the GameSparks API on any supported SDK:
-  * [Creating your Game](/Getting Started/Creating a Game/README.md) - Teaches you to create your first game on the platform and set up your SDK so you're ready to start using GameSparks.
+First off, the platform side of the implementation, including setup and use of features which can be used through the GameSparks API on any supported SDK:
+  * [Creating your Game](/Getting Started/Creating a Game/README.md) - How to create your first game on the platform and set up your SDK so you're ready to start using GameSparks.
   * [Using Authentication](/Getting Started/Using Authentication/README.md) - How to register and authenticate players as well as introducing the test harness.
   * [Using Cloud Code](/Getting Started/Using Cloud Code/README.md) - Creating events on the platform and linking them to some logic using Cloud Code and calling them through the SDKs.
 

@@ -9,7 +9,7 @@ src: /Getting Started/Creating a Game/Unreal Setup.md
 
 This tutorial will guide you through the process of setting up your Unreal game and integrating the GameSparks plugin.
 
-## SDK Download & Setup
+## SDK Download and Setup
 
 Here are the things that are required to Compile and Run the Unreal Engine SDK provided by GameSparks.
 

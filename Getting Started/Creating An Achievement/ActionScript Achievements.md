@@ -5,23 +5,24 @@ src: /Getting Started/Creating an Achievement/ActionScript Achievements.md
 
 # ActionScript Achievements
 
-## *Introduction*
+## Introduction
 
 After making an Event that awards your Player an Achievement using Cloud Code in the Portal, you can now incorporate them into your game. This tutorial will show you how to award the Player an Achievement and a way to check the Achievements a Player has earned in-game.
 
-*Setting up the Account Details Request and Earning an Achievement*
+**Setting up the Account Details Request and Earning an Achievement**
 
   * Create a function which logs an AccountDetails request using the request builder.
   * Create a function which handles the Account Details response and organises it in a way that can be displayed to the user.
   * Log the Event which awards the authenticated Player an Achievement through cloud code.
 
-*Testing the Achievement*
+**Testing the Achievement**
 
   * Request the authenticated Player's details to see that the Player has no Achievements.
   * Achieve the conditions to log the Event which awards the Player an Achievement. In this tutorial's game we will beat the highscore in the allotted time.
   * After meeting the condition to earn the Achievement, request the Player details to see that the account has earned the Achievement.
 
-Example code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/ActionscriptAchievementsMXML.zip)
+</br>
+**Example ActionScript Achievements** code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/ActionscriptAchievementsMXML.zip)
 
 ## Setting up the Account Details Request and Earning an Achievement
 

@@ -7,17 +7,20 @@ src: /Getting Started/Using Cloud Code/ActionScript Cloud Code.md
 
 ## Introduction
 
-After making the *Set_Pos* and *Get_Pos* Events in the portal, it's time to call them from your game. In this tutorial you will learn how to use a persistent variable saved against the Player to change their sprite location. *Setting up your Set and Get Functions*
+After making the *Set_Pos* and *Get_Pos* Events in the portal, it's time to call them from your game. In this tutorial you will learn how to use a persistent variable saved against the Player to change their sprite location.
+
+**Setting up your Set and Get Functions**
 
   * Create the set function which logs the Set_Pos Event from the portal to pass through the Player's current location.
   * Create the get function which logs the Get_Pos from the portal.
   * Create a response handle for the Get_Pos Event which retrieves the the Player's saved location.
 
-## Testing the Set and Get Functions
+**Testing the Set and Get Functions**
 
   * Create a game or scenario to test your new functions on.
 
-Example code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/ActionscriptCloudCodeMXML.zip)
+</br>
+**Example ActionScript Cloud** code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/ActionscriptCloudCodeMXML.zip)
 
 ## Setting up your Set and Get Functions
 

@@ -19,7 +19,7 @@ You can create and assign multiple segments, each with their own set of values.
 
 ![](img/Segments/1.png)
 
-Segments and their respective values can be set within the Segments area: ![Screen Shot 2014-12-09 at
+Segments and their respective values can be set within the Segments area:
 
 ![](img/Segments/2.png)
 

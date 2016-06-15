@@ -49,11 +49,11 @@ Or deliver it to your clients through the web socket API using:
 
 # Property Sets
 
-Now that you've seen how to set up and use a single Property, it's time to start looking at some more powerful ways to use them. A Property Set is a configuration object that lets you pull together different, but related, properties. Let's create a Property Set. Click the __ icon on the Property Set Panel.
+Now that you've seen how to set up and use a single Property, it's time to start looking at some more powerful ways to use them. A Property Set is a configuration object that lets you pull together different, but related, properties. Let's create a Property Set. Click the ![](/img/fa/plus.png) icon on the Property Set Panel.
 
 ![](img/SegmentedProperties/4.png)
 
-Give your Property Set a Short Code, Name and Description. Now let's add some Properties. Click the __ icon at the bottom right.
+Give your Property Set a Short Code, Name and Description. Now let's add some Properties. Click the ![](/img/fa/plus.png) icon at the bottom right.
 
 ![](img/SegmentedProperties/5.png)
 
@@ -103,4 +103,4 @@ The last thing to mention, and the thing that we think makes Property Sets reall
 
 ![](img/SegmentedProperties/7.png)
 
-Now when you edit our Property Set, by each Property is a __ icon. Clicking this lets you override the value that will be surfaced under each 'Name', depending on the segments of the current player. Now wherever you access that Property Set, if the Player belongs to a segment whose value you've overridden, they will see that overridden value. The obvious example here is delivering language-specific properties to a Player, but the possibilities really are boundless!
+Now when you edit our Property Set, by each Property is a ![](/img/fa/plus.png) icon. Clicking this lets you override the value that will be surfaced under each 'Name', depending on the segments of the current player. Now wherever you access that Property Set, if the Player belongs to a segment whose value you've overridden, they will see that overridden value. The obvious example here is delivering language-specific properties to a Player, but the possibilities really are boundless!

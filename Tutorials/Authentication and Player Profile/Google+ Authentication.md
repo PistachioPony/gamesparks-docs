@@ -1,4 +1,5 @@
 ---
+nav_sort: 6
 src: /Tutorials/Authentication and Player Profile/Google+ Authentication.md
 ---
 
@@ -151,7 +152,9 @@ Response:
 
 The Player is connected to the GameSparks platform!  
 
-## Domain-wide Authority: Certificate authentication instead of the Client Secret
+## Domain-wide Authority
+
+### Certificate authentication instead of the Client Secret
 
 As well as being able to establish manual authentication by using the Client ID and Client Secret, we can use Google's domain-wide delegation of authority to authenticate Players.  This can be done through the use of a Certificate stored in the GameSparks platform for the game.  For more information on how to set up Service accounts, go [here](https://developers.google.com/+/domains/authentication/delegation "Google Service accounts"). In order to utilise these features, our game must make use of an extra API - the *Google+ Domains API*.
 

@@ -13,7 +13,7 @@ There are several sections in the Test Harness:
   * *Connection* \- shows details of the current connection such as the authentication token and the session id.
   * *Statistics* \- shows a numbers of counters as well as a Connect / Disconnect button.
   * *Requests* \- contains all the available GameSparks API requests grouped according to functional area.  Each submenu item allows you to quickly populate the JSON entry field with a correctly formatted request.
-  * *JSON* \- enter your JSON request text here.  Send your request using the play icon {playIcon}.  Save a request using the disk icon. Record a scenario (a sequence of requests) using the microphone icon. Use the calendar icon __ to easily populate any date fields with the JSON request that you wish to send.
+  * *JSON* \- enter your JSON request text here.  Send your request using the play icon {playIcon}.  Save a request using the disk icon. Record a scenario (a sequence of requests) using the microphone icon. Use the calendar ![](/img/fa/calendar.png) icon to easily populate any date fields with the JSON request that you wish to send.
   * *Inspector* \- shows sent requests (in green), received responses (in blue) and asynchronous message received (in orange).
   * *Stage selector menu* \- the drop down menu in the top left of the screen allows you to select whether you are connecting to the preview or live stage of you game.
   * *Debugger* \- Allows debugging the Cloud Code attached to your requests. Tutorial can be found [here](/Documentation/Test Harness/Debugger.md).
@@ -45,17 +45,19 @@ The *Requests* section contains a selection of buttons which will populate the 
   * Misc \- contains requests that don't belong anywhere else!
   * Scenarios \- contains requests that you have saved for later use
 
+<q>**Debugger!** If you are using [LogEventRequest](/API Documentation/Request API/Player/LogEventRequest.md) with Cloud Code scripts, then at execution the [Debugger](/Documentation/Test Harness/Debugger.md) may appear.</q>
+
 For example click on the *Player* group button to display the player related requests and then click the *ChangeUserDetailsRequest* button to populate the JSON section with the request.
 
 ![](img/TestHarness/4.png)
 
-Make any changes to the request that you require, such as removing optional fields or changing the default data values and then press the play icon __ to send the request. You can also issue several requests at once simply by creating a JSON array of requests in the *JSON* section.  For example to authenticate a player and then query their details include the two requests in a JSON array such as this.
+Make any changes to the request that you require, such as removing optional fields or changing the default data values and then press the play ![](/img/fa/play.png) icon to send the request. You can also issue several requests at once simply by creating a JSON array of requests in the *JSON* section.  For example to authenticate a player and then query their details include the two requests in a JSON array such as this.
 
 ![](img/TestHarness/5.png)
 
 ## Saving requests as a scenario
 
-To save an individual request click on the disk icon __ in the *JSON* section.
+To save an individual request click on the ![](/img/fa/save.png) icon in the *JSON* section.
 
 ![](img/TestHarness/6.png)
 
@@ -69,7 +71,7 @@ The scenario is saved to *Scenarios* group of the *Request* section and can be 
 
 ## Recording multi-request scenarios
 
-You can also record a sequence of requests with the Test Harness. Enter the first request in to the *JSON* section then click the microphone icon __ which will change colour to red to indicate that the Test Harness is now recording subsequent requests.
+You can also record a sequence of requests with the Test Harness. Enter the first request in to the *JSON* section then click the microphone ![](/img/fa/microphone.png) icon which will change colour to red to indicate that the Test Harness is now recording subsequent requests.
 
 ![](img/TestHarness/9.png)
 

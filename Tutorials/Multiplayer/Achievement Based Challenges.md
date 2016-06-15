@@ -19,20 +19,20 @@ Create an event. In that event create an attribute of data type Number with the 
 
 ### Leaderboard
 
-Create a leaderboard for your challenge. Add a running total and set it to your event's score attribute. Link the event's attribute using the drop down list.
+Create a Leaderboard for your challenge. Add a running total and set it to your event's score attribute. Link the event's attribute using the drop down list.
 
 ![](img/AchievementBasedChallenges/2.jpg)
  
 
 ### Achievement
 
-Create an achievement. Link this achievement to the challenge's leaderboard. Add as many trigger data as you want to customise the trigger to your challenge. In our example we set the trigger to be between 500 to 600. If a player scores anything between 500 and 600 first during the challenge is the winner.
+Create an achievement. Link this achievement to the challenge's Leaderboard. Add as many trigger data as you want to customise the trigger to your challenge. In our example we set the trigger to be between 500 to 600. If a player scores anything between 500 and 600 first during the challenge is the winner.
 
 ![](img/AchievementBasedChallenges/3.jpg)
  
 
-### The challenge
+### The Challenge
 
-Select your leaderboard from the leaderboard drop down list. pick your achievement from the 'First to Achievement' drop down list. Now whenever your achievement is triggered manually through Cloud code or by a score based method via the leaderboard the player awarded this acheivement will win.
+Select your Leaderboard from the Leaderboard drop down list. Pick your achievement from the 'First to Achievement' drop down list. Now whenever your achievement is triggered manually through Cloud code or by a score based method via the Leaderboard the player awarded this achievement will win.
 
 ![](img/AchievementBasedChallenges/4.jpg)

@@ -7,13 +7,16 @@ src: /Getting Started/Creating a Game/ActionScript Setup.md
 
 ## Introduction
 
-The previous tutorial [Creating a Game](./README.md), took you through the beginning steps within the GameSparks platform. Now you can move forward and link your GameSparks game with your developing ActionScript project. This tutorial will show you how to set up your ActionScript project and establish a connection between the GS module and the Portal. *Setting up Your ActionScript Project*
+The previous tutorial [Creating a Game](./README.md), took you through the beginning steps within the GameSparks platform. Now you can move forward and link your GameSparks game with your developing ActionScript project. This tutorial will show you how to set up your ActionScript project and establish a connection between the GS module and the Portal.
+
+**Setting up Your ActionScript Project**
 
   * Create an ActionScript project.
   * Create a new folder for your project and name it 'lib'.
   * Download the GameSparks SWC file, drop it in the _'lib'_ folder, right click it and then Add to library.
   * Make sure you're using the latest [Adobe Flash](https://get.adobe.com/flashplayer) version.
-*Using GameSparks API*
+
+**Using GameSparks API**
 
   * Import the GameSparks API.
   * Find your Service URL in the Test Harness and the Secret key in the Overview page of the Portal.
@@ -22,34 +25,34 @@ The previous tutorial [Creating a Game](./README.md), took you through the begin
   * Build your ActionScript interface with a button to make the connection work correctly and a Logger to debug what's happening in the background.
   * Play your game and attempt to make a connection.
 
-Example code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/ActionscriptSetupMXML.zip)
+</br>
+**Example ActionScript Setup MXML** code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/ActionscriptSetupMXML.zip)
 
-## *Setting up Your ActionScript Project*
+## Setting up Your ActionScript Project
 
-Start by creating a project for ActionScript. For the following tutorials we will be developing a Flex 3 project.
+*1.* Start by creating a project for ActionScript. For the following tutorials we will be developing a Flex 3 project.
 
 ![l](img/AS/1.png)
 
-Create a new folder and name it _'lib'_*.*
+*2.* Create a new folder and name it _'lib'_*.*
 
 ![l](img/AS/2.png)
 
-Download and find the* gamesparks-as3-sdk .SWC* file. Then drop the SWC file into the _'lib'_ folder.
+*3.* Download and find the* gamesparks-as3-sdk .SWC* file. Then drop the SWC file into the _'lib'_ folder.
 
 ![l](img/AS/3.png)
 
-Make sure you add the *.SWC* file to the library by right-clicking it and selecting the '*Add to library'* option. This will allow you to use the GameSparks library for your game.
+*4.* Make sure you add the *.SWC* file to the library by right-clicking it and selecting the '*Add to library'* option. This will allow you to use the GameSparks library for your game.
 ![l](img/AS/4.png)
 
-Right-click on your game,  and from the context menu, click on *Properties* and make sure you're using the latest Flash player.
+*5.* Right-click on your game,  and from the context menu, click on *Properties* and make sure you're using the latest Flash player.
 ![l](img/AS/5.gif)
  
 
-## *Using GameSparks API*
+## Using GameSparks API
 
  
-
-Import the GameSparks API as well as other libraries using:
+*1.* Import the GameSparks API as well as other libraries using:
 
 ```
 import com.gamesparks.*;  
@@ -66,13 +69,13 @@ import flash.utils.setInterval;
 
 ![l](img/AS/6.png)
 
-The first function you will need to make allows you to connect your game to the Portal. To do this you must connect using the *service URL* and *API Secret*.You will find the* API Secret* on the Overview page.
+*2.* The first function you will need to make allows you to connect your game to the Portal. To do this you must connect using the *service URL* and *API Secret*.You will find the* API Secret* on the Overview page.
 ![l](img/AS/7.png)
 
 The *Service URL* is located in the Test Harness.
 ![l](img/AS/8.png)
 
-Now you can make your first function. This uses the URL and Key to connect to the Portal. Name this function *ConnectToPortal* and initiate the connection using: gs.setAvailabilityCallback().setLogger().setUrl("").setApiSecret("").connect();
+*3.* Now you can make your first function. This uses the URL and Key to connect to the Portal. Name this function *ConnectToPortal* and initiate the connection using: gs.setAvailabilityCallback().setLogger().setUrl("").setApiSecret("").connect();
 
   * setAvailabilityCallback(FunctionNameHere) calls the given function when the GS module sends feedback from the connection or disconnection to the Portal.
   * setLogger(FunctionNameHere) calls the given function when the GS module sends general feedback.
@@ -86,7 +89,7 @@ Now you can make your first function. This uses the URL and Key to connect to th
     			}
 ```
 
-The second function, *Logger *will be used to debug the GameSparks logic and then check the availability of the connection to the Portal. After making them, set them for use as the Logger and *setAvailabilityCallback*.
+*4.* The second function, *Logger* will be used to debug the GameSparks logic and then check the availability of the connection to the Portal. After making them, set them for use as the Logger and *setAvailabilityCallback*.
 
 ```
     	public function logger(text:String):void
@@ -115,6 +118,6 @@ A button has already been created to call the *ConnectToPortal* function. Once 
 
 ![l](img/AS/9.png)
 
-If you set the logger using *gs.setLogger()* the log will look like this. This shows you more feedback, but it also sends a high amount of spam to the Logger.  
+*5.* If you set the logger using *gs.setLogger()* the log will look like this. This shows you more feedback, but it also sends a high amount of spam to the Logger.  
 
 ![l](img/AS/10.png)

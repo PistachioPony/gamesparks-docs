@@ -12,7 +12,8 @@ This tutorial will guide you through the process of registering and authentica
   * Make sure you are [connected](/Getting Started/Creating a Game/Unreal Setup.md) to your game.
   * Have an input method to pass the user data into the GameSparks nodes. In this tutorial we're using Widgets. They are available for download below:
 
-Example code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/UnrealAuthenticationUassets.zip)
+</br>
+**Example Unreal Authentication Uassets** code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/UnrealAuthenticationUassets.zip)
 
 ## Registration
 

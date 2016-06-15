@@ -22,8 +22,9 @@ To invite the matched up players to a challenge:
 You can test this using the Test Harness by opening multiple tabs and authenticating multiple players. Match these players up and then use the MatchDetails request and CreateChallenge request to simulate calling them from an SDK.
 
 
-    Example request:
-    ```
+### Example Request
+
+```
     {
      "@class": ".CreateChallengeRequest",
      "accessType": "PRIVATE",
@@ -36,4 +37,5 @@ You can test this using the Test Harness by opening multiple tabs and authentica
      "563b4243e4b0f85acff00a69","563b4235e4b0f85acff00a22",
     "563b4235e4b0f85acff00a22"]
     }
-    ```
+
+```

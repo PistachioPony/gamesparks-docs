@@ -23,13 +23,13 @@ The Configurator Leaderboard page displays the list of Leaderboards and allows y
 
 The icons (highlighted above) give you the following capabilities:
 
-  * [addIcon] Add a new Leaderboard.
-  * [editIcon] Edit this Leaderboard.
-  * [deleteIcon] Delete this Leaderboard.
+  * ![](/img/fa/plus.png) Add a new Leaderboard.
+  * ![](/img/fa/edit.png) Edit this Leaderboard.
+  * ![](/img/fa/trash.png) Delete this Leaderboard.
 
 ## Creating a new Leaderboard configuration
 
-Press the icon to create a new Leaderboard.
+Press the ![](/img/fa/plus.png) icon to create a new Leaderboard.
 
 ![](img/Leaderboards/2.jpg)
 

@@ -8,13 +8,13 @@ src: /Tutorials/Multiplayer/Challenges with Wagers.md
 
 Having an incentive to win a challenge spices things up, that is why the create challenge request comes built with the ability to wager any of the 6 default currencies but what if that is not enough? This tutorial will teach you how to wager virtual goods through cloud code.  
 
-## The setup
+## The Setup
 
 This tutorial will demonstrate adding extra cloud code to the existing requests and responses that our platform offers to provide extra functionality.  
 
 ## Create Challenge Request
 
-When the player creates the challenge, we want to be able to check that the virtual good wager they're placing is valid, that they have enough quantity to wager. In this example we're only ever wagering one virtual good of one type.
+When the player creates the challenge, we want to be able to check that the virtual good wager they're placing is valid: that they have enough quantity to wager. In this example we're only ever wagering one virtual good of one type.
 
 ```    
     //Check if we have scriptData
@@ -106,7 +106,7 @@ When a player wins, we want to give them the spoils of their victory. To do this
 
 Losing players will lose their wagered virtual good. We will manually consume these virtual goods using an instance of the ConsumeVirtualGood request.
 
-    ```
+```
     //Does the challange have any scriptData
     if(Spark.getData().challenge.scriptData)
     {
@@ -127,4 +127,4 @@ Losing players will lose their wagered virtual good. We will manually consume th
         Spark.setScriptData("Response", consumeResponse);
     }
 
-    ```
+```

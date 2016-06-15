@@ -4,55 +4,59 @@ src: /Tutorials/Multiplayer/Score Based Asynchronous Challenges.md
 
 # Score Based Asynchronous Challenges
 
-Turn-based multiplayer gameplay between two or more players that can check in and play their turn when it's convenient. Similar to play-by-mail games and, more electronically, play-by-email.
+By default, GameSparks Challenges require both players to accept the challenge before posting their scores. While this is ideal for some games, it's not the best for spontaneously challenging a friend to a game and saying: "Hey! Bet you can't beat this!"
 
-Be default GameSparks Challenges require both players to accept the challenge before posting their scores, while this is ideal for some games, it's not the best for spontaneously challenging a friend to a game and saying "Hey! Bet you can't beat this!"
+Asynchronous Challenges are turn-based multiplayer gameplay between two or more players that can check in and play their turn when it's convenient. Similar to play-by-mail games and, more electronically, play-by-email.
+
+## Asynchronous Challenge Flow
 
 The flow of an Asynchronous Challenge looks like:
 
 1\. Player 1 gets an awesome score, decides to challenge another user to beat it
 
-2\. Player 1 picks who to challenge and sends a CreateChallengeRequest to the user of their choice (Player 2)
+2\. Player 1 picks who to challenge and sends a *CreateChallengeRequest* to the user of their choice (Player 2)
 
-3\. Player 1 receives a successful CreateChallengeResponse, takes the ChallengeInstanceId and sends a LogEventRequest to save their score in that Challenge Instances ScriptData.
+3\. Player 1 receives a successful *CreateChallengeResponse*, takes the *ChallengeInstanceId* and sends a *LogChallengeEventRequest* to save their score in that Challenge Instances ScriptData.
 
-In you code this should all happen very quickly.
+<q>**Note:** In your code this should all happen very quickly.</q>
 
 4\. Player 2 receives a message that Player 1 has challenged them to beat their score.
 
-5\. Player 2 sends a GetChallengeRequest to retrieve the latest details of the challenge (including Player 1's score in the Script Data).
+5\. Player 2 sends a *GetChallengeRequest* to retrieve the latest details of the challenge (including Player 1's score in the Script Data).
 
-6\. Player 2 sends AcceptChallengeRequest and on a successful AcceptChallengeResponse the game loads the appropriate level.
+6\. Player 2 sends *AcceptChallengeRequest* and on a successful *AcceptChallengeResponse* the game loads the appropriate level.
 
-7\. Player 2 gets a score and sends a LogChallengeEventRequest with their score and the Cloud Code script will decide the winner.
+7\. Player 2 gets a score and sends a *LogChallengeEventRequest* with their score and the Cloud Code script will decide the winner.
 
 8\. Both Player 1 and Player 2 receive a message declaring who won and who lost.
 
-First thing we are going to do is create our "SetScoreOnChallenge" event, it should look like:
+## Setting Up Asynchronous Challenges
+
+*1.* Create a *SetScoreOnChallenge* event. It should look like:
 
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/1015909833/original/SetScore.PNG?1422972231)
 
  
 
-We'll take the challengeInstanceId so we know which challengeInstance we want to save the score in. We'll also take the score we want to save.
+We'll take the *challengeInstanceId* so we know which *challengeInstance* we want to save the score in. We'll also take the score we want to save.
 
-Next up, create the event "SetScoreAndCalculateOutcome", which should look like:
+*2.* Create the event *SetScoreAndCalculateOutcome*, which should look like:
 
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/1015909928/original/SetScoreCalculateOutcome.PNG?1422972314)
 
-This one doesn't take a challengeInstanceId attribute because this will only ever be called with a LogChallengeEvent, which already includes the challengeInstanceId. We don't use LogChallengeEvent for the previous event because it has logic associated with progressing the challenge.
+This one doesn't take a *challengeInstanceId* attribute because this will only ever be called with a *LogChallengeEvent*, which already includes the *challengeInstanceId*. We don't use *LogChallengeEvent* for the previous event because it has logic associated with progressing the challenge.
 
-Next up we'll create our Challenge:
+*3.* Create the Challenge:
 
 ![](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/1015910031/original/Challenge.PNG?1422972401)
 
  
 
-The two very important thing to take note of here are "Turn / Attempt Consumers" which has been set to our "SetScoreAndCalculateOutcome" event. Next is "Leaderboard" which has been set to "Scripted Outcome", this is so we can run custom logic to determine the victor.
+<q>**Important!** Two things to take note of here. First, **Turn / Attempt Consumers** which has been set to our *SetScoreAndCalculateOutcome* event. Second, is **Leaderboard** which has been set to **Scripted Outcome** and this means we can run custom logic to determine the victor.</q>
 
-The next thing we need to do is add in our Cloud Code.
+*4.* Add in your Cloud Code.
 
-Navigate to Configurator -> Cloud Code -> *Events* -> SetScoreOnChallenge and add in the following:
+Navigate to Configurator -> Cloud Code -> *Events* -> *SetScoreOnChallenge* and add in the following:
 
 ```
     //Load our challenge with the challengeId we passed
@@ -65,7 +69,7 @@ Navigate to Configurator -> Cloud Code -> *Events* -> SetScoreOnChallenge and 
     challenge.setScriptData("player1Score", player1Score);
 ```
 
-Now navigate to Configurator -> Cloud Code -> *Challenge *Events* -> SetScoreAndCalculateOutcome and add in the following:
+Now navigate to Configurator -> Cloud Code -> *Challenge *Events* -> *SetScoreAndCalculateOutcome* and add in the following:
 
 ```
     //Load our challenge
@@ -105,7 +109,9 @@ Now navigate to Configurator -> Cloud Code -> *Challenge *Events* -> SetScor
     }
 ```
 
-With that done we are ready to test! Head on over to the Test Harness and follow along:
+<q>**Ready to Test!** With that done we are ready to test.</q>
+
+*5.* Head on over to the Test Harness and follow along:
 
 Player 1 gets an awesome score and picks a friend to challenge:
 
@@ -125,7 +131,7 @@ Player 1 gets an awesome score and picks a friend to challenge:
     }
 ```
 
-In our game, on a successful CreateChallengeResponse we'll take the newly created challengeInstanceId and immediately send a LogEventRequest to post our score:
+In our game, on a successful *CreateChallengeResponse* we'll take the newly created *challengeInstanceId* and immediately send a *LogEventRequest* to post our score:
 
 ```    
     {
@@ -182,7 +188,7 @@ Player 2 will receive a message (or push notification!) alerting them that Playe
 }
 ```
 
- You'll notice the scriptData is empty, that's because the message was sent before we logged our score to the challenge, to overcome this we can use GetChallengeRequest which will reflect the updated challenge:
+You'll notice the scriptData is empty, that's because the message was sent before we logged our score to the challenge, to overcome this we can use *GetChallengeRequest* which will reflect the updated challenge:
 
 ```
 {
@@ -224,7 +230,7 @@ Player 2 will receive a message (or push notification!) alerting them that Playe
  "scriptData": null
 }
 ```
-Now that we have the challenge details we can display the relevant details to Player 2, next we have Player 2 send an AcceptChallengeRequest and launch the level they will be playing:
+Now that we have the challenge details we can display the relevant details to Player 2. Next, we have Player 2 send an *AcceptChallengeRequest* and launch the level they will be playing:
 
 ```
 {
@@ -233,7 +239,8 @@ Now that we have the challenge details we can display the relevant details to Pl
 }
 ```
 
-//Both players will receive a message that Player 2 has accepted the game
+Both players will receive a message that Player 2 has accepted the game:
+
 ```
 {
  "@class": ".ChallengeStartedMessage",
@@ -286,12 +293,7 @@ Player 2 gets a pretty good score, but not good enough to beat Player 1, so we n
 }
 ```
 
-
-
-
-
-
-Both Players now get either a ChallengeWonMessage or a ChallengeLostMessage:
+Both Players now get either a *ChallengeWonMessage* or a *ChallengeLostMessage*:
 
 Player 2 receives:
 ```

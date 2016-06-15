@@ -6,23 +6,29 @@ src: /Getting Started/Creating a Leaderboard/README.md
 
 ## Introduction
 
-The Leaderboards functionality on the GameSparks platform is not limited to Leaderboards in their traditional sense. This functionality allows you to monitor any comparisons of players performance and then support artefacts in-game that flexibly display this information in a meaningful form to players. GameSparks Leaderboards functionality also allows support for complex, contextual displays of information about other players and also provides the framework for many social and competitive features of your game. In this tutorial we will go over the simple processes involved in creating an Event, attaching it to a Leaderboard, posting a score, and receiving a HighScore Message.
+
+Leaderboards are typically restricted to tracking and reporting the leading players in a game. GameSparks leaderboards offer you much wider and flexible scope, both for tracking comparisons within your player pool and for controlling how comparisons are displayed in-game to players:
+* Complex comparison scenarios - define what and how players will be compared.
+* Meaningful player displays - monitor player performance and provide in-game filters to flexibly display comparisons to players.
+* In-game notifications - supports dynamic messaging for your player groups.
+* Rich socialisation features - provides a robust framework for building social and competitive features into your game
+
+In this tutorial we will go over the simple processes involved in creating an Event, attaching it to a Leaderboard, posting a score, and receiving a HighScore Message.
 
 ## Event
 
 First you will need to navigate to the Events page in your Configurator. Next, add a new Event with the following parameters (shown below). For an in-depth guide about Events click [here](/Documentation/Configurator/Events.md):
 
-  * Short Code - This field is the reference by which we will call the Event, these are always unique.
-  * Name - This field is used when representing the Event in Test Harness as well as [Cloud Code](/Documentation/Configurator/Cloud Code.md).
-  * Description - This field is used to display what the Event is used for, this is primarily for your benefit in the Events Configurator.
-  * Attribute Name - This field is referenced in Test Harness and Leaderboards.
-  * Attribute Short Code - This is the reference we'll be using to pass in an attribute into the Event.
-  * Data Type - The type of data being passed in. E.g. String, Number, JSON.
-  * Default Value - This would be the default value that would be used for this Event attribute if it's not passed into the [logEventRequest](/API Documentation/Request API/Player/LogEventRequest.md).
+  * **Short Code** - This field is the reference by which we will call the Event, these are always unique.
+  * **Name** - This field is used when representing the Event in Test Harness as well as [Cloud Code](/Documentation/Configurator/Cloud Code.md).
+  * **Description** - This field is used to display what the Event is used for, this is primarily for your benefit in the Events Configurator.
+  * **Attribute Name** - This field is referenced in Test Harness and Leaderboards.
+  * **Attribute Short Code** - This is the reference we'll be using to pass in an attribute into the Event.
+  * **Data Type** - The type of data being passed in. E.g. String, Number, JSON.
+  * **Default Value** - This would be the default value that would be used for this Event attribute if it's not passed into the [logEventRequest](/API Documentation/Request API/Player/LogEventRequest.md).
+  * **Default Calculation** - This determines how values are tracked in the Running Totals.
 
-  * Default Calculation - This determines how values are tracked in the Running Totals.
-
-Note: You do not need to understand the concept of Running Totals for this tutorial, just set it to Maximum as we want to track the highest score posted for your player. (To learn more about running totals, see [this](/Documentation/Test Harness/README.md) tutorial)
+<q>**Note:** You do not need to understand the concept of Running Totals for this tutorial, just set it to Maximum because we want to track the highest score posted for your player. (To learn more about running totals, see [this](/Documentation/Test Harness/README.md) tutorial)</q>
 
 ![](img/CreatingALeaderboard/1.png)
 

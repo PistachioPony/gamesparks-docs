@@ -33,7 +33,7 @@ The form is very detailed, but divided into sections – Configuration, Player B
 
 *Percentage Hash* - This field is optional. If you supply it, the value is used as part of the hashing calculation when we determine which percentile each Player is randomly provided. The longer and more unique the value is, the higher likelihood that the randomisation of the Player and the percentile is.  For example, If you want to run two Experiments and be sure that the same Player for both the 1st and 2nd experiment has the same percentile, you should set this hash value to be the same on each experiment
 
-**We make a best effort to calculate the percentage ranges, however for smaller sample sets of players, you may not be returned the exact number of Players as anticipated.**
+<q>**Note:** We make a best effort to calculate the percentage ranges, however for smaller sample sets of players, you may not be returned the exact number of Players as anticipated.</q>
 
 ## Player Base Configuration
 
@@ -55,12 +55,21 @@ Variant Configuration
 Experiments will either start at their scheduled time or can be started immediately using the Play button.  Similarly, they can also be stopped using the Stop button. NOTE:  Once Experiments have been created or have passed their Start Date, they cannot be edited.  They can, however, be modified up until that Start Date. All stopped or expired Experiments will move to the Complete section.
 
 ## Viewing the Results
-Once your Experiment has completed, you can check the results of your Experiment and the impact it has had on the pool of Players who were affected by this Experiment. ![](img/Experiments/4.png)
+Once your Experiment has completed, you can check the results of your Experiment and the impact it has had on the pool of Players who were affected by this Experiment:
+
+![](img/Experiments/4.png)
 
 
 
-The results page displays graphs which are based on the time duration of the running Experiment and how many Players interacted with the variants on that Experiment. Screen ![](img/Experiments/5.png)
+The results page displays graphs which are based on the time duration of the running Experiment and how many Players interacted with the variants on that Experiment Screen:
 
 
 
-This is shown in two different graphs, which show both the impact of the Experiment on the entire Player population, as well as the number of Players that interacted with each variant on the Experiment. ![](img/Experiments/6.png)
+This is shown in two different graphs:
+* One which show both the impact of the Experiment on the entire Player population:
+
+![](img/Experiments/5.png)
+
+* A second which shows the number of Players that interacted with each variant on the Experiment:
+
+![](img/Experiments/6.png)

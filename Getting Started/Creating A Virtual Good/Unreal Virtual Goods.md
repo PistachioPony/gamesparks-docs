@@ -7,25 +7,31 @@ src: /Getting Started/Creating a Virtual Good/Unreal Virtual Goods.md
 
 ## Introduction
 
-After following the tutorial [Creating a Virtual Good](./README.md), you can now create the ability to buy them, consume them and retrieve a list of what exactly your authenticated player has in their inventory. * Setting up the Shop Screen*
+After following the tutorial [Creating a Virtual Good](./README.md), you can now create the ability to buy them, consume them and retrieve a list of what exactly your authenticated player has in their inventory.
+
+**Setting up the Shop Screen**
 
   * Make a shop screen for the user to buy and consume Virtual Goods.
   * The shop needs to update the players Currency and the number of owned Virtual Goods.
-*Buying a Virtual Good*
+
+**Buying a Virtual Good**
 
   * Use a GS *BuyVirtualGoodRequest* node to purchase Virtual Goods by passing in the Currency type, quantity and the Short Code values.
   * Update the details of the authenticated player straight after.
-*Consuming a Virtual Good*
+
+**Consuming a Virtual Good**
 
   * Use a GS *ConsumeVirtualGoodRequest* node to consume Virtual Goods by passing in the quantity and the Short Code values.
   * Log an Event called '*Grant Currency*' to credit the player with extra currency by passing in the '*Cash*' attribute.
   * Update the player details.
-*Using the Shop*
+
+**Using the Shop**
 
   * Click the buy and consume buttons to change the currency and the number of Virtual Goods owned.
   * Ensure that details are being correctly updated.
 
-Example code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/UnrealVirtualGoodsUassets.zip)
+</br>
+**Example Unreal Virtual Goods** code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/UnrealVirtualGoodsUassets.zip)
 
 ## Using Virtual Goods
 

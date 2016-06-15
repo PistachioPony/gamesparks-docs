@@ -1,4 +1,5 @@
 ---
+nav_sort: 1
 src: /Tutorials/Currencies, Virtual Goods and Achievements/Managing In App purchases.md
 ---
 
@@ -8,11 +9,11 @@ In this exercise we'll cover a few different scenarios around purchasing. To sta
 
 ## Purchasing with a Virtual Currency
 
-Log in to the [GameSparks Developer Portal](https://portal.gamesparks.net) and go to *Configurator > Virtual Goods*. Click __ to create a new Virtual Good.
+Log in to the [GameSparks Developer Portal](https://portal.gamesparks.net) and go to *Configurator > Virtual Goods*. Click ![](/img/fa/plus.png) to create a new Virtual Good.
 
 ![](img/AppPur/1.jpg)
 
-Give it a *Name* and a *Short Code* \- we'll use the Short Code to refer to the item later on. Leave the *Type* as 'Virtual Good'. The other option here is 'Currency Pack' which, rather than adding a good to your player when awarded, grants them some configurable quantity of currencies - very useful, but for now let's focus on the 'Virtual Good' type. Since we're going to start with a Virtual Currency purchase we need to specify a price for the Virtual Good here, so let's add a *Currency 1* value of 100. This means a player will be charged 100 units of Currency 1 when they buy this Virtual Good. Let's set up a player so that they can buy your Virtual Good. Go to *Configurator > Overview*, click __ and under *Signup Bonuses* add a *Currency 1* signup bonus of 1000.
+Give it a *Name* and a *Short Code* \- we'll use the Short Code to refer to the item later on. Leave the *Type* as 'Virtual Good'. The other option here is 'Currency Pack' which, rather than adding a good to your player when awarded, grants them some configurable quantity of currencies - very useful, but for now let's focus on the 'Virtual Good' type. Since we're going to start with a Virtual Currency purchase we need to specify a price for the Virtual Good here, so let's add a *Currency 1* value of 100. This means a player will be charged 100 units of Currency 1 when they buy this Virtual Good. Let's set up a player so that they can buy your Virtual Good. Go to *Configurator > Overview*, click ![](/img/fa/edit.png) and under *Signup Bonuses* add a *Currency 1* signup bonus of 1000.
 
 ![](img/AppPur/2.jpg)
 
@@ -27,12 +28,15 @@ Now whenever you register a player they will be granted 1000 units of Currency 1
 
 ```
 
-``` { "@class": ".RegistrationResponse",
+
+```
+{ "@class": ".RegistrationResponse",
 "authToken": "6f19a38a-189a-43cb-b421-bd8218209c43",
 "displayName": "displayName",
 "requestId": "1404122818370",
 "scriptData": null,
 "userId": "53b136cbe4b0fd9efb39a692" }
+
 ```
 
 And if we look at their account details (*Player > AccountDetailsRequest*) we can see our signup bonus has been awarded:
@@ -40,7 +44,9 @@ And if we look at their account details (*Player > AccountDetailsRequest*) we ca
 ```
 { "@class": ".AccountDetailsRequest",
 "requestId": "1404122980151" }
+
 ```
+
 ```
 { "@class": ".AccountDetailsResponse",
 "currency1": 1000, "currency2": 0,
@@ -61,8 +67,11 @@ If we list the available virtual goods, we see our Heart listed (*Store > ListVi
 ```
 { "@class": ".ListVirtualGoodsRequest",
 "requestId": "1404123685222" }
-````
-``` { "@class": ".ListVirtualGoodsResponse",
+```
+
+
+```
+{ "@class": ".ListVirtualGoodsResponse",
 "requestId": "1404123685222",
 "scriptData": null,
 "virtualGoods": [ { "description": "An extra heart", "name": "Heart", "shortCode": "HEART", "currency1Cost": 100 } ] }
@@ -70,6 +79,7 @@ If we list the available virtual goods, we see our Heart listed (*Store > ListVi
 ```
 
 To buy a Heart we make BuyVirtualGoodsRequest (*Store > BuyVirtualGoodsRequest*):
+
 ```
 { "@class": ".BuyVirtualGoodsRequest",
 "shortCode": "HEART",
@@ -90,6 +100,8 @@ And a subsequent AccountDetailsRequest will show that the player now has a Heart
 { "@class": ".AccountDetailsRequest",
 "requestId": "1404124071748" }
 ```
+
+
 ```
 { "@class": ".AccountDetailsResponse",
 "currency1": 900,
@@ -120,7 +132,7 @@ The player can now consume a Heart, which will remove the Virtual Good from thei
 "scriptData": null }
 ```
 
-## Integrating with third-party stores
+## Integrating with Third-Party Stores
 
 Using a virtual currency is one option when buying Virtual Goods, but what if you want to hook up to a third-party store to handle real money transactions? GameSparks supports integration with Google Play, the iOS App Store and Windows Store to allow you to do just that. The next steps will be broken into three sections to cover the specifics of integrating each store type with the GameSparks platform. In all cases the underlying flow is the same:
 
@@ -130,7 +142,7 @@ Using a virtual currency is one option when buying Virtual Goods, but what if yo
 4. The Game Client sends the receipt through to the GameSparks platform.
 5. The GameSparks platform validates the receipt and adds the purchased Virtual Goods to the player's profile.
 
-## Google Play
+### Google Play
 
 To make purchases using Google Play, first you need to set up your Virtual Good as a product in the Google Play Developer Console, as described in [Creating a Product List](https://developer.android.com/google/play/billing/billing_admin.html#billing-list-setup).
 
@@ -163,7 +175,7 @@ The GameSparks platform will validate the purchase against the signature and, if
 
 At which point the player's profile will have been updated with the newly purchased Virtual Goods.
 
-## iOS App Store
+### iOS App Store
 
 To make purchases using the iOS App Store, first you need to set up your Virtual Good in iTunes Connect, as described in [Configuring a Product](https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnectInAppPurchase_Guide/Chapters/CreatingInAppPurchaseProducts.html#//apple_ref/doc/uid/TP40013727-CH3-SW3).
 
@@ -202,13 +214,13 @@ The GameSparks platform will validate the purchase with the App Store and, if su
 
 At which point the player’s profile will have been updated with the newly purchased Virtual Goods.
 
-## Windows Store
+### Windows Store
 
 To make purchases using the Windows Store, first you need to set up your Virtual Good in the [Windows Phone Dev Center](http://devcenter.windowsphone.com/).
 
 Now we need to tie the Virtual Good in your game to the product in the Windows Phone Dev Center. We do this in the GameSparks Developer Portal. Go to *Overview > Virtual Goods* and edit your Virtual Good. Insert into the *WP8 Product ID* field, the Product ID you gave your product within the Windows Phone Dev Center.
 
-After a purchase is made, get hold of the receipt as described in [Use a receipt as proof of purchase on a server](http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj206950(v=vs.105).aspx#BKMK_CodeSamples).
+After a purchase is made, get hold of the receipt as described in [Use a receipt as proof of purchase on a server](http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj206950.aspx#BKMK_CodeSamples).
 
 You then send the receipt to the GameSparks platform using a [WindowsBuyGoodsRequest](https://docs.gamesparks.net/documentation/request-api/store-request-api/windowsbuygoodsrequest "WindowsBuyGoodsRequest"):
 

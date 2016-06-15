@@ -15,7 +15,7 @@ The Configurator Event page displays the list of Event and allows you to creat
 
 The icons (highlighted above) give you the following capabilities:
 
-  * ![](/img/fa/plus-circle.png) Add a new Event.
+  * ![](/img/fa/plus.png) Add a new Event.
   * ![](/img/fa/edit.png) Edit this Event.
   * ![](/img/fa/trash.png) Delete this Event.
 
@@ -35,7 +35,7 @@ Each event can have a number of attributes associated with it.
 
 ![](img/Events/3.jpg)
 
-Add an attribute by clicking on the plus icon *+*.  Each attribute has a number of different configuration options that can be defined within the form:
+Add an attribute by clicking the ![](/img/fa/plus.png) icon.  Each attribute has a number of different configuration options that can be defined within the form:
 
   * *Name* \- the name of the Attribute.  This is used to identify the attribute if there are several associated with an Event.
   * *Short Code* \- the short code of the Attribute, used by the API to allow you to identify which Attribute you are trying to set.

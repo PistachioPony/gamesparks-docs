@@ -9,21 +9,25 @@ src: /Getting Started/Using Cloud Code/Unreal Cloud Code.md
 
 Previously, we learnt how to use Cloud Code in the GameSparks Portal. Now we are going to show you how to use the GameSparks nodes that log Events that have been set up in your Portal. In this tutorial the Player logs the* 'Get_Pos'* event which retrieves the location that was last saved on the player's database. It's useful to use the Test harness and send a default value for the player's initial location, this can be a pawn's initial spawn location in your game. The second part of the tutorial will feature saving the player's pawn location using a key input that logs the *'Set_Pos'* event.
 
-*Default location*
+**Default location**
 
   * Set up your values for a new Player using the 'Set_Pos' Event (Default value would be (0,0,0). In our example we used the Test Harness to pass in the initial spawn point).
-*Get Event*
+
+**Get Event**
 
   * Drop in a GS EventLogRequest node and use it to call the 'Get_Pos' Event right after the Player authenticates.
   * Retrieve the values from 'Get_Pos' and use it in SetActorLocation function to teleport your Player.
-*Set Event*
+
+**Set Event**
 
   * Use GS EventLogRequest to call the 'Set_Pos' Event to save the Player's location by passing in the X,Y and Z coordinates.
-*Testing Events*
+
+**Testing Events**
 
   * Call the 'Set_Pos' Event from user input (In this example we use the *F* key).
 
-Example code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/UnrealCloudCodeUassets.zip)
+</br>
+**Example Unreal UAssets Cloud** code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/UnrealCloudCodeUassets.zip)
 
 ## Setting up Events
 

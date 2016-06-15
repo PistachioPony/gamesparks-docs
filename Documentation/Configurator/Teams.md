@@ -13,9 +13,9 @@ The Teams functionality on the GameSparks platform allows you to define differe
 
 The Teams page shows you the list of teams you have configured in the platform, adding a new team follows the same pattern as the rest of the platform.
 
-  * [addIcon] will open the team configuration creation form.
-  * [editIcon] will open the team configuration editor.
-  * [deleteIcon] will delete the team configuration.
+  * ![](/img/fa/plus.png) will open the team configuration creation form.
+  * ![](/img/fa/edit.png) will open the team configuration editor.
+  * ![](/img/fa/trash.png) will delete the team configuration.
 
 ![](img/Teams/2.jpg)
 

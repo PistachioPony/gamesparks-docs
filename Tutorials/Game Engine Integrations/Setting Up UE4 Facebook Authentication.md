@@ -93,7 +93,7 @@ To use Facebook authentication with GameSparks follow the tutorial to setup Unre
 
  
 
-### *Header*
+### Header
 
 This is the component which will expose the Online Subsystem API to the Blueprints. Exposing the API through a component allows us to use delegates comfortably and allows us to call the functions through GetGameMode->FBAPIComponent->Function from anywhere in BluePrint.
 
@@ -153,7 +153,7 @@ This is the component which will expose the Online Subsystem API to the Blueprin
 
  
 
-### *CPP*
+### CPP
 
 ```
 //GameSparks LTD

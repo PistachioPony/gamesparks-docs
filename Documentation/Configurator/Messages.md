@@ -5,7 +5,11 @@ src: /Documentation/Configurator/Messages.md
 
 # Messages
 
-The GameSparks platform allows you to send messages to your players.  These can be either a). in-game messages when a player is playing the game, or b). push notifications when they are not playing the game (including email if desired, via an integration with SendGrid). This section allows you to set up and configure these messages.
+The GameSparks platform allows you to send messages to your players.  These can be:
+* In-game messages when a player is playing the game, or
+* Push notifications when they are not playing the game (including email if desired, via an integration with SendGrid).
+
+This section allows you to set up and configure these messages.
 
 ![](img/Noti/1.jpg)
 
@@ -13,7 +17,7 @@ The Message Configuration box contains all the message types available on the p
 
 ## Message Configuration
 
-You can configure each message type by clicking on the __ icon for the desired message. You will be presented with the following screen:
+You can configure each message type by clicking on the ![](/img/fa/edit.png) icon for the desired message. You will be presented with the following screen:
 
 ![](img/Noti/2.jpg)
 
@@ -35,7 +39,7 @@ These Messages are uniquely identified using a ShortCode.
 
 ## Different message for different players
 
-You can use segmentation to send player different messages through the segment configuration.. For example, you can create a segment for French players and send these players the same message but in French.
+You can use segmentation to send player different messages through the segment configuration. For example, you can create a segment for French players and send these players the same message but in French.
 
 ![](img/Noti/4.jpg)
 

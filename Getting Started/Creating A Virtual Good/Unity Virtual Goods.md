@@ -9,7 +9,8 @@ src: /Getting Started/Creating a Virtual Good/Unity Virtual Goods.md
 
 In this tutorial we are going to show you how to buy and consume Virtual Goods using the GameSparks platform. You will also look at how to get a list of what Virtual Goods are owned by the player. Before following this tutorial, make sure you have checked out the previous tutorial '[Creating Virtual Goods](./README.md)'. Nothing else is needed to carry out this tutorial. However, if you would like to see the project you can download it here.
 
-Example code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/UnityVirtualGoods_Tutorial.zip)
+</br>
+**Example Unity Virtual Goods** code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/UnityVirtualGoods_Tutorial.zip)
 
 ## Granting Currency
 

@@ -9,7 +9,8 @@ src: /Getting Started/Creating a Game/Unity Setup.md
 
 This tutorial will have you set up and using GameSparks in no time, even with only basic knowledge of the Unity game engine. To get started, you will need to download the GameSparks SDK. This is a Unity-package file, and so importing the SDK into Unity is very simple. You can also download our Unity example below:
 
-Example code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/UnitySetup_Tutorial.zip)
+</br>
+**Example Unity Setup** code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/UnitySetup_Tutorial.zip)
 
 ## GameSparks SDK Setup
 

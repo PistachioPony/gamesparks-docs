@@ -76,7 +76,9 @@ After connecting you have the ability to use GameSpark requests to communicate w
 
 ## Authentication
 
-Using the GameSparks username and password system. When a player uses registration request to register on the platform they can use their credentials to log in.Registration request:
+Using the GameSparks username and password system. When a player uses registration request to register on the platform they can use their credentials to log in.
+
+Registration Request:
 
 ```
 GameSparks::Api::Requests::RegistrationRequest request(gsInstance);
@@ -102,7 +104,7 @@ void RegistrationRequest_Response(GameSparks::Core::GS& gsInstance, const GameSp
 	}
 }
 ```
-Authentication request:
+Authentication Request:
 ```
 GameSparks::Api::Requests::AuthenticationRequest request(gsInstance);
 request.SetUserName("abcdefgh");
@@ -111,7 +113,7 @@ request.SetPassword("abcdefgh");
 // send the request
 request.Send(AuthenticationRequest_Response);
 ```
-Authentication response:
+Authentication Response:
 ```
 void AuthenticationRequest_Response(GameSparks::Core::GS& gsInstance, const GameSparks::Api::Responses::AuthenticationResponse& response)
 {
@@ -197,11 +199,11 @@ void fooEvent_Response(GameSparks::Core::GS& gsInstance, const GameSparks::Api::
 	}
 }
 ```
-To output a value from Cloud code, use:
+To output a value from Cloud Code, use:
 ```
 Spark.setScriptData("exampleKey", val);
 ```
-To learn how to use Cloud code and events, check out the using Cloud code tutorial.
+To learn how to use Cloud Code and events, check out the [using Cloud Code](/Tutorials/Cloud Code and the Test Harness/Using Cloud Code.md) tutorial.
 
 
 You can also augment your own requests with extra logic to suit your needs. To pass any input into a request you will need to do this using 'scriptData'.For this example we're going to send an E-Mail variable with the registration request to save an E-mail reference against our user.
@@ -223,4 +225,4 @@ request.SetPassword("abcdefgh");
 // send the request
 request.Send(RegistrationRequest_Response);
 ```
-You can alter the way this request works using the Cloud code section, under the 'requests' tab and finding the 'Registration request' and adding in logic which saves the E-mail against the player. We have a tutorial for this.
+You can alter the way this request works using the Cloud Code section, under the 'requests' tab and finding the 'Registration request' and adding in logic which saves the E-mail against the player. We have a [tutorial](/Tutorials/Authentication and Player Profile/Automating User Password Change.md) for this.

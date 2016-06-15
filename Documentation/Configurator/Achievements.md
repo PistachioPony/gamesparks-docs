@@ -15,13 +15,13 @@ The Configurator Achievements page displays the list of Achievements and allow
 
 The icons (highlighted above) give you the following capabilities:
 
-* ![](/img/fa/plus-circle.png) Add a new Achievements.
+* ![](/img/fa/plus.png) Add a new Achievements.
 * ![](/img/fa/edit.png) Edit this Achievements.
 * ![](/img/fa/trash.png) Delete this Achievements.
 
 ## Creating a new Achievement configuration
 
-Click the ![](/img/fa/plus-circle.png) icon to create a new achievement.
+Click the ![](/img/fa/plus.png) icon to create a new achievement.
 
 ![](img/Achs/2.jpg)
 

@@ -1,4 +1,5 @@
 ---
+nav_sort: 9
 src: /Tutorials/Cloud Code and the Test Harness/Working with the Game REST API.md
 ---
 
@@ -6,7 +7,7 @@ src: /Tutorials/Cloud Code and the Test Harness/Working with the Game REST API.m
 
 The game REST API allows you to retrieve, create or update the full configuration for your game in JSON format.
 
-## *Retrieving a game configuration*
+## Retrieving a game configuration
 
 The configuration for a game can be retrieved using the following URL:
 
@@ -62,7 +63,7 @@ The configuration for a game can be retrieved using the following URL:
     }
 ```
 
-### *Creating a game configuration*
+### Creating a Game Configuration
 
 The configuration for a game can be created using the following URL:
 
@@ -485,35 +486,35 @@ Contains Virtual Good configuration data.  Virtual Goods can represent either a
 }
 ```
 
-### *Updating a game configuration*
+### Updating a Game Configuration
 
 The configuration for a Game can be updated using the URL below.  The processing of child arrays such as the 'events' and 'leaderboards' fields will result in the creation of new items, updates to any existing items and the removal of any missing items.
 
 *POST: /rest/games/{gameApiKey}*
 
-### Parameters:
+#### Parameters:
 
 *gameApiKey* is the API key of you game and can be found on the overview page of the Portal Configurator
 
-### Payload
+#### Payload
 
 The payload is the same JSON structure as for creating a game configuration.  
 
-### *Changing the Owner of a Game to another Collaborator*
+### Changing the Owner of a Game to another Collaborator
 
 The Owner of a Game can be changed using the URL below.  The user specified in the payload *must* already be a Collaborator on the Game.
 
 *POST: /rest/games/{gameApiKey}/owner*
 
-### Parameters:
+#### Parameters:
 
 *gameApiKey* is the API key of you game and can be found on the overview page of the Portal Configurator
 
-### Payload
+#### Payload
 
 *{"username" : "_[username]_"}* - you must specify the username value of the JSON name/value pair.  
 
-### *Errors*
+### Errors
 
 If an error occurs with any of the game REST API calls an error response will be returned containing a response code and a message.
 

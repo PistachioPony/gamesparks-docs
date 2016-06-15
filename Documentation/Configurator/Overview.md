@@ -12,7 +12,7 @@ From the Overview page you can:
 * Inspect access secrets for your game connection types.
 * Create Collaborators for your game and configure their security settings.
 
-![](img/Overview/1.png)
+![](img/Overview/5.png)
 
 The icons in the top right of the top panel (highlighted above) give you the following capabilities:
 
@@ -22,27 +22,31 @@ The icons in the top right of the top panel (highlighted above) give you the fol
   * ![](/img/fa/edit.png) Edit the top level information regarding your game.
   * ![](/img/fa/trash.png) Delete this game.
 
+
 ### Editing Top Level Game Information
 
-![](img/Overview/2.jpg)
+![](img/Overview/4.png)
 
 The edit form has the following fields:
 
   * *Name* \- the name of your game, used to identify the game in the portal if you have several games
   * *Description* \- a simple description for the game
+  * *Primary Region* - select geographical region where your game will be published.
   * *Signup Bonuses* \- the amount of each of the currencies to award a new player when a new account is created
+  * *Segment Configuration* - configure Segments for your game. For more details, see [Segments](/Documentation/Configurator/Segments.md).
 
 ### Snapshots
 
-![](img/Overview/3.jpg)
+![](img/Overview/6.png)
 
 The icons in the Snapshot panels give you the following capabilities:
 
-  * ![](/img/fa/plus-circle.png) Create a new Snapshot of the configuration currently in the portal.
+  * ![](/img/fa/plus.png) Create a new Snapshot of the configuration currently in the portal.
   * ![](/img/fa/copy.png) Copy this Snapshot to another game.
   * ![](/img/fa/trash.png) Delete this Snapshot.
   * ![](/img/fa/upload.png) Publish this Snapshot to the live servers.
   * ![](/img/fa/random.png) Revert the portal to the version contained in the Snapshot.
+  * ![](/img/fa/search.png) Preview this Snapshot.
 
 Click [here](/Documentation/Key Concepts/Snapshots.md) for more information about Snapshots, Versioning and Publishing.
 
@@ -57,4 +61,4 @@ A number of secrets exist for different types of connections:
 
 ### Collaborators
 
-This area allows the creation of game collaborators, these will be people that can log in with their user and view/edit the game, depending on the security settings set for them. An in-depth tutorial can be found [here](/Documentation/Configurator/Capabilities.md).
+This area allows the creation of game collaborators, these will be people that can log in with their user and view/edit the game, depending on the security settings set for them. An in-depth tutorial can be found [here](/Tutorials/Capabilities/README.md).

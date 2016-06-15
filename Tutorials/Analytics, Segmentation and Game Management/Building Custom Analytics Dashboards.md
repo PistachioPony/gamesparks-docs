@@ -85,4 +85,4 @@ The final view:
 
 ![](img/CustomAnalyticsDashboards/5.jpg)
 
-*** NOTE: *All data shown within these forms is time-limited.  Player request data is not kept forever and it is very likely that when a player has had inactivity for a certain amount of time, the above form can appear empty.* ***
+<q>**Note:** All data shown within these forms is time-limited.  Player request data is not kept forever and it is very likely that when a player has had inactivity for a certain amount of time, the above form can appear empty.</q>

@@ -6,9 +6,10 @@ src: /Getting Started/Creating a Leaderboard/Unity Leaderboards.md
 
 ## Introduction
 
-The Leaderboards functionality on the GameSparks platform is not limited to Leaderboards in their traditional sense. This functionality allows you to monitor any comparisons of player’s performance and then support artefacts in-game that flexibly display this information in a meaningful form to the players. GameSparks Leaderboards functionality also allows support for complex, contextual displays of information about other players and also provides the framework for many social and competitive features of your game. This tutorial will go over the process of creating a Leaderboard, along with an Event which will be used to post scores to that Leaderboard. You will then see how the scores can be submitted in Unity and how you can retrieve Leaderboard data and receive a High Score Messages in Unity. You don’t need anything extra to follow this tutorial, but if you’d like to see the project you can download it here.
+This tutorial will go over the process of creating a Leaderboard, along with an Event which will be used to post scores to that Leaderboard. You will then see how the scores can be submitted in Unity and how you can retrieve Leaderboard data and receive a High Score Messages in Unity. You don’t need anything extra to follow this tutorial, but if you’d like to see the project you can download it here.
 
-Example code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/UnityLeaderboard_Tutorial.zip)
+</br>
+**Example Unity Leaderboard** code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/UnityLeaderboard_Tutorial.zip)
 
 ## Creating the Score Event
 

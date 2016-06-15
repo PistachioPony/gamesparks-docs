@@ -12,7 +12,9 @@ For instance, a player is using a cellular connection on a train to play Tic Tac
 
 However, with SetDurable, the player can still challenge a friend, and set their first turn, load a cached instance of a challenge and also take their turn. Then when the train emerges from the tunnel and the player's connection is restored, the game sends these requests in the same order they were submitted.
 
-Examples: Logging a new score in the Leaderboard:
+## Examples
+
+### Logging a new score in the Leaderboard
 
 ```
     new GameSparks.Api.Requests.LogEventRequest_postScore()
@@ -31,7 +33,7 @@ Examples: Logging a new score in the Leaderboard:
     });
 ```
 
-Taking a turn in a challenge:
+### Taking a turn in a challenge
 
 ```    
     new LogChallengeEventRequest().SetChallengeInstanceId(challengeInstanceId)

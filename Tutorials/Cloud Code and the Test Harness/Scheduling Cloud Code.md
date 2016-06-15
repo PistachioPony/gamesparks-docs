@@ -1,4 +1,5 @@
 ---
+nav_sort: 4
 src: /Tutorials/Cloud Code and the Test Harness/Scheduling Cloud Code.md
 ---
 
@@ -17,6 +18,7 @@ First let's create an Event that the game code can trigger to indicate that the 
 Navigate to Configurator->Cloud Code->Bindings->Events and select the ‘Plant a seed’ item to open up the JavaScript editor for the Cloud Code associated with this Event.
 
 ![](img/Schedule/2.jpg)
+
 Copy the following script to the editor and click the Save button.
 
 ```    
