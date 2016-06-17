@@ -15,7 +15,7 @@ The SDK is available via BitBucket [here](https://bitbucket.org/gamesparks/games
 
 A pre-compiled swc is available [here](https://bitbucket.org/gamesparks/gamesparks-as3-sdk/raw/master/gamesparks-as3-sdk/bin/gamesparks-as3-sdk.swc)
 
-## Adding the SDK to your project
+## Adding the SDK to your Project
 
 Right click your project and select "Properties"
 
@@ -65,7 +65,7 @@ public function availabilityCallback(isAvailable : Boolean):void{
 }
 ```
 
-## Registering a callback for asynchronous messages
+## Registering a Callback for Asynchronous Messages
 
 Each GS instance has it's own asynchronous message handler, and you can attach a function to each message type you want to handle. To assign a function to a message type, you can use the *getMessageHandler()* function on GS to get the handler, you can then set the handler for a specific type.
 
@@ -85,7 +85,7 @@ public function scriptMessageHandler(message:ScriptMessage):void{
 }
 ```
 
-## Sending requests to GameSparks
+## Sending Requests to GameSparks
 
 Each request type available on the platform has it's own class within the sdk. To create a new request, you use the *createXXXRequest()* methods within the request builder object that is attached to your GS instance. To send an authentication request with username "SDK_Tester" and password "password" the following line of code should be used:
 

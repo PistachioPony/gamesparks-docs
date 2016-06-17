@@ -33,6 +33,6 @@ To create a new Match, click the ![](/img/fa/plus.png) icon and you will be pres
   * *Type* \- The type of range calculation to use when looking for a match.  These can be *Absolute*, *Relative*, and *Percent*
   * *Min/Max* \- The minimum and maximum values used for the type of range calculation used in the Threshold.
 
-**Users with pre-existing Match configuration created before November 2015 will see the following attribute on the pre-existing configuration ONLY, and will not see *Number of Players*.  Any newly-created configuration will be visible as above.***
+<q>**Note:** Users with pre-existing Match configuration created before November 2015 will see the following attribute on the pre-existing configuration ONLY, and will not see *Number of Players*.  Any newly-created configuration will be visible as above.</q>
 
   * *Max Distance (metres)* \- The maximum distance to look for players based on that type of Threshold.

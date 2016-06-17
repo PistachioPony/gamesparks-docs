@@ -29,7 +29,7 @@ The icons (highlighted above) give you the following capabilities:
 
 ## Creating a new Leaderboard configuration
 
-Press the ![](/img/fa/plus.png) icon to create a new Leaderboard.
+Click the ![](/img/fa/plus.png) icon to create a new Leaderboard.
 
 ![](img/Leaderboards/2.jpg)
 

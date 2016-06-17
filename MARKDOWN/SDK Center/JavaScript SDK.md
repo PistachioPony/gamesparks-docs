@@ -10,9 +10,9 @@ The GameSparks JavaScript SDK allows you to interact with the GameSparks platfor
 
 Download the SDK, and example HTML here:
 
-[wpdm_file id=1]
+[JavaScript SDK](http://repo.gamesparks.net/javascript-sdk/gamesparks-javascript-sdk-2015-12-18.zip)
 
-## Adding the SDK to your web page
+## Adding the SDK to your Web Page
 
 There are two core JavaScript files included with the SDK:
 
@@ -36,14 +36,16 @@ This is used for the example project, but it is assumed you will secure the secr
 
 ## Initialising the SDK
 
-There are two initialisation methods in the SDK, one for using the preview servers (for your internal use and testing) and another for the live players. It's important that you don't try to use the preview servers for your live players as the preview servers have a limit of 50 concurrent connections for each game; Firstly, you need to create a GameSparks object:
+There are two initialisation methods in the SDK, one for using the preview servers (for your internal use and testing) and another for the live players. It's important that you don't try to use the preview servers for your live players because the preview servers have a limit of 50 concurrent connections for each game.
+
+Firstly, you need to create a GameSparks object:
 
 ```
     //Create a gamesparks object to be used
     var gamesparks = new GameSparks();
 ```
 
-Once you have an object reference, you can initialise the SDK, to do this you need to call one of the initialisation methods with an options object. To initialise against the preview servers use the following function:
+Once you have an object reference, you can initialise the SDK. To do this, you need to call one of the initialisation methods with an options object. To initialise against the preview servers use the following function:
 
 ```
     gamesparks.initPreview({
@@ -102,7 +104,7 @@ A number of helper methods exist in the gamesparks object to allow you to make r
 
 A method exists for each GameSparks request object, with each of the parameters required in the request as function arguments.
 
-Each method take a callback function as the final parameter to be called when the response is recieved form the GameSparks platform. This function should take a single object parameter. A basic authentication example is show below.
+Each method take a callback function as the final parameter to be called when the response is received from the GameSparks platform. This function should take a single object parameter. A basic authentication example is shown below.
 
 ```
     gamesparks.authenticationRequest("testuser", "testuser", loginResponse);
@@ -112,7 +114,7 @@ Each method take a callback function as the final parameter to be called when th
     }
 ```
 
-Custom requests, allowing you to post events to the GameSparks platform can be achieved by using the sendWithData method. See the example below for sending a LogEventRequest for an Event with shortCode "FIRST_EVENT" and 3 attributes "NUMBER_ATTR", "STRING_ATTR" and "JSON_ATTR"
+Custom requests, which allow you to post events to the GameSparks platform can be achieved by using the sendWithData method. See the example below for sending a LogEventRequest for an Event with shortCode "FIRST_EVENT" and 3 attributes "NUMBER_ATTR", "STRING_ATTR" and "JSON_ATTR"
 
 ```
     gamesparks.sendWithData("LogEventRequest",
