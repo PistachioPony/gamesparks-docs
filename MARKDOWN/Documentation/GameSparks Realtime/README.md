@@ -71,9 +71,9 @@ Parameter Type Description
 |Parameter   |Type   |Description   |
 |---|---|--------------------------------|
 |opCode   |uint   |Each packet you send to the server has a corresponding opCode. This opCode is available when the packet is received by the other player(s). This must be a non negative integer   |
-|deliveryIntent   |GameSparksRT.DeliveryIntent |There are 3 options when sending a packet to the session RELIABLE - The packet will be queued, sent and received by the target players. The packets will be received in the order they are sent. UNRELIABLE - The packet will be sent with no guarantees of it being received. The recievers may get the packets in a different order than they are sent UNRELIABLE_SEQUENCED - The packet will be sent no guarantees of it being received. If it is received out of order it will be discarded|
+|deliveryIntent   |GameSparksRT.DeliveryIntent |There are 3 options when sending a packet to the session: **1. RELIABLE** - The packet will be queued, sent and received by the target players. The packets will be received in the order they are sent. **2. UNRELIABLE** - The packet will be sent with no guarantee of it being received. The receivers may get the packets in a different order than they are sent. **3. UNRELIABLE_SEQUENCED** - The packet will be sent with no guarantee of it being received. If it is received out of order, it will be discarded.|
 |structuredData   |RTData (optional) |This is a structured dictionary keyed with integers that can contain doubles, floats, ints, longs, strings or nested RTData objects|
-   |unstructuredData|byte[] (optional)|The supplied byte array will be sent with the packet. This is useful if you have your own binary serialization / deserialization|
+|unstructuredData|byte[] (optional)|The supplied byte array will be sent with the packet. This is useful if you have your own binary serialization / deserialization|
 |targetPlayers   |params int[]   |The peerId's of the players you want to send to. If omitted the packet is broadcast to all others players in the session   |
 
 

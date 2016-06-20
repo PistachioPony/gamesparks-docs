@@ -80,9 +80,12 @@ Our example looks like this:
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 ```
-That will ensure that the API is ready to be used. Now to initialise the GS module and connect our frontend to our backend! In any of your activitiy's Java code's OnCreate function place the following:
+That will ensure that the API is ready to be used. Now to initialise the GS module and connect our frontend to our backend! In any of your activity's Java code OnCreate function place the following:
+```
 
-<pre>GSAndroidPlatform.initialise(this, "YOUR KEY", "YOUR SECRET", false, true);</pre>
+GSAndroidPlatform.initialise(this, "YOUR KEY", "YOUR SECRET", false, true);
+
+```
 
 Now you need an API key and secret, which you given when you create a game on our platform, click [here](/Getting Started/Creating a Game/README.md) for a quick guide to show you how. Once that's done, now you need to start the connection. To do that place this code in the activity's
 

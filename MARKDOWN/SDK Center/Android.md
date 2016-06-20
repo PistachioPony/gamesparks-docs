@@ -76,10 +76,12 @@ After adding the line, hover your mouse over it and hit Alt+Enter on your keyboa
 
 That will ensure that the API is ready to be used. Now to initialise the GS module and connect our frontend to our backend!
 
-In any of your activity's Java code's OnCreate function place the following:
+In any of your activity's Java code OnCreate function place the following:
 
 ```
+
 GSAndroidPlatform.initialise(this, "YOUR KEY", "YOUR SECRET", false, true);
+
 ```
 
 Now you need an API key and secret, which you given when you create a game on our platform, click here for a quick guide to show you how.

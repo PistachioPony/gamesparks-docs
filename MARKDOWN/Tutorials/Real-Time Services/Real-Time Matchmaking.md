@@ -1,8 +1,8 @@
 ---
-src: /Tutorials/Realtime Services/Realtime Matchmaking.md
+src: /Tutorials/Real-Time Services/Real-Time Matchmaking.md
 ---
 
-# Realtime Matchmaking and Player Lobby
+# Real-Time Matchmaking and Player Lobby
 
 ## Introduction
 
@@ -113,9 +113,8 @@ If you play the game now you should see some dialog appear in the console window
 
 ![](img/RTMatchmaking/Matchmaking10.png)
 
-<q>**Note:** If you have not received the 'GS:Available' you may need to check how your GameSparks SDK is setup in your project. You can check out a tutorial on how to do this again here.</q>
+<q>**Note:** If you have not received the 'GS:Available' you may need to check how your GameSparks Unity SDK is setup in your project. You can check out a tutorial on how to do this again [here](/SDK Center/Unity.md).</q>
 
-**<< ADD CORRECT LINK for "here"! >>**
 
 ### The GameSparks Manager Singleton
 
@@ -208,7 +207,7 @@ public void AuthenticateUser (string _userName, string _password, RegCall
 
 ```
 
-<q>**Note:** If AuthenticationResponse or RegistrationResponse are not recognized or are throwing a complier error, you can fix this by right clicking on them and selecting Resolve-> using GameSparks.Api.Responses.</q>
+<q>**Note:** If AuthenticationResponse or RegistrationResponse are not recognized or are throwing a complier error, you can fix this by right clicking on them and selecting *Resolve-> using GameSparks.Api.Responses*.</q>
 
 ### Displaying Login Status
 
@@ -756,9 +755,9 @@ Whenever a packet is received by the player, this callback will be triggered. It
 
 | Parameter | Description |
 | --------- | ----------- |
-| RTPacket packet | This packet contains details about the sender and the data that was sent. For more details on the RTPacket object consult the API available here.|
+| RTPacket packet | This packet contains details about the sender and the data that was sent. |
 
-**<< ADD CORRECT LINK for "here"! >>**
+For more details on the RTPacket object, consult the API documentation available [here](/API Documentation/Realtime API/RTPacket.md).
 
 ### Starting the Game
 

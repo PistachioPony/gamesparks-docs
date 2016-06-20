@@ -13,7 +13,7 @@ Here you'll find a wide range of in-depth tutorials to help you with detailed as
 * [Database Access and Cloud Storage](/Tutorials/Database Access and Cloud Storage/README.md)
 * [Game Engine Integrations](/Tutorials/Game Engine Integrations/README.md)
 * [Multiplayer](/Tutorials/Multiplayer/README.md)
-* [Realtime Services](/Tutorials/Realtime Services/README.md)
+* [Realtime Services](/Tutorials/Real-Time Services/README.md)
 * [Social Features](/Tutorials/Social Features/README.md)
 * [Third Party Integrations](/Tutorials/Third Party Integrations/README.md)
 * [Versioning and the Publishing Process](/Tutorials/Versioning and the Publishing Process/README.md)
