@@ -1,5 +1,5 @@
 ---
-nav_sort: 4
+nav_sort: 2
 src: /Tutorials/Authentication and Player Profile/Updating Player Records.md
 ---
 

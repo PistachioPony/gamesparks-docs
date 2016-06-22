@@ -1,5 +1,5 @@
 ---
-nav_sort: 1
+nav_sort: 11
 src: /Tutorials/Multiplayer/Hearthstone Example/README.md
 ---
 

@@ -1,4 +1,5 @@
 ---
+nav_sort: 8
 src: /Tutorials/Multiplayer/Challenges with Wagers.md
 ---
 

@@ -1,8 +1,9 @@
 ---
-src: /Tutorials/Database Access and Cloud Storage/Creating Game Collection Indices.md
+nav_sort: 1
+src: /Tutorials/Database Access and Cloud Storage/Creating Game Collection Indexes.md
 ---
 
-# How to create indexes for custom game collections
+# How to create indices for custom game collections
 
 Indexes on collections allow MongoDB to process queries more efficiently and will speed up the time it takes to execute your Cloud Code scripts. For queries that don't use an index, MongoDB must scan all documents in a collection for documents that match the query. For large collections this can be an expensive operation. In this 'how to' guide we will create a custom collection and add an index to it via a Cloud Code script.
 

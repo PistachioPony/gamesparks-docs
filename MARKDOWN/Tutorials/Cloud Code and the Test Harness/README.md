@@ -1,4 +1,6 @@
 ---
+no_toc: true
+no_comment: true
 src: /Tutorials/Cloud Code and the Test Harness/README.md
 ---
 

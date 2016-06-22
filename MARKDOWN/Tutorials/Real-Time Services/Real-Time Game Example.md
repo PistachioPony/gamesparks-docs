@@ -1,5 +1,5 @@
 ---
-no_toc: true
+nav_sort: 4
 src: /Tutorials/Real-Time Services/Real-Time Game Example.md
 ---
 
@@ -20,8 +20,8 @@ This will constitute our scene setup. From there we will be handling all the eve
 
 ## Scene Setup
 
-In order to follow this tutorial you will need the game-assets available in here.
-**ADD LINK IN HERE!!**
+In order to follow this tutorial you will need the game-assets available in [here](http://repo.gamesparks.net/docs/tutorial-assets/Real-TimeMultiplayerGameExample-Assets.zip).
+
 <q>**THANKS!** *The assets used in this tutorial are open-source and the original files are available here, thanks to the creator for providing these assets.*</q>
 
 Once you have those assets downloaded you can add the *Textures* folder to the *Assets* folder of your project. The important texture for this tutorial is the one called ‘tankSprites’. You need to set this texture to the multiple sprite-mode and then split the sprite-sheet yourself using the automatic-splice option. We've set the pixel per unit size to 150 for this tutorial, but you may leave it at 100 if you like.
@@ -925,7 +925,7 @@ The following code will go in the *UpdateOpponentTanks()* method of your *GameCo
 public void UpdateOpponentTanks(RTPacket _packet){
     for (int i = 0; i < playerTanksList.Length; i++) {
         if (playerTanksList[i].name == _packet.Sender.ToString()) { // check the name of the tank matches the sender
-            // we calculate teh new position the tank should go to to be the position they are at plus the velocity. i.e. their position, plsu the distance they travelled according to their last speed
+            // we calculate the new position the tank should go to be the position they are at plus the velocity. i.e. their position, plus the distance they travelled according to their last speed
             playerTanksList[i].goToPos = (new Vector2(_packet.Data.GetVector4(1).Value.x, _packet.Data.GetVector4(1).Value.y)) + (new Vector2(_packet.Data.GetVector4(1).Value.z, _packet.Data.GetVector4(1).Value.w));
             playerTanksList [i].gotoRot = _packet.Data.GetFloat (2).Value;
             break; // break, as we don’t need to update any other tanks.
@@ -1393,7 +1393,7 @@ However, we will not be dealing with latency until the next tutorial so we will 
 
 ### Update Score
 
-Before we finish with our *Tank.cs* class we are going to add one more method, which will be used to update the score of the tank whose, shell has just hit us. We will need this in the *BroadcastHit()* method we are about to create in the *GameController.cs* class.
+Before we finish with our *Tank.cs* class, we're going to add one more method, which will be used to update the score of the tank whose shell has just hit us. We will need this in the *BroadcastHit()* method we're about to create in the *GameController.cs* class.
 
 ```
 
@@ -1410,7 +1410,7 @@ public void UpdateScore(){
 
 ### Broadcast Hit
 
-We now we go back to our *GameController.cs* class and create the *BroadcastHit()* method. This method takes three strings representing the name of the tank that got hit, the peerId of the shell and the shell’s UID.
+We now we go back to our *GameController.cs* class and create the *BroadcastHit()* method. This method takes three strings representing the name of the tank that got hit, the peerId of the shell, and the shell’s UID.
 This method will have several steps:
 1.	We find the tank that is the owner of the shell that hit us and we update its score.
 2.	Create a packet with our tank’s name, the shell owner’s Id and the shell name and send it to all players.
@@ -1491,11 +1491,50 @@ You should now have everything you need to test out your game. Your tanks should
 
 ## Showing Players Have Disconnected
 
-The last thing we need to do is add something to show when a player has been disconnected or left the game. For this example we are just going to set their sprite to be totally black and to make sure they cannot be interacted with.
-We will set their BoxCollider2D component to be a trigger (we could destroy the tank, thus removing it form the scene completely, but you may want to give the player the ability to come back into the game if possible).
-This will go into the OnOpponentDisconnected() method we created earlier in the GameController.cs class…
+The last thing we need to do is add something to show when a player has been disconnected or has left the game. For this example, we're just going to set their sprite to be totally black and to make sure they cannot be interacted with.
 
-And next we need to create this DisableTank() method in our Tank.cs class. This method will change the box-collider to a trigger and reset the colour, as we mentioned above. However, it will also need to disable the invincibility of the tank using the StopCoroutine() method.
+We will set their *BoxCollider2D* component to be a trigger. Note that we could destroy the tank, thus removing it from the scene completely, but you may want to give the player the ability to come back into the game.
+
+This will go into the *OnOpponentDisconnected()* method we created earlier in the *GameController.cs* class:
+
+
+```
+
+/// <summary>
+    /// This method is called when a player disconnects from the RT session
+    /// </summary>
+    /// <param name="_peerId">Peer Id of the player who disconnected</param>
+    public void OnOpponentDisconnected(int _peerId){
+
+        for (int i = 0; i < playerTanksList.Length; i++) {
+            if (playerTanksList [i].name == _peerId.ToString ()) {
+                playerTanksList [i].DisableTank ();
+                break;
+            }
+        }
+
+
+```
+
+And next we need to create this *DisableTank()* method in our *Tank.cs* class. This method will change the box-collider to a trigger and reset the colour, as we mentioned above. However, it will also need to disable the invincibility of the tank using the *StopCoroutine()* method:
+
+```
+
+/// <summary>
+/// Removes the tank from play so players cannot interact with it
+/// </summary>
+public void DisableTank (){
+    isInvincible = false;
+    if (invincibility != null) {
+        StopCoroutine (invincibility);
+    }
+    GetComponent<SpriteRenderer> ().color = Color.black;
+    GetComponent<BoxCollider2D> ().isTrigger = true;
+
+
+
+
+```
 
 ## Summary
 

@@ -1,4 +1,5 @@
 ---
+nav_sort: 3
 src: /Tutorials/Database Access and Cloud Storage/Submitting JSON Document Queries.md
 ---
 
@@ -232,5 +233,5 @@ Again, we can now query the level 1 data for the user at any point and get the f
     "PATH": "LEVEL_1",
     "requestId": "1392895355079"
     }
-    
+
 ```

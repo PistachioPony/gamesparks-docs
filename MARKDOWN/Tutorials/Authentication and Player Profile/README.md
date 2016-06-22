@@ -1,4 +1,6 @@
 ---
+no_toc: true
+no_comment: true
 src: /Tutorials/Authentication and Player Profile/README.md
 ---
 
@@ -8,7 +10,6 @@ Understand how to manage your player profiles and how to set up authentication t
 * [Accessing](/Tutorials/Authentication and Player Profile/Accessing Player records.md) and [Updating](/Tutorials/Authentication and Player Profile/Updating Player Records.md)  player records.
 * Configuring automatic [user password change](/Tutorials/Authentication and Player Profile/Automating User Password Change.md).
 * [Communicating](/Tutorials/Authentication and Player Profile/Communicating With Players.md) with your players.
-* [Editing](/Tutorials/Authentication and Player Profile/Updating Player Records.md) player details.
 * Setting up third-party authentications:
     * [Facebook](/Tutorials/Authentication and Player Profile/Facebook Authentication.md)
     * [Google+](/Tutorials/Authentication and Player Profile/Google+ Authentication.md)

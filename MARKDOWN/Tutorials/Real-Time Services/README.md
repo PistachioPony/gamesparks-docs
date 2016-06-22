@@ -1,4 +1,6 @@
 ---
+no_toc: true
+no_comment: true
 src: /Tutorials/Real-Time Services/README.md
 ---
 
@@ -28,6 +30,8 @@ The tutorials in this section cover:
 * [Real-Time Chat Services](/Tutorials/Real-Time Services/Implementing Real-Time Chat Services.md) - Once a real-time session has started from the match setup in the lobby, how to start sending and receiving packets to build an real-time chat service.
 
 * [Multiplayer Game Example](/Tutorials/Real-Time Services/Real-Time Game Example.md) - To demonstrate the real-time services, this tutorial shows you how to create a very simple multiplayer game. This example will have networked objects moving around, firing projectiles, and sending and receiving information between each player to update each other’s game-objects.
+
+* [Clock Synchronization and Network Programming](/Tutorials/Real-Time Services/Clock Synchronization and Network Programming.md) - This tutorial explores further key concepts in multiplayer network programming, such as clock-synchronization and packet analytics
 
 Each tutorial will have an accompanying video tutorial you can follow along with, as well as downloadable examples of the finished project at the end of the tutorial.
 
