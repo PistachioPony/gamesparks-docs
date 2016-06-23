@@ -6,7 +6,7 @@ src: /Documentation/Test Harness/README.md
 
 The Test Harness allows you to send API requests into the GameSparks platform in their raw form to see the responses that the server returns for any given request.  As the browser uses WebSockets for communication, the Test Harness can mimic a connected device by receiving asynchronous messages when they are generated by the platform.  The Test Harness is an invaluable tool for testing your game configuration.  We recommend that you always try out any game configuration changes that you make in the Test Harness before writing the game client code that uses it. Access the Test Harness from the left hand navigation menu in the Developer Portal.
 
-![](img/TestHarness/1.jpg)
+![](img/TestHarness/1.png)
 
 There are several sections in the Test Harness:
 
@@ -18,9 +18,11 @@ There are several sections in the Test Harness:
   * *Stage selector menu* \- the drop down menu in the top left of the screen allows you to select whether you are connecting to the preview or live stage of you game.
   * *Debugger* \- Allows debugging the Cloud Code attached to your requests. Tutorial can be found [here](/Documentation/Test Harness/Debugger.md).
 
+<q>**Note:** If you have selected an event which has Cloud Code attached to it, the Debugger will automatically appear only when you run the event!</q>
+
 When you first access the Test Harness page within the Developer Portal it will establish a session with the GameSparks platform and you will see a session id in the *Connection* section.  At this point the Test Harness is connected to GameSparks but no player is currently authenticated within this session.  The initial connection handshaking methods are shown in the *Inspector* section.
 
- Once you have issued one of the available authentication requests ( e.g. AuthenticationRequest, DeviceAuthenticationRequest, etc) with valid player details you will see an authentication token in the *Connection* section.
+ Once you have issued one of the available authentication requests (for example, AuthenticationRequest, DeviceAuthenticationRequest, and so on) with valid player details you will see an authentication token in the *Connection* section.
 
 ## Issuing a request
 

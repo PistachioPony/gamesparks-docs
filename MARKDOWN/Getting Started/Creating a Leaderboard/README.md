@@ -7,13 +7,13 @@ src: /Getting Started/Creating a Leaderboard/README.md
 ## Introduction
 
 
-Leaderboards are typically restricted to tracking and reporting the leading players in a game. GameSparks leaderboards offer you much wider and flexible scope, both for tracking comparisons within your player pool and for controlling how comparisons are displayed in-game to players:
-* Complex comparison scenarios - define what and how players will be compared.
-* Meaningful player displays - monitor player performance and provide in-game filters to flexibly display comparisons to players.
-* In-game notifications - supports dynamic messaging for your player groups.
-* Rich socialisation features - provides a robust framework for building social and competitive features into your game
+Leaderboards are typically restricted to tracking and reporting the leading players in a game. GameSparks leaderboards offer you much more, both for tracking comparisons within your player pool and for controlling how comparisons are displayed in-game to the players:
+* **Complex comparison scenarios** - define what and how players will be compared.
+* **Meaningful player displays** - monitor player performance and provide in-game filters to flexibly display comparisons to players.
+* **In-game notifications** - enable dynamic messaging within your player groups.
+* **Rich socialisation features** - exploit a robust framework for building social and competitive features into your game
 
-In this tutorial we will go over the simple processes involved in creating an Event, attaching it to a Leaderboard, posting a score, and receiving a HighScore Message.
+In this tutorial, we'll go over the simple processes involved in creating an Event, attaching it to a Leaderboard, posting a score, and receiving a HighScore Message.
 
 ## Event
 

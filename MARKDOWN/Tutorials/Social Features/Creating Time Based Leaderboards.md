@@ -2,7 +2,7 @@
 src: /Tutorials/Social Features/Creating Time Based Leaderboards.md
 ---
 
-# How to create time based Leaderboards
+# How to create Time Based Leaderboards
 
 You can use the GameSparks platform to create Leaderboards that are based on time. Some examples of these are:
 
@@ -20,7 +20,7 @@ To get started, we need to start tracking in our running total the day a particu
 
 ![](img/TimeLDR/1.jpg)
 
-You notice we've added a default value to the "DAY" attribute, the addition of this default value mean you do not need to pass a DAY attribute as part of the [LogEventRequest](https://docs.gamesparks.net/documentation/request-api/player-request-api/logeventrequest) and the platform will calculate it.
+You notice we've added a default value to the "DAY" attribute, the addition of this default value mean you do not need to pass a DAY attribute as part of the [LogEventRequest](/API Documentation/Request API/Player/LogEventRequest.md) and the platform will calculate it.
 
 You also notice we are using an expression (starting with $). There are a few expressions available that allow you to auto calculate a value for the default, the one we are using is ${today} which will automatically resolve to the epoch time of midnight today.
 
@@ -44,7 +44,7 @@ When the Leaderboard is built, it will have a short code of HSL30D.SCHEDULED.YYY
 
 With this process, each previous scheduled Leaderboard is preserved, and you can query for historical data using the date component of the short code.
 
-When you make a [ListLeaderboardsRequest](https://docs.gamesparks.net/documentation/request-api/leaderboards-request-api/listleaderboardsrequest), each of the build Leaderboard will be returned in the Response so you can query which Leaderboards are available.
+When you make a [ListLeaderboardsRequest](/API Documentation/Request API/Leaderboards/ListLeaderBoardsRequest.md), each of the build Leaderboard will be returned in the Response so you can query which Leaderboards are available.
 
 ## Expressions
 

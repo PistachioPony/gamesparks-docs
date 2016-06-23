@@ -4,7 +4,7 @@ src: /Tutorials/Social Features/Configuring iOS Push Notifications.md
 
 # How to configure iOS Push Notifications
 
-## *Introduction*
+## Introduction
 
 When an event fires, the server-side component can send the app a push notification. If your game is not currently in use, you can still notify the user when an event takes place. For example ‘Challenge Received’ or when someone on the user’s friends list has beaten their high score. There are three things a push notification can do:
 
@@ -12,7 +12,7 @@ When an event fires, the server-side component can send the app a push notificat
   * Play a brief sound
   * Set a number in a badge on the game’s icon
 
-## *Provisioning Profiles and Certificates*
+## Provisioning Profiles and Certificates
 
 To enable push notifications in your app it has to be signed with a provisioning profile. The provisioning profile and SSL certificate are only valid for a single App ID. This ensures that only you can send push notifications to instances of your app.
 
@@ -22,9 +22,9 @@ Apps use different provisioning profiles for development and distribution. Each 
   * *Production* Apps that are distributed as Ad Hoc or on the App Store (when Code Signing Identity is “iPhone Distribution”) must talk to a server that uses the Production certificate.
 If there is a mismatch between the profile and certificate, push notifications cannot be delivered to your app.
 
-**NOTE: The following tutorial is based on using Mac OSX. If you use a different operating system such as Linux or Windows, some of the steps will differ slightly.**
+<q>**Note:** The following tutorial is based on using Mac OSX. If you use a different operating system such as Linux or Windows, some of the steps will differ slightly.</q>
 
-## *Generating the Certificate Signing Request (CSR)*
+## Generating the Certificate Signing Request (CSR)
 
 Digital certificates are based on public-private key cryptography and certificates always work in combination with a private key. The certificate is the public part of this key pair so it can be given to others, but you can’t use the certificate if you don’t have the private key. When you apply for a digital certificate you must provide a Certificate Signing Request. Once the CSR is created, a new private key will be generated and put into your Keychain. You then send the CSR to the iOS Developer Portal, which will generate the SSL certificate for you. *1.* Open Keychain Access on your Mac (you can find it in the Applications/Utilities folder).
 
@@ -106,9 +106,9 @@ The certificate is now available for development. You can download the certifica
 
 The p12 file and password will be used in the GameSparks Portal to Setup Push Notifications for your game.
 
-## *Configuring the GameSparks Portal*
+## Configuring the GameSparks Portal
 
-### *Upload your certificate and password to Gamesparks*
+### Upload your certificate and password to Gamesparks
 
 *23.* Log in to the GamesSparks Portal and navigate to *Configurator* -> *Integrations*.
 
@@ -126,7 +126,7 @@ The p12 file and password will be used in the GameSparks Portal to Setup Push No
 
 ![](img/IOSPush/18.png)
 
-**NOTE: When you release your app you will have to repeat these steps for the iOS Production Certificate.**
+<q>**Note:** When you release your app you will have to repeat these steps for the iOS Production Certificate.</q>
 
 ![](img/IOSPush/19.png)
 
@@ -172,7 +172,7 @@ It is assumed that you are familiar with Xcode and and have an Xcode project alr
 
 ![](img/IOSPush/26.png)
 
-**NOTE: Once again, when you release your app you will have to repeat this process with an Ad Hoc or App Store distribution profile.**
+<q>**Note:** Once again, when you release your app you will have to repeat this process with an Ad Hoc or App Store distribution profile.</q>
 
 *38.* In your Xcode project, open *AppDelegate.m*. Change the application *didFinishLaunchingWithOptions* method to look like this:
 
@@ -213,7 +213,7 @@ Your App can now receive Push Notifications via the GameSparks service!
 
 *41.* Build and run the app.
 
-**NOTE: You will need to do this on a physical device as the iOS Simulator tool does not support push notifications.**
+<q>**Note:** You will need to do this on a physical device as the iOS Simulator tool does not support push notifications.</q>
 
 Hopefully Xcode will automatically select the new Provisioning Profile. However, if you get a code sign error, ensure the proper profile is selected in the Code Signing build settings. When the app starts and registers for push notifications, it shows a message to inform the user that this app wishes to send push notifications.
 

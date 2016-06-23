@@ -43,7 +43,7 @@ All our SDKs share the same setup.
 
 First we'll need to create a *GSMessageListeners* component (located on the red bar on left) in the Game Mode. The GSMessageListeners component is an extremely useful tool which will allow you to intercept messages from the Portal to your authenticated player, then break them down and use them in your sequences. Here we're going to demonstrate the use of one message type interception by using the event *OnNewHighScoreMessage.* This can be dropped into the Event Graph after clicking the GSMessageListeners component and accessing its events (Green box on the right). Once we drop the Event in, we can break the message down and access data that is useful to us. For this tutorial we'll be retrieving the name of the Leaderboard to inform the player which Leaderboard they have achieved a High Score on.
 
-![](../../Getting Started/Creating A Leaderboard/img/UR/1.png)
+![](../../Getting Started/Creating a Leaderboard/img/UR/1.png)
 
 ### Unity
 
@@ -61,11 +61,11 @@ Finally you'll want to hook up the *NewHighScoreMessage* listener so that you 
 ```
 Now, to test this out, enter a new High Score for your player in the Unity sample project. You should see the “NEW HIGH SCORE” message appear in the console window.
 
-![l](../../Getting Started/Creating A Leaderboard/img/UT/8.png)
+![l](../../Getting Started/Creating a Leaderboard/img/UT/8.png)
 
-![l](../../Getting Started/Creating A Leaderboard/img/UT/9.png)
+![l](../../Getting Started/Creating a Leaderboard/img/UT/9.png)
 
-![l](../../Getting Started/Creating A Leaderboard/img/UT/10.png)
+![l](../../Getting Started/Creating a Leaderboard/img/UT/10.png)
  
 
 ### ActionScript

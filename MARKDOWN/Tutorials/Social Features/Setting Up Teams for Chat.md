@@ -2,18 +2,18 @@
 src: /Tutorials/Social Features/Setting Up Teams for Chat.md
 ---
 
-# Setting up a Team/Clan/Party including Chat
+# Setting up a Team/Clan/Party Including Chat
 
 ## Introduction
 
-GameSparks allows your players to easily create teams which act as groups where in players can:
+GameSparks allows your players to easily create teams which act as groups where players can:
 * Join and quickly send chat messages to each other.
 * Pass information between members of the group.
 * Submit a score as a team instead of submitting as individual scores, which is very handy for team-based challenges or games.
 
 This system can be used for Parties, Clans, Teams, and so on and is very easy to set up. This tutorial shows you how to set up a Team through an owner and have another player join and chat with the others in the test harness.
 
-### Setting up a Team type
+### Setting up a Team Type
 
 To set up a team type, head to the Teams tab in the configurator and click the *Add new* button. You'll be prompted with a screen to configure your Team type:
 

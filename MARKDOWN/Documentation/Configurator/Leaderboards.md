@@ -5,15 +5,13 @@ src: /Documentation/Configurator/Leaderboards.md
 
 # Leaderboards
 
-The Leaderboards functionality on the GameSparks platform is not limited to Leaderboards in their traditional sense. Rather, it is functionality that allows you to keep track of any comparisons of player performance and then support artifacts in-game that flexibly display this information in a meaningful form to players. This allows support for complex, contextual display of information about other players and also provides the framework for many social and competitive features.
+Leaderboards are typically restricted to tracking and reporting the leading players in a game. GameSparks Leaderboards offer you a much wider and flexible scope, both for tracking comparisons within your player pool and for controlling how comparisons are displayed in-game to the players:
+* **Highly Configurable** - Keep track of any comparisons of player performance and then support artifacts in-game that flexibly display this information in a meaningful form to players. This allows support for complex, contextual displays of information about other players and also provides the framework for many social and competitive features.
+* **Highly Performant** - Our internal ranking and sorting algorithms allow new scores to be added to Leaderboards with 10m+ entries and have a new rank calculated within milliseconds.
+* **Driven by Running Totals** - Leaderboards consume data from running totals and can also perform calculations on grouped running totals, allowing you to further transform the data from the running total into a list of scores of the values that you want. A single Leaderboard can consume data from multiple running totals (and in turn, from multiple Events). This allows for some complex Leaderboards, such as a Leaderboard with a halfway score and a final score in the same list. You can achieve this without having to worry about recording the halfway score during the game. Simply send the events when they happen and the platform does the rest!
+* **Partition** - You can partition Leaderboards, which allows you to set up a single Leaderboard configuration and have it automatically create new Leaderboards when a particular value changes. A good example here is a level Leaderboard, where the rules are the same for the Leaderboard at each level. You tell the Leaderboard to partition by level and the rest is done for you. Far better than creating 100 separate Leaderboard configurations to represent each level!
+* **Social Ranking** - Not only can Leaderboards provide instant rankings, but we can filter these based on your connection to a wide range of available social networks, such as ranking you against your socially networked friends.
 
-Not only are GameSparks Leaderboards highly configurable, they are also highly performant. Our internal ranking and sorting algorithms allow new scores to be added to Leaderboards with 10m+ entries and have a new rank calculated within milliseconds (along with a social list of your friends who you have just passed).
-
-Leaderboards consume data from running totals, and can also perform calculations on grouped running totals to allow you to further transform the data from the running total into a list of scores of the values that you want.
-
-A single Leaderboard can consume data from multiple running totals (and in turn, from multiple Events). This allows for some complex Leaderboards such as a Leaderboard with a halfway score and a final score in the same list. You can achieve this without having to worry about recording the halfway score during the game - just send the events when they happen and the platform does the rest.
-
-You can also partition Leaderboards. This allows you to set up a single Leaderboard configuration and have it automatically create new Leaderboards when a particular value changes. A good example for this is a level Leaderboard, where the rules are the same for the Leaderboard for each level. You tell the Leaderboard to partition by level and the rest is done for you - far better than creating 100 separate Leaderboard configurations to represent each level.
 
 ## Managing Leaderboard configurations
 

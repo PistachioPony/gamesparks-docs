@@ -8,20 +8,24 @@ src: /Tutorials/Real-Time Services/README.md
 
 ## Introduction
 
-Welcome to our series of tutorials on GameSparks Real-Time services SDK. These tutorials are intended to give you an introduction to our Real-Time SDK, how it works, and to provide you with a useful example on how our Real-Time might be implemented in a multiplayer game.
+Welcome to our series of tutorials on GameSparks Real-Time services SDK. These tutorials give you an introduction to our Real-Time SDK, how it works, and provide an example on how our Real-Time might be implemented in a multiplayer game.
 
 
 ## What Are Real-Time Services?
 
-Our real-time services provide a network communication layer which has the ability to send and receive data in real-time. Here are the main points:
+Our real-time services provide a network communication layer which has the ability to send and receive data in real-time:
 
 * **Designed for Multiplayer Contexts.** Our real-time services are intended for use in multiplayer networked games where player and game-data should be sent and received as quickly as possible.
 
-* **Host Server Support for Player vs. Player (PvP) Model.** We use a PvP model for our network programming. However, we use a host server to relay communications between players. This allows our services to support a higher number of players than traditional PvP models, as well has giving you the option to host games in the regions of your choice to reduce latency issues.
+* **Host Server Support for Player vs. Player (PvP) Model.** We use a PvP model for our network programming. However, we use a host server to relay communications between players. This brings significant benefits:
+  * Allows our services to support a higher number of players than traditional PvP models.
+  * Gives you the option to host games in the regions of your choice to reduce latency issues.
 
-* **Lightweight and Flexible SDK.** Our real-time SDK is very lightweight, giving wide flexibility on what data you send and how you wish to send the data. The benefit of this is not just to give the developer control over what is sent and received, but also to keep the packets as small as possible which makes transmission much more efficient.
+* **Lightweight and Flexible SDK.** Our real-time SDK is very lightweight, giving the developer tight control over what is sent and received:
+  * You have wide flexibility on what data you send and how you wish to send the data.
+  * You can keep the packets as small as possible making transmission much more efficient.
 
-The tutorials in this section cover:
+## Tutorials
 
 * [Setting Up Real-Time Matchmaking](/Tutorials/Real-Time Services/Setting Up Real-Time Matchmaking.md) - Integrating the real-time SDK into an existing GameSparks project in Unity3D and setting up a new real-time match through your game’s portal.
 
@@ -33,6 +37,6 @@ The tutorials in this section cover:
 
 * [Clock Synchronization and Network Programming](/Tutorials/Real-Time Services/Clock Synchronization and Network Programming.md) - This tutorial explores further key concepts in multiplayer network programming, such as clock-synchronization and packet analytics
 
-Each tutorial will have an accompanying video tutorial you can follow along with, as well as downloadable examples of the finished project at the end of the tutorial.
+**<< Each tutorial will have an accompanying video tutorial you can follow along with, as well as downloadable examples of the finished project at the end of the tutorial. >>**
 
 **<< ARE WE PLANNING TO DELIVER THESE VIDEOS? >>**

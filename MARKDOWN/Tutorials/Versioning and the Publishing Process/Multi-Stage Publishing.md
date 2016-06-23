@@ -1,4 +1,5 @@
 ---
+nav_sort: 2
 src: /Tutorials/Versioning and the Publishing Process/Multi-Stage Publishing.md
 ---
 
@@ -12,7 +13,7 @@ Sometimes it's not enough to have just a Preview and LIVE environment, and you m
 
 ![](img/MultiStage/2.png)
 
-*Note*: Each version of the game can have unique permissions added, to it.  This will allow or prevent team members from editing the content in the games configuration for a particular stage within our life cycle.  You can read more on permissions [here](/Documentation/Configurator/Capabilities.md).
+<q>**Note**: Each version of the game can have unique permissions added, to it.  This will allow or prevent team members from editing the content in the games configuration for a particular stage within our life cycle.  You can read more on permissions [here](/Documentation/Configurator/Capabilities.md).</q>
 
 *2.*  Once your development stage is complete and you are ready for the testing stage, you can then create a new Snapshot within the *DEV* game that will be copied into the *TEST* game for testing.
 
@@ -28,4 +29,4 @@ Sometimes it's not enough to have just a Preview and LIVE environment, and you m
 
 ![](img/MultiStage/4.png)
 
-As a rule of good practice, it would be highly recommended to follow this process in the future when creating games.  This helps to keep stages organised and protected from differences in the configuration between the separate stages of the life cycle.
+<q>**Highly Recommended!** As a rule of good practice, it's highly recommended that you follow this process in the future when creating games.  This helps to keep stages organised and protected from differences in the configuration between the separate stages of the game's life cycle.</q>

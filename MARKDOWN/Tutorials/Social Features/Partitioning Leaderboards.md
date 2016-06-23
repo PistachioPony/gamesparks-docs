@@ -2,7 +2,7 @@
 src: /Tutorials/Social Features/Partitioning Leaderboards.md
 ---
 
-# How to partition leaderboards
+# How to Partition Leaderboards
 
 There are times when you want multiple Leaderboards where the difference between them is based on a value in the Leaderboard. An example of this would be where you are passing a country code as part of the event, and you want a leaderboard for each country. Rather then creating a Leaderboard for each country with a filter value, you can configure the Leaderboard to partition itself based on the country code. This allows you to use a single configuration, but have multiple runtime leaderboards. We'll run through this example in this post.
 
@@ -28,7 +28,7 @@ You can have multiple partitions for each leaderboard, in which case the short c
 
 HSBC.<PARTITION_1_CODE>.<PARTITION_1_VALUE>.<PARTITION_2_CODE>.<PARTITION_2_VALUE>
 
-## Testing the configuration.
+## Testing the Configuration.
 
 After authenticating pass the following LogEventRequest.
 

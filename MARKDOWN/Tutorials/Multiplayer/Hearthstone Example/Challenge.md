@@ -12,7 +12,7 @@ This section will heavily rely on Challenge events, there will be a lot of calls
 * action_playCard
 * action_endTurn
 
-**Make sure these event's cloud code is edited it in the challenge event tab of the cloud code section not the event's tab**
+<q>**Important!** Make sure the cloud code for these events cloud code is edited in the challenge event tab of the cloud code section *not the event's tab*.</q>
 
 ## action_pullCard
 

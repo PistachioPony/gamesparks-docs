@@ -1,8 +1,8 @@
 ---
-src: /Tutorials/Social Features/Configuring Windows Push Notifications.md
+src: /Tutorials/Social Features/Configuring Windows Phone Push Notifications.md
 ---
 
-# How to configure Windows Phone push notifications
+# How to Configure Windows Phone Push Notifications
 
 ## Introduction
 
@@ -47,7 +47,7 @@ The Authenticating your service page provides your SID and client secret.
   7. Your GameSparks game is now configured to receive  Windows Phone Push Notifications!
  
 
-## Editing Messages for Push notifications
+## Editing Messages for Push Notifications
 
 To edit a message select the edit option next to the desired message.
 

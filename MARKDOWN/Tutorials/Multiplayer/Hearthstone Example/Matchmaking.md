@@ -5,11 +5,11 @@ src: /Tutorials/Multiplayer/Hearthstone Example/Matchmaking.md
 
 # Matchmaking
 
-## The procedure
+## The Procedure
 
 The way we set up the matchmaking allows for the platform to automatically construct the right match, based on the players level. Once a match has been found the platform will automatically issue the correct challenge, accept it and initialise it.
 
-## Creating the match and challenge examples
+## Creating the Match and Challenge Examples
 
 Before we can continue we need to create a match and a challenge. These will be very simple.
 
@@ -23,7 +23,7 @@ The challenge:
 
 Make sure that the challenge is turn based.
 
-## The match event
+## The Match Event
 
 Make an new event. This simple event will take one string that represents the shortCode of the match it's suppose to make. We'll name this event findMatch and the Cloude code will be:
 

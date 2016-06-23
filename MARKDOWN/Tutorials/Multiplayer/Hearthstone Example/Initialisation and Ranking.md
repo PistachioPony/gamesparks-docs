@@ -5,9 +5,11 @@ src: /Tutorials/Multiplayer/Hearthstone Example/Initialisation and Ranking.md
 
 # Initialisation and Ranking
 
-## First thing's first, the cards
+## First, the Cards
 
-For a game like this to work we need a way to store the game's cards somewhere where it will be easy to access, manage and edit them. For this we'll be using the platform's mongo database. Head over to the NoSQL tab. Click the 'Create' tab and create three runtime collections. One will be commonCards, another will be rareCards and the last will be legendaryCards.
+For a game like this to work we need a way to store the game's cards somewhere where it will be easy to access, manage, and edit them. For this, we'll use the platform's mongo database.
+
+First, head over to the NoSQL tab. Click the 'Create' tab and create three runtime collections. Call these collections *commonCards*, *rareCards*, and  *legendaryCards*.
 
 Once those collections are made, its time to populate them. Each card will be it's own document, and the reasons will be obvious further down the tutorial. To populate your collections, click the 'Insert' tab. And insert a document, for example: {"cardName": "Warrior", "tier": "commonCards", "attack": 1, "health": 2, "spawnCost": 1, "effect": "Charge"} which will result in our document looking like this:
 
@@ -29,7 +31,7 @@ Once those collections are made, its time to populate them. Each card will be it
 
 The card consists of an Id which is automatically generated, you don't have to create it. A cardName which represents the type of card, the teir which will help us find the collection a card belongs to, the base attack, base health, spawn cost and the effect of the card if any. Continue to fill the collections with cards. Our tutorial has 3 commonCards, 3 rareCards and 1 legendaryCards.
 
-## Player initilisation
+## Player Initilisation
 
 We'll need to initialise our players once they're registered by giving them a basic deck and a starting rank. To do this, we need to add scriptData to the player once they register. Head over to the cloud code section under the configurator tab on the platform. Once there, navigate to the responses tab, expand it and look for the RegistrationResponse. We edited our RestrationReponse to look like this:
 
@@ -198,7 +200,7 @@ else{
 
 ```
 
-## ChallengeTurnTaken message
+## ChallengeTurnTaken Message
 
 This is a brilliant message to place a check for player's health and act upon it because it's called after every challenge event is executed. We will have three checks, whether the challenger's health is 0 or lower and the challenged player's health is over 0; whether the challenged player's health is 0 or lower and the challenger's health is over 0; and finally if both player's healths are equal to or lower than 0. Each condition will trigger a different response, either the challenger winning, the challenged winning or both drawing.
 

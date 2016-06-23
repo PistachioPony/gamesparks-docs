@@ -1,4 +1,6 @@
 ---
+no_toc: true
+no_comment: true
 nav_sort: 1
 src: /Documentation/Key Concepts/README.md
 ---

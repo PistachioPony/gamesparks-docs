@@ -5,7 +5,6 @@ src: /Tutorials/Real-Time Services/Real-Time Game Example.md
 
 # Real-Time Multiplayer Game Example
 
-**ADD TOC back in!!**
 In the previous tutorial, we looked at how to set up a simple chat-system so that players found through the match-making process can communicate with each other. It included a simple introduction to how packets are sent and received using our real-time services.
 
 In this final tutorial, we follow the previous one and use the real-time services to create a simple multiplayer game based on Atari’s Tank! (1974).
@@ -22,7 +21,7 @@ This will constitute our scene setup. From there we will be handling all the eve
 
 In order to follow this tutorial you will need the game-assets available in [here](http://repo.gamesparks.net/docs/tutorial-assets/Real-TimeMultiplayerGameExample-Assets.zip).
 
-<q>**THANKS!** *The assets used in this tutorial are open-source and the original files are available here, thanks to the creator for providing these assets.*</q>
+<q>**THANKS!** *The assets used in this tutorial are open-source and many thanks to the creator for providing these assets.*</q>
 
 Once you have those assets downloaded you can add the *Textures* folder to the *Assets* folder of your project. The important texture for this tutorial is the one called ‘tankSprites’. You need to set this texture to the multiple sprite-mode and then split the sprite-sheet yourself using the automatic-splice option. We've set the pixel per unit size to 150 for this tutorial, but you may leave it at 100 if you like.
 

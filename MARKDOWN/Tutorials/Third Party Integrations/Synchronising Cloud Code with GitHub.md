@@ -10,7 +10,7 @@ In this article, we assume that you already know what [Git](http://www.github.co
 
 ![](img/GitSynch/1.png)
 
-### Exporting Cloud Code
+## Exporting Cloud Code
 
 The first thing we can do is export our Cloud Code to our local machine.
 
@@ -64,7 +64,7 @@ This is the exported Cloud Code and it's structural layout.
 
 ![](img/GitSynch/4.png)
 
-### Merging Cloud Gabs Code into a GitHub repository
+## Merging Cloud Code into a GitHub Repository
 
 In the following steps, some type of versioning control application may be useful in adding the Cloud Code to your choice of repository.
 
@@ -78,7 +78,7 @@ In the following steps, some type of versioning control application may be usefu
 
  ![](img/GitSynch/5.png)
 
-### Importing Cloud Code
+## Importing Cloud Code
 
 *8.* In the Portal, go to the *Cloud Code* section and select *Get from Git*.
 
@@ -123,6 +123,6 @@ By doing this, you will now be able to select your data from your GitHub account
 
 *17.* Press *Save*. The changes will be imported.
 
-*NOTE:* After your first previewing of an import, the form to select the Repository, Branch and root folder will be slightly different. It will remember your chosen settings from your previous visit. These drop-down menus will be locked until you select the *Change Selection* button. You will then be able to make your changes to which Repository, Branch or folder you want to import from.
+<q>**Note:** After your first previewing of an import, the form to select the Repository, Branch and root folder will be slightly different. It will remember your chosen settings from your previous visit. These drop-down menus will be locked until you select the *Change Selection* button. You will then be able to make your changes to which Repository, Branch or folder you want to import from.</q>
 
 ![](img/GitSynch/13.png)

@@ -12,18 +12,18 @@ There are two requests which retrieve entries from Leaderboards. The first being
 
 ### AroundMeLeaderboardRequest
 
-Retrieves a set amount of entries above and under the current players position with an added option to include entries from the top or bottom of the Leaderboard.  In depth documentation [here](https://api.gamesparks.net/?jsonsdk#aroundmeleaderboardrequest).
+Retrieves a set amount of entries above and under the current players position with an added option to include entries from the top or bottom of the Leaderboard.  In depth documentation [here](/API Documentation/Request API/Leaderboards/AroundMeLeaderboardRequest.md).
 
 ![](img/Listing/1.png)
 
 ### LeaderboardDataRequest
 
-This request returns a set amount of entries from the top of the list counting down. This is the simple way to return a list from the Leaderboard.  In depth documentation [here](https://api.gamesparks.net/?jsonsdk#leaderboarddatarequest).
+This request returns a set amount of entries from the top of the list counting down. This is the simple way to return a list from the Leaderboard.  In depth documentation [here](/API Documentation/Request API/Leaderboards/LeaderboardDataRequest.md).
 
 ![](img/Listing/2.png)
 
 ### GetLeaderboardEntriesRequest
 
-This request returns the current player or a given player's ranking and score for a selected Leaderboard or Leaderboards.  In depth documentation [here](https://api.gamesparks.net/?jsonsdk#getleaderboardentriesrequest).
+This request returns the current player or a given player's ranking and score for a selected Leaderboard or Leaderboards.  In depth documentation [here](/API Documentation/Request API/Leaderboards/GetLeaderboardEntriesRequest.md).
 
 ![](img/Listing/3.png)

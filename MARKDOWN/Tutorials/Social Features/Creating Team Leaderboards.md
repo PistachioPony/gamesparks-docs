@@ -2,7 +2,7 @@
 src: /Tutorials/Social Features/Creating Team Leaderboards.md
 ---
 
-# How to create a team Leaderboard
+# How to Create a Team Leaderboard
 
 Using the GameSparks platform, you can create Leaderboards that show the performance of a team, rather than the performance of a single players. For team-based Leaderboards, you need a few things in place. This post will take you through the process of getting them set up. In this example we'll create a team type called "Squad". When a player posts a score, the team they are in will be attributed with the score, and this can then be used on a Leaderboard for the team.
 
@@ -14,7 +14,7 @@ From the Teams menu in the Configurator, click the add icon to create your team 
 
 We've set the team to have a Maximum Members number of 5.
 
-## Creating the event
+## Creating the Event
 
 We'll create a simple high score event that takes a single score parameter.
 
@@ -55,9 +55,9 @@ Top N Notifications
 When a teams rank is increased due to a new score being posted (and they are in the top N of the leaderboard) they will receive a TeamRankChangedmessage
 [/su_table]
 
-## Testing the configuration
+## Testing the Configuration
 
-### Create the first player
+### Create the First Player
 
 Request
 
@@ -117,7 +117,7 @@ Response The response contains the team details, notice the current player is a
      ]
     }
 ```
-### Create the second Player
+### Create the Second Player
 
 Request
 
@@ -227,7 +227,7 @@ Message As we know this is the first score posted for this team we receive a New
      "leaderboardShortCode": "SQUAD_LB"
     }
 ```
-### Authenticate as player 1
+### Authenticate as Player 1
 
 Request
 
