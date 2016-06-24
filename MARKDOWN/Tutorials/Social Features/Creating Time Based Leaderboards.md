@@ -44,7 +44,8 @@ When the Leaderboard is built, it will have a short code of HSL30D.SCHEDULED.YYY
 
 With this process, each previous scheduled Leaderboard is preserved, and you can query for historical data using the date component of the short code.
 
-When you make a [ListLeaderboardsRequest](/API Documentation/Request API/Leaderboards/ListLeaderBoardsRequest.md), each of the build Leaderboard will be returned in the Response so you can query which Leaderboards are available.
+When you make a [ListLeaderboardsRequest](/API Documentation/Request API/Leaderboards/ListLeaderboardsRequest.md), each of the build Leaderboard will be returned in the Response so you can query which Leaderboards are available.
+
 
 ## Expressions
 

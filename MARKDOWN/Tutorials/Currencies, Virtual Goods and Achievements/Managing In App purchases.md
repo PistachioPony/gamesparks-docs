@@ -187,7 +187,7 @@ After a purchase is made, get hold of the receipt as described in [Read the Rece
 NSURL *receiptURL = [[NSBundle mainBundle] appStoreReceiptURL]; NSData *receipt = [NSData dataWithContentsOfURL:receiptURL]; if (!receipt) { /* No local receipt -- handle the error. */ }
 ```
 
-You then send the receipt to the GameSparks platform using a [IOSBuyGoodsRequest](https://docs.gamesparks.net/documentation/request-api/store-request-api/iosbuygoodsrequest "IOSBuyGoodsRequest"):
+You then send the receipt to the GameSparks platform using a [IOSBuyGoodsRequest](/API Documentation/Request API/Store/IOSBuyGoodsRequest.md):
 
 ```
 {
@@ -216,13 +216,13 @@ At which point the player’s profile will have been updated with the newly purc
 
 ### Windows Store
 
-To make purchases using the Windows Store, first you need to set up your Virtual Good in the [Windows Phone Dev Center](http://devcenter.windowsphone.com/).
+To make purchases using the Windows Store, first you need to set up your Virtual Good in the [Windows Phone Dev Center](https://developer.microsoft.com/en-us/).
 
 Now we need to tie the Virtual Good in your game to the product in the Windows Phone Dev Center. We do this in the GameSparks Developer Portal. Go to *Overview > Virtual Goods* and edit your Virtual Good. Insert into the *WP8 Product ID* field, the Product ID you gave your product within the Windows Phone Dev Center.
 
 After a purchase is made, get hold of the receipt as described in [Use a receipt as proof of purchase on a server](http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj206950.aspx#BKMK_CodeSamples).
 
-You then send the receipt to the GameSparks platform using a [WindowsBuyGoodsRequest](https://docs.gamesparks.net/documentation/request-api/store-request-api/windowsbuygoodsrequest "WindowsBuyGoodsRequest"):
+You then send the receipt to the GameSparks platform using a [WindowsBuyGoodsRequest](/API Documentation/Request API/Store/WindowsBuyGoodsRequest.md):
 
 ```
 {

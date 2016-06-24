@@ -42,7 +42,7 @@ In the Test Harness, once you've made a GetUploadUrlRequest, you should see the 
 
 ![](img/Binary/1.png)
 
-Being an HTTP POST, this is not done through the WebSocket, but once complete the authenticated WebSocket that was used to request the upload URL will receive an [UploadCompleteMessage](https://docs.gamesparks.net/documentation/message-api/misc-message-api/uploadcompletemessage) indicating that the upload was successful.
+Being an HTTP POST, this is not done through the WebSocket, but once complete the authenticated WebSocket that was used to request the upload URL will receive an [UploadCompleteMessage](/API Documentation/Message API/Misc/UploadCompleteMessage.md) indicating that the upload was successful.
 
 ```
 {

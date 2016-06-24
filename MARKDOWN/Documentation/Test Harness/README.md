@@ -16,9 +16,9 @@ There are several sections in the Test Harness:
   * *JSON* \- enter your JSON request text here.  Send your request using the play icon {playIcon}.  Save a request using the disk icon. Record a scenario (a sequence of requests) using the microphone icon. Use the calendar ![](/img/fa/calendar.png) icon to easily populate any date fields with the JSON request that you wish to send.
   * *Inspector* \- shows sent requests (in green), received responses (in blue) and asynchronous message received (in orange).
   * *Stage selector menu* \- the drop down menu in the top left of the screen allows you to select whether you are connecting to the preview or live stage of you game.
-  * *Debugger* \- Allows debugging the Cloud Code attached to your requests. Tutorial can be found [here](/Documentation/Test Harness/Debugger.md).
+  * *Debugger* \- Allow you to debug your Cloud Code which is attached to your requests. Click [here](/Documentation/Test Harness/Debugger.md) to go to the GameSparks Debugger tutorial.
 
-<q>**Note:** If you have selected an event which has Cloud Code attached to it, the Debugger will automatically appear only when you run the event!</q>
+<q>**Seeing Debugger!** The Debugger is not always in view. If you have selected an event which has Cloud Code attached to it, the Debugger will automatically appear but only when you run the event.</q>
 
 When you first access the Test Harness page within the Developer Portal it will establish a session with the GameSparks platform and you will see a session id in the *Connection* section.  At this point the Test Harness is connected to GameSparks but no player is currently authenticated within this session.  The initial connection handshaking methods are shown in the *Inspector* section.
 

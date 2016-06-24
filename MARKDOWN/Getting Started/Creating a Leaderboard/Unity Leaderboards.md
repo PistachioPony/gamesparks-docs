@@ -45,14 +45,15 @@ Now you are ready to send some scores to your Leaderboard, but before you go i
 
 ### Getting the Leaderboard Data
 
-You can also check your Leaderboard data entries from the test harness using the *LeaderboardDataRequest*. You can find this in the *Leaderboards* tab on your *Test Harness*. This request gives you a lot of control over the entries it will return, however you are only concerned with the leaderboard *Short Code*, and the *entry count* (the number of entries this request will return). You can check out more information about this request [here](https://api.gamesparks.net/#leaderboarddatarequest). When you send the request you will see the list of Leaderboard entries returned on the inspector on the right.Now you are ready to start sending and receiving Leaderboard data in Unity.
+You can also check your Leaderboard data entries from the test harness using the *LeaderboardDataRequest*. You can find this in the *Leaderboards* tab on your *Test Harness*. This request gives you a lot of control over the entries it will return, however you are only concerned with the leaderboard *Short Code*, and the *entry count* (the number of entries this request will return). You can check out more information about this request [here](/API Documentation/Request API/Leaderboards/LeaderboardDataRequest.md). When you send the request you will see the list of Leaderboard entries returned on the inspector on the right.Now you are ready to start sending and receiving Leaderboard data in Unity.
+
 
 ![l](img/UT/4.png)
 
 ### Getting the Leaderboard Data in Unity
 
 
-You have already seen how to send a logEventRequest, in Unity, in the previous tutorial on Cloud Code. You can check out [here](/Getting Started/Using Cloud Code/Unreal Cloud Code.md). The code is as follows:
+You have already seen how to send a logEventRequest, in Unity, in the previous tutorial on Cloud Code, which you can check out [here](/Getting Started/Using Cloud Code/Unreal Cloud Code.md). The code is as follows:
 
 ```
 new GameSparks.Api.Requests.LogEventRequest().SetEventKey("SUBMIT_SCORE").SetEventAttribute("SCORE", "1234").Send((response) => {
@@ -82,7 +83,7 @@ new GameSparks.Api.Requests.LeaderboardDataRequest().SetLeaderboardShortCode("HI
 });
 ```
 
-The important thing here is to get the information back out of the Leaderboard Data. *response.Data* contains a collection of Leaderboard data you can iterate through and  get the entry details back. *LeaderboardData* has a lot of information you can access, and you can check out more information about it [here](https://api.gamesparks.net/#leaderboarddata). Now, running the Request will print out the details of each of the Leaderboard entries in the console.
+The important thing here is to get the information back out of the Leaderboard Data. *response.Data* contains a collection of Leaderboard data you can iterate through and  get the entry details back. *LeaderboardData* has a lot of information you can access, and you can check out more information about it [here](/API Documentation/Request API/Leaderboards/LeaderboardDataRequest.md). Now, running the Request will print out the details of each of the Leaderboard entries in the console.
 
 
 ![l](img/UT/5.png)

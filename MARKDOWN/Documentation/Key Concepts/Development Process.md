@@ -10,7 +10,7 @@ The GameSparks platform follows best practice in content management processes an
 
 When you initially create your game within the platform it is in a *preview* state. This means the game is not yet available to the public and is accessed via a private url. Load is restricted to 100 concurrent connections by default (this number can be increased on request).
 
-**You should not launch your game while the client is using the preview servers as players devices will not be able to connect once concurrency limits are reached!**
+<q>**Note:** You should not launch your game while the client is using the preview servers as players devices will not be able to connect once concurrency limits are reached!</q>
 
 At any point during development you may want to create a version of the configuration that you can either publish or save. To do this you take a *snapshot*. When you take a snapshot the platform will record all of your configuration (including all metadata collections and their content) into a configuration set.
 

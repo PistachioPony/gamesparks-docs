@@ -52,7 +52,7 @@ A Match is built upon the different types of range criteria for the common attri
   **Example:** The first Period in the screenshot above will only match two Players who have a skill level between the values of 19 and 21.
 * *Relative* \- Find a match between two Players where their values are no wider apart than the specified minimum and maximum values.
 
-  **Example:** If Player 1 submits a [MatchmakingRequest](https://api.gamesparks.net/?jsonsdk#matchmakingrequest) with a skill level of X, Player 1 will only be matched to another Player who has a skill level 3 greater than or 3 less than X.
+  **Example:** If Player 1 submits a [MatchmakingRequest](/API Documentation/Request API/Multiplayer/MatchmakingRequest.md) with a skill level of X, Player 1 will only be matched to another Player who has a skill level 3 greater than or 3 less than X.
 * *Percentage* \- Similar to Relative, find a match between Players where their values are no wider apart than the specified minimum and maximum percentage values.
 
   **Example:** If Player 1 submits a *MatchmakingRequest* with a skill level of X, Player 1 will only be matched to another Player who has a skill level between 25 percent less than and 50 percent greater than X.
@@ -88,7 +88,7 @@ If Players *1*, *2*, and *3* had skills of *20*, *15*, and *16* respectively, an
 
 ## Multiplayer Matching
 
-To match multiple Players, we will use the [*MatchmakingRequest*](https://docs.gamesparks.net/documentation/request-api/challenges-request-api/matchmakingrequest) in the *Test Harness*.  
+To match multiple Players, we will use the [MatchmakingRequest](/API Documentation/Request API/Multiplayer/MatchmakingRequest.md) in the *Test Harness*.  
 
 *5.* In the *Test Harness*, authenticate 4 Players (in separate browser tabs) and have them each submit a *MatchmakingRequest* within 10 seconds so that all Players can attempt to match each other in their first threshold period.
 
@@ -154,7 +154,7 @@ Player 3 *MatchUpdatedMessage:*
 }
 ```
 
-Around 10 seconds later, Player *4* will also be added to the Match, who will be matched based on his skill value falling within the *second* (Relative) threshold period.  As each Player is added to the Match, both them and the existing Players on the Match receive a [*MatchUpdatedMessage*](https://api.gamesparks.net/?jsonsdk#matchupdatedmessage).
+Around 10 seconds later, Player *4* will also be added to the Match, who will be matched based on his skill value falling within the *second* (Relative) threshold period.  As each Player is added to the Match, both them and the existing Players on the Match receive a [MatchUpdatedMessage](/API Documentation/Message API/Multiplayer/MatchUpdatedMessage.md).
 
 Player 3 *MatchUpdatedMessage:*
 
@@ -187,7 +187,7 @@ Player 3 *MatchUpdatedMessage:*
 }
 ```
 
-Finally, Player *1* will be added to the Match, who is matched based on his skill value falling within the *third* (Percent) threshold period.  This will result in a *[MatchFoundMessage](https://api.gamesparks.net/?jsonsdk#matchfoundmessage).*
+Finally, Player *1* will be added to the Match, who is matched based on his skill value falling within the *third* (Percent) threshold period.  This will result in a [MatchFoundMessage](/API Documentation/Message API/Multiplayer/MatchFoundMessage.md).
 
 ```
 {
@@ -227,7 +227,7 @@ Finally, Player *1* will be added to the Match, who is matched based on his skil
 }
 ```
 
-*6.* Repeat *Step 5*, but instead, change the skill value for Player *1* to be *15*. As Players *2, 3* and *4* are added to the Match, the average skill value in the Match increases and Player *1's* skill value will be too far away from the average value in the Match, even during the *third* (Percent) threshold period to match them.  A [*MatchNotFoundMessage*](https://api.gamesparks.net/?jsonsdk#matchnotfoundmessage) message will be returned to all Players requesting a Match, including those already in the Match:
+*6.* Repeat *Step 5*, but instead, change the skill value for Player *1* to be *15*. As Players *2, 3* and *4* are added to the Match, the average skill value in the Match increases and Player *1's* skill value will be too far away from the average value in the Match, even during the *third* (Percent) threshold period to match them.  A [MatchNotFoundMessage](/API Documentation/Message API/Multiplayer/MatchNotFoundMessage.md) message will be returned to all Players requesting a Match, including those already in the Match:
 
 ```
 {
@@ -241,7 +241,7 @@ Finally, Player *1* will be added to the Match, who is matched based on his skil
 }
 ```
 
-As a result, no Match will be created. The Match we created earlier can be viewed using the [*MatchDetailsRequest*](https://api.gamesparks.net/?jsonsdk#matchdetailsrequest). 
+As a result, no Match will be created. The Match we created earlier can be viewed using the [MatchDetailsRequest](/API Documentation/Request API/Multiplayer/MatchDetailsRequest.md). 
 
 Here is the request submitted by Player *4*:
 

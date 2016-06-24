@@ -13,7 +13,7 @@ Sometimes it's not enough to have just a Preview and LIVE environment, and you m
 
 ![](img/MultiStage/2.png)
 
-<q>**Note**: Each version of the game can have unique permissions added, to it.  This will allow or prevent team members from editing the content in the games configuration for a particular stage within our life cycle.  You can read more on permissions [here](/Documentation/Configurator/Capabilities.md).</q>
+<q>**Note**: Each version of the game can have unique permissions added, to it.  This will allow or prevent team members from editing the content in the games configuration for a particular stage within our life cycle.  You can read more on permissions [here](/Tutorials/Capabilities/README.md).</q>
 
 *2.*  Once your development stage is complete and you are ready for the testing stage, you can then create a new Snapshot within the *DEV* game that will be copied into the *TEST* game for testing.
 

@@ -460,9 +460,7 @@ using System.Linq;
 
 In order to test that you have successful made a match, you will have to be able run 4 instances of the game on your desktop. You can try this on 4 separate devices of course, but it will take time to deploy new builds to each device.
 
-For a windows machine it is not difficult to run multiple instances. However, on a mac you will have to run each instance from the terminal. There is an account of how to do this available here. It is not a difficult process so don't worry.
-
-**<< ADD CORRECT LINK for "here"! >>**
+For a windows machine it is not difficult to run multiple instances. However, on a mac you will have to run each instance from the terminal. There is an account of how to do this available [here](http://osxdaily.com/2011/05/11/multiple-instances-application-mac/). It is not a difficult process so don't worry.
 
 We suggest that you run one instance as the editor, and 3 separate instances. This presents a problem, however, because the default behaviour for the Unity editor is to disconnect web-sockets when the app is not in focus. Because you will have to go from window-to-window logging in and searching for the match, this will disconnect successive instances from GameSparks when they are not in focus and the match will therefore fail. To prevent this, you can set the app to 'run In Background' in the player settings.
 

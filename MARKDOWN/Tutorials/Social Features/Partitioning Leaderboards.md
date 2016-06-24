@@ -20,13 +20,13 @@ Now we have the event configured, we can create the leaderboard to consume the e
 
 ![](img/Partition/2.jpg)
 
-Note. We've set the Group value of Country to PARTITION, this option is available for attributes that are grouped in the running total, and tells the platform to create a new leaderboard each time it gets a new value for this field.
+<q>**Note:** We've set the Group value of Country to PARTITION, this option is available for attributes that are grouped in the running total, and tells the platform to create a new leaderboard each time it gets a new value for this field.</q>
 
 Each leaderboard partition has it's own short code that will use the format HSBC.<PARTITION_CODE>.<PARTITION_VALUE>. For example, If you posted UK in as the country code, the leaderboard that would be created would HSBC.COUNTRY.UK.
 
-You can have multiple partitions for each leaderboard, in which case the short code of the resulting leaderboard would be:
+You can have multiple partitions for each leaderboard, in which case the format for short codes of the resulting leaderboards would be:
 
-HSBC.<PARTITION_1_CODE>.<PARTITION_1_VALUE>.<PARTITION_2_CODE>.<PARTITION_2_VALUE>
+HSBC.<< PARTITION_1_CODE >>.<< PARTITION_1_VALUE >>.<< PARTITION_2_CODE >>.<< PARTITION_2_VALUE >>...and so on.
 
 ## Testing the Configuration.
 
@@ -67,7 +67,7 @@ This will automatically create the UK leaderboard and you'll receive a NewHighSc
     }
 ```
 
-You'll see the leaderborrdShortCode value is set to "HSBC.COUNTRY.UK" Sending a second request with a different country will create a new leaderboard but will not affect the UK one.
+You'll see the leaderboardShortCode value is set to "HSBC.COUNTRY.UK" Sending a second request with a different country will create a new leaderboard but will not affect the UK one.
 
 ```    
     {
@@ -105,7 +105,9 @@ The resulting NewHighScoreMessage is as follows:
     }
 ```
 
-Again, you'll see a new leaderboard has been created with the shortcode "HSBC.COUNTRY.US" and the new score has been added to that. To validate the UK leaderboard has not been updated you can make the following LeaderboardDataRequest.
+Again, you'll see a new leaderboard has been created with the shortcode "HSBC.COUNTRY.US" and the new score has been added to that.
+
+To validate that the UK leaderboard has not been updated you can make the following LeaderboardDataRequest.
 
 ```    
     {

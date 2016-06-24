@@ -25,7 +25,7 @@ Message listeners/handlers allow you to receive notifications and callbacks for:
 * Team rank changed.
 * Upload complete message.
 
-For more information about each message and the parameters they include click [here.](https://api.gamesparks.net/?csharpsdk#messages)
+For more information about each message and the parameters they include click [here.](/API Documentation/Message API/Player/AchievementEarnedMessage.md)
 
 ## General setup
 

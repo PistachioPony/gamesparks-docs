@@ -25,7 +25,7 @@ First you will need to navigate to the Events page in your Configurator. Next, 
   * **Attribute Name** - This field is referenced in Test Harness and Leaderboards.
   * **Attribute Short Code** - This is the reference we'll be using to pass in an attribute into the Event.
   * **Data Type** - The type of data being passed in. E.g. String, Number, JSON.
-  * **Default Value** - This would be the default value that would be used for this Event attribute if it's not passed into the [logEventRequest](/API Documentation/Request API/Player/LogEventRequest.md).
+  * **Default Value** - This would be the default value that would be used for this Event attribute if it's not passed into the [LogEventRequest](/API Documentation/Request API/Player/LogEventRequest.md).
   * **Default Calculation** - This determines how values are tracked in the Running Totals.
 
 <q>**Note:** You do not need to understand the concept of Running Totals for this tutorial, just set it to Maximum because we want to track the highest score posted for your player. (To learn more about running totals, see [this](/Documentation/Test Harness/README.md) tutorial)</q>
@@ -51,7 +51,7 @@ When you've created your Leaderboard, navigate to the Test Harness. At this poi
 
 ![](img/CreatingALeaderboard/3.png)
 
-*Re-authenticate* using your *first* player. The authentication tutorial used username: *gs_player *and password: *gs_password*. Once this is completed, you will need to click on [logEventRequest](/API Documentation/Request API/Player/LogEventRequest.md) and select the Event you have created previously. In the JSON builder, change the Score attribute of the Event to *1* and click Play. This will log an Event, and since the Event is attached to a Leaderboard, it will post a score into that Leaderboard. The player will then receive a [NewHighScoreMessage](/API Documentation/Message API/Leaderboards/NewHighScoreMessage.md) indicating that their score has been updated in the Leaderboard. Repeat this process for the *second* player, but this time entering a score of *2*:
+*Re-authenticate* using your *first* player. The authentication tutorial used username: *gs_player *and password: *gs_password*. Once this is completed, you will need to click on [LogEventRequest](/API Documentation/Request API/Player/LogEventRequest.md) and select the Event you have created previously. In the JSON builder, change the Score attribute of the Event to *1* and click Play. This will log an Event, and since the Event is attached to a Leaderboard, it will post a score into that Leaderboard. The player will then receive a [NewHighScoreMessage](/API Documentation/Message API/Leaderboards/NewHighScoreMessage.md) indicating that their score has been updated in the Leaderboard. Repeat this process for the *second* player, but this time entering a score of *2*:
 
 ![](img/CreatingALeaderboard/4.png)
 

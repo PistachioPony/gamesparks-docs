@@ -10,7 +10,7 @@ From the NoSQL tab you have the ability to interact with the data stored on the
 
 You can select the database you wish to look at from the drop down in the top left of the page (as highlighed above). For any given game there will be a PREVIEW listing in this list, along with an optional LIVE listing if your game is in the published state.
 
-## Collection drop down menu filtering
+## Collection Drop Down Menu Filtering
 
 Each actions tab has a drop down menu containing the list of collections that are available in your database. The collection filter switches allow you to turn sections of the drop down menu on and off to make the list more manageable.
 

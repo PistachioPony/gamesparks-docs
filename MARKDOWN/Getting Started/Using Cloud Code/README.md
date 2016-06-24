@@ -64,7 +64,7 @@ Now you'll want to Call the Set Position Event to set the X, Y and Z coordinates
 
 ![](img/UsingCloudCode/8.png)
 
-You can now validate that the POS has been set in the players Script Data by Calling an [AccountDetailsRequest](/Getting Started/Using Cloud Code/README.md).
+You can now validate that the POS has been set in the players Script Data by Calling an [AccountDetailsRequest](/API Documentation/Request API/Player/AccountDetailsRequest.md).
 
 ![](img/UsingCloudCode/9.png)
 

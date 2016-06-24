@@ -10,11 +10,11 @@ GameSparksRT is a low latency socket server designed specifically for realtime g
  This service is currently in trial with selected customers.  If you would like to take part in the trial please contact info@gamesparks.com and we'll add you to the waiting list.
   The current trial focuses on Unity and the RT SDK operates with near zero memory allocation.  SDKs are in the process of being built for other engines. The process to get up and running is as follows:
 
-## Set up matchmaking rules
+## Set up Matchmaking Rules
 
 [See here](/Tutorials/Multiplayer/Matching Players.md) for a document that describes the process for setting up matchmaking rules on the platform.
 
-## Connect to the realtime servers
+## Connect to the Realtime Servers
 
 Using FindMatchRequest
 
@@ -53,7 +53,7 @@ Using MatchFoundMessage
 
     });
 ```
-## Send realtime data
+## Send Realtime Data
 
 Sending data to the other players in the session is performed using the SendData method on GameSparksRTUnity.Instance
 
@@ -99,7 +99,7 @@ To reduce GC overhead, RTData objects are pooled and implement IDisposable. When
     }
 ```
 
-## Receive realtime data
+## Receive Realtime Data
 
 When you configured the session manager in step 4 you provided a callback that should be called when a packet is received. The Packet struct has the following definition:
 

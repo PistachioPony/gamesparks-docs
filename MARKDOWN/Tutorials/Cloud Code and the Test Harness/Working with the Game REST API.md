@@ -19,7 +19,7 @@ The configuration for a game can be retrieved using the following URL:
 
 ### Example Request
 
-*GET: https://portal.gamesparks.net/rest/games/161bhegV3Qde*
+*GET: https ://portal.gamesparks.net/rest/games/161bhegV3Qde*
 
 ### Example Response
 
@@ -420,7 +420,7 @@ Contains Virtual Good configuration data.  Virtual Goods can represent either a
 
 ### Example Request
 
-*POST: https://portal.gamesparks.net/rest/games*
+*POST: https ://portal.gamesparks.net/rest/games*
 
 ```
 {

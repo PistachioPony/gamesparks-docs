@@ -3,11 +3,11 @@ nav_sort: 8
 src: /Tutorials/Authentication and Player Profile/Twitch Authentication.md
 ---
 
-# How to authenticate a player using their Twitch account
+# How to Authenticate a Player Using their Twitch Account
 
 Twitch authentication allows you to provide your players with a simple way to sign in with their Twitch account, and allows the GameSparks platform to then use the player’s profile to drive its social features. In this exercise you’ll go through setting up the necessary configuration with Twitch and how you can then use that to connect your players.
 
-## Setting up a Twitch application
+## Setting up a Twitch Application
 
 Go to [Twitch Connections](http://www.twitch.tv/settings/connections) and sign in. Now click the *Register your application* link at the bottom of the page.
 
@@ -25,7 +25,7 @@ You will need the highlighted details for obtaining an access token from Twitch,
 
 For more details about the authentication flow, you can refer to the [Twitch documentation](https://github.com/justintv/Twitch-API/blob/master/authentication.md).
 
-## Configuring your GameSparks game
+## Configuring your GameSparks Game
 
 The only configuration you will need to make in the GameSparks portal is whether to save the player's Twitch access token or not. By default, the access token is saved.
 

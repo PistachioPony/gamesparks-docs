@@ -11,7 +11,7 @@ The Cloud Code section of the Configurator lists all the potential interception 
 
 To access the JavaScript editor select the name of the script from one of the eight drop down menus in the Bindings section.  Use the Delete, Close and Save buttons at the bottom of the editor to manage your scripts.
 
-*Note*: You can also save your scripts using standard key press combinations, CMD+S on OSX and CTRL+S on Windows and Linux.
+<q>**Note:** You can also save your scripts using standard key press combinations, CMD+S on OSX and CTRL+S on Windows and Linux.</q>
 
 ![](img/CloudCode/2.jpg)
 

@@ -9,13 +9,13 @@ Google+ authentication allows you to provide your players with a simple way to s
 
 ## Setting up an application with Google
 
-*1.*  Head over to the *[Google Developer Console](https://console.developers.google.com)* and sign in if you already have an account.  Sign up if you don't.
+*1.*  Head over to the [Google Developer Console](https://console.developers.google.com) and sign in if you already have an account.  Sign up if you don't.
 
-*2.  *Go to *[ Google Play Game Services](https://developers.google.com/games/services/)*.  Follow the relevant "_Getting Started_" section based on the application type that you are creating by navigating to [Set up Play Games Services](https://developers.google.com/games/services/console/enabling).  The most important step to understand is the "_Add your game to the Google Play Developer Console_".
+*2.* Go to [ Google Play Game Services](https://developers.google.com/games/services/).  Follow the relevant "_Getting Started_" section based on the application type that you are creating by navigating to [Set up Play Games Services](https://developers.google.com/games/services/console/enabling).  The most important step to understand is the "_Add your game to the Google Play Developer Console_".
 
-*TIP:*  If you've got time, it's worth a read.  There is a wealth of information hidden away in these pages). If you're targeting more than one platform (Android, IOS, Web etc...), just pick one to start with - a chunk of the setup will only need to be done once.
+<q>**TIP!**  If you've got time, it's worth a read.  There is a wealth of information hidden away in these pages! If you're targeting more than one platform (Android, IOS, Web, and so on...), just pick one to start with - a chunk of the setup will only need to be done once.</q>
 
-*3.  *While setting up your application in the *Google Play Developer Console*, also add a "Web" linked application.  This will serve as our "Server" client in later steps. It's important that this be created through the [Google *Play* Developer Console](https://play.google.com/apps/publish/) (rather than the standard Google *Developer* Console), otherwise when we try to get a token later it will fail to work correctly.
+*3.* While setting up your application in the *Google Play Developer Console*, also add a "Web" linked application.  This will serve as our "Server" client in later steps. It's important that this be created through the [Google *Play* Developer Console](https://play.google.com/apps/publish/) (rather than the standard Google *Developer* Console), otherwise when we try to get a token later it will fail to work correctly.
 
 ![](img/AuthGoogle/1.png)  
 
