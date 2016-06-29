@@ -36,7 +36,3 @@ Our real-time services provide a network communication layer which has the abili
 * [Multiplayer Game Example](/Tutorials/Real-Time Services/Real-Time Game Example.md) - To demonstrate the real-time services, this tutorial shows you how to create a very simple multiplayer game. This example will have networked objects moving around, firing projectiles, and sending and receiving information between each player to update each other’s game-objects.
 
 * [Clock Synchronization and Network Programming](/Tutorials/Real-Time Services/Clock Synchronization and Network Programming.md) - This tutorial explores further key concepts in multiplayer network programming, such as clock-synchronization and packet analytics
-
-**<< Each tutorial will have an accompanying video tutorial you can follow along with, as well as downloadable examples of the finished project at the end of the tutorial. >>**
-
-**<< ARE WE PLANNING TO DELIVER THESE VIDEOS? >>**

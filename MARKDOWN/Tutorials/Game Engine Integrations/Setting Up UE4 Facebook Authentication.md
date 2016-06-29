@@ -232,7 +232,7 @@ To get the Facebook authentication to work for Blueprint:
 
 We have attached uassets which show an example of this working with a UMG Widget interface.
 
-[![](img/UE4FB/4.jpg)
+![](img/UE4FB/4.jpg)
 
 ## TODO
 DefaultEngine Config file,

@@ -7,7 +7,7 @@ src: /Documentation/Configurator/Analytics.md
 
 GameSparks provides several components of the analytics stack needed to operate a game as a service:
 
-  1. The backend, i.e. the NoSQL database (see [NoSQL Explorer](/API Documentation/NoSQL REST API.md) in this Manual for details).
+  1. The backend, that is, the NoSQL database. (see [NoSQL Explorer](/API Documentation/NoSQL REST API.md) in this Manual for details).
   2. The events library, with the ability to record any custom event (see [Events](/Documentation/Configurator/Events.md) in this Manual for details).
   3. The analytics user interface in the developer portal that cover common games reporting requirements, which should be sufficient for most indie developers.
   4. Export to third party front end tools (such as Tableau or Qlikview) or direct ad hoc querying of the NoSQL database for detailed analysis.
