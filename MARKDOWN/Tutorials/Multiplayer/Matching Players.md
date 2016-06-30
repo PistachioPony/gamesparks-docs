@@ -9,7 +9,7 @@ In this tutorial, we'll create a Match configuration with customised Thresholds 
 
 We'll also see how:
 * Drop In/Drop Out can be enabled for a Match and have matching players added to or removed from the Match after the Match is first made.
-* Manual Matching can be used, allowing you to use a custom mechanism for completing a Match from the list of matching players the portal returns for the matching criteria.
+* Manual Matching can be enabled, allowing you to use a custom mechanism for completing a Match from the list of matching players the portal returns for the matching criteria.
 
 ## Creating a Match
 
@@ -23,36 +23,36 @@ We'll also see how:
 
 ![](img/HowToMatchPlayers/4.png)
 
-The *Create Form* contains the following fields:
+The *Create Match* form contains the following fields:
 
 * *Short Code* \- Enter an identifier for the Match.
 * *Name* \- Enter a name for the Match.
 * *Description* \- Enter a description of the Match.
 * *Min. Players* \- The minimum number of Players for the Match.
 * *Max. Players* \- The maximum number of Players for the Match.
-* *RealTime* \- Select for a Real-Time Match.
-  * *Realtime Script* \- If Real-Time, select a script which will be run on the Real-Time server.
+* *RealTime* \- Select for a Real-Time Match:
+  * *Realtime Script* \- Select a script which will be run on the Real-Time server for the Real-Time Match.
 * *Drop In/Drop Out* \- Select for a Drop In/Drop Out Match.
-  * *Player disconnect delay in seconds* \- The number of seconds after a match is found before a player in the match who disconnects is removed from the match. If you don't enter a value or enter zero, the player is removed instantly on disconnection.
-  * *Expire in seconds* \- The number of seconds after a match is made that players can drop in or drop out. If you don't enter a value or enter zero, the drop in/drop out period for the match doesn't expire.
+  * *Player disconnect delay in seconds* \- The number of seconds after a Match is found before a player in the Match who disconnects is removed from the Match. If you don't enter a value or enter zero, the player is removed instantly on disconnection.
+  * *Expire in seconds* \- The number of seconds after a Match is made that players can drop in or drop out. If you don't enter a value or enter zero, the drop in/drop out period for the Match doesn't expire.
 
-*3.* In the *Create Match* form, specify the *Short Code*, *Name* and *Description* of your Match and select the ![](/img/fa/plus.png) icon to create the desired number of thresholds you want to use in the Match.
+*3.* In the *Create Match* form, specify the *Short Code*, *Name* and *Description* of your Match and select the ![](/img/fa/plus.png) icon to create the Thresholds you want to use in the Match.
 
 
 ![](img/HowToMatchPlayers/5.png)  
 
 In this example:
-* We've added 3 Thresholds to determine player matching: *Absolute*, *Relative*, and *Percent*. (See *Working with Thresholds* below for how to use these different types of Threshold in a Match.)
-* We've specified a minimum of 2 and maximum of 4 players for the match, which means this will be a *multiplayer Match*:
+* We've added 3 Thresholds to determine player matching: *Absolute*, *Relative*, and *Percent*. (See below: *Working with Thresholds* for how to use these different types of Threshold in a Match.)
+* We've specified a minimum of 2 and maximum of 4 players for the Match, which means this will be a *multiplayer Match*:
   * Multiplayer matching is based on synchronous messages that match players based on similar skill attributes, continuously adding players to the Match and updating those already in the Match until the specified maximum number of Players has been reached, similar to the way a Challenge works.
 * We haven't selected *Accept Min. Players* for any of the Thresholds. This means that a Match will be found, only when 4 players meet the matching criteria that the Thresholds define.
 
-<q>**Note:** You cannot set the minimum number players for a match to be fewer that 2. If you set the maximum number of players also at 2, then this is a Head-to-Head match.</q>
+<q>**Note:** You cannot set the minimum number players for a Match to be fewer that 2. If you set the maximum number of players also at 2, then this is a Head-to-Head Match.</q>
 
 In this example, we haven't:
-* Selected for a Real-Time match and no Realtime script will be executed on the Real-Time server when a Real-Time session starts. You can learn more about Real-Time services [here](/Tutorials/Real-Time Services/README.md).
-* Selected for a Drop In/Drop Out match. (See *Using Drop In/Drop Out* below for more on how to use this feature for a Match.)
-* Selected to Manually match players. (See *Manual Matching* below for more on how to use this feature for a Match.)
+* Selected for a Real-Time Match and no Realtime script will be executed on the Real-Time server when a Real-Time session starts. You can learn more about Real-Time services [here](/Tutorials/Real-Time Services/README.md).
+* Selected for a Drop In/Drop Out Match. (See below: *Using Drop In/Drop Out* for more on how to use this feature for a Match.)
+* Selected to Manually match players. (See below: *Manual Matching* for more on how to use this feature for a Match.)
  
 
 *4.* Click to save the Match. The *Create Match* form closes and your Match is added to the *Matches* list under *Multiplayer*:
@@ -62,11 +62,11 @@ In this example, we haven't:
 ## Working with Thresholds
 
 You can use the Thresholds that you add to a Match configuration to define the criteria that determine player matching. For each Threshold you can define:
-* **Match Type.** You can choose from three match types for a Threshold and impose a different degree of precision to the matching process using these types.
-* **Period.** Set a period to control how long you want the matching process to continue trying to find a match using a Threshold.
+* **Match Type.** You can choose from three Match types for a Threshold and impose a different degree of precision to the matching process using these types.
+* **Period.** Set a period to control how long you want the matching process to continue trying to find a Match using a Threshold.
 * **Accept Minimum Players.** Match all players found so far after that selected threshold period is complete and that satisfy its matching criteria, but only if the number of players found is more than or equal to the value entered in the *Min. Players* field.
 
-Here, we'll use the Thresholds we defined for our example Match configuration to explain Match types, accepting the minimum number of players, and periods:
+Here, we'll use the Thresholds we defined for our example Match configuration to explain Match types, Match periods, and accepting the minimum number of players for a Threshold:
 
 ![](img/HowToMatchPlayers/7.png)  
 
@@ -91,7 +91,7 @@ We can specify how long we want to look for a Match Type before giving up. This 
 
 We can create multiple Threshold periods during one Match and, in those Periods of time, we can specify different Types on which we should match Players. In the examples above, we have 3 Thresholds, all with different Periods of time (in seconds). Once the *MatchmakingRequest* is executed, if the first Period does not find a suitable match, the following periods will continue subsequently to try to find a match until their duration has expired. By having a combination of longer and shorter Periods, we can fine-tune our Match criteria to be stricter or more relaxed, whilst the time duration of the Match progresses.
 
-In the match example shown the screenshot above, the first Threshold will try to find a match based on an *Absolute* Match Type for *10* seconds. The second and third Thresholds will try to find a *Relative* match for *20* seconds and a *Percentage* match for *30* seconds respectively, before the Match ends.
+In the above example and before the Match ends, the first Threshold will try to find a match based on an *Absolute* Match Type for *10* seconds, the second Threshold will try to find a *Relative* match for *20* seconds, and the third Threshold will try to find a *Percentage* match for *30* seconds.
 
 ### Accept Minimum Players
 
@@ -103,13 +103,13 @@ Selecting this for a particular threshold instructs the Match to match all the P
 
 ### Multiplayer Matching Examples
 
-Using the three <b>Thresholds</b> in the above *MULTI_MCH* example above and for a 3-player context, here are some example scenarios to demonstrate just how the matching process works:
+Using the three Thresholds in the above *MULTI_MCH* example above and for a 3-player context, here are some example scenarios to demonstrate just how the matching process works:
 
 * **Scenario 1.** Players *1*, *2*, and *3* have skills of *20*, *15*, and *17* respectively. Each player submits a *MatchmakingRequest* in that order and each player's request is issued within player *1's* first Threshold period of 10 seconds. Players *1* and *3* would be matched based on the second Threshold which uses the Relative Match Type.
 
 * **Scenario 2.** Players *1*, *2*, and *3* have skills of *20*, *15*, and *16* respectively. Each player submits a *MatchmakingRequest* in that order and each player's request is issued within player *1's* first Threshold period of 10 seconds. Players *2* and *3* would be matched based on the second Threshold which uses the Relative Match Type.
 
-* **Scenarios 3.** Players *1*, *2*, and *3* have skills of *20*, *15*, and *16* respectively. Player *1* submits a *MatchmakingRequest*. However, players *2* and *3* submit their requests later and during player *1's* *second* Threshold period of 20 seconds. Players *1* and *3* are matched based on the third Threshold which uses the Percent Match Type.
+* **Scenario 3.** Players *1*, *2*, and *3* have skills of *20*, *15*, and *16* respectively. Player *1* submits a *MatchmakingRequest*. However, players *2* and *3* submit their requests later and during player *1's* *second* Threshold period of 20 seconds. Players *1* and *3* are matched based on the third Threshold which uses the Percent Match Type.
 
 
 
@@ -118,8 +118,6 @@ Using the three <b>Thresholds</b> in the above *MULTI_MCH* example above and for
 To match multiple Players, we will use the [MatchmakingRequest](/API Documentation/Request API/Multiplayer/MatchmakingRequest.md) in the *Test Harness*.  
 
 *5.* In the *Test Harness*, authenticate 4 Players (in separate browser tabs) and have them each submit a *MatchmakingRequest* within 10 seconds so that all Players can attempt to match each other in their first threshold period.
-
-*<< UPDATE! there is extra info with these msgs now! Check out in Test Harness. >>*
 
 Players *1*, *2*, *3* and *4* should have a skill of *16*, *21*, *19* and *22* respectively.
 
@@ -156,8 +154,6 @@ Players *1*, *2*, *3* and *4* should have a skill of *16*, *21*, *19* and *22* r
 }
 ```
 
-The display names used for the 4 players in the following examples are *MTest1*, *MTest2*, *MTest3*, and *MTest4*.
-
 As you will notice, Players *2* and *3* will be matched almost immediately, because their skill values fall within the *first* (Absolute) threshold period.
 
 Player 3 *MatchUpdatedMessage:*
@@ -167,30 +163,31 @@ Player 3 *MatchUpdatedMessage:*
 {
  "@class": ".MatchUpdatedMessage",
  "addedPlayers": [
-  "5773f1ca4ff5440497143fdf"
+  "5774de984ff5440495923b48"
  ],
  "gameId": 358380,
  "matchGroup": "group1",
  "matchShortCode": "MULTI_MCH",
- "messageId": "5773f7254ff544049714cfeb",
+ "messageId": "5774e0b24ff5440495924ad9",
  "notification": true,
  "participants": [
   {
-   "displayName": "MTest2",
+   "displayName": "PLAYER_TWO",
    "externalIds": {},
-   "id": "5773f1ca4ff5440497143fd0",
+   "id": "5774de984ff5440495923b39",
    "online": true
   },
   {
-   "displayName": "MTest3",
+   "displayName": "PLAYER_THREE",
    "externalIds": {},
-   "id": "5773f1ca4ff5440497143fdf",
+   "id": "5774de984ff5440495923b48",
    "online": true
   }
  ],
- "playerId": "5773f1ca4ff5440497143fdf",
+ "playerId": "5774de984ff5440495923b48",
  "summary": "MatchUpdatedMessage"
 }
+
 
 
 ```
@@ -204,109 +201,98 @@ Player 3 *MatchUpdatedMessage:*
 {
  "@class": ".MatchUpdatedMessage",
  "addedPlayers": [
-  "5773f1ca4ff5440497143fef"
+  "5774de984ff5440495923b57"
  ],
  "gameId": 358380,
  "matchGroup": "group1",
  "matchShortCode": "MULTI_MCH",
- "messageId": "5773f72c4ff544049714df8d",
+ "messageId": "5774e0b74ff5440495924b58",
  "notification": true,
  "participants": [
   {
-   "displayName": "MTest2",
+   "displayName": "PLAYER_TWO",
    "externalIds": {},
-   "id": "5773f1ca4ff5440497143fd0",
+   "id": "5774de984ff5440495923b39",
    "online": true
   },
   {
-   "displayName": "MTest3",
+   "displayName": "PLAYER_THREE",
    "externalIds": {},
-   "id": "5773f1ca4ff5440497143fdf",
+   "id": "5774de984ff5440495923b48",
    "online": true
   },
   {
-   "displayName": "MTest4",
+   "displayName": "PLAYER_FOUR",
    "externalIds": {},
-   "id": "5773f1ca4ff5440497143fef",
+   "id": "5774de984ff5440495923b57",
    "online": true
   }
  ],
- "playerId": "5773f1ca4ff5440497143fdf",
+ "playerId": "5774de984ff5440495923b48",
  "summary": "MatchUpdatedMessage"
 }
 
 
 ```
 
+
 Finally, Player *1* will be added to the Match, who is matched based on his skill value falling within the *third* (Percent) threshold period.  This will result in a [MatchFoundMessage](/API Documentation/Message API/Multiplayer/MatchFoundMessage.md).
 
 
 ```
 
+
 {
  "@class": ".MatchFoundMessage",
  "gameId": 358380,
  "matchGroup": "group1",
- "matchId": "5773f7364ff544049714f0d5",
+ "matchId": "5774e0c14ff5440495924c43",
  "matchShortCode": "MULTI_MCH",
- "messageId": "5773f7364ff544049714f0ea",
+ "messageId": "5774e0c24ff5440495924c54",
  "notification": true,
  "participants": [
   {
-   "displayName": "MTest4",
+   "displayName": "PLAYER_ONE",
    "externalIds": {},
-   "id": "5773f1ca4ff5440497143fef",
-   "online": true,
-   "peerId": 4
-  },
-  {
-   "displayName": "MTest3",
-   "externalIds": {},
-   "id": "5773f1ca4ff5440497143fdf",
-   "online": true,
-   "peerId": 3
-  },
-  {
-   "displayName": "MTest1",
-   "externalIds": {},
-   "id": "5773f1c94ff5440497143fc2",
+   "id": "5774de984ff5440495923b2a",
    "online": true,
    "peerId": 1
   },
   {
-   "displayName": "MTest2",
+   "displayName": "PLAYER_FOUR",
    "externalIds": {},
-   "id": "5773f1ca4ff5440497143fd0",
+   "id": "5774de984ff5440495923b57",
+   "online": true,
+   "peerId": 4
+  },
+  {
+   "displayName": "PLAYER_THREE",
+   "externalIds": {},
+   "id": "5774de984ff5440495923b48",
+   "online": true,
+   "peerId": 3
+  },
+  {
+   "displayName": "PLAYER_TWO",
+   "externalIds": {},
+   "id": "5774de984ff5440495923b39",
    "online": true,
    "peerId": 2
   }
  ],
- "playerId": "5773f1ca4ff5440497143fdf",
+ "playerId": "5774de984ff5440495923b48",
  "summary": "MatchFoundMessage"
 }
 
 
-```
 
+
+```
 
 
 *6.* Repeat *Step 5*, but instead, change the skill value for Player *1* to be *15*. As Players *2, 3* and *4* are added to the Match, the average skill value in the Match increases and Player *1's* skill value will be too far away from the average value in the Match, even during the *third* (Percent) threshold period to match them.  A [MatchNotFoundMessage](/API Documentation/Message API/Multiplayer/MatchNotFoundMessage.md) message will be returned to all Players requesting a Match, including those already in the Match:
 
 
-```
-
-
-
-
-
-
-
-```
-
-
-
-
-<< OLD VERSION >>
 
 ```
 {
@@ -374,17 +360,17 @@ This will cancel a *MatchmakingRequest* that has not yet received any Match mess
 
 ## Using Drop In/Drop Out
 
-In this type of match, a Match is made in the normal way but the player list found for the match doesn't remain fixed after the match is made. Players that meet all of the matching criteria can enter or leave the match.
+In this type of Match, a Match is made in the normal way but the player list found for the Match doesn't remain fixed after the Match is made. Players that meet all of the matching criteria can enter or leave the Match.
 
 Two constraints are imposed:
-  * The number of players can change but it cannot exceed the configured maximum number of players for the match.
-  * If all players drop out, then the match is deleted.
+  * The number of players can change but cannot exceed the configured maximum number of players for the Match.
+  * If all players drop out, then the Match is deleted.
 
-<q>**Note:** The specified minimum number of players is imposed for making the match in the first place. However, after the match has been made, player numbers can fall below this initial minimum and the Match will not be ended. This allows more players to drop in again and thus bring the number in the Match back up above the set minimum.</q>
+<q>**Note:** The specified *minimum number of players* is imposed for making the Match in the first place. However, after the Match has been made, player numbers can fall below the minimum and the Match will not be ended. This allows more players to drop in again and thus bring the number in the Match back up above the set minimum.</q>
 
 There are two important settings for this type of Match:
-* *Player disconnect delay in seconds* \- Use this to set the number of seconds after a match is found before a player in the match who disconnects is removed from the match. If you do not enter a value or enter zero, then a player in the match who disconnects is removed instantly.
-* *Expire in seconds* \- Use this to define the number of seconds after a match is made that players can drop in or drop out. If you do not enter a value or enter zero, the drop in/drop out period for the match doesn't expire.
+* *Player disconnect delay in seconds* \- Use this to set the number of seconds after a Match is found before a player in the Match who disconnects is removed from the Match. If you do not enter a value or enter zero, then a player in the Match who disconnects is removed instantly.
+* *Expire in seconds* \- Use this to define the number of seconds after a Match is made that players can drop in or drop out. If you do not enter a value or enter zero, the drop in/drop out period for the Match doesn't expire.
 
 ![](img/HowToMatchPlayers/8.png)
 
@@ -394,8 +380,10 @@ Here, we've edited our earlier multiplayer Match example and enabled Drop In/Dro
 
 ## Manually Matching
 
-You might want the GameSparks portal process all the matching criteria you have built into a Match configuration, produce a list of players that meet those criteria, but not have the portal complete the Match in the normal way. Instead, you want to use your own custom mechanism to complete the Match and based on the player list found for the Match. You can use Manually Matching for this sort of case and you must select to *Manually match players*:
+You might want the GameSparks portal to process all the matching criteria you have built into a Match configuration, produce a list of players that meet those criteria, but not have the portal complete the Match in the normal way. Instead, you want to use your own custom mechanism to complete the Match and based on the player list found for the Match. You can use Manually Matching for this sort of case and you must select to *Manually match players*:
 
 ![](img/HowToMatchPlayers/9.png)
 
-To built a custom completion mechanism for a Match, you will typically use *FindPendingMatchesRequest* and *JoinPendingMatchRequest*.
+To build a custom completion mechanism for a Match, you will typically use *FindPendingMatchesRequest* and *JoinPendingMatchRequest*.
+
+<q>**Possible Availability Lag!** If you use manual matching, an "availabilty lag" might occur and prevent the Match being made. This would happen in cases where the matching process has presented the results for players meeting the matching criteria, but by the time your custom mechanism actually completes the Match one or more of the matched players is no longer available and the Match will not go through.</q>
