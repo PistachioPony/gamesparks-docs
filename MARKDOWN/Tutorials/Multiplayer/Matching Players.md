@@ -35,6 +35,8 @@ The *Create Match* form contains the following fields:
 * *Drop In/Drop Out* \- Select for a Drop In/Drop Out Match.
   * *Player disconnect delay in seconds* \- The number of seconds after a Match is found before a player in the Match who disconnects is removed from the Match. If you don't enter a value or enter zero, the player is removed instantly on disconnection.
   * *Expire in seconds* \- The number of seconds after a Match is made that players can drop in or drop out. If you don't enter a value or enter zero, the drop in/drop out period for the Match doesn't expire.
+* *Manually match players* \- For custom completion of the matching process. Select this if you do not want the Match to complete automatically when all matching criteria have been met, but want to use your own custom mechanism to complete the Match. The platform will find players for you, but you control the choice of which players are put in the Match.
+
 
 *3.* In the *Create Match* form, specify the *Short Code*, *Name* and *Description* of your Match and select the ![](/img/fa/plus.png) icon to create the Thresholds you want to use in the Match.
 
