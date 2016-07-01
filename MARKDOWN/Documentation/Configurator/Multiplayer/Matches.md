@@ -5,9 +5,9 @@ src: /Documentation/Configurator/Multiplayer/Matches.md
 
 # Matches
 
-Matchmaking allows players to be matched in real-time based on common attributes they share within a game. Using entirely customised threshold criteria and time-based rounds of matching, players can be strictly or loosely matched with an unlimited level of precision.
+Matchmaking allows players to be matched based on common attributes they share within a game. Using entirely customised threshold criteria and time-based rounds of matching, players can be strictly or loosely matched with an unlimited level of precision.
 
-<q>**Tutorial!** You can find a detailed tutorial [here](/Tutorials/Multiplayer/Matching Players.md) where you can also follow a examples of how to create match configurations and use them to match players in the Test Harness.</q>
+<q>**Tutorial!** You can find a detailed tutorial [here](/Tutorials/Multiplayer/Matching Players.md) where you can also follow examples of how to create match configurations and use them to match players in the Test Harness.</q>
 
 ## Managing Match Configurations
 
@@ -34,10 +34,10 @@ To create a new Match, click the ![](/img/fa/plus.png) icon and you will be pres
   * *Max. Players* \- The number of players required for a Match to be found, if the minimum number of players is not accepted.
   * *RealTime* \- Select for a Real-Time Match.
   * *Realtime Script* \- For a Real-Time Match, you can select a Realtime script, which will be run on the Real-Time server when the Real-Time session starts. See the Realtime scripts section [here](/Documentation/Configurator/Cloud Code.md).
-  * *Drop In/Drop Out* \- Select for a Drop in/Drop out Match. In this type of Match, the player list found for the Match doesn't remain fixed after the Match is made. Players that meet all of the matching criteria can enter or leave the Match. Conditions:
+  * *Drop In/Drop Out* \- Select for a Drop in/Drop out Match. In this type of Match, the player list found for the Match doesn't remain fixed after the Match is made. Players that meet all of the matching criteria can enter or leave the Match. Constraints on dropping in and dropping out:
     * The number of players can change but it cannot exceed the set maximum number of players for the Match.
-    * To make the Match in the first place, the set minimum number of players is imposed. After that and with drop outs, the player numbers can fall below the set minimum without the Match ending. This allows for new drop ins to occur that will bring the player numbers back up to or above the minimum.
     * If all players drop out, then the Match is deleted.
+  <q>**Note:** For the initial step of the Match being made, the normal rules for minimum and maximum number of players are applied, together with any Accept Minimum Players applied to a Match Threshold. After the Match is made and during the Drop In/Drop Out period, although the maximum still cannot be exceeded, the minimum players is *no longer applied*. This allows for new drop ins to occur that will bring the player numbers back up to or above the minimum.</q>
   * For *Drop In/Drop Out* Matches:
     * *Player disconnect delay in seconds* \- The number of seconds after a Match is found before a player in the Match who disconnects is removed from the Match. If you do not enter a value or enter zero, then a player in the Match who disconnects is removed instantly.
     * *Expire in seconds* \- The number of seconds after a Match is made that players can drop in or drop out. If you do not enter a value or enter zero, the drop in/drop out period for the Match doesn't expire.
@@ -47,7 +47,3 @@ To create a new Match, click the ![](/img/fa/plus.png) icon and you will be pres
     * *Type* \- The type of range calculation to use when looking for a Match.  This can be *Absolute*, *Relative*, or *Percent*.
     * *Min/Max* \- The minimum and maximum values used for the type of range calculation used in the Threshold.
     * *Accept Min. Players* \- Select this option for a Threshold, if you want a Match to be made on the basis of the Threshold for the minimum number of players and not have to wait until the maximum number of players are found that fall within the Threshold range.
-
-<q>**Note:** Users with pre-existing Match configuration created before November 2015 will see the following attribute on the pre-existing configuration ONLY.  Any newly-created configuration will be visible as above.</q>
-
-  * *Max Distance (metres)* \- The maximum distance to look for players based on that type of Threshold.
