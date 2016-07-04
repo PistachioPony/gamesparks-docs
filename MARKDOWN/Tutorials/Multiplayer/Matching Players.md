@@ -68,7 +68,7 @@ You can use the Thresholds that you add to a Match configuration to define the c
 * **Threshold Period.** Set a period to control how long you want the matching process to continue trying to find a Match using a Threshold.
 * **Accept Minimum Players.** Match the players currently found in the Threshold period that meet the matching criteria, as soon as the number of players found and matched is equal to the value in the *Min. Players* field.
 
-<q>**Example** Here, we'll use the Thresholds defined for our example Match configuration to explain how you can use Threshold Types and Periods, and how to use Accept Minimum Players for a Threshold.</q>
+<q>**Example.** Here, we'll use the Thresholds defined for our example Match configuration to explain how you can use Threshold Types and Periods, and how to use Accept Minimum Players for a Threshold.</q>
 
 ![](img/HowToMatchPlayers/7.png)  
 
