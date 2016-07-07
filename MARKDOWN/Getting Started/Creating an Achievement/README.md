@@ -1,5 +1,5 @@
 ---
-nav_sort: 5
+nav_sort: 4
 src: /Getting Started/Creating an Achievement/README.md
 ---
 

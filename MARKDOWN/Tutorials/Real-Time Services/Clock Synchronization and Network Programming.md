@@ -8,7 +8,7 @@ src: /Tutorials/Real-Time Services/Clock Synchronization and Network Programming
 
 ## Introduction
 
-In this section we are going to explore some further concepts in multiplayer network programming, such as clock synchronization and packet analytics.
+In this tutorial, we're going to explore some further concepts in multiplayer network programming, such as clock synchronization and packet analytics.
 
 Parts of this tutorial follow on from the previous tutorials for making a tank-game in Unity3D. However, this tutorial is not specific to Unity3D but covers general key concepts inherent in network programming. You do not need the previous tutorials to understand some of these concepts, even though we'll be referring to the previous tutorials in some examples given here.
 
@@ -71,7 +71,7 @@ RTSession.onPlayerConnect(function(player){
             .setPlayerId(player.getPlayerId())
             .setRealtimeEnabled(true)
             .send(function(response){
-                totalPlayers = response.opponents.length + 1; // we add one to this because the opponents list doesnt include us
+                totalPlayers = response.opponents.length + 1; // we add one to this because the opponents list doesn't include us
             });
     }
 
@@ -125,7 +125,7 @@ You should now be able to test out this new configuration, which will only start
 
 ## What Is Clock Synchronization?
 
-In most multiplayer networked games it's important that both the client's and server's clocks are synchronized. This is important because any time-based interpolation (like updating the enemy tank’s position in the previous tutorial) will require the client and server to agree on what time it is and therefore at what position your interpolated object should be at.
+In most multiplayer networked games it's important that both the client's and server's clocks are synchronized. This is important because any time-based interpolation (like updating the enemy tank’s position in the previous tutorial) will require the client and server to agree on what time it is and therefore at what position your interpolated object should be.
 
 ### Game Example
 
@@ -268,11 +268,11 @@ void OnGUI(){
 
 ### Sending the Clock Update
 
-For the next example, we are just going to make sure that the clients are running the same clock as the server. In this example, we are going to send an update every second, because we'll use this later as a countdown timer. However, in normal clock syncing we may also be updating our clock locally and using the update from the server to re-align the clock for any discrepancies. This is why calculating the delta-time is so important.
+For the next example, we are just going to make sure that the clients are running the same clock as the server. In this example, we are going to send an update every second, because we'll use this later as a countdown timer. However, in normal clock syncing we might also be updating our clock locally and using the update from the server to re-align the clock for any discrepancies. This is why calculating the delta-time is so important.
 
-*We will be doing this in the RT-scripts.*
+<q>**Note:** We will be doing this in the RT-scripts.</q>
 
-All we are going to do is setup an interval of 1000ms, which will send the current server time to all players.
+All we are going to do is set up an interval of 1000ms, which will send the current server time to all players.
 
 We will start this interval in the *onPlayerConnect()* callback, so it begins only when all players have started:
 
@@ -296,19 +296,11 @@ RTSession.onPlayerConnect(function(player){
 });
 
 
-
-
-
 ```
-
-
-
-
-
 
 ## Synching Clock Time
 
-The last thing we need to do to get our clock synced is to setup a method for when the server time is received.
+The last thing we need to do to get our clock synced is to set up a method for when the server time is received.
 
 We are using ‘102’ for the op-code, so in *GameSparksManager.cs OnPacketReceived()* we add another case for that op-code, along with another method called ‘SyncClock’ to our *GameController.cs* class.
 
@@ -329,8 +321,6 @@ We are using ‘102’ for the op-code, so in *GameSparksManager.cs OnPacketRece
 
 ```
 
-
-
 We're then going to adjust the local time based on the server time we have just received and the time-delta we calculated. The result should be as close to the current time on the server as possible, negating slight changes in latency and time taken to process packets and calculate data.
 
 ```
@@ -345,9 +335,7 @@ We're then going to adjust the local time based on the server time we have just 
     }
 
 
-
 ```
-
 
 If you run the game now, you'll notice that, as the time-delta is updated, the server-time clock gets pretty accurate between clients. Also notice that the longer the time between updates, the more the server-time drifts.
 
@@ -363,7 +351,7 @@ The server-time in the window above is the Unity-editor running the game, and th
 
 ![](img/ClockSync/2.png)
 
-Here you can see that after 3 minutes without an update, the server clock has started to run fast on the client-application compared with the game running in the editor. The difference is only 28 milliseconds, but this all adds up over time.
+Here, you can see that after 3 minutes without an update, the server clock has started to run fast on the client-application compared with the game running in the editor. The difference is only 28 milliseconds, but this all adds up over time.
 
 ## Game Over Countdown
 
@@ -374,9 +362,9 @@ We won't do anything special here, just disconnect the player and send them back
 First, we'll need a few more variables so we can display and check this countdown timer:
 * We'll create a bool, which we will use to make sure the end time is recorded only once.
 * We'll store the end time as a *DateTime* variable.
-* Lastly we need a *GUI* text variable so we can display the time left.
+* Lastly, we need a *GUI* text variable so we can display the time left.
 
-Calculating the time left is simple. In the *SyncClock()* method we will set the end Time variable to be 60000ms (1 minute) plus our *timeDelta* to keep the countdown in sync.
+Calculating the time left is simple. In the *SyncClock()* method we'll set the end Time variable to be 60000ms (1 minute) plus our *timeDelta* to keep the countdown in sync.
 
 ```
 
@@ -402,10 +390,7 @@ public void SyncClock(RTPacket _packet){
 
 
 
-
-
 ```
-
 
 You might notice, if your timer is displaying seconds only, that one of the players could be off by one second. This is due to the seconds reading having been rounded off. However, the total-milliseconds should still be very closely in sync so both clients will disconnect at the same time (+/- a few milliseconds).
 
@@ -413,15 +398,15 @@ You might notice, if your timer is displaying seconds only, that one of the play
 
 In this section, we are going to look at some features built into the GameSparks’ Real-Time service, but which we have not touched upon yet.
 
-When we send and receive packets it is important for developers to know the size of those packets. Then, if they wish to, they can record the average size and store those packets for analytics.
+When we send and receive packets it's important for developers to know the size of those packets. Then, if they wish to, they can record the average size and store those packets for analytics.
 
-In this tutorial:
+Here:
 * We'll show you how you can get these data from packets and display them.
 * *We won't* explore how to graph these analytics.
 
 ### Custom SendData Method
 
-We're going create our own *SendData()* method, so that each time we want to send some *RTData* we can track the size of the packet we sent.
+We're going create our own *SendData()* method so that each time we want to send some *RTData* we can track the size of the packet we sent.
 
 We'll do this in the *GameController.cs* calls. And, once we create our method, it's a good idea to go through all the *SendData* methods we have done in the previous tutorials and replace them so we can get a reading for the packet-size we send throughout our game.
 
@@ -454,9 +439,6 @@ public void SendRTData(int _opcode, GameSparksRT.DeliveryIntent _intent,  RTData
 
 ![](img/ClockSync/3.png)
 
-
-
-
 ### Received Packet Size
 
 We can check the size of any packets that we receive from the server. In our game example, we would do this in our *GameSparksManager.cs* script’s *OnPacketRecieved()* method. Here we can send the details from all packets to the game-controller so we can use it as you please.
@@ -476,22 +458,16 @@ In this example, we're just going to send the packet size from the incoming pack
     }
 
 
-
-
 ```
 
 
-And in the *GameSparksManager.cs* class we add this code to the top of the *OnPacketRecieved()* method:
+And in the *GameSparksManager.cs* class, we add this code to the top of the *OnPacketRecieved()* method:
 
 ```
 
 if (GameController.Instance () != null) {
            GameController.Instance().PacketReceived(_packet.PacketSize);
        }
-
-
-
-
 
 
 ```
