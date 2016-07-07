@@ -9,7 +9,7 @@ src: /Tutorials/README.md
 
 Here you'll find a wide range of in-depth tutorials to help you with detailed aspects of the platform:
 * [Analytics, Segmentation and Game Management](/Tutorials/Analytics, Segmentation and Game Management/README.md)
-* [Authentication and Player Profile](/Tutorials/Social Authentication and Player Profile/README.md)
+* [Social Authentication and Player Profile](/Tutorials/Social Authentication and Player Profile/README.md)
 * [Capabilities](/Tutorials/Capabilities/README.md)
 * [Cloud Code, and the Test Harness](/Tutorials/Cloud Code and the Test Harness/README.md)
 * [Currencies, Virtual Goods and Achievements](/Tutorials/Currencies, Virtual Goods and Achievements/README.md)

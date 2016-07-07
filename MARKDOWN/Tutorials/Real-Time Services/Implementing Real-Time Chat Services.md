@@ -6,7 +6,7 @@ src: /Tutorials/Real-Time Services/Implementing Real-Time Chat Services.md
 # Implementing Real-Time Chat Services
 
 
-In the last tutorial we looked at how we can setup real-time sessions as well as the matchmaking request used to find players for your real-time sessions. In this tutorial, we'll start some real-time programming to implement a peer-to-peer chat system. This will be done as an introduction to sending/receiving real-time packets and before we move on to multiplayer network programming in the next tutorial.
+In the last tutorial, we looked at how we can setup real-time sessions as well as the matchmaking request used to find players for your real-time sessions. In this tutorial, we'll start some real-time programming to implement a peer-to-peer chat system. This will be done as an introduction to sending/receiving real-time packets and before we move on to multiplayer network programming in the next tutorial.
 
 ## Introduction
 
@@ -24,14 +24,14 @@ We'll create these using out-of-the-box Unity UI elements.
 ### The Chat Toggle Button
 
 We start with the simplest of these panels.
-1. In your main-game scene, please create a new *Canvas UI* element. For the example, call it ‘Main Canvas’.
+1. In your main-game scene, create a new *Canvas UI* element. For the example, call it ‘Main Canvas’.
 
 2. Create an empty *GameObject* for all the chat-windows and call it ‘Chat Manager’.
 3. Then create a new *Panel* and name it ‘ToggleChatPanel’, and add a button to that panel. For this example, position this button in the bottom corner of the screen so that it will interfere with gameplay as little as possible:
 
   ![](img/RTChat/1.png)
 
-<q>**Note:** For the toggle-button and the chat-windows we will create separate objects in the canvas. This is because in the next tutorial we will be using the same canvas to draw the scores HUD for each player.</q>
+<q>**Note:** For the toggle-button and the chat-windows we'll create separate objects in the canvas. This is because in the next tutorial we'll be using the same canvas to draw the scores HUD for each player.</q>
 
 ### The Chat Log Window
 
@@ -60,7 +60,7 @@ Lay out these elements as shown here.
 ![](img/RTChat/3.png)
 
 
-The drop-down menu object will automatically fill in three options when it is created. For this example we only need one option right now, called ‘To All’. Later, in our ChatManager.cs script we'll programmatically add other players to the drop-down menu options.
+The drop-down menu object will automatically fill in three options when it is created. For this example we only need one option right now, called ‘To All’. Later, in our *ChatManager.cs* script we'll programmatically add other players to the drop-down menu options.
 
 ## The Chatmanager Script
 
@@ -69,9 +69,9 @@ Now we'll create a new class called *ChatManager.cs* and add this class to the c
 *1.* The first thing we'll do is setup the toggle-button so that we can show/hide the chat-manager window:
 
 So:
-* In the *ChatManager.cs* script we will add a public variable for the button, and a public variable for the chat-window GameObject.
+* In the *ChatManager.cs* script we'll add a public variable for the button and a public variable for the chat-window GameObject.
 * We also need a bool to toggle the window on and off.
-* Once you have linked these variables to the objects in the editor we can start coding the toggle button:
+* Once you've linked these variables to the objects in the editor, we can start coding the toggle button:
 
 ```
 
@@ -81,14 +81,14 @@ private bool isChatWindowOpen;
 
 ```
 
-*2.* In the Start() method we will disable the chat window, so that when the game loads, the chat window will automatically disappear. We will then add a OnClick listener to the *chatToggleBttn* variable. This will be linked to a method called, for example, ‘ToggleChatWindow’.
+*2.* In the Start() method we'll disable the chat window so that, when the game loads, the chat window will automatically disappear. We'll then add an OnClick listener to the *chatToggleBttn* variable. This will be linked to a method called, for example, ‘ToggleChatWindow’.
 
-This method is pretty simple. It simply toggles the *isChatWindowOpen* bool, checks if the bool is true, and then enables the window or disables it. This method will also change the text-element of the button, so that the button has a different message when the chat window is shown and when it is hidden.
+This method is pretty simple. It simply toggles the *isChatWindowOpen* bool, checks if the bool is true, and then enables the window or disables it. This method will also change the text-element of the button, so that the button has a different message for when the chat window is shown and for when the chat window is hidden.
 
 ```
 // Use this for initialization
 void Start () {
-    chatWindow.SetActive (false); // we dont want the chat window to show at the start of the level so we disable it here
+    chatWindow.SetActive (false); // we don't want the chat window to show at the start of the level, so we disable it here
     chatToogleBttn.onClick.AddListener (ToogleChatWindow); // assign the toggle-button to the chat-toggle method which will enable and disable the chat window
 }
 
@@ -112,15 +112,17 @@ private void ToogleChatWindow(){
 
 
 
-Now that we have the toggle-button hooked up we will need a few more variables so that we can continue onto the next section and start sending and receiving messages. We are going to need the following public variables:
+Now that we have the toggle-button hooked up, we'll need a few more variables so that we can continue onto the next section and start sending and receiving messages.
+
+We're going to need the following public variables:
 
 |Variable   |Description   |
 |------------------|--------------------------------|
 |Input-Field, *messageInput* |We'll use this to get the text the user has input and that they want to send.   |
 |Dropdown, *recipientOption* |When we link this to the drop-down menu in the editor, we'll be able to add options to it, as well as check the ID of the recipient before sending the message.|
 |Button, *sendMessageBttn* |We'll add a listener to this button, which will be used to decide who the message should be sent to.|
-|Text, *chatLogOutput* |As we send and receive new messages we will print them out to this text-field.|
-|Int, *elementsInChatLog* |We’ll use this public variable to tweak the number of chat-messages that stay in the log before begin replaced by new ones.|
+|Text, *chatLogOutput* |As we send and receive new messages we'll print them out to this text-field.|
+|Int, *elementsInChatLog* |We’ll use this public variable to tweak the number of chat-messages that stay in the log before being replaced by new ones.|
 
 There is one last variable we need to create before we can start and that is the chat-log itself.
 
@@ -138,11 +140,11 @@ private Queue<string> chatLog = new Queue<string>();
 
 ```
 
-The *ChatManager.cs* script is going to be pretty small, so this is all we need. Once you have linked these public variables to the objects in your editor we are good to go.
+The *ChatManager.cs* script is going to be pretty small, so this is all we need. Once you have linked these public variables to the objects in your editor, we are good to go.
 
 ### Setting Up the Drop-Down Menu
 
-The next step before we start sending messages is to setup the rest of the drop-down menu details.
+The next step before we start sending messages is to set up the rest of the drop-down menu details.
 
 *3.* Currently, we only have the option ‘To All’ in the drop-down menu, but we want to add an option there for each player (excluding ourselves). The code for this is simple, we just need to loop through the player/participants list we created in the *GameSparksManager.cs* script in the *RTSessionInfo* variable we created and add an option for each player in that list that isn’t us.
 
@@ -152,12 +154,12 @@ We’ll put this code in the Start() method:
 
 // Use this for initialization
     void Start () {
-        chatWindow.SetActive (false); // we dont want the chat window to show at the start of the level so we disable it here
+        chatWindow.SetActive (false); // we don't want the chat window to show at the start of the level so we disable it here
         chatToogleBttn.onClick.AddListener (ToogleChatWindow); // assign the toggle-button to the chat-toggle method which will enable and disable the chat window
 
-        // we need to setup the drop-down menu so that it lists the correct names for each player //
+        // we need to set up the drop-down menu so that it lists the correct names for each player //
         foreach (RTSessionInfo.RTPlayer player in GameSparksManager.Instance().GetSessionInfo().GetPlayerList()) {
-            // we dont want to add the option to send a message to ourselves, so we will use our own peerId to exclude this option; we will only be able to send messages to others //
+            // we don't want to add the option to send a message to ourselves, so we'll use our own peerId to exclude this option; we'll only be able to send messages to others //
             if (player.peerID != GameSparksManager.Instance().GetRTSession().PeerId) {
                 recipientOption.options.Add (new Dropdown.OptionData () { text = player.displayName });
             }
@@ -169,7 +171,7 @@ We’ll put this code in the Start() method:
 
 ### Send-Message Button Listener
 
-While we are working in the Start() method let's finish up here and create a listener for the send-message button.
+While we're working in the Start() method, let's finish up here and create a listener for the send-message button.
 
 *4.* What we are also going to do is make sure the chatLogOutput text-field is empty when the level is loaded so that any debug-text we might put there is cleared.
 
@@ -181,12 +183,12 @@ The Start() method now looks as follows:
 void Start () {
 
     chatLogOutput.text = string.Empty; // we want to clear the chat log at the start of the game in case there is any debug text in there
-    chatWindow.SetActive (false); // we dont want the chat window to show at the start of the level so we disable it here
+    chatWindow.SetActive (false); // we don't want the chat window to show at the start of the level, so we disable it here
     chatToogleBttn.onClick.AddListener (ToogleChatWindow); // assign the toggle-button to the chat-toggle method which will enable and disable the chat window
 
-    // we need to setup the drop-down menu so that it lists the correct names for each player //
+    // we need to set up the drop-down menu so that it lists the correct names for each player //
     foreach (RTSessionInfo.RTPlayer player in GameSparksManager.Instance().GetSessionInfo().GetPlayerList()) {
-        // we dont want to add the option to send a message to ourselves, so we will use our own peerId to exclude this option; we will only be able to send messages to others //
+        // we don't want to add the option to send a message to ourselves, so we'll use our own peerId to exclude this option; we'll only be able to send messages to others //
         if (player.peerID != GameSparksManager.Instance().GetRTSession().PeerId) {
             recipientOption.options.Add (new Dropdown.OptionData () { text = player.displayName });
         }
@@ -200,15 +202,15 @@ private void SendMessage(){
 
 ```
 
-We are now all-set to start sending our messages.
+We are now all-set to start sending our messages!
 
 ## Sending Real-Time Data
 
-Once you have your real-time session instance setup you are ready to start sending real-time data. There are two types of data you can send using our real-time services; structured and unstructured.
+Once you have your real-time session instance setup you are ready to start sending real-time data. There are two types of data you can send using our real-time services: structured and unstructured.
 
 ### Structured Data
 
-Structured data is created using the *RTData* class. This is a class that allows you add some basic data-types to the *RTData* object you want to send. When using the *RTData* class to add these different data-types you are also required to denote a ‘key’ for each type you wish to add. This key is used to retrieve the correct data-type at each index when the packet is received.
+Structured data is created using the *RTData* class. This is a class that allows you to add some basic data-types to the *RTData* object you want to send. When using the *RTData* class to add these different data-types, you're also required to denote a ‘key’ for each type you wish to add. This key is used to retrieve the correct data-type at each index when the packet is received.
 
 Below is a list of the kind of data you can add using the RTData class.
 
@@ -221,11 +223,11 @@ Below is a list of the kind of data you can add using the RTData class.
 |**string**   |.SetString(index, string); |This allows you to send a string of characters.|
 |**Vector2**   |.SetVector2(index, new Vector2(x, y)); |This allows you to set a Unity Vector2 type which takes two floats for x and y. This can be used to send angles or 2-dimensional coordinates.|
 |**Vector3**   |.SetVector3(index, new Vector3(x, y, z)); |This allows you to set a Unity Vector3 type which takes three floats for x, y, z. This can be used to send transform elements such as position, scale and Euler-rotation.|
-|**Vector4**   |.SetVector4(index, new Vector4(x, y, z, w)); |This allows you to set a Unity Vector4 type which takes four floats for x, y, z and w. This can be used to send Quaternions or colours.|
-|**RTVector**   |.SetRTVector(index, new RTVector(x, y, z, w)); |The RTVector class accepts floats for x, y, z and w. The difference between this type and other Vector types is that RTVector can accept any or all of these floats.|
+|**Vector4**   |.SetVector4(index, new Vector4(x, y, z, w)); |This allows you to set a Unity Vector4 type which takes four floats for x, y, z, and w. This can be used to send Quaternions or colours.|
+|**RTVector**   |.SetRTVector(index, new RTVector(x, y, z, w)); |The RTVector class accepts floats for x, y, z, and w. The difference between this type and other Vector types is that RTVector can accept any or all of these floats.|
 |**RTData**   |.SetData(index, RTData.Get().SetInt(index, 1)); |Using the RTData class you can create nested data from without your initial RTData structure.|
 
-For all *RTData* we are sending we want to use the one instance of the *RTData* object rather than creating and new instance each time.  *RTData* is a disposable object too, so when using it, we wrap the instance in a ‘using’ statement to make sure is it returned to the pool.
+For all *RTData* we are sending we want to use the one instance of the *RTData* object, rather than creating a new instance each time.  *RTData* is a disposable object too, so when using it, we wrap the instance in a ‘using’ statement to make sure is it returned to the pool.
 
 Constructing RTData therefore looks as follows:
 
@@ -250,16 +252,16 @@ using (RTData data = RTData.Get()) {
 
 ### Sending Structured Data
 
-In order to send your *RTData* you will need a reference to the *gameSparksRTUnity* object you used to configure you real-time session.
+In order to send your *RTData* you will need a reference to the *gameSparksRTUnity* object that you used to configure your real-time session.
 
 The method to send structured data is gameSparksRTUnity.SendData() and it takes the following parameters:
 
 |Parameter   |Type   |Description   |
 |---|---|--------------------------------|
-|**opCode**   |uint   |Each packet you send to the server has a corresponding opCode. This opCode is available when the packet is received by the other player(s). This must be a non negative integer   |
+|**opCode**   |uint   |Each packet you send to the server has a corresponding opCode. This opCode is available when the packet is received by the other player(s). This must be a non-negative integer   |
 |**deliveryIntent**   |GameSparksRT.DeliveryIntent |There are 3 options when sending a packet to the session: **1. RELIABLE** - The packet will be queued, sent and received by the target players. The packets will be received in the order they are sent. **2. UNRELIABLE** - The packet will be sent with no guarantee of it being received. The receivers may get the packets in a different order than they are sent. **3. UNRELIABLE_SEQUENCED** - The packet will be sent with no guarantee of it being received. If it is received out of order, it will be discarded.|
-|**structuredData**   |RTData (optional) |This is a structured dictionary keyed with integers that can contain doubles, floats, ints, longs, strings or nested RTData objects|
-|**targetPlayers**   |params int[]   |The peerId's of the players you want to send to. If omitted the packet is broadcast to all others players in the session   |
+|**structuredData**   |RTData (optional) |This is a structured dictionary keyed with integers that can contain doubles, floats, ints, longs, strings, or nested RTData objects|
+|**targetPlayers**   |params int[]   |The peerId's of the players you want to send to. If omitted, the packet is broadcast to all others players in the session   |
 
 So, leading on from the previous RTData example, sending this data would look as follows:
 
@@ -289,7 +291,7 @@ using (RTData data = RTData.Get()) {
 
 
 
-* **RTData Size**. The SendXXXX methods are also setup to return information about the size of the packet your are sending. They will return an int which corresponds to the size of the packet in bytes.
+* **RTData Size**. The SendXXXX methods are also set up to return information about the size of the packet you are sending. They will return an int which corresponds to the size of the packet in bytes.
 
 And that’s it. You can mix and match this setup using the *RTData* class to send whatever structures for your data you like.
 
@@ -311,17 +313,17 @@ ArraySegment<byte> unstructuredData = new ArraySegment<byte> (Encoding.ASCII.Get
 
 ```
 
-All data, be it structured or unstructured, is send as a byte array in the end. The advantage of sending byte arrays over structured data is that there is no extra space used in the packet to give each of the elements their keys as there is when using *RTData*.
+All data, be it structured or unstructured, is send as a byte array in the end. The advantage of sending byte arrays over structured data is that there is no extra space used in the packet to give each of the elements their keys, as there is when using *RTData*.
 
 ## Sending Chat Messages
 
 For this tutorial we are only going to be sending two strings; the message the user entered and the time-stamp for when it was sent.
 So in our SendMessage() method we will:
-1.	First check to make sure there is a message to send, as we don’t want to send an empty string to players if the user hit the send-button by accident.
+1.	First check to make sure there is a message to send, because we don’t want to send an empty string to players if the user hits the send-button by accident.
 2.	Construct the *RTData* object with the message and the date.
 3.	Check to see if the ‘To All’ option is set, or if there is a specific player set to be the recipient of the message.
 4.	If the recipient option is set to ‘To All’, then send the data as-is.
-5.	If another player is set to be the recipient then loop through the player/participant list and check the corresponding display-name. Then send the data to that player’s peer ID.
+5.	If another player is set to be the recipient, then loop through the player/participant list and check the corresponding display-name. Then send the data to that player’s peer ID.
 
 <q>**Note:** We use the *DeliverIntent.Reliable* for this message because we want the packet to arrive in order and intact.</q>
 
@@ -336,9 +338,9 @@ So in our SendMessage() method we will:
 /// RTData packet and send the packet with the current player's message to the chosen player
 /// </summary>
 private void SendMessage(){
-    if (messageInput.text != string.Empty) { // first check to see if there is any message to sent
-        // for all RT-data we are sending, we use and instance of the RTData object //
-        // this is a disposable object, so we wrap it in this using statement to make sure it is return to the pool //
+    if (messageInput.text != string.Empty) { // first check to see if there is any message to send
+        // for all RT-data we are sending, we use an instance of the RTData object //
+        // this is a disposable object, so we wrap it in this using statement to make sure it is returned to the pool //
         using (RTData data = RTData.Get ()) {
             data.SetString (1, messageInput.text); // we add the message data to the RTPacket at key '1', so we know how to key it when the packet is receieved
             data.SetString(2, DateTime.Now.ToString()); // we are also going to send the time at which the user sent this message
@@ -347,9 +349,9 @@ private void SendMessage(){
             if (recipientOption.options [recipientOption.value].text == "To All") { // we check to see if the packet is sent to all players
                 Debug.Log ("Sending Message to All Players... \n" + messageInput.text);
                 // for this example we are sending RTData, but there are other methods for sending data we will look at later //
-                // the first parameter we use is the op-code. This is used to index the type of data being send, and so we can identify to ourselves which packet this is when it is receieved //
-                // the second parameter is the delivery intent. The intent we are using here is 'reliable', which means it will be send via TCP. This is because we arent concerned about //
-                // speed when it comes to these chat messages, but we very much want to make sure the whole packet is receieved //
+                // the first parameter we use is the op-code. This is used to index the type of data being send, and so we can identify to ourselves which packet this is when it is received //
+                // the second parameter is the delivery intent. The intent we are using here is 'reliable', which means it will be send via TCP. This is because we aren't concerned about //
+                // speed when it comes to these chat messages, but we very much want to make sure the whole packet is received //
                 // the final parameter is the RTData object itself //
                 GameSparksManager.Instance ().GetRTSession ().SendData (1, GameSparks.RT.GameSparksRT.DeliveryIntent.RELIABLE, data);
             } else {
@@ -388,9 +390,9 @@ If configured correctly, you should see an option for each player except yoursel
 
 ## Receiving Real-Time Data
 
-In order to receive your *RTData* you will need a reference to the *gameSparksRTUnity* object you used to configure you real-time session.
+In order to receive your *RTData*, you will need a reference to the *gameSparksRTUnity* object you used to configure your real-time session.
 
-When any packets are received the *OnPacketRecieved* callback will be called and the details of that packet can be processed.
+When any packets are received, the *OnPacketRecieved* callback will be called and the details of that packet can be processed.
 
 ```
 
@@ -426,7 +428,7 @@ The *RTPacket* class contains the following members:
 
 ### Receiving Structured Data
 
-Any structured data in the packet received is available in the *Data* parameter. Consult the previous section on Sending Real-Time Data to see what kinds of data-types can be sent. Here's the example from that section to show how data can be parsed back.
+Any structured data in the packet received are available in the *Data* parameter. Consult the previous section on Sending Real-Time Data to see what kinds of data-types can be sent. Here's the example from that section to show how data can be parsed back.
 
 ```
 
@@ -451,7 +453,7 @@ private void OnPacketReceived(RTPacket _packet){
 
 ### Receiving Unstructured Data
 
-Unstructured data is accessible through the Stream parameter of the *RTPacket* received. In the sending unstructured data example, you can get the data back into a string using a *StreamReader* class.
+Unstructured data are accessible through the Stream parameter of the *RTPacket* received. In the sending unstructured data example, you can get the data back into a string using a *StreamReader* class.
 
 
 ```
@@ -470,7 +472,7 @@ private void OnPacketReceived(RTPacket _packet){
 
 ## Receiving Chat Messages
 
-In order to receive the chat message we will first have to put a reference to the *ChatManager.cs* class in our *GameSparksManager.cs* script.
+In order to receive the chat message, we'll first have to put a reference to the *ChatManager.cs* class in our *GameSparksManager.cs* script.
 
 ```
 
@@ -479,19 +481,16 @@ private ChatManager chatManager;
 
 ```
 
+Now, in the OnPacketReceived() method we created when we setup the real-time session instance we'll check that the op-code corresponds to the op-code we have chosen for all chat-messages (op-code 1).
 
-
-
-Now, in the OnPacketReceived() method we created when we setup the real-time session instance we will check that the op-code corresponds to the op-code we have chosen for all chat-messages (op-code 1).
-
-We will also have to check to see if the *ChatManager* reference is initialized yet, and if it is not we will find the ‘Chat Manager’ object and give it that reference. We are then going to send the packet to an *OnMessageReceived()* method in the *ChatManager.cs* class.
+We'll also have to check to see if the *ChatManager* reference is initialized yet, and if it isn't, we'll find the ‘Chat Manager’ object and give it that reference. We are then going to send the packet to an *OnMessageReceived()* method in the *ChatManager.cs* class.
 
 ```
 
 private void OnPacketReceived(RTPacket _packet){
         switch (_packet.OpCode) {
         // op-code 1 refers to any chat-messages being received by a player //
-        // from here, we will send them to the chat-manager //
+        // from here, we'll send them to the chat-manager //
         case 1:
             if (chatManager == null) { // if the chat manager is not yet setup, then assign the reference in the scene
                 chatManager = GameObject.Find ("Chat Manager").GetComponent<ChatManager> ();
@@ -504,7 +503,7 @@ private void OnPacketReceived(RTPacket _packet){
 
 ```
 
-Then, back in the *ChatManager.cs* class we can add that new method. We will put a *Debug.Log* call in this method for the moment, which will print out the message that has just been received while we are testing.
+Then, back in the *ChatManager.cs* class, we can add that new method. We'll put a *Debug.Log* call in this method for the moment, which will print out the message that has just been received while we are testing.
 
 
 ```
@@ -527,28 +526,28 @@ You should now be able to test messages being sent between players and see the r
 
 ## Updating the Chat Log
 
-The next step is to print these messages to the chat-log.
+The next step is to print these messages to the chat-log:
 
-* We're going to create a method for this called ‘UpdateChatLog’. This method is going to take the name of the sender, the body of the message and the date. It will create a formatted string from this data so that the sender-name and body can be highlighted, and it will add this string to the queue.
+* We're going to create a method for this called ‘UpdateChatLog’. This method is going to take the name of the sender, the body of the message, and the date. It will create a formatted string from this data so that the sender-name and body can be highlighted, and it will add this string to the queue.
 * We’ll check the length of the queue so that new messages are added and old ones removed.
 * Finally, we'll print all of these messages to the *chatLogOutput* text-field.
 
 ```
 
 /// <summary>
-    /// This method will update the current users chat log and print the new log to the screen.
+    /// This method will update the current user's chat log and print the new log to the screen.
     /// </summary>
     /// <param name="_sender">The name (display-name) of the sender</param>
     /// <param name="_message">the body of the message</param>
     /// <param name="_date">the date of the message</param>
     private void UpdateChatLog(string _sender, string _message, string _date){
-        // In this example the message we want to display is formatted so that we can distinguish each part of the message when //
+        // In this example, the message we want to display is formatted so that we can distinguish each part of the message when //
         // it is displayed, all the information is clearly visible //
         chatLog.Enqueue("<b>"+_sender+"</b>\n<color=black>"+_message+"</color>"+"\n<i>"+_date+"</i>");
-        if (chatLog.Count > elementsInChatLog){ // if we have exceeded the amount of messages in the log then remove the top message
+        if (chatLog.Count > elementsInChatLog){ // if we have exceeded the amount of messages in the log, then remove the top message
             chatLog.Dequeue ();
         }
-        chatLogOutput.text = string.Empty; // we need to clear the log otherwise we always get the same messages repeating
+        chatLogOutput.text = string.Empty; // we need to clear the log, otherwise we always get the same messages repeating
         foreach(string logEntry in chatLog.ToArray()){ // go through each chat item and add the entry to the output log
             chatLogOutput.text += logEntry+"\n";
         }
@@ -561,13 +560,13 @@ The next step is to print these messages to the chat-log.
 ```
 
 
-Now we need to get this information from the *OnMessageReceived()* method. We can get the date and the message from the packet, but the packet does not contain the player-display name. So we are going to use the Sender parameter of the packet to check the name of the player with the same peerId as the sender.
+Now we need to get this information from the *OnMessageReceived()* method. We can get the date and the message from the packet, but the packet doesn't contain the player-display name. So, we are going to use the Sender parameter of the packet to check the name of the player with the same peerId as the sender.
 
 ```
 
 /// <summary>
 /// This is called from the GameSparksManager class.
-/// It send any packets with op-code '1' to the chat manager to the chat manager can parse the nessesary details out for display in the chat log window
+/// It send any packets with op-code '1' to the chat manager so the chat manager can parse the necessary details out for display in the chat log window
 /// </summary>
 /// <param name="_data">Data.</param>
 public void OnMessageReceived(RTPacket _packet){
@@ -592,7 +591,7 @@ You should now be able to test sending and receiving chat messages between playe
 
 ![](img/RTChat/6.png)
 
-There is one last thing we need to do however. This chat-system does not show the player sending the data what they have just said. In order to fix this we can add a line to that start of the *SendMessage()* method:
+There is one last thing we need to do, however. This chat-system does not show the player sending the data what they have just said. In order to fix this, we can add a line to that start of the *SendMessage()* method:
 
 ```
 
@@ -605,7 +604,7 @@ This should be put below where we set the *RTData* for the message and date, and
 
 ![](img/RTChat/7.png)
 
-You now have all the elements you need for this chat service to work. Test it out with as many players as you want by changing the number of players in your have through the game-portal:
+You now have all the elements you need for this chat service to work. Test it out with as many players as you want by changing the number of players in your match through the game-portal:
 
 ![](img/RTChat/8.png)
 
