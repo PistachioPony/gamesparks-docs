@@ -15,7 +15,7 @@ The Multiplayer page in the Configurator section of the Portal, displays the lis
 
 ![](img/Matches/1.png)  
 
-The icons (highlighted above) give you the following capabilities:
+The icons give you the following capabilities:
 
   * ![](/img/fa/plus.png) Add a new Match configuration.
   * ![](/img/fa/edit.png) Edit this Match configuration.
@@ -34,7 +34,7 @@ To create a new Match, click the ![](/img/fa/plus.png) icon and you will be pres
   * *Max. Players* \- The number of players required for a Match to be found, if the minimum number of players is not accepted.
   * *RealTime* \- Select for a Real-Time Match.
   * *Realtime Script* \- For a Real-Time Match, you can select a Realtime script, which will be run on the Real-Time server when the Real-Time session starts. See the Realtime scripts section [here](/Documentation/Configurator/Cloud Code.md).
-  * *Drop In/Drop Out* \- Select for a Drop in/Drop out Match. In this type of Match, the player list found for the Match doesn't remain fixed after the Match is made. Players that meet all of the matching criteria can enter or leave the Match. Constraints on dropping in and dropping out:
+  * *Drop In/Drop Out* \- Select for a Drop in/Drop out Match. In this type of Match, the player list found for the Match doesn't remain fixed after the Match is made. Players that meet all of the matching criteria can enter or leave the Match. There are two important constraints:
     * The number of players can change but it cannot exceed the set maximum number of players for the Match.
     * If all players drop out, then the Match is deleted.
   <q>**Note:** For the initial step of the Match being made, the normal rules for minimum and maximum number of players are applied, together with any Accept Minimum Players applied to a Match Threshold. After the Match is made and during the Drop In/Drop Out period, although the maximum still cannot be exceeded, the minimum players is *no longer applied*. This allows for new drop ins to occur that will bring the player numbers back up to or above the minimum.</q>

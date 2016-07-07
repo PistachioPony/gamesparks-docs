@@ -31,4 +31,6 @@ For this example:
 * To suit the real-time 4-player game we'll be building in a subsequent tutorial, we don't want the match to start until all players have joined the game, so we've set both the *Min.Players* and the *Max.Players* to 4.
 
 
-That is all that is needed to setup a real-time match in GameSparks! In the [next tutorial](/Tutorials/Real-Time Services/Real-Time Matchmaking.md), we'll see how we can create these matches in the client and get players to connect to the match before we create an real-time session.
+That is all that is needed to setup a real-time match in GameSparks!
+
+In the [next tutorial](/Tutorials/Real-Time Services/Real-Time Matchmaking.md), we'll see how we can create these matches in the client and get players to connect to the match before we create a real-time session.

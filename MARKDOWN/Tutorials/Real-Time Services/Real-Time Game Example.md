@@ -1537,4 +1537,6 @@ public void DisableTank (){
 
 ## Summary
 
-In this tutorial we have covered a lot of concepts both relating to the implementation of the GameSparks real-time services, and multiplayer networking in general. In the next tutorial we are going to look at some more tips and tricks as well as important paradigms used in multiplayer network programming.
+In this series of tutorials, we've covered a lot of concepts both relating to the implementation of the GameSparks real-time services, and multiplayer networking in general.
+
+In the [next tutorial](/Tutorials/Real-Time Services/Clock Synchronization and Network Programming.md), we're going to look at some more tips and tricks as well as important paradigms used in multiplayer network programming.

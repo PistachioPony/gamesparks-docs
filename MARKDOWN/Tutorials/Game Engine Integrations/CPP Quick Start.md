@@ -226,4 +226,4 @@ request.SetPassword("abcdefgh");
 // send the request
 request.Send(RegistrationRequest_Response);
 ```
-You can alter the way this request works using the Cloud Code section, under the 'requests' tab and finding the 'Registration request' and adding in logic which saves the E-mail against the player. We have a [tutorial](/Tutorials/Authentication and Player Profile/Automating User Password Change.md) for this.
+You can alter the way this request works using the Cloud Code section, under the 'requests' tab and finding the 'Registration request' and adding in logic which saves the E-mail against the player. We have a [tutorial](/Tutorials/Social Authentication and Player Profile/Automating User Password Change.md) for this.

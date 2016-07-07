@@ -1,4 +1,5 @@
 ---
+nav_sort: 11
 no_toc: true
 no_comment: true
 src: /Tutorials/Third Party Integrations/README.md

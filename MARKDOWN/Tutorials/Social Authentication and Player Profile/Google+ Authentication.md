@@ -1,6 +1,6 @@
 ---
 nav_sort: 6
-src: /Tutorials/Authentication and Player Profile/Google+ Authentication.md
+src: /Tutorials/Social Authentication and Player Profile/Google+ Authentication.md
 ---
 
 # How to authenticate a player using their Google+ account

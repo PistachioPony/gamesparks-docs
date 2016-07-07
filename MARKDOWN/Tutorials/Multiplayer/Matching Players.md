@@ -7,7 +7,7 @@ src: /Tutorials/Multiplayer/Matching Players.md
 
 In this tutorial, we'll create a Match configuration with customised Thresholds in the GameSparks Portal and use this configuration to perform a Match in the Test Harness that will match Players in the game. As a brief example of these features, you may want to match Players based on their similar skill level in your game, so that Players can play against someone of equal ability to make it more enjoyable for all.
 
-We'll also see how we can enable:
+We'll also see how to enable:
 * Drop In/Drop Out and have matching players added to or removed from the Match after the Match is first made.
 * Manual Matching, allowing you to use a custom mechanism for completing a Match from the list of matching players the portal returns for the matching criteria.
 
@@ -99,9 +99,9 @@ Our example showed how the use of 3 Thresholds types allows you to control the m
 
 Selecting this for one of the Thresholds in your Match instructs the Match to match all the players it has currently found, as soon as the number of players found and matched is equal to the value in the *Min. Players* field. If enough players according to this value have not been found, the Match continues to find players in the next Threshold.
 
-**Example:** Suppose our first Threshold, using *Absolute* type, was selected to *Accept Min Players*. *Min. Players* for *MULTI_MCH* is set at 2. Now suppose a player with skill level 20 issues a *MatchmakingRequest* using the *MULTI_MCH*. If 1 other matching player is found in the first 10 seconds - at, say, 4 seconds in with skill level 21 - then the Match would be made for these 2 players and the matchmaking process would cease after only 4 seconds had elapsed.
+**Example:** Suppose our first Threshold, using *Absolute* type, was selected to *Accept Min Players*. For *MULTI_MCH*, *Min. Players* is set at 2. Now suppose a player with skill level 20 issues a *MatchmakingRequest* using *MULTI_MCH*. If 1 other matching player is found in the first 10 seconds - at, say, 4 seconds in with skill level 21 - then the Match would be made for these 2 players and the matchmaking process would cease after only 4 seconds.
 
-<q>**Note:** You can only apply *Accept Min. Players* to *one* Threshold in a Match. However, where there are multiple Thresholds, then *Accept Min. Players* will also be applied to any successive Thresholds used up to completion of the matchmaking process. So, in our current example, if the minimum of 2 matched players are not found in the first 10 seconds and during the *Absolute* Threshold period, but 2 matched players are found after 12 seconds and during the *Relative* Threshold period, the match will be made and the matchmaking process will cease.</q>
+<q>**Note:** You can only apply *Accept Min. Players* to *one* Threshold in a Match. However, where there are multiple Thresholds, then *Accept Min. Players* will also be applied to any successive Thresholds used up to completion of the matchmaking process. So, if the first *Absolute* Threshold has *Accept Min. Players* but the minimum of 2 matched players are not found in the first 10 seconds and during the first Threshold period, but 2 matched players are found after 12 seconds and during the *Relative* Threshold period, the match will be made and the matchmaking process will cease at 12 seconds.</q>
 
 <q>**Remember!**  If *Accept Min. Players* is not selected for any Threshold, and there aren't enough players found in the Match to reach the *Max. Players* value, no Match will be found, even if there are more players than the *Min. Players* value.</q> 
 
@@ -113,7 +113,7 @@ Using the three Thresholds in the above *MULTI_MCH* example and for a 3-player c
 
 * **Scenario 2.** Players *1*, *2*, and *3* have skills of *20*, *15*, and *16* respectively. Each player submits a *MatchmakingRequest* in that order and each player's request is issued within player *1's* first Threshold period of 10 seconds. Players *2* and *3* would be matched based on the second Threshold which uses the Relative Match Type.
 
-* **Scenario 3.** Players *1*, *2*, and *3* have skills of *20*, *15*, and *16* respectively. Player *1* submits a *MatchmakingRequest*. However, players *2* and *3* submit their requests later and during player *1's* *second* Threshold period of 20 seconds. Players *1* and *3* are matched based on the third Threshold which uses the Percent Match Type.
+* **Scenario 3.** Players *1*, *2*, and *3* have skills of *20*, *15*, and *16* respectively. Player *1* submits a *MatchmakingRequest*. However, players *2* and *3* submit their requests later and during player *1's* *second* Threshold period, that is between *10* and *20* seconds after the matchmaking process starts. Players *1* and *3* are matched based on the third Threshold which uses the Percent Match Type.
 
 
 
@@ -196,7 +196,7 @@ Player 3 *MatchUpdatedMessage:*
 
 ```
 
-Around 10 seconds later, Player *4* will also be added to the Match, who will be matched based on his skill value falling within the *second* (Relative) threshold period.  As each Player is added to the Match, both them and the existing Players on the Match receive a [MatchUpdatedMessage](/API Documentation/Message API/Multiplayer/MatchUpdatedMessage.md).
+Around 10 seconds later, Player *4* will also be added to the Match, who will be matched based on his skill value falling within the *second* (Relative) threshold period.  As each Player is added to the Match, both the new and the existing Players in the Match receive a [MatchUpdatedMessage](/API Documentation/Message API/Multiplayer/MatchUpdatedMessage.md).
 
 Player 3 *MatchUpdatedMessage:*
 
@@ -367,7 +367,7 @@ And the *MatchDetailsResponse*:
 }
 ```
 
-This will cancel a *MatchmakingRequest* that has not yet received any Match message.
+This will cancel a *MatchmakingRequest* that has not yet received a *MatchFoundMessage*.
 
 ## Using Drop In/Drop Out
 
@@ -377,7 +377,7 @@ Two constraints are imposed:
   * The number of players can change but cannot exceed the configured maximum number of players for the Match.
   * If all players drop out, then the Match is deleted.
 
-<q>**Note:** The specified *minimum number of players* is applied for making the Match in the first place. However, after the Match has been made and during the Drop In/Drop Out period, player numbers *can fall below the minimum* and the Match will not be ended. This allows more players to drop in again and thus bring the number in the Match back up above the minimum.</q>
+<q>**Note:** The specified *minimum number of players* is applied for making the Match in the first place. However, after the Match has been made and during the Drop In/Drop Out period, player numbers *can fall below the minimum* and the Match will not be ended. This allows more players to drop in again and bring the number in the Match back up above the minimum.</q>
 
 There are two important settings for this type of Match:
 * *Player disconnect delay in seconds* \- The number of seconds after a Match is found before a player in the Match who disconnects is removed from the Match. If you do not enter a value or enter zero, then a player in the Match who disconnects is removed instantly.

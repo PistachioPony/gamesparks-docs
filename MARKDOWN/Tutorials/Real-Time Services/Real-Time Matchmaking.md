@@ -775,6 +775,8 @@ We will then add a line to the OnRTReady() method of the GameSparksManager.cs to
 
 ```
 
-Our game will now start a new level once the RT-session starts. In the next tutorial we will add a simple chat-service to this new level so that we can start sending and receiving packets between players.
+Our game will now start a new level once the RT-session starts.
+
+In the [next tutorial](/Tutorials/Real-Time Services/Implementing Real-Time Chat Services.md), we'll add a simple chat-service to this new level so that we can start sending and receiving packets between players.
 
 ![](img/RTMatchmaking/Matchmaking16.png)

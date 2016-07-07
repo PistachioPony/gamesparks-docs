@@ -1,4 +1,5 @@
 ---
+nav_sort: 12
 no_toc: true
 no_comment: true
 src: /Tutorials/Versioning and the Publishing Process/README.md

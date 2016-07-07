@@ -15,19 +15,19 @@ The Integrations panel allows you to configure any preferred configuration by na
 
 ### Facebook Integration
 
-Facebook Integrations tab allows you to set up Facebook Authentication for your game, an in-depth tutorial can be found [here](/Tutorials/Authentication and Player Profile/Facebook Authentication.md).
+Facebook Integrations tab allows you to set up Facebook Authentication for your game, an in-depth tutorial can be found [here](/Tutorials/Social Authentication and Player Profile/Facebook Authentication.md).
 
 ![](img/Integrations/2.jpg)
 
 ### Twitter Integration
 
-Twitter Integrations tab allows you to set up Twitter Authentication for your game, an in-depth tutorial can be found [here](/Tutorials/Authentication and Player Profile/Twitter Authentication.md).
+Twitter Integrations tab allows you to set up Twitter Authentication for your game, an in-depth tutorial can be found [here](/Tutorials/Social Authentication and Player Profile/Twitter Authentication.md).
 
 ![](img/Integrations/3.jpg)
 
 ### Google Plus Integration
 
-Google Integrations tab allows you to set up Google Plus Authentication for your game, an in-depth tutorial can be found [here](/Tutorials/Authentication and Player Profile/Google+ Authentication.md).
+Google Integrations tab allows you to set up Google Plus Authentication for your game, an in-depth tutorial can be found [here](/Tutorials/Social Authentication and Player Profile/Google+ Authentication.md).
 
 ![](img/Integrations/4.png)
 
@@ -57,12 +57,12 @@ Steam Integrations tab allows you to set up Steam Authentication
 
 ### Twitch Integration
 
-Twitch Integrations tab allows you to set up Twitch Authentication, for your game, an in-depth tutorial can be found [here](/Tutorials/Authentication and Player Profile/Twitch Authentication.md).
+Twitch Integrations tab allows you to set up Twitch Authentication, for your game, an in-depth tutorial can be found [here](/Tutorials/Social Authentication and Player Profile/Twitch Authentication.md).
 
 ![](img/Integrations/9.png)
 
 ### Kongregate Integration
 
-Kongregate Integrations tab allows you to set up Kongregate Authentication for your game, an in-depth tutorial can be found [here](/Tutorials/Authentication and Player Profile/Kongregate Authentication.md).
+Kongregate Integrations tab allows you to set up Kongregate Authentication for your game, an in-depth tutorial can be found [here](/Tutorials/Social Authentication and Player Profile/Kongregate Authentication.md).
 
 ![](img/Integrations/10.png)

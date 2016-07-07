@@ -1,6 +1,6 @@
 ---
 nav_sort: 3
-src: /Tutorials/Authentication and Player Profile/Automating User Password Change.md
+src: /Tutorials/Social Authentication and Player Profile/Automating User Password Change.md
 ---
 
 # User Password Change

@@ -1,6 +1,6 @@
 ---
 nav_sort: 1
-src: /Tutorials/Authentication and Player Profile/Accessing Player records.md
+src: /Tutorials/Social Authentication and Player Profile/Accessing Player records.md
 ---
 
 # Accessing and Updating Player Records

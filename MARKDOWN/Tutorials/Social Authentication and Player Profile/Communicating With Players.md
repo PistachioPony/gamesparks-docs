@@ -1,6 +1,6 @@
 ---
 nav_sort: 4
-src: /Tutorials/Authentication and Player Profile/Communicating With Players.md
+src: /Tutorials/Social Authentication and Player Profile/Communicating With Players.md
 ---
 
 # Communicating with Players
@@ -34,4 +34,4 @@ Cloud code is a great way to dynamically change strings/images/values within you
 
 ## E-mail/SendGrid
 
-GameSparks comes integrated with SendGrid which gives you the ability to send E-mails to your players but make sure to save E-mails against your player for reference. For an example of how to use SendGrid for a password retention process, click [here](/Tutorials/Authentication and Player Profile/Automating User Password Change.md). For more information about SendGrid, click [here](/API Documentation/Cloud Code API/Comms/SendGrid.md).
+GameSparks comes integrated with SendGrid which gives you the ability to send E-mails to your players but make sure to save E-mails against your player for reference. For an example of how to use SendGrid for a password retention process, click [here](/Tutorials/Social Authentication and Player Profile/Automating User Password Change.md). For more information about SendGrid, click [here](/API Documentation/Cloud Code API/Comms/SendGrid.md).

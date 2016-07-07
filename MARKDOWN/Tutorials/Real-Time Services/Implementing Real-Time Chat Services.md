@@ -6,7 +6,7 @@ src: /Tutorials/Real-Time Services/Implementing Real-Time Chat Services.md
 # Implementing Real-Time Chat Services
 
 
-In the last tutorial we looked at how we can setup real-time sessions as well as the matchmaking request used to find players for your real-time sessions. In this tutorial, we'll start some real-time programming to implement a peer-to-peer chat system. This will be done as an introduction to sending/receiving real-time packets and before we get onto multiplayer network programming in the next tutorial.
+In the last tutorial we looked at how we can setup real-time sessions as well as the matchmaking request used to find players for your real-time sessions. In this tutorial, we'll start some real-time programming to implement a peer-to-peer chat system. This will be done as an introduction to sending/receiving real-time packets and before we move on to multiplayer network programming in the next tutorial.
 
 ## Introduction
 
@@ -608,3 +608,5 @@ This should be put below where we set the *RTData* for the message and date, and
 You now have all the elements you need for this chat service to work. Test it out with as many players as you want by changing the number of players in your have through the game-portal:
 
 ![](img/RTChat/8.png)
+
+In the next [next tutorial](/Tutorials/Real-Time Services/Real-Time Game Example.md), we'll use real-time services to create a simple multiplayer game.

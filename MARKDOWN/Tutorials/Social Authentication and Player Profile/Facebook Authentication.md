@@ -1,6 +1,6 @@
 ---
 nav_sort: 5
-src: /Tutorials/Authentication and Player Profile/Facebook Authentication.md
+src: /Tutorials/Social Authentication and Player Profile/Facebook Authentication.md
 ---
 
 # How to authenticate players using their Facebook accounts

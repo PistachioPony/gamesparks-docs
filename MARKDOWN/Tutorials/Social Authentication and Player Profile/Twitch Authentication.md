@@ -1,6 +1,6 @@
 ---
 nav_sort: 8
-src: /Tutorials/Authentication and Player Profile/Twitch Authentication.md
+src: /Tutorials/Social Authentication and Player Profile/Twitch Authentication.md
 ---
 
 # How to Authenticate a Player Using their Twitch Account

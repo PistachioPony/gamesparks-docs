@@ -1,6 +1,6 @@
 ---
 nav_sort: 7
-src: /Tutorials/Authentication and Player Profile/Kongregate Authentication.md
+src: /Tutorials/Social Authentication and Player Profile/Kongregate Authentication.md
 ---
 
 # How to authenticate a player using their Kongregate account

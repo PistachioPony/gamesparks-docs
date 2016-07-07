@@ -1,6 +1,6 @@
 ---
 nav_sort: 9
-src: /Tutorials/Authentication and Player Profile/Twitter Authentication.md
+src: /Tutorials/Social Authentication and Player Profile/Twitter Authentication.md
 ---
 
 # How to Authenticate a Player Using their Twitter Account

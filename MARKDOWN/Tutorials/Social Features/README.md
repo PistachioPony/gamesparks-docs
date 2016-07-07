@@ -1,4 +1,5 @@
 ---
+nav_sort: 10
 no_toc: true
 no_comment: true
 src: /Tutorials/Social Features/README.md
