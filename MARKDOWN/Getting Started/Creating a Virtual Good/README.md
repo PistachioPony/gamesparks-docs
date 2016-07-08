@@ -41,7 +41,7 @@ Although receiving a successful BuyVirtualGoodsResponse is a good indication ev
 ![](img/Create/4.png)
  
 
-Continue the tutorial for your chosen SDK:
+## SDK Instructions
 
 |[![](../img/URLogo.png)](/Getting Started/Creating a Virtual Good/Unreal Virtual Goods.md)   |[![](../img/UTLogo.png)](/Getting Started/Creating a Virtual Good/Unity Virtual Goods.md)   |[![](../img/ASLogo.png)](/Getting Started/Creating a Virtual Good/ActionScript Virtual Goods.md)   |
 |---|---|---|

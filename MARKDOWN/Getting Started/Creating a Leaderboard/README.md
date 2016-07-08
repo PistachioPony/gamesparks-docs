@@ -1,5 +1,5 @@
 ---
-nav_sort: 5
+nav_sort: 4
 src: /Getting Started/Creating a Leaderboard/README.md
 ---
 
@@ -59,13 +59,13 @@ When you've created your Leaderboard, navigate to the Test Harness. At this poi
 You can now validate that the Leaderboard has worked correctly, our sorting has taken place and both player scores have been logged by calling a [LeaderboardDataRequest](/API Documentation/Request API/Leaderboards/LeaderboardDataRequest.md), passing in the Leaderboard Short Code and the Entry Count. Note: You will have additional JSON fields pre-filled, simply remove those as they are not used in this tutorial, all you need is *leaderboardShortCode* and *entryCount*.
 
 ![](img/CreatingALeaderboard/5.png)
- 
-____
 
 
 ##  Listing Entries
 
  To print out the entries of a leaderboard or entries specific to a player, follow this tutorial [here](/Tutorials/Social Features/Retrieving Leaderboard Entries.md).
+
+## SDK Instructions
 
 |[![](../img/URLogo.png)](/Getting Started/Creating a Leaderboard/Unreal Leaderboards.md)   |[![](../img/UTLogo.png)](/Getting Started/Creating a Leaderboard/Unity Leaderboards.md)   |[![](../img/ASLogo.png)](/Getting Started/Creating a Leaderboard/ActionScript Leaderboards.md)   |
 |---|---|---|

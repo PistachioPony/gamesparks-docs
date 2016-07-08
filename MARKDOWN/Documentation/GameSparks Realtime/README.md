@@ -1,4 +1,5 @@
 ---
+nav_sort: 6
 src: /Documentation/GameSparks Realtime/README.md
 ---
 

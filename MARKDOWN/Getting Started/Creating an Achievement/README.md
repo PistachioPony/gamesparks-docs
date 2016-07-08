@@ -1,5 +1,5 @@
 ---
-nav_sort: 4
+nav_sort: 5
 src: /Getting Started/Creating an Achievement/README.md
 ---
 
@@ -66,7 +66,7 @@ Finally you can validate that the currency was awarded by calling the [AccountD
 ![](img/Create/6.png)
    
 
-Continue the tutorial for your chosen SDK:
+## SDK Instructions
 
 |[![](../img/URLogo.png)](/Getting Started/Creating an Achievement/Unreal Achievements.md)   |[![](../img/UTLogo.png)](/Getting Started/Creating an Achievement/Unity Achievements.md)   |[![](../img/ASLogo.png)](/Getting Started/Creating an Achievement/ActionScript Achievements.md)   |
 |---|---|---|
