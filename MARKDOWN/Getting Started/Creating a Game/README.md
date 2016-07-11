@@ -12,13 +12,13 @@ The GameSparks platform delivers a broad range of capabilities, making it a litt
 Before getting started as a new user, you'll need to create an account on the Developer Portal. To register, click **+ Register** on the login screen. You are taken to the [Register](https://portal.gamesparks.net/register.htm) screen, where you can enter your account details.
 
 ## Creating the Game
-![l](img/CreatingGame/1.png)
+![l](img/CreatingGame/4.png)
 
  When registered, you can login:
  * If this is your first time using the Portal, you'll be greeted by the *Welcome!* screen. Click the ![](/img/fa/plus.png) icon in the middle of the screen to create your first game.
  * If you've used GameSparks before, click *Add Game* from the drop-down menu in the top-left of the screen.
 
-Give your game a name and a description then hit *Save*. You can use the name and description to identify the game in the portal and you can edit and change them at any time.
+Give your game a *Name* and a *Description* and select the *Primary Region* you want for your game and then hit *Save*. You can use the name and description to identify the game in the portal and you can edit and change them at any time.
 
 After hitting *Save* you'll be taken to the [Overview](/Documentation/Configurator/Overview.md) section of the Configurator, where your game is now ready to be configured.
 
@@ -28,7 +28,7 @@ When you create a game, two things happen:
 
 ## Remembering Keys and Secrets
 
-![l](img/CreatingGame/2.png)
+![l](img/CreatingGame/5.png)
 
  You should take note of your game's *GameSparks API Key* and *GameSparks API Secret*, because you'll need these when you set up your chosen SDK.
 
@@ -44,7 +44,7 @@ When you create a game, the game is put into *Preview* stage.  There are two st
 
 ### Publishing via Snapshots
 
-You should remain in *Preview* as you develop and test your game. When you are happy with the state of your game, you can create a *Snapshot*.  A game *Snapshot* takes a copy of everything you've created up to that point in the game's development.  You can then publish the *Snapshot*.  Publishing the *Snapshot* will copy the game as it was when the *Snapshot* was taken and moves the game from the *Preview* into the *Live* stage.
+You should remain in *Preview* as you develop and test your game. When you are happy with the state of your game, you can create a *Snapshot*.  A game *Snapshot* takes a copy of everything you've created up to that point in the game's development.  You can then publish the *Snapshot*.  Publishing the *Snapshot* will copy the game as it was when the *Snapshot* was taken and moves the game from *Preview* stage into *Live* stage.
 
 ### Managing the Game's Lifecycle
 

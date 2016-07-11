@@ -4,7 +4,7 @@ src: /API Documentation/GameSparks REST API.md
 
 # GameSparks REST API
 
-The GameSparks REST API allows you to change the configuration of your game via you own processes, bypassing the need to use the GameSparks Portal Web interface.
+The GameSparks REST API allows you to change the configuration of your game via your own processes, bypassing the need to use the GameSparks Portal Web interface.
 
 ## Authentication
 

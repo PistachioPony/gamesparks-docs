@@ -39,17 +39,23 @@ Next you'll need to create your Leaderboard. You can do this by going to the *Co
 ## Testing the Leaderboard
 
 
-Now you are ready to send some scores to your Leaderboard, but before you go into Unity, you should test this Leaderboard in the *Test Harness*. After authenticating yourself as a Player, find your Event in the *LogEvent* tab, enter a score and send the Event. Immediately after you send the request, you will see orange message appear in the inspector on the left. This is a High Score Message and when you go back into Unity you are going to setup an Event listener to execute some code whenever a player gets this Message.
+Now you are ready to send some scores to your Leaderboard, but before you go into Unity, you should test this Leaderboard in the *Test Harness*. After authenticating yourself as a Player, find your Event in the *LogEvent* tab, enter a score and send the Event.
+
+![l](img/UT/13.png)
+
+Immediately after you send the request, you will see orange message appear in the inspector on the left. This is a High Score Message and when you go back into Unity you are going to setup an Event listener to execute some code whenever a player gets this Message.
 
 ![l](img/UT/4.png)
 
 
 ### Getting the Leaderboard Data
 
-You can also check your Leaderboard data entries from the test harness using the *LeaderboardDataRequest*. You can find this in the *Leaderboards* tab on your *Test Harness*. This request gives you a lot of control over the entries it will return, however you are only concerned with the leaderboard *Short Code*, and the *entry count* (the number of entries this request will return). You can check out more information about this request [here](/API Documentation/Request API/Leaderboards/LeaderboardDataRequest.md). When you send the request you will see the list of Leaderboard entries returned on the inspector on the right.Now you are ready to start sending and receiving Leaderboard data in Unity.
+You can also check your Leaderboard data entries from the test harness using the *LeaderboardDataRequest*. You can find this in the *Leaderboards* tab on your *Test Harness*. This request gives you a lot of control over the entries it will return, however you are only concerned with the leaderboard *Short Code*, and the *entry count* (the number of entries this request will return). You can check out more information about this request [here](/API Documentation/Request API/Leaderboards/LeaderboardDataRequest.md). When you send the request you will see the list of Leaderboard entries returned on the inspector on the right.
+
+![l](img/UT/14.png)
 
 
-![l](img/UT/4.png)
+Now you are ready to start sending and receiving Leaderboard data in Unity.
 
 ### Getting the Leaderboard Data in Unity
 
@@ -84,10 +90,12 @@ new GameSparks.Api.Requests.LeaderboardDataRequest().SetLeaderboardShortCode("HI
 });
 ```
 
-The important thing here is to get the information back out of the Leaderboard Data. *response.Data* contains a collection of Leaderboard data you can iterate through and  get the entry details back. *LeaderboardData* has a lot of information you can access, and you can check out more information about it [here](/API Documentation/Request API/Leaderboards/LeaderboardDataRequest.md). Now, running the Request will print out the details of each of the Leaderboard entries in the console.
+The important thing here is to get the information back out of the Leaderboard Data. *response.Data* contains a collection of Leaderboard data you can iterate through and  get the entry details back. *LeaderboardData* has a lot of information you can access, and you can check out more information about it [here](/API Documentation/Request API/Leaderboards/LeaderboardDataRequest.md).
 
 
-![l](img/UT/5.png)
+![l](img/UT/12.png)
+
+Now, running the Request will print out the details of each of the Leaderboard entries in the console.
 
 ![l](img/UT/6.png)
 
