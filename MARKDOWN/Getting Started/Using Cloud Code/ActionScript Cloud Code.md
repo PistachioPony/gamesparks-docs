@@ -7,13 +7,13 @@ src: /Getting Started/Using Cloud Code/ActionScript Cloud Code.md
 
 ## Introduction
 
-After making the *Set_Pos* and *Get_Pos* Events in the portal, it's time to call them from your game. In this tutorial you will learn how to use a persistent variable saved against the Player to change their sprite location.
+After making the *Set_Pos* and *Get_Pos* Events in the portal, it's time to call them from your game. In this tutorial, you'll learn how to use a persistent variable saved against the player to change their sprite location.
 
 **Setting up your Set and Get Functions**
 
-  * Create the set function which logs the Set_Pos Event from the portal to pass through the Player's current location.
-  * Create the get function which logs the Get_Pos from the portal.
-  * Create a response handle for the Get_Pos Event which retrieves the the Player's saved location.
+  * Create the set function, which logs the *Set_Pos* Event from the portal to pass through the player's current location.
+  * Create the get function, which logs the *Get_Pos* from the portal.
+  * Create a response handler for the *Get_Pos* Event, which retrieves the player's saved location.
 
 **Testing the Set and Get Functions**
 
@@ -33,7 +33,12 @@ You'll notice that from here on the tutorials will automatically connect to the 
     			}
 ```
 
-Start by creating a function that will save the Player's location. This function will be logging an Event request. Similarly to Authenticating and Registering, this function will build a request. You will be requesting an Event that saves the Player's position using the Short code _'Set_Pos'_.  The request builder will need an *Event Key* that looks for a *Short code* to log the Event. For the *Set_Pos* Event, the request builder will also need an *Attribute* of type *JSON*. Declare a variable of type '*Object*' which will save the location of your Player. Add two properties to that variable to save the X and Y values. To send that variable as a *JSON* through the request builder, use _.SetJSONEventAttribute("POS", VariableName)_. The attribute *POS* is the same as was made in the Portal tutorial. This will be used to save the Player's location by passing in the X and Y values.
+Start by creating a function that will save the player's location. This function will be logging an Event request. Similar to Authenticating and Registering, this function will build a request:
+* You will be requesting an Event that saves the player's position using the Short code *Set_Pos*.
+* The request builder will need an *Event Key* that looks for a *Short code* to log the Event.
+* For the *Set_Pos* Event, the request builder will also need an *Attribute* of type *JSON*.
+* Declare a variable of type *Object*, which will save the location of your player. Add two properties to that variable to save the X and Y values.
+* To send that variable as a *JSON* through the request builder, use *.SetJSONEventAttribute("POS", VariableName)*. The attribute *POS* is the same as was made in the Portal tutorial. This will be used to save the player's location by passing in the X and Y values.
 
 ```
     	public function SetPos():void
@@ -50,7 +55,7 @@ Start by creating a function that will save the Player's location. This function
     			}
 ```
 
-Optionally you can have a Response handler which logs out when the Event is successfully requested.
+Optionally, you can have a Response handler which logs out when the Event is successfully requested:
 
 ```
     	public function SetPosResponse(response:LogEventResponse):void
@@ -60,7 +65,7 @@ Optionally you can have a Response handler which logs out when the Event is succ
     			}
 ```
 
-Create a function that will retrieve the position of the Player by calling the 'Get_Pos' Event. You will need to build a request that is similar to the previously created set function, but this time you will not need an attribute. It is important to set a *response* *handler* function as a parameter for the send() method.
+Create a function that will retrieve the position of the player by calling the *Get_Pos* Event. You'll need to build a request that is similar to the previously created set function, but this time you'll not need an attribute. It's important to set a *response* *handler* function as a parameter for the send() method:
 
 ```
     		public function GetPos():void
@@ -71,7 +76,12 @@ Create a function that will retrieve the position of the Player by calling the '
     			}
 ```
 
-In the response handler for the *Get_Pos* Event you will need to break down the response and retrieve the values that are passed in by *Script Data*. Declare a variable of type '*Object'* and set it as the *Script Data* passed in through the response. Declare two new variables of type *NUMBER* and set them as the X value or the Y value saved in the *JSON* *'POS'.* This is held in the *Script Data*. Once your variable of type '*Object*' has been set as the *response's* *Script Data* you can access its values as you do in the Portal. In this example you can access the X value simply by using *script.POS.X*. After setting the two variables of type* NUMBER* as X and Y, simply set your Player's location to the retrieved values.
+In the response handler for the *Get_Pos* Event you will need to break down the response and retrieve the values that are passed in by *Script Data*.
+* Declare a variable of type *Object* and set it as the *Script Data* passed in through the response.
+* Declare two new variables of type *NUMBER* and set them as the X value or the Y value saved in the *JSON* *'POS'.* This is held in the *Script Data*.
+* Once your variable of type *Object* has been set as the *response's* *Script Data* you can access its values as you do in the Portal.
+
+In this example, you can access the X value simply by using *script.POS.X*. After setting the two variables of type *NUMBER* as X and Y, simply set your player's location to the retrieved values.
 
 ```
     	public function PosReturn(response:LogEventResponse):void
@@ -93,6 +103,6 @@ In the response handler for the *Get_Pos* Event you will need to break down the 
 
 ## Testing your Set and Get Functions
 
-Set up your game to Set and Get your Player's position. Here we have made a simple game where you can save and load the sprite's location. Make sure you *authenticate* your Player as the location will be saved against their database. Having no Player authenticated means you cannot call the Events on the Portal, even if you are connected to that Portal.
+Set up your game to Set and Get your Player's position. Here we've made a simple game where you can save and load the sprite's location. Make sure you *authenticate* your player because the location will be saved against their database. Having no Player authenticated means you cannot call the Events on the Portal, even if you are connected to that Portal.
 
 ![l](img/AS/1.gif)

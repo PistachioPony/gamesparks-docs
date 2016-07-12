@@ -7,7 +7,7 @@ src: /Getting Started/Creating a Game/AndroidSDK Setup.md
 
 ## Introduction
 
-This tutorial will walk you through integrating GameSparks with your android project on the Android Builder IDE. For the example test harness project that we supply as a sample:
+This tutorial will walk you through integrating GameSparks with your Android project on the Android Builder IDE. For the example test harness project that we supply as a sample:
 * The GameSparks Android SDK requires API 8 or greater.
 * The Test Harness requires API 11 or greater.
 
@@ -44,7 +44,7 @@ Our example looks like this:
     }
 ```
 
-*2.*  In your module's build.gradle under dependencies add *compile 'com.gamesparks.sdk:gamesparks-android-client-sdk:0.0.2'* make sure you reference the latest SDK version number after the colon. Our sample looks like:
+*2.*  In your module's build.gradle under dependencies, add *compile 'com.gamesparks.sdk:gamesparks-android-client-sdk:0.0.2'*. Make sure you reference the latest SDK version number after the colon. Our sample looks like:
 
 ```
     apply plugin: 'com.android.application'
@@ -75,19 +75,25 @@ Our example looks like this:
 ```
 
 *3.*  Finally, in regards to set up add the following to your AndroidManifest.xml:
+
 ```
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 ```
-That will ensure that the API is ready to be used. Now to initialise the GS module and connect our frontend to our backend! In any of your activity's Java code OnCreate function place the following:
+That will ensure that the API is ready to be used.
+
+Now, to initialise the GS module and connect our frontend to our backend! In any of your activity's Java code OnCreate function place the following:
+
 ```
 
 GSAndroidPlatform.initialise(this, "YOUR KEY", "YOUR SECRET", false, true);
 
 ```
 
-Now you need an API key and secret, which you given when you create a game on our platform, click [here](/Getting Started/Creating a Game/README.md) for a quick guide to show you how. Once that's done, now you need to start the connection. To do that place this code in the activity's
+Now, you'll need an API key and secret, which you're given when you create a game on our platform, click [here](/Getting Started/Creating a Game/README.md) for a quick guide to show you how. Once that's done, now you need to start the connection.
+
+To do this, place this code in the activity's
 
 ```
 @Override
@@ -99,4 +105,6 @@ Now you need an API key and secret, which you given when you create a game on ou
 	}
 ```
 
-The reason we stop the module before we start it is to establish a new connection which works to refresh the connection. After all this is done, you now are ready to use GameSparks API in your project. Details of the API can be found here : [https://api.gamesparks.net/?javasdk#](https://api.gamesparks.net/?javasdk#)
+The reason we stop the module before we start it is to establish a new connection which works to refresh the connection.
+
+After all this is done, you are ready to use GameSparks API in your project. Details of the API can be found here : [https://api.gamesparks.net/?javasdk#](https://api.gamesparks.net/?javasdk#)

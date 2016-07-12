@@ -28,7 +28,9 @@ The previous tutorial showed us how to [Authenticate players](/Getting Started/U
 
 ## Setting up the Authentication and Registration
 
-Before creating any functions for *Authentication*, you will need a way to check if the GS module is connected to the Portal. Checking if a connection has been established before requesting any GameSparks API calls will stop exceptions being thrown. To do this, make a boolean which defaults to *false*. Once the GS module call back returns "available" upon connecting, set the boolean to *true*.
+Before creating any functions for *Authentication*, you will need a way to check if the GS module is connected to the Portal. Checking if a connection has been established before requesting any GameSparks API calls will stop exceptions being thrown.
+
+To do this, make a boolean which defaults to *false*. Once the GS module call back returns "available" upon connecting, set the boolean to *true*.
 
 ```
     public function availabilityCallback(isAvailable : Boolean):void {
@@ -42,14 +44,16 @@ Before creating any functions for *Authentication*, you will need a way to check
     }
 ```
 
-To *Authenticate* users you'll need to create a function that sends an *AuthenticationRequest*. To make any request:
+To *Authenticate* users you'll need to create a function that sends an *AuthenticationRequest*.
 
-  * You will have to use the *request builder*
+To make any request:
+
+  * You'll have to use the *request builder*
   * Followed by the type of *request*
   * Followed by the *parameters* necessary for that *request*
   * And finally ended with a *.send()*
 
-for the *AuthenticationRequest* you will need to submit a username and a password. You can pass in a function in the send parameter that will handle the response received by the GS module. This is vital to determine what to do whether the authentication was successful or not. Follow the tutorial to learn how to make a function that deals with responses.
+For the *AuthenticationRequest*, you'll need to submit a username and a password. You can pass in a function in the send parameter that will handle the response received by the GS module. This is vital to determine what to do, whether the authentication was successful or not. Follow the tutorial to learn how to make a function that deals with responses.
 
 ```
     public function Authenticate(Username:String,Password:String):void {
@@ -60,9 +64,12 @@ for the *AuthenticationRequest* you will need to submit a username and a passwor
         Alert.show("Please connect to Portal first");
       }
     }
+
 ```
 
-In this function, which we call *'handleAuthenticationResponse'* to check if the response has any errors. If the response does come back with errors, it means either the username or password wasn't recognised. If the response comes back with no errors, assume the authentication has been successful and print the player's display name to the Logger.
+In this function, which we'll *'handleAuthenticationResponse'* to check if the response has any errors:
+* If the response does come back with errors, it means either the username or password wasn't recognised.
+* If the response comes back with no errors, assume the authentication has been successful and print the player's display name to the Logger.
 
 ```
     public function handleAuthenticationResponse(response:AuthenticationResponse):void {
@@ -75,7 +82,7 @@ In this function, which we call *'handleAuthenticationResponse'* to check if th
     }
 ```
 
-The* RegistrationResponse* function needs more information. If the response returns with errors it could be because the username that someone is trying to register with is already taken. It is useful to print this out by checking if the _'NewPlayer'_ boolean is *false*.
+The *RegistrationResponse* function needs more information. If the response returns with errors it could be because the username that someone is trying to register with is already taken. It is useful to print this out by checking if the *'NewPlayer'* boolean is *false*.
 
 ```
     public function handleRegistrationResponse(response:RegistrationResponse):void {
@@ -95,7 +102,7 @@ The* RegistrationResponse* function needs more information. If the response retu
     }
 ```
 
-The *Register* function is similar to the *Authenticate* function apart from an extra parameter for *DisplayName*.
+The *Register* function is similar to the *Authenticate* function, except that it has an extra parameter for *DisplayName*.
 
 ```
     public function Register(Username:String, Password:String, DisplayName:String):void {
@@ -115,18 +122,20 @@ The *Register* function is similar to the *Authenticate* function apart from an 
 
 ## Testing Authentication and Registration
 
+
+
+*1.* Attempt to login without connecting to the Portal. You should receive an alert asking you to connect to the Portal to ensure no exceptions are thrown. In future tutorials, connections will be done automatically without need for a trigger.
+
 ![l](img/AS/1.png)
 
-Attempt to login without connecting to the Portal. You should receive an alert asking you to connect to the Portal to ensure no exceptions are thrown. In future tutorials, connections will be done automatically without need for a trigger.
+*2.* Attempt to sign in with a user that doesn't exist. You should get a log back saying that the entered username or password is incorrect:
 
 ![l](img/AS/2.png)
 
-Attempt to sign in with a user that doesn't exist. You should get a log back saying that the entered username or password is incorrect.
+*3.* Now register a new user:
 
 ![l](img/AS/3.png)
 
-Now register a new user.
+*4.* Log in using the details you just registered. The user should be recognised and you should now be authenticated.
 
 ![l](img/AS/4.png)
-
-Log in using the details you just registered. The user should be recognised and you should now be authenticated.

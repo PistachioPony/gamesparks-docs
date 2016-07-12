@@ -5,13 +5,19 @@ src: /Getting Started/Using Authentication/Unity Authentication.md
 
 # Unity Authentication
 
-This tutorial will get your Unity project communicating with GameSparks by registering and authenticating players to your game. In order to have a player connect to your GameSparks game and start sending and receiving game-data, they first need to be authenticated with your GameSparks game. This is like being logged into GameSparks, and before you log in, the user needs to be registered so they are recognised by the game when they log in.
+This tutorial will get your Unity project communicating with GameSparks by registering and authenticating players to your game.
+
+In order to have a player connect to your GameSparks game and start sending and receiving game-data, they first need to be authenticated with your GameSparks game. This is like being logged into GameSparks, and before you log in, the user needs to be registered so they are recognised by the game when they log in.
 
 **Example Unity Authentication** code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/UnityAuthentication_Tutorial.zip)
 
 ## Create the GameSparks Persistent Object
 
-Before you start adding players to your game, you need to make sure that the GameSparks SDK is set up as a persistent object. This is so you don’t get multiple instances of the SDK running as you load between levels. To begin with, you need to add a new *GameObject* to the scene. Call this *GameObject* *GameSparksManager*, and drop the script called *GameSparksUnity.cs *onto that object. You can find the script in the GameSparks folder of your project. It’s a good idea to add this to whatever your launch-scene is. For example, if you have a loading scene or splash scene. Likewise, if you have a *Game State Manager* in your game, you could drop the script directly on your GSM. So long as your GSM is persistent, you'll be good to go.
+Before you start adding players to your game, you need to make sure that the GameSparks SDK is set up as a persistent object. This is so you don’t get multiple instances of the SDK running as you load between levels.
+
+To begin with, you need to add a new *GameObject* to the scene. Call this *GameObject* *GameSparksManager*, and drop the script called *GameSparksUnity.cs* onto that object. You can find the script in the GameSparks folder of your project.
+
+It’s a good idea to add this to whatever your launch-scene is. For example, if you have a loading scene or splash scene. Likewise, if you have a *Game State Manager* in your game, you could drop the script directly on your GSM. So long as your GSM is persistent, you'll be good to go.
 
 ## Apply Settings to GameSparks Manager
 
@@ -128,10 +134,14 @@ Before you're comfortable with the GameSparks API, you’ll probably want to che
 
 ### Response Data
 
-For each request you send you will get a response from the server. You have already seen through our C# examples that this response allows us to check out any errors that occurred with your request, but there is other data you can extract too. For requests such as registration and authentication you can get information about the player back, such as their userID (a unique code for each player registered), their display name, username etc. Take a look at the sample project for examples.
+For each request you send you'll get a response from the server. You've already seen through our C# examples that this response allows us to check out any errors that occurred with your request. However, you can extract other useful information from these server responses. For requests such as registration and authentication you can get information about the player back, such as their userID (a unique code for each player registered), their display name, username, and so on.
+
+Take a look at the sample project for examples.
 
 ### NoSQL Explorer
 
- One of the most useful and trusty tools on GameSparks portal is the *NoSQL Explorer*. By using this you can check all of the mongo information you have saved for your game. You can check results and filter information for whatever you need (check out [this](/Documentation/NoSQL Explorer.md) tutorial for more info). You may want to check that your players have been authenticated properly, or later on, when your game is live, check your player-data. To do so, simply navigate to the *NoSQL* tab in your GameSparks portal, select the *player* collection from the Collection list, then click on the *Find* button. In the output panel you can see the player details for any player you have authenticated.Now you are setup and connected with GameSparks and you are ready to send and receive some data. Check out the next tutorial on Events and Cloud Code [here](/Getting Started/Using Cloud Code/README.md "Using Cloud Code").
+ One of the most useful and trusty tools on GameSparks portal is the *NoSQL Explorer*. You can use this to check all of the mongo information you have saved for your game. You can check results and filter information for whatever you need (check out [this](/Documentation/NoSQL Explorer.md) tutorial for more info). You may want to check that your players have been authenticated properly, or later on, when your game is live, to check your player-data.
+
+ To do so, simply navigate to the *NoSQL* tab in your GameSparks portal, select the *player* collection from the Collection list, then click on the *Find* button. In the output panel you can see the player details for any player you have authenticated. Now you are set up and connected with GameSparks and you are ready to send and receive some data. Check out the next tutorial on Events and Cloud Code [here](/Getting Started/Using Cloud Code/README.md "Using Cloud Code").
 
 ![l](img/UT/6.png)

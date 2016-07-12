@@ -7,12 +7,14 @@ src: /Getting Started/Creating a Virtual Good/ActionScript Virtual Goods.md
 
 ## Introduction
 
-Once you have created [Virtual Goods](./README.md) on the Portal, you can now incorporate them in your game. This tutorial will show you how to buy and consume goods using a shop interface.
+Once you've created [Virtual Goods](./README.md) on the Portal, you can incorporate them in your game.
+
+This tutorial shows you how to buy and consume goods using a shop interface:
 
 **Creating a 'Grant Currency' Event**
 
   * To help test the Virtual Goods, create an Event on the portal which takes an attribute of type NUMBER.
-  * Using Cloud code, accredit the player an amount of currency passed in through the NUMBER attribute.
+  * Using Cloud Code, accredit the player an amount of currency passed in through the NUMBER attribute.
 
 **Creating the Buy and Consume functions**
 
@@ -29,23 +31,28 @@ Once you have created [Virtual Goods](./README.md) on the Portal, you can now in
   * Launch your game, buy and consume Virtual Goods to see your details being updated accordingly.
 
 </br>
-**Example ActionScript Vitual Goods** code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/ActionscriptVirtualGoodsMXML.zip)
+**Example ActionScript Virtual Goods** code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/ActionscriptVirtualGoodsMXML.zip)
 
 ## Creating the 'Grant Currency' Event
 
-Create an Event that credits the authenticated player with extra *currency*. Add an *attribute* that will be used to indicate the amount to credit. You will log this Event whenever the authenticated player *consumes* a Gold Coin (Virtual Good).
+*1.* Create an Event that credits the authenticated player with extra *currency*.
 
+*2.* Add an *attribute* that will be used to indicate the amount to credit.
+
+You will log this Event whenever the authenticated player *consumes* a Gold Coin (Virtual Good).
 
 ![l](img/AS/1.png)
 
-In the Event *Cloud Code* create a variable that holds the amount being passed in the Event through the 'CASH' attribute, and name it 'money'. Next get the Player object using *Spark.getPlayer()* and credit their *currency1* with the 'money' value.
+*3.* In the Event *Cloud Code* create a variable that holds the amount being passed in the Event through the *CASH* attribute, and name it 'money'.
+
+*4.* Next, get the player object using *Spark.getPlayer()* and credit their *currency1* with the 'money' value.
 
 ![l](img/AS/2.png)
  
 
 ## Creating the Buy and Consume functions
 
-Create a function which will log a *buy Request* when called by using *BuyVirtualGoods* request. The *BuyVirtualGoods* request needs a *currency* type, a *quantity* and the *Short code* for the item to be purchased.
+*5.* Create a function which will log a *buy Request* when called by using *BuyVirtualGoods* request. The *BuyVirtualGoods* request needs a *currency* type, a *quantity* and the *Short code* for the item to be purchased.
 
 
 ```
@@ -56,7 +63,7 @@ Create a function which will log a *buy Request* when called by using *BuyVirtua
     			}
 ```
 
-Create a function for the consumption of *Virtual Goods*, this will use the *ConsumeVirtualGoodRequest.* The *ConsumeVirtualGoodRequest* needs a *quantity* and *Short code* of the item to be consumed.
+*6.* Create a function for the consumption of *Virtual Goods*, this will use the *ConsumeVirtualGoodRequest.* The *ConsumeVirtualGoodRequest* needs a *quantity* and *Short code* of the item to be consumed.
 
 ```
     	private function ConsumeItem():void
@@ -66,7 +73,7 @@ Create a function for the consumption of *Virtual Goods*, this will use the *Con
     			}
 ```
 
-Now you can make the *response* *handler* functions for your *consume* and *buy* requests. Both *response handlers* will be similar. For our tutorial we won't need them to do much. Have the functions check the response for errors. If the response has no errors then send a *string* to the *logger*. For the *consume* *response*, if there are no errors*,* call the Event which accredits the player with extra *currency.  *When either *response* *handler* reaches the end of their sequence, the shop data will be updated.
+*7.* Now you can make the *response* *handler* functions for your *consume* and *buy* requests. Both *response handlers* will be similar. For our tutorial, we won't need them to do much. Have the functions check the response for errors. If the response has no errors then send a *string* to the *logger*. For the *consume* *response*, if there are no errors, call the Event which accredits the player with extra *currency*. When either *response handler* reaches the end of their sequence, the shop data will be updated.
 
 ```
     	private function BuyResponse(response:BuyVirtualGoodResponse):void
@@ -102,7 +109,7 @@ Now you can make the *response* *handler* functions for your *consume* and *buy*
 
 ## Keeping track of player details
 
-To update the shop details, request the *account* *details* for the currently authenticated player. For the *currency* it's a simple text display. For the *Virtual* *Goods,* retrieve the *Virtual Goods* through *getVirtualGoods()* method, followed by the *Short code* of your *Virtual Good* which retrieves a *Number* of the *Virtual Good* of that type.
+*8.* To update the shop details, request the *account* *details* for the currently authenticated player. For the *currency* it's a simple text display. For the *Virtual* *Goods,* retrieve the *Virtual Goods* through *getVirtualGoods()* method, followed by the *Short code* of your *Virtual Good* which retrieves a *Number* of the *Virtual Good* of that type.
 
 ```
     	private function UpdateDetailsForShop(response:AccountDetailsResponse):void

@@ -7,26 +7,26 @@ src: /Getting Started/Creating an Achievement/ActionScript Achievements.md
 
 ## Introduction
 
-After making an Event that awards your Player an Achievement using Cloud Code in the Portal, you can now incorporate them into your game. This tutorial will show you how to award the Player an Achievement and a way to check the Achievements a Player has earned in-game.
+After making an Event that awards your player an Achievement using Cloud Code in the Portal, you can incorporate them into your game. This tutorial shows you how to award the player an Achievement and how to check the Achievements a Player has earned in-game.
 
 **Setting up the Account Details Request and Earning an Achievement**
 
-  * Create a function which logs an AccountDetails request using the request builder.
+  * Create a function which logs an Account Details request using the request builder.
   * Create a function which handles the Account Details response and organises it in a way that can be displayed to the user.
-  * Log the Event which awards the authenticated Player an Achievement through cloud code.
+  * Log the Event which awards the authenticated Player an Achievement through Cloud Code.
 
 **Testing the Achievement**
 
-  * Request the authenticated Player's details to see that the Player has no Achievements.
-  * Achieve the conditions to log the Event which awards the Player an Achievement. In this tutorial's game we will beat the highscore in the allotted time.
-  * After meeting the condition to earn the Achievement, request the Player details to see that the account has earned the Achievement.
+  * Request the authenticated player's details to see that the player has no Achievements.
+  * Achieve the conditions to log the Event which awards the player an Achievement. In this tutorial's game, we'll beat the highscore in the allotted time.
+  * After meeting the condition to earn the Achievement, request the player details to see that the account has earned the Achievement.
 
 </br>
 **Example ActionScript Achievements** code can be downloaded [here](http://repo.gamesparks.net/docs/tutorial-assets/ActionscriptAchievementsMXML.zip)
 
 ## Setting up the Account Details Request and Earning an Achievement
 
-Before you award the authenticated Player an *Achievement* you'll have to give them the ability to check the *Achievements* that they've earned. To do that you must request *account details* using the *createAccountDetailsRequest* using the *requestBuilder*.
+Before you award the authenticated Player an *Achievement*, you'll have to give them the ability to check the *Achievements* that they've earned. To do that you must request *account details* using the *createAccountDetailsRequest* using the *requestBuilder*.
 
 ```
     	private function requestDetails():void
@@ -35,7 +35,9 @@ Before you award the authenticated Player an *Achievement* you'll have to give t
     			}
 ```
 
-The response received by the *createAccountDetailsRequest* can be broken down to access a large amount of useful data. For our example we will retrieve *Display name, currency, location *and* Achievements.* The *Achievements* can be *retrieved* as a *vector* type and can be looped and listed conveniently. In our function we are setting our labels' text to the data we're retrieving and looping through the *Achievements* earned to display them in a list.
+The response received by the *createAccountDetailsRequest* can be broken down to access a large amount of useful data.
+
+For our example, we'll retrieve *Display name, currency, location*, and *Achievements*. The *Achievements* can be *retrieved* as a *vector* type and can be looped and listed conveniently. In our function, we're setting our labels' text to the data we're retrieving and looping through the *Achievements* earned to display them in a list.
 
 ```
     	private function PlayerDetails(response:AccountDetailsResponse):void
@@ -58,9 +60,12 @@ The response received by the *createAccountDetailsRequest* can be broken down to
     				}
 
     			}
+
 ```
 
-Finally, to finish the *Achievement* setup, all you have to do is call the Event that awards the Player the '*Cloud Achievement'* that has been created in the Portal. In this tutorial we are going to call the Event when the authenticated Player receives a highscore message.
+Finally, to finish the *Achievement* setup, all you have to do is call the Event that awards the Player the '*Cloud Achievement'* that has been created in the Portal.
+
+In this tutorial, we're going to call the Event when the authenticated Player receives a highscore message:
 
 ```
     	private function HighScoreMessageListener(message:NewHighScoreMessage):void
@@ -68,16 +73,17 @@ Finally, to finish the *Achievement* setup, all you have to do is call the Event
     				Alert.show("You achieved the highscore in the leaderboard: " + message.getLeaderboardName(), "High Score Alert")
     				requestBuilder.createLogEventRequest().setEventKey("Award_Achievement").send(GeneralLogResponse);
     			}
-```
 
- 
+```
 
 ## Testing the Achievement
 
-Log in a Player and request the details to see everything is in order. You should receive the Player's *Display name, currency, location* and zero *Achievements*.
+*1.* Log in a Player and request the details to see everything is in order. You should receive the Player's *Display name, currency, location* and zero *Achievements*:
 
 ![l](img/AS/1.jpg)
 
-Play the game and beat the highscore. Once the you've received a message informing you that you've beaten the highscore, you should automatically receive the *Achievement*. Request the account details again and check to see if the account has earned the *Achievement*.
+*2.* Play the game and beat the highscore. Once the you've received a message informing you that you've beaten the highscore, you should automatically receive the *Achievement*.
+
+*3.* Request the account details again and check to see if the account has earned the *Achievement*:
 
 ![l](img/AS/2.jpg)
