@@ -1,6 +1,6 @@
 ---
 nav_sort: 6
-src: /Documentation/GameSparks Realtime/README.md
+src: /Documentation/GameSparks Real-Time/README.md
 ---
 
 # GameSparks Real-Time Services
