@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Authentication/AmazonConnectRequest.md
 
 # AmazonConnectRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#amazonconnectrequest" target="_apidocs">here</a>*
+
 
 Allows an Amazon access token to be used as an authentication mechanism.
 

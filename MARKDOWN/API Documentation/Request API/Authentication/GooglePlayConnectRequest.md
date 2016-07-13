@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Authentication/GooglePlayConnectRequest.md
 
 # GooglePlayConnectRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#googleplayconnectrequest" target="_apidocs">here</a>*
+
 
 Allows either a Google Play access code or an access token to be used as an authentication mechanism.
 

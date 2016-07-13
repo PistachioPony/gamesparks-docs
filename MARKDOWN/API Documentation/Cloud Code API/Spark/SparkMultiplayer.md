@@ -73,3 +73,53 @@ The match if a match was found with the given id
 <b>example</b>
 <pre rel="highlighter" code-brush="js" contenteditable="false">var matchId = Spark.getMultiplayer().loadMatch(matchId);</pre>
 
+## getMatchConfig
+_signature_ getMatchConfig(string shortCode)</p>
+_returns_ [SparkMatchConfig](/API Documentation/Cloud Code API/Misc/SparkMatchConfig.md)</p>
+<b>validity</b> All Scripts
+Load the match configuration for the given shortCode
+<b>params</b>
+shortCode - The shortCode of the match configuration to load
+<b>returns</b>
+The match configuration if a one was found with the given shortCode
+<b>example</b>
+<pre rel="highlighter" code-brush="js" contenteditable="false">var matchConfig = Spark.getMultiplayer().getMatchConfig(shortCode);</pre>
+
+## loadPendingMatchById
+_signature_ loadPendingMatchById(string pendingMatchId)</p>
+_returns_ [PendingMatch](/API Documentation/Cloud Code API/Helper/PendingMatch.md)</p>
+<b>validity</b> All Scripts
+Load the pending match with the given pendingMatchId
+<b>params</b>
+pendingMatchId - The id of the pending match to load
+<b>returns</b>
+The pending match if one was found with the given id
+<b>example</b>
+<pre rel="highlighter" code-brush="js" contenteditable="false">var pendingMatch = Spark.getMultiplayer().loadPendingMatchById(pendingMatchId);</pre>
+
+## loadPendingMatchByPlayer
+_signature_ loadPendingMatchByPlayer([SparkPlayer](/API Documentation/Cloud Code API/Spark/SparkPlayer.md) player, string shortCode, string matchGroup)</p>
+_returns_ [PendingMatch](/API Documentation/Cloud Code API/Helper/PendingMatch.md)</p>
+<b>validity</b> All Scripts
+Load the pending match containing the given player for the match shortCode and match group.
+<b>params</b>
+player - A player within the pending match
+shortCode - The shortCode of the match configuration for the pending match
+matchGroup - The matchGroup for the pending match
+<b>returns</b>
+The pending match if one was found with the given id
+<b>example</b>
+<pre rel="highlighter" code-brush="js" contenteditable="false">var pendingMatch = Spark.getMultiplayer().loadPendingMatchByPlayer(player, matchShortCode, matchGroup);</pre>
+
+## cancelMatchmaking
+_signature_ cancelMatchmaking([SparkPlayer](/API Documentation/Cloud Code API/Spark/SparkPlayer.md) player, string shortCode, string matchGroup)</p>
+_returns_ void</p>
+<b>validity</b> All Scripts
+Cancel matchmaking for the given player, match shortCode and match group.
+<b>params</b>
+player - A player within a pending match
+shortCode - The shortCode of the match configuration for the pending match
+matchGroup - The matchGroup for the pending match
+<b>example</b>
+<pre rel="highlighter" code-brush="js" contenteditable="false">Spark.getMultiplayer().cancelMatchmaking(player, matchShortCode, matchGroup);</pre>
+

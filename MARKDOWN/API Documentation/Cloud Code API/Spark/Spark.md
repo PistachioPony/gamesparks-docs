@@ -220,6 +220,50 @@ challenge - the challenge to unlock
 <b>example</b>
 <pre rel="highlighter" code-brush="js" contenteditable="false">Spark.unlock(mychallenge);</pre>
 
+## lockKey
+_signature_ lockKey(string lockName, number tryMillis)</p>
+_returns_ boolean</p>
+<b>validity</b> All Scripts
+Creates a lock on an arbitrary key. Whilst the script 'owns' this lock no other script can lock on the same key, and will be blocked until the lock is released.
+Useful for situations where there may be concurrent access required to an object or data.
+Locks are reentrant and recursive, i.e. if you lock the same key twice, you will need to call unlockKey() twice to completely release the lock.
+Alternatively, an unlockKeyFully() call will release the lock regardless of how many times it has been locked by this thread.
+Locks will always be released fully when the script terminates.
+<b>params</b>
+lockKey - a unique identifier for the lock
+tryMillis - if another thread has the lock, how long to block and attempt to acquire the lock before giving up
+<b>example</b>
+<pre rel="highlighter" code-brush="js" contenteditable="false">var gotLock = Spark.lockKey(lockName, 0);</pre>
+<b>returns</b>
+true if the lock was acquired, false otherwise
+
+## unlockKey
+_signature_ unlockKey(string lockName)</p>
+_returns_ boolean</p>
+<b>validity</b> All Scripts
+Releases a lock on the given key, assuming it is held by this thread.
+This makes it available for other scripts to acquire a lock on it.
+Note that locks are recursive, i.e. if you have locked twice on this key, you must unlock twice before other scripts can gain this lock.
+<b>params</b>
+lockKey - the key that was previously locked
+<b>example</b>
+<pre rel="highlighter" code-brush="js" contenteditable="false">Spark.unlock(lockName);</pre>
+<b>returns</b>
+true if the lock was released, false otherwise
+
+## unlockKeyFully
+_signature_ unlockKeyFully(string lockName)</p>
+_returns_ boolean</p>
+<b>validity</b> All Scripts
+Fully releases all locks on the given key, assuming they are held by this thread.
+This makes it immediately available for other scripts to acquire a lock on it, regardless of how many times you have locked it previously.
+<b>params</b>
+lockKey - the key that was previously locked
+<b>example</b>
+<pre rel="highlighter" code-brush="js" contenteditable="false">Spark.unlockKeyFully(lockName);</pre>
+<b>returns</b>
+true if the lock was released, false otherwise
+
 ## hasScriptErrors
 _signature_ hasScriptErrors()</p>
 _returns_ boolean</p>

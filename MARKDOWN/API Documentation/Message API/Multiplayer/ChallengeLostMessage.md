@@ -4,6 +4,8 @@ src: /API Documentation/Message API/Multiplayer/ChallengeLostMessage.md
 
 # ChallengeLostMessage
 
+*View interactive version <a href="https://api.gamesparks.net/#challengelostmessage" target="_apidocs">here</a>*
+
 
 A message indicating that the challenge has been lost.
 
@@ -25,15 +27,6 @@ title | No | string | A textual title for the message.
 winnerName | No | string | The winning players name
 
 ## Nested types
-
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
 
 ### Challenge
 
@@ -64,15 +57,14 @@ startDate | date | The date when the challenge starts.
 state | string | One of these possible state values: ISSUED, EXPIRED, ACCEPTED, DECLINED, COMPLETE, WITHDRAWN, RUNNING, WAITING, RECEIVED
 turnCount | [PlayerTurnCount[]](#playerturncount) | A collection containing the number of turns taken by each player that has accepted the challenge.
 
-### PlayerDetail
+### ScriptData
 
-An object representing a player's id and name
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
 
 Parameter | Type | Description
 --------- | ---- | -----------
-externalIds | JSON | A player's external identifiers
-id | string | A player's id
-name | string | A player's name
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
 
 ### LeaderboardData
 
@@ -89,6 +81,16 @@ rank | number | The players rank.
 userId | string | The unique player id for this leaderboard entry.
 userName | string | The players display name.
 when | string | The date when this leaderboard entry was created.
+
+### PlayerDetail
+
+An object representing a player's id and name
+
+Parameter | Type | Description
+--------- | ---- | -----------
+externalIds | JSON | A player's external identifiers
+id | string | A player's id
+name | string | A player's name
 
 ### PlayerTurnCount
 

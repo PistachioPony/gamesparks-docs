@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Multiplayer/LogChallengeEventRequest.md
 
 # LogChallengeEventRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#logchallengeeventrequest" target="_apidocs">here</a>*
+
 
 Allows a user defined event to be triggered. The event will be posted to the challenge specified.
 

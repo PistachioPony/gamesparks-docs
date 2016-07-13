@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Authentication/KongregateConnectRequest.md
 
 # KongregateConnectRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#kongregateconnectrequest" target="_apidocs">here</a>*
+
 
 Allows a Kongregate account to be used as an authentication mechanism.
 

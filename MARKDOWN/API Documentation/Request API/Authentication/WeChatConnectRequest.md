@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Authentication/WeChatConnectRequest.md
 
 # WeChatConnectRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#wechatconnectrequest" target="_apidocs">here</a>*
+
 
 Allows a WeChat access token to be used as an authentication mechanism.
 

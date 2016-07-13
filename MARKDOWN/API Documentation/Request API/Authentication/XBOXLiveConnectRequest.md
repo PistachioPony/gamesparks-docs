@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Authentication/XBOXLiveConnectRequest.md
 
 # XBOXLiveConnectRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#xboxliveconnectrequest" target="_apidocs">here</a>*
+
 
 Allows an Xbox Live Shared Token String to be used as an authentication mechanism.
 

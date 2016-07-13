@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Authentication/ViberConnectRequest.md
 
 # ViberConnectRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#viberconnectrequest" target="_apidocs">here</a>*
+
 
 Allows a Viber account to be used as an authentication mechanism.
 

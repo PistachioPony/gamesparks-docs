@@ -4,6 +4,8 @@ src: /API Documentation/Message API/Player/AchievementEarnedMessage.md
 
 # AchievementEarnedMessage
 
+*View interactive version <a href="https://api.gamesparks.net/#achievementearnedmessage" target="_apidocs">here</a>*
+
 
 Message sent to a player when they have been awarded an achievement within the game.
 

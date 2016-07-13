@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Authentication/GameCenterConnectRequest.md
 
 # GameCenterConnectRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#gamecenterconnectrequest" target="_apidocs">here</a>*
+
 
 Allows an Apple account that has GameCenter to be used as an authentication mechanism.
 

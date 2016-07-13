@@ -12,4 +12,8 @@ This section provides a detailed account of the GameSparks platform:
 * [Managing Live Gaming Operations](/Documentation/Manage/README.md) - Setting up and deploying forms to manage your live gaming operations.
 * [Test Harness](/Documentation/Test Harness/README.md) - Using Test Harness to test and debug your game.
 * [NoSQL Explorer](/Documentation/NoSQL Explorer.md) - Interacting with data stored on the platform.
+<<<<<<< HEAD
 * [GameSparks Real-Time](/Documentation/GameSparks Real-Time/README.md) - Facilitating realtime multiplayer.
+=======
+* [GameSparks Realtime](/Documentation/GameSparks Real-Time/README.md) - Facilitating realtime multiplayer.
+>>>>>>> 5119d3560b3e43838c8a4a7432bc204365d916eb

@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Multiplayer/MatchmakingRequest.md
 
 # MatchmakingRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#matchmakingrequest" target="_apidocs">here</a>*
+
 
 Register this player for matchmaking, using the given skill and matchShortCode.
 

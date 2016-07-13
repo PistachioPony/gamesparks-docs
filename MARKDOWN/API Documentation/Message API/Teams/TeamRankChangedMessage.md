@@ -4,6 +4,8 @@ src: /API Documentation/Message API/Teams/TeamRankChangedMessage.md
 
 # TeamRankChangedMessage
 
+*View interactive version <a href="https://api.gamesparks.net/#teamrankchangedmessage" target="_apidocs">here</a>*
+
 
 This message is sent to players when their rank in a global leaderboard changes such that they are knocked out of the configured 'Top N'.
 

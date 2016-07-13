@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Authentication/RegistrationRequest.md
 
 # RegistrationRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#registrationrequest" target="_apidocs">here</a>*
+
 
 Allows a new player to be created using a username, password display name.
 

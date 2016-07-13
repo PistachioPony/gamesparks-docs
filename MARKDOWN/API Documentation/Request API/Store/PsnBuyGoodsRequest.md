@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Store/PsnBuyGoodsRequest.md
 
 # PsnBuyGoodsRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#psnbuygoodsrequest" target="_apidocs">here</a>*
+
 
 Processes an update of entitlement in PlayStation network.
 
@@ -18,9 +20,11 @@ GampSparks platform by default will use internally saved PSN user access token
 
 Parameter | Required | Type | Description
 --------- | -------- | ---- | -----------
+authorizationCode | No | string | The authorization code obtained from PSN, as described here https://ps4.scedev.net/resources/documents/SDK/latest/NpAuth-Reference/0008.html
 entitlementLabel | Yes | string | Specify the entitlement label of the entitlement to update. (Not an entitlement ID).
-psnAccessToken | No | string | PlayStations network user access token.
+redirectUri | No | string | When using the authorization code obtained from PlayStation®4/PlayStation®Vita/PlayStation®3, this is not required.
 uniqueTransactionByPlayer | No | boolean | If set to true, the transactionId from this receipt will not be globally valdidated, this will mean replays between players are possible.
+useCount | No | number | Optional - specify the quantity of the entitlement to use. Default = 1
 
 ## Response Parameters
 
@@ -43,15 +47,6 @@ transactionIds | string[] | The list of transactionIds, for this purchase, if th
 
 ## Nested types
 
-### Boughtitem
-
-A nested object that represents a bought item.
-
-Parameter | Type | Description
---------- | ---- | -----------
-quantity | number | The quantity of the bought item
-shortCode | string | The short code of the bought item
-
 ### ScriptData
 
 A collection of arbitrary data that can be added to a message via a Cloud Code script.
@@ -60,6 +55,15 @@ Parameter | Type | Description
 --------- | ---- | -----------
 myKey | string | An arbitrary data key
 myValue | JSON | An arbitrary data value.
+
+### Boughtitem
+
+A nested object that represents a bought item.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+quantity | number | The quantity of the bought item
+shortCode | string | The short code of the bought item
 
 ## Error Codes
 
@@ -78,9 +82,11 @@ verificationError | 3 | There was an error connecting to the PSN server
 	using GameSparks.Api.Responses;
 	...
 	new PsnBuyGoodsRequest()
+		.SetAuthorizationCode(authorizationCode)
 		.SetEntitlementLabel(entitlementLabel)
-		.SetPsnAccessToken(psnAccessToken)
+		.SetRedirectUri(redirectUri)
 		.SetUniqueTransactionByPlayer(uniqueTransactionByPlayer)
+		.SetUseCount(useCount)
 		.Send((response) => {
 		GSEnumerable<var> boughtItems = response.BoughtItems; 
 		long? currency1Added = response.Currency1Added; 
@@ -107,9 +113,11 @@ verificationError | 3 | There was an error connecting to the PSN server
 	
 	gs.getRequestBuilder()
 	    .createPsnBuyGoodsRequest()
+		.setAuthorizationCode(authorizationCode)
 		.setEntitlementLabel(entitlementLabel)
-		.setPsnAccessToken(psnAccessToken)
+		.setRedirectUri(redirectUri)
 		.setUniqueTransactionByPlayer(uniqueTransactionByPlayer)
+		.setUseCount(useCount)
 		.send(function(response:com.gamesparks.api.responses.BuyVirtualGoodResponse):void {
 		var boughtItems:Vector.<Boughtitem> = response.getBoughtItems(); 
 		var currency1Added:Number = response.getCurrency1Added(); 
@@ -132,9 +140,11 @@ verificationError | 3 | There was an error connecting to the PSN server
 	#import "GSAPI.h"
 	...
 	GSPsnBuyGoodsRequest* request = [[GSPsnBuyGoodsRequest alloc] init];
+	[request setAuthorizationCode:authorizationCode;
 	[request setEntitlementLabel:entitlementLabel;
-	[request setPsnAccessToken:psnAccessToken;
+	[request setRedirectUri:redirectUri;
 	[request setUniqueTransactionByPlayer:uniqueTransactionByPlayer;
+	[request setUseCount:useCount;
 	[request setCallback:^ (GSBuyVirtualGoodResponse* response) {
 	NSArray* boughtItems = [response getBoughtItems]; 
 	NSNumber* currency1Added = [response getCurrency1Added]; 
@@ -177,9 +187,11 @@ verificationError | 3 | There was an error connecting to the PSN server
 	......
 	
 	PsnBuyGoodsRequest request(gsInstance);
+	request.SetAuthorizationCode(authorizationCode)
 	request.SetEntitlementLabel(entitlementLabel)
-	request.SetPsnAccessToken(psnAccessToken)
+	request.SetRedirectUri(redirectUri)
 	request.SetUniqueTransactionByPlayer(uniqueTransactionByPlayer)
+	request.SetUseCount(useCount)
 	request.Send(PsnBuyGoodsRequest_Response);
 ```
 
@@ -192,9 +204,11 @@ import com.gamesparks.sdk.api.GSEventListener;
 
 ...
 gs.getRequestBuilder().createPsnBuyGoodsRequest()
+	.setAuthorizationCode(authorizationCode)
 	.setEntitlementLabel(entitlementLabel)
-	.setPsnAccessToken(psnAccessToken)
+	.setRedirectUri(redirectUri)
 	.setUniqueTransactionByPlayer(uniqueTransactionByPlayer)
+	.setUseCount(useCount)
 	.send(new GSEventListener<BuyVirtualGoodResponse>() {
 		@Override
 		public void onEvent(BuyVirtualGoodResponse response) {
@@ -218,9 +232,11 @@ gs.getRequestBuilder().createPsnBuyGoodsRequest()
 ```javascript
 
 	var request = new SparkRequests.PsnBuyGoodsRequest();
+	request.authorizationCode = ...;
 	request.entitlementLabel = ...;
-	request.psnAccessToken = ...;
+	request.redirectUri = ...;
 	request.uniqueTransactionByPlayer = ...;
+	request.useCount = ...;
 	var response = request.Send();
 	
 var boughtItems = response.boughtItems; 

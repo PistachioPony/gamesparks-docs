@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Authentication/SteamConnectRequest.md
 
 # SteamConnectRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#steamconnectrequest" target="_apidocs">here</a>*
+
 
 Allows a Steam sessionTicket to be used as an authentication mechanism.
 

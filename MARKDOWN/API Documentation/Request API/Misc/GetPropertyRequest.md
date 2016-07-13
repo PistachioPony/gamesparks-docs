@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Misc/GetPropertyRequest.md
 
 # GetPropertyRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#getpropertyrequest" target="_apidocs">here</a>*
+
 
 Get the property for the given short Code.
 

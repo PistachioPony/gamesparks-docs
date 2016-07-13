@@ -4,6 +4,8 @@ src: /API Documentation/Message API/Leaderboards/NewHighScoreMessage.md
 
 # NewHighScoreMessage
 
+*View interactive version <a href="https://api.gamesparks.net/#newhighscoremessage" target="_apidocs">here</a>*
+
 
 A message indicating that the player has achieved a new high score in the game.
 

@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Authentication/DeviceAuthenticationRequest.m
 
 # DeviceAuthenticationRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#deviceauthenticationrequest" target="_apidocs">here</a>*
+
 
 Allows a device id to be used to create an anonymous profile in the game.
 
