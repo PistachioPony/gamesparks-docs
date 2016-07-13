@@ -7,9 +7,9 @@ src: /Getting Started/Creating an Achievement/README.md
 
 ## Introduction
 
-GameSparks Achievements help to support the rewarding of players for accomplishments within a game and are highly configurable with respect to both the reward, and the criteria for when it is delivered. This feature can support traditional achievements systems where virtual goods (E.g. badges or items) are won for particular tasks, or combination of tasks, being completed. They can also be used to reward level completion or XP progress bonuses, basic “crafting”, and rewards for breaking into the top [x] of a Leaderboard.
+GameSparks Achievements help to support the rewarding of players for accomplishments within a game and are highly configurable with respect to both the reward and the criteria for when it is delivered. This feature can support traditional achievements systems where virtual goods (such as badges or items) are won for particular tasks, or combination of tasks, being completed. They can also be used to reward level completion or XP progress bonuses, basic “crafting”, and rewards for breaking into the top [x] of a Leaderboard.
 
-Achievements are cross-platform. This conveniently means you do not have to set them up in each store and can support cross-platform play for your game. This is because game-progress can be tracked, allowing rewards to be used across multiple platforms.
+Achievements are cross-platform. This conveniently means you don't have to set them up in each store and can support cross-platform play for your game. This is because game-progress can be tracked, allowing rewards to be used across multiple platforms.
 
 Achievements can be awarded through Leaderboard Events, or based on some custom logic defined in Cloud Code.
 

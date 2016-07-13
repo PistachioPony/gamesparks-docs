@@ -14,7 +14,7 @@ This tutorial will go over the process of creating a Leaderboard, along with an 
 
 ## Creating the Score Event
 
-The first thing you need to do is create an Event that will push the player’s score to the Leaderboard. If you need a reminder on how to create Events, check out the previous tutorial [here](/Getting Started/Using Cloud Code/README.md). For this tutorial, your new Event needs one attribute, which will be the score, and you can call the Event something like *Submit Score*. You can see the options for creating an Event are as follows:
+The first thing you need to do is create an Event that will push the player’s score to the Leaderboard. If you need a reminder on how to create Events, check out the tutorial [here](/Getting Started/Using Cloud Code/README.md). For this tutorial, your new Event needs one attribute, which will be the score, and you can call the Event something like *Submit Score*. You can see the options for creating an Event are as follows:
 
 *   *Short Code* – This field is the reference by which you will call the Event, these are always unique.
 *   *Name* – This field is used when representing the Event in Test Harness as well as in Cloud Code.
@@ -60,7 +60,7 @@ Now you are ready to start sending and receiving Leaderboard data in Unity.
 ### Getting the Leaderboard Data in Unity
 
 
-You have already seen how to send a logEventRequest, in Unity, in the previous tutorial on Cloud Code, which you can check out [here](/Getting Started/Using Cloud Code/Unreal Cloud Code.md). The code is as follows:
+You have already seen how to send a *logEventRequest*, in Unity, in the previous tutorial on Cloud Code, which you can check out [here](/Getting Started/Using Cloud Code/Unity Cloud Code.md). The code is as follows:
 
 ```
 new GameSparks.Api.Requests.LogEventRequest().SetEventKey("SUBMIT_SCORE").SetEventAttribute("SCORE", "1234").Send((response) => {

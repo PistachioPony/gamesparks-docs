@@ -18,13 +18,13 @@ This tutorial shows you how to buy and consume goods using a shop interface:
 
 **Creating the Buy and Consume functions**
 
-  * Create a function to log the BuyVirtualGoods request and one for the ConsumeVirtualGoods request.
-  * Create a function to handle the BuyVirtualGoods request.
-  * Create a function to handle the ConsumeVirtualGoods request which logs an Event to accredit the authenticated player with extra currency.
+  * Create a function to log the *BuyVirtualGoods* request and one for the *ConsumeVirtualGoods* request.
+  * Create a function to handle the *BuyVirtualGoods* request.
+  * Create a function to handle the *ConsumeVirtualGoods* request which logs an Event to accredit the authenticated player with extra currency.
 
 **Keeping track of player details**
 
-  * Create a function that updates the player's currency and amount of Virtual Goods owned by using the AccountDetails request.
+  * Create a function that updates the player's currency and amount of Virtual Goods owned by using the *AccountDetailsRequest*.
 
 **Testing Virtual Goods**
 
@@ -109,7 +109,7 @@ You will log this Event whenever the authenticated player *consumes* a Gold Coin
 
 ## Keeping track of player details
 
-*8.* To update the shop details, request the *account* *details* for the currently authenticated player. For the *currency* it's a simple text display. For the *Virtual* *Goods,* retrieve the *Virtual Goods* through *getVirtualGoods()* method, followed by the *Short code* of your *Virtual Good* which retrieves a *Number* of the *Virtual Good* of that type.
+*8.* To update the shop details, request the *account* *details* for the currently authenticated player. For the *currency* it's a simple text display. For the *Virtual* *Goods,* retrieve the *Virtual Goods* through *getVirtualGoods()* method, followed by the *Short code* of your *Virtual Good* which retrieves a *Number* of the *Virtual Goods* of that type.
 
 ```
     	private function UpdateDetailsForShop(response:AccountDetailsResponse):void

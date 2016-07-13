@@ -29,7 +29,7 @@ First you will need to navigate to the Events page in your Configurator. Next, 
   * **Default Value** - This would be the default value that would be used for this Event attribute if it's not passed into the [LogEventRequest](/API Documentation/Request API/Player/LogEventRequest.md).
   * **Default Calculation** - This determines how values are tracked in the Running Totals.
 
-<q>**Note:** You do not need to understand the concept of Running Totals for this tutorial, just set it to Maximum because we want to track the highest score posted for your player. (To learn more about running totals, see [this](/Documentation/Test Harness/README.md) tutorial)</q>
+<q>**Note:** You do not need to understand the concept of Running Totals for this tutorial, just set it to Maximum because we want to track the highest score posted for your player. (You can learn more about running totals [here](/Documentation/Configurator/Running Totals.md).)</q>
 
 ![](img/CreatingALeaderboard/1.png)
 

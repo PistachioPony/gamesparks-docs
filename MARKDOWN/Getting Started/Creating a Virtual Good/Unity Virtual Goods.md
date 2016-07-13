@@ -94,7 +94,7 @@ The next thing to do is give your player the ability to use their Virtual Goods 
     });
 ```
 
-
+</br>
 ### Testing Your Shop
 
 You'll now have the ability to buy and consume Virtual Goods, as well as grant your players some currency and retrieve and update the account details each time an action is taken. If you are working from the GameSparks sample project for this tutorial, you'll see the following screen.

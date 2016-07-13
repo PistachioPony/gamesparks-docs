@@ -7,7 +7,7 @@ src: /Getting Started/Creating a Leaderboard/ActionScript Leaderboards.md
 
 ## Introduction
 
-The previous tutorial taught you how to create a Leaderboard and Event that submits your player's score. Now you can incorporate them into your ActionScript project.
+The previous [tutorial](./README.md) taught you how to create a Leaderboard and Event that submits your player's score. Now you can incorporate them into your ActionScript project.
 
 For this tutorial, we've created a sample game that runs for 10 seconds. In those 10 seconds:
 * The player must collect as many points as possible.

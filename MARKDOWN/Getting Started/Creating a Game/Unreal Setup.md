@@ -68,22 +68,22 @@ Now you will need to drag-and-drop the component into the Event Graph pane in th
 
 ![l](img/UR/6.png)
 
-For this tutorial we will be using the pre-built "*Begin Play*" Event to connect to the GameSparks Service:
-* Because a reference to the GameSparks object is available in the Event Graph, you can "Drag Off" two functions from it, one should be "*Disconnect*" and the other one should be "*Connect*".
+For this tutorial we'll be using the pre-built "*Begin Play*" Event to connect to the GameSparks Service:
+* Because a reference to the GameSparks object is available in the Event Graph, you can drag-off two functions from it, one should be "*Disconnect*" and the other one should be "*Connect*".
 * Link everything together with "*Begin Play*" Event:
 
 ![l](img/UR/7.png)
 
-<q>**Note:** The "Connect" function will require your GameSparks *API* *Key* and *Secret* to work. If you've forgotten these, refer to the Game Setup guide which can be found [here](./README.md).</q>
+<q>**Note:** The "Connect" function will require your GameSparks *API* *Key* and *Secret* to work. If you've forgotten these, refer to the Game Set Up guide, which can be found [here](./README.md).</q>
 
-At this point, you'll want to receive feedback from the module to ensure that you have actually connected. To do this you need an "*OnGameSparksAvailableDelegate*" Event from the GameSparks component. By clicking on the GameSparks component you will see the Event has linked to it and can be clicked and dropped into the Event Graph.
+At this point, you'll want to receive feedback from the module to ensure that you have actually connected. To do this you need an *OnGameSparksAvailableDelegate* Event from the GameSparks component. By clicking on the GameSparks component you will see the Event has linked to it and can be clicked and dropped into the Event Graph.
 
-When you've added the "*OnGameSparksAvailableDelegate*" Event, you'll get an extremely useful tool to check whether your GameSparks connection is valid. You can use the Event Graph to output some information about the connection to GameSparks:
+When you've added the *OnGameSparksAvailableDelegate* Event, you'll get an extremely useful tool to check whether your GameSparks connection is valid. You can use the Event Graph to output some information about the connection to GameSparks:
 
 ![l](img/UR/8.png)
 
 The above Event Graph will try to connect to the GameSparks Service and print out a string whether the connection is valid or not.
 
-Now, simply click "Play" and you should be connected to GameSparks successfully:
+Now, simply click *Play* and you should be connected to GameSparks successfully:
 
 ![l](img/UR/9.png)

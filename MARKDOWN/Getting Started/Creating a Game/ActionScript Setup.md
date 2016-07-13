@@ -32,7 +32,7 @@ This tutorial shows you how to set up your ActionScript project and establish a 
 
 ## Setting up Your ActionScript Project
 
-*1.* Start by creating a project for ActionScript. For the following tutorials we will be developing a Flex 3 project:
+*1.* Start by creating a project for ActionScript. Here we'll be developing a Flex 3 project:
 
 ![l](img/AS/1.png)
 
@@ -123,7 +123,7 @@ The *Service URL* is located in the Test Harness:
     			}
 ```
 
-For the Logger, you will need to set up a text area which will receive the log strings and display them. To do that we use:
+For the *Logger*, you will need to set up a text area which will receive the log strings and display them. To do that we use:
 
 *< s:Group id=”LogSlot” includeInLayout = “false” >< s:layout >< s:VerticalLayoutpaddingLeft=”700″ paddingRight=”10″paddingTop=”10″ paddingBottom=”10″gap=”5″/ >< /s:layout >< s:Label text=”Log” fontSize=”18″ fontWeight=”bold” / >< s:TextArea width=”200″ height=”500″ id=”logArea” / >< /s:Group >*
 

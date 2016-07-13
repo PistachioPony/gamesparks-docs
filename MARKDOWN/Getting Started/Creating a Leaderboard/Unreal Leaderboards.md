@@ -7,7 +7,7 @@ src: /Getting Started/Creating a Leaderboard/Unreal Leaderboards.md
 
 ## Introduction
 
-If you've followed the Portal [Tutorial](./README.md) for making an Event and a Leaderboard, then for this tutorial you only need to call your Event.
+If you've followed the [tutorial](./README.md) for making an Event and a Leaderboard, then for this tutorial you only need to call your Event.
 
 Here's an overview of what we'll cover in this tutorial:
 

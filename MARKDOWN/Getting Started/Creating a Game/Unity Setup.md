@@ -32,7 +32,7 @@ Now you have to link your Unity project with your GameSparks game.
 
 If you need instructions on how to create a new GameSparks game through the Portal check out the tutorial [here](./README.md).
 
-In the GameSparks folder, that has just appeared in your project, navigate to the *Test UI* folder, and open the *GameSparksTestUI* scene.  Go ahead and play this scene and see what happens.  You will likely see something like this:
+In the GameSparks folder that has just appeared in your project, navigate to the *Test UI* folder, and open the *GameSparksTestUI* scene.  Go ahead and play this scene and see what happens.  You will likely see something like this:
 
 ![l](img/UT/2.png)
 
@@ -63,12 +63,12 @@ Congratulations, you are now connected to your GameSparks game!
 ### Still Getting Unknown Service Error?
 
 If you're still seeing the *GS: ERROR UNKNOWN SERVICE* message:
-* Double-check that there are no trailing or preceding spaces *API Key* and *API Secret* fields.
+* Double-check that there are no trailing or preceding spaces in the *API Key* and *API Secret* fields.
 * Please check that the code you entered in the GameSparks Settings did not contain space characters.
 
 ## Other SDK Settings
 
-You can see that there are a few other settings available for the Unity SDK, but for the initial setup you don’t need to worry about them, so feel free to skip this part if you are keen to get started.
+You can see that there are a few other settings available for the Unity SDK. For the initial setup you don’t need to worry about them, so feel free to skip this part if you are keen to get started.
 
   * *Preview Build Option* - This allows you to connect the SDK to preview builds of your game.
   * *Debug Build Option* - With this option on, your game will receive extra web-sockets information.

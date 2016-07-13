@@ -13,7 +13,7 @@ In this tutorial you will you will be introduced to Achievements using the Game
 
 ## Awarding Achievements
 
-Once you have your Achievement setup, you have to call a *LogEventRequest* for the Event you created previously. You can check out how to send these kinds of requests in a previous tutorial [here](/Getting Started/Using Cloud Code/README.md). Once you have called the *LogEventRequest* awarding your player the Achievement, you should see the Achievement Earned Message popup in the console. The next step is to hook up the *AchievementEarnedMessage* listener so you can have some custom code execute when your player is awarded an Achievement.
+Once you have your Achievement setup, you have to call a *LogEventRequest* for the Event you created previously. You can check out how to send these kinds of requests in a previous tutorial [here](/Getting Started/Using Cloud Code/README.md). Once you have called the *LogEventRequest* awarding your player the Achievement, you should see the Achievement Earned Message pop up in the console. The next step is to hook up the *AchievementEarnedMessage* listener so you can have some custom code execute when your player is awarded an Achievement.
 
 ```
     void Awake() {
@@ -24,13 +24,13 @@ Once you have your Achievement setup, you have to call a *LogEventRequest* for t
     }
 ```
 
-By running this code in the sample project, you should get the “AWARDED ACHIEVEMENT” message in the console.
+By running this code in the sample project, you should get the *AWARDED ACHIEVEMENT* message in the console.
 
 ![l](img/UT/2.png)
 
 ## Checking Achievements Earned
 
-If you want to check to see if the Achievement was actually earned you can use the *AccountDetailsRequest* call. This will return a bunch of information about your player, including the Achievements earned, the currency they currently owned, amongst others.
+If you want to check to see if the Achievement was actually earned, you can use the *AccountDetailsRequest* call. This will return a lot of information about your player, including the Achievements earned, the currency they currently owned, amongst others.
 
 ```
     	new GameSparks.Api.Requests.AccountDetailsRequest().Send((response) => {
