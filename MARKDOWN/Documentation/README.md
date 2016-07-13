@@ -3,9 +3,8 @@ no_toc: true
 no_comment: true
 nav_sort: 2
 src: /Documentation/README.md
+banner: true
 ---
-
-# Documentation
 
 This section provides a detailed account of the GameSparks platform:
 * [Key Concepts](/Documentation/Key Concepts/README.md) - Understanding key GameSparks design concepts.
