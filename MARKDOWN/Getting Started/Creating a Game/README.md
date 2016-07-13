@@ -54,5 +54,7 @@ Publishing your game via the use of a *Snapshot* allows you to easily manage you
 
 ## SDK Instructions
 
-|[![](../img/URLogo.png)](/Getting Started/Creating a Game/Unreal Setup.md)   |[![](../img/UTLogo.png)](/Getting Started/Creating a Game/Unity Setup.md)   |[![](../img/ASLogo.png)](/Getting Started/Creating a Game/ActionScript Setup.md)   |
-|---|---|---|
+* [Unity](/Getting Started/Creating a Game/Unity Setup.md)
+* [Unreal](/Getting Started/Creating a Game/Unreal Setup.md)
+* [ActionScript](/Getting Started/Creating a Game/ActionScript Setup.md)
+* [Android](/Getting Started/Creating a Game/AndroidSDK Setup.md)

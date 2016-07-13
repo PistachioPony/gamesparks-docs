@@ -67,5 +67,6 @@ You can now validate that the Leaderboard has worked correctly, our sorting has 
 
 ## SDK Instructions
 
-|[![](../img/URLogo.png)](/Getting Started/Creating a Leaderboard/Unreal Leaderboards.md)   |[![](../img/UTLogo.png)](/Getting Started/Creating a Leaderboard/Unity Leaderboards.md)   |[![](../img/ASLogo.png)](/Getting Started/Creating a Leaderboard/ActionScript Leaderboards.md)   |
-|---|---|---|
+* [Unity](/Getting Started/Creating a Leaderboard/Unity Leaderboards.md)
+* [Unreal](/Getting Started/Creating a Leaderboard/Unreal Leaderboards.md)
+* [ActionScript](/Getting Started/Creating a Leaderboard/ActionScript Leaderboards.md)

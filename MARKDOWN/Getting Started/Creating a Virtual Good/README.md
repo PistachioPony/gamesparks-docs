@@ -47,5 +47,6 @@ Although receiving a successful BuyVirtualGoodsResponse is a good indication ev
 
 ## SDK Instructions
 
-|[![](../img/URLogo.png)](/Getting Started/Creating a Virtual Good/Unreal Virtual Goods.md)   |[![](../img/UTLogo.png)](/Getting Started/Creating a Virtual Good/Unity Virtual Goods.md)   |[![](../img/ASLogo.png)](/Getting Started/Creating a Virtual Good/ActionScript Virtual Goods.md)   |
-|---|---|---|
+* [Unity](/Getting Started/Creating a Virtual Good/Unity Virtual Goods.md)
+* [Unreal](/Getting Started/Creating a Virtual Good/Unreal Virtual Goods.md)
+* [ActionScript](/Getting Started/Creating a Virtual Good/ActionScript Virtual Goods.md)

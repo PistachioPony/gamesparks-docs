@@ -68,5 +68,6 @@ Finally you can validate that the currency was awarded by calling the [AccountD
 
 ## SDK Instructions
 
-|[![](../img/URLogo.png)](/Getting Started/Creating an Achievement/Unreal Achievements.md)   |[![](../img/UTLogo.png)](/Getting Started/Creating an Achievement/Unity Achievements.md)   |[![](../img/ASLogo.png)](/Getting Started/Creating an Achievement/ActionScript Achievements.md)   |
-|---|---|---|
+* [Unity](/Getting Started/Creating an Achievement/Unity Achievements.md)
+* [Unreal](/Getting Started/Creating an Achievement/Unreal Achievements.md)
+* [ActionScript](/Getting Started/Creating an Achievement/ActionScript Achievements.md)

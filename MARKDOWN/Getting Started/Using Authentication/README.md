@@ -25,5 +25,6 @@ You have now successfully Registered and Authenticated a player. The next tutori
 
 ## SDK Instructions
 
-|[![](../img/URLogo.png)](/Getting Started/Using Authentication/Unreal Authentication.md)   |[![](../img/UTLogo.png)](/Getting Started/Using Authentication/Unity Authentication.md)   |[![](../img/ASLogo.png)](/Getting Started/Using Authentication/ActionScript Authentication.md)   |
-|---|---|---|
+* [Unity](/Getting Started/Using Authentication/Unity Authentication.md)
+* [Unreal](/Getting Started/Using Authentication/Unreal Authentication.md)
+* [ActionScript](/Getting Started/Using Authentication/ActionScript Authentication.md)
