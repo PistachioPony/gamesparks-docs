@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Multiplayer/FindMatchRequest.md
 
 # FindMatchRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#findmatchrequest" target="_apidocs">here</a>*
+
 
 @Deprecated. Use MatchmakingRequest instead.
 
@@ -41,6 +43,15 @@ scriptData | ScriptData | A JSON Map of any data added either to the Request or 
 
 ## Nested types
 
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
+
 ### Player
 
 A nested object that represents a player.
@@ -55,15 +66,6 @@ online | boolean | The online status of the Player
 scriptData | JSON | The script data of the Player
 virtualGoods | string[] | The virtual goods of the Player
 
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
-
 ## Error Codes
 
 Key | Value | Description
@@ -73,6 +75,8 @@ matchShortCode | may not be null | matchShortCode must be provided
 matchShortCode | NOT_FOUND | No matchConfig was found with the given matchShortCode
 match | NOT_FOUND | No match was found for the current player
 match | HEAD_TO_HEAD_ONLY | To match multiple opponents please use MatchmakingRequest
+match | NO_DROP_IN_DROP_OUT_AVAILABLE | To use the drop-in-drop-out functionality please use MatchmakingRequest
+match | NO_MANUAL_MATCHMAKING | To use the manual matchmaking functionality please use MatchmakingRequest
 
 ## Code Samples
 

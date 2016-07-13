@@ -4,6 +4,8 @@ src: /API Documentation/Message API/Leaderboards/NewTeamScoreMessage.md
 
 # NewTeamScoreMessage
 
+*View interactive version <a href="https://api.gamesparks.net/#newteamscoremessage" target="_apidocs">here</a>*
+
 
 A message indicating that the player's team has achieved a new high score in the game.
 

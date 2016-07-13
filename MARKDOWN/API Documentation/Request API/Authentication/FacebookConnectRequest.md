@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Authentication/FacebookConnectRequest.md
 
 # FacebookConnectRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#facebookconnectrequest" target="_apidocs">here</a>*
+
 
 Allows either a Facebook access token, or a Facebook authorization code to be used as an authentication mechanism.
 

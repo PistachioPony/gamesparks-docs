@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Player/SendFriendMessageRequest.md
 
 # SendFriendMessageRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#sendfriendmessagerequest" target="_apidocs">here</a>*
+
 
 Sends a message to one or more game friend(s). A game friend is someone in the players social network who also plays the game.
 

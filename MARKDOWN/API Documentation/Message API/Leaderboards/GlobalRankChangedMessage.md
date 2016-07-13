@@ -4,6 +4,8 @@ src: /API Documentation/Message API/Leaderboards/GlobalRankChangedMessage.md
 
 # GlobalRankChangedMessage
 
+*View interactive version <a href="https://api.gamesparks.net/#globalrankchangedmessage" target="_apidocs">here</a>*
+
 
 This message is sent to players when their rank in a global leaderboard changes such that they are knocked out of the configured 'Top N'.
 

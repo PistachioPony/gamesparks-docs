@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Authentication/AuthenticationRequest.md
 
 # AuthenticationRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#authenticationrequest" target="_apidocs">here</a>*
+
 
 Provides authentication using a username/password combination.
 

@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Multiplayer/ListChallengeRequest.md
 
 # ListChallengeRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#listchallengerequest" target="_apidocs">here</a>*
+
 
 Returns a list of challenges in the state defined in the 'state' field.
 
@@ -46,15 +48,6 @@ scriptData | ScriptData | A JSON Map of any data added either to the Request or 
 
 ## Nested types
 
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
-
 ### Challenge
 
 A nested object that represents the challenge data.
@@ -83,6 +76,15 @@ shortCode | string | The challenge's short code.
 startDate | date | The date when the challenge starts.
 state | string | One of these possible state values: ISSUED, EXPIRED, ACCEPTED, DECLINED, COMPLETE, WITHDRAWN, RUNNING, WAITING, RECEIVED
 turnCount | [PlayerTurnCount[]](#playerturncount) | A collection containing the number of turns taken by each player that has accepted the challenge.
+
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
 
 ### PlayerDetail
 

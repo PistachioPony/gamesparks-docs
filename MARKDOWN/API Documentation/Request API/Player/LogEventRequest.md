@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Player/LogEventRequest.md
 
 # LogEventRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#logeventrequest" target="_apidocs">here</a>*
+
 
 Allows a user defined event to be triggered.
 

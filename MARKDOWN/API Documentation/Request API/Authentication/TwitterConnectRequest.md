@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Authentication/TwitterConnectRequest.md
 
 # TwitterConnectRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#twitterconnectrequest" target="_apidocs">here</a>*
+
 
 Allows a Twitter account to be used as an authentication mechanism.
 

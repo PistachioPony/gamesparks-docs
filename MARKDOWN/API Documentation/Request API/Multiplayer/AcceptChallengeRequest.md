@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Multiplayer/AcceptChallengeRequest.md
 
 # AcceptChallengeRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#acceptchallengerequest" target="_apidocs">here</a>*
+
 
 Accepts a challenge that has been issued to the current player.
 

@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Authentication/PSNConnectRequest.md
 
 # PSNConnectRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#psnconnectrequest" target="_apidocs">here</a>*
+
 
 Allows a PSN account to be used as an authentication mechanism.
 

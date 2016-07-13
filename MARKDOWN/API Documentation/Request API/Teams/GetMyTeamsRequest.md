@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Teams/GetMyTeamsRequest.md
 
 # GetMyTeamsRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#getmyteamsrequest" target="_apidocs">here</a>*
+
 
 Get the teams that the player is in. Can be filtered on team type and also on those teams that the player owns.
 

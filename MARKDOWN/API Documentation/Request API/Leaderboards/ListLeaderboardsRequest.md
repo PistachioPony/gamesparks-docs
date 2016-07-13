@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Leaderboards/ListLeaderboardsRequest.md
 
 # ListLeaderboardsRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#listleaderboardsrequest" target="_apidocs">here</a>*
+
 
 Returns a list of all leaderboards configured in the game.
 

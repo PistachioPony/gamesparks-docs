@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Authentication/GooglePlusConnectRequest.md
 
 # GooglePlusConnectRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#googleplusconnectrequest" target="_apidocs">here</a>*
+
 
 Allows either a Google Plus access code or an authentication token to be used as an authentication mechanism.
 

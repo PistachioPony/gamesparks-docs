@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Multiplayer/ListChallengeTypeRequest.md
 
 # ListChallengeTypeRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#listchallengetyperequest" target="_apidocs">here</a>*
+
 
 Returns the list of configured challenge types.
 

@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Multiplayer/FindChallengeRequest.md
 
 # FindChallengeRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#findchallengerequest" target="_apidocs">here</a>*
+
 
 Allows a player to find challenges that they are eligible to join.
 
@@ -29,15 +31,6 @@ challengeInstances | [Challenge[]](#challenge) | A list of JSON objects represen
 scriptData | ScriptData | A JSON Map of any data added either to the Request or the Response by your Cloud Code
 
 ## Nested types
-
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
 
 ### Challenge
 
@@ -67,6 +60,15 @@ shortCode | string | The challenge's short code.
 startDate | date | The date when the challenge starts.
 state | string | One of these possible state values: ISSUED, EXPIRED, ACCEPTED, DECLINED, COMPLETE, WITHDRAWN, RUNNING, WAITING, RECEIVED
 turnCount | [PlayerTurnCount[]](#playerturncount) | A collection containing the number of turns taken by each player that has accepted the challenge.
+
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
 
 ### PlayerDetail
 

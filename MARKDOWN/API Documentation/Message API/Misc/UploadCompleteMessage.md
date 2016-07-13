@@ -4,6 +4,8 @@ src: /API Documentation/Message API/Misc/UploadCompleteMessage.md
 
 # UploadCompleteMessage
 
+*View interactive version <a href="https://api.gamesparks.net/#uploadcompletemessage" target="_apidocs">here</a>*
+
 
 A message indicating that the asynchronous upload task trigger by the player is now complete.
 

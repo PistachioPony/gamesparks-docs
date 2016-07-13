@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Player/ListTransactionsRequest.md
 
 # ListTransactionsRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#listtransactionsrequest" target="_apidocs">here</a>*
+
 
 Returns a list of the current player's transaction history.
 
@@ -30,6 +32,15 @@ transactionList | [PlayerTransaction[]](#playertransaction) | A list of JSON obj
 
 ## Nested types
 
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
+
 ### PlayerTransactionItem
 
 A nested object that represents a single item in a transaction.
@@ -47,6 +58,7 @@ A nested object that represents a player transaction.
 Parameter | Type | Description
 --------- | ---- | -----------
 items | [PlayerTransactionItem[]](#playertransactionitem) | The items (currency or virtual goods) involved in this transaction
+originalRequestId | string | The original request ID for this transaction
 playerId | string | The player ID
 reason | string | The reason for the transaction
 revokeDate | date | Gets the date when this transaction was revoked, if applicable
@@ -55,15 +67,6 @@ script | string | The specific script in which this transaction occurred
 scriptType | string | The script type in which this transaction occurred (e.g. event)
 transactionId | string | The transaction ID of this purchase, if applicable
 when | date | The date of the transaction
-
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
 
 
 ## Code Samples

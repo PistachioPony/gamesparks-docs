@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Authentication/TwitchConnectRequest.md
 
 # TwitchConnectRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#twitchconnectrequest" target="_apidocs">here</a>*
+
 
 Allows a Twitch account to be used as an authentication mechanism.
 

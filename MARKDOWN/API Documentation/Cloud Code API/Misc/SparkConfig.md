@@ -91,3 +91,15 @@ _returns_ [SparkDownloadable](/API Documentation/Cloud Code API/Misc/SparkDownlo
 <b>validity</b> All Scripts
 Returns a list of all the downloadables configured for this game
 
+## getMatchConfigs
+_signature_ getMatchConfigs()</p>
+_returns_ JSON</p>
+<b>validity</b> All Scripts
+Returns a list of the match configurations for the game
+
+## getMatchConfig
+_signature_ getMatchConfig(string shortCode)</p>
+_returns_ [SparkMatchConfig](/API Documentation/Cloud Code API/Misc/SparkMatchConfig.md)</p>
+<b>validity</b> All Scripts
+Returns the match configuration with the supplied short code
+

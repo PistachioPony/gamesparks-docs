@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Authentication/QQConnectRequest.md
 
 # QQConnectRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#qqconnectrequest" target="_apidocs">here</a>*
+
 
 Allows a QQ access token to be used as an authentication mechanism.
 

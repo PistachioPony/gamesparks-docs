@@ -4,6 +4,8 @@ src: /API Documentation/Message API/Teams/TeamChatMessage.md
 
 # TeamChatMessage
 
+*View interactive version <a href="https://api.gamesparks.net/#teamchatmessage" target="_apidocs">here</a>*
+
 
 A message sent from a player to an entire team.
 

@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Leaderboards/SocialLeaderboardDataRequest.md
 
 # SocialLeaderboardDataRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#socialleaderboarddatarequest" target="_apidocs">here</a>*
+
 
 Returns leaderboard data that only contains entries of players that are game friends with the current player.
 

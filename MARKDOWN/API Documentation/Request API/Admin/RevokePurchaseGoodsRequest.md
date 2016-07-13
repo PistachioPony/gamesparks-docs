@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Admin/RevokePurchaseGoodsRequest.md
 
 # RevokePurchaseGoodsRequest
 
+*View interactive version <a href="https://api.gamesparks.net/#revokepurchasegoodsrequest" target="_apidocs">here</a>*
+
 
 Revokes the purchase of a good. The items aquired will be removed from remaining items of the player.
 
