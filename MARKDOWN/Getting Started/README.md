@@ -3,9 +3,8 @@ no_toc: true
 no_comment: true
 nav_sort: 1
 src: /Getting Started/README.md
+banner: true
 ---
-
-# Getting Started
 
 Follow these tutorials in sequence to get quickly powered-up with the GameSparks platform, including setting up and working with features which can be used through the GameSparks API on any supported SDK.
   * [Creating your Game](/Getting Started/Creating a Game/README.md) - How to create your first game on the platform and set up your SDK so you're ready to start using GameSparks.

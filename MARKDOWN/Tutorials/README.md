@@ -3,9 +3,8 @@ no_toc: true
 no_comment: true
 nav_sort: 3
 src: /Tutorials/README.md
+banner: true
 ---
-
-# Tutorials
 
 Here you'll find a wide range of in-depth tutorials to help you with detailed aspects of the platform:
 * [Analytics, Segmentation and Game Management](/Tutorials/Analytics, Segmentation and Game Management/README.md)
