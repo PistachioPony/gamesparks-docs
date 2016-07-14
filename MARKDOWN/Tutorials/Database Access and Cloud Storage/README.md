@@ -12,3 +12,4 @@ Here are some tutorials that will help you to perform common tasks involving dat
 * No matter how big your data collections, you can use some handy tools for [searching for players and teams](/Tutorials/Database Access and Cloud Storage/Searching for Players and Teams.md).
 * If you have a complex JSON document stored, you can build [partial queries or updates](/Tutorials/Database Access and Cloud Storage/Submitting JSON Document Queries.md) for specific sections of the document.
 * You can allow players to [upload binary content](/Tutorials/Database Access and Cloud Storage/Uploading Binary Content from Game.md) to host it on the GameSparks platform and share content with other players.
+* There are some best practices you can follow for [persisting data](/Tutorials/Database Access and Cloud Storage/Managing Data Persistence.md) on the GameSparks platform.

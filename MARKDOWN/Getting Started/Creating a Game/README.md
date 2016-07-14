@@ -46,9 +46,9 @@ When you create a game, the game is put into *Preview* stage.  There are two st
 
 You should remain in *Preview* as you develop and test your game. When you are happy with the state of your game, you can create a *Snapshot*.  A game *Snapshot* takes a copy of everything you've created up to that point in the game's development.  You can then publish the *Snapshot*.  Publishing the *Snapshot* will copy the game as it was when the *Snapshot* was taken and moves the game from *Preview* stage into *Live* stage.
 
-### Managing the Game's Lifecycle
+### Managing the Game's Life Cycle
 
-Publishing your game via the use of a *Snapshot* allows you to easily manage your game's lifecycle. You can continue development of your game in *Preview* while your customers can safely play on the *Live* stage and you know exactly what state the *Live* game is in.  When you are ready to upgrade your game and publish it with any new features, you can create another *Snapshot*, publish the new *Snapshot*, and the whole process repeats again.  Simple!
+Publishing your game via the use of a *Snapshot* allows you to easily manage your game's life cycle. You can continue development of your game in *Preview* while your customers can safely play on the *Live* stage and you know exactly what state the *Live* game is in.  When you are ready to upgrade your game and publish it with any new features, you can create another *Snapshot*, publish the new *Snapshot*, and the whole process repeats again.  Simple!
 
 <q>**Really Important!** Use the *Live* stage when you are ready to release your game to the public - this should be the **ONLY** stage your players use, because the number of concurrent users that can connect to the *Preview* stage at any given time is limited to 100. If your game was left in *Preview* and more than 100 concurrent players try to access your game, they won't all be able to connect successfully.  Obviously, this is not what you want, so remember to take a *Snapshot* then publish through to *Live*!</q>
 
