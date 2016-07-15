@@ -6,22 +6,24 @@ src: /Documentation/Key Concepts/Social Capabilities.md
 
 The GameSparks platform allows you to make use of players' existing social media relationships to build a truly social gaming experience.
 
-## Connect
+## Connecting
 
-The GameSparks platform exposes social API calls that allow you to connect your players with their social profiles. This allows the GameSparks platform to get data about your players on your behalf, which gives the platform access to information such as friend lists. Connecting is the first step towards utilising the platform's social capabilities.
+The platform exposes social API calls, which you can use to connect your players with their social profiles. This allows the platform to get data about your players on your behalf and gives the platform access to information such as friend lists. Connecting is the first step towards utilising the platform's social capabilities.
 
-## Invite
+## Inviting
 
-Using the ListInviteFriendsRequest you can get a list of friends for the current player who are not yet players in your game. You can use this to encourage your players to get their friends playing your game. This kind of social propagation is key in getting awareness of your game to spread virally.
+You can use *ListInviteFriendsRequest* to get a list of those friends of your current players who are not yet playing your game. You can then encourage your players to get these non-playing friends to play your game. This kind of social propagation is key for getting awareness of your game to spread virally.
 
-## Match
+## Matching
 
-Using the ListGameFriendsRequest you can get a list of friends for the current player who are already players of your game. This allows you to match up players and encourage them to chat to their friends, and challenge each other.
+You can use *ListGameFriendsRequest* to get a list of friends of your current players who are already players of your game. This allows you to match up players and encourage them to chat to their friends and challenge each other.
 
-## Chat
+## Chatting
 
-Using the SendFriendMessageRequest you can send messages between two players that are friends. For more information on the messaging capabilities provided by the GameSparks platform see Messaging.
+You can use *SendFriendMessageRequest* to send messages between two players that are friends. For more information on the messaging capabilities provided by the GameSparks platform, see [Messaging](/Documentation/Key Concepts/Messaging.md).
 
-## Rank
+## Ranking
 
-Leaderboard data for players that are linked as friends will contain not only their global position within the leaderboard but also a social rank, relative only to their friends. This lets players compete against their friends as well as against the wider population. Achievements can be awarded based on social rankings, meaning players are competing against a much smaller population for those precious awards! For more information on leaderboards within the GameSparks platform see Leaderboards.
+Leaderboard data for players that are linked as friends will contain not only their global position within the Leaderboard but also a social rank, relative only to their friends. This lets players compete against their friends as well as against the wider population. Achievements can be awarded based on social rankings, which means players are competing against a much smaller population for those precious awards!
+
+For more information on Leaderboards within the GameSparks platform, see [Leaderboards](/Documentation/Configurator/Leaderboards.md).

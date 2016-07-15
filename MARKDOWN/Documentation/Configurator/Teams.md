@@ -5,7 +5,9 @@ src: /Documentation/Configurator/Teams.md
 
 # Teams
 
-The Teams functionality on the GameSparks platform allows you to define different types of grouping between players. You can have a number of different team types with different rules, and these rules are respected when using the team based API Methods. Once you have team types in place, you can use them for all social requests as well as for team based leaderboard (where there is an entry for each team, rather than an entry for each player) A team can earn achievements in the same way that a player can, when a team earns an achievement, each team member without the achievement is given the award defined against it.
+The Teams functionality on the GameSparks platform allows you to define different types of grouping between players:
+* **Team Types.** You can have a number of different team types with different rules and these rules are respected when using the team-based API Methods. Once you have team types in place, you can use them for all social requests as well as for team-based Leaderboards (where there is an entry for each team, rather than an entry for each player).
+* **Team Achievements.** A team can earn achievements in the same way that a player can. When a team earns an achievement, each team member without the achievement is given the award defined against it.
 
 ### Managing your Team Types
 

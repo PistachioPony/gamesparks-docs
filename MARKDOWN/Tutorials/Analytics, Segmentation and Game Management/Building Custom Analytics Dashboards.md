@@ -2,7 +2,7 @@
 src: /Tutorials/Analytics, Segmentation and Game Management/Building Custom Analytics Dashboards.md
 ---
 
-# Custom Analytics Dashboards
+# Building Custom Analytics Dashboards
 
 With the recent introduction of Dynamic Forms, you can easily build Custom Analytics Dashboard that will have nearly limitless expandability, and suit your personal needs within minutes. However it's highly advisable to read the [Dynamic Forms API](/API Documentation/Dynamic Forms API.md) as well as take a look at the [Dynamic Forms Tutorial](/Documentation/Manage/Working with Dynamic Forms.md) before starting.  
 
@@ -12,7 +12,7 @@ With the recent introduction of Dynamic Forms, you can easily build Custom Analy
 *Total Players* \- displays the chart for total unique player connections.  
 *Errors & Errors Table* \- a selection of errors we want to track.  
 
-*Note:* The Charts are game-dependent and will be unique for every game. For this reason some of the charts in this tutorial, might use requests that do not exist in your configuration. For example, you might not be able to group requests by: *@type - equal - DeviceAuthenticationRequest* if your game has never made this request. Simple skip these if they are not applicable to you.
+<q>**Note:** The Charts are game-dependent and will be unique for every game. For this reason, some of the charts in this tutorial might use requests that do not exist in your configuration. For example, you might not be able to group requests by: *@type - equal - DeviceAuthenticationRequest* if your game has never made this request. Simple skip these if they are not applicable to you.</q>
 
 ### New players Chart
 
