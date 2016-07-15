@@ -26,6 +26,15 @@ virtualGoods | [VirtualGood[]](#virtualgood) | A list of JSON objects containing
 
 ## Nested types
 
+### BundledGood
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+qty | number | The number of items bundled
+shortCode | string | The shortCode of the bundled good
+
 ### VirtualGood
 
 A nested object that represents the virtual good.
@@ -65,15 +74,6 @@ steamStoreProductId | string | The Steam Store productId of the item.
 tags | string | The tags of the Virtual Good
 type | string | The type of the virtual good, "VGOOD" or "CURRENCY"
 w8StoreProductId | string | The Windows 8 productId of the item.
-
-### BundledGood
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-qty | number | The number of items bundled
-shortCode | string | The shortCode of the bundled good
 
 ### ScriptData
 

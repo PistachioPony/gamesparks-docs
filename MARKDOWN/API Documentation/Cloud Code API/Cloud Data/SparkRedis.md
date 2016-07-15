@@ -304,22 +304,22 @@ _returns_ number</p>
 See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
 
 ## set
-_signature_ set(string key, string value, string nxxx, string expx, number time)</p>
-_returns_ string</p>
-See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
-
-
-_signature_ set(string key, string value, string nxxx, string expx, number time)</p>
-_returns_ string</p>
-See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
-
-
 _signature_ set(string key, string value)</p>
 _returns_ string</p>
 See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
 
 
 _signature_ set(string key, string value, string nxxx)</p>
+_returns_ string</p>
+See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
+
+
+_signature_ set(string key, string value, string nxxx, string expx, number time)</p>
+_returns_ string</p>
+See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
+
+
+_signature_ set(string key, string value, string nxxx, string expx, number time)</p>
 _returns_ string</p>
 See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
 
@@ -374,13 +374,13 @@ _returns_ number</p>
 See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
 
 ## sort
-_signature_ sort(string key)</p>
-_returns_ string[]</p>
+_signature_ sort(string key, string dstkey)</p>
+_returns_ number</p>
 See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
 
 
-_signature_ sort(string key, string dstkey)</p>
-_returns_ number</p>
+_signature_ sort(string key)</p>
+_returns_ string[]</p>
 See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
 
 ## spop
@@ -444,12 +444,12 @@ _returns_ number</p>
 See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
 
 ## zcount
-_signature_ zcount(string key, number min, number max)</p>
+_signature_ zcount(string key, string min, string max)</p>
 _returns_ number</p>
 See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
 
 
-_signature_ zcount(string key, string min, string max)</p>
+_signature_ zcount(string key, number min, number max)</p>
 _returns_ number</p>
 See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
 
@@ -469,6 +469,11 @@ _returns_ string[]</p>
 See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
 
 ## zrangeByScore
+_signature_ zrangeByScore(string key, string min, string max)</p>
+_returns_ string[]</p>
+See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
+
+
 _signature_ zrangeByScore(string key, string min, string max, number offset, number count)</p>
 _returns_ string[]</p>
 See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
@@ -480,11 +485,6 @@ See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://r
 
 
 _signature_ zrangeByScore(string key, number min, number max)</p>
-_returns_ string[]</p>
-See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
-
-
-_signature_ zrangeByScore(string key, string min, string max)</p>
 _returns_ string[]</p>
 See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
 
@@ -544,17 +544,17 @@ _returns_ string[]</p>
 See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
 
 ## zrevrangeByScore
-_signature_ zrevrangeByScore(string key, number max, number min, number offset, number count)</p>
-_returns_ string[]</p>
-See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
-
-
 _signature_ zrevrangeByScore(string key, string max, string min, number offset, number count)</p>
 _returns_ string[]</p>
 See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
 
 
 _signature_ zrevrangeByScore(string key, string max, string min)</p>
+_returns_ string[]</p>
+See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
+
+
+_signature_ zrevrangeByScore(string key, number max, number min, number offset, number count)</p>
 _returns_ string[]</p>
 See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
 
@@ -569,17 +569,17 @@ _returns_ JSON</p>
 See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
 
 
+_signature_ zrevrangeByScoreWithScores(string key, string max, string min, number offset, number count)</p>
+_returns_ JSON</p>
+See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
+
+
 _signature_ zrevrangeByScoreWithScores(string key, number max, number min, number offset, number count)</p>
 _returns_ JSON</p>
 See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
 
 
 _signature_ zrevrangeByScoreWithScores(string key, number max, number min)</p>
-_returns_ JSON</p>
-See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
-
-
-_signature_ zrevrangeByScoreWithScores(string key, string max, string min, number offset, number count)</p>
 _returns_ JSON</p>
 See <a href="http://redis.io/commands/${getterMetaData.fullMethodName}">http://redis.io/commands/${getterMetaData.fullMethodName}</a>
 

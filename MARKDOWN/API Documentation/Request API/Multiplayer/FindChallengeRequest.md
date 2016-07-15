@@ -30,6 +30,15 @@ scriptData | ScriptData | A JSON Map of any data added either to the Request or 
 
 ## Nested types
 
+### PlayerTurnCount
+
+Represents the number of turns a player has taken in a turn based challenge.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+count | string | The number of turns that the player has taken so far during this challenge.
+playerId | string | The unique player id.
+
 ### Challenge
 
 A nested object that represents the challenge data.
@@ -77,15 +86,6 @@ Parameter | Type | Description
 --------- | ---- | -----------
 myKey | string | An arbitrary data key
 myValue | JSON | An arbitrary data value.
-
-### PlayerTurnCount
-
-Represents the number of turns a player has taken in a turn based challenge.
-
-Parameter | Type | Description
---------- | ---- | -----------
-count | string | The number of turns that the player has taken so far during this challenge.
-playerId | string | The unique player id.
 
 ## Error Codes
 
