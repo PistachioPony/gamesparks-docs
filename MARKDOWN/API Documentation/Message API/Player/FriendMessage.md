@@ -4,8 +4,6 @@ src: /API Documentation/Message API/Player/FriendMessage.md
 
 # FriendMessage
 
-*View interactive version <a href="https://api.gamesparks.net/#friendmessage" target="_apidocs">here</a>*
-
 
 A message sent from a player to one of his social network friends.
 

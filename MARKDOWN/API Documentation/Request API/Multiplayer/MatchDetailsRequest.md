@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Multiplayer/MatchDetailsRequest.md
 
 # MatchDetailsRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#matchdetailsrequest" target="_apidocs">here</a>*
-
 
 Find the details of an existing match this player belongs to, using the matchId
 
@@ -26,6 +24,7 @@ Parameter | Type | Description
 --------- | ---- | -----------
 accessToken | string | The accessToken used to authenticate this player for this match
 host | string | The host to connect to for this match
+matchData | ScriptData[] | MatchData is arbitrary data that can be stored in a Match instance by a Cloud Code script.
 matchId | string | The id for this match instance
 opponents | [Player[]](#player) | The opponents this player has been matched against
 peerId | number | The peerId of this player within the match
@@ -34,15 +33,6 @@ port | number | The port to connect to for this match
 scriptData | ScriptData | A JSON Map of any data added either to the Request or the Response by your Cloud Code
 
 ## Nested types
-
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
 
 ### Player
 
@@ -57,6 +47,15 @@ id | string | The id of the Player
 online | boolean | The online status of the Player
 scriptData | JSON | The script data of the Player
 virtualGoods | string[] | The virtual goods of the Player
+
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
 
 ## Error Codes
 
@@ -78,6 +77,7 @@ matchId | NOT_FOUND | No match found with given matchId for this player
 		.Send((response) => {
 		string accessToken = response.AccessToken; 
 		string host = response.Host; 
+		GSEnumerable<GSData> matchData = response.MatchData; 
 		string matchId = response.MatchId; 
 		GSEnumerable<var> opponents = response.Opponents; 
 		int? peerId = response.PeerId; 
@@ -103,6 +103,7 @@ matchId | NOT_FOUND | No match found with given matchId for this player
 		.send(function(response:com.gamesparks.api.responses.MatchDetailsResponse):void {
 		var accessToken:String = response.getAccessToken(); 
 		var host:String = response.getHost(); 
+		var matchData:Vector.<ScriptData> = response.getMatchData(); 
 		var matchId:String = response.getMatchId(); 
 		var opponents:Vector.<Player> = response.getOpponents(); 
 		var peerId:Number = response.getPeerId(); 
@@ -124,6 +125,7 @@ matchId | NOT_FOUND | No match found with given matchId for this player
 	[request setCallback:^ (GSMatchDetailsResponse* response) {
 	NSString* accessToken = [response getAccessToken]; 
 	NSString* host = [response getHost]; 
+	NSArray* matchData = [response getMatchData]; 
 	NSString* matchId = [response getMatchId]; 
 	NSArray* opponents = [response getOpponents]; 
 	NSNumber* peerId = [response getPeerId]; 
@@ -147,6 +149,7 @@ matchId | NOT_FOUND | No match found with given matchId for this player
 	void MatchDetailsRequest_Response(GS& gsInstance, const MatchDetailsResponse& response) {
 	gsstl::string accessToken = response.getAccessToken(); 
 	gsstl::string host = response.getHost(); 
+	gsstl:vector<GSData> matchData = response.getMatchData(); 
 	gsstl::string matchId = response.getMatchId(); 
 	gsstl:vector<Types::Player*> opponents = response.getOpponents(); 
 	Optional::t_LongOptional peerId = response.getPeerId(); 
@@ -178,6 +181,7 @@ gs.getRequestBuilder().createMatchDetailsRequest()
 		public void onEvent(MatchDetailsResponse response) {
 			String accessToken = response.getAccessToken(); 
 			String host = response.getHost(); 
+			List<GSData> matchData = response.getMatchData(); 
 			String matchId = response.getMatchId(); 
 			List<Player> opponents = response.getOpponents(); 
 			Integer peerId = response.getPeerId(); 
@@ -199,6 +203,7 @@ gs.getRequestBuilder().createMatchDetailsRequest()
 	
 var accessToken = response.accessToken; 
 var host = response.host; 
+var matchData = response.matchData; 
 var matchId = response.matchId; 
 var opponents = response.opponents; 
 var peerId = response.peerId; 

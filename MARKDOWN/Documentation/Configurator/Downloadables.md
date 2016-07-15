@@ -26,4 +26,4 @@ The GetDownloadableRequest returns a secure, time sensitive URL to allow the gam
 
 ### Accessing the Downloadable from Cloud Code
 
-Both XML and JSON Downloadables can be accessed via Cloud Code via the [SparkFiles](/API Documentation/Cloud Code API/Utils/SparkFiles.md) object;
+Both XML and JSON Downloadables can be accessed via Cloud Code via the [SparkFiles](/API Documentation/Cloud Code API/Cloud Data/SparkFiles.md) object;

@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Misc/PushRegistrationRequest.md
 
 # PushRegistrationRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#pushregistrationrequest" target="_apidocs">here</a>*
-
 
 Registers the current device for push notifications. Currently GameSparks supports iOS, GCM & Microsoft Push notifications.
 

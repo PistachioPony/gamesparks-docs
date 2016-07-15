@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Player/ListTransactionsRequest.md
 
 # ListTransactionsRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#listtransactionsrequest" target="_apidocs">here</a>*
-
 
 Returns a list of the current player's transaction history.
 
@@ -31,15 +29,6 @@ scriptData | ScriptData | A JSON Map of any data added either to the Request or 
 transactionList | [PlayerTransaction[]](#playertransaction) | A list of JSON objects containing player transactions
 
 ## Nested types
-
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
 
 ### PlayerTransactionItem
 
@@ -67,6 +56,15 @@ script | string | The specific script in which this transaction occurred
 scriptType | string | The script type in which this transaction occurred (e.g. event)
 transactionId | string | The transaction ID of this purchase, if applicable
 when | date | The date of the transaction
+
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
 
 
 ## Code Samples

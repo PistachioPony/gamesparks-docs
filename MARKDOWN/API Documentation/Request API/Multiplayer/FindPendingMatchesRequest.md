@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Multiplayer/FindPendingMatchesRequest.md
 
 # FindPendingMatchesRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#findpendingmatchesrequest" target="_apidocs">here</a>*
-
 
 Find other pending matches that will match this player's previously submitted MatchmakingRequest.
 

@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Store/ConsumeVirtualGoodRequest.md
 
 # ConsumeVirtualGoodRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#consumevirtualgoodrequest" target="_apidocs">here</a>*
-
 
 Consumes a given amount of the specified virtual good.
 

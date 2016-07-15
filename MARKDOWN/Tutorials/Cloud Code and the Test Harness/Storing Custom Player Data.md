@@ -13,7 +13,7 @@ There are 2 options available for storing data.  This article will describe the
 
 Data attached to the Player object is stored in memory on the GameSparks platform, you can use this method of storing global data against a player and you can be sure that subsequent requests for this data will be as fast as possible. The player object is always cached in memory whilst the player has an open socket.
 
-This data set is best used for data that is shared or stored for the lifetime of the player. You have the ability through the [SparkPlayer](/API Documentation/Cloud Code API/Spark/SparkPlayer.md) object to set (this can either add or overwrite), get and remove data stored against a key.
+This data set is best used for data that is shared or stored for the lifetime of the player. You have the ability through the [SparkPlayer](/API Documentation/Cloud Code API/Player/SparkPlayer.md) object to set (this can either add or overwrite), get and remove data stored against a key.
 
 The SparkPlayer object has 2 separate data sets that differ in their accessibility.
 

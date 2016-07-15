@@ -44,7 +44,7 @@ Enter the following Javascript in the editor window and click the *Save* button.
     playerChatHistoryCollection.ensureIndex({"dateOfChat" : -1});
 ```
 
-This script uses the [SparkMongoCollectionReadWrite](/API Documentation/Cloud Code API/Mongo/SparkMongoCollectionReadWrite.md) API *ensureIndex* method to add an index to the collection on the chatDate field. The ensureIndex method only creates an index if an index of the same specification does not already exist. A value of 1 specifies that the index orders items in ascending order. A value of -1 specifies an index that orders items in descending order. This index will support queries that use the chatDate field.
+This script uses the [SparkMongoCollectionReadWrite](/API Documentation/Cloud Code API/Cloud Data/SparkMongoCollectionReadWrite.md) API *ensureIndex* method to add an index to the collection on the chatDate field. The ensureIndex method only creates an index if an index of the same specification does not already exist. A value of 1 specifies that the index orders items in ascending order. A value of -1 specifies an index that orders items in descending order. This index will support queries that use the chatDate field.
 
 You can also create compound index across multiple fields. For example:
 

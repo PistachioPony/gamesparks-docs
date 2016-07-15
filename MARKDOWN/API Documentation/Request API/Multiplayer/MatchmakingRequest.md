@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Multiplayer/MatchmakingRequest.md
 
 # MatchmakingRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#matchmakingrequest" target="_apidocs">here</a>*
-
 
 Register this player for matchmaking, using the given skill and matchShortCode.
 
@@ -21,8 +19,11 @@ If the matchShortCode points to a match with realtime enabled, in order to minim
 Parameter | Required | Type | Description
 --------- | -------- | ---- | -----------
 action | No | string | The action to take on the already in-flight request for this match. Currently supported actions are: 'cancel'
+customQuery | No | JSON | The query that will be applied to the PendingMatch collection
+matchData | No | ScriptData[] | A JSON Map of any data that will be associated to the pending match
 matchGroup | No | string | Optional. Players will be grouped based on the distinct value passed in here, only players in the same group can be matched together
 matchShortCode | Yes | string | The shortCode of the match type this player is registering for
+participantData | No | ScriptData[] | A JSON Map of any data that will be associated to this user in a pending match
 skill | No | number | The skill of the player looking for a match
 
 ## Response Parameters
@@ -52,6 +53,7 @@ Key | Value | Description
 skill | may not be null | skill must be provided
 matchShortCode | may not be null | matchShortCode must be provided
 matchShortCode | NOT_FOUND | No matchConfig was found with the given matchShortCode
+customQuery | INVALID_QUERY | No customQuery is not a valid mongo query
 match | NOT_FOUND | No match was found for the current player
 
 ## Code Samples
@@ -64,8 +66,11 @@ match | NOT_FOUND | No match was found for the current player
 	...
 	new MatchmakingRequest()
 		.SetAction(action)
+		.SetCustomQuery(customQuery)
+		.SetMatchData(matchData)
 		.SetMatchGroup(matchGroup)
 		.SetMatchShortCode(matchShortCode)
+		.SetParticipantData(participantData)
 		.SetSkill(skill)
 		.Send((response) => {
 		GSData scriptData = response.ScriptData; 
@@ -84,8 +89,11 @@ match | NOT_FOUND | No match was found for the current player
 	gs.getRequestBuilder()
 	    .createMatchmakingRequest()
 		.setAction(action)
+		.setCustomQuery(customQuery)
+		.setMatchData(matchData)
 		.setMatchGroup(matchGroup)
 		.setMatchShortCode(matchShortCode)
+		.setParticipantData(participantData)
 		.setSkill(skill)
 		.send(function(response:com.gamesparks.api.responses.MatchmakingResponse):void {
 		var scriptData:ScriptData = response.getScriptData(); 
@@ -100,8 +108,11 @@ match | NOT_FOUND | No match was found for the current player
 	...
 	GSMatchmakingRequest* request = [[GSMatchmakingRequest alloc] init];
 	[request setAction:action;
+	[request setCustomQuery:customQuery;
+	[request setMatchData:matchData;
 	[request setMatchGroup:matchGroup;
 	[request setMatchShortCode:matchShortCode;
+	[request setParticipantData:participantData;
 	[request setSkill:skill;
 	[request setCallback:^ (GSMatchmakingResponse* response) {
 	NSDictionary* scriptData = [response getScriptData]; 
@@ -126,8 +137,11 @@ match | NOT_FOUND | No match was found for the current player
 	
 	MatchmakingRequest request(gsInstance);
 	request.SetAction(action)
+	request.SetCustomQuery(customQuery)
+	request.SetMatchData(matchData)
 	request.SetMatchGroup(matchGroup)
 	request.SetMatchShortCode(matchShortCode)
+	request.SetParticipantData(participantData)
 	request.SetSkill(skill)
 	request.Send(MatchmakingRequest_Response);
 ```
@@ -142,8 +156,11 @@ import com.gamesparks.sdk.api.GSEventListener;
 ...
 gs.getRequestBuilder().createMatchmakingRequest()
 	.setAction(action)
+	.setCustomQuery(customQuery)
+	.setMatchData(matchData)
 	.setMatchGroup(matchGroup)
 	.setMatchShortCode(matchShortCode)
+	.setParticipantData(participantData)
 	.setSkill(skill)
 	.send(new GSEventListener<MatchmakingResponse>() {
 		@Override
@@ -159,8 +176,11 @@ gs.getRequestBuilder().createMatchmakingRequest()
 
 	var request = new SparkRequests.MatchmakingRequest();
 	request.action = ...;
+	request.customQuery = ...;
+	request.matchData = ...;
 	request.matchGroup = ...;
 	request.matchShortCode = ...;
+	request.participantData = ...;
 	request.skill = ...;
 	var response = request.Send();
 	

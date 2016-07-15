@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Leaderboards/AroundMeLeaderboardRequest.md
 
 # AroundMeLeaderboardRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#aroundmeleaderboardrequest" target="_apidocs">here</a>*
-
 
 Returns leaderboard data that is adjacent to the currently signed in player's position within the given leaderboard.
 
@@ -44,15 +42,6 @@ social | boolean | True if the response contains a social leaderboard's data
 
 ## Nested types
 
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
-
 ### LeaderboardData
 
 Leaderboard entry data
@@ -68,6 +57,15 @@ rank | number | The players rank.
 userId | string | The unique player id for this leaderboard entry.
 userName | string | The players display name.
 when | string | The date when this leaderboard entry was created.
+
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
 
 ## Error Codes
 

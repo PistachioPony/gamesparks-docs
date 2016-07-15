@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Player/AccountDetailsRequest.md
 
 # AccountDetailsRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#accountdetailsrequest" target="_apidocs">here</a>*
-
 
 Retrieves the details of the current authenticated player.
 

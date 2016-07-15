@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Analytics/AnalyticsRequest.md
 
 # AnalyticsRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#analyticsrequest" target="_apidocs">here</a>*
-
 
 Records some custom analytical data.
 

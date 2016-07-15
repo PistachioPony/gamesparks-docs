@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Player/ListAchievementsRequest.md
 
 # ListAchievementsRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#listachievementsrequest" target="_apidocs">here</a>*
-
 
 Retrieves a list of the configured achievements in the game, along with whether the current player has earned the achievement.
 

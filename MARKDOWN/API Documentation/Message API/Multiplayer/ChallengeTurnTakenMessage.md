@@ -4,8 +4,6 @@ src: /API Documentation/Message API/Multiplayer/ChallengeTurnTakenMessage.md
 
 # ChallengeTurnTakenMessage
 
-*View interactive version <a href="https://api.gamesparks.net/#challengeturntakenmessage" target="_apidocs">here</a>*
-
 
 A message indicating that the current player has taken a turn with this challenge.
 
@@ -54,15 +52,6 @@ startDate | date | The date when the challenge starts.
 state | string | One of these possible state values: ISSUED, EXPIRED, ACCEPTED, DECLINED, COMPLETE, WITHDRAWN, RUNNING, WAITING, RECEIVED
 turnCount | [PlayerTurnCount[]](#playerturncount) | A collection containing the number of turns taken by each player that has accepted the challenge.
 
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
-
 ### PlayerDetail
 
 An object representing a player's id and name
@@ -72,6 +61,15 @@ Parameter | Type | Description
 externalIds | JSON | A player's external identifiers
 id | string | A player's id
 name | string | A player's name
+
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
 
 ### PlayerTurnCount
 

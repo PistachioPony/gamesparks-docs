@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Admin/BatchAdminRequest.md
 
 # BatchAdminRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#batchadminrequest" target="_apidocs">here</a>*
-
 
 Performs a request for multiple players.
 

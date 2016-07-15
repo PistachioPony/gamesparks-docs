@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Admin/ListBulkJobsAdminRequest.md
 
 # ListBulkJobsAdminRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#listbulkjobsadminrequest" target="_apidocs">here</a>*
-
 
 Lists existing bulk jobs.
 
@@ -28,6 +26,15 @@ scriptData | ScriptData | A JSON Map of any data added either to the Request or 
 
 ## Nested types
 
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
+
 ### BulkJob
 
 A nested object that represents the bulk job.
@@ -48,15 +55,6 @@ scheduledTime | date | The time at which the job was scheduled to run
 script | string | The Cloud Code script to run for each player
 started | date | The time at which the bulk job started to execute
 state | string | The current state of the bulk job
-
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
 
 
 ## Code Samples

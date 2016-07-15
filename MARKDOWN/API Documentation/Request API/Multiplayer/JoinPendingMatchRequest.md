@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Multiplayer/JoinPendingMatchRequest.md
 
 # JoinPendingMatchRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#joinpendingmatchrequest" target="_apidocs">here</a>*
-
 
 Requests to join a pending match (found via FindPendingMatchesRequest).
 
