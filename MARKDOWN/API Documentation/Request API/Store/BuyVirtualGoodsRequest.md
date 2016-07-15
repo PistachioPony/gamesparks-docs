@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Store/BuyVirtualGoodsRequest.md
 
 # BuyVirtualGoodsRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#buyvirtualgoodsrequest" target="_apidocs">here</a>*
-
 
 Purchases a virtual good with an in game currency. Once purchased the virtual good will be added to the players account.
 
@@ -39,15 +37,6 @@ transactionIds | string[] | The list of transactionIds, for this purchase, if th
 
 ## Nested types
 
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
-
 ### Boughtitem
 
 A nested object that represents a bought item.
@@ -57,11 +46,21 @@ Parameter | Type | Description
 quantity | number | The quantity of the bought item
 shortCode | string | The short code of the bought item
 
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
+
 ## Error Codes
 
 Key | Value | Description
 --------- | ----------- | -----------
 currencyType | UNRECOGNISED | Not a valid currency, valid values are 1 to 6
+virtualGood | CANNOT_BE_CURRENCY | The player cannot by a currency pack with virtual currency
 currency1 | INSUFFICIENT_FUNDS | The player does not have enough currency 1 funds to complete the purchase
 currency2 | INSUFFICIENT_FUNDS | The player does not have enough currency 2 funds to complete the purchase
 currency3 | INSUFFICIENT_FUNDS | The player does not have enough currency 3 funds to complete the purchase

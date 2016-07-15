@@ -4,8 +4,6 @@ src: /API Documentation/Message API/Misc/ScriptMessage.md
 
 # ScriptMessage
 
-*View interactive version <a href="https://api.gamesparks.net/#scriptmessage" target="_apidocs">here</a>*
-
 
 A message sent from a Cloud Code script to one or more players.
 

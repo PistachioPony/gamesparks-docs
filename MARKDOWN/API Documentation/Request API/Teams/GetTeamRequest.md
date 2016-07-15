@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Teams/GetTeamRequest.md
 
 # GetTeamRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#getteamrequest" target="_apidocs">here</a>*
-
 
 Allows the details of a team to be retrieved.
 
@@ -35,15 +33,6 @@ teams | [Team[]](#team) | A JSON array of teams.
 
 ## Nested types
 
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
-
 ### Player
 
 A nested object that represents a player.
@@ -69,6 +58,15 @@ owner | [Player](#player) | A summary of the owner
 teamId | string | The Id of the team
 teamName | string | The team name
 teamType | string | The team type
+
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
 
 ## Error Codes
 

@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Player/DismissMessageRequest.md
 
 # DismissMessageRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#dismissmessagerequest" target="_apidocs">here</a>*
-
 
 Allows a message to be dismissed. Once dismissed the message will no longer appear in either ListMessageResponse or ListMessageSummaryResponse.
 

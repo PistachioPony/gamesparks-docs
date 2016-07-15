@@ -4,8 +4,6 @@ src: /API Documentation/Message API/Multiplayer/ChallengeChangedMessage.md
 
 # ChallengeChangedMessage
 
-*View interactive version <a href="https://api.gamesparks.net/#challengechangedmessage" target="_apidocs">here</a>*
-
 
 A message indicating that a player has posted a score in to the challenge's leaderboard.
 
@@ -25,6 +23,15 @@ title | No | string | A textual title for the message.
 who | No | string | Indicates which player has changed the challenge
 
 ## Nested types
+
+### PlayerTurnCount
+
+Represents the number of turns a player has taken in a turn based challenge.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+count | string | The number of turns that the player has taken so far during this challenge.
+playerId | string | The unique player id.
 
 ### Challenge
 
@@ -55,15 +62,6 @@ startDate | date | The date when the challenge starts.
 state | string | One of these possible state values: ISSUED, EXPIRED, ACCEPTED, DECLINED, COMPLETE, WITHDRAWN, RUNNING, WAITING, RECEIVED
 turnCount | [PlayerTurnCount[]](#playerturncount) | A collection containing the number of turns taken by each player that has accepted the challenge.
 
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
-
 ### LeaderboardData
 
 Leaderboard entry data
@@ -90,14 +88,14 @@ externalIds | JSON | A player's external identifiers
 id | string | A player's id
 name | string | A player's name
 
-### PlayerTurnCount
+### ScriptData
 
-Represents the number of turns a player has taken in a turn based challenge.
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
 
 Parameter | Type | Description
 --------- | ---- | -----------
-count | string | The number of turns that the player has taken so far during this challenge.
-playerId | string | The unique player id.
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
 
 
 ## Code Samples

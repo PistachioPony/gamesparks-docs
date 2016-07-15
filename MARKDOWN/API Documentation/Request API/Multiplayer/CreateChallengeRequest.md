@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Multiplayer/CreateChallengeRequest.md
 
 # CreateChallengeRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#createchallengerequest" target="_apidocs">here</a>*
-
 
 Issues a challenge to a group of players from the currently signed in player.
 
@@ -23,11 +21,11 @@ autoStartJoinedChallengeOnMaxPlayers | No | boolean | Whether this challenge sho
 challengeMessage | No | string | An optional message to include with the challenge
 challengeShortCode | Yes | string | The short code of the challenge
 currency1Wager | No | number | The ammount of currency type 1 that the player is wagering on this challenge
-currency2Wager | No | number | The ammount of currency type 2 that the player is wagering on this challenge
-currency3Wager | No | number | The ammount of currency type 3 that the player is wagering on this challenge
-currency4Wager | No | number | The ammount of currency type 4 that the player is wagering on this challenge
-currency5Wager | No | number | The ammount of currency type 5 that the player is wagering on this challenge
-currency6Wager | No | number | The ammount of currency type 6 that the player is wagering on this challenge
+currency2Wager | No | number | The amount of currency type 2 that the player is wagering on this challenge
+currency3Wager | No | number | The amount of currency type 3 that the player is wagering on this challenge
+currency4Wager | No | number | The amount of currency type 4 that the player is wagering on this challenge
+currency5Wager | No | number | The amount of currency type 5 that the player is wagering on this challenge
+currency6Wager | No | number | The amount of currency type 6 that the player is wagering on this challenge
 eligibilityCriteria | No | JSON | Criteria for who can and cannot find and join this challenge (when the accessType is PUBLIC or FRIENDS).
 endTime | No | date | The time at which this challenge will end
 expiryTime | No | date | The latest time that players can join this challenge

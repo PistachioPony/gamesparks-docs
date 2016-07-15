@@ -4,8 +4,6 @@ src: /API Documentation/Message API/Leaderboards/SocialRankChangedMessage.md
 
 # SocialRankChangedMessage
 
-*View interactive version <a href="https://api.gamesparks.net/#socialrankchangedmessage" target="_apidocs">here</a>*
-
 
 This message is sent to players when their rank in a leaderboard changes with respect to the rank of their social network friends.
 
@@ -28,15 +26,6 @@ you | No | LeaderboardData | The score details of the receiving player.
 
 ## Nested types
 
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
-
 ### LeaderboardData
 
 Leaderboard entry data
@@ -52,6 +41,15 @@ rank | number | The players rank.
 userId | string | The unique player id for this leaderboard entry.
 userName | string | The players display name.
 when | string | The date when this leaderboard entry was created.
+
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
 
 
 ## Code Samples

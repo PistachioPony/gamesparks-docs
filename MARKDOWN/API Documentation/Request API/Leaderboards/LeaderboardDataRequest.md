@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Leaderboards/LeaderboardDataRequest.md
 
 # LeaderboardDataRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#leaderboarddatarequest" target="_apidocs">here</a>*
-
 
 Returns the top data for either the specified global leaderboard or the specified challenges leaderboard. The data is sorted as defined in the rules specified in the leaderboard configuration.
 
@@ -47,15 +45,6 @@ scriptData | ScriptData | A JSON Map of any data added either to the Request or 
 
 ## Nested types
 
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
-
 ### LeaderboardData
 
 Leaderboard entry data
@@ -71,6 +60,15 @@ rank | number | The players rank.
 userId | string | The unique player id for this leaderboard entry.
 userName | string | The players display name.
 when | string | The date when this leaderboard entry was created.
+
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
 
 ## Error Codes
 

@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Multiplayer/WithdrawChallengeRequest.md
 
 # WithdrawChallengeRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#withdrawchallengerequest" target="_apidocs">here</a>*
-
 
 Withdraws a challenge previously issued by the current player.
 

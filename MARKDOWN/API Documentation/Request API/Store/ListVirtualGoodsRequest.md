@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Store/ListVirtualGoodsRequest.md
 
 # ListVirtualGoodsRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#listvirtualgoodsrequest" target="_apidocs">here</a>*
-
 
 Returns the list of configured virtual goods.
 
@@ -27,15 +25,6 @@ scriptData | ScriptData | A JSON Map of any data added either to the Request or 
 virtualGoods | [VirtualGood[]](#virtualgood) | A list of JSON objects containing virtual goods data
 
 ## Nested types
-
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
 
 ### BundledGood
 
@@ -85,6 +74,15 @@ steamStoreProductId | string | The Steam Store productId of the item.
 tags | string | The tags of the Virtual Good
 type | string | The type of the virtual good, "VGOOD" or "CURRENCY"
 w8StoreProductId | string | The Windows 8 productId of the item.
+
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
 
 
 ## Code Samples

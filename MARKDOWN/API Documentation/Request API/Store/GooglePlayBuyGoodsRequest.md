@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Store/GooglePlayBuyGoodsRequest.md
 
 # GooglePlayBuyGoodsRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#googleplaybuygoodsrequest" target="_apidocs">here</a>*
-
 
 Processes the response from a Google Play in app purchase flow.
 
@@ -47,15 +45,6 @@ transactionIds | string[] | The list of transactionIds, for this purchase, if th
 
 ## Nested types
 
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
-
 ### Boughtitem
 
 A nested object that represents a bought item.
@@ -64,6 +53,15 @@ Parameter | Type | Description
 --------- | ---- | -----------
 quantity | number | The quantity of the bought item
 shortCode | string | The short code of the bought item
+
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
 
 ## Error Codes
 

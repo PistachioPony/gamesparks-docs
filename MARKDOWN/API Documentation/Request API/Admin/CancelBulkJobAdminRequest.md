@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Admin/CancelBulkJobAdminRequest.md
 
 # CancelBulkJobAdminRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#cancelbulkjobadminrequest" target="_apidocs">here</a>*
-
 
 Cancel one or more bulk jobs.
 

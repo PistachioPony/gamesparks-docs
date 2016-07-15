@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Player/ChangeUserDetailsRequest.md
 
 # ChangeUserDetailsRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#changeuserdetailsrequest" target="_apidocs">here</a>*
-
 
 Change the display name of the currently signed in Player.
 

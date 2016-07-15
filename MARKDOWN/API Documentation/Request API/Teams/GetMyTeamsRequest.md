@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Teams/GetMyTeamsRequest.md
 
 # GetMyTeamsRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#getmyteamsrequest" target="_apidocs">here</a>*
-
 
 Get the teams that the player is in. Can be filtered on team type and also on those teams that the player owns.
 
@@ -28,15 +26,6 @@ scriptData | ScriptData | A JSON Map of any data added either to the Request or 
 teams | [Team[]](#team) | The team data
 
 ## Nested types
-
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
 
 ### Player
 
@@ -63,6 +52,15 @@ owner | [Player](#player) | A summary of the owner
 teamId | string | The Id of the team
 teamName | string | The team name
 teamType | string | The team type
+
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
 
 
 ## Code Samples

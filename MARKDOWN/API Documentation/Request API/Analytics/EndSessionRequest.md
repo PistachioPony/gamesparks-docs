@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Analytics/EndSessionRequest.md
 
 # EndSessionRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#endsessionrequest" target="_apidocs">here</a>*
-
 
 Records the end of the current player's active session.
 

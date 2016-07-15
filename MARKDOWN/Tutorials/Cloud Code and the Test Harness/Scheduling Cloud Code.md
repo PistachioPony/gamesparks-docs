@@ -5,7 +5,7 @@ src: /Tutorials/Cloud Code and the Test Harness/Scheduling Cloud Code.md
 
 # How to schedule Cloud Code scripts
 
-There are two ways in which you can schedule Cloud Code scripts on the GameSparks platform, the first is the ability to schedule a Module script via the [SparkScheduler](/API Documentation/Cloud Code API/Utils/SparkScheduler.md) Cloud Code object, the second is to use one of the predefined system schedulers.
+There are two ways in which you can schedule Cloud Code scripts on the GameSparks platform, the first is the ability to schedule a Module script via the [SparkScheduler](/API Documentation/Cloud Code API/Utilities/SparkScheduler.md) Cloud Code object, the second is to use one of the predefined system schedulers.
 
 ## Scheduling a script via the SparkScheduler object
 
@@ -45,7 +45,7 @@ var fieldCollection = Spark.runtimeCollection('field');
 fieldCollection.insert({"item":"plant", "playerId" : playerId, "x": x, "y" : y});
 ```
 
-This script uses the [SparkMongoCollectionReadWrite](/API Documentation/Cloud Code API/Mongo/SparkMongoCollectionReadWrite.md) object to write the data to a runtime collection.
+This script uses the [SparkMongoCollectionReadWrite](/API Documentation/Cloud Code API/Cloud Data/SparkMongoCollectionReadWrite.md) object to write the data to a runtime collection.
 
 Let’s test out this configuration in the *Test Harness*. Navigate to the GameSparks developer portal Test Harness, copy the JSON request below into the JSON field and press the 'Send' icon {sendIcon}.
 

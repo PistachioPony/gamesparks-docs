@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Multiplayer/ChatOnChallengeRequest.md
 
 # ChatOnChallengeRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#chatonchallengerequest" target="_apidocs">here</a>*
-
 
 Sends a message to all players involved in the challenge. The current player must be involved in the challenge for the message to be sent.
 

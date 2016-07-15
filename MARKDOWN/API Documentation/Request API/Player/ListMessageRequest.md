@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Player/ListMessageRequest.md
 
 # ListMessageRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#listmessagerequest" target="_apidocs">here</a>*
-
 
 Returns the list of the current players messages / notifications.
 

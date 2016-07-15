@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Multiplayer/ListChallengeTypeRequest.md
 
 # ListChallengeTypeRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#listchallengetyperequest" target="_apidocs">here</a>*
-
 
 Returns the list of configured challenge types.
 
@@ -27,15 +25,6 @@ scriptData | ScriptData | A JSON Map of any data added either to the Request or 
 
 ## Nested types
 
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
-
 ### ChallengeType
 
 
@@ -47,6 +36,15 @@ description | string | The description of this challenge.
 getleaderboardName | string | The name of the leaderboard for this challenge.
 name | string | The name of this challenge.
 tags | string | The tags for this challenge.
+
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
 
 
 ## Code Samples

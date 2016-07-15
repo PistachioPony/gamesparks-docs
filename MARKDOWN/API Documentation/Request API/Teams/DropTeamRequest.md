@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Teams/DropTeamRequest.md
 
 # DropTeamRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#dropteamrequest" target="_apidocs">here</a>*
-
 
 Allows a player to drop a team.
 
@@ -34,15 +32,6 @@ teamType | string | The team type
 
 ## Nested types
 
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
-
 ### Player
 
 A nested object that represents a player.
@@ -57,13 +46,23 @@ online | boolean | The online status of the Player
 scriptData | JSON | The script data of the Player
 virtualGoods | string[] | The virtual goods of the Player
 
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
+
 ## Error Codes
 
 Key | Value | Description
 --------- | ----------- | -----------
 teamId&#124;teamType | REQUIRED | Both teamId and teamType have not been provided
 team | INVALID | The teamId or the teamType do not match an existing team
-team | NOT_MEMBER | The current player is not a mamber of the team they are requesting to leave
+team | NOT_MEMBER | The current player is not a member of the team they are requesting to leave
+teamType | CANNOT_DROP_MANDATORY_TEAM | The team has an ownership of 1 (Mandatory) so cannot be dropped
 teamType&&ownerId | NOT_UNIQUE | The ownerId / teamType combination has multiple teams related to it
 
 ## Code Samples

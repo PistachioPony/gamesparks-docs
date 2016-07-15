@@ -4,8 +4,6 @@ src: /API Documentation/Request API/Admin/ListBulkJobsAdminRequest.md
 
 # ListBulkJobsAdminRequest
 
-*View interactive version <a href="https://api.gamesparks.net/#listbulkjobsadminrequest" target="_apidocs">here</a>*
-
 
 Lists existing bulk jobs.
 
