@@ -52,7 +52,7 @@ You will log this Event whenever the authenticated player *consumes* a Gold Coin
 
 ## Creating the Buy and Consume functions
 
-*5.* Create a function which will log a *buy Request* when called by using *BuyVirtualGoods* request. The *BuyVirtualGoods* request needs a *currency* type, a *quantity* and the *Short code* for the item to be purchased.
+*5.* Create a function which will log a *buy Request* when called by using [BuyVirtualGoodsRequest](/API Documentation/Request API/Store/BuyVirtualGoodsRequest.md). The *BuyVirtualGoods* request needs a *currency* type, a *quantity* and the *Short code* for the item to be purchased.
 
 
 ```
@@ -63,7 +63,7 @@ You will log this Event whenever the authenticated player *consumes* a Gold Coin
     			}
 ```
 
-*6.* Create a function for the consumption of *Virtual Goods*, this will use the *ConsumeVirtualGoodRequest.* The *ConsumeVirtualGoodRequest* needs a *quantity* and *Short code* of the item to be consumed.
+*6.* Create a function for the consumption of *Virtual Goods*, this will use the [ConsumeVirtualGoodRequest](/API Documentation/Request API/Player/ConsumeVirtualGoodRequest.md). The *ConsumeVirtualGoodRequest* needs a *quantity* and *Short code* of the item to be consumed.
 
 ```
     	private function ConsumeItem():void

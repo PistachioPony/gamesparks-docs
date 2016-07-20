@@ -1,6 +1,7 @@
 ---
 nav_sort: 5
 src: /Documentation/NoSQL Explorer.md
+
 ---
 
 # NoSQL Explorer

@@ -22,7 +22,7 @@ The first thing you need to do is create an Event that will push the player’s
 *   *Attribute Name* - This field is the name of the attribute you want to pass into the Event. In your case this will be ‘Score’.
 *   *Attribute Short* *Code* – This is the reference you'll be using to pass in an attribute into the Event from Unity. In your case this will be ‘SCORE’.
 *   *Data Type* – The type of data being passed in. E.g. String, Number, JSON.
-*   *Default Value* – This would be the default value that would be used for this Event attribute if it’s not passed into the LogEventRequest , i.e. a score of zero would be default.
+*   *Default Value* – This would be the default value that would be used for this Event attribute if it’s not passed into the [LogEventRequest](/API Documentation/Request API/Player/LogEventRequest.md) , i.e. a score of zero would be default.
 *   *Default Calculation* – This determines how values are tracked in the Running Totals. In your case you want the score to record the maximum, which means the leaderboard will only record the player’s highest score. If they submit a lower score to the board, it will not be recorded.
 
 You can see more details about Events [here](/Documentation/Configurator/Events.md).
@@ -50,7 +50,7 @@ Immediately after you send the request, you will see orange message appear in th
 
 ### Getting the Leaderboard Data
 
-You can also check your Leaderboard data entries from the test harness using the *LeaderboardDataRequest*. You can find this in the *Leaderboards* tab on your *Test Harness*. This request gives you a lot of control over the entries it will return, however you are only concerned with the leaderboard *Short Code*, and the *entry count* (the number of entries this request will return). You can check out more information about this request [here](/API Documentation/Request API/Leaderboards/LeaderboardDataRequest.md). When you send the request you will see the list of Leaderboard entries returned on the inspector on the right.
+You can also check your Leaderboard data entries from the test harness using the [LeaderboardDataRequest](/API Documentation/Request API/Leaderboards/LeaderboardDataRequest.md). You can find this in the *Leaderboards* tab on your *Test Harness*. This request gives you a lot of control over the entries it will return, however you are only concerned with the leaderboard *Short Code*, and the *entry count* (the number of entries this request will return). You can check out more information about this request [here](/API Documentation/Request API/Leaderboards/LeaderboardDataRequest.md). When you send the request you will see the list of Leaderboard entries returned on the inspector on the right.
 
 ![l](img/UT/14.png)
 

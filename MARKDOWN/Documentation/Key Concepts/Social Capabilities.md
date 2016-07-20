@@ -12,15 +12,15 @@ The platform exposes social API calls, which you can use to connect your players
 
 ## Inviting
 
-You can use *ListInviteFriendsRequest* to get a list of those friends of your current players who are not yet playing your game. You can then encourage your players to get these non-playing friends to play your game. This kind of social propagation is key for getting awareness of your game to spread virally.
+You can use [ListInviteFriendsRequest](/API Documentation/Request API/Player/ListInviteFriendsRequest.md) to get a list of those friends of your current players who are not yet playing your game. You can then encourage your players to get these non-playing friends to play your game. This kind of social propagation is key for getting awareness of your game to spread virally.
 
 ## Matching
 
-You can use *ListGameFriendsRequest* to get a list of friends of your current players who are already players of your game. This allows you to match up players and encourage them to chat to their friends and challenge each other.
+You can use [ListGameFriendsRequest](/API Documentation/Request API/Player/ListGameFriendsRequest.md) to get a list of friends of your current players who are already players of your game. This allows you to match up players and encourage them to chat to their friends and challenge each other.
 
 ## Chatting
 
-You can use *SendFriendMessageRequest* to send messages between two players that are friends. For more information on the messaging capabilities provided by the GameSparks platform, see [Messaging](/Documentation/Key Concepts/Messaging.md).
+You can use [SendFriendMessageRequest](/API Documentation/Request API/Player/SendFriendMessageRequest.md) to send messages between two players that are friends. For more information on the messaging capabilities provided by the GameSparks platform, see [Messaging](/Documentation/Key Concepts/Messaging.md).
 
 ## Ranking
 

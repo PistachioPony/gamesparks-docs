@@ -35,7 +35,7 @@ You can also access the current player making the request using `Spark.getPlaye
 
 ### Requests
 
-This list contains an entry for each Request you can call within the GameSparks platform. When a Request is received, the corresponding script is executed allowing you to run custom code on the platform. It should be noted that LogEventRequest and LogChallengeEventRequest are global scripts that will be executed for these request types before a specific script is called for each event. This allows you to add a common functionality to all Events. You can access the current player making the request using `Spark.getPlayer()`.
+This list contains an entry for each Request you can call within the GameSparks platform. When a Request is received, the corresponding script is executed allowing you to run custom code on the platform. It should be noted that [LogEventRequest](/API Documentation/Request API/Player/LogEventRequest.md) and [LogChallengeEventRequest](/API Documentation/Request API/Multiplayer/LogChallengeEventRequest.md) are global scripts that will be executed for these request types before a specific script is called for each event. This allows you to add a common functionality to all Events. You can access the current player making the request using `Spark.getPlayer()`.
 
 ### Responses
 
@@ -73,7 +73,7 @@ To create a new module click the Create New Module button, then enter a short co
 
 ### Callbacks
 
-Callbacks contains an item for each custom Credential created.  Separate Callback URLs allow users to assign different Cloud Code scripts to different callbacks for the same game.
+Callbacks contains an item for each custom Credential created.  Separate [Callback URLs](/Tutorials/Cloud Code and the Test Harness/Using Custom Callback Urls.md) allow users to assign different Cloud Code scripts to different callbacks for the same game.
 
 Realtime Scripts can be created here and linked to Match configuration so that when a Match is found, the arbitrary Cloud Code script that communicates with the realtime client is triggered.  For more information on Realtime Services, read this.
 

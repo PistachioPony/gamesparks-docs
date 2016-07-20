@@ -8,7 +8,7 @@ Before a player can perform any operations they need to authenticate with the pl
 
 ## Username / Password Authentication
 
-Using *RegistrationRequest* you can create a player with a username / password / displayName combination. If you use this method, the player can sign in on any device with the same credentials and will be logged in and their history will be available. Once a player has registered using *RegistrationRequest*, they can use the same userName / password combination with *AuthenticationRequest* to login to the platform.
+Using [RegistrationRequest](/API Documentation/Request API/Authentication/RegistrationRequest.md) you can create a player with a username / password / displayName combination. If you use this method, the player can sign in on any device with the same credentials and will be logged in and their history will be available. Once a player has registered using *RegistrationRequest*, they can use the same userName / password combination with [AuthenticationRequest](/API Documentation/Request API/Authentication/AuthenticationRequest.md) to login to the platform.
 
 ## Device Authentication
 

@@ -1,6 +1,7 @@
 ---
 nav_sort: 3
 src: /Tutorials/Social Authentication and Player Profile/Automating User Password Change.md
+
 ---
 
 # User Password Change
@@ -14,7 +15,7 @@ If one of your users loses or forgets their password you'll want an automated wa
 
 ### Choosing our sequence of actions and passing in scriptData
 
-Navigate to the *Configurator* ->* Cloud Code* and find the Authentication Request under the requests tab and start editing it. This will allow users to run the password recovery logic without having an authenticated account.The first thing the *Cloud* *code* will need to work is the '*action*' variable. The '*action*' variable will determine which sequence of instructions to perform. In this example we have two sequences, password recovery and password reset. Password recovery will generate a token which will be sent via email and password reset will take this token and a password and change the password.The '*status*' variable will help you debug and determine whether the function was successfully completed and if not, it'll help you print out why not.
+Navigate to the *Configurator* -> *Cloud Code* and find the Authentication Request under the requests tab and start editing it. This will allow users to run the password recovery logic without having an authenticated account.The first thing the *Cloud* *code* will need to work is the '*action*' variable. The '*action*' variable will determine which sequence of instructions to perform. In this example we have two sequences, password recovery and password reset. Password recovery will generate a token which will be sent via email and password reset will take this token and a password and change the password.The '*status*' variable will help you debug and determine whether the function was successfully completed and if not, it'll help you print out why not.
 
 ```    
     	var status = "Started";

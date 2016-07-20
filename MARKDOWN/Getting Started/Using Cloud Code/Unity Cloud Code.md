@@ -28,7 +28,7 @@ In this example we will save the player’s experience points, position and gold
 
 ## Calling the Event Request
 
-You can call the Events in Unity using the *LogEventRequest* method. This a default method that will take some variable data depending on what you need. In contrast with the other requests you have used in previous tutorials, the *LogEventRequest* needs information about the attributes and keys before you send the request.
+You can call the Events in Unity using the [LogEventRequest](/API Documentation/Request API/Player/LogEventRequest.md) method. This a default method that will take some variable data depending on what you need. In contrast with the other requests you have used in previous tutorials, the *LogEventRequest* needs information about the attributes and keys before you send the request.
 
 ### Saving Player Data
 
@@ -55,7 +55,7 @@ The *LogEventRequest* will execute the custom Event you have created. You will n
 
 ### Saving the Data in GameSparks
 
-Now you've sent the logEventRequest from Unity, you will now be able to save the Players details in GameSparks. To do this, you need to set some custom Cloud Code in the GameSparks Portal.
+Now you've sent the LogEventRequest from Unity, you will now be able to save the Players details in GameSparks. To do this, you need to set some custom Cloud Code in the GameSparks Portal.
 
 Here's how to navigate to your Event:
 
@@ -94,7 +94,7 @@ Make sure to hit the *Save* button in order to save the Cloud Code for your Eve
 
 ## Testing your Cloud Code
 
-You can now head back to Unity and run your* LogEventRequest* with some XP and gold values. In the next section you are going to get that data back from your GameSparks game, but if you want to check that your player’s data was updated, you can select the* playerData* collection from the *NoSQL Explorer* tab, and click the *Find* button:
+You can now head back to Unity and run your [LogEventRequest](/API Documentation/Request API/Player/LogEventRequest.md) with some XP and gold values. In the next section you are going to get that data back from your GameSparks game, but if you want to check that your player’s data was updated, you can select the* playerData* collection from the *NoSQL Explorer* tab, and click the *Find* button:
 
 ![l](img/UT/13.png)
 

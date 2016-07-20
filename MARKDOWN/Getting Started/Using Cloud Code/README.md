@@ -7,9 +7,9 @@ src: /Getting Started/Using Cloud Code/README.md
 
 ## Introduction
 
-Cloud Code plays a key role in the GameSparks Services. You use it to create custom logic and control the behavior of the configurable components you have built into your game, such as Leaderboards, Events, and Requests.
+Cloud Code plays a key role in the GameSparks Services. You can use it to create custom logic and control the behavior of the configurable components you have built into your game.
 
-When an Event, Request, or Response is sent to and from the GameSparks API, you might want some other things to happen at these specific instances. For example, suppose an AuthenticationRequest is received and, in sequence, an AutheticationResponse is to be sent back. You might want other things to happen when the response is sent back, such as send a message to the player that submitted the request which shows their display name and welcomes them back into the game. A Cloud Code script attached to the AuthenticationResponse is how you would do this.
+When an Event, Request, or Response is sent to and from the GameSparks API, you might want some other things to happen at some point. For example, suppose an AuthenticationRequest is received and, in sequence, an AuthenticationResponse is to be sent back. You might want other things to happen when the response is sent back, such as send a message to the player that submitted the request which shows their display name and welcomes them back into the game. A Cloud Code script attached to the AuthenticationResponse is how you would do this.
 
 When you build Cloud Code and attach it to a configured component, such as an Event, you can use the Test Harness to try out and check that you will get the behavior you want.
 The Test Harness is an invaluable tool, because it allows you to send API requests to the GameSparks platform in their raw form and check the responses returned by the server.

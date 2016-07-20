@@ -32,7 +32,7 @@ For this tutorial, we've created a sample game that runs for 10 seconds. In thos
 
 ## Setting up the Event Log Request
 
-You'll need a function that calls the Event that submits the player's score. Make a function that builds the *LogEventRequest* to pass through the score value. The *requestBuilder* has been triggered for when the timer of the game reaches 0. The player's score will be sent after the game session ends. Call the previously made *Event key* of the Event (for more information see the Portal's Leaderboards tutorial) and set the *SCORE* attribute.
+You'll need a function that calls the Event that submits the player's score. Make a function that builds the [LogEventRequest](/API Documentation/Request API/Player/LogEventRequest.md) to pass through the score value. The *requestBuilder* has been triggered for when the timer of the game reaches 0. The player's score will be sent after the game session ends. Call the previously made *Event key* of the Event (for more information see the Portal's Leaderboards tutorial) and set the *SCORE* attribute.
 
 ```
 if (endTime <= now)

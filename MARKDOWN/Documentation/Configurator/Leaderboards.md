@@ -6,7 +6,7 @@ src: /Documentation/Configurator/Leaderboards.md
 # Leaderboards
 
 Leaderboards are typically restricted to tracking and reporting the leading players in a game. GameSparks Leaderboards offer you a much wider and flexible scope, both for tracking comparisons within your player pool and for controlling how comparisons are displayed in-game to the players:
-* **Highly Configurable** - Keep track of any comparisons of player performance and then support artifacts in-game that flexibly display this information in a meaningful way to players. This allows support for complex, contextual displays of information about other players and also provides the framework for many social and competitive features.
+* **Highly Configurable** - Keep track of any comparisons of player performance and then support artifacts in-game that flexibly display this information in a meaningful way to players. This supports complex, contextual displays of information about other players and also provides the framework for many social and competitive features.
 * **Highly Performant** - Our internal ranking and sorting algorithms allow new scores to be added to Leaderboards with 10m+ entries and have a new rank calculated within milliseconds.
 * **Driven by Running Totals** - Leaderboards consume data from Running Totals and can also perform calculations on grouped Running Totals, allowing you to further transform the data from the Running Total into a list of scores of the values that you want. A single Leaderboard can consume data from multiple Running Totals (and in turn, from multiple Events). This allows for some complex Leaderboards, such as a Leaderboard with a halfway score and a final score in the same list. You can achieve this without having to worry about recording the halfway score during the game. Simply send the Events when they happen and the platform does the rest!
 * **Partition** - You can partition Leaderboards, which allows you to set up a single Leaderboard configuration and have it automatically create new Leaderboards when a particular value changes. A good example here is a level Leaderboard, where the rules are the same for the Leaderboard at each level. You tell the Leaderboard to partition by level and the rest is done for you. Far better than creating 100 separate Leaderboard configurations to represent each level!
@@ -43,9 +43,9 @@ Click the ![](/img/fa/plus.png) icon to create a new Leaderboard.
     * *Calculate Daily* \- Updated every day.
     * *Calculate Weekly* \- Updated every week.
     * *Calculate Monthly* \- Updated every month.
-  * *High Score Notifications* \- A flag to indicate whether a *NewHighScoreMessage* should be sent to the user when they submit a new high score.
-  * *Social Notifications* \- A flag to indicate whether a *SocialRankChangedMessage* should be sent to friends when their scores are beaten.
-  * *Top N Notifications* \- Whether a *GlobalRankChangedMessage* should be sent to players when their scores are beaten (if they are within the Top N Threshold).
+  * *High Score Notifications* \- A flag to indicate whether a [NewHighScoreMessage](/API Documentation/Message API/Leaderboards/NewHighScoreMessage.md) should be sent to the user when they submit a new high score.
+  * *Social Notifications* \- A flag to indicate whether a [SocialRankChangedMessage](/API Documentation/Message API/Leaderboards/SocialRankChangedMessage.md) should be sent to friends when their scores are beaten.
+  * *Top N Notifications* \- Whether a [GlobalRankChangedMessage](/API Documentation/Message API/Leaderboards/GlobalRankChangedMessage.md) should be sent to players when their scores are beaten (if they are within the Top N Threshold).
   * *Top N Threshold* \- Which global positions in the Leaderboard should be notified when they are beaten.
 
 ### Creating Leaderboard Fields

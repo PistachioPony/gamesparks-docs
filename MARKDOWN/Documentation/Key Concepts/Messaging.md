@@ -26,7 +26,7 @@ In the above diagram 'Offline Player' represents a player without an authenticat
 
 The GameSparks platform allows you to set up a Game to use push notifications where they are supported on the players' devices. The set up for these notifications varies depending on the target device, so some configuration is required for your game within the GameSparks Developer Portal to get these notifications to work.
 
-In addition to the configuration, the players' devices must be registered to receive push notifications, which can be done using a *PushRegistrationRequest*. When a message is sent to a player who does not have an authenticated WebSocket connection, the GameSparks platform will send a notification to all of the players' devices that have been registered to receive a push notification.
+In addition to the configuration, the players' devices must be registered to receive push notifications, which can be done using a [PushRegistrationRequest](/API Documentation/Request API/Misc/PushRegistrationRequest.md). When a message is sent to a player who does not have an authenticated WebSocket connection, the GameSparks platform will send a notification to all of the players' devices that have been registered to receive a push notification.
 
 ## Message Triggers
 
@@ -34,7 +34,7 @@ There are three types of trigger that you can use to send a message:
 
 *1.* **Request message**
 
-Requests such as *SendFriendMessageRequest* and *ChatOnChallengeRequest* are explicit calls to the platform to send requests to the target players. The content of the message is determined by the sender of the request.
+Requests such as [SendFriendMessageRequest](/API Documentation/Request API/Player/SendFriendMessageRequest.md) and [ChatOnChallengeRequest](/API Documentation/Request API/Multiplayer/ChatOnChallengeRequest.md) are explicit calls to the platform to send requests to the target players. The content of the message is determined by the sender of the request.
 
 *2.* **Event message**
 

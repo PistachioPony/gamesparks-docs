@@ -5,11 +5,59 @@ src: /Tutorials/Multiplayer/Matching Players.md
 
 # How to Match Players
 
-In this tutorial, we'll create a Match configuration with customised Thresholds in the GameSparks Portal and use this configuration to perform a Match in the Test Harness that will match Players in the game. As a brief example of these features, you may want to match Players based on their similar skill level in your game, so that Players can play against someone of equal ability to make it more enjoyable for all.
+In this tutorial, we'll first explore the GameSparks matching framework to gain an understanding of how the system works to process and complete player matches on the basis of Match configurations.
 
-We'll also see how to enable:
-* Drop In/Drop Out and have matching players added to or removed from the Match after the Match is first made.
-* Manual Matching, allowing you to use a custom mechanism for completing a Match from the list of matching players the portal returns for the matching criteria.
+With this background in place, we'll move on to create a Match configuration with customised Thresholds in the GameSparks Portal. We'll then use this configuration to perform a Match in the Test Harness that will match Players in the game. A typical example of matching players is where you want to match players based on their similar skill level in your game so that players can play against someone of equal ability to make it more enjoyable for all.
+
+We'll also see how to enable and work with:
+* **Drop In/Drop Out** - Have matching players added to or removed from the Match after the Match is first made.
+* **Manual Matching** - Use a custom mechanism for completing a Match from the list of matching players the portal returns for the matching criteria.
+
+## The Matching Framework
+
+Matching players in GameSparks starts when a *MatchMakingRequest* is issued. It proceeds according to the matching criteria the request contains, such as the player's skill level and the matching constraints built into the specific Match configuration the request uses. Matches are highly-configurable and include a timespan which defines how long the search for a match will continue. In many cases, the processing of the *MatchMakingRequest* will continue for some time - perhaps several minutes - before concluding in success (*MatchFound*) or failure (*MatchNotFound*).
+
+If successful, the matchmaking process completes with a *Match Instance*. However, after a player has issued a *MatchMakingRequest* and until either a match is made or is not made, the status remains as a *Pending Match*. Let's follow a couple of simple examples that illustrate how the matchmaking process plays out with respect to Pending Matches through to a Match Instance.
+
+### Example 1
+
+*1.* Suppose we have 4 players, who each request a match while playing your game. In this example, we assume that all players match on skill. The Match configuration you have built into the game imposes these matching constraints:
+* Number of players - Minimum of 3 and maximum of 4 players.
+* Timeframe - The search for a match continues for 40 seconds after a match request has been issued.
+
+*2.* Now, suppose players 1, 2, 3 , and 4 issue their requests in this sequence:
+* Player 1 submits a match request. A Pending Match (PM1) is started for this request.
+* Player 2 submits a match request 20 seconds later. A Pending Match (PM2) is started for this request. Although players 1 and 2 match on skill, a Match Instance cannot be made because at least 3 players are required. However, because players 1 and 2 match on skill, a *joint* Pending Match is started (PMJ1). This merges player 1 and 2 under the same Pending Match and the player skill matching level is averaged for PMJ1. (In our current example, the skill-averaging operation has no effect because all players have the same skill level.)
+* 40 seconds have elapsed since player 1 submitted a match request. PMJ1 drops player 1 and the skill-averaging is adjusted for the remaining players. (In our example, we now have only player 2 remaining and skill-averaging has no effect.)
+* Player 3 submits a match request 41 seconds after player 1. A Pending Match (PM3) is started for this request. Although players 2 and 3 match on skill, a Match Instance cannot be made, because 3 players are required. However, because players 2 and 3 match on skill, player 3 is added to PMJ1 because we are still within the 40-second timeline since player 2 submitted a match request. Player skill matching level is averaged for the joint Pending Match. (Again, skill-averaging has no effect in this example.)
+* Player 4 submits a match request 46 seconds after player 1. A Pending Match (PM4) is started for this request. Player 4 is added to PMJ1 because we are within the 40 seconds since player 2 submitted a match request and all players match on skill level. PMJ1 now contains the minimum number of players required for a match - 3. PMJ1 is deleted and is no longer available for matching. A Match Instance (MInst1) is created using the details from PMJ1.
+
+### Example 2
+
+This second example builds on example 1 but introduces players with different skill levels:
+* Player 1 - 5
+* Player 2 - 11
+* Player 3 - 15
+* Player 4 - 19
+
+
+*1.* Suppose we have 4 players, who each request a match while playing your game. The Match configuration you have built into the game imposes these matching constraints:
+* Number of players - Minimum of 3 and maximum of 4 players.
+* Timeframe - The search for a match continues for 40 seconds after a match request has been issued.
+* Skill level matching - a relative skill level matching is used: only players within plus/minus 6 skill level of each other can be matched.
+
+*2.* Now, suppose players 1, 2, 3 , and 4 issue their requests in this sequence:
+* Player 1 submits a match request. A Pending Match (PM1) is started for this request.
+* Player 2 submits a match request 20 seconds later. A Pending Match (PM2) is started for this request. Although players 1 and 2 are matched on relative skill, a Match Instance cannot be made because at least 3 players are required. However, because players 1 and 2 match on skill, a *joint* Pending Match is started (PMJ1). This merges player 1 and 2 under the same Pending Match and the player skill matching level is averaged for PMJ1 - the matching skill level becomes 8.
+* Player 3 submits a match request 10 seconds later, that is, 30 seconds after player 1 submitted a match request. A Pending Match (PM3) is started for this request. Although player 3 matches player 2 in relative skill level, player 2 is now part of PMJ1, where the averaged matching skill level of 8 excludes player 3, at 15, from being added into PMJ1.
+* 40 seconds have elapsed since player 1 submitted a match request. PMJ1 drops player 1 and the skill-averaging is adjusted for the remaining player 2, so it jumps back up to 11. Player 3 is brought into PMJ1 - 15 now falls within the relative matching skill level of plus/minus 6. With player 3 added, the skill-averaging is applied to adjust PMJ1 again, taking it up to 13. A Match Instance cannot be made because at least 3 players are required.
+* Player 4 submits a match request 46 seconds after player 1. A Pending Match (PM4) is started for this request. Player 4 is added to PMJ1 because we are within the 40 seconds since player 2 submitted a match request and a matching skill of 19 is within the plus/minus 6 relative matching skill level of PMJ1's averaged skill level of 13. PMJ1 now contains the minimum number of players required for a match - 3. PMJ1 is deleted and is no longer available for matching. A Match Instance (MInst1) is created using the details from PMJ1.
+
+
+<q>**Note:** A Pending Match and a Match Instance are entirely separate collections in the Mongo database.</q>
+
+???? Something about manual matching options...apropos this ????
+
 
 ## Creating a Match
 
@@ -49,7 +97,7 @@ In this example:
   * Multiplayer matching is based on synchronous messages that match players based on similar skill attributes, continuously adding players to the Match and updating those already in the Match until the specified maximum number of Players has been reached, similar to the way a Challenge works.
 * We haven't selected *Accept Min. Players* for any of the Thresholds. This means that a Match will be found, only when 4 players meet the matching criteria that the Thresholds define.
 
-<q>**Note:** You cannot set the minimum number players for a Match to be fewer that 2. If you set the maximum number of players also at 2, then this is a Head-to-Head Match.</q>
+<q>**Note:** You cannot set the minimum number of players for a Match to be fewer that 2. If you set the maximum number of players also at 2, then this is a Head-to-Head Match.</q>
 
 In this example, we haven't:
 * Selected for a Real-Time Match and no Realtime script will be executed on the Real-Time server when a Real-Time session starts. You can learn more about Real-Time services [here](/Tutorials/Real-Time Services/README.md).
@@ -395,6 +443,32 @@ You might want the GameSparks portal to process all the matching criteria you ha
 
 ![](img/HowToMatchPlayers/9.png)
 
-To build a custom completion mechanism for a Match, you will typically use *FindPendingMatchesRequest* and *JoinPendingMatchRequest*.
+To build a custom completion mechanism for a Match, you will typically use [FindPendingMatchesRequest](/API Documentation/Request API/Multiplayer/FindPendingMatchesRequest.md) and [JoinPendingMatchRequest](/API Documentation/Request API/Multiplayer/JoinPendingMatchRequest.md).
 
 <q>**Possible Availability Lag!** If you use manual matching, an "availabilty lag" might occur and prevent the Match being made. This would happen in cases where the matching process has presented the results for players meeting the matching criteria, but by the time your custom mechanism actually completes the Match one or more of the matched players is no longer available and the Match will not go through.</q>
+
+### Manual Matching Example
+
+The following Match configuration will be used to support a manual matching example:
+
+?? Screen shot of the Match config with any commentary required ??
+
+?? Etc.??
+
+### Manual Matching in the Test Harness
+
+To manually match players using the Match configuration described in the previous section, we'll use [FindPendingMatchesRequest](/API Documentation/Request API/Multiplayer/FindPendingMatchesRequest.md) and [JoinPendingMatchRequest](/API Documentation/Request API/Multiplayer/JoinPendingMatchRequest.md) in the Test Harness.
+
+*1.* In the Test Harness, authenticate X Players (in separate browser tabs) and have them each submit a *MatchmakingRequest* within XX seconds so that all Players *can attempt to match each other in their first threshold period*.
+
+*Players *1*, *2*, *3* and *4* should have a skill of *XX*, *XX*, *XX* and *XX* respectively*.
+
+?? as above with code samples given ??
+
+## Customising Matching
+
+?? Participant Data vs Match Data
+
+???? Need these requests explained to be able then to explain how CustomQuery is used/works….so likely will need EG of Custom Q for getting both types of data.
+
+?? Using Custom Q elsewhere—reminder!

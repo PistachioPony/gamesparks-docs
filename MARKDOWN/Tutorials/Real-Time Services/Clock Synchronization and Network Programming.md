@@ -441,7 +441,7 @@ public void SendRTData(int _opcode, GameSparksRT.DeliveryIntent _intent,  RTData
 
 ### Received Packet Size
 
-We can check the size of any packets that we receive from the server. In our game example, we would do this in our *GameSparksManager.cs* script’s *OnPacketRecieved()* method. Here we can send the details from all packets to the game-controller so we can use it as you please.
+We can check the size of any packets that we receive from the server. In our game example, we would do this in our *GameSparksManager.cs* script’s *OnPacketReceived()* method. Here we can send the details from all packets to the game-controller so we can use it as you please.
 
 In this example, we're just going to send the packet size from the incoming packet to the *GameController.cs* class so we can log the incoming packet size:
 

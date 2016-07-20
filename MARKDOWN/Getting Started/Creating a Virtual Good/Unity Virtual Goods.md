@@ -30,7 +30,7 @@ The shop set up works as follows.
 
 ### Fetching Player Data
 
-When the Shop is selected or transitioned, you need to call the *AccountDetailsRequest* in order to get the player’s account details from GameSparks. You can then get and set the current currency and number of gold coins the player owns. You can find out more about *AccountDetailsRequest* [here](/API Documentation/Request API/Player/AccountDetailsRequest.md). If you have read the previous tutorial on [Achievements](/Getting Started/Creating an Achievement/Unity Achievements.md), you will be familiar with what data you can get back from the *AccountDetailsResponse*.
+When the Shop is selected or transitioned, you need to call the [AccountDetailsRequest](/API Documentation/Request API/Player/AccountDetailsRequest.md) in order to get the player’s account details from GameSparks. You can then get and set the current currency and number of gold coins the player owns. You can find out more about *AccountDetailsRequest* [here](/API Documentation/Request API/Player/AccountDetailsRequest.md). If you have read the previous tutorial on [Achievements](/Getting Started/Creating an Achievement/Unity Achievements.md), you will be familiar with what data you can get back from the *AccountDetailsResponse*.
 
 ![l](img/UT/3.png)
 

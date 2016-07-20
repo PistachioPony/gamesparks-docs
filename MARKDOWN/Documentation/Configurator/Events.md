@@ -1,11 +1,12 @@
 ---
 nav_sort: 3
 src: /Documentation/Configurator/Events.md
+
 ---
 
 # Events
 
-You can use Events to define custom data structures that you want to pass into the platform via the *LogEventRequest* and *LogChallengeEventRequest* API calls.
+You can use Events to define custom data structures that you want to pass into the platform via the [LogEventRequest](/API Documentation/Request API/Player/LogEventRequest.md) and [LogChallengeEventRequest](/API Documentation/Request API/Multiplayer/LogChallengeEventRequest.md) API calls.
 
 ## Managing Event Configurations
 
