@@ -1,5 +1,5 @@
 ---
-nav_sort: 4
+nav_sort: 5
 src: /Getting Started/Creating a Game/AndroidSDK Setup.md
 ---
 

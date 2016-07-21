@@ -63,7 +63,7 @@ You will log this Event whenever the authenticated player *consumes* a Gold Coin
     			}
 ```
 
-*6.* Create a function for the consumption of *Virtual Goods*, this will use the [ConsumeVirtualGoodRequest](/API Documentation/Request API/Player/ConsumeVirtualGoodRequest.md). The *ConsumeVirtualGoodRequest* needs a *quantity* and *Short code* of the item to be consumed.
+*6.* Create a function for the consumption of *Virtual Goods*, this will use the [ConsumeVirtualGoodRequest](/API Documentation/Request API/Store/ConsumeVirtualGoodRequest.md). The *ConsumeVirtualGoodRequest* needs a *quantity* and *Short code* of the item to be consumed.
 
 ```
     	private function ConsumeItem():void

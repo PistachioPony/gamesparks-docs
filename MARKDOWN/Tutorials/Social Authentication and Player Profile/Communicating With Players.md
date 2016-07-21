@@ -7,7 +7,7 @@ src: /Tutorials/Social Authentication and Player Profile/Communicating With Play
 
 ## Introduction
 
-You will need to be able to communicate to your players for various reasons. Maybe you want to display a daily message, inform a player of a certain promotion or send a player a token for them to retrieve their password with. GameSparks allows you to send messages to your players with incredible ease, flexibility and customisation using messages both socket (in-game) and push notification and E-mail.  
+You will need to be able to communicate to your players for various reasons. Maybe you want to display a daily message, inform a player of a certain promotion or send a player a token for them to retrieve their password with. GameSparks allows you to send messages to your players with incredible ease, flexibility and customization using messages - socket (in-game), push notification, and E-mail.  
 
 ## Messages
 

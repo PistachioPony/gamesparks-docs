@@ -39,7 +39,7 @@ The only configuration you will need to make in the GameSparks portal is whether
 
 The first thing you need to do is get an access token for your player and your application using the oAuth 2.0 flow. Please make sure that the Redirect URI field matches the Redirect URI set in Twitch.
 
- In the GameSparks developer portal, click on the *Test Harness* button. Within *Authentication* click *TwitchConnectRequest*.
+ In the GameSparks developer portal, click on the *Test Harness* button. Within *Authentication* click [TwitchConnectRequest](/API Documentation/Request API/Authentication/TwitchConnectRequest.md).
 
   At this point, if you are using the sample application all you need to do is copy the request provided. Otherwise, you need to replace the "accessToken" field with your own token. Here is an example of a request:
 

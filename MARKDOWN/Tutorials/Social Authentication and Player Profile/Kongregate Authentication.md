@@ -9,7 +9,7 @@ Kongregate authentication allows you to provide your players with a simple way t
 
 ## Setting up a Kongregate application
 
-For a successful *KongregateConnectRequest* the following data needs to be provided to GameSparks:
+For a successful [KongregateConnectRequest](/API Documentation/Request API/Authentication/KongregateConnectRequest.md) the following data needs to be provided to GameSparks:
 
 * Game API Key
 * The user's ID

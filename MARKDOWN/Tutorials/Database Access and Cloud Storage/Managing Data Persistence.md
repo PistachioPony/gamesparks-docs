@@ -134,11 +134,11 @@ Storing data in custom collections means that the data can be queried and (in th
 
 ### Indexing Custom Collections
 
-Custom collections can (and often should) be indexed for performance reasons. For example, if you always access the data by a field called “gameState” then you should index the collection as follows:
+Custom collections can (and often should) be indexed for performance reasons. For example, if you always access the data by a field called “gameType” then you should index the collection as follows:
 
 ```
 
-Spark.runtimeCollection("largeData").ensureIndex({"gameType":1});
+Spark.runtimeCollection("largeData").ensureIndex({"gameState.gameType":1});
 
 
 ```

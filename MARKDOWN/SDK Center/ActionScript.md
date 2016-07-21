@@ -8,7 +8,7 @@ src: /SDK Center/ActionScript.md
 The GameSparks ActionScript SDK allows you to interact with the GameSparks platform from any ActionScript environment(Flash, Flex, Air etc.)
 *Note*: Since the SDK is auto generated from our latest platform builds, all of the Requests/Responses that you see in the Test Harness will be available for use in the SDK. It will also give you full auto complete in your preferred IDE.
 
-These instructions will concentrate on how to use the SDK from Adobe Flash Builder
+These instructions will concentrate on how to use the SDK from Adobe Flash Builder.
 
 ## Getting the SDK
 
@@ -18,7 +18,7 @@ A pre-compiled swc is available [here](https://bitbucket.org/gamesparks/gamespar
 
 ## Adding the SDK to your Project
 
-Right click your project and select "Properties"
+Right click your project and select "Properties".
 
 ![](img/ActionScript/1.png)
 

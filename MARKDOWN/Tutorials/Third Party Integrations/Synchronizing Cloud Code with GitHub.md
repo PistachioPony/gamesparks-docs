@@ -1,11 +1,10 @@
 ---
-src: /Tutorials/Third Party Integrations/Synchronising Cloud Code with GitHub.md
-
+src: /Tutorials/Third Party Integrations/Synchronizing Cloud Code with GitHub.md
 ---
 
-# Git Synchronisation with Cloud Code Import / Export
+# Git Synchronization with Cloud Code Import / Export
 
-If you're using GitHub for your repositories, Good News! It is possible to synchronise your Cloud Code with GitHub via the Import / Export features available in the platform.
+If you're using GitHub for your repositories, Good News! It is possible to synchronize your Cloud Code with GitHub via the Import / Export features available in the platform.
 
 In this article, we assume that you already know what [Git](http://www.github.com) is and that you have a Git repository already created.
 
@@ -91,7 +90,7 @@ If this is the first time using *Get from Git* within the platform, you will be 
 
 ![](img/GitSynch/7.png)
 
-*10.* Authorise the application to link to your GitHub account by selecting *Authorize application.*
+*10.* Authorize the application to link to your GitHub account by selecting *Authorize application.*
 
 ![](img/GitSynch/8.png)
 
@@ -107,7 +106,7 @@ By doing this, you will now be able to select your data from your GitHub account
 
 *13* Choose the *Branch* of your repository. For this example, I only have the master branch. If you have more branches for your project, they will displayed in the dropdown list.
 
-*14* Choose the *root folder* of your repository. Ideally, this should be the location of where the directories of Cloud Code are located in your account. In this example, they were included at the top-level so my root folder selection would be *'/'*. If I wanted to only synchronise what is in the Events category, I would choose *event*.
+*14* Choose the *root folder* of your repository. Ideally, this should be the location of where the directories of Cloud Code are located in your account. In this example, they were included at the top-level so my root folder selection would be *'/'*. If I wanted to only synchronize what is in the Events category, I would choose *event*.
 
 ![](img/GitSynch/11.png)
 
@@ -124,6 +123,6 @@ By doing this, you will now be able to select your data from your GitHub account
 
 *17.* Press *Save*. The changes will be imported.
 
-<q>**Note:** After your first previewing of an import, the form to select the Repository, Branch and root folder will be slightly different. It will remember your chosen settings from your previous visit. These drop-down menus will be locked until you select the *Change Selection* button. You will then be able to make your changes to which Repository, Branch or folder you want to import from.</q>
+<q>**Note:** After your first previewing of an import, the form to select the Repository, Branch and root folder will be slightly different. It will remember your chosen settings from your previous visit. These drop-down menus will be locked until you select the *Change Selection* button. You will then be able to make your changes to which Repository, Branch, or folder you want to import from.</q>
 
 ![](img/GitSynch/13.png)

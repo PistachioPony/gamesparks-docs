@@ -1,4 +1,5 @@
 ---
+nav_sort: 1
 src: /Tutorials/Analytics, Segmentation and Game Management/Building Custom Analytics Dashboards.md
 
 ---
@@ -17,7 +18,7 @@ With the recent introduction of Dynamic Forms, you can easily build Custom Analy
 
 ### New players Chart
 
-This chart was created in the Charts tab of the management section and we used *new_players* shortCode. The chart represents the new players entering the game, this is done by grabbing a successful *RegistrationRequest* as well as a successful *DeviceAuthenticationRequest* that has been done by a new player (Device Authentication, as well as External Authentications act as a registration for new players). We will display the chart as a histogram, without a grouping, counting only unique player Ids, showing a tool tip and displaying the results spread out daily.
+This chart was created in the Charts tab of the management section and we used *new_players* shortCode. The chart represents the new players entering the game, this is done by grabbing a successful [RegistrationRequest](/API Documentation/Request API/Authentication/RegistrationRequest.md) as well as a successful [DeviceAuthenticationRequest](/API Documentation/Request API/Authentication/DeviceAuthenticationRequest.md) that has been done by a new player (Device Authentication, as well as External Authentications act as a registration for new players). We'll display the chart as a histogram, without a grouping, counting only unique player Ids, showing a tool tip and displaying the results spread out daily.
 
 ![](img/CustomAnalyticsDashboards/1.jpg)
 
@@ -41,7 +42,7 @@ The second chart will display and allow viewing of the actual error responses.
 
 ![](img/CustomAnalyticsDashboards/4.jpg)
 
-Note: The only difference between these two charts, is how the chart will be accessed by our GSML.
+<q>**Note:** The only difference between these two charts, is how the chart will be accessed by our GSML.</q>
 
 ### Analytics Screen
 

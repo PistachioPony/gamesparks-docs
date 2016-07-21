@@ -1,10 +1,11 @@
 ---
+nav_sort: 3
 src: /Tutorials/Analytics, Segmentation and Game Management/Working with Segmented Properties.md
 ---
 
 # Segmented Properties
 
-The GameSparks platform exposes various configurable objects to drive further customisation on the platform. Until now, configuration has been driven by platform capabilities and there hasn't been a first-class feature allowing you to provide your own custom configuration, which drives your own custom behaviour for these objects. That's why we've introduced *Properties*. In short, GameSparks Properties provide you the ability to store your own JSON configuration in the Portal, and attach them to GameSparks objects to be surfaced when you are using these objects. You can also access Properties directly, either in Cloud Code or via the web socket API, enabling you to deliver your custom configuration wherever you need it. Let's take a look at how to set up Properties and then how to access those values later on when we want to read them.
+The GameSparks platform exposes various configurable objects to drive further customization on the platform. Until now, configuration has been driven by platform capabilities and there hasn't been a first-class feature allowing you to provide your own custom configuration, which drives your own custom behaviour for these objects. That's why we've introduced *Properties*. In short, GameSparks Properties provide you the ability to store your own JSON configuration in the Portal, and attach them to GameSparks objects to be surfaced when you are using these objects. You can also access Properties directly, either in Cloud Code or via the web socket API, enabling you to deliver your custom configuration wherever you need it. Let's take a look at how to set up Properties and then how to access those values later on when we want to read them.
 
 ## Properties
 
@@ -74,7 +75,7 @@ Or through the web socket API using:
 
 ## Linking Property Sets
 
-Once you've created a Property Set you can then attach it to *Leaderboards*, *Achievements* and *Virtual Goods* and it will be available wherever you use those objects. Let's create an Achievement and our Property Set to it. Navigate to 'Achievements' and create a new one. On the Achievements edit page, you'll see a new field: 'Property Set'. From this drop-down you can see all the Property Sets you have available.
+Once you've created a Property Set you can then attach it to [Leaderboards](/Documentation/Configurator/Leaderboards.md), [Achievements](/Documentation/Configurator/Achievements.md) and [Virtual Goods](/Documentation/Configurator/Virtual Goods.md) and it will be available wherever you use those objects. Let's create an Achievement and our Property Set to it. Navigate to 'Achievements' and create a new one. On the Achievements edit page, you'll see a new field: 'Property Set'. From this drop-down you can see all the Property Sets you have available.
 
 ![](img/SegmentedProperties/6.png)
 
@@ -99,7 +100,7 @@ Similarly, a ListAchievementsRequest will now also return the PropertySet associ
 
 ## Segmentation
 
-The last thing to mention, and the thing that we think makes Property Sets really powerful, is segmentation. One you have some *Segments* configured within the Portal, whenever you add a Property to a Property Set you also have the option to add segmented values for that property. This makes it trivial for you to deliver different property values to different groups of players. Make sure you have some Segments configured, and let's go back to the Properties page.
+The last thing to mention, and the thing that we think makes Property Sets really powerful, is segmentation. One you have some [Segments](/Documentation/Configurator/Segments.md) configured within the Portal, whenever you add a Property to a Property Set you also have the option to add segmented values for that property. This makes it trivial for you to deliver different property values to different groups of players. Make sure you have some Segments configured, and let's go back to the Properties page.
 
 ![](img/SegmentedProperties/7.png)
 

@@ -88,7 +88,7 @@ Add the other test user as a friend to this user.
 
 ![](img/AuthFB/12.png)
 
-Now obtain an access token for this new test user and send a Facebook connect request to the GameSparks platform via the Test Harness.  Next in the Test Harnes click on User-> ListInviteFriendsRequest and you should see that the list of friends contains the other Facebook test user.
+Now obtain an access token for this new test user and send a Facebook connect request to the GameSparks platform via the Test Harness.  Next, in the Test Harness click on User-> ListInviteFriendsRequest and you should see that the list of friends contains the other Facebook test user.
 ```
 {
  "@class": ".ListInviteFriendsRequest",

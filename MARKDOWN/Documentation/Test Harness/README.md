@@ -42,9 +42,9 @@ The *Requests* section contains a selection of buttons which will populate the 
   * LogChallengeEvent \-  contains a [LogChallengeEventRequest](/API Documentation/Request API/Multiplayer/LogChallengeEventRequest.md) for each of the Events that you have defined in the Configurator
   * Store \- contains requests relating to third party app stores such as Google play
   * Player \- contains requests relating to the Player
-  * Challenges \- contains requests relating to Challenges
-  * Leaderboards \- contains requests relating to Leaderboards
-  * Analytics \- contains requests relating to Analytics
+  * Challenges \- contains requests relating to [Challenges](/Documentation/Configurator/Multiplayer/Challenges.md)
+  * Leaderboards \- contains requests relating to [Leaderboards](/Documentation/Configurator/Leaderboards.md)
+  * Analytics \- contains requests relating to [Analytics](/Documentation/Configurator/Analytics.md)
   * Misc \- contains requests that don't belong anywhere else!
   * Scenarios \- contains requests that you have saved for later use
 

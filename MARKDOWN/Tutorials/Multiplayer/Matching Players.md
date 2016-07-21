@@ -12,12 +12,13 @@ With this background in place, we'll move on to create a Match configuration wit
 We'll also see how to enable and work with:
 * **Drop In/Drop Out** - Have matching players added to or removed from the Match after the Match is first made.
 * **Manual Matching** - Use a custom mechanism for completing a Match from the list of matching players the portal returns for the matching criteria.
+* **Custom Matching** - Exploit further ways to fine-tune matchmaking for your game.
 
 ## The Matching Framework
 
 Matching players in GameSparks starts when a *MatchMakingRequest* is issued. It proceeds according to the matching criteria the request contains, such as the player's skill level and the matching constraints built into the specific Match configuration the request uses. Matches are highly-configurable and include a timespan which defines how long the search for a match will continue. In many cases, the processing of the *MatchMakingRequest* will continue for some time - perhaps several minutes - before concluding in success (*MatchFound*) or failure (*MatchNotFound*).
 
-If successful, the matchmaking process completes with a *Match Instance*. However, after a player has issued a *MatchMakingRequest* and until either a match is made or is not made, the status remains as a *Pending Match*. Let's follow a couple of simple examples that illustrate how the matchmaking process plays out with respect to Pending Matches through to a Match Instance.
+If successful, the matchmaking process completes with a *Match Instance*. However, after a player has issued a *MatchMakingRequest* and until either a match is made or is not made, the status remains as a *Pending Match*. Let's follow a couple of simple examples that illustrate how the matchmaking process plays out from Pending Matches through to a Match Instance.
 
 ### Example 1
 
@@ -56,7 +57,10 @@ This second example builds on example 1 but introduces players with different sk
 
 <q>**Note:** A Pending Match and a Match Instance are entirely separate collections in the Mongo database.</q>
 
-???? Something about manual matching options...apropos this ????
+### How does manual matching affect the matchmaking process?
+
+If you select the manual matchmaking option, Pending Matches will be created automatically as usual but the automatic joining of Pending Matches as the matchmaking process plays out is disabled. You can then control which of the PMs are joined together. When a Pending Match that you have made manually meets all of the other matching criteria, a Match Instance will be formed.
+
 
 
 ## Creating a Match
@@ -447,28 +451,22 @@ To build a custom completion mechanism for a Match, you will typically use [Find
 
 <q>**Possible Availability Lag!** If you use manual matching, an "availabilty lag" might occur and prevent the Match being made. This would happen in cases where the matching process has presented the results for players meeting the matching criteria, but by the time your custom mechanism actually completes the Match one or more of the matched players is no longer available and the Match will not go through.</q>
 
-### Manual Matching Example
+## Customizing Matching
 
-The following Match configuration will be used to support a manual matching example:
+There are other mechanisms you can use to introduce further matching customization into your game.
 
-?? Screen shot of the Match config with any commentary required ??
+### Participant Data and Match Data
 
-?? Etc.??
+Other types of data can be added for matchmaking:
+* **Participant Data** - You can add custom data to each participant in a Pending Match. These data will be transferred to the Match Instance that is made from the Pending Match.
+* **Match Data** - You can add custom data as Match Data to the Match Instance. You do this in one of two ways:
+  * **Directly** - Add Match Data directly to the Match Instance, such as adding a host player for a multiplayer game. Use *SparkMatch.setMatchData* and *SparkMatch.getMatchData* for this method.
+  * **Using MatchMakingRequest** - To get Match Data in the Match Instance, you can set it on the *MatchMakingRequest* and it will be added to the Pending Match and then be transferred to the Match Instance made from the Pending Match. Match Data allows for the sort of use case where only one *MatchMakingRequest* will contain Match Data. For example, you can define the player who makes the request with Match Data as the *host player* for a multiplayer game and other players making match requests (without Match Data attached to their requests) want to be *guest players* to the single host player.  
 
-### Manual Matching in the Test Harness
+### Custom Query
 
-To manually match players using the Match configuration described in the previous section, we'll use [FindPendingMatchesRequest](/API Documentation/Request API/Multiplayer/FindPendingMatchesRequest.md) and [JoinPendingMatchRequest](/API Documentation/Request API/Multiplayer/JoinPendingMatchRequest.md) in the Test Harness.
+You can use *Custom Query* when you want more complex rules for grouping Pending Matches. Each participant in a Pending Match can have a Custom Query, which is specific to them as a player seeking a match, that can be run against a different Pending Match to see if the two Pending Matches can be joined. In this way, you can use a Custom Query to impose tight conditions on when Pending Matches can be joined.
 
-*1.* In the Test Harness, authenticate X Players (in separate browser tabs) and have them each submit a *MatchmakingRequest* within XX seconds so that all Players *can attempt to match each other in their first threshold period*.
+A simple example of using this capability would be for players who only want to be matched with people playing in their own country. To do this, each MatchMakingRequest will contain Participant Data and a Custom Query to prevent the requesting player from being put into a Pending Match where there are players from another country.
 
-*Players *1*, *2*, *3* and *4* should have a skill of *XX*, *XX*, *XX* and *XX* respectively*.
-
-?? as above with code samples given ??
-
-## Customising Matching
-
-?? Participant Data vs Match Data
-
-???? Need these requests explained to be able then to explain how CustomQuery is used/works….so likely will need EG of Custom Q for getting both types of data.
-
-?? Using Custom Q elsewhere—reminder!
+<q>**Using Custom Query!** Custom Query is not restricted to use for fine-tuning the matchmaking process but can be very usefully deployed elswhere.</q>
