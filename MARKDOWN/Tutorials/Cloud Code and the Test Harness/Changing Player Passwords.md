@@ -9,7 +9,7 @@ If your game uses the [RegistrationRequest](/API Documentation/Request API/Auth
 
 ## Changing Passwords with ChangeUserDetailsRequest API call
 
-The ChangeUserDetailsRequest call contains a 'newPassword' field which can be used to alter the currently authenticated player's details. Let's try this out using the GameSparks developer portal Test Harness. Navigate in the GameSparks developer portal Test Harness, copy the JSON request below into the JSON field and press the 'Send' icon.
+The *ChangeUserDetailsRequest* call contains a 'newPassword' field which can be used to alter the currently authenticated player's details. Let's try this out using the GameSparks developer portal Test Harness. Navigate in the GameSparks developer portal Test Harness, copy the JSON request below into the JSON field and press the 'Send' icon.
 
 ```    
     {
@@ -33,7 +33,7 @@ The GameSparks platform will return a response similar to this.
 
 ```  
 
-This player is now authenticated and could sign into later sessions using these credentials with an AuthenticationRequest. To change this player's password to a new one you make a ChangeUserDetailsRequest call that provides the new password in the 'newPassword' field. In the Test Harness, copy the JSON request below into the JSON field and press the 'Send' icon.
+This player is now authenticated and could sign into later sessions using these credentials with an [AuthenticationRequest](/API Documentation/Request API/Authentication/AuthenticationRequest.md). To change this player's password to a new one you make a *ChangeUserDetailsRequest* call that provides the new password in the 'newPassword' field. In the Test Harness, copy the JSON request below into the JSON field and press the 'Send' icon.
 
 ```
     {
@@ -51,7 +51,7 @@ The GameSparks platform will return a response similar to this.
     }
 ```
 
-For greater security you may require that the player enters their existing password along with the new one. If this is the case the ChangeUserDetailsRequest call allows you to provide the old password which the GameSparks platform will verify before changing it to the new value. In the Test Harness, copy the JSON request below into the JSON field and press the 'Send' icon.
+For greater security you may require that the player enters their existing password along with the new one. If this is the case the *ChangeUserDetailsRequest* call allows you to provide the old password which the GameSparks platform will verify before changing it to the new value. In the Test Harness, copy the JSON request below into the JSON field and press the 'Send' icon.
 
 ```    
     {
@@ -115,7 +115,7 @@ The GameSparks platform will return a registration response similar to this.
      "userId": "53808a96e4b02eeeac89e23a"
     }
 ```
-Now send the LogEventRequest containing the current password and the new one. The GameSparks platform will intercept this request and execute the Cloud Code script that we provided to validate and change the player's password.
+Now send the [LogEventRequest](/API Documentation/Request API/Player/LogEventRequest.md) containing the current password and the new one. The GameSparks platform will intercept this request and execute the Cloud Code script that we provided to validate and change the player's password.
 
 ```    
     {

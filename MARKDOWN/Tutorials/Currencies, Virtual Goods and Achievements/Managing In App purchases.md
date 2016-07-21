@@ -78,7 +78,7 @@ If we list the available virtual goods, we see our Heart listed (*Store > ListVi
 
 ```
 
-To buy a Heart we make BuyVirtualGoodsRequest (*Store > BuyVirtualGoodsRequest*):
+To buy a Heart we make [BuyVirtualGoodsRequest](/API Documentation/Request API/Store/BuyVirtualGoodsRequest.md) (*Store > BuyVirtualGoodsRequest*):
 
 ```
 { "@class": ".BuyVirtualGoodsRequest",
@@ -94,7 +94,7 @@ To buy a Heart we make BuyVirtualGoodsRequest (*Store > BuyVirtualGoodsRequest*)
 "scriptData": null }
 ```
 
-And a subsequent AccountDetailsRequest will show that the player now has a Heart available, and 100 less of Currency 1:
+And a subsequent [AccountDetailsRequest](/API Documentation/Request API/Player/AccountDetailsRequest.md) will show that the player now has a Heart available, and 100 less of Currency 1:
 
 ```
 { "@class": ".AccountDetailsRequest",
@@ -118,7 +118,7 @@ And a subsequent AccountDetailsRequest will show that the player now has a Heart
 "virtualGoods": { "HEART": 1 } }
 ```
 
-The player can now consume a Heart, which will remove the Virtual Good from their profile (*Store > ConsumeVirtualGoodRequest*):
+The player can now consume a Heart using the [ConsumeVirtualGoodRequest](/API Documentation/Request API/Store/ConsumeVirtualGoodRequest.md) (*Store > ConsumeVirtualGoodRequest*), which will remove the Virtual Good from their profile:
 
 ```
 { "@class": ".ConsumeVirtualGoodRequest",

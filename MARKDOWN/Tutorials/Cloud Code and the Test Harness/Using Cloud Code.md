@@ -55,7 +55,7 @@ Click Save at the bottom right hand corner. Your page should now look like this.
 
 ![](img/CreateCloud/8.png)
 
-The first three lines of the script use the Spark.getData function to access the attribute values of the incoming Event. Notice how these attributes match the values we gave the Event Attribute short codes in the previous section. The remaining lines use the Spark.setScriptData function to add three new fields to the response that is delivered to the calling client. The first line takes the first attribute and converts it to uppercase, the second multiplies the second attribute value by 10 and the final two lines add a new property to an incoming JSON object and assign that to the response. You're now ready to test the code via the Test Harness.
+The first three lines of the script use the *Spark.getData* function to access the attribute values of the incoming Event. Notice how these attributes match the values we gave the Event Attribute short codes in the previous section. The remaining lines use the *Spark.setScriptData* function to add three new fields to the response that is delivered to the calling client. The first line takes the first attribute and converts it to uppercase, the second multiplies the second attribute value by 10 and the final two lines add a new property to an incoming JSON object and assign that to the response. You're now ready to test the code via the Test Harness.
 
 ## Testing the Cloud
 
