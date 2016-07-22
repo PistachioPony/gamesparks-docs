@@ -32,7 +32,7 @@ Configure the Event attribute:
 
 Next, we'll create a Leaderboard that will arrange the players' scores in order from highest to lowest.
 
-Create a Leaderboard to represent the game's high score table. Click the ![](/img/fa/plus.png) icon in the Leaderboards section on the Leaderboards page to bring up the *Create Leaderboard* dialog:
+Create a Leaderboard to represent the game's high score table. Click the ![](/img/fa/plus.png) icon on the Leaderboards page to bring up the *Create Leaderboard* dialog:
 
 ![](img/AchLDR/3.jpg)
 
@@ -70,7 +70,7 @@ Configure the Achievement and click the *Save* button:
 
 ## Testing Achievement, Leaderboard, and Event with Test Harness
 
-In this section we will use the Test Harness to register a test player with the preview version of the game, authorise this player and post a new high score to the GameSparks platoform. We will see the JSON requests and responses. We will then request the player's details to see that they have been gifted with some in-game currency.
+In this section we'll use the Test Harness to register a test player with the preview version of the game, authorize this player and post a new high score to the GameSparks platform. We'll see the JSON requests and responses and then request the player's details to see that they have been gifted with some in-game currency.
 
 ### Register a Test Player
 

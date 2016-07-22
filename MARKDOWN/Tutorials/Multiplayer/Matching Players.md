@@ -59,7 +59,7 @@ This second example builds on example 1 but introduces players with different sk
 
 ### How does manual matching affect the matchmaking process?
 
-If you select the manual matchmaking option, Pending Matches will be created automatically as usual but the automatic joining of Pending Matches as the matchmaking process plays out is disabled. You can then control which of the PMs are joined together. When a Pending Match that you have made manually meets all of the other matching criteria, a Match Instance will be formed.
+If you select the manual matchmaking option, Pending Matches will be created automatically in the normal way but the automatic joining of Pending Matches as the matchmaking process plays out *is disabled*. You can then use manual matching to control which of the PMs are joined together. When a Pending Match that you have made manually meets all of the other matching criteria, a Match Instance will be formed.
 
 
 
@@ -409,7 +409,7 @@ And the *MatchDetailsResponse*:
 
 ### Cancelling a Match Request
 
-*7. * To cancel an ongoing *MatchmakingRequest*, use the *action* parameter in the request with the value, *cancel*.
+*7.* To cancel an ongoing *MatchmakingRequest*, use the *action* parameter in the request with the value, *cancel*.
 
 ```
 {
@@ -451,8 +451,95 @@ To build a custom completion mechanism for a Match, you will typically use [Find
 
 <q>**Possible Availability Lag!** If you use manual matching, an "availabilty lag" might occur and prevent the Match being made. This would happen in cases where the matching process has presented the results for players meeting the matching criteria, but by the time your custom mechanism actually completes the Match one or more of the matched players is no longer available and the Match will not go through.</q>
 
-## Customizing Matching
+### Manual Matching in the Test Harness
 
+To manually match players, we'll use [FindPendingMatchesRequest](/API Documentation/Request API/Multiplayer/FindPendingMatchesRequest.md) and [JoinPendingMatchRequest](/API Documentation/Request API/Multiplayer/JoinPendingMatchRequest.md) in the Test Harness.
+
+???? using the Match configuration described in the previous section YES and with scenario 1 above????
+
+* **Scenario 1A.** Players *1*, *2*, and *3* have skills of *20*, *15*, and *17* respectively. Each player submits a *MatchmakingRequest* in that order and each player's request is issued within player *1's* first Threshold period of 10 seconds. At 12 seconds - that is, in the 2nd Threshold period - P1 would submit a FindPendingMatchesRequest and will get FindPendingMatchesResponse containing Player 3 as a Possible Match.
+
+Players *1* and *3* will NOT be matched automatically BUT we can find out who could potentially be matched, if you decided to match them manually.
+
+Player 1 submits a FindPendingMatchesRequest at 12 seconds:
+
+```
+
+{
+ "@class": ".FindPendingMatchesRequest",
+ "matchGroup": "group1",
+ "matchShortCode": "MULTI_MCH",
+ "maxMatchesToFind": 10
+}
+
+```
+
+And Player 1 receives the response:
+
+
+```
+
+{
+ "@class": ".FindPendingMatchesResponse",
+ "pendingMatches": [
+  {
+   "id": "5792444e6cc8e27fffe93e7f",
+   "matchGroup": "group1",
+   "matchShortCode": "MULTI_MCH",
+   "matchedPlayers": [
+    {
+     "location": {
+      "type": "Point",
+      "coordinates": [
+       -1.08270263671875,
+       53.95759582519531
+      ]
+     },
+     "playerId": "5792410f6cc8e27fffe92509",
+     "skill": 17
+    }
+   ],
+   "skill": 17
+  }
+ ]
+}
+
+
+```
+
+
+If player 3 were to have submitted the FindPendingMatchesRequest at 12 seconds he'd get the same response but for player 1. However, if he did this at 22 secs - into the 3rd Threshold period - the response would show no possible matches - empty:
+
+
+```
+
+{
+ "@class": ".FindPendingMatchesResponse"
+}
+
+
+```
+
+This does not mean that there are NO PMs at all, simply an correctly that none of the available PMs at that point are suitable for matching with player 3.
+
+Lastly, if player 3 submitted a FindPendingMatchesRequest but hadn't submitted a MatchMakingRequest, he would see:
+
+```
+
+{
+ "@class": ".FindPendingMatchesResponse",
+ "error": {
+  "match": "NOT_IN_PROGRESS"
+ }
+}
+
+```
+
+This makes perfect sense - a player can't be put into any Pending Match unless they've first issued a MatchMakingRequest.
+
+??? Last - the join. ???
+
+## Customizing Matching
 There are other mechanisms you can use to introduce further matching customization into your game.
 
 ### Participant Data and Match Data
@@ -467,6 +554,6 @@ Other types of data can be added for matchmaking:
 
 You can use *Custom Query* when you want more complex rules for grouping Pending Matches. Each participant in a Pending Match can have a Custom Query, which is specific to them as a player seeking a match, that can be run against a different Pending Match to see if the two Pending Matches can be joined. In this way, you can use a Custom Query to impose tight conditions on when Pending Matches can be joined.
 
-A simple example of using this capability would be for players who only want to be matched with people playing in their own country. To do this, each MatchMakingRequest will contain Participant Data and a Custom Query to prevent the requesting player from being put into a Pending Match where there are players from another country.
+A simple example of using this capability would be for players who only want to be matched with people playing in their own country. To do this, each *MatchMakingRequest* will contain Participant Data and a Custom Query to prevent the requesting player from being put into a Pending Match where there are players from another country.
 
 <q>**Using Custom Query!** Custom Query is not restricted to use for fine-tuning the matchmaking process but can be very usefully deployed elswhere.</q>
