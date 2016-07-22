@@ -1,10 +1,5 @@
----
-src: /API Documentation/Request API/Multiplayer/CreateChallengeRequest.md
----
 
 # CreateChallengeRequest
-
-<a href="https://api.gamesparks.net/#createchallengerequest" target="_gsapi">View interactive version here</a>
 
 
 Issues a challenge to a group of players from the currently signed in player.
@@ -13,6 +8,8 @@ The endTime field must be present unless the challenge template has an achieveme
 
 The usersToChallenge field must be present for this request if the acessType is PRIVATE (which is the default).
 
+
+<a href="https://api.gamesparks.net/#createchallengerequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

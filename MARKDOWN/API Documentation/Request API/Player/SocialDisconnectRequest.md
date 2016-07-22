@@ -1,14 +1,11 @@
----
-src: /API Documentation/Request API/Player/SocialDisconnectRequest.md
----
 
 # SocialDisconnectRequest
-
-<a href="https://api.gamesparks.net/#socialdisconnectrequest" target="_gsapi">View interactive version here</a>
 
 
 Allows a player's internal profile to be disconnected from an external system to which it is linked.  Any friends linked as result of this connection will be removed.
 
+
+<a href="https://api.gamesparks.net/#socialdisconnectrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

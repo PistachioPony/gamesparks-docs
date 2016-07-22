@@ -1,10 +1,5 @@
----
-src: /API Documentation/Request API/Store/GooglePlayBuyGoodsRequest.md
----
 
 # GooglePlayBuyGoodsRequest
-
-<a href="https://api.gamesparks.net/#googleplaybuygoodsrequest" target="_gsapi">View interactive version here</a>
 
 
 Processes the response from a Google Play in app purchase flow.
@@ -17,6 +12,8 @@ Once verfied, the players account will be credited with the Virtual Good, or Vir
 
 It is critical that the signedData is sent exactly as it is returned form google, including any whitespace. Any modification of the signedData will cause the verification process to fail.
 
+
+<a href="https://api.gamesparks.net/#googleplaybuygoodsrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

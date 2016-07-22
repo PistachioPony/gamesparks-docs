@@ -1,14 +1,11 @@
----
-src: /API Documentation/Request API/Player/ListTransactionsRequest.md
----
 
 # ListTransactionsRequest
-
-<a href="https://api.gamesparks.net/#listtransactionsrequest" target="_gsapi">View interactive version here</a>
 
 
 Returns a list of the current player's transaction history.
 
+
+<a href="https://api.gamesparks.net/#listtransactionsrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

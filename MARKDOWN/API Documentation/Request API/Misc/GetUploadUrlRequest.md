@@ -1,14 +1,11 @@
----
-src: /API Documentation/Request API/Misc/GetUploadUrlRequest.md
----
 
 # GetUploadUrlRequest
-
-<a href="https://api.gamesparks.net/#getuploadurlrequest" target="_gsapi">View interactive version here</a>
 
 
 Returns a secure, time sensitive URL to allow the game to upload a piece of player content to the GameSparks platform.
 
+
+<a href="https://api.gamesparks.net/#getuploadurlrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

@@ -1,14 +1,11 @@
----
-src: /API Documentation/Request API/Store/ConsumeVirtualGoodRequest.md
----
 
 # ConsumeVirtualGoodRequest
-
-<a href="https://api.gamesparks.net/#consumevirtualgoodrequest" target="_gsapi">View interactive version here</a>
 
 
 Consumes a given amount of the specified virtual good.
 
+
+<a href="https://api.gamesparks.net/#consumevirtualgoodrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

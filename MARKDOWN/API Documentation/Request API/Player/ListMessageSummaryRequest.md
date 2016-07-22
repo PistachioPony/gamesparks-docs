@@ -1,10 +1,5 @@
----
-src: /API Documentation/Request API/Player/ListMessageSummaryRequest.md
----
 
 # ListMessageSummaryRequest
-
-<a href="https://api.gamesparks.net/#listmessagesummaryrequest" target="_gsapi">View interactive version here</a>
 
 
 Returns a summary of the list of the current players messages / notifications.
@@ -13,6 +8,8 @@ The list only contains un-dismissed messages, to dismiss a message see DismissMe
 
 The full message can be retrieved using GetMessageRequest Read the section on Messages to see the complete list of messages and their meanings.
 
+
+<a href="https://api.gamesparks.net/#listmessagesummaryrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

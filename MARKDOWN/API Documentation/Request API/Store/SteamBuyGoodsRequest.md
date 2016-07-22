@@ -1,10 +1,5 @@
----
-src: /API Documentation/Request API/Store/SteamBuyGoodsRequest.md
----
 
 # SteamBuyGoodsRequest
-
-<a href="https://api.gamesparks.net/#steambuygoodsrequest" target="_gsapi">View interactive version here</a>
 
 
 Processes a 'orderid' from a Steam.
@@ -13,6 +8,8 @@ The GameSparks platform will validate the 'orderid' with Steam and process the r
 
 Once verified, the players account will be credited with the Virtual Good, or Virtual Currency the purchase contains. The virtual good will be looked up by matching the 'itemid' in the response with the 'Steam Product ID' configured against the virtual good.
 
+
+<a href="https://api.gamesparks.net/#steambuygoodsrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

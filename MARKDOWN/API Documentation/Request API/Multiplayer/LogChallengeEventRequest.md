@@ -1,10 +1,5 @@
----
-src: /API Documentation/Request API/Multiplayer/LogChallengeEventRequest.md
----
 
 # LogChallengeEventRequest
-
-<a href="https://api.gamesparks.net/#logchallengeeventrequest" target="_gsapi">View interactive version here</a>
 
 
 Allows a user defined event to be triggered. The event will be posted to the challenge specified.
@@ -13,6 +8,8 @@ This call differs from most as it does not have a fixed format. The @class, chal
 
 The example below shows a request to en event with a short code of HS with 2 attributes, 'HS' & 'GL'.
 
+
+<a href="https://api.gamesparks.net/#logchallengeeventrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

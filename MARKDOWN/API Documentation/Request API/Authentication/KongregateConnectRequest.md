@@ -1,10 +1,5 @@
----
-src: /API Documentation/Request API/Authentication/KongregateConnectRequest.md
----
 
 # KongregateConnectRequest
-
-<a href="https://api.gamesparks.net/#kongregateconnectrequest" target="_gsapi">View interactive version here</a>
 
 
 Allows a Kongregate account to be used as an authentication mechanism.
@@ -19,6 +14,8 @@ If the current player has not authenticated and the Kongregate user is not known
 
 If the Kongregate user is already known, the session will switch to being the previously created user.
 
+
+<a href="https://api.gamesparks.net/#kongregateconnectrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 
@@ -48,15 +45,6 @@ userId | string | The player's id
 
 ## Nested types
 
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
-
 ### Player
 
 A nested object that represents a player.
@@ -70,6 +58,15 @@ id | string | The id of the Player
 online | boolean | The online status of the Player
 scriptData | JSON | The script data of the Player
 virtualGoods | string[] | The virtual goods of the Player
+
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
 
 ## Error Codes
 

@@ -1,10 +1,5 @@
----
-src: /API Documentation/Request API/Player/LogEventRequest.md
----
 
 # LogEventRequest
-
-<a href="https://api.gamesparks.net/#logeventrequest" target="_gsapi">View interactive version here</a>
 
 
 Allows a user defined event to be triggered.
@@ -13,6 +8,8 @@ This call differs from most as it does not have a fixed format. The @class and e
 
 The example below shows a request to an event with a short code of HS with 2 attributes, 'HS' & 'GL'.
 
+
+<a href="https://api.gamesparks.net/#logeventrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

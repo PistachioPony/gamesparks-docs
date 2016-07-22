@@ -1,10 +1,5 @@
----
-src: /API Documentation/Request API/Multiplayer/FindPendingMatchesRequest.md
----
 
 # FindPendingMatchesRequest
-
-<a href="https://api.gamesparks.net/#findpendingmatchesrequest" target="_gsapi">View interactive version here</a>
 
 
 Find other pending matches that will match this player's previously submitted MatchmakingRequest.
@@ -13,6 +8,8 @@ Used for manual matching of players, where you want control over which pending m
 
 Each player must match the other for the pending match to be found.
 
+
+<a href="https://api.gamesparks.net/#findpendingmatchesrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 
@@ -34,15 +31,6 @@ scriptData | ScriptData | A JSON Map of any data added either to the Request or 
 
 ## Nested types
 
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
-
 ### PendingMatch
 
 An object that represents a pending match.
@@ -54,6 +42,15 @@ matchGroup | string | The match group for the pending match
 matchShortCode | string | The match shortCode for the pending match
 matchedPlayers | List | The players already part of this pending match
 skill | number | The average skill of players in this pending match
+
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
 
 ## Error Codes
 

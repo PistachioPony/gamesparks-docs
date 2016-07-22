@@ -1,14 +1,11 @@
----
-src: /API Documentation/Request API/Misc/GetUploadedRequest.md
----
 
 # GetUploadedRequest
-
-<a href="https://api.gamesparks.net/#getuploadedrequest" target="_gsapi">View interactive version here</a>
 
 
 Returns a secure, time sensitive URL to a piece of content that was previously uploaded to the GameSparks platform by a player.
 
+
+<a href="https://api.gamesparks.net/#getuploadedrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

@@ -1,16 +1,13 @@
----
-src: /API Documentation/Request API/Multiplayer/WithdrawChallengeRequest.md
----
 
 # WithdrawChallengeRequest
-
-<a href="https://api.gamesparks.net/#withdrawchallengerequest" target="_gsapi">View interactive version here</a>
 
 
 Withdraws a challenge previously issued by the current player.
 
 This can only be done while the challenge is in the ISSUED state. Once it's been accepted the challenge can not be withdrawn.
 
+
+<a href="https://api.gamesparks.net/#withdrawchallengerequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

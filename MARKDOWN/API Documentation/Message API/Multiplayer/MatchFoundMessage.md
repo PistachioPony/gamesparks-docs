@@ -1,14 +1,11 @@
----
-src: /API Documentation/Message API/Multiplayer/MatchFoundMessage.md
----
 
 # MatchFoundMessage
-
-<a href="https://api.gamesparks.net/#matchfoundmessage" target="_gsapi">View interactive version here</a>
 
 
 A message indicating that a match has been found
 
+
+<a href="https://api.gamesparks.net/#matchfoundmessage" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 
@@ -31,15 +28,6 @@ title | No | string | A textual title for the message.
 
 ## Nested types
 
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
-
 ### Participant
 
 A nested object that represents a participant in a match.
@@ -55,6 +43,15 @@ participantData | ScriptData[] | A JSON Map of any data that was associated to t
 peerId | number | The peerId of this participant within the match
 scriptData | JSON | The script data of the Player
 virtualGoods | string[] | The virtual goods of the Player
+
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
 
 
 ## Code Samples

@@ -1,14 +1,11 @@
----
-src: /API Documentation/Request API/Misc/GetDownloadableRequest.md
----
 
 # GetDownloadableRequest
-
-<a href="https://api.gamesparks.net/#getdownloadablerequest" target="_gsapi">View interactive version here</a>
 
 
 Returns a secure, time sensitive url to allow the game to download a piece of downloadable content stored in the GameSparks platform.
 
+
+<a href="https://api.gamesparks.net/#getdownloadablerequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

@@ -1,14 +1,11 @@
----
-src: /API Documentation/Request API/Misc/GetPropertyRequest.md
----
 
 # GetPropertyRequest
-
-<a href="https://api.gamesparks.net/#getpropertyrequest" target="_gsapi">View interactive version here</a>
 
 
 Get the property for the given short Code.
 
+
+<a href="https://api.gamesparks.net/#getpropertyrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

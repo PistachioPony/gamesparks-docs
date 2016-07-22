@@ -1,7 +1,3 @@
----
-src: /API Documentation/Cloud Code API/Integrations/SendGrid.md
----
-
 # SendGrid
 
 Provides the ability to send emails via <a href="http://sendgrid.com/">SendGrid</a>.

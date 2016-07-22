@@ -1,14 +1,11 @@
----
-src: /API Documentation/Request API/Leaderboards/ListLeaderboardsRequest.md
----
 
 # ListLeaderboardsRequest
-
-<a href="https://api.gamesparks.net/#listleaderboardsrequest" target="_gsapi">View interactive version here</a>
 
 
 Returns a list of all leaderboards configured in the game.
 
+
+<a href="https://api.gamesparks.net/#listleaderboardsrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

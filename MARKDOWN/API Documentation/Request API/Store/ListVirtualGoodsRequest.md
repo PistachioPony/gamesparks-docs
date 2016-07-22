@@ -1,14 +1,11 @@
----
-src: /API Documentation/Request API/Store/ListVirtualGoodsRequest.md
----
 
 # ListVirtualGoodsRequest
-
-<a href="https://api.gamesparks.net/#listvirtualgoodsrequest" target="_gsapi">View interactive version here</a>
 
 
 Returns the list of configured virtual goods.
 
+
+<a href="https://api.gamesparks.net/#listvirtualgoodsrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 
@@ -27,15 +24,6 @@ scriptData | ScriptData | A JSON Map of any data added either to the Request or 
 virtualGoods | [VirtualGood[]](#virtualgood) | A list of JSON objects containing virtual goods data
 
 ## Nested types
-
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
 
 ### VirtualGood
 
@@ -76,6 +64,15 @@ steamStoreProductId | string | The Steam Store productId of the item.
 tags | string | The tags of the Virtual Good
 type | string | The type of the virtual good, "VGOOD" or "CURRENCY"
 w8StoreProductId | string | The Windows 8 productId of the item.
+
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
 
 ### BundledGood
 

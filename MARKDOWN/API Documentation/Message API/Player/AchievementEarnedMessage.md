@@ -1,10 +1,5 @@
----
-src: /API Documentation/Message API/Player/AchievementEarnedMessage.md
----
 
 # AchievementEarnedMessage
-
-<a href="https://api.gamesparks.net/#achievementearnedmessage" target="_gsapi">View interactive version here</a>
 
 
 Message sent to a player when they have been awarded an achievement within the game.
@@ -13,6 +8,8 @@ This message may be triggered by a leaderboard or a script.
 
 The player may have gained a virtual good or virtual currency as a result of gaining the award.
 
+
+<a href="https://api.gamesparks.net/#achievementearnedmessage" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

@@ -1,14 +1,11 @@
----
-src: /API Documentation/Request API/Multiplayer/JoinPendingMatchRequest.md
----
 
 # JoinPendingMatchRequest
-
-<a href="https://api.gamesparks.net/#joinpendingmatchrequest" target="_gsapi">View interactive version here</a>
 
 
 Requests to join a pending match (found via FindPendingMatchesRequest).
 
+
+<a href="https://api.gamesparks.net/#joinpendingmatchrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 
@@ -30,15 +27,6 @@ scriptData | ScriptData | A JSON Map of any data added either to the Request or 
 
 ## Nested types
 
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
-
 ### PendingMatch
 
 An object that represents a pending match.
@@ -50,6 +38,15 @@ matchGroup | string | The match group for the pending match
 matchShortCode | string | The match shortCode for the pending match
 matchedPlayers | List | The players already part of this pending match
 skill | number | The average skill of players in this pending match
+
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
 
 ## Error Codes
 

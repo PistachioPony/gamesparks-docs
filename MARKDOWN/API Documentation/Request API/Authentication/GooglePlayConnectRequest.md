@@ -1,10 +1,5 @@
----
-src: /API Documentation/Request API/Authentication/GooglePlayConnectRequest.md
----
 
 # GooglePlayConnectRequest
-
-<a href="https://api.gamesparks.net/#googleplayconnectrequest" target="_gsapi">View interactive version here</a>
 
 
 Allows either a Google Play access code or an access token to be used as an authentication mechanism.
@@ -21,6 +16,8 @@ If the current player has not authenticated and the Google Play user is not know
 
 If the Google Play user is already known, the session will switch to being the previously created user.
 
+
+<a href="https://api.gamesparks.net/#googleplayconnectrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 
@@ -54,15 +51,6 @@ userId | string | The player's id
 
 ## Nested types
 
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
-
 ### Player
 
 A nested object that represents a player.
@@ -76,6 +64,15 @@ id | string | The id of the Player
 online | boolean | The online status of the Player
 scriptData | JSON | The script data of the Player
 virtualGoods | string[] | The virtual goods of the Player
+
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
 
 ## Error Codes
 

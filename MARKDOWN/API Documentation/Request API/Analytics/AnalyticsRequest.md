@@ -1,10 +1,5 @@
----
-src: /API Documentation/Request API/Analytics/AnalyticsRequest.md
----
 
 # AnalyticsRequest
-
-<a href="https://api.gamesparks.net/#analyticsrequest" target="_gsapi">View interactive version here</a>
 
 
 Records some custom analytical data.
@@ -21,6 +16,8 @@ An additional data payload can be attached to the event for advanced reporting. 
 
 If a second start timer is created using a key that has already had a start timer created without an end, the previous one will be marked as abandoned.
 
+
+<a href="https://api.gamesparks.net/#analyticsrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

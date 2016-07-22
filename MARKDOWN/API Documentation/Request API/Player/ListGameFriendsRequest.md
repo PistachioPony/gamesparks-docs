@@ -1,10 +1,5 @@
----
-src: /API Documentation/Request API/Player/ListGameFriendsRequest.md
----
 
 # ListGameFriendsRequest
-
-<a href="https://api.gamesparks.net/#listgamefriendsrequest" target="_gsapi">View interactive version here</a>
 
 
 Returns the list of the current players game friends.
@@ -13,6 +8,8 @@ A Game friend is someone in their social network who also plays the game.
 
 Against each friend, an indicator is supplied to show whether the friend is currently connected to the GameSparks service
 
+
+<a href="https://api.gamesparks.net/#listgamefriendsrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

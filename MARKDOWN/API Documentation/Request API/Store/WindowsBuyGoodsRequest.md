@@ -1,10 +1,5 @@
----
-src: /API Documentation/Request API/Store/WindowsBuyGoodsRequest.md
----
 
 # WindowsBuyGoodsRequest
-
-<a href="https://api.gamesparks.net/#windowsbuygoodsrequest" target="_gsapi">View interactive version here</a>
 
 
 Processes a transaction receipt from a windows store purchase.
@@ -13,6 +8,8 @@ The GameSparks platform will validate the receipt using the signature embedded i
 
 Once verified, the players account will be credited with the Virtual Good, or Virtual Currency the purchase contains. The virtual good will be looked up by matching the productId in the xml with the 'WP8 Product ID' configured against the virtual good.
 
+
+<a href="https://api.gamesparks.net/#windowsbuygoodsrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

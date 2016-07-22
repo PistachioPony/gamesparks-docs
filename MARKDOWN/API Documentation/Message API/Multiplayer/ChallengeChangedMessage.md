@@ -1,14 +1,11 @@
----
-src: /API Documentation/Message API/Multiplayer/ChallengeChangedMessage.md
----
 
 # ChallengeChangedMessage
-
-<a href="https://api.gamesparks.net/#challengechangedmessage" target="_gsapi">View interactive version here</a>
 
 
 A message indicating that a player has posted a score in to the challenge's leaderboard.
 
+
+<a href="https://api.gamesparks.net/#challengechangedmessage" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 
@@ -55,6 +52,34 @@ startDate | date | The date when the challenge starts.
 state | string | One of these possible state values: ISSUED, EXPIRED, ACCEPTED, DECLINED, COMPLETE, WITHDRAWN, RUNNING, WAITING, RECEIVED
 turnCount | [PlayerTurnCount[]](#playerturncount) | A collection containing the number of turns taken by each player that has accepted the challenge.
 
+### PlayerTurnCount
+
+Represents the number of turns a player has taken in a turn based challenge.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+count | string | The number of turns that the player has taken so far during this challenge.
+playerId | string | The unique player id.
+
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
+
+### PlayerDetail
+
+An object representing a player's id and name
+
+Parameter | Type | Description
+--------- | ---- | -----------
+externalIds | JSON | A player's external identifiers
+id | string | A player's id
+name | string | A player's name
+
 ### LeaderboardData
 
 Leaderboard entry data
@@ -70,34 +95,6 @@ rank | number | The players rank.
 userId | string | The unique player id for this leaderboard entry.
 userName | string | The players display name.
 when | string | The date when this leaderboard entry was created.
-
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
-
-### PlayerTurnCount
-
-Represents the number of turns a player has taken in a turn based challenge.
-
-Parameter | Type | Description
---------- | ---- | -----------
-count | string | The number of turns that the player has taken so far during this challenge.
-playerId | string | The unique player id.
-
-### PlayerDetail
-
-An object representing a player's id and name
-
-Parameter | Type | Description
---------- | ---- | -----------
-externalIds | JSON | A player's external identifiers
-id | string | A player's id
-name | string | A player's name
 
 
 ## Code Samples

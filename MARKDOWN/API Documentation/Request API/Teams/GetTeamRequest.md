@@ -1,14 +1,11 @@
----
-src: /API Documentation/Request API/Teams/GetTeamRequest.md
----
 
 # GetTeamRequest
-
-<a href="https://api.gamesparks.net/#getteamrequest" target="_gsapi">View interactive version here</a>
 
 
 Allows the details of a team to be retrieved.
 
+
+<a href="https://api.gamesparks.net/#getteamrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

@@ -1,14 +1,11 @@
----
-src: /API Documentation/Request API/Teams/SendTeamChatMessageRequest.md
----
 
 # SendTeamChatMessageRequest
-
-<a href="https://api.gamesparks.net/#sendteamchatmessagerequest" target="_gsapi">View interactive version here</a>
 
 
 Send a message to all the players who are member of the given team
 
+
+<a href="https://api.gamesparks.net/#sendteamchatmessagerequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

@@ -1,14 +1,11 @@
----
-src: /API Documentation/Request API/Multiplayer/AcceptChallengeRequest.md
----
 
 # AcceptChallengeRequest
-
-<a href="https://api.gamesparks.net/#acceptchallengerequest" target="_gsapi">View interactive version here</a>
 
 
 Accepts a challenge that has been issued to the current player.
 
+
+<a href="https://api.gamesparks.net/#acceptchallengerequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

@@ -1,14 +1,11 @@
----
-src: /API Documentation/Request API/Teams/ListTeamChatRequest.md
----
 
 # ListTeamChatRequest
-
-<a href="https://api.gamesparks.net/#listteamchatrequest" target="_gsapi">View interactive version here</a>
 
 
 Get a list of the messages sent to the team (by players using SendTeamChatMessageRequest).
 
+
+<a href="https://api.gamesparks.net/#listteamchatrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

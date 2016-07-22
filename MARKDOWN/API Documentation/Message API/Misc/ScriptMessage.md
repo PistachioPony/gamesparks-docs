@@ -1,16 +1,13 @@
----
-src: /API Documentation/Message API/Misc/ScriptMessage.md
----
 
 # ScriptMessage
-
-<a href="https://api.gamesparks.net/#scriptmessage" target="_gsapi">View interactive version here</a>
 
 
 A message sent from a Cloud Code script to one or more players.
 
 See the Spark.sendMessage function in the Cloud Code - Java Script API documentation.
 
+
+<a href="https://api.gamesparks.net/#scriptmessage" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

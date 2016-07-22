@@ -1,16 +1,13 @@
----
-src: /API Documentation/Request API/Leaderboards/GetLeaderboardEntriesRequest.md
----
 
 # GetLeaderboardEntriesRequest
-
-<a href="https://api.gamesparks.net/#getleaderboardentriesrequest" target="_gsapi">View interactive version here</a>
 
 
 Get the leaderboard entry data for the current player or a given player. 
 
 For each leaderboard it returns the hichest score the player has
 
+
+<a href="https://api.gamesparks.net/#getleaderboardentriesrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

@@ -1,16 +1,13 @@
----
-src: /API Documentation/Request API/Analytics/EndSessionRequest.md
----
 
 # EndSessionRequest
-
-<a href="https://api.gamesparks.net/#endsessionrequest" target="_gsapi">View interactive version here</a>
 
 
 Records the end of the current player's active session.
 
 The SDK will automatically create a new session ID when the application is started, this method can be useful to call when the app goes into the background to allow reporting on player session length.
 
+
+<a href="https://api.gamesparks.net/#endsessionrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

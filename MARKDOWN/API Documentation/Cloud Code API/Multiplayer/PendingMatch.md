@@ -1,7 +1,3 @@
----
-src: /API Documentation/Cloud Code API/Multiplayer/PendingMatch.md
----
-
 # PendingMatch
 
 An object that represents a pending match.

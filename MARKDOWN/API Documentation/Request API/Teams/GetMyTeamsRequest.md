@@ -1,14 +1,11 @@
----
-src: /API Documentation/Request API/Teams/GetMyTeamsRequest.md
----
 
 # GetMyTeamsRequest
-
-<a href="https://api.gamesparks.net/#getmyteamsrequest" target="_gsapi">View interactive version here</a>
 
 
 Get the teams that the player is in. Can be filtered on team type and also on those teams that the player owns.
 
+
+<a href="https://api.gamesparks.net/#getmyteamsrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 
@@ -29,15 +26,6 @@ teams | [Team[]](#team) | The team data
 
 ## Nested types
 
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
-
 ### Player
 
 A nested object that represents a player.
@@ -51,6 +39,15 @@ id | string | The id of the Player
 online | boolean | The online status of the Player
 scriptData | JSON | The script data of the Player
 virtualGoods | string[] | The virtual goods of the Player
+
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
 
 ### Team
 

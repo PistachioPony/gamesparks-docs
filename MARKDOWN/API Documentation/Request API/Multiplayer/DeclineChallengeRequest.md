@@ -1,14 +1,11 @@
----
-src: /API Documentation/Request API/Multiplayer/DeclineChallengeRequest.md
----
 
 # DeclineChallengeRequest
-
-<a href="https://api.gamesparks.net/#declinechallengerequest" target="_gsapi">View interactive version here</a>
 
 
 Declines a challenge that has been issued to the current player.
 
+
+<a href="https://api.gamesparks.net/#declinechallengerequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

@@ -1,14 +1,11 @@
----
-src: /API Documentation/Message API/Misc/UploadCompleteMessage.md
----
 
 # UploadCompleteMessage
-
-<a href="https://api.gamesparks.net/#uploadcompletemessage" target="_gsapi">View interactive version here</a>
 
 
 A message indicating that the asynchronous upload task trigger by the player is now complete.
 
+
+<a href="https://api.gamesparks.net/#uploadcompletemessage" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 
@@ -25,15 +22,6 @@ uploadId | No | string | The id of the upload
 
 ## Nested types
 
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
-
 ### UploadData
 
 This object represents the result of uploading a file to the GameSparks platform.
@@ -42,6 +30,15 @@ Parameter | Type | Description
 --------- | ---- | -----------
 fileName | string | The filename of the file that was uploaded.
 playerId | string | The unique player id of the player that uploaded the file.
+
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
 
 
 ## Code Samples

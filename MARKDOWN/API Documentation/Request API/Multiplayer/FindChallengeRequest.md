@@ -1,14 +1,11 @@
----
-src: /API Documentation/Request API/Multiplayer/FindChallengeRequest.md
----
 
 # FindChallengeRequest
-
-<a href="https://api.gamesparks.net/#findchallengerequest" target="_gsapi">View interactive version here</a>
 
 
 Allows a player to find challenges that they are eligible to join.
 
+
+<a href="https://api.gamesparks.net/#findchallengerequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 
@@ -61,15 +58,6 @@ startDate | date | The date when the challenge starts.
 state | string | One of these possible state values: ISSUED, EXPIRED, ACCEPTED, DECLINED, COMPLETE, WITHDRAWN, RUNNING, WAITING, RECEIVED
 turnCount | [PlayerTurnCount[]](#playerturncount) | A collection containing the number of turns taken by each player that has accepted the challenge.
 
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
-
 ### PlayerTurnCount
 
 Represents the number of turns a player has taken in a turn based challenge.
@@ -78,6 +66,15 @@ Parameter | Type | Description
 --------- | ---- | -----------
 count | string | The number of turns that the player has taken so far during this challenge.
 playerId | string | The unique player id.
+
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
 
 ### PlayerDetail
 

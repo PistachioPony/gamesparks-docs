@@ -1,14 +1,11 @@
----
-src: /API Documentation/Request API/Store/BuyVirtualGoodsRequest.md
----
 
 # BuyVirtualGoodsRequest
-
-<a href="https://api.gamesparks.net/#buyvirtualgoodsrequest" target="_gsapi">View interactive version here</a>
 
 
 Purchases a virtual good with an in game currency. Once purchased the virtual good will be added to the players account.
 
+
+<a href="https://api.gamesparks.net/#buyvirtualgoodsrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

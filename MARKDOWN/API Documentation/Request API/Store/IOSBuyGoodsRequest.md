@@ -1,10 +1,5 @@
----
-src: /API Documentation/Request API/Store/IOSBuyGoodsRequest.md
----
 
 # IOSBuyGoodsRequest
-
-<a href="https://api.gamesparks.net/#iosbuygoodsrequest" target="_gsapi">View interactive version here</a>
 
 
 Processes a transaction receipt from an App Store in app purchase.
@@ -13,6 +8,8 @@ The GameSparks platform will validate the receipt with Apple and process the res
 
 Once verified, the players account will be credited with the Virtual Good, or Virtual Currency the purchase contains. The virtual good will be looked up by matching the product_id in the response with the 'IOS Product ID' configured against the virtual good.
 
+
+<a href="https://api.gamesparks.net/#iosbuygoodsrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

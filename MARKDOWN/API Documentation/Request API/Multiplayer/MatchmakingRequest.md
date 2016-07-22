@@ -1,10 +1,5 @@
----
-src: /API Documentation/Request API/Multiplayer/MatchmakingRequest.md
----
 
 # MatchmakingRequest
-
-<a href="https://api.gamesparks.net/#matchmakingrequest" target="_gsapi">View interactive version here</a>
 
 
 Register this player for matchmaking, using the given skill and matchShortCode.
@@ -15,6 +10,8 @@ Each player must match the other for the match to be found.
 
 If the matchShortCode points to a match with realtime enabled, in order to minimise latency, the location of Players and their proximity to one another takes precedence over their reciprocal skill values.
 
+
+<a href="https://api.gamesparks.net/#matchmakingrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

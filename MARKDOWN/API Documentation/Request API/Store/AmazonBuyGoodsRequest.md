@@ -1,10 +1,5 @@
----
-src: /API Documentation/Request API/Store/AmazonBuyGoodsRequest.md
----
 
 # AmazonBuyGoodsRequest
-
-<a href="https://api.gamesparks.net/#amazonbuygoodsrequest" target="_gsapi">View interactive version here</a>
 
 
 Processes the receipt from an Amazon in app purchase.
@@ -15,6 +10,8 @@ The receiptId in the data will be recorded and the request will be rejected if t
 
 Once verfied, the players account will be credited with the Virtual Good, or Virtual Currency the purchase contains. The virtual good will be looked up by matching the productId in the receipt with the 'Amazon Product Id' configured against the virtual good.
 
+
+<a href="https://api.gamesparks.net/#amazonbuygoodsrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

@@ -1,7 +1,3 @@
----
-src: /API Documentation/Cloud Code API/Leaderboards/SparkLeaderboards.md
----
-
 # SparkLeaderboards
 
 Provides access to the leaderboards for the current game.

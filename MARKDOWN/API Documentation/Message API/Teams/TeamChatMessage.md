@@ -1,14 +1,11 @@
----
-src: /API Documentation/Message API/Teams/TeamChatMessage.md
----
 
 # TeamChatMessage
-
-<a href="https://api.gamesparks.net/#teamchatmessage" target="_gsapi">View interactive version here</a>
 
 
 A message sent from a player to an entire team.
 
+
+<a href="https://api.gamesparks.net/#teamchatmessage" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

@@ -1,14 +1,11 @@
----
-src: /API Documentation/Message API/Misc/SessionTerminatedMessage.md
----
 
 # SessionTerminatedMessage
-
-<a href="https://api.gamesparks.net/#sessionterminatedmessage" target="_gsapi">View interactive version here</a>
 
 
 A message sent to sockets when disconnectOthers() has been called.
 
+
+<a href="https://api.gamesparks.net/#sessionterminatedmessage" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

@@ -1,14 +1,11 @@
----
-src: /API Documentation/Request API/Admin/RevokePurchaseGoodsRequest.md
----
 
 # RevokePurchaseGoodsRequest
-
-<a href="https://api.gamesparks.net/#revokepurchasegoodsrequest" target="_gsapi">View interactive version here</a>
 
 
 Revokes the purchase of a good. The items aquired will be removed from remaining items of the player.
 
+
+<a href="https://api.gamesparks.net/#revokepurchasegoodsrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

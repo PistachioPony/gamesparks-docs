@@ -1,14 +1,11 @@
----
-src: /API Documentation/Request API/Misc/SocialStatusRequest.md
----
 
 # SocialStatusRequest
-
-<a href="https://api.gamesparks.net/#socialstatusrequest" target="_gsapi">View interactive version here</a>
 
 
 Returns detials of the current social connections of this player. Each connection .
 
+
+<a href="https://api.gamesparks.net/#socialstatusrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

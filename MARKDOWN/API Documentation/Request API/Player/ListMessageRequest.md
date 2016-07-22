@@ -1,16 +1,13 @@
----
-src: /API Documentation/Request API/Player/ListMessageRequest.md
----
 
 # ListMessageRequest
-
-<a href="https://api.gamesparks.net/#listmessagerequest" target="_gsapi">View interactive version here</a>
 
 
 Returns the list of the current players messages / notifications.
 
 The list only contains un-dismissed messages, to dismiss a message see DismissMessageRequest Read the section on Messages to the the complete list of messages and their meaning.
 
+
+<a href="https://api.gamesparks.net/#listmessagerequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 

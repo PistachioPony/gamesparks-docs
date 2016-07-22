@@ -1,10 +1,5 @@
----
-src: /API Documentation/Request API/Store/PsnBuyGoodsRequest.md
----
 
 # PsnBuyGoodsRequest
-
-<a href="https://api.gamesparks.net/#psnbuygoodsrequest" target="_gsapi">View interactive version here</a>
 
 
 Processes an update of entitlement in PlayStation network.
@@ -15,6 +10,8 @@ The request will be rejected if entitlement 'use_limit' is 0
 
 GampSparks platform by default will use internally saved PSN user access token
 
+
+<a href="https://api.gamesparks.net/#psnbuygoodsrequest" target="_gsapi">View interactive version here</a>
 
 ## Request Parameters
 
