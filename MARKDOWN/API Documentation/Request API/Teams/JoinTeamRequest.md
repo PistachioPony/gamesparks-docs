@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Teams/JoinTeamRequest.md
 
 # JoinTeamRequest
 
+<a href="https://api.gamesparks.net/#jointeamrequest" target="_gsapi">View interactive version here</a>
+
 
 Allows a player to join a team of a team to be retrieved.
 

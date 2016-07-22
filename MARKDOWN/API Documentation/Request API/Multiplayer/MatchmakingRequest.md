@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Multiplayer/MatchmakingRequest.md
 
 # MatchmakingRequest
 
+<a href="https://api.gamesparks.net/#matchmakingrequest" target="_gsapi">View interactive version here</a>
+
 
 Register this player for matchmaking, using the given skill and matchShortCode.
 
@@ -20,10 +22,10 @@ Parameter | Required | Type | Description
 --------- | -------- | ---- | -----------
 action | No | string | The action to take on the already in-flight request for this match. Currently supported actions are: 'cancel'
 customQuery | No | JSON | The query that will be applied to the PendingMatch collection
-matchData | No | ScriptData[] | A JSON Map of any data that will be associated to the pending match
+matchData | No | JSON | A JSON Map of any data that will be associated to the pending match
 matchGroup | No | string | Optional. Players will be grouped based on the distinct value passed in here, only players in the same group can be matched together
 matchShortCode | Yes | string | The shortCode of the match type this player is registering for
-participantData | No | ScriptData[] | A JSON Map of any data that will be associated to this user in a pending match
+participantData | No | JSON | A JSON Map of any data that will be associated to this user in a pending match
 skill | No | number | The skill of the player looking for a match
 
 ## Response Parameters

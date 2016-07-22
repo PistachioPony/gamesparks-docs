@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Leaderboards/LeaderboardDataRequest.md
 
 # LeaderboardDataRequest
 
+<a href="https://api.gamesparks.net/#leaderboarddatarequest" target="_gsapi">View interactive version here</a>
+
 
 Returns the top data for either the specified global leaderboard or the specified challenges leaderboard. The data is sorted as defined in the rules specified in the leaderboard configuration.
 

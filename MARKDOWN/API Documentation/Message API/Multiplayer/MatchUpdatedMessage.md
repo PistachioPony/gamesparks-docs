@@ -4,6 +4,8 @@ src: /API Documentation/Message API/Multiplayer/MatchUpdatedMessage.md
 
 # MatchUpdatedMessage
 
+<a href="https://api.gamesparks.net/#matchupdatedmessage" target="_gsapi">View interactive version here</a>
+
 
 A message indicating that there has been an update to a pending match request, but it is not yet complete
 

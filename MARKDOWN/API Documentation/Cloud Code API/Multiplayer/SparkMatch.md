@@ -71,14 +71,6 @@ Remove the players with the given playerIds from this match.
 <pre rel="highlighter" code-brush="js" contenteditable="false">match.removePlayersById(playerIdsToRemove)</pre>
 
 ## enableRealtime
-_signature_ enableRealtime()</p>
-_returns_ void</p>
-<b>validity</b> All Scripts
-If this match is not already realtime enabled, this method will enabled realtime.
-<b>example</b>
-<pre rel="highlighter" code-brush="js" contenteditable="false">match.enableRealtime();</pre>
-
-
 _signature_ enableRealtime(string script)</p>
 _returns_ void</p>
 <b>validity</b> All Scripts
@@ -86,6 +78,14 @@ If this match is not already realtime enabled, this method will enabled realtime
 The realtime servers for this match will be configured to use the realtime script provided
 <b>example</b>
 <pre rel="highlighter" code-brush="js" contenteditable="false">match.enableRealtime('MY_RT_SCRIPT');</pre>
+
+
+_signature_ enableRealtime()</p>
+_returns_ void</p>
+<b>validity</b> All Scripts
+If this match is not already realtime enabled, this method will enabled realtime.
+<b>example</b>
+<pre rel="highlighter" code-brush="js" contenteditable="false">match.enableRealtime();</pre>
 
 ## getMatchData
 _signature_ getMatchData()</p>

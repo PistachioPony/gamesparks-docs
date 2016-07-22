@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Authentication/RegistrationRequest.md
 
 # RegistrationRequest
 
+<a href="https://api.gamesparks.net/#registrationrequest" target="_gsapi">View interactive version here</a>
+
 
 Allows a new player to be created using a username, password display name.
 
@@ -33,6 +35,15 @@ userId | string | The player's id
 
 ## Nested types
 
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
+
 ### Player
 
 A nested object that represents a player.
@@ -46,15 +57,6 @@ id | string | The id of the Player
 online | boolean | The online status of the Player
 scriptData | JSON | The script data of the Player
 virtualGoods | string[] | The virtual goods of the Player
-
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
 
 ## Error Codes
 

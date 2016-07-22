@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Teams/GetTeamRequest.md
 
 # GetTeamRequest
 
+<a href="https://api.gamesparks.net/#getteamrequest" target="_gsapi">View interactive version here</a>
+
 
 Allows the details of a team to be retrieved.
 
@@ -47,6 +49,15 @@ online | boolean | The online status of the Player
 scriptData | JSON | The script data of the Player
 virtualGoods | string[] | The virtual goods of the Player
 
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
+
 ### Team
 
 A nested object that represents the team.
@@ -58,15 +69,6 @@ owner | [Player](#player) | A summary of the owner
 teamId | string | The Id of the team
 teamName | string | The team name
 teamType | string | The team type
-
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
 
 ## Error Codes
 

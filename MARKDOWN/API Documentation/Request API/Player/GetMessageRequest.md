@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Player/GetMessageRequest.md
 
 # GetMessageRequest
 
+<a href="https://api.gamesparks.net/#getmessagerequest" target="_gsapi">View interactive version here</a>
+
 
 Returns the full details of a message.
 

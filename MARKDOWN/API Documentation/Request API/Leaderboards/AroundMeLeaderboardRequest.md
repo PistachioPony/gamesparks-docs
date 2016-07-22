@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Leaderboards/AroundMeLeaderboardRequest.md
 
 # AroundMeLeaderboardRequest
 
+<a href="https://api.gamesparks.net/#aroundmeleaderboardrequest" target="_gsapi">View interactive version here</a>
+
 
 Returns leaderboard data that is adjacent to the currently signed in player's position within the given leaderboard.
 

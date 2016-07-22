@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Teams/LeaveTeamRequest.md
 
 # LeaveTeamRequest
 
+<a href="https://api.gamesparks.net/#leaveteamrequest" target="_gsapi">View interactive version here</a>
+
 
 Allows a player to leave a team.
 

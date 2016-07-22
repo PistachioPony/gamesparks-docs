@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Teams/DropTeamRequest.md
 
 # DropTeamRequest
 
+<a href="https://api.gamesparks.net/#dropteamrequest" target="_gsapi">View interactive version here</a>
+
 
 Allows a player to drop a team.
 

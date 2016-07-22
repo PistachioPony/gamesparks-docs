@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Leaderboards/LeaderboardsEntriesRequest.md
 
 # LeaderboardsEntriesRequest
 
+<a href="https://api.gamesparks.net/#leaderboardsentriesrequest" target="_gsapi">View interactive version here</a>
+
 
 Get the leaderboard entry data for the current player or a given player.
 

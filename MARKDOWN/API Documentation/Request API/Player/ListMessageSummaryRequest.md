@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Player/ListMessageSummaryRequest.md
 
 # ListMessageSummaryRequest
 
+<a href="https://api.gamesparks.net/#listmessagesummaryrequest" target="_gsapi">View interactive version here</a>
+
 
 Returns a summary of the list of the current players messages / notifications.
 

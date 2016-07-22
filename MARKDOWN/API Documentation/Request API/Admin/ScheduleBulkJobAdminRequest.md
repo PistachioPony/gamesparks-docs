@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Admin/ScheduleBulkJobAdminRequest.md
 
 # ScheduleBulkJobAdminRequest
 
+<a href="https://api.gamesparks.net/#schedulebulkjobadminrequest" target="_gsapi">View interactive version here</a>
+
 
 Schedules a bulk job to be run against multiple players.
 

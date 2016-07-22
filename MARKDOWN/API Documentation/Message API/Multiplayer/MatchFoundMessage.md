@@ -4,6 +4,8 @@ src: /API Documentation/Message API/Multiplayer/MatchFoundMessage.md
 
 # MatchFoundMessage
 
+<a href="https://api.gamesparks.net/#matchfoundmessage" target="_gsapi">View interactive version here</a>
+
 
 A message indicating that a match has been found
 

@@ -4,6 +4,8 @@ src: /API Documentation/Message API/Multiplayer/MatchNotFoundMessage.md
 
 # MatchNotFoundMessage
 
+<a href="https://api.gamesparks.net/#matchnotfoundmessage" target="_gsapi">View interactive version here</a>
+
 
 A message indicating that no suitable match was found during the configured time
 

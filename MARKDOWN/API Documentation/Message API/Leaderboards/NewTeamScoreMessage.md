@@ -4,6 +4,8 @@ src: /API Documentation/Message API/Leaderboards/NewTeamScoreMessage.md
 
 # NewTeamScoreMessage
 
+<a href="https://api.gamesparks.net/#newteamscoremessage" target="_gsapi">View interactive version here</a>
+
 
 A message indicating that the player's team has achieved a new high score in the game.
 
@@ -24,25 +26,6 @@ summary | No | string | A textual summary describing the message's purpose.
 title | No | string | A textual title for the message.
 
 ## Nested types
-
-### LeaderboardRankDetails
-
-Ranking information.
-
-Parameter | Type | Description
---------- | ---- | -----------
-friendsPassed | [LeaderboardData[]](#leaderboarddata) | The leaderboard entries of the players friends that were beaten as part of this score submission.
-globalCount | number | The number of entries in this leaderboard.
-globalFrom | number | The Global Rank of the player in this leaderboard before the score was submitted.
-globalFromPercent | number | The old global rank of the player as a percentage of the total number of scores in this leaderboard .
-globalTo | number | The Global Rank of the player in this leaderboard after the score was submitted.
-globalToPercent | number | The new global rank of the player as a percentage of the total number of scores in this leaderboard .
-socialCount | number | The number of friend entries the player has in this leaderboard.
-socialFrom | number | The Social Rank of the player in this leaderboard before the score was submitted.
-socialFromPercent | number | The old social rank of the player as a percentage of the total number of friend scores in this leaderboard.
-socialTo | number | The Social Rank of the player in this leaderboard after the score was submitted.
-socialToPercent | number | The old global rank of the player as a percentage of the total number of friend scores in this leaderboard.
-topNPassed | [LeaderboardData[]](#leaderboarddata) | The leaderboard entries of the global players that were beaten as part of this score submission. Requires Top N to be configured on the leaderboard
 
 ### LeaderboardData
 
@@ -68,6 +51,25 @@ Parameter | Type | Description
 --------- | ---- | -----------
 myKey | string | An arbitrary data key
 myValue | JSON | An arbitrary data value.
+
+### LeaderboardRankDetails
+
+Ranking information.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+friendsPassed | [LeaderboardData[]](#leaderboarddata) | The leaderboard entries of the players friends that were beaten as part of this score submission.
+globalCount | number | The number of entries in this leaderboard.
+globalFrom | number | The Global Rank of the player in this leaderboard before the score was submitted.
+globalFromPercent | number | The old global rank of the player as a percentage of the total number of scores in this leaderboard .
+globalTo | number | The Global Rank of the player in this leaderboard after the score was submitted.
+globalToPercent | number | The new global rank of the player as a percentage of the total number of scores in this leaderboard .
+socialCount | number | The number of friend entries the player has in this leaderboard.
+socialFrom | number | The Social Rank of the player in this leaderboard before the score was submitted.
+socialFromPercent | number | The old social rank of the player as a percentage of the total number of friend scores in this leaderboard.
+socialTo | number | The Social Rank of the player in this leaderboard after the score was submitted.
+socialToPercent | number | The old global rank of the player as a percentage of the total number of friend scores in this leaderboard.
+topNPassed | [LeaderboardData[]](#leaderboarddata) | The leaderboard entries of the global players that were beaten as part of this score submission. Requires Top N to be configured on the leaderboard
 
 
 ## Code Samples

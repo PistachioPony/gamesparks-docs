@@ -4,6 +4,8 @@ src: /API Documentation/Message API/Multiplayer/ChallengeStartedMessage.md
 
 # ChallengeStartedMessage
 
+<a href="https://api.gamesparks.net/#challengestartedmessage" target="_gsapi">View interactive version here</a>
+
 
 A message indicating that the challenge has started
 
@@ -21,15 +23,6 @@ summary | No | string | A textual summary describing the message's purpose.
 title | No | string | A textual title for the message.
 
 ## Nested types
-
-### PlayerTurnCount
-
-Represents the number of turns a player has taken in a turn based challenge.
-
-Parameter | Type | Description
---------- | ---- | -----------
-count | string | The number of turns that the player has taken so far during this challenge.
-playerId | string | The unique player id.
 
 ### Challenge
 
@@ -60,6 +53,24 @@ startDate | date | The date when the challenge starts.
 state | string | One of these possible state values: ISSUED, EXPIRED, ACCEPTED, DECLINED, COMPLETE, WITHDRAWN, RUNNING, WAITING, RECEIVED
 turnCount | [PlayerTurnCount[]](#playerturncount) | A collection containing the number of turns taken by each player that has accepted the challenge.
 
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
+
+### PlayerTurnCount
+
+Represents the number of turns a player has taken in a turn based challenge.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+count | string | The number of turns that the player has taken so far during this challenge.
+playerId | string | The unique player id.
+
 ### PlayerDetail
 
 An object representing a player's id and name
@@ -69,15 +80,6 @@ Parameter | Type | Description
 externalIds | JSON | A player's external identifiers
 id | string | A player's id
 name | string | A player's name
-
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
 
 
 ## Code Samples

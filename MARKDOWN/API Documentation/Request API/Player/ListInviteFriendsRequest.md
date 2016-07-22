@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Player/ListInviteFriendsRequest.md
 
 # ListInviteFriendsRequest
 
+<a href="https://api.gamesparks.net/#listinvitefriendsrequest" target="_gsapi">View interactive version here</a>
+
 
 Returns the list of the current players friends in their social network, who are not yet playing this game.
 

@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Player/ListGameFriendsRequest.md
 
 # ListGameFriendsRequest
 
+<a href="https://api.gamesparks.net/#listgamefriendsrequest" target="_gsapi">View interactive version here</a>
+
 
 Returns the list of the current players game friends.
 

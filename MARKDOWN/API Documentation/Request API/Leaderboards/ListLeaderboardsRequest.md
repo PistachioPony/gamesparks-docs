@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Leaderboards/ListLeaderboardsRequest.md
 
 # ListLeaderboardsRequest
 
+<a href="https://api.gamesparks.net/#listleaderboardsrequest" target="_gsapi">View interactive version here</a>
+
 
 Returns a list of all leaderboards configured in the game.
 
@@ -25,6 +27,15 @@ scriptData | ScriptData | A JSON Map of any data added either to the Request or 
 
 ## Nested types
 
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
+
 ### Leaderboard
 
 A nested object that represents the leaderboard configuration data.
@@ -35,15 +46,6 @@ description | string | The leaderboard's description.
 name | string | The leaderboard's name.
 propertySet | JSON | The custom property set configured on this Leaderboard
 shortCode | string | The leaderboard's short code.
-
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
 
 
 ## Code Samples

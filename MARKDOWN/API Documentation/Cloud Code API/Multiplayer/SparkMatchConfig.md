@@ -86,8 +86,8 @@ _returns_ [PendingMatch](/API Documentation/Cloud Code API/Multiplayer/PendingMa
 Creates a new pending match containing the given players.
 Any existing pending matches for these players with the same matchGroup will be cancelled.
 
-
-_signature_ createPendingMatch(string matchGroup, number skill, JSON customQuery, JSON matchData, [SparkPlayer](/API Documentation/Cloud Code API/Player/SparkPlayer.md)[] players)</p>
+## createPendingMatchWithCustomQuery
+_signature_ createPendingMatchWithCustomQuery(string matchGroup, number skill, JSON customQuery, JSON matchData, [SparkPlayer](/API Documentation/Cloud Code API/Player/SparkPlayer.md)[] players)</p>
 _returns_ [PendingMatch](/API Documentation/Cloud Code API/Multiplayer/PendingMatch.md)</p>
 <b>validity</b> All Scripts
 Creates a new pending match containing the given players.

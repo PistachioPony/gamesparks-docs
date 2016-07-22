@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Multiplayer/JoinChallengeRequest.md
 
 # JoinChallengeRequest
 
+<a href="https://api.gamesparks.net/#joinchallengerequest" target="_gsapi">View interactive version here</a>
+
 
 Allows a player to join an open challenge.
 

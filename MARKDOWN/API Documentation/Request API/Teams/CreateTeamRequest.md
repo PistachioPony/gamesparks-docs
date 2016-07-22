@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Teams/CreateTeamRequest.md
 
 # CreateTeamRequest
 
+<a href="https://api.gamesparks.net/#createteamrequest" target="_gsapi">View interactive version here</a>
+
 
 Allows a new team to be created.
 

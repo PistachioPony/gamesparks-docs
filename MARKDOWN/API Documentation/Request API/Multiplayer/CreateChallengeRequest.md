@@ -4,6 +4,8 @@ src: /API Documentation/Request API/Multiplayer/CreateChallengeRequest.md
 
 # CreateChallengeRequest
 
+<a href="https://api.gamesparks.net/#createchallengerequest" target="_gsapi">View interactive version here</a>
+
 
 Issues a challenge to a group of players from the currently signed in player.
 
