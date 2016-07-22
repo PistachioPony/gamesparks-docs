@@ -6,4 +6,4 @@ src: /API Documentation/README.md
 banner: true
 ---
 
-This section provide a look-up reference for the APIs we support. Simply select what you want in the left-hand navigation panel.
+This section provides a look-up reference for the APIs we support. Simply select what you want in the left-hand navigation panel.
