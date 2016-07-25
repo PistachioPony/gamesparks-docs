@@ -20,7 +20,7 @@ The NoSQL Explorer is a powerful tool you can use to access and find any collect
 ![](img/PlayerRecords/1.jpg)
 
 
-*3.* Once records are retrieved you can click on them to expand them. Once expanded you can see all the data that are linked to the player including data you can't normally see when you call an account details request - data such as auth tokens, external IDs, reserved currency, and private data, which you may not see and use often. An example of a newly created player's record.
+*3.* When records are retrieved, you can click on them to expand them. Once expanded you can see all the data that are linked to the player including data you can't normally see when you call an account details request - data such as auth tokens, external IDs, reserved currency, and private data, which you may not see and use often. An example of a newly created player's record.
 
 ![](img/PlayerRecords/2.jpg)
 
@@ -32,16 +32,16 @@ You can use the player management screen to offer a visual experience while you 
 
 *1.* To access player data, click *Manage>Players*.
 
-*2.* On the *Player Search* panel, build and submit a query to for the player data you want. The results of the query will be returned into the *Results* panel.
+*2.* On the *Player Search* panel, build and submit a query for the player data you want. The results of the query are returned into the *Results* panel.
 
-*3.* To view the data for a result, click the edit ![](/img/fa/edit.png) icon. The *Edit Player* screen appears:
+*3.* To view the player data for a result, click the edit ![](/img/fa/edit.png) icon. The *Edit Player* screen appears:
 
 ![](img/PlayerRecords/3.jpg)
 
-* This screen can be customized in whatever way you like through the dynamic forms builder.
-* You can tailor your team's experience in whatever way you like and design what is shown on the screen to suit different users. For example, you can offer special screens for customer service, where they are allowed to change certain values, while your programmers have access to a different screen.
+* This screen can be customized in whatever way you like using the dynamic forms builder.
+* You can tailor your team's experience and design what is shown on the screen to suit different users. For example, you can offer special screens for customer service, where they are allowed to change certain values, while your programmers have access to a different screen.
 
-<q>**More Information!** For more info about dynamic forms, click [here](/Documentation/Manage/Working with Dynamic Forms.md).</q>
+<q>**More Information!** For more information about dynamic forms, click [here](/Documentation/Manage/Working with Dynamic Forms.md).</q>
 
 ## Accessing Data through Cloud Code
 
