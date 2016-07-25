@@ -7,14 +7,20 @@ src: /Tutorials/Social Authentication and Player Profile/Updating Player Records
 
 ## Introduction
 
-After a player has been created, you as the developer or the player may want to change details associated with the account such as password, userName, displayName etc This tutorial will demonstrate how to use the ChangeDetails request in cloud code.  
+After a player has been created, you might want to change details associated with the player's account such as:
+* Password
+* userName
+* displayName
+
+It might be you as the game developer or one of the game's players that want to make a user account change. Here, we'll learn how to make these changes using the [ChangeUserDetailsRequest](/API Documentation/Request API/Player/ChangeUserDetailsRequest.md) in Cloud Code.  
 
 ## Change Details Request
 
 
-This example shows an event which takes a string input and sets it as the player's new username using the ChangeDetails request and outputs the response as scriptData.
+This example shows an event which takes a string input and sets it as the player's new *userName* using the *ChangeUserDetailsRequest* and outputs the response as scriptData.
 
 ```
+
 //String input
 //String input
 Spark.getData().string
@@ -31,4 +37,5 @@ var response = changeDetailsRequest.Send();
 
 //Output response with scriptData
 Spark.setScriptData("response", response);
+
 ```

@@ -13,7 +13,7 @@ An important part of a back-end is the ability to access your player's info in r
 
 The NoSQL Explorer is a powerful tool you can use to access and find any collection of data you have in your game:
 
-*1.* To quickly access the NoSQL Explorer, click *NoSQL* left side of the portal.
+*1.* To open the NoSQL Explorer, click *NoSQL* left side of the portal.
 
 *2.* To access player data, select the *Find* tab and use the 'player' collection to query for specific players or run the search for every player:
 
