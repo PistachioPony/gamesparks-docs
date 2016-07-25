@@ -451,17 +451,17 @@ To build a custom completion mechanism for a Match, you will typically use [Find
 
 <q>**Possible Availability Lag!** If you use manual matching, an "availabilty lag" might occur and prevent the Match being made. This would happen in cases where the matching process has presented the results for players meeting the matching criteria, but by the time your custom mechanism actually completes the Match one or more of the matched players is no longer available and the Match will not go through.</q>
 
-### Manual Matching in the Test Harness
+### Manually Matching Players in the Test Harness
 
 To manually match players, we'll use [FindPendingMatchesRequest](/API Documentation/Request API/Multiplayer/FindPendingMatchesRequest.md) and [JoinPendingMatchRequest](/API Documentation/Request API/Multiplayer/JoinPendingMatchRequest.md) in the Test Harness.
 
-???? using the Match configuration described in the previous section YES and with scenario 1 above????
+As an example, we'll use the Match configuration described in the previous section - MULTI_MCH. However, we'll enable *Manually match players* and we'll adapt scenario 1:
 
-* **Scenario 1A.** Players *1*, *2*, and *3* have skills of *20*, *15*, and *17* respectively. Each player submits a *MatchmakingRequest* in that order and each player's request is issued within player *1's* first Threshold period of 10 seconds. At 12 seconds - that is, in the 2nd Threshold period - P1 would submit a FindPendingMatchesRequest and will get FindPendingMatchesResponse containing Player 3 as a Possible Match.
+* **Scenario 1A.** Players *1*, *2*, and *3* have skills of *20*, *15*, and *17* respectively. At 12 seconds - that is, in the 2nd Threshold period for Relative skill-level matching - player 1 submits a *FindPendingMatchesRequest* and will get *FindPendingMatchesResponse* containing Player 3 as a possible Pending Match.
 
-Players *1* and *3* will NOT be matched automatically BUT we can find out who could potentially be matched, if you decided to match them manually.
+Players *1* and *3* will NOT be matched automatically BUT we can use *FindPendingMatchRequest* to find out who could potentially be matched, which allows you to decide who you want to match manually.
 
-Player 1 submits a FindPendingMatchesRequest at 12 seconds:
+*1.* Player 1 submits a *FindPendingMatchesRequest* at 12 seconds:
 
 ```
 
@@ -474,7 +474,9 @@ Player 1 submits a FindPendingMatchesRequest at 12 seconds:
 
 ```
 
-And Player 1 receives the response:
+<q>**Note:** Here, we've arbitrarily set the maximum numbers of Pending Matches we want returned at 10.</q>
+
+*2.* Player 1 receives the response:
 
 
 ```
@@ -507,8 +509,11 @@ And Player 1 receives the response:
 
 ```
 
+This tells us that there is an available Pending Match at this point for player 3 with skill level 17.
 
-If player 3 were to have submitted the FindPendingMatchesRequest at 12 seconds he'd get the same response but for player 1. However, if he did this at 22 secs - into the 3rd Threshold period - the response would show no possible matches - empty:
+If player 3 were to have submitted the *FindPendingMatchesRequest* at 12 seconds he'd get a similar *FindPendingMatchesResponse* but showing an available Pending Match for player 1 at skill level 20.
+
+*3.* However, if player 3 submitted a *FindPendingMatchesRequest* at 22 secs - that is, into the 3rd Threshold period for Percent skill-level matching - the response would show no possible Pending Matches, that is, empty:
 
 
 ```
@@ -520,9 +525,9 @@ If player 3 were to have submitted the FindPendingMatchesRequest at 12 seconds h
 
 ```
 
-This does not mean that there are NO PMs at all, simply an correctly that none of the available PMs at that point are suitable for matching with player 3.
+This does not mean that there are NO Pending Matches at all, but, simply and correctly, that none of the available Pending Matches at that point in the matchmaking process are suitable for matching with player 3.
 
-Lastly, if player 3 submitted a FindPendingMatchesRequest but hadn't submitted a MatchMakingRequest, he would see:
+*4.* If player 3 submitted a *FindPendingMatchesRequest* but hadn't *previously* submitted a *MatchMakingRequest*, the *FindPendingMatchResponse* would show an error:
 
 ```
 
@@ -535,9 +540,8 @@ Lastly, if player 3 submitted a FindPendingMatchesRequest but hadn't submitted a
 
 ```
 
-This makes perfect sense - a player can't be put into any Pending Match unless they've first issued a MatchMakingRequest.
+This makes perfect sense - a player can't be put into any Pending Match unless they've first issued a *MatchMakingRequest*!
 
-??? Last - the join. ???
 
 ## Customizing Matching
 There are other mechanisms you can use to introduce further matching customization into your game.
