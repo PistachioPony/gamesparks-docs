@@ -21,7 +21,7 @@ Whenever creating Dynamic Forms, you should always start with a Screen. A Screen
 
 In Admin Screens, you will see that the screen is split between the Screen Builder and Snapshots panels. The Snapshots panel works in a similar way to the Snapshots feature on the Game Overview page. It will backup and restore the state of your created Screens and Snippets.  
 
-On the Screen Builder page, there are three sections. *Screens*, *Snippets* and *Charts*. Charts will not be covered here, instead you can find a separate tutorial on them [here](/Tutorials/Analytics, Segmentation and Game Management/Building Custom Analytics Dashboards.md). And an introduction to Collaborators and Capabilities that can be set on Screens and Snippets can be found [here](/Tutorials/Capabilities/README.md).
+On the Screen Builder page, there are three sections. *Screens*, *Snippets* and *Charts*. Charts will not be covered here, instead you can find a separate tutorial on them [here](/Tutorials/Analytics, Segmentation and Game Management/Building Custom Analytics Dashboards.md). And an introduction to Collaborators and Capabilities that can be set on Screens and Snippets can be found [here](/Tutorials/Capabilities and User Permissions/README.md).
 
 ![](img/DynamicForms/2.jpg)
 

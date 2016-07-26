@@ -405,8 +405,9 @@ And the *MatchDetailsResponse*:
   "peerId": 4,
   "playerId": "577679844ff544049a84c6ec"
 }
-```
 
+```
+<br>
 ### Cancelling a Match Request
 
 *7.* To cancel an ongoing *MatchmakingRequest*, use the *action* parameter in the request with the value, *cancel*.
@@ -455,9 +456,13 @@ To build a custom completion mechanism for a Match, you will typically use [Find
 
 To manually match players, we'll use [FindPendingMatchesRequest](/API Documentation/Request API/Multiplayer/FindPendingMatchesRequest.md) and [JoinPendingMatchRequest](/API Documentation/Request API/Multiplayer/JoinPendingMatchRequest.md) in the Test Harness.
 
-As an example, we'll use the Match configuration described in the previous section - MULTI_MCH. However, we'll enable *Manually match players* and we'll adapt scenario 1:
+As an example, we'll use the Match configuration described in the previous section - MULTI_MCH:
+* We'll enable *Manually match players*.
+* We'll select to *Accept Min. Players*.
 
-* **Scenario 1A.** Players *1*, *2*, and *3* have skills of *20*, *15*, and *17* respectively. At 12 seconds - that is, in the 2nd Threshold period for Relative skill-level matching - player 1 submits a *FindPendingMatchesRequest* and will get *FindPendingMatchesResponse* containing Player 3 as a possible Pending Match.
+For manual matching, we'll adapt scenario 1:
+
+  * **Scenario 1A.** Players *1*, *2*, and *3* have skills of *20*, *15*, and *17* respectively. Each player submits a *MatchmakingRequest* in that order and each player's request is issued within player *1's* first Threshold period of 10 seconds. At 12 seconds - that is, in the 2nd Threshold period for Relative skill-level matching - player 1 submits a *FindPendingMatchesRequest* and will get *FindPendingMatchesResponse* containing Player 3 as a possible Pending Match.
 
 Players *1* and *3* will NOT be matched automatically BUT we can use *FindPendingMatchRequest* to find out who could potentially be matched, which allows you to decide who you want to match manually.
 
@@ -485,7 +490,7 @@ Players *1* and *3* will NOT be matched automatically BUT we can use *FindPendin
  "@class": ".FindPendingMatchesResponse",
  "pendingMatches": [
   {
-   "id": "5792444e6cc8e27fffe93e7f",
+   "id": "579756b33a32df04880bc2d9",
    "matchGroup": "group1",
    "matchShortCode": "MULTI_MCH",
    "matchedPlayers": [
@@ -541,6 +546,97 @@ This does not mean that there are NO Pending Matches at all, but, simply and cor
 ```
 
 This makes perfect sense - a player can't be put into any Pending Match unless they've first issued a *MatchMakingRequest*!
+
+*5.* Lastly, player 1, having seen the possible Pending Match returned at 12 seconds, submits a *JoinPendingMatchRequest* at 18 seconds - that is, still within the second Threshold period for relative skill-level matching - and uses the returned Pending Match id for this request:
+
+```
+
+{
+ "@class": ".JoinPendingMatchRequest",
+ "matchGroup": "group1",
+ "matchShortCode": "MULTI_MCH",
+ "pendingMatchId": "579756b33a32df04880bc2d9"
+}
+
+
+```
+
+Because the first Threshold in the Match configuration is selected to *Accept Min. Players* (that, is at least 2) when player 1 joins the Pending Match, a Match Instance is created and the player receives a *MatchFoundMessage*:
+
+```
+
+{
+ "@class": ".MatchFoundMessage",
+ "gameId": 358719,
+ "matchData": {},
+ "matchGroup": "group1",
+ "matchId": "579756fb3a32df04880bc49f",
+ "matchShortCode": "MULTI_MCH",
+ "messageId": "579756fb3a32df04880bc4aa",
+ "notification": true,
+ "participants": [
+  {
+   "displayName": "PLAYER_THREE",
+   "externalIds": {},
+   "id": "5797427a3a32df04880b2e56",
+   "online": true,
+   "peerId": 2
+  },
+  {
+   "displayName": "PLAYER_ONE",
+   "externalIds": {},
+   "id": "579742353a32df04880b2c15",
+   "online": true,
+   "peerId": 1
+  }
+ ],
+ "playerId": "579742353a32df04880b2c15",
+ "summary": "MatchFoundMessage"
+}
+
+
+```
+
+And then receives a *JoinPendingMatchResponse*:
+
+```
+
+{
+ "@class": ".JoinPendingMatchResponse",
+ "pendingMatch": {
+  "id": "579756af3a32df04880bc2d3",
+  "matchGroup": "group1",
+  "matchShortCode": "MULTI_MCH",
+  "matchedPlayers": [
+   {
+    "location": {
+     "type": "Point",
+     "coordinates": [
+      -1.08270263671875,
+      53.95759582519531
+     ]
+    },
+    "playerId": "579742353a32df04880b2c15",
+    "skill": 20
+   },
+   {
+    "location": {
+     "type": "Point",
+     "coordinates": [
+      -1.08270263671875,
+      53.95759582519531
+     ]
+    },
+    "playerId": "5797427a3a32df04880b2e56",
+    "skill": 17
+   }
+  ],
+  "skill": 18.5
+ }
+}
+
+```
+
 
 
 ## Customizing Matching

@@ -1,4 +1,5 @@
 ---
+nav_sort: 6
 src: /SDK Center/JavaScript SDK.md
 ---
 
@@ -11,6 +12,8 @@ The GameSparks JavaScript SDK allows you to interact with the GameSparks platfor
 Download the SDK, and example HTML here:
 
 [JavaScript SDK](http://repo.gamesparks.net/javascript-sdk/gamesparks-javascript-sdk-2015-12-18.zip)
+
+<q>**Using Node JS to store Secret?** If you plan to use Node JS to store your API secret server-side see [this tutorial](/Tutorials/Third Party Integrations/Node JS Secret.md).
 
 ## Adding the SDK to your Web Page
 

@@ -50,11 +50,11 @@ The *Edit Facebook Configuration* dialog appears:
 ![](img/AuthFB/14.png)
 
 
-*9.* Go back to the Facebook application and copy and paste the *App Id* and *App Secret* (click the *Show* button to reveal the secret) values into the *Facebook App Id* and *Facebook Secret* fields respectively on the *Edit Facebook Configuration* dialog.
+*9.* Go back to the Facebook application and copy and paste the *App Id* and *App Secret* (click the *Show* button to reveal the secret) values into the *Facebook App Id* and *Facebook Secret* fields respectively on the dialog.
 
 *10.* Click *Save*.
 
-Your GameSparks game is now configured to use your newly created Facebook application: you’re setup to authenticate your players via Facebook, and the GameSparks platform can access their profile to drive its social features.
+Your GameSparks game is now configured to use your newly-created Facebook application: you’re setup to authenticate your players via Facebook, and the GameSparks platform can access their profile to drive its social features.
 
 ## Authenticating a player using their Facebook account
 
@@ -122,7 +122,7 @@ If the authentication with Facebook is successful you will see a response like 
 
 ![](img/AuthFB/12.png)
 
-*6.* Now, obtain an access token for this new test user and send a Facebook connect request to the GameSparks platform via the Test Harness.
+*6.* Now, obtain an access token for this new test user and send a *FacebookConnectRequest* to the GameSparks platform via the Test Harness.
 
 *7.* Next, in the Test Harness click on *User* -> *ListInviteFriendsRequest* and you should see that the list of friends contains the other Facebook test user.
 

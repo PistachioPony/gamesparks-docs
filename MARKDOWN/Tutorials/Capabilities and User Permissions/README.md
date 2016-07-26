@@ -1,9 +1,9 @@
 ---
 nav_sort: 3
-src: /Tutorials/Capabilities/README.md
+src: /Tutorials/Capabilities and User Permissions/README.md
 ---
 
-# Capabilities
+# Capabilities and User Permissions
 
 A game Owner or Admin may wish to set specific read / write permissions for particular areas of the Portal. You may want a user of your game to make changes to Events and Leaderboards, but only view the configuration of Virtual Goods and Achievements, whilst be prevented from viewing or editing the Integrations and Downloadables sections.  
 

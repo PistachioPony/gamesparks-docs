@@ -13,11 +13,11 @@ In this tutorial, we'll go through setting up the necessary configuration with G
 
 *1.*  Head over to the [Google Developer Console](https://console.developers.google.com) and sign in if you already have an account.  Sign up if you don't.
 
-*2.* Go to [ Google Play Game Services](https://developers.google.com/games/services/).  Follow the relevant *Getting Started* section based on the application type that you are creating by navigating to [Set up Play Games Services](https://developers.google.com/games/services/console/enabling).  The most important step to understand is the *Add your game to the Google Play Developer Console*.
+*2.* Go to [Google Play Game Services](https://developers.google.com/games/services/).  Follow the relevant *Getting Started* section based on the application type that you are creating by navigating to [Set up Play Games Services](https://developers.google.com/games/services/console/enabling).  The most important step to understand is the *Add your game to the Google Play Developer Console*.
 
 <q>**TIP!**  If you've got time, it's worth a read.  There is a wealth of information hidden away in these pages! If you're targeting more than one platform (Android, IOS, Web, and so on...), just pick one to start with - a chunk of the setup will only need to be done once.</q>
 
-*3.* While setting up your application in the *Google Play Developer Console*, also add a "Web" linked application.  This will serve as our "Server" client in later steps. It's important that this be created through the [Google *Play* Developer Console](https://play.google.com/apps/publish/), instead of through the standard Google *Developer* Console. If you don't do it this way, when we try to get a token later it will fail to work correctly.
+*3.* While setting up your application in the *Google Play Developer Console*, also add a "Web" linked application.  This will serve as our "Server" client in later steps. It's important that this be created through the [Google *Play* Developer Console](https://play.google.com/apps/publish/), instead of through the standard Google *Developer* Console. If you don't do it this way, when you try to get a token later it will fail to work correctly.
 
 ![](img/AuthGoogle/1.png)  
 
@@ -25,7 +25,7 @@ In this tutorial, we'll go through setting up the necessary configuration with G
 
 ![](img/AuthGoogle/2.png)
   
-*5.* After setting up the application, follow the steps from the [Google+ documentation](https://developers.google.com/+/). The relevant section is "Enable server-side API access for your app", located [here for Android](https://developers.google.com/+/mobile/android/sign-in#enable_server-side_api_access_for_your_app) and [here for iOS](https://developers.google.com/+/mobile/ios/sign-in#enable_server-side_api_access_for_your_app) (for a web application the relevant section is under [Server Side Flow](https://developers.google.com/+/web/signin/server-side-flow)). This will show you how you are going to get hold of the access code that we need to pass through to the server later on.
+*5.* After setting up the application, follow the steps from the [Google+ documentation](https://developers.google.com/+/). The relevant section is "Enable server-side API access for your app", located [here for Android](https://developers.google.com/+/mobile/android/sign-in#enable_server-side_api_access_for_your_app) and [here for iOS](https://developers.google.com/+/mobile/ios/sign-in#enable_server-side_api_access_for_your_app) (for a web application the relevant section is under [Server Side Flow](https://developers.google.com/+/web/signin/server-side-flow)). This explains how you are going to get hold of the access code that we need to pass through to the server later on.
 
 <q>**Important!** If the instructions talk about "your server's client ID", this is where we need to substitute in the *OAuth Client Id* from the Web application we created within *Google Play Developer Console*. If you begin to distribute your game on more than one device, it's always this Web Application that we use as the "Server" Client ID. When requesting the token, you are required to provide the "*scopes*" of the token which determine what you can gain access to.  Currently, the only scope we require to support our social features is "https://www.googleapis.com/auth/plus.login"</q>
 
@@ -45,7 +45,7 @@ Now we've done that, here comes the easy part.
 
 ![](img/AuthGoogle/4.png)  
 
-While you can view the Application Client Id through the [Google *Play* Developer Console](https://play.google.com/apps/publish/), you can only access the Client Secret under the standard [Google *Developer* Console](https://console.developers.google.com):
+You can view the Application Client Id through the [Google *Play* Developer Console](https://play.google.com/apps/publish/), *BUT* you can *only access* the Client Secret under the standard [Google *Developer* Console](https://console.developers.google.com):
 
 ![](img/AuthGoogle/5.png)  
 
@@ -78,15 +78,17 @@ Response:
      }
 ```
 
-  That's it!  You are now authenticated with Google! As a basic setup of the Google authentication, these are the only steps you will need. However, if you are interested in knowing other alternative ways on how to authenticate your Players with Google, then read on...
+That's it!  You are now authenticated with Google!
+
+As a basic setup of the Google authentication, these are the only steps you will need. However, if you are interested in knowing other alternative ways on how to authenticate your Players with Google, then read on...
 
 ## Authenticating via the Redirect URI
 
 If you have a local web server available, it can be used to authenticate your game and Client ID to generate an access code using a *redirect* *URI.* The resulting POST message will contain the access code to authenticate your Google Plus account with the GameSparks platform.
 
-*13.* On your local web server, you will need to create a HTML page that will contain the Google Sign in button.  The HTML page should contain the following pre-requisites:
+*13.* On your local web server, you'll need to create a HTML page that will contain the Google Sign in button.  The HTML page should contain the following pre-requisites:
 
-It should also contain the signInCallback JavaScript function used to process the sign-in result containing the authentication code and access token:
+It should also contain the *signInCallback* JavaScript function used to process the sign-in result containing the authentication code and access token:
 
 ```
 <script>
@@ -99,10 +101,13 @@ function signInCallback(authResult) {
   }
 }
 </script>
-```
-  Finally, it should include the details for the sign-in button itself, including your *Client ID* for the web application created earlier in the [Google Developer Console:](https://console.developers.google.com "Google Developer Console")
 
 ```
+
+Finally, it should include the details for the sign-in button itself, including your *Client ID* for the web application created earlier in the [Google Developer Console:](https://console.developers.google.com "Google Developer Console")
+
+```
+
 <div id="signinButton">
   <span class="g-signin"
     data-scope="https://www.googleapis.com/auth/plus.login"
@@ -114,6 +119,7 @@ function signInCallback(authResult) {
     data-callback="signInCallback">
   </span>
 </div>
+
 ```
 
 *14.* Save the changes to the HTML file and load the page through your web server.  You will see a Google *Sign in* button:
@@ -121,6 +127,7 @@ function signInCallback(authResult) {
 ![](img/AuthGoogle/7.png)  
 
 *15.* Click the *Sign in* button.  A popup window will open informing you that your game would like to have offline access.  Select *Accept*.
+
 ![](img/AuthGoogle/8.png)  
 
 The POST response from the page will contain an access code (as well as an access token) that can be used to authenticate:
@@ -129,7 +136,9 @@ The POST response from the page will contain an access code (as well as an acces
 
 *16.* Go to the *Test Harness* in the GameSparks Portal.
 
-*17.* As we already have the Client ID and Secret integrated into our game from *Step 10*, authenticate a player by doing a *GooglePlusConnectRequest*.  Remember to add the access code from the response within our HTML page.  Also, we need to add the value, *"postmessage"* to the *redirectURI* parameter in the request:
+*17.* Because we already have the Client ID and Secret integrated into our game from *Step 10*, authenticate a player by doing a *GooglePlusConnectRequest*.
+* Remember to add the access code from the response within our HTML page.
+* Also, we need to add the value, *"postmessage"* to the *redirectURI* parameter in the request:
 
 ```
 {
@@ -154,11 +163,15 @@ Response:
 
 The Player is connected to the GameSparks platform!  
 
-## Domain-wide Authority
+## Domain-Wide Authority
 
 ### Certificate authentication instead of the Client Secret
 
-As well as being able to establish manual authentication by using the Client ID and Client Secret, we can use Google's domain-wide delegation of authority to authenticate Players.  This can be done through the use of a Certificate stored in the GameSparks platform for the game.  For more information on how to set up Service accounts, go [here](https://developers.google.com/+/domains/authentication/delegation "Google Service accounts"). In order to utilise these features, our game must make use of an extra API - the *Google+ Domains API*.
+As well as being able to establish manual authentication by using the Client ID and Client Secret, we can use Google's domain-wide delegation of authority to authenticate Players.  This can be done through the use of a Certificate stored in the GameSparks platform for the game.
+
+<q>**More Information!** For more information on how to set up Service accounts, go [here](https://developers.google.com/+/domains/authentication/delegation "Google Service accounts").</q>
+
+In order to utilise these features, our game must make use of an extra API - the *Google+ Domains API*.
 
 *18.* Go to the [Google *Developer* Console](https://console.developers.google.com "Google Developer Console").
 
@@ -196,9 +209,9 @@ To use this alternative type of authentication, we need to create a separate Cli
 
  ![](img/AuthGoogle/15.png)  
 
- *NOTE:* If this type of authentication is to always be used, then the *Application Client Secret* is no longer required.  It can be removed from the form if desired.  
+<q>**Note:** If this type of authentication is to be used always, the *Application Client Secret* is no longer required.  You can remove it from the form if desired.</q>  
 
- *29.* Generate another access code and token as in *Step 12*,* this time taking a note of the *access token*, instead of the code.
+ *29.* Generate another access code and token as in *Step 12*, this time taking a note of the *access token*, instead of the code.
 
  *30.* Go to the *Test Harness*.
 
