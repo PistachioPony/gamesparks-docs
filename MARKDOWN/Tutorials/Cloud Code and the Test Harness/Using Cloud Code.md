@@ -5,33 +5,49 @@ src: /Tutorials/Cloud Code and the Test Harness/Using Cloud Code.md
 
 # How to create and use Cloud Code
 
-In this exercise we use the Configurator to create an event that will then trigger a simple piece of Cloud Code. The event will contain three attributes - a String, a Number and a JSON field. The Cloud Code (a piece of JavaScript) will manipulate these values and echo them back in the event response. We will use the Test Harness to try out the Cloud Code script and the event.
+In this tutorial, you can follow an example and learn how to create and work with Cloud Code:
+* We use the Configurator to create an Event that will then trigger a simple piece of Cloud Code.
+* The Event will contain three attributes - a String, a Number and a JSON field.
+* The Cloud Code (a piece of JavaScript) will manipulate these values and echo them back in the Event response.
+* We'll then use the Test Harness to try out the Cloud Code script and the Event.
 
 ## Create an Event
 
-Go to Configurator/Events and click the ![](/img/fa/plus.png) icon to bring up the Create Event dialog.
+*1.* Go to *Configurator > Events* and click the ![](/img/fa/plus.png) icon:
 
 ![](img/CreateCloud/1.png)
 
-Now fill in the Event’s details and click the Save button.
+The *Create Event* dialog appears:
 
-![](img/CreateCloud/2.png)
+*2.* Now fill in the Event’s details and click the *Save* button:
 
-Next click the ![](/img/fa/plus.png) icon to add an Event Attribute.
+![](img/CreateCloud/12.png)
 
-![](img/CreateCloud/3.png)
+The *Create Event* dialog closes and the Event is listed on the Events page.
 
-Now fill in the Event Attribute details. The Name field is self explanatory and the Short Code will be used as the key for the value that you post into the GameSparks platform from your game code. Set the Data Type to "String" and for Default Calc choose the option ‘Used in Script". Click the Save button.
+*3.* Click *Edit* ![](/img/fa/edit.png) icon. The *Edit Event* dialog appears:
 
-![](img/CreateCloud/4.png)
+*4.* Next, click the ![](/img/fa/plus.png) icon to add an Event Attribute.
 
-Repeat this step to create another two attributes for this event, one with "Number" for its Data Type, the other with "JSON" for its Data Type. Click Save.
+![](img/CreateCloud/13.png)
 
-![](img/CreateCloud/5.png)
+*5.* Now fill in the Event Attribute details:
+* The Name field is self explanatory.
+* The Short Code will be used as the key for the value that you post into the GameSparks platform from your game code.
+* Set the Data Type to "String".
+* For Default Calc choose the option ‘Used in Script".
 
-Your Events home page should now look something like this.
+![](img/CreateCloud/14.png)
 
-![](img/CreateCloud/6.png)
+*6.* Click the Save.
+
+*7.* Repeat this step to create another two attributes for this event, one with "Number" for its Data Type, the other with "JSON" for its Data Type.
+
+![](img/CreateCloud/15.png)
+
+*8.* Click Save. Your *Events* page should now look something like this.
+
+![](img/CreateCloud/16.png)
 
 ## Create a Cloud Code Script
 

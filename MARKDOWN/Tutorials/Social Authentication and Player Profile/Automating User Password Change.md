@@ -9,17 +9,21 @@ src: /Tutorials/Social Authentication and Player Profile/Automating User Passwor
 
 ## Introduction
 
-If one of your users loses or forgets their password, you'll want an automated way for them to retrieve it. This tutorial shows you how to set up Cloud Code to do this. This set up is the most basic way users have access to your platform without them having to be authenticated and can be developed for more advanced and specific applications.    
+If one of your users loses or forgets their password, you'll want an automated way for them to retrieve it.
+
+This tutorial shows you how to set up Cloud Code to do this. The set up described here is the most basic way users have access to your platform without them having to be authenticated and can be developed for more advanced and specific applications.    
 
 ## Cloud Code Section
 
 ### Choosing our sequence of actions and passing in scriptData
 
-*1.* Navigate to the *Configurator* -> *Cloud Code*.
+*1.* Navigate to the *Configurator* > *Cloud Code*.
 
-*2.* Select [AuthenticationRequest](/API Documentation/Request API/Authentication/AuthenticationRequest.md) under *Bindings* -> *Requests*. The *Cloud Code* editor opens for the request and you can start editing it. This will allow users to run the password recovery logic without having an authenticated account.
-* **Action.** The first thing the *Cloud Code* will need to work is the '*action*' variable. The '*action*' variable will determine which sequence of instructions to perform. In this example, we have two sequences, password recovery and password reset. Password recovery will generate a token which will be sent via email and password reset will take this token and a password and change the password.
-* **Status.** The '*status*' variable will help you debug and determine whether the function was successfully completed and if not, it'll help you print out why not.
+*2.* Select [AuthenticationRequest](/API Documentation/Request API/Authentication/AuthenticationRequest.md) under *Bindings* > *Requests*. The *Cloud Code* editor opens for the request and you can start editing it. This will allow users to run the password recovery logic without having an authenticated account.
+* **Action.** The first thing the *Cloud Code* will need to work is the '*action*' variable. The '*action*' variable will determine which sequence of instructions to perform. In this example, we have two sequences - password recovery and password reset:
+  * Password recovery will generate a token which will be sent via email.
+  * Password reset will take this token and a password and change the password.
+* **Status.** The '*status*' variable will help you debug and determine whether the function was successfully completed and, if not, will help you print out why not.
 
 ```    
     	var status = "Started";
@@ -51,7 +55,9 @@ If one of your users loses or forgets their password, you'll want an automated w
 * Through the initial authentication using *scriptData*.
 * Later on through an event by saving it on the player using *setScriptData*.
 
-If the email passed in is linked to an account, then a unique token will be generated, linked to the account and the email sending function will be called which sends an email which contains the token to be used in the reset password sequence to change the password.
+If the email passed in is linked to an account, then:
+* A unique token will be generated linked to the account.
+* The email sending function will be called, which sends an email containing the token to be used in the reset password sequence to change the password.
 
 ```  
     function startRecovery(request){
@@ -85,7 +91,7 @@ If the email passed in is linked to an account, then a unique token will be gene
 
 ### Sending out the E-Mail
 
-*6.* We have full integration with *SendGrid* services. If you plan to use it to send your E-Mails, then create an account with them and wait for their "Your SendGrid account has been provisioned!" E-Mail, which will allow you to start sending emails. It might take up to 24 hours to receive it. You'll need:
+*6.* We have full integration with *SendGrid* services. If you plan to use it to send your E-Mails, then create an account with them and wait for their E-Mail confirming that: *"Your SendGrid account has been provisioned!"*, which then allows you to start sending emails. It might take up to 24 hours to receive it. You'll need:
 * The E-Mail to send to.
 * The E-Mail sent from.
 * The E-mail Subject.

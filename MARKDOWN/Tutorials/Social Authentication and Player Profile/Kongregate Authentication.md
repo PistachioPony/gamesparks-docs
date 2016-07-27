@@ -17,7 +17,7 @@ For a successful [KongregateConnectRequest](/API Documentation/Request API/Authe
 * The user's ID
 * An authentication token valid for the (user,game) pair
 
-You can obtain these from Kongregate, by uploading a game.
+You can obtain these from Kongregate by uploading a game.
 
 ## Uploading a Sample Kongregate Game
 
@@ -31,7 +31,7 @@ The following steps will guide you through the process of creating a sample game
 
 ![](img/AuthKon/2.png)
 
-*3.* Next, you need to upload your game. For the sake of this tutorial, you can download a test game from here:  
+*3.* Next, you need to upload your game. For the sake of this tutorial, you can download a test game from [here](http://repo.gamesparks.net.s3.amazonaws.com/docs/tutorial-assets/kongregate.zip).  
 
 The only thing that this test game does is provide you with the credentials necessary for making a connect request. Here's a sample configuration for the game:
 

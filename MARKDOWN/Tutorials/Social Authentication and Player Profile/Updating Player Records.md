@@ -12,7 +12,11 @@ After a player has been created, you might want to change details associated wit
 * userName
 * displayName
 
-It might be you as the game developer or one of the game's players that want to make a user account change. Here, we'll learn how to make these changes using the [ChangeUserDetailsRequest](/API Documentation/Request API/Player/ChangeUserDetailsRequest.md) in Cloud Code.  
+Different people might want to make a user account change:
+* The game developer.
+* One of the game's players.
+
+Here, we'll learn how to make user account changes using the [ChangeUserDetailsRequest](/API Documentation/Request API/Player/ChangeUserDetailsRequest.md) in Cloud Code.  
 
 ## Change Details Request
 

@@ -1,11 +1,9 @@
 ---
 src: /API Documentation/REST APIs/README.md
+
 ---
 
 # REST APIs Overview
-
-
-
 
 ## Usage
 The GameSparks API is a RESTful API that can be used to access game configuration, management, and service service requests:
@@ -20,6 +18,7 @@ The GameSparks API is a RESTful API that can be used to access game configuratio
 * All dates and timestamps are returned in ISO 8601 format:
 
 ```
+
 YYYY-MM-DD and YYYY-MM-DDTHH:MM:SSZ
 
 ```

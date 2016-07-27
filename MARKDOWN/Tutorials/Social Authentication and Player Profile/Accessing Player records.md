@@ -7,7 +7,9 @@ src: /Tutorials/Social Authentication and Player Profile/Accessing Player record
 
 ## Introduction
 
-An important part of a back-end is the ability to access your player's info in real-time and have the ability to change it. GameSparks gives you the ability to do this using multiple approaches. This tutorial will explore how to access records using the NoSQL Explorer, Player management screen, and cloud code.  
+An important part of a back-end is the ability to access your player's info in real-time and have the ability to change it. GameSparks gives you the ability to do this using multiple approaches.
+
+This tutorial explores how to access player records using the NoSQL Explorer, Player management screen, and cloud code.  
 
 ## Working with the NoSQL Explorer
 
@@ -20,7 +22,7 @@ The NoSQL Explorer is a powerful tool you can use to access and find any collect
 ![](img/PlayerRecords/1.jpg)
 
 
-*3.* When records are retrieved, you can click on them to expand them. Once expanded you can see all the data that are linked to the player including data you can't normally see when you call an account details request - data such as auth tokens, external IDs, reserved currency, and private data, which you may not see and use often. An example of a newly created player's record.
+*3.* When records are retrieved, you can click on them to expand them. Once expanded you can see all the data that are linked to the player including data you can't normally see when you call an account details request - data such as auth tokens, external IDs, reserved currency, and private data, which you may not see and use often. An example of a newly created player's record:
 
 ![](img/PlayerRecords/2.jpg)
 
@@ -38,23 +40,18 @@ You can use the player management screen to offer a visual experience while you 
 
 ![](img/PlayerRecords/3.jpg)
 
-* This screen can be customized in whatever way you like using the dynamic forms builder.
+* You can use the dynamic forms builder to customize this screen in whatever way you like.
 * You can tailor your team's experience and design what is shown on the screen to suit different users. For example, you can offer special screens for customer service, where they are allowed to change certain values, while your programmers have access to a different screen.
 
 <q>**More Information!** For more information about dynamic forms, click [here](/Documentation/Manage/Working with Dynamic Forms.md).</q>
 
 ## Accessing Data through Cloud Code
 
-You can use Cloud code to retrieve players and access their records. You can do this through a specified ID which you can retrieve from [AccountDetailsRequest](/API Documentation/Request API/Player/AccountDetailsRequest.md) or do a query based search on the player collection. You can edit or pass on the details you retrieve.
+You can use Cloud code to retrieve players and access their records. You can do this through a specified ID which you can retrieve from [AccountDetailsRequest](/API Documentation/Request API/Player/AccountDetailsRequest.md).
 
 ```
-//Player search
-//Getting a player based on Query
-var players = Spark.systemCollection("player");
 
-var playerData = players.findOne({"displayName" : "Coder"}; //Find the display name 'Coder' and return the players that have it.
-
-//Or you can have the player ID saved or manually passed in
+//You can have the player ID saved or manually passed in
 var playerID = "5602c3dce4b07961f34b68c3" //Manually set the ID
 
 //Finding the player through their ID

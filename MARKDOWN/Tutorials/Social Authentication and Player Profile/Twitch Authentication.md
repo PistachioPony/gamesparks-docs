@@ -7,7 +7,7 @@ src: /Tutorials/Social Authentication and Player Profile/Twitch Authentication.m
 
 You can use Twitch authentication to offer your players a simple way to sign in with their Twitch account. The GameSparks platform can then use a player’s profile to drive its social features.
 
-In this tutorial we’ll go through setting up the necessary configuration with Twitch and explain how you can then use that to connect your players.
+In this tutorial, we’ll go through setting up the necessary configuration with Twitch and explain how you can then use that to connect your players.
 
 ## Setting up a Twitch Application
 
@@ -17,7 +17,7 @@ In this tutorial we’ll go through setting up the necessary configuration with 
 
 ![](img/AuthTwitch/1.png)
 
-*3.* Fill in your application name and the Redirect URI. Twitch implements oAuth 2.0 for authorisation, so this Redirect URI is the one that is involved in the authentication flow.
+*3.* Fill in your application name and the Redirect URI. Twitch implements oAuth 2.0 for authorization, so this Redirect URI is the one that is involved in the authentication flow.
 
 *4.* After these details have been filled in, press *Register*:
 
@@ -47,7 +47,7 @@ The only configuration you will need to make in the GameSparks portal is whether
 
 *9.* In the GameSparks developer portal, click on the *Test Harness* button. Within *Authentication* click [TwitchConnectRequest](/API Documentation/Request API/Authentication/TwitchConnectRequest.md).
 
-*10.* At this point, if you are using the sample application all you need to do is copy the request provided. Alternatively, you can need to replace the "accessToken" field with your own token.
+*10.* At this point, if you are using the sample application, all you need to do is copy the request provided. Alternatively, you can replace the "accessToken" field with your own token.
 
 Here is an example of a *TwitchConnectRequest*:
 
@@ -60,9 +60,10 @@ Here is an example of a *TwitchConnectRequest*:
      "switchIfPossible": false,
      "syncDisplayName": false
     }
+
     ```
 
-Here is an example of a successful AuthenticationResponse:
+Here is an example of a successful *AuthenticationResponse*:
 
     ```
     {
@@ -73,4 +74,5 @@ Here is an example of a successful AuthenticationResponse:
      "scriptData": null,
      "userId": "5565cd4ae4b01ae882fa82da"
     }
+
     ```
