@@ -3,54 +3,73 @@ nav_sort: 7
 src: /Tutorials/Social Authentication and Player Profile/Kongregate Authentication.md
 ---
 
-# How to authenticate a player using their Kongregate account
+# How to Authenticate a Player Using their Kongregate Account
 
-Kongregate authentication allows you to provide your players with a simple way to sign in with their Kongregate account, and allows GameSparks platform to then use the players profile to drive its social features. In this exercise you’ll go through setting up the necessary configuration with Kongregate and how you can then use that to connect your players.
+You can use Kongregate authentication to offer your players a simple way to sign in with their Kongregate account. The GameSparks platform can then use a player's profile to drive its social features.
 
-## Setting up a Kongregate application
+In this tutorial, we’ll go through setting up the necessary configuration with Kongregate and explain how you can then use that to connect your players.
+
+## Setting up a Kongregate Application
 
 For a successful [KongregateConnectRequest](/API Documentation/Request API/Authentication/KongregateConnectRequest.md) the following data needs to be provided to GameSparks:
 
 * Game API Key
 * The user's ID
-* an authentication token valid for the (user,game) pair
-This data can be obtained from Kongregate, by uploading a game.
+* An authentication token valid for the (user,game) pair
 
-### Uploading a sample Kongregate game
+You can obtain these from Kongregate, by uploading a game.
 
-The following steps will guide you through the process of creating a sample game and obtaining the necessary details. Go to the [Kongregate home page](http://www.kongregate.com/) and log in. If you scroll over the "Games" section, you will be able to see a link to "Upload your game"
+## Uploading a Sample Kongregate Game
+
+The following steps will guide you through the process of creating a sample game and obtaining the necessary details.
+
+*1.* Go to the [Kongregate home page](http://www.kongregate.com/) and log in. If you scroll over the "Games" section, you will be able to see a link to "Upload your game"
 
 ![](img/AuthKon/1.png)
 
-Alternatively, go directly to the [Upload game page](http://www.kongregate.com/games/new). Fill in your game details and press *Continue*
+*2.* Alternatively, go directly to the [Upload game page](http://www.kongregate.com/games/new). Fill in your game details and press *Continue*
 
 ![](img/AuthKon/2.png)
 
-Next, you need to upload your game. For the sake of this tutorial, you can download a test game from here:  The only thing that this test game does is provide you with the credentials necessary for making a connect request. The following image presents a sample configuration for the game:
+*3.* Next, you need to upload your game. For the sake of this tutorial, you can download a test game from here:  
+
+The only thing that this test game does is provide you with the credentials necessary for making a connect request. Here's a sample configuration for the game:
 
 ![](img/AuthKon/3.png)
 
-After clicking *Upload* you will be redirected to your game. This is where you will be able to obtain all of the information you need in order to perform a KongregateConnectRequest.
+After clicking *Upload* you will be redirected to your game. This is where you'll be able to obtain all of the information you need in order to perform a *KongregateConnectRequest*.
 
-### Configure Kongregate game details
+## Configure Kongregate Game Details
 
-While you are previewing your game in Kongregate, click on the *api* link at the bottom of your game.
+*4.* When you are previewing your game in Kongregate, click on the *api* link at the bottom of your game.
 
 ![](img/AuthKon/4.png)
 
-This will lead you to a view that displays your game credentials, from where you will need to copy the value of your API Key:
+This will display your game credentials.
+
+*5.* Copy the value of your *API Key*:
 
 ![](img/AuthKon/5.png)
 
-In a separate tab, go to the Gamesparks developer portal. Navigate to *your game →Configurator→Integrations→Kongregate*
+*6.* In a separate tab, go to the Gamesparks developer portal.
+
+*7.* Navigate to *your game > Configurator > Integrations > Kongregate*:
 
 ![](img/AuthKon/6.png)
 
-Press *Edit* and set your API key to be the one you just copied from Kongregate.
+*8.* Click *Edit* and set your API key to be the one you just copied from Kongregate.
 
-### Perform a KongregateConnectRequest
+## Perform a KongregateConnectRequest
 
-Return to Kongregate screen where you play your game. This should display a connect request for your user. The fields that are used to perform the authentication are *gameAuthToken* and *userId*. Copy this connect request. In another tab, go to the GameSparks portal and navigate to *Test Harness*. Paste your request in your JSON editor and that's it.
+*9.* Return to Kongregate screen where you play your game. This should display a connect request for your user. The fields that are used to perform the authentication are *gameAuthToken* and *userId*.
+
+*10.* Copy this connect request.
+
+*11.* In another tab, go to the GameSparks portal and navigate to *Test Harness*.
+
+*12.* Paste your request in your JSON editor.
+
+That's it!
 
 Here is a sample request for connecting to Kongregate:
 

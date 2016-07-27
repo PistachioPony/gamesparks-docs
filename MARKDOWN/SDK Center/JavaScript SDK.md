@@ -13,6 +13,7 @@ Download the SDK, and example HTML here:
 
 [JavaScript SDK](http://repo.gamesparks.net/javascript-sdk/gamesparks-javascript-sdk-2015-12-18.zip)
 
+</br>
 <q>**Using Node JS to store Secret?** If you plan to use Node JS to store your API secret server-side see [this tutorial](/Tutorials/Third Party Integrations/Node JS Secret.md).
 
 ## Adding the SDK to your Web Page

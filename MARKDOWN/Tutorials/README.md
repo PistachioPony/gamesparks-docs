@@ -9,7 +9,7 @@ banner: true
 Here you'll find a wide range of in-depth tutorials to help you with detailed aspects of the platform:
 * [Analytics, Segmentation and Game Management](/Tutorials/Analytics, Segmentation and Game Management/README.md)
 * [Social Authentication and Player Profile](/Tutorials/Social Authentication and Player Profile/README.md)
-* [Capabilities and User Permissions](/Tutorials/Capabilities and User Permissions/README.md)
+* [Capabilities and User Permissions](/Tutorials/Capabilities/README.md)
 * [Cloud Code, and the Test Harness](/Tutorials/Cloud Code and the Test Harness/README.md)
 * [Currencies, Virtual Goods and Achievements](/Tutorials/Currencies, Virtual Goods and Achievements/README.md)
 * [Database Access and Cloud Storage](/Tutorials/Database Access and Cloud Storage/README.md)

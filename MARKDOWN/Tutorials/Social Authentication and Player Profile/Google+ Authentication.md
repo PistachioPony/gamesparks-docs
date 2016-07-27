@@ -3,13 +3,13 @@ nav_sort: 6
 src: /Tutorials/Social Authentication and Player Profile/Google+ Authentication.md
 ---
 
-# How to authenticate a player using their Google+ account
+# How to Authenticate a Player Using their Google+ Account
 
-You can use Google+ authentication to offer your players a simple way to sign in with their Google+ account details. The GameSparks platform can then use the player’s profile to drive its social features.
+You can use Google+ authentication to offer your players a simple way to sign in with their Google+ account details. The GameSparks platform can then use a player’s profile to drive its social features.
 
-In this tutorial, we'll go through setting up the necessary configuration with Google and how you can then use that to connect your players.
+In this tutorial, we'll go through setting up the necessary configuration with Google and explain how you can then use that to connect your players.
 
-## Setting up an application with Google
+## Setting up an Application with Google
 
 *1.*  Head over to the [Google Developer Console](https://console.developers.google.com) and sign in if you already have an account.  Sign up if you don't.
 
@@ -35,7 +35,7 @@ In this tutorial, we'll go through setting up the necessary configuration with G
 
 ![](img/AuthGoogle/3.png)  
 
-## Configuring your GameSparks game
+## Configuring your GameSparks Game
 
 Now we've done that, here comes the easy part.
 
@@ -165,7 +165,7 @@ The Player is connected to the GameSparks platform!  
 
 ## Domain-Wide Authority
 
-### Certificate authentication instead of the Client Secret
+### Using Certificate Authentication instead of the Client Secret
 
 As well as being able to establish manual authentication by using the Client ID and Client Secret, we can use Google's domain-wide delegation of authority to authenticate Players.  This can be done through the use of a Certificate stored in the GameSparks platform for the game.
 

@@ -3,13 +3,13 @@ nav_sort: 5
 src: /Tutorials/Social Authentication and Player Profile/Facebook Authentication.md
 ---
 
-# How to authenticate players using their Facebook accounts
+# How to Authenticate a Player using their Facebook Account
 
-You can use Facebook authentication to offer your players a simple way to sign in with their Facebook account details. The GameSparks platform can then use the player’s profile to drive its social features.
+You can use Facebook authentication to offer your players a simple way to sign in with their Facebook account details. The GameSparks platform can then use a player’s profile to drive its social features.
 
-In this tutorial, we’ll go through setting up the necessary configuration with Facebook and how you can then use that to connect your players.
+In this tutorial, we’ll go through setting up the necessary configuration with Facebook and explain how you can then use that to connect your players.
 
-## Setting up a Facebook application
+## Setting up a Facebook Application
 
 *1.* Go to the [Facebook developer portal](https://developers.facebook.com/) and sign in (or sign up to Facebook first).
 
@@ -56,7 +56,7 @@ The *Edit Facebook Configuration* dialog appears:
 
 Your GameSparks game is now configured to use your newly-created Facebook application: you’re setup to authenticate your players via Facebook, and the GameSparks platform can access their profile to drive its social features.
 
-## Authenticating a player using their Facebook account
+## Authenticating a Player Using their Facebook Account
 
 Authentication via Facebook is done using the [FacebookConnectRequest](/API Documentation/Request API/Authentication/FacebookConnectRequest.md).  To do this, you need to obtain an Access Token for your player.  Facebook's authentication flows are based on the [OAuth 2.0](http://tools.ietf.org/html/draft-ietf-oauth-v2) protocol.  Facebook recommend you read their[ Facebook Login guides](https://developers.facebook.com/docs/facebook-login/) for examples of how to use the Login Dialogs on any device or environment.
 
