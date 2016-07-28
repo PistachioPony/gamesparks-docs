@@ -54,6 +54,14 @@ To enable the GameSparks SDK in your Unreal Engine Project, you'll have to grab 
 
 ![l](img/UR/3.png)
 
+In your project's build file (Located under *Source> ProjectFolder* folder) add "GameSparks" to the PublicDependencyModuleNames array:
+
+```
+
+PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "GameSparks" });
+
+```
+
 To compile the plugin, simply run the *.uproject* file (If you don't have Visual or XCode installed this step will not work). When the Project has been compiled, you'll want to connect it to GameSparks Service, to ensure everything's working as intended. Now you must create your own custom Blueprint Game Mode, which will contain the connection between the Game and the Service.
 
 To do this simply follow the steps shown:
