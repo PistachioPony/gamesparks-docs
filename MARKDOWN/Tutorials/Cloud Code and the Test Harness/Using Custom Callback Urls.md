@@ -3,15 +3,21 @@ nav_sort: 8
 src: /Tutorials/Cloud Code and the Test Harness/Using Custom Callback Urls.md
 ---
 
-# How to use Custom Callback Urls
+# How to Use Custom Callback Urls
 
-Callbacks are used to allow custom and separate Cloud Code scripts to be run against different Callback URLs, which in turn, are individually linked to a custom Credential created in the Integrations section.  Previously, only one Callback URL could be created per game.  This has now been enhanced to allow as many custom Callback URLs to be created as there are custom Credentials.
+You can use Callbacks to run separate, customized Cloud Code scripts against different Callback URLs. Each of the different Callback URLs are linked to a single custom Credential and you can create the Credentials you need for this purpose in the portal's Integrations section.
 
-*1.* Before we can create a Callback URL script, first we will need to create a customised Credential. For a refresher, see the Credentials Tutorial.
+<q>**Multiple Callback URLs!** Previously, only one Callback URL could be created per game.  You can now create as many custom Callback URLs as there are custom Credentials.</q>
+
+*1.* Before we can create a Callback URL script, first we will need to create a customised Credential. In the portal, go to *Configurator > Integrations*.
+
+*2* To add two new custom Credentials, click the Plus ![](/img/fa/plus.png) icon on *Credentials*:
+
+<q>For a refresher, see the Credentials Tutorial?</q>
 
 ![](img/CustomCallback1.png)
 
-*2.*  Ensure to switch on the new CB checkbox.  This tells the platform that this credential is going to be exclusively used for Callback scripts.
+*2.*  When you create each Credential, ensure to switch on the new CB checkbox.  This tells the platform that this credential is going to be exclusively used for Callback scripts:
 
 ![](img/CustomCallback2.png)
 

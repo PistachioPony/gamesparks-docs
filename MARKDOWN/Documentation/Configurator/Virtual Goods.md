@@ -33,3 +33,4 @@ Press the ![](/img/fa/plus.png) icon to create a new Virtual Good.
   * *Max Quantity* \- The maximum quantity of this good that the player can own at any one time. Only enforced on [BuyVirtualGoodsRequest](/API Documentation/Request API/Store/BuyVirtualGoodsRequest.md) using virtual currency. Purchases from external stores will still be awarded even if they result in this maximum being exceeded.
   * *Tags* \- Tags associated with the Virtual Good.
   * *Type* \- Specify the type: Is this a Virtual Good or a Currency Pack?
+    * You would typically select Currency Pack as the Virtual Goods type when you want to award a Currency Pack as a reward for an achievement in a game. Any player awarded the Currency Pack will then be *granted* each of the currency amounts entered for the Currency 1-6 fields.
