@@ -5,7 +5,7 @@ src: /Tutorials/Database Access and Cloud Storage/Submitting JSON Document Queri
 
 # How to do partial queries and updates to complex JSON document
 
-There are times where you want to maintain a complex JSON document in a mongo collection that you want to use for storing state. In this example we'll assume the complete document is the full state of the game, but we do not want to pass the full document around every time we want to update it, and we may want to query for a particular section of the document without returning the full document. A good example of this may be where you are storing metadata about every level the player has ever played. When the player starts a level you want to return the current state from the server as a full document, but without the details of the other levels. We'll imagine we have a player who has already played level 1 and completed it, and has started level two but has not yet completed it. In this state the document we store against the user will look like this:
+There are times where you want to maintain a complex JSON document in a Mongo collection that you want to use for storing state. In this example we'll assume the complete document is the full state of the game, but we do not want to pass the full document around every time we want to update it, and we may want to query for a particular section of the document without returning the full document. A good example of this may be where you are storing metadata about every level the player has ever played. When the player starts a level you want to return the current state from the server as a full document, but without the details of the other levels. We'll imagine we have a player who has already played level 1 and completed it, and has started level two but has not yet completed it. In this state the document we store against the user will look like this:
 
 ```
     {
@@ -22,7 +22,10 @@ There are times where you want to maintain a complex JSON document in a mongo co
         "checkpoint": 0
       }
     }
+
 ```
+</br>
+<q>**More Information!** For further details and recommendations on how to use MongDB collections to store and manage your game data, see the [Managing Data Persistence](/Tutorials/Database Access and Cloud Storage/Managing Data Persistence.md) tutorial.</q>
 
 ## Configuring the Game
 

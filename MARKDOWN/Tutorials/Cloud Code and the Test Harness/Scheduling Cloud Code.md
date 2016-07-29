@@ -69,9 +69,9 @@ This script uses the [SparkMongoCollectionReadWrite](/API Documentation/Cloud C
 
 Let’s test out this configuration in the *Test Harness*.
 
-*8.* Navigate to the GameSparks developer portal Test Harness.
+*1.* Navigate to the GameSparks developer portal Test Harness.
 
-*9.* Copy the JSON request below into the JSON field and press the *Send* ![](/img/fa/play.png) icon.
+*2.* Copy the JSON request below into the JSON field and press the *Send* ![](/img/fa/play.png) icon.
 
 ```
 
@@ -99,7 +99,7 @@ The GameSparks platform will return a response similar to this.
 
 This player is now authenticated and could sign into later sessions using these credentials with an [AuthenticationRequest](/API Documentation/Request API/Authentication/AuthenticationRequest.md).
 
-*10.* Now make the PLANT_SEED Event call. Copy the JSON request below into the JSON field and press the *Send* ![](/img/fa/play.png) icon.
+*3.* Now make the PLANT_SEED Event call. Copy the JSON request below into the JSON field and press the *Send* ![](/img/fa/play.png) icon.
 
 ```
 
@@ -125,7 +125,7 @@ Execution of the scripts:
 * The 'Plant a Seed' Cloud Code script will execute when GameSparks receives this Event. The script schedules the GROW_SEED script to run after 60 seconds, passing in the X and Y coordinates from the Event.
 * 60 seconds later, the GROW_SEED script will execute, which will result in a document being created in the *script.field* collection.
 
-*11.* Lastly, to see the results navigate to NoSQL Explorer, *NoSQL->Find *select the *script.field* collection and press the *Find* button.
+*4.* Lastly, to see the results navigate to *NoSQL > Actions > Find* and select the *script.field* collection and press the *Find* button.
 
 ![](img/Schedule/7.png)
 
@@ -133,9 +133,9 @@ Execution of the scripts:
 
 The *Cloud Code > System* section contains three time-based triggers:
 
-* Every Minute
-* Every Hour
-* Every Day
+* Every Minute.
+* Every Hour.
+* Every Day.
 
 These scripts execute at the top of every minute, every hour, and every day respectively. Continuing our "plant a seed" example from above, let's schedule a script that clears all the plants from the virtual field every hour.
 
