@@ -21,4 +21,4 @@ Our real-time services provide a network communication layer with the capability
   * Low latency socket server supporting high throughput and low transmission sizes.
 
 </br>
-<q>**Further Details.** For more details on how to work with GameSparks real-time services, you can follow our the tutorials [here](/Tutorials/Real-Time Services/README.md).</q>
+<q>**Real-Time Tutorials.** For more details on how to work with GameSparks real-time services, you can follow the tutorials [here](/Tutorials/Real-Time Services/README.md).</q>

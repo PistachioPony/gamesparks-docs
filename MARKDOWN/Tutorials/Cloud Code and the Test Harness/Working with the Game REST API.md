@@ -1,11 +1,11 @@
 ---
-nav_sort: 9
+nav_sort: 10
 src: /Tutorials/Cloud Code and the Test Harness/Working with the Game REST API.md
 ---
 
 # Game REST API
 
-The game REST API allows you to retrieve, create or update the full configuration for your game in JSON format.
+The game REST API allows you to retrieve, create, or update the full configuration for your game in JSON format.
 
 ## Retrieving a game configuration
 
@@ -292,9 +292,9 @@ Contains Event configuration data including an array of (optional) Event Attrib
 
 Contains Leaderboard configuration data including an (optional) array of Leaderboard Orders. The Leaderboard Order field aggregationAttributeRef is a special type of field that acts as a reference to this Leaderboard Order's corresponding Aggregation Attribute.  The syntax of this field is:
 
-game.aggregations[<Aggregation Attribute Short Code>].aggregationAttributes[Aggregation Attribute index]
+*game.aggregations[<Aggregation Attribute Short Code>].aggregationAttributes[Aggregation Attribute index]*
 
-E.g. game.aggregations[EVT1].aggregationAttributes[0]
+For example: *game.aggregations[EVT1].aggregationAttributes[0]*
 
 ```
 {

@@ -1,5 +1,5 @@
 ---
-nav_sort: 6
+nav_sort: 7
 src: /Tutorials/Cloud Code and the Test Harness/Changing Player Passwords.md
 ---
 
@@ -28,7 +28,7 @@ Let's try this out using the GameSparks developer portal Test Harness.
      "password": "password1",
      "displayName": "Nick"
     }
-    
+
 ```
 
 The GameSparks platform will return a response similar to this.

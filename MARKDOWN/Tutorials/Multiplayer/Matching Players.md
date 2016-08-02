@@ -159,11 +159,11 @@ Selecting this for one of the Thresholds in your Match instructs the Match to ma
 
 ### Multiplayer Matching Examples
 
-Using the three Thresholds in the above *MULTI_MCH* example and for a 3-player context, here are some example scenarios to demonstrate just how the matching process works:
+Using the three Thresholds in the above *MULTI_MCH* example and for a 3-player context with Accept Min Players enabled for the 2nd Threshold, here are some example scenarios to demonstrate just how the matching process works:
 
 * **Scenario 1.** Players *1*, *2*, and *3* have skills of *20*, *15*, and *17* respectively. Each player submits a *MatchmakingRequest* in that order and each player's request is issued within player *1's* first Threshold period of 10 seconds. Players *1* and *3* would be matched based on the second Threshold which uses the Relative Match Type.
 
-* **Scenario 2.** Players *1*, *2*, and *3* have skills of *20*, *15*, and *16* respectively. Each player submits a *MatchmakingRequest* in that order and each player's request is issued within player *1's* first Threshold period of 10 seconds. Players *2* and *3* would be matched based on the second Threshold which uses the Relative Match Type.
+* **Scenario 2.** Players *1*, *2*, and *3* have skills of *20*, *15*, and *16* respectively. Each player submits a *MatchmakingRequest* in that order and each player's request is issued within player *1's* first Threshold period of 10 seconds. Players *2* and *3* would be matched based on the second Threshold which uses the Relative Match Type. Note here that because *Accept Min. Players* *is enabled* for the 2nd Threshold, player 1 would *not be matched*, since we reach the minimum number of players required for a Match in the 2nd Threshold - 2 and 3 - and we would have to wait until we are in the 3rd Threshold period for player 1 to be brought into the Match.
 
 * **Scenario 3.** Players *1*, *2*, and *3* have skills of *20*, *15*, and *16* respectively. Player *1* submits a *MatchmakingRequest*. However, players *2* and *3* submit their requests later and during player *1's* *second* Threshold period, that is between *10* and *20* seconds after the matchmaking process starts. Players *1* and *3* are matched based on the third Threshold which uses the Percent Match Type.
 

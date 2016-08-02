@@ -1,5 +1,5 @@
 ---
-nav_sort: 2
+nav_sort: 3
 src: /Tutorials/Game Engine Integrations/Working with Message Handlers.md
 ---
 
