@@ -41,12 +41,17 @@ var property = Spark.getProperties().getProperty("propertyShortCode")
 Or deliver it to your clients through the web socket API using:
 
 ```
+
 { "@class": ".GetPropertyRequest", "propertyShortCode": "propertyShortCode" }
 ```
 
+
 ```
+
 { "@class": ".GetPropertyResponse", "property": { "myProperty": "myValue" }, "scriptData": null }
+
 ```
+
 
 ## Property Sets
 
@@ -61,36 +66,55 @@ Give your Property Set a Short Code, Name and Description. Now let's add some Pr
 Give the Property a name. This is how you will access the value of this property from the Property Set. Now select one of your Properties. If you haven't already, create some more Properties and come back and add them to this Property Set. Now that you have a Property Set you can access it in a similar way to a single Property:
 
 ```
+
 var propertySet = Spark.getProperties().getPropertySet("propertySetShortCode")
+
 ```
 
 Or through the web socket API using:
 
 ```
+
 { "@class": ".GetPropertySetRequest", "propertySetShortCode": "propertySetShortCode" }
+
 ```
+
 ```
+
 { "@class": ".GetPropertySetResponse", "propertySet": { "property1": { "myProperty": "myValue" }, }, "scriptData": null }
+
 ```
 
 ## Linking Property Sets
 
-Once you've created a Property Set you can then attach it to [Leaderboards](/Documentation/Configurator/Leaderboards.md), [Achievements](/Documentation/Configurator/Achievements.md) and [Virtual Goods](/Documentation/Configurator/Virtual Goods.md) and it will be available wherever you use those objects. Let's create an Achievement and our Property Set to it. Navigate to 'Achievements' and create a new one. On the Achievements edit page, you'll see a new field: 'Property Set'. From this drop-down you can see all the Property Sets you have available.
+When you've created a Property Set, you can attach it to [Leaderboards](/Documentation/Configurator/Leaderboards.md), [Achievements](/Documentation/Configurator/Achievements.md) and [Virtual Goods](/Documentation/Configurator/Virtual Goods.md) and it will be available wherever you use those objects. Let's create an Achievement and add our Property Set to it.
+
+*1.* Navigate to 'Achievements' and create a new one. On the Achievements edit page, you'll see a new field: 'Property Set'. From this drop-down you can see all the Property Sets you have available.
 
 ![](img/SegmentedProperties/6.png)
 
-Select the one we just created, and click 'Save'. You can now access this Property Set whenever you have access to this Achievement. Within Cloud Code you can access this Achievement using:
+*2.* Select the one we just created, and click 'Save'. You can now access this Property Set whenever you have access to this Achievement. Within Cloud Code you can access this Achievement using:
 
 ```
+
 var achievement = Spark.getConfig().getAchievement("achievementShortCode");
+
 ```
-and you can now access you Property Set:
+
+*3.* Also, you can now access your Property Set:
+
 ```
+
 var propertySet = achievement.getPropertySet();
+
 ```
-Similarly, a ListAchievementsRequest will now also return the PropertySet associated to each achievement in the response:
+
+*4.* Similarly, a [ListAchievementsRequest](/API Documentation/Request API/Player/ListAchievementsRequest.md) will now also return the PropertySet associated with each Achievement in the response:
+
 ```
+
 { "@class": ".ListAchievementsRequest" }
+
 ```
 
 ```
@@ -104,4 +128,4 @@ The last thing to mention, and the thing that we think makes Property Sets reall
 
 ![](img/SegmentedProperties/7.png)
 
-Now when you edit our Property Set, by each Property is a ![](/img/fa/plus.png) icon. Clicking this lets you override the value that will be surfaced under each 'Name', depending on the segments of the current player. Now wherever you access that Property Set, if the Player belongs to a segment whose value you've overridden, they will see that overridden value. The obvious example here is delivering language-specific properties to a Player, but the possibilities really are boundless!
+Now when you edit our Property Set, by each Property is a ![](/img/fa/plus.png) icon. Clicking this lets you override the value that will be surfaced under each 'Name', depending on the segments of the current player. Now, wherever you access that Property Set, if the Player belongs to a segment whose value you've overridden, they will see that overridden value. The obvious example here is delivering language-specific properties to a Player, but the possibilities really are boundless!

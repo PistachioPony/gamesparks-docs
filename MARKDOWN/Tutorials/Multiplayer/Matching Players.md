@@ -171,9 +171,13 @@ Using the three Thresholds in the above *MULTI_MCH* example and for a 3-player c
 
 ## Multiplayer Matching in the Test Harness
 
-To match multiple Players, we will use the [MatchmakingRequest](/API Documentation/Request API/Multiplayer/MatchmakingRequest.md) in the *Test Harness*.  
+To match multiple Players, we will use the [MatchmakingRequest](/API Documentation/Request API/Multiplayer/MatchmakingRequest.md) in the *Test Harness*.
 
-*5.* In the *Test Harness*, authenticate 4 Players (in separate browser tabs) and have them each submit a *MatchmakingRequest* within 10 seconds so that all Players can attempt to match each other in their first threshold period.
+*5.* First, for this example, we'll change the *Accept Min. Players* and apply it to the 3rd Threshold instead:
+
+![](img/HowToMatchPlayers/10.png)
+
+*6.* In the *Test Harness*, authenticate 4 Players (in separate browser tabs) and have them each submit a *MatchmakingRequest* within 10 seconds so that all Players can attempt to match each other in their first threshold period.
 
 Players *1*, *2*, *3* and *4* should have a skill of *16*, *21*, *19* and *22* respectively.
 
@@ -342,9 +346,7 @@ Finally, Player *1* will be added to the Match, who is matched based on his skil
 
 ```
 
-
-*6.* Repeat *Step 5*, but instead, change the skill value for Player *1* to be *12*. As Players *2, 3* and *4* are added to the Match, the average skill value in the Match increases and Player *1's* skill value will be too far away from the average value in the Match, even during the *third* (Percent) threshold period to match them.  A [MatchNotFoundMessage](/API Documentation/Message API/Multiplayer/MatchNotFoundMessage.md) message will be returned to all Players requesting a Match, including those already in the Match:
-
+*7.* Repeat Step 6, but instead, change the skill value for Player *1* to be *12*. As Players *2*, *3* and *4* are added to the Match, the average skill value in the Match increases and Player *1's* skill value will be too far away from the average value in the Match, even during the *third* (Percent) threshold period to match them. A [MatchNotFoundMessage](/API Documentation/Message API/Multiplayer/MatchNotFoundMessage.md) message will be returned to Player *1*, whilst Players *2*, *3* and *4* will receive a *MatchFoundMessage* because the 3rd and last threshold will accept 3 players.
 
 
 ```
@@ -410,7 +412,7 @@ And the *MatchDetailsResponse*:
 <br>
 ### Cancelling a Match Request
 
-*7.* To cancel an ongoing *MatchmakingRequest*, use the *action* parameter in the request with the value, *cancel*.
+*8.* To cancel an ongoing *MatchmakingRequest*, use the *action* parameter in the request with the value, *cancel*.
 
 ```
 {
@@ -514,9 +516,9 @@ Players *1* and *3* will NOT be matched automatically BUT we can use *FindPendin
 
 ```
 
-This tells us that there is an available Pending Match at this point for player 3 with skill level 17.
+This tells us that there is an available Pending Match at this point for player 3 (by the "playId" and "skill" returned).
 
-If player 3 were to have submitted the *FindPendingMatchesRequest* at 12 seconds he'd get a similar *FindPendingMatchesResponse* but showing an available Pending Match for player 1 at skill level 20.
+If player 3 were to have submitted the *FindPendingMatchesRequest* at 12 seconds he'd get a similar *FindPendingMatchesResponse* but showing an available Pending Match for player 1.
 
 *3.* However, if player 3 submitted a *FindPendingMatchesRequest* at 22 secs - that is, into the 3rd Threshold period for Percent skill-level matching - the response would show no possible Pending Matches, that is, empty:
 

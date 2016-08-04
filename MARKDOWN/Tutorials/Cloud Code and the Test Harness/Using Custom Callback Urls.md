@@ -13,7 +13,7 @@ You can use Callbacks to run separate, customized Cloud Code scripts against dif
 
 *2* To add two new custom Credentials, click the Plus ![](/img/fa/plus.png) icon on *Credentials*:
 
-<q>For a refresher, see the Credentials Tutorial?</q>
+<q>**Creating Credentials!** For a refresher, see [Security Credentials](/Documentation/Configurator/Integrations/Security Credentials.md).</q>
 
 ![](img/CustomCallback1.png)
 

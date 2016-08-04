@@ -7,36 +7,36 @@ src: /Tutorials/Game Engine Integrations/Unreal CPP Quick Start.md
 
 ## Initialization
 
+To integrate the GameSparks platform into your C++ project, perform the following two initialization stages:
+* GameMode Header
+* Gamemode Body
+
+
 ### GameMode.h
 
-Include the following headers:
+*1.* Include the following headers:
 
 ```
-#include "GameSparks/GS.h"
-#include "GameSparks/IGSPlatform.h"
-#include "GameSparks/generated/GSRequests.h"
-#include "GameSparks/generated/GSResponses.h"
-#include "GameSparks/generated/GSMessages.h"
 #include "GameSparks/Private/GameSparksComponent.h"
-
-//Add these namespaces
-using namespace GameSparks::Core;
-using namespace GameSparks::Api::Messages;
-using namespace GameSparks::Api::Responses;
-using namespace GameSparks::Api::Requests;
+#include <GameSparks/GS.h>
+#include <GameSparks/generated/GSResponses.h>
+#include "GameSparks/Private/GameSparksModule.h"
+#include <GameSparks/generated/GSRequests.h>
 
 ```
 
-Create a public variable for the GameSparks component:
+*2.* Create a variable for the GameSparks component:
 
 ```
+
 UGameSparksComponent* GameSparksComp;
 
 ```
 
-Add your GameMode's constructor and begin play. With it a UFUNCTION with a bool parameter to handle the *OnGameSparksAvailableDelegate* invocation:
+*3.* Add your GameMode's constructor and begin play. With it a UFUNCTION with a bool parameter to handle the *OnGameSparksAvailableDelegate* invocation:
 
 ```
+
 //Constructor
 	AMyGameMode();
 
@@ -45,44 +45,79 @@ Add your GameMode's constructor and begin play. With it a UFUNCTION with a bool 
 
 	//Function used to determine what happens if GameSparks connects or fails to (Needs to be UFUNCTION)
 	UFUNCTION()
-	void bindFunc(bool available);
+	void OnGameSparksAvailable(bool available);
 
 ```
 
 ### GameMode.CPP
 
-In your GameMode's constructor initialize the GameSparks Component:
+*1.* In your GameMode's constructor initialize the GameSparks Component:
 
 ```
+
 AMyGameMode::AMyGameMode() {
 
+	//Initialise GameSparksComponent used to connect
 	GameSparksComp = CreateDefaultSubobject<UGameSparksComponent>(TEXT("GSparkComp"));
 
 }
-```
-
-In your GameMode's BeginPlay function add your handler function to the *OnGameSparksAvailableDelegate* invocation list then call the Connect function from your GameSparks Component:
 
 ```
+
+*2.* In your GameMode's BeginPlay function add your handler function to the *OnGameSparksAvailableDelegate* invocation list then call the Connect function from your GameSparks Component:
+
+```
+
 void AMyGameMode::BeginPlay() {
 
 	Super::BeginPlay();
-
-	GameSparksComp->OnGameSparksAvailableDelegate.AddDynamic(this, &AMyGameMode::bindFunc);
-
-
-	GameSparksComp->Connect("297447wFen65", "sB5CC6ATGd9oa7pUiDCfYofEhalrudSb");
+	//Add a function to the OnGameSparksAvailableDelegate invocation list
+	GameSparksComp->OnGameSparksAvailableDelegate.AddDynamic(this, &AMyGameMode::OnGameSparksAvailable);
+	//Connect to GameSparks using Key and Secret
+	GameSparksComp->Connect("293711ZXWjA9", "DgnYnPUE2D0RetwKAy5XPUxxxN7pl36e");
 
 }
-```
-
-Finally just add logic to your handler function to execute code when GameSparks becomes available:
 
 ```
-void AMyGameMode::bindFunc(bool available) {
 
-		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, available? "True":"False");
+*3.* Finally just add logic to your handler function to execute code when GameSparks becomes available:
+
+```
+
+//OnAvailable Handler
+void AMyGameMode::OnGameSparksAvailable(bool available) {
+
+		if (available) {
+		GEngine->AddOnScreenDebugMessage(-1, 10.f, FColor::Red, TEXT("Connected"));
+		//Get a pointer to the module's GSInstance
+		GameSparks::Core::GS& gs = UGameSparksModule::GetModulePtr()->GetGSInstance();
+
+		//Construct an Authentication request
+		GameSparks::Api::Requests::AuthenticationRequest authRequest(gs);
+		authRequest.SetUserName("gstest");
+		authRequest.SetPassword("pass");
+		authRequest.SetUserData(this);
+		//Send it with a pointer to the function that will handle the response
+		authRequest.Send(AuthenticationRequest_Response);
+	}
 }
+
+//Example response function
+void AMyGameMode::AuthenticationRequest_Response(GameSparks::Core::GS&, const GameSparks::Api::Responses::AuthenticationResponse& response)
+{
+	GEngine->AddOnScreenDebugMessage(-1, 20.f, FColor::Red, response.GetJSONString().c_str());
+	//Check is response has no errors
+	if (!response.GetHasErrors()) {
+		GEngine->AddOnScreenDebugMessage(-1, 10.f, FColor::Red, TEXT("Auth response successful"));
+
+		GameSparks::Core::GS& gs = UGameSparksModule::GetModulePtr()->GetGSInstance();
+		GameSparks::Api::Requests::AccountDetailsRequest accDetRequest(gs);
+		//If no errors then send an accounts details request
+		accDetRequest.Send(AccountDetailsRequest_Response);
+
+	}
+}
+
 ```
 
-Refer to the [CPP quick start guide](/Tutorials/Game Engine Integrations/CPP Quick Start.md) for simple C++ GameSparks functions.
+<Q>**C++ GameSparks Functions!** Refer to the [CPP quick start guide](/Tutorials/Game Engine Integrations/CPP Quick Start.md) for simple C++ GameSparks functions.</q>
