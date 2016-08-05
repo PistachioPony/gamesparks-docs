@@ -30,23 +30,15 @@ When you have obtained the uploadedXml object, you can get the contents of the X
     var rootElement = uploadedXml.getXml();
 
 ```
-
-The rootElement object is an [E4X](http://en.wikipedia.org/wiki/ECMAScript_for_XML) object that can be processed using JavaScript.
+</br>
+<q>**Important!** The rootElement object is an [ECMAScript for XML (E4X)](http://en.wikipedia.org/wiki/ECMAScript_for_XML) object that can be processed using JavaScript.</q>
 
 ## Stream Processing
 
-For larger documents, you can let the GameSparks platform read the document, and the platform can callback into a custom function when a particular element path is found. In your callback function you will then call *uploadedXml.getElement();* which will give you access to the element that has been located. It should be noted that this method will
+For larger documents, you can let the GameSparks platform read the document, and the platform can callback into a custom function when a particular element path is found. In your callback function you will then call *uploadedXml.getElement();* which will give you access to the element that has been located.
 
-## Processing JSON Files
 
-JSON processing is always in full document mode. When you have the handle on the JSON document you can use it as you would any JSON object.
-
-```  
-    var uploadedJson = Spark.uploadedJson( Spark.data.uploadId );
-
-```
-
-### E4X Reference
+## E4X Reference
 
 This section shows you how to process the following example XML file:
 
@@ -67,6 +59,7 @@ This section shows you how to process the following example XML file:
     </breakfast_menu>
 
 ```
+<q>**Note:** Remember that for this example the rootElement object is an E4X object!</q>
 
 To access an element you can use dot notation to navigate through the document:
 
@@ -103,5 +96,14 @@ To iterate over attributes, you can use a standard for construct:
     {
          var foodElement = rootElement.food[ n ];
     }
+
+```
+
+## Processing JSON Files
+
+JSON processing is always in full document mode. When you have the handle on the JSON document you can use it as you would any JSON object.
+
+```  
+    var uploadedJson = Spark.uploadedJson( Spark.data.uploadId );
 
 ```

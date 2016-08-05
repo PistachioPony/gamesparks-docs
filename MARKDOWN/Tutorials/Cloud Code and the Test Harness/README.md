@@ -16,5 +16,4 @@ Here you can learn more about how to create and work with Cloud Code and use the
 * [Changing Player Passwords](/Tutorials/Cloud Code and the Test Harness/Changing Player Passwords.md)
 * [Implementing External HTTP Callbacks](/Tutorials/Cloud Code and the Test Harness/Implementing External HTTP Callbacks.md)
 * [Using Custom Callback Urls](/Tutorials/Cloud Code and the Test Harness/Using Custom Callback Urls.md)
-* [Working with the Game REST API](/Tutorials/Cloud Code and the Test Harness/Working with the Game REST API.md)
 * [Processing XML and JSON Files](/Tutorials/Cloud Code and the Test Harness/Processing XML and JSON Files.md)
