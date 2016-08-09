@@ -94,7 +94,9 @@ The response to this request contains a URL we can use to download the content.
 
 Go ahead and test the URL you receive by pasting it into your address bar in the browser. You should be able to download the content you uploaded in the earlier step. The uploadId is not tied to a specific player, so if you were to send that uploadId to another player they too could use it to request a download URL. This means you can allow your players to share content by sending the uploadIds to other players.
 
-<q>**Deleting Uploaded Files!** When managing your uploaded files, you can use the [deleteUploadedFile](/API Documentation/Cloud Code API/Cloud Data/SparkFiles.md) *SparkFiles* method to delete uploaded files.</q>
+## Deleting Uploaded Files
+
+When managing your uploaded files, you can use the [deleteUploadedFile](/API Documentation/Cloud Code API/Cloud Data/SparkFiles.md) *SparkFiles* method to delete uploaded files.</q>
 
 ## SDK Usage
 

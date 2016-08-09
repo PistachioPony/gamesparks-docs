@@ -1,5 +1,5 @@
 ---
-nav_sort: 5
+nav_sort: 6
 src: /Tutorials/Social Authentication and Player Profile/Facebook Authentication.md
 ---
 

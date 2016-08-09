@@ -1,5 +1,5 @@
 ---
-nav_sort: 8
+nav_sort: 9
 src: /Tutorials/Social Authentication and Player Profile/Twitch Authentication.md
 ---
 
