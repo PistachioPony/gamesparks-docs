@@ -7,7 +7,7 @@ src: /Getting Started/Creating a Virtual Good/README.md
 
 ## Introduction
 
-In the context of the GameSparks platform, a Virtual Good is any in-game asset that can be awarded, accumulated or bought. This would cover XP points and in-game currencies as well as specific goods that deliver benefits in-game (such as convenience, customisation, competitive advantage, and so on). These can be used and consumed cross-platform:
+In the context of the GameSparks platform, a Virtual Good is any in-game asset that can be awarded, accumulated or bought. This would cover XP points and in-game currencies as well as specific goods that deliver benefits in-game (such as convenience, customization, competitive advantage, and so on). These can be used and consumed cross-platform:
 * You can set up Virtual Goods to be bought as IAPs. This is when you associate the Virtual Goods with the Product IDs of the corresponding items on the stores, and when a good is purchased we can reconcile the store receipts with the items.
 * You can define relationships between your Virtual Goods so they can be traded or converted.
 

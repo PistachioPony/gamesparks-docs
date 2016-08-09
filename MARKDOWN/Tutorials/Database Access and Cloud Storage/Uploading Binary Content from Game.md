@@ -23,6 +23,7 @@ A [GetUploadUrlRequest](/API Documentation/Request API/Misc/GetUploadUrlRequest.
 {
   "@class": ".GetUploadUrlRequest"
 }
+
 ```
  
 
@@ -32,6 +33,7 @@ A [GetUploadUrlRequest](/API Documentation/Request API/Misc/GetUploadUrlRequest.
  "scriptData": null,
  "url": "https://gsp-aeu000-se04.gamesparks.net/upload/288934CFkBXg/16fc457d-656e-47ea-ad28-00595ec04054/3d3cbd17d2584e8295756d021dd0888b"
 }
+
 ```
 
 ## Upload the Content
@@ -60,6 +62,7 @@ Being an HTTP POST, this is not done through the WebSocket, but once complete th
  },
  "uploadId": "3d3cbd17d2584e8295756d021dd0888b"
 }
+
 ```
 
 Within the message is an attribute 'uploadData' which contains all the data about the upload. Hold onto the uploadId, as we'll need it in the next step.
@@ -69,6 +72,7 @@ Within the message is an attribute 'uploadData' which contains all the data abou
 The final step is to actually retrieve the content that has been uploaded. This is achieved using a [GetUploadedRequest](/API Documentation/Request API/Misc/GetUploadedRequest.md) which takes an uploadId (which we received from the UploadCompleteMessage).
 
 ```
+
 {
  "@class": ".GetUploadedRequest",
  "uploadId": "3d3cbd17d2584e8295756d021dd0888b"
@@ -85,9 +89,12 @@ The response to this request contains a URL we can use to download the content.
  "size": 250011,
  "url": "https://gamesparksbetabinaries.blob.core.windows.net/upload-288934/3d3cbd17d2584e8295756d021dd0888b-test.jpg?sp=r&sr=b&sv=2012-02-12&se=2015-08-24T13%3A04%3A42Z&st=2015-08-24T12%3A49%3A42Z&sig=fFFWxoNmmt0tdSjd8uTRTOkYn0zWWEOg7UVIbEvABpo%3D"
 }
+
 ```
 
 Go ahead and test the URL you receive by pasting it into your address bar in the browser. You should be able to download the content you uploaded in the earlier step. The uploadId is not tied to a specific player, so if you were to send that uploadId to another player they too could use it to request a download URL. This means you can allow your players to share content by sending the uploadIds to other players.
+
+<q>**Deleting Uploaded Files!** When managing your uploaded files, you can use the [deleteUploadedFile](/API Documentation/Cloud Code API/Cloud Data/SparkFiles.md) *SparkFiles* method to delete uploaded files.</q>
 
 ## SDK Usage
 
