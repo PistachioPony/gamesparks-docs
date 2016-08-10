@@ -14,6 +14,29 @@ Parts of this tutorial follow on from the previous tutorials for making a tank-g
 
 <q>**Note:** In this tutorial we'll be going between C# scripts for Unity3D and JavaScript for our RT-scripts in the GameSparks portal.</q>
 
+## Creating a Real-Time Script
+
+The first thing we need to do is create a new real-time script and add it to our match. Real-time scripts operate in a similar way to Cloud Code scripts.
+
+To create a new RT-script:
+
+*1.* Go to *Configurator > Cloud Code* in your portal and select the *Realtime Scripts* drop-down.
+
+*2.* Then Click the plus ![](/img/fa/plus.png) icon in order to create a new script:
+
+![](img/ClockSync/5.png)
+
+When you have created your script, we need to add it to our match.
+
+*3.* Click on *Configurator > Multiplayer* in your portal and find your match. The match we used in the previous lesson was called ‘TANK_BATTLE’.
+
+*4.* When you have selected that match, you need to select the RT script from the *Realtime Script* dropdown:
+
+![](img/ClockSync/6.png)
+
+When your match has an associated script, you are ready to go! Anytime a new match starts, this script will execute.
+
+
 ## Checking All Players Have Joined
 
 In this example, we'll use the RT-script for our *TANK_BATTLE* match to check when all players have joined.

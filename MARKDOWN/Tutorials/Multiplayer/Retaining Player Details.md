@@ -9,7 +9,7 @@ src: /Tutorials/Multiplayer/Retaining Player Details.md
 
 Once you match players together you will have reference to other player's Ids and account variables to use in Cloud code. One of the things you can do is easy access of player data. This will enable you to load player specific options, settings and personal data the moment the match is made.  
 
-## Access player data
+## Accessing Player Data
 
 To access player data from a list of opponents in a match:
 

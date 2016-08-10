@@ -5,7 +5,7 @@ src: /Tutorials/Analytics, Segmentation and Game Management/Working with Segment
 
 # Segmented Properties
 
-The GameSparks platform exposes various configurable objects to drive further customization on the platform. Until now, configuration has been driven by platform capabilities and there hasn't been a first-class feature allowing you to provide your own custom configuration and which drives your own custom behaviour for these objects. That's why we've introduced *Properties*. In short, you can use GameSparks Properties to store your own JSON configuration in the Portal and attach them to GameSparks objects to be surfaced when you are using these objects. You can also access Properties directly, either in Cloud Code or via the web socket API, enabling you to deliver your custom configuration wherever you need it.
+The GameSparks platform exposes various configurable objects to drive further customization on the platform. Until now, configuration has been driven by platform capabilities and there hasn't been a first-class feature allowing you to provide your own custom configuration and which drives your own custom behavior for these objects. That's why we've introduced *Properties*. In short, you can use GameSparks Properties to store your own JSON configuration in the Portal and attach them to GameSparks objects to be surfaced when you are using these objects. You can also access Properties directly, either in Cloud Code or via the web socket API, enabling you to deliver your custom configuration wherever you need it.
 
 Let's take a look at how to set up Properties and then how to access those values later on when we want to read them.
 

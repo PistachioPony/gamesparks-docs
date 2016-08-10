@@ -20,20 +20,24 @@ In this exercise we'll cover a few different scenarios around purchasing. We'll 
 
 *3.* Enter the Virtual Good details:
 * Give it a *Name* and a *Short Code* - we'll use the Short Code to refer to the item later on.
-* Leave the *Type* as 'Virtual Good'. Note that the other option here is 'Currency Pack' which, rather than adding a good to your player when awarded, grants them some configurable quantity of currencies. This is a very useful type for Virtual Goods, but for now let's focus on the 'Virtual Good' type.
-* *Currencies* - Because we're going to start with a Virtual Currency purchase, we need to specify a price for the Virtual Good here, so let's add a *Currency 1* value of 100. This means a player will be charged 100 units of Currency 1 when they buy this Virtual Good. Let's set up a player so that they can buy your Virtual Good.
+* Leave the *Type* as 'Virtual Good'. Note that the other option here is 'Currency Pack' which, instead of adding a good to your player when awarded, grants them some configurable quantity of currencies. This is a very useful type for Virtual Goods, but for now let's focus on the 'Virtual Good' type.
+* *Currencies* - Because we're going to start with a Virtual Currency purchase, we need to specify a price for the Virtual Good here, so let's add a *Currency 1* value of 100. This means a player will be charged 100 units of Currency 1 when they buy this Virtual Good.
+
+Let's now set up a player so that they can buy your Virtual Good.
 
 *4.* Go to *Configurator > Overview*, click ![](/img/fa/edit.png) and under *Signup Bonuses* add a *Currency 1* signup bonus of 1000.
 
 ![](img/AppPur/4.png)
 
-Now whenever you register a player they will be granted 1000 units of Currency 1. The next steps all take place within the *Test Harness*.
+Now whenever you register a player they will be granted 1000 units of Currency 1.
 
-## Checking Purchases in Test Harness
+The next steps all take place within the *Test Harness*.
+
+## Checking Purchases in the Test Harness
 
 If you've been following along with the configuration set up above, you should be able to run these steps in the Test Harness.
 
-*1.* Firstly, we register a new player (*Authentication > RegistrationRequest*): "PLAYER ONE"
+*1.* Firstly, we register a new player (submit *Authentication > RegistrationRequest*): "PLAYER ONE"
 
 ```
 { "@class": ".RegistrationRequest",
@@ -54,7 +58,7 @@ If you've been following along with the configuration set up above, you should b
 
 ```
 
-*2.* And if we look at their account details (*Player > AccountDetailsRequest*) we can see our signup bonus has been awarded:
+*2.* And if we look at their account details (submit *Player > AccountDetailsRequest*) we can see our signup bonus has been awarded:
 
 ```
 { "@class": ".AccountDetailsResponse",
@@ -71,7 +75,7 @@ If you've been following along with the configuration set up above, you should b
 
 ```
 
-*3.* If we list the available Virtual Goods, we see our Heart listed (*Store > ListVirtualGoodsRequest*):
+*3.* If we list the available Virtual Goods (submit *Store > ListVirtualGoodsRequest*), we see our Heart listed:
 
 ```
 { "@class": ".ListVirtualGoodsResponse",
@@ -116,7 +120,7 @@ If you've been following along with the configuration set up above, you should b
 
 ```
 
-*6.* Lastly, the player can now consume a Heart using the [ConsumeVirtualGoodRequest](/API Documentation/Request API/Store/ConsumeVirtualGoodRequest.md) (*Store > ConsumeVirtualGoodRequest*), which will remove the Virtual Good from their profile:
+*6.* Lastly, the player can now consume a Heart using the [ConsumeVirtualGoodRequest](/API Documentation/Request API/Store/ConsumeVirtualGoodRequest.md) (submit *Store > ConsumeVirtualGoodRequest*), which will remove the Virtual Good from their profile:
 
 ```
 
@@ -136,9 +140,9 @@ If you've been following along with the configuration set up above, you should b
 
 ## Integrating with Third-Party Stores
 
-Using a Virtual Currency is one option when buying Virtual Goods but what if you want to hook up to a third-party store to handle real money transactions? GameSparks supports integration with Google Play, the iOS App Store, and Windows Store to allow you to do just that.
+Using a Virtual Currency is one option when buying Virtual Goods. What if you want to hook up to a third-party store to handle real money transactions? GameSparks supports integration with Google Play, the iOS App Store, and Windows Store to allow you to do just that!
 
-The following three sections cover the specifics of integrating each store type with the GameSparks platform. In all cases the underlying flow is the same:
+This section explains how to integrate each store type with the GameSparks platform. In all cases the underlying flow is the same:
 
 1. The player requests a purchase to be made within the Game Client.
 2. The Game Client calls the Store API on the device to process the transaction.

@@ -3,14 +3,15 @@ nav_sort: 5
 src: /Tutorials/Social Authentication and Player Profile/Using Bulk Operations for Global Messages.md
 ---
 
-# Using Bulk Operations to Send Global Messages to your Players
+# Using Bulk Operations to Send Global Messages to Players
 
-The GameSparks platform allows you to perform bulk operations. We’ll use bulk operations to send every player on our platform a message.
+The GameSparks platform allows you to perform bulk operations. In this tutorial, we’ll use bulk operations to send every player on our platform a message. There are two ways to do this:
+* Through the request itself.
+* Through Cloud Code.
 
-There are two ways to do this, first through the request itself and the second through Cloud code.
+## Sending Global Messages through the Request
 
-## Through the request from Test Harness:
-
+Here, we use a [ScheduleBulkJobAdminRequest](/API Documentation/Request API/Admin/ScheduleBulkJobAdminRequest.md) to send a global message to players through the Test Harness:
 
 ```
 
@@ -23,17 +24,20 @@ There are two ways to do this, first through the request itself and the second t
 
 ```
 
-The three simple fields that need setting are:
+You'll need to set three fields:
 
-    playerQuery – Takes a query that acts on the player collection. This can be anything relevant to the player document found in the player collection.
-    scheduledTime – The time when this bulk job should take place.
-    script – The Cloud code that will execute on every player.
+* *playerQuery* – Takes a query that acts on the player collection. This can be anything relevant to the player document found in the player collection.
+* *scheduledTime* – The time when this bulk job should take place.
+* *script* – The Cloud Code that will execute on every player.
 
-By entering no query we include all players to this bulk job.
+Note that in this example:
+* Because we have left playerQuery blank, all players will be included in this bulk job.
+* We've used Cloud Code to define the text of the message players will receive.
+  * Due to the request taking the script in as a string, Cloud Code with quotes will cause problems in the compiler and hence it will not run. So here we use an escape character ‘\’ before a quotation to allow us to carry on.
 
-Due to the request taking the script in as a string, Cloud code with quotes will cause problems in the compiler and hence it will not run. For this example we use an escape character ‘\’ before a quotation to allow us to carry on.
+### Using a Module in the Request
 
-Optionally you can execute a module by referring to its shortCode, like so:
+Another way to use the *ScheduleBulkJobAdminRequest* to send a global message to your players is to execute a module by referring to its Short Code:
 
 
 ```
@@ -47,13 +51,17 @@ Optionally you can execute a module by referring to its shortCode, like so:
 
 ```
 
-Once the request is executed, every player we have is sent a message.
+In this example, when the request is executed, every player will be sent the message set in the module.
 
-## Through Cloud code
+<q>**Using Modules?** Modules allow you to create your own libraries of JavaScript that can be included within other scripts. For more details see the *Modules* section in [Cloud Code](/Documentation/Configurator/Cloud Code.md)</q>
 
-You can send a bulk job request in Cloud code in two ways:
+## Sending Global Messages through Cloud Code
 
-Building it via request builder
+You can send a bulk job request in Cloud Code in two ways:
+* Building a bulk job via request builder.
+* Sending it via Spark.sendRequest.
+
+### Building Bulk Job via Request Builder
 
 ```
 
@@ -74,7 +82,7 @@ bulkJobRequest.Send();
 
 ```
 
-Sending it via Spark.sendRequest
+### Sending Bulk Job via Spark.sendRequest
 
 ```
 
