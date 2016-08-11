@@ -9,7 +9,7 @@ You can use Bulk Jobs in the GameSparks platform to collectively update all Play
 * For Players to action their own updates.
 * To have an administrator individually update each Player record.
 
-Bulk Jobs are a very useful tool for your game management operations and in this tutorial we'll learn about the two ways you can work with Bulk Jobs:
+Bulk Jobs are a very useful tool for your game management operations. In this tutorial we'll learn about the two ways you can work with Bulk Jobs:
 * Through requests.
 * Through Cloud Code.
 
@@ -62,10 +62,9 @@ Here it is:
 
 ```
 
-When you've submitted the job you will get a response with the unique jobId number similar to this:
+When you've submitted the job you'll get a response with the unique jobId number similar to this:
 
 ```
-
 {
  "@class": ".ScheduleBulkJobAdminResponse",
  "estimatedCount": 11,
@@ -76,12 +75,11 @@ When you've submitted the job you will get a response with the unique jobId numb
 
 The response also tells us how many estimated records will be affected based on the information available at the time of the request being submitted - "estimatedCount". For example, if a new player joined our collection with the displayName beginning with "player1" between the request being submitted and the scheduled time of the bulk job to occur, this would affect the total amount of records.
 
-*6.* To see any jobs which have been executed you will need the unique jobId. You can find the job by doing a ListBulkJobAdminRequest.
+*6.* To see any jobs which have been executed you will need the unique jobId. You can find the job by doing a [ListBulkJobsAdminRequest](/API Documentation/Request API/Admin/ListBulkJobsAdminRequest.md).
 
-Your request will look similar to this:
+Your request should be like this:
 
 ```
-
 {
 "@class": ".ListBulkJobsAdminRequest",
 "bulkJobIds": [
@@ -94,7 +92,6 @@ Your request will look similar to this:
 Response:
 
 ```
-
 {
  "@class": ".ListBulkJobsAdminResponse",
  "bulkJobs": [
@@ -135,7 +132,6 @@ If you want to see all of the pending jobs, you can run the request without any 
 Response:
 
 ```
-
 {
  "@class": ".ListBulkJobsAdminResponse",
  "bulkJobs": [
@@ -176,34 +172,37 @@ Response:
 
 ```
 
-*7.* Once a job has been run, the results are available to be seen in NoSQL. If we want to see the results of the bulk operation, we can do this in two locations.
+*7.* When a job has been run, the results are available to be seen in NoSQL. If we want to see the results of the bulk operation, we can do this in two locations:
 
-The first is the Player collection, which will show you how much currency each player has, using our player query we can define just the players affected by this job for more on this see Authentication Documentation.
-
-The second way to see this is in playerTranactionAudit.  This collection shows all transactions around currency and virtual goods.
+* The *Player* collection, which will show you how much currency each player has. We can use our player query used earlier - the one we used in the Bulk Job - in NoSQL Explorer to verify just the players affected by this job.
+* The second way to see this is in the *playerTranactionAudit* collection.  This collection shows all transactions around currency and virtual goods.
 
 ## How to Create a Bulk Job with Cloud Code
 
-We will now look at creating the same outcome but using an Event to trigger the scheduled job.
+We'll now look at creating the same outcome but using an Event to trigger the scheduled job.
 
-*1.* Before you can use Bulk Operations you will need to ensure that your credentials have the Admin BulkJob requests enabled.
+*1.* Before you can use Bulk Operations you will need to ensure that your credentials have the Admin BulkJob requests enabled. For a refresher, see [Credentials](/Documentation/Configurator/Integrations/Security Credentials.md).
 
-*2.* In the Portal go to Events and create a new Event.  The Event will need an Attribute which has a Data Type of String and a Default Calc of Used In Script. In this example, the Attribute has the Short Code, VALUE_ATTRIB.
+*2.* In the portal, go to *Configurator > Events* and create a new Event.  The Event will need an Attribute which has:
+* A Data Type of *String*.
+* A Default Calc of *Used In Script*.
+* For this example, we'll give the Attribute a Short Code of *VALUE_ATTRIB*.
 
-*3.* Go to Cloud Code in the Portal's Configurator and select Modules, add new module.
+*3.* In the portal, go to *Configurator > Cloud Code* and select Modules.
 
-*4.* In the Module, create some Cloud Code to credit a Player and use the attribute to set the value credited.
+*4.* Add new Module.
+
+*5.* In the Module, create some Cloud Code to credit a Player and use the Attribute to set the value credited.
 
 ```
-
 var myVal = Spark.getData().VALUE_ATTRIB;
 Spark.getPlayer().credit1(myVal);
 
 ```
 
-*5.* Now the Module is configured, go to the Event you created earlier with the VALUE_ATTRIB attribute.
+*6.* Now that the Module is configured, go to the Event you created earlier with the Attribute Short Code of *VALUE_ATTRIB*.
 
-*6.* To run the bulk operation, use Spark.getBulkScheduler.
+*7.* To run the bulk operation, use Spark.getBulkScheduler.
 
 ```
 Spark.getBulkScheduler().submitJobModule({"userName":{"$regex":"^player1"}}, "CreditMod", Spark.getData(), 30);
@@ -212,27 +211,26 @@ Spark.getBulkScheduler().submitJobModule({"userName":{"$regex":"^player1"}}, "Cr
 
 This above method and its attributes can be broken down into the following:
 
-* Spark.getBulkScheduler().submitJobModule - The method to call on getBulkScheduler, which submits the bulk operation.
+* *Spark.getBulkScheduler().submitJobModule* - The method to call on getBulkScheduler, which submits the bulk operation.
 
-* {"userName":{"$regex":"^player1"}} - The Player query to use to find all Player usernames beginning with "player1"
+* *{"userName":{"$regex":"^player1"}}* - The Player query to use to find all Player usernames beginning with "player1"
 
-* "CreditMod" - The module to call, which contains the Cloud Code to submit.
+* *"CreditMod"* - The module to call, which contains the Cloud Code to submit.
 
-* Spark.getData() - This is the data to be passed into the Cloud Code module, which will be used to pass in the entered value of VALUE_ATTRIB.
+* *Spark.getData()* - This is the data to be passed into the Cloud Code module, which will be used to pass in the entered value of VALUE_ATTRIB.
 
-* 30  - The number of delayed seconds before the bulk operation is executed.
+* *30*  - The number of seconds delay before the bulk operation is executed.
 
 
-*7.* Go to the Test Harness.
+*8.* Go to the Test Harness.
 
-*8.* In the Test Harness authenticate as a Player and select your Event you have created.
+*9.* In the Test Harness, authenticate as a Player and select the Event you have created.
 
-*10.* Set the amount of credit you want to add to the VALUE_ATTRIB and submit the request.
+*10.* Set the amount of credit you want to add to the *VALUE_ATTRIB* and submit the request.
 
 Your request should be similar to this:
 
 ```
-
 {
 "@class": ".LogEventRequest",
 "eventKey": "BulkJob",
@@ -244,7 +242,6 @@ Your request should be similar to this:
 Response:
 
 ```
-
 {
  "@class": ".LogEventResponse"
 }
