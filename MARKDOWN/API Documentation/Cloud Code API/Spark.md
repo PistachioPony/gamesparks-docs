@@ -557,6 +557,14 @@ Returns a reference to a SparkBulkScheduler object, used to perform operations o
 <b>example</b>
 <pre rel="highlighter" code-brush="js" contenteditable="false">Spark.getBulkScheduler();</pre>
 
+## getDigester
+_signature_ getDigester()</p>
+_returns_ [SparkDigest](/API Documentation/Cloud Code API/Utilities/SparkDigest.md)</p>
+<b>validity</b> All Scripts
+Returns a reference to a SparkDigest object.
+<b>example</b>
+<pre rel="highlighter" code-brush="js" contenteditable="false">Spark.getDigester();</pre>
+
 ## getScriptData
 _signature_ getScriptData(string name)</p>
 _returns_ JSON</p>

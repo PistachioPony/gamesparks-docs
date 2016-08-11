@@ -20,7 +20,7 @@ Parameter | Required | Type | Description
 ## Response Parameters
 
 
-A response to a send session request 
+A response to an end session request
 
 Parameter | Type | Description
 --------- | ---- | -----------

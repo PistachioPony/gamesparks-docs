@@ -129,6 +129,12 @@ _returns_ JSON</p>
 <b>validity</b> All Scripts
 Returns the bundled goods of the virtual good
 
+## isDisabled
+_signature_ isDisabled()</p>
+_returns_ boolean</p>
+<b>validity</b> All Scripts
+Returns whether this VirtualGood is hidden
+
 ## getPropertySet
 _signature_ getPropertySet()</p>
 _returns_ JSON</p>

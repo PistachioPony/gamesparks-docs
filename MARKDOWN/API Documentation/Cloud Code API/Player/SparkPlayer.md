@@ -23,6 +23,13 @@ This may be null for a player who has only used device authentication. Other aut
 <b>example</b>
 <pre rel="highlighter" code-brush="js" contenteditable="false">var userName = Spark.getPlayer().getDisplayName();</pre>
 
+## persist
+_signature_ persist()</p>
+_returns_ void</p>
+Saves the players data to the DB. By default, changes are persisted after the script executes. This method ensures changes are saved immediately so other scripts running in parallel see the chnges immediately.
+<b>example</b>
+<pre rel="highlighter" code-brush="js" contenteditable="false">var userName = Spark.getPlayer().persist();</pre>
+
 ## getUserName
 _signature_ getUserName()</p>
 _returns_ string</p>

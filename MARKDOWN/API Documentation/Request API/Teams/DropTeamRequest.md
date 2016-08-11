@@ -25,28 +25,9 @@ A response to a drop team request
 
 Parameter | Type | Description
 --------- | ---- | -----------
-members | [Player[]](#player) | The team members
-owner | [Player](#player) | A summary of the owner
 scriptData | ScriptData | A JSON Map of any data added either to the Request or the Response by your Cloud Code
-teamId | string | The Id of the team
-teamName | string | The team name
-teamType | string | The team type
 
 ## Nested types
-
-### Player
-
-A nested object that represents a player.
-
-Parameter | Type | Description
---------- | ---- | -----------
-achievements | string[] | The achievements of the Player
-displayName | string | The display name of the Player
-externalIds | JSON | The external Id's of the Player
-id | string | The id of the Player
-online | boolean | The online status of the Player
-scriptData | JSON | The script data of the Player
-virtualGoods | string[] | The virtual goods of the Player
 
 ### ScriptData
 
@@ -80,12 +61,7 @@ teamType&&ownerId | NOT_UNIQUE | The ownerId / teamType combination has multiple
 		.SetTeamId(teamId)
 		.SetTeamType(teamType)
 		.Send((response) => {
-		GSEnumerable<var> members = response.Members; 
-		var owner = response.Owner; 
 		GSData scriptData = response.ScriptData; 
-		string teamId = response.TeamId; 
-		string teamName = response.TeamName; 
-		string teamType = response.TeamType; 
 		});
 
 ```
@@ -104,12 +80,7 @@ teamType&&ownerId | NOT_UNIQUE | The ownerId / teamType combination has multiple
 		.setTeamId(teamId)
 		.setTeamType(teamType)
 		.send(function(response:com.gamesparks.api.responses.DropTeamResponse):void {
-		var members:Vector.<Player> = response.getMembers(); 
-		var owner:Player = response.getOwner(); 
 		var scriptData:ScriptData = response.getScriptData(); 
-		var teamId:String = response.getTeamId(); 
-		var teamName:String = response.getTeamName(); 
-		var teamType:String = response.getTeamType(); 
 		});
 
 ```
@@ -124,12 +95,7 @@ teamType&&ownerId | NOT_UNIQUE | The ownerId / teamType combination has multiple
 	[request setTeamId:teamId;
 	[request setTeamType:teamType;
 	[request setCallback:^ (GSDropTeamResponse* response) {
-	NSArray* members = [response getMembers]; 
-	GSPlayer* owner = [response getOwner]; 
 	NSDictionary* scriptData = [response getScriptData]; 
-	NSString* teamId = [response getTeamId]; 
-	NSString* teamName = [response getTeamName]; 
-	NSString* teamType = [response getTeamType]; 
 	}];
 	[gs send:request];
 
@@ -145,12 +111,7 @@ teamType&&ownerId | NOT_UNIQUE | The ownerId / teamType combination has multiple
 	...
 	
 	void DropTeamRequest_Response(GS& gsInstance, const DropTeamResponse& response) {
-	gsstl:vector<Types::Player*> members = response.getMembers(); 
-	Types::Player* owner = response.getOwner(); 
 	GSData scriptData = response.getScriptData(); 
-	gsstl::string teamId = response.getTeamId(); 
-	gsstl::string teamName = response.getTeamName(); 
-	gsstl::string teamType = response.getTeamType(); 
 	}
 	......
 	
@@ -176,12 +137,7 @@ gs.getRequestBuilder().createDropTeamRequest()
 	.send(new GSEventListener<DropTeamResponse>() {
 		@Override
 		public void onEvent(DropTeamResponse response) {
-			List<Player> members = response.getMembers(); 
-			Player owner = response.getOwner(); 
 			GSData scriptData = response.getScriptData(); 
-			String teamId = response.getTeamId(); 
-			String teamName = response.getTeamName(); 
-			String teamType = response.getTeamType(); 
 		}
 	});
 
@@ -196,12 +152,7 @@ gs.getRequestBuilder().createDropTeamRequest()
 	request.teamType = ...;
 	var response = request.Send();
 	
-var members = response.members; 
-var owner = response.owner; 
 var scriptData = response.scriptData; 
-var teamId = response.teamId; 
-var teamName = response.teamName; 
-var teamType = response.teamType; 
 ```
 
 

@@ -14,6 +14,7 @@ Returns the list of configured virtual goods.
 
 Parameter | Required | Type | Description
 --------- | -------- | ---- | -----------
+includeDisabled | No | boolean | If true, the returned list will include disabled VirtualVoods
 tags | No | string[] | A filter to only include goods with the given tags. Each good must have all the provided tags.
 
 ## Response Parameters
@@ -27,6 +28,24 @@ scriptData | ScriptData | A JSON Map of any data added either to the Request or 
 virtualGoods | [VirtualGood[]](#virtualgood) | A list of JSON objects containing virtual goods data
 
 ## Nested types
+
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
+
+### BundledGood
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+qty | number | The number of items bundled
+shortCode | string | The shortCode of the bundled good
 
 ### VirtualGood
 
@@ -50,6 +69,7 @@ currency4Cost | number | The Currency4 cost of the Virtual Good
 currency5Cost | number | The Currency5 cost of the Virtual Good
 currency6Cost | number | The Currency6 cost of the Virtual Good
 description | string | The description of the Virtual Good
+disabled | boolean | Whether the item is disabled.
 googlePlayProductId | string | The google play productId of the item.
 iosAppStoreProductId | string | The iOS AppStore productId of the item.
 maxQuantity | number | The maximum number of the Virtual Good that can be owned at one time
@@ -68,24 +88,6 @@ tags | string | The tags of the Virtual Good
 type | string | The type of the virtual good, "VGOOD" or "CURRENCY"
 w8StoreProductId | string | The Windows 8 productId of the item.
 
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
-
-### BundledGood
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-qty | number | The number of items bundled
-shortCode | string | The shortCode of the bundled good
-
 
 ## Code Samples
 
@@ -96,6 +98,7 @@ shortCode | string | The shortCode of the bundled good
 	using GameSparks.Api.Responses;
 	...
 	new ListVirtualGoodsRequest()
+		.SetIncludeDisabled(includeDisabled)
 		.SetTags(tags)
 		.Send((response) => {
 		GSData scriptData = response.ScriptData; 
@@ -114,6 +117,7 @@ shortCode | string | The shortCode of the bundled good
 	
 	gs.getRequestBuilder()
 	    .createListVirtualGoodsRequest()
+		.setIncludeDisabled(includeDisabled)
 		.setTags(tags)
 		.send(function(response:com.gamesparks.api.responses.ListVirtualGoodsResponse):void {
 		var scriptData:ScriptData = response.getScriptData(); 
@@ -128,6 +132,7 @@ shortCode | string | The shortCode of the bundled good
 	#import "GSAPI.h"
 	...
 	GSListVirtualGoodsRequest* request = [[GSListVirtualGoodsRequest alloc] init];
+	[request setIncludeDisabled:includeDisabled;
 	[request setTags:tags;
 	[request setCallback:^ (GSListVirtualGoodsResponse* response) {
 	NSDictionary* scriptData = [response getScriptData]; 
@@ -153,6 +158,7 @@ shortCode | string | The shortCode of the bundled good
 	......
 	
 	ListVirtualGoodsRequest request(gsInstance);
+	request.SetIncludeDisabled(includeDisabled)
 	request.SetTags(tags)
 	request.Send(ListVirtualGoodsRequest_Response);
 ```
@@ -166,6 +172,7 @@ import com.gamesparks.sdk.api.GSEventListener;
 
 ...
 gs.getRequestBuilder().createListVirtualGoodsRequest()
+	.setIncludeDisabled(includeDisabled)
 	.setTags(tags)
 	.send(new GSEventListener<ListVirtualGoodsResponse>() {
 		@Override
@@ -181,6 +188,7 @@ gs.getRequestBuilder().createListVirtualGoodsRequest()
 ```javascript
 
 	var request = new SparkRequests.ListVirtualGoodsRequest();
+	request.includeDisabled = ...;
 	request.tags = ...;
 	var response = request.Send();
 	

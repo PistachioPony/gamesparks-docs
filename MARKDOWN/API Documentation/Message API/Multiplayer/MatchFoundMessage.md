@@ -16,7 +16,7 @@ Parameter | Required | Type | Description
 --------- | -------- | ---- | -----------
 accessToken | No | string | The accessToken used to authenticate this player for this match
 host | No | string | The host to connect to for this match
-matchData | No | ScriptData[] | MatchData is arbitrary data that can be stored in a Match instance by a Cloud Code script.
+matchData | No | JSON | MatchData is arbitrary data that can be stored in a Match instance by a Cloud Code script.
 matchGroup | No | string | The group the player was assigned in the matchmaking request
 matchId | No | string | The id for this match instance
 matchShortCode | No | string | The shortCode of the match type this message for
@@ -31,6 +31,15 @@ title | No | string | A textual title for the message.
 
 ## Nested types
 
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
+
 ### Participant
 
 A nested object that represents a participant in a match.
@@ -42,19 +51,10 @@ displayName | string | The display name of the Player
 externalIds | JSON | The external Id's of the Player
 id | string | The id of the Player
 online | boolean | The online status of the Player
-participantData | ScriptData[] | A JSON Map of any data that was associated to this user
+participantData | JSON | A JSON Map of any data that was associated to this user
 peerId | number | The peerId of this participant within the match
 scriptData | JSON | The script data of the Player
 virtualGoods | string[] | The virtual goods of the Player
-
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
 
 
 ## Code Samples
@@ -64,7 +64,7 @@ myValue | JSON | An arbitrary data value.
 	MatchFoundMessage.Listener = (message) => {
 	string accessToken = message.AccessToken; 
 	string host = message.Host; 
-	GSEnumerable<GSData> matchData = message.MatchData; 
+	GSData matchData = message.MatchData; 
 	string matchGroup = message.MatchGroup; 
 	string matchId = message.MatchId; 
 	string matchShortCode = message.MatchShortCode; 
@@ -86,7 +86,7 @@ myValue | JSON | An arbitrary data value.
 		function (message:MatchFoundMessage):void {
 		var accessToken:String = message.getAccessToken(); 
 		var host:String = message.getHost(); 
-		var matchData:Vector.<ScriptData> = message.getMatchData(); 
+		var matchData:Object = message.getMatchData(); 
 		var matchGroup:String = message.getMatchGroup(); 
 		var matchId:String = message.getMatchId(); 
 		var matchShortCode:String = message.getMatchShortCode(); 
@@ -107,7 +107,7 @@ myValue | JSON | An arbitrary data value.
 	[listener onGSMatchFoundMessage:^(GSMatchFoundMessage* message) {
 	NSString* accessToken = [message getAccessToken]; 
 	NSString* host = [message getHost]; 
-	NSArray* matchData = [message getMatchData]; 
+	NSDictionary* matchData = [message getMatchData]; 
 	NSString* matchGroup = [message getMatchGroup]; 
 	NSString* matchId = [message getMatchId]; 
 	NSString* matchShortCode = [message getMatchShortCode]; 
@@ -129,7 +129,7 @@ myValue | JSON | An arbitrary data value.
 			public void onEvent(MatchFoundMessage event) {
 		String accessToken = message.getAccessToken(); 
 		String host = message.getHost(); 
-		List<GSData> matchData = message.getMatchData(); 
+		GSData matchData = message.getMatchData(); 
 		String matchGroup = message.getMatchGroup(); 
 		String matchId = message.getMatchId(); 
 		String matchShortCode = message.getMatchShortCode(); 
@@ -154,7 +154,7 @@ myValue | JSON | An arbitrary data value.
 	{
 	gsstl::string accessToken = message.getAccessToken(); 
 	gsstl::string host = message.getHost(); 
-	gsstl:vector<GSData> matchData = message.getMatchData(); 
+	GSData matchData = message.getMatchData(); 
 	gsstl::string matchGroup = message.getMatchGroup(); 
 	gsstl::string matchId = message.getMatchId(); 
 	gsstl::string matchShortCode = message.getMatchShortCode(); 

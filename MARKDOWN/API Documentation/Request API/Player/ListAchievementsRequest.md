@@ -27,6 +27,15 @@ scriptData | ScriptData | A JSON Map of any data added either to the Request or 
 
 ## Nested types
 
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
+
 ### Achievement
 
 A nested object that represents the achievement data.
@@ -38,15 +47,6 @@ earned | boolean | Whether to current player has earned the achievement
 name | string | The name of the Achievement
 propertySet | JSON | The custom property set configured on this Achievement
 shortCode | string | The shortCode of the Achievement
-
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
 
 
 ## Code Samples

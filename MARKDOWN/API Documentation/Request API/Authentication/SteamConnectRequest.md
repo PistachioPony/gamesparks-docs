@@ -49,6 +49,15 @@ userId | string | The player's id
 
 ## Nested types
 
+### ScriptData
+
+A collection of arbitrary data that can be added to a message via a Cloud Code script.
+
+Parameter | Type | Description
+--------- | ---- | -----------
+myKey | string | An arbitrary data key
+myValue | JSON | An arbitrary data value.
+
 ### Player
 
 A nested object that represents a player.
@@ -62,15 +71,6 @@ id | string | The id of the Player
 online | boolean | The online status of the Player
 scriptData | JSON | The script data of the Player
 virtualGoods | string[] | The virtual goods of the Player
-
-### ScriptData
-
-A collection of arbitrary data that can be added to a message via a Cloud Code script.
-
-Parameter | Type | Description
---------- | ---- | -----------
-myKey | string | An arbitrary data key
-myValue | JSON | An arbitrary data value.
 
 ## Error Codes
 

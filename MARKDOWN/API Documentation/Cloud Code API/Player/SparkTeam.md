@@ -105,3 +105,19 @@ Returns true if the message has been removed from the chat history.
 <b>example</b>
 <pre rel="highlighter" code-brush="js" contenteditable="false">var success = Spark.getTeams().getTeam(myTeamId).deleteChatMessage(chatMessageId);</pre>
 
+## addAchievement
+_signature_ addAchievement(string achievementShortCode)</p>
+_returns_ boolean</p>
+Add an achievement to this team (and its players).
+Returns true if the achievement was added to the team or any of its players.
+<b>example</b>
+<pre rel="highlighter" code-brush="js" contenteditable="false">var success = Spark.getTeams().getTeam(myTeamId).addAchievement(achievementShortCode);</pre>
+
+## removeAchievement
+_signature_ removeAchievement(string achievementShortCode)</p>
+_returns_ boolean</p>
+Remove an achievement from this team (and its players).
+Returns true if the achievement was removed from the team or any of its players.
+<b>example</b>
+<pre rel="highlighter" code-brush="js" contenteditable="false">var success = Spark.getTeams().getTeam(myTeamId).removeAchievement(achievementShortCode);</pre>
+

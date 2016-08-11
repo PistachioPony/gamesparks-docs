@@ -34,7 +34,7 @@ Parameter | Type | Description
 --------- | ---- | -----------
 accessToken | string | The accessToken used to authenticate this player for this match
 host | string | The host to connect to for this match
-matchData | ScriptData[] | MatchData is arbitrary data that can be stored in a Match instance by a Cloud Code script.
+matchData | JSON | MatchData is arbitrary data that can be stored in a Match instance by a Cloud Code script.
 matchId | string | The id for this match instance
 opponents | [Player[]](#player) | The opponents this player has been matched against
 peerId | number | The peerId of this player within the match
@@ -95,7 +95,7 @@ match | NO_MANUAL_MATCHMAKING | To use the manual matchmaking functionality plea
 		.Send((response) => {
 		string accessToken = response.AccessToken; 
 		string host = response.Host; 
-		GSEnumerable<GSData> matchData = response.MatchData; 
+		GSData matchData = response.MatchData; 
 		string matchId = response.MatchId; 
 		GSEnumerable<var> opponents = response.Opponents; 
 		int? peerId = response.PeerId; 
@@ -123,7 +123,7 @@ match | NO_MANUAL_MATCHMAKING | To use the manual matchmaking functionality plea
 		.send(function(response:com.gamesparks.api.responses.FindMatchResponse):void {
 		var accessToken:String = response.getAccessToken(); 
 		var host:String = response.getHost(); 
-		var matchData:Vector.<ScriptData> = response.getMatchData(); 
+		var matchData:Object = response.getMatchData(); 
 		var matchId:String = response.getMatchId(); 
 		var opponents:Vector.<Player> = response.getOpponents(); 
 		var peerId:Number = response.getPeerId(); 
@@ -147,7 +147,7 @@ match | NO_MANUAL_MATCHMAKING | To use the manual matchmaking functionality plea
 	[request setCallback:^ (GSFindMatchResponse* response) {
 	NSString* accessToken = [response getAccessToken]; 
 	NSString* host = [response getHost]; 
-	NSArray* matchData = [response getMatchData]; 
+	NSDictionary* matchData = [response getMatchData]; 
 	NSString* matchId = [response getMatchId]; 
 	NSArray* opponents = [response getOpponents]; 
 	NSNumber* peerId = [response getPeerId]; 
@@ -171,7 +171,7 @@ match | NO_MANUAL_MATCHMAKING | To use the manual matchmaking functionality plea
 	void FindMatchRequest_Response(GS& gsInstance, const FindMatchResponse& response) {
 	gsstl::string accessToken = response.getAccessToken(); 
 	gsstl::string host = response.getHost(); 
-	gsstl:vector<GSData> matchData = response.getMatchData(); 
+	GSData matchData = response.getMatchData(); 
 	gsstl::string matchId = response.getMatchId(); 
 	gsstl:vector<Types::Player*> opponents = response.getOpponents(); 
 	Optional::t_LongOptional peerId = response.getPeerId(); 
@@ -207,7 +207,7 @@ gs.getRequestBuilder().createFindMatchRequest()
 		public void onEvent(FindMatchResponse response) {
 			String accessToken = response.getAccessToken(); 
 			String host = response.getHost(); 
-			List<GSData> matchData = response.getMatchData(); 
+			GSData matchData = response.getMatchData(); 
 			String matchId = response.getMatchId(); 
 			List<Player> opponents = response.getOpponents(); 
 			Integer peerId = response.getPeerId(); 

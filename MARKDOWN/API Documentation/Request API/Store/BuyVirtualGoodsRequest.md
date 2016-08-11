@@ -62,13 +62,16 @@ shortCode | string | The short code of the bought item
 Key | Value | Description
 --------- | ----------- | -----------
 currencyType | UNRECOGNISED | Not a valid currency, valid values are 1 to 6
-virtualGood | CANNOT_BE_CURRENCY | The player cannot by a currency pack with virtual currency
+virtualGood | CANNOT_BE_CURRENCY | The player cannot buy a currency pack with virtual currency
 currency1 | INSUFFICIENT_FUNDS | The player does not have enough currency 1 funds to complete the purchase
 currency2 | INSUFFICIENT_FUNDS | The player does not have enough currency 2 funds to complete the purchase
 currency3 | INSUFFICIENT_FUNDS | The player does not have enough currency 3 funds to complete the purchase
 currency4 | INSUFFICIENT_FUNDS | The player does not have enough currency 4 funds to complete the purchase
 currency5 | INSUFFICIENT_FUNDS | The player does not have enough currency 5 funds to complete the purchase
 currency6 | INSUFFICIENT_FUNDS | The player does not have enough currency 6 funds to complete the purchase
+shortCode | UNKNOWN | The shortCode supplied does not match a VirtualGood
+shortCode | DISABLED | The VirtualGood requested is marked as disabled
+quantity | EXCEEDS_MAX_QUANTITY | The requst would cause the player to exceed to maxQty of this VirtualGood
 
 ## Code Samples
 

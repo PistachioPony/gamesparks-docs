@@ -38,17 +38,17 @@ _returns_ RTRequestBuilder</p>
 A builder object for creating and sending requests to the GameSparks platform
 
 ## onPacket
-_signature_ onPacket(number opCode, ScriptObjectMirror callback)</p>
+_signature_ onPacket(number opCode, fn(packet: RTPacket) paramName)</p>
 _returns_ void</p>
 Register a callback to be invoked when a packet with the given opCode is recieved. If this function does not return the supplied packet, the packet will not be sent to any players
 
 ## onPlayerConnect
-_signature_ onPlayerConnect(ScriptObjectMirror callback)</p>
+_signature_ onPlayerConnect(fn(player: RTPlayer) paramName)</p>
 _returns_ void</p>
 Register a callback to be invoked when a player connects to the session
 
 ## onPlayerDisconnect
-_signature_ onPlayerDisconnect(ScriptObjectMirror callback)</p>
+_signature_ onPlayerDisconnect(fn(player: RTPlayer) paramName)</p>
 _returns_ void</p>
 Register a callback to be invoked when a player disconnects from the session
 
@@ -68,14 +68,14 @@ _returns_ string</p>
 Gets the current sessionId
 
 ## setInterval
-_signature_ setInterval(ScriptObjectMirror callback, number ms)</p>
+_signature_ setInterval(fn() paramName, number ms)</p>
 _returns_ Number</p>
 The setInterval() method calls a function or evaluates an expression at specified intervals (in milliseconds).
 The setInterval() method will continue calling the function until clearInterval() is called, or the window is closed
 The ID value returned by setInterval() is used as the parameter for the clearInterval() method.
 
 ## setTimeout
-_signature_ setTimeout(ScriptObjectMirror callback, number ms)</p>
+_signature_ setTimeout(fn() paramName, number ms)</p>
 _returns_ Number</p>
 Calls a function or evaluates an expression after a specified number of milliseconds.
 
