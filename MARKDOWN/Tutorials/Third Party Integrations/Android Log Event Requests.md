@@ -10,7 +10,7 @@ You can create your own custom Events in the Android SDK that are called through
 * Number
 * JSON
 
-<q>**Note:** The JSON object can hold floats, booleans, strings, numbers, arrays and other objects.</q>
+<q>**Note:** The JSON object can hold floats, booleans, strings, numbers, arrays, and other objects.</q>
 
 <q>**More Details?** For more details about how to work with Events, go to the [Events](/Documentation/Configurator/Events.md) page.</q>
 
@@ -44,7 +44,7 @@ Here:
 * *Spark.getData()* retrieves the data associated with the request, including the attributes passed in from the SDK. Since the data is an object, you can easily retain the data inside it through a variable name.
 * *getPlayer().setScriptData(name,value)* will save a value under a specific name in the scriptData object which can easily be accessed and is viewable in any response that returns the player's data - for example the *AccountDetails* request.
 
-<q>**Alternative?** Optionally, you can use *setPrivateData()* to store the data in the player's privateData, which is not present with any response unless called for and returned specifically. For more information, see [Storing Custom Player Data](/Tutorials/Cloud Code and the Tests Harness/Storing Custom Player Data.md).</q>
+<q>**Alternative?** Optionally, you can use *setPrivateData()* to store the data in the player's privateData, which is not present with any response unless called for and returned specifically. For more information, see [Storing Custom Player Data](/Tutorials/Cloud Code and the Test Harness/Storing Custom Player Data.md).</q>
 
 *3.* To call this request from the SDK and pass in the values, you can use the Event Key to reference the correct Event ShortCode.
 

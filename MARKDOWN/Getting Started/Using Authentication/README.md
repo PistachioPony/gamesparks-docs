@@ -28,3 +28,4 @@ You have now successfully Registered and Authenticated a player. The next tutori
 * [Unity](/Getting Started/Using Authentication/Unity Authentication.md)
 * [Unreal](/Getting Started/Using Authentication/Unreal Authentication.md)
 * [ActionScript](/Getting Started/Using Authentication/ActionScript Authentication.md)
+* [Android](/Getting Started/Using Authentication/Android Authentication.md)

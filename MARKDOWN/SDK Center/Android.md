@@ -9,7 +9,7 @@ This tutorial walks you through how to integrate GameSparks with your Android pr
 
 <q>**Requirements?** The GameSparks Android SDK requires API 8 or greater and the Test Harness requires API 11 or greater for the example test harness project that we supply as a sample.</q>
 
-The source repositories for the android libraries can be found here:
+The source repositories for the Android libraries can be found here:
 
 https://bitbucket.org/gamesparks/gamesparks-java-sdk
 
@@ -92,7 +92,7 @@ dependencies {
 
 ```
 
-If you try to build you application at this point you will receive an error regarding an image clash.
+If you try to build your application at this point, you'll receive an error regarding an image clash.
 
 *4.* In the application block in the manifest add:
 
@@ -101,9 +101,9 @@ If you try to build you application at this point you will receive an error rega
 
 ```
 
-*5.* After adding the line, hover your mouse over it and hit *Alt+Enter* on your keyboard to automatically add the necessary code to make this work.
+*5.* After adding the line, hover your mouse over it and press *Alt+Enter* on your keyboard to automatically add the necessary code to make this work. That will ensure that the API is ready to be used.
 
-That will ensure that the API is ready to be used. Now to initialise the GS module and connect our frontend to our backend!
+Now to initialise the GS module and connect our frontend to our backend!
 
 *6.* In any of your activity's Java code OnCreate function place the following:
 
@@ -113,9 +113,9 @@ GSAndroidPlatform.initialise(this, "YOUR KEY", "YOUR SECRET", false, true);
 
 ```
 
-Now you need an API key and secret, which you given when you create a game on our platform, click here for a quick guide to show you how.
+Now you need an API key and secret, which you are given when you create a game on our platform, click [here](/Getting Started/Creating a Game/README.md) for a quick guide to show you how.
 
-Once that's done, now you need to start the connection. To do that place this code in the activity's code body:
+*7.* Once that's done, you now need to start the connection. To do that, place this code in the activity's code body:
 
 ```
 @Override
@@ -130,4 +130,4 @@ Once that's done, now you need to start the connection. To do that place this co
 
 The reason we stop the module before we start it is to establish a new connection which works to refresh the connection.
 
-After all this is done, you now are ready to use GameSparks API in your project. Details of the API can be found [here](https://api.gamesparks.net/?javasdk#)
+<q>**Done!** After all this is done, you now are ready to use GameSparks API in your Android project. Details of the API can be found [here](/API Documentation/README.md)</q>

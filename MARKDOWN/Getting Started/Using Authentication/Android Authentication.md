@@ -5,15 +5,15 @@ src: /Getting Started/Using Authentication/Android Authentication.md
 
 # Android Authentication
 
-For any user to interact with GameSpark's platform they must be authenticated. There are 3 ways to authenticate to GameSparks, those being:
+For any user to interact with GameSpark's platform they must be authenticated. There are three ways to authenticate to GameSparks:
 
-* GameSparks login
+* Username/Password
 * Device Authentication
 * Social Authentication
 
-## GameSparks login
+## Username/Password Authentication
 
-Users can register to your game using a username and password. A user registers using the Registration request and passing in string values for Displayname, Username, and Password:
+Users can register to your game using a username and password. A user registers using the [RegistrationRequest](/API Documentation/Request API/Authentication/RegistrationRequest.md) and passing in string values for *DisplayName*, *UserName*, and *Password*:
 
 ```
     GSAndroidPlatform.gs().getRequestBuilder().createRegistrationRequest()
@@ -35,7 +35,7 @@ Users can register to your game using a username and password. A user registers 
 
 ```
 
-After the player is registered on the platform, they can use the authentication request to login using the username and password:
+After a player is registered on the platform, they can use the [AuthenticationRequest](/API Documentation/Request API/Authentication/AuthenticationRequest.md) to login using the *UserName* and *Password*:
 
 ```
 
@@ -82,7 +82,9 @@ GSAndroidPlatform.gs().getRequestBuilder().createDeviceAuthenticationRequest()
 Players can use their social accounts from a number of third party providers to create an account on the GameSparks platform. From March 2016 our third party providers currently are:
 * Amazon
 * Facebook
-* Google plus
+* Google Plus
+* Google Play
+* Game Center
 * Steam
 * Twitter
 * XBOX Live
@@ -93,7 +95,7 @@ Players can use their social accounts from a number of third party providers to 
 * WeChat
 * QQ
 
-All social authentication requests follow a similar system of forwarding an authentication token to our platform. Here's an example of the Google Plus authentication request:
+All social authentication requests follow a similar method of forwarding an authentication token to our platform. Here's an example of the Google Plus authentication request:
 
 ```
     GSAndroidPlatform.gs().getRequestBuilder().createGooglePlusConnectRequest()
@@ -106,4 +108,4 @@ All social authentication requests follow a similar system of forwarding an auth
 
 ```
 
-You can check out our API documentation site for the full list of requests, [here](ETC).
+You can check out our API documentation site for the full list of requests, [here](/API Documentation/README.md).
