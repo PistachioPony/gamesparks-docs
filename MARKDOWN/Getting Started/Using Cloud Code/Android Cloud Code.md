@@ -1,9 +1,17 @@
 ---
-nav_sort: 4
-src: /Tutorials/Third Party Integrations/Android Log Event Requests.md
+nav_sort: 3
+src: /Getting Started/Using Cloud Code/Android Cloud Code.md
 ---
 
-# Android Log Event Requests
+# Android Cloud Code
+
+## Introduction
+
+In this tutorial, we'll follow two examples of using Cloud Code when using Android with the GameSparks platform:
+* Log Event Requests.
+* Requests and Responses for extra functionality.
+
+## Android Log Event Requests
 
 You can create your own custom Events in the Android SDK that are called through the GamesSparks request builder. Events can have 3 types of input:
 * String
@@ -22,7 +30,7 @@ In this tutorial, we'll build an example using a *set* and a *get* Event:
 * The *setDetails* Event will save scriptData against our player's database.
 * The *getDetails* Event will find the scriptData and retrieve it to the SDK.
 
-## setDetails Event
+### setDetails Event
 
 *1.* In the portal, go to *Configurator > Cloud Code > Events* and create the *setDetails* Event with the 3 attributes given above.
 
@@ -49,7 +57,7 @@ Here:
 *3.* To call this request from the SDK and pass in the values, you can use the Event Key to reference the correct Event ShortCode.
 
 ```
-  GSAndroidPlatform.gs().getRequestBuilder().createLogEventRequest().setEventKey("setDetails")
+GSAndroidPlatform.gs().getRequestBuilder().createLogEventRequest().setEventKey("setDetails")
                             .setStringEventAttribute("name", string)
                             .setNumberEventAttribute("age", int)
                             .setStringEventAttribute("gender", string).send(new GSEventConsumer() {
@@ -76,7 +84,7 @@ This example does not cover passing in objects. But to do that:
             scriptData.put("Yet Another",true);
 
 ```
-## getDetails Event
+### getDetails Event
 
 The *getDetails* event won't have any attributes and will return the values that we saved against the player's scriptData.
 
@@ -84,12 +92,12 @@ Here's the Cloud Code:
 
 ```
 
-    //Retrieve data saved against the player
+//Retrieve data saved against the player
     var pName = Spark.getPlayer().getScriptData("name")
     var pAge = Spark.getPlayer().getScriptData("age")
     var pGender = Spark.getPlayer().getScriptData("gender")
 
-    //Return it as scriptData
+//Return it as scriptData
     Spark.setScriptData("name", pName);
     Spark.setScriptData("age", pAge);
     Spark.setScriptData("gender", pGender);
@@ -108,3 +116,66 @@ Here's the Cloud Code:
 ```
 
 <q>**The Basic Method!** This example using a combination of Events and Cloud Code illustrates the basic method of passing and returning values from SDK to the GameSparks platform.</q>
+
+## Android Requests and Responses Extra Functionality
+
+GameSparks conveniently offers you the ability to augment existing calls and responses with extra functionality. In the portal, if you navigate to *Configurator > Cloud Code*, you will see tabs for Requests, Responses, User Messages, and Global Messages. Once expanded, these tabs will allow you to add Cloud Code to any request, response, or message and achieve the extra functionality you want in your game.
+
+In this tutorial, we'll follow an example of how to do this by adding Cloud Code to the Registration request and response so that:
+* The *RegistrationRequest* will be blocked if the email is not passed in.
+* The *RegistrationResponse* will get the registered player's email and save it against that player's scriptData.
+
+Lastly, we'll see how to add scriptData to requests from the SDK for Android clients.
+
+### Registration Request
+
+First, we'll navigate to *Configurator > Cloud Code > Requests* and open the Registration Request Cloud Code. In there we'll add:
+
+```
+if(!Spark.getData().scriptData){
+    Spark.setScriptError("Error", "Need an Email")
+} else{
+    Spark.setScriptData("email",Spark.getData().scriptData.email );
+}
+
+```
+
+This will ensure that if the value 'email' isn't passed in through the scriptData object, then the registration will not continue.
+
+
+### Registration Response
+
+Second, we'll navigate to *Configurator > Cloud Code > Responses* and add this to the Cloud code:
+
+```
+if(Spark.getData().scriptData){
+    var email = Spark.getData().scriptData.email;
+    Spark.getPlayer().setScriptData("email", email);
+}
+
+```
+
+After the response is received, the player will be authenticated, so calling *Spark.getPlayer()* will return the just registered player. After getting the player, we save the email value against their scriptData.
+
+### SDK Request
+
+Finally, here's how we add scriptData to your requests from the SDK, similar to the way we use Attributes for Events:
+
+```
+
+Map scriptData = new HashMap();
+    scriptData.put("email",string);
+
+    GSAndroidPlatform.gs().getRequestBuilder().createRegistrationRequest()
+          .setUserName(string)
+          .setDisplayName(string)
+          .setPassword(string)
+          .setScriptData(scriptData)
+          .send(new GSEventConsumer() {
+            @Override
+            public void onEvent(GSResponseBuilder.RegistrationResponse registrationResponse) {
+
+                  }
+            });
+
+```

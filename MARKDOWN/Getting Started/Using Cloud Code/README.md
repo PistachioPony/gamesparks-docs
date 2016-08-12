@@ -16,7 +16,7 @@ The Test Harness is an invaluable tool, because it allows you to send API reques
 
 In this tutorial, you'll learn how to persist some meaningful data in mongoDB using Cloud Code - you'll be storing and retrieving X, Y, and Z player position coordinates. We'll then walk you through using the Test Harness to check your Cloud Code.
 
-<q>**Note:** Cloud Code is platform independent and is written in JavaScript, meaning that if you wanted to use a different SDK, you wouldn't need to change the Cloud Code you've already written.</q>
+<q>**Cross Platform!** Cloud Code is platform independent and is written in JavaScript, meaning that if you wanted to use a different SDK, you wouldn't need to change the Cloud Code you've already written.</q>
 
 ## Event Creation
 
@@ -73,7 +73,7 @@ The Get Position Event is essentially a reverse of the Set Position Event. Here 
 
 ![](img/UsingCloudCode/7.png)
 
-<q>**Note:** If you had the Requests debugger ticked, it will open at this point. This only happens if the Request has some Cloud Code set on it. Either step through the code or stop debugging. You can read more about the debugger [here](/Documentation/Test Harness/Debugger.md).</q>
+<q>**Note:** If you had the Requests debugger ticked, it will open at this point. This only happens if the Request has some Cloud Code set on it. Either step through the code or stop debugging. You can read more about the debugger [here](/Documentation/Test Harness/Debugger.md) .</q>
 
 *3.* You can now validate that the POS has been set in the players Script Data by Calling an [AccountDetailsRequest](/API Documentation/Request API/Player/AccountDetailsRequest.md).
 
@@ -90,3 +90,4 @@ The Get Position Event is essentially a reverse of the Set Position Event. Here 
 * [Unity](/Getting Started/Using Cloud Code/Unity Cloud Code.md)
 * [Unreal](/Getting Started/Using Cloud Code/Unreal Cloud Code.md)
 * [ActionScript](/Getting Started/Using Cloud Code/ActionScript Cloud Code.md)
+* [Android](/Getting Started/Using Cloud Code/Android Cloud Code.md)
