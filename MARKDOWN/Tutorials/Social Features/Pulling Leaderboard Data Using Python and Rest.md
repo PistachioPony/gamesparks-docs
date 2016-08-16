@@ -11,7 +11,22 @@ Many of our customers like to use their Leaderboard data for analytics or compar
 
 This tutorial attempts to solve this problem by offering a method to speed up Leaderboard data extraction. We'll use a custom callback and a simple python-script to automatically check your Leaderboard and paginate the response from the server into a single document (text-file) containing the information you need for analysis.
 
-<q>**General Method for Data Extraction!** This tutorial applies to Leaderboards, but the method used can easily be modified to pull data from any collection for your own backup or analysis.</q>
+</br>
+<q>**General Method for Data Extraction!** This tutorial applies to extracting Leaderboard data, but you can easily modify the method to pull data from any collection for your own backup or analysis.</q>
+
+
+### Downloadables
+
+**Example Scripts** for this tutorial can be downloaded [here](http://repo.gamesparks.net.s3.amazonaws.com/docs/tutorial-assets/Pulling%20Leaderboard%20Data%20Using%20Python.zip).
+
+We've included in this tutorial download:
+* JavaScript for the GameSparks callback used in this tutorial.
+* A python 3.3 script.
+* A python 2.7 script.
+
+You'll notice that the python scripts have more content than described and discussed in this tutorial. We've done this to give you an example of how you could automate this program, given that the url, Leaderboard name, limit, and so on are known - simply hard-code those variables and the program can auto-run, validating each parameter itself.
+
+
 
 
 ## Custom Callback Script
@@ -20,7 +35,7 @@ We'll first need to create a custom-callback script, which will be the endpoint 
 
 For more information on how to create a custom callback, check out the tutorial [here](/Tutorials/Cloud Code and the Test Harness/Using Custom Callback Urls.md).
 
-For this tutorial, let's call this callback ‘lbRequests’. It's is not important what you call your callback. However, you'll have to keep track of the name and secret of your callback:
+For this tutorial, let's call this callback ‘lbRequests’. It's not important what you call your callback. However, you'll have to keep track of the name and secret of your callback:
 
 ![](img/PullLBoard/1.png)
 
@@ -73,7 +88,9 @@ You can just add the key to the body of the request as url-encoded form data:
 
 ### Testing the Leaderboard
 
-Next we're going to test a Leaderboard name sent to this script from the python program. While we are doing this, we'll check to see if the Leaderboard is partitioned and then either return a message indicating that a partition-id is needed or that the leaderboard name is correct and the program can continue.
+Next:
+* We're going to test a Leaderboard name sent to this script from the python program.
+* While we are doing this, we'll check to see if the Leaderboard is partitioned and then either return a message indicating that a partition-id is needed or that the Leaderboard name is correct and the program can continue.
 
 ```
 
@@ -105,7 +122,7 @@ So this example in Postman would look like this:
 
 If the previous test requested a partition-id, then we'll send one from the program. In this case, we'll be sending the fields: partition_id, lb-name and the key will be ‘test_part’.
 
-This code will be very similar to the code for the Leaderboard name check, only that here the Leaderboard name is the lb_name and partition_id fields together to create the full Leaderboard name. We'll also have to add a period in between the name and partition-id because the shortcode of a partitioned Leaderboard includes this. For example, the leaderboard name ‘lbpart’ has the partition ‘partition_1’, so the full name is ‘lbpart.partition_1’.
+This code will be very similar to the code for the Leaderboard name check, only that here the Leaderboard name is the lb_name and partition_id fields together to create the full Leaderboard name. We'll also have to add a period between the name and partition-id because the shortcode of a partitioned Leaderboard includes this. For example, the Leaderboard name ‘lbpart’ has the partition ‘partition_1’, so the full name is ‘lbpart.partition_1’.
 
 ```
 
@@ -122,26 +139,195 @@ var lb = Spark.getLeaderboards().getLeaderboard(requestRaw.lb_name+’.’+reque
 
 ![](img/PullLBoard/4.png)
 
+## Pulling Leaderboard Data
+
+The next request will pull Leaderboard data. In order to do this, we'll need to send a few fields to this callback:
+* The key, which will now be 'pull data'.
+* The limit:
+  * *This is the number of documents to return (maximum 1000).*
+* The page number:
+  * *This is the current group of documents you require. For example, if the page is 1 and the limit is 50, then you are requesting documents 50-100 (page 0 would be for documents 1-50).  So the python script works by incrementing the page, each time it gets a response from the previous page-request. It will keep going until there is no data being returned.*
+* The Leaderboard name.
+* The partition-id.
+
+So...
+
+*1.* First we get the offset of this request. The offset is always the limit multiplied by the page number, as explained above.
+
+*2.*  We then use the getEntries() function to get the current cursor and then iterate through that cursor to get the specific data we want to return. In this example, we're only interested in the player’s Id and rank, but you could adapt this for score or supplemental data if required.
+
+*3.* We then return an array of data we collected from each doc in the cursor.
+
+```
+
+else if(requestRaw.key === 'pull_data'){
+
+    var limit = parseInt(requestRaw.limit);
+    var offset = limit * parseInt(requestRaw.page);
+    var lbName = requestRaw.lb_name;
+    if(requestRaw.partition_id != “”){
+        lbName += "."+requestRaw.partition_id;
+    }
+    var lb = Spark.getLeaderboards().getLeaderboard(lbName);
+    var data = [];
+    var cursor = lb.getEntries(limit, offset)
+    while (cursor.hasNext()) {
+        var entry = cursor.next();
+        data.push({"playerId": entry.getUserId(), "rank": entry.getRank()});
+    }
+    Spark.setScriptData("RESPONSE_RAW", data)
+}
 
 
-## Pulling Leaderboard Data 1
+```
 
+![](img/PullLBoard/5.png)
 
 ## Python Script
 
+The next step is to setup the python script. This will be a very simple script. It will have several steps:
+
+*1.* Setup some null variables which will be used to store the input from the user. Later they'll be null-checked to make sure we have valid data before trying to pull the data from the Leaderboard.
+
+*2.* Import the relevant packages:
+* *We will need the 'requests' package.*
+
+*3.* Prompt the user for the endpoint URL and test it.
+
+*4.* Prompt the user for the Leaderboard name and test it.
+
+*5.* Prompt the user for the partition name and test it.
+
+*6.* Prompt the user for the limit (which we'll check is less than 1000).
+
+*7.* When we have all the information above checked, we'll run a loop, starting at page ‘0’, until we get no information in the response.
+
+*8.* We'll then prompt the user for a filename to save the file as.
+
+
 ### Variables
 
+The variables will be set up as follow:
+
+```
+
+callback_url = None
+lb_name = None
+partition_id = None
+limit = None
+file_name = None
+request_details = None
+import requests
+
+
+```
+
+The *request_details* field is important here, because it will be used to check when we have complete information. The program will not start pulling Leaderboard data until this variable is set.
 
 ### User Prompts
 
+Our user-prompts are going to be simple. We'll print some dialog to the console and then save the user’s input. At each step, we'll send off a specific HTTP request with that information.
+
+To construct the request, we create a payload variable, which will store the post-data as a url-string. We'll then assign the post-headers (we only need to do this once), and then send the request with the callback URL, headers, and post-data.
+
+When we’ve sent this once, all we need to do for any additional requests is change the payload and send the request again:
+
+```
+
+print('Step 1 - Please Enter the endpoint URL for your leaderboard callback.')
+    callback_url = input('Enter Endpoint URL: ')
+    print('>>> callback url', callback_url)
+    # check that the callback is valid
+    payload = "key=test_endpoint"
+    headers = {'content-type': "application/x-www-form-urlencoded", 'cache-control': "no-cache" }
+    response = requests.request("POST", callback_url, data=payload, headers=headers)
+    print("Response From Server: "+response.text)
+    if response.text == 'endpoint-valid':
+        print('End Point URL Valid...')
+        # prompt the user for a leaderboard name
+	etc…
 
 
-## Pulling Leaderboard Data 2
+```
 
+The code-snippet above is incomplete, because the script gets quite repetitive - it is only requesting input from the user, validating it, and then checking the next input. There is a complete example of the code available to download with this tutorial.
+
+An important part is missing - when the user has entered the limit, you set the request_details variable to ‘true’:
+
+```
+
+if response.text != 'invalid-partition-id':
+                    if float(limit) <= 1000:
+                        request_details = 'true'
+                    else:
+                        print('limit must be less than 1000');
+
+
+
+```
+
+
+
+## Compiling Leaderboard Data
+
+Pulling and compiling the data is simple, once we have the information we need. All we need to do is create a loop which will send a request and check for Leaderboard data until the requests are no longer returning data. At that point it will break from the loop and prompt the user for a file-name. It will then save the file under that name, in the same folder where the script was run.
+
+```
+
+if request_details:
+    print('Sending Request')
+    page = 0
+    data = ""
+    if partition_id == None:
+        partition_id = ""
+    while (page >= 0):
+
+        requestBody = "key=pull_data&lb_name="+lb_name+"&partition_id="+partition_id+"&limit="+str(limit)+"&page="+str(page)
+        print('request-body: '+requestBody)
+        payload = requestBody
+        response = requests.request("POST", callback_url, data=payload, headers=headers)
+        #print(response.text)
+        if page == 0:
+            data += response.text[:-1]
+        elif response.text != '[]':
+            data += "," +response.text[1:-1]
+        elif response.text == None:
+            print('Error: Invalid Response from server...')
+            break
+        elif response.text == "[]":
+            data += "]"
+            print('No More Data In Leaderboard...')
+            break
+        page += 1
+    print('Extracted '+str(page-1)+' pages...')
+
+    fileName = input('Enter File Name:')
+    text_file = open(fileName+".txt", "w")
+    text_file.write(data)
+    text_file.close()
+    print('File Saved...')
+    print('File can be found in the folder this program was run from')
+else:
+    print('Details Incorrect, Closing Program...')
+
+
+```
+
+You’ll notice from this code that we do several things with the response. All responses come back as array-strings, so in order to get the file in the correct format, we need to append these strings together. However, these string have brackets (‘[ ]’) at the start and end and which we'll need to remove at certain points so that, after we have appended all responses together, we get a valid JSON array.
+
+So, we perform the following steps to append this data correctly:
+1.	First, if we have the response from the first page, we need to remove the bracket at the end but keep the one at the start.
+2.	The second thing to check is for all other requests - we remove the start and ending brackets so they can be joined together without any problems.
+3.	Then we check to see if we have received the last of the data from the Leaderboard (that is, the requests are returning empty arrays) and add a final bracket to the end, and break out of the loop.
+4.	We also added in a case where no data is returned from the Leaderboard. In this case, the program should break out of the loop and print an error.
+
+Once this loop has run, we should have a valid JSON string encapsulated with opening and closing array brackets. *Then* we save the file in the location given by the user.
 
 
 ## Summary
 
+With these two scripts you can pull down Leaderboards of any size and store specific attributes you want for backup or analysis.
 
+However, there are many uses for this program and not related to Leaderboards. For example, you could modify this program to extract data from collections instead of just Leaderboards. By using the collection name instead of the Leaderboard name, this program can be used for backups of your own database collections if you wish.
 
-### Downloadables
+This is just one of the examples that our customers use this kind of program for. If you can think of any other examples and you would like us to build tutorials for them, please leave a comment on this tutorial.
