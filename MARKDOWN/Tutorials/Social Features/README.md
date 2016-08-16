@@ -16,5 +16,6 @@ Use these tutorials to learn how to set up and manage the social features you wa
 * [Creating Time Based Leaderboards](/Tutorials/Social Features/Creating Time Based Leaderboards.md)
 * [Partitioning Leaderboards](/Tutorials/Social Features/Partitioning Leaderboards.md)
 * [Retrieving Leaderboard Entries](/Tutorials/Social Features/Retrieving Leaderboard Entries.md)
+* [Pulling Leaderboard Data Using Python and Rest](/Tutorials/Social Features/Pulling Leaderboard Data Using Python and Rest.md)
 * [Setting Up Chat Messages](/Tutorials/Social Features/Setting Up Chat Messages.md)
 * [Setting Up Teams for Chat](/Tutorials/Social Features/Setting Up Teams for Chat.md)

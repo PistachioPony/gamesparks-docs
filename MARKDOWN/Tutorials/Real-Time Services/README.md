@@ -28,12 +28,14 @@ Our real-time services provide a network communication layer which has the abili
 
 ## Tutorials
 
+* [Creating and Using Real-Time Scripts](/Tutorials/Real-Time Services/Creating and Using Real-Time Scripts.md) - Setting up a real-time script and understanding the functions available through the RTSession API.
+
 * [Setting Up Real-Time Matchmaking](/Tutorials/Real-Time Services/Setting Up Real-Time Matchmaking.md) - Integrating the real-time SDK into an existing GameSparks project in Unity3D and setting up a new real-time match through your game’s portal.
 
 * [Real-Time Matchmaking & Player Lobby](/Tutorials/Real-Time Services/Real-Time Matchmaking.md) - Using the GameSparks matchmaking services to match players of a certain skill level.
 
-* [Real-Time Chat Services](/Tutorials/Real-Time Services/Implementing Real-Time Chat Services.md) - Once a real-time session has started from the match setup in the lobby, how to start sending and receiving packets to build an real-time chat service.
+* [Real-Time Chat Services](/Tutorials/Real-Time Services/Implementing Real-Time Chat Services.md) - Once a real-time session has started from the match set up in the lobby, how to start sending and receiving packets to build a real-time chat service.
 
 * [Multiplayer Game Example](/Tutorials/Real-Time Services/Real-Time Game Example.md) - To demonstrate the real-time services, this tutorial shows you how to create a very simple multiplayer game. This example will have networked objects moving around, firing projectiles, and sending and receiving information between each player to update each other’s game-objects.
 
-* [Clock Synchronization and Network Programming](/Tutorials/Real-Time Services/Clock Synchronization and Network Programming.md) - This tutorial explores further key concepts in multiplayer network programming, such as clock-synchronization and packet analytics
+* [Clock Synchronization and Network Programming](/Tutorials/Real-Time Services/Clock Synchronization and Network Programming.md) - This tutorial explores further key concepts in multiplayer network programming, such as clock-synchronization and packet analytics.

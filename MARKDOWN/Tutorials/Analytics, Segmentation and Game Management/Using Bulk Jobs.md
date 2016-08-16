@@ -9,7 +9,9 @@ You can use Bulk Jobs in the GameSparks platform to collectively update all Play
 * For Players to action their own updates.
 * To have an administrator individually update each Player record.
 
-Bulk Jobs are a very useful tool for your game management operations. In this tutorial we'll learn about the two ways you can work with Bulk Jobs:
+Bulk Jobs are a very useful tool for your game management operations.
+
+In this tutorial we'll learn about the two ways you can work with Bulk Jobs:
 * Through requests.
 * Through Cloud Code.
 

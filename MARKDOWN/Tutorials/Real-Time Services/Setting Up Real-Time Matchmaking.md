@@ -1,5 +1,5 @@
 ---
-nav_sort: 1
+nav_sort: 2
 src: /Tutorials/Real-Time Services/Setting Up Real-Time Matchmaking.md
 ---
 
@@ -22,13 +22,15 @@ To set up a real-time match, you follow the same steps as for normal matches:
 
 1. Under *Configurator* on your game's portal, click *Multiplayer*.
 2. On the *Matches* panel, click the ![](/img/fa/plus.png) icon.
-3. Enter the match details as normal and select the *RealTime* check box:
+3. Enter the match details as normal and select the *RealTime* check box.
+4. Click the plus ![](/img/fa/plus.png) icon to add a threshold to the Match. If you do not have at least one Threshold in the Match, when you try to matchmake from the client you will get this error: "matchShortCode: NOT_FOUND"
 
-![](img/RTSDK/2.png)
+![](img/RTSDK/3.png)
 
 For this example:
 * You have the option to add a *Realtime Script* to the match. However, in this example we will not be covering real-time scripts.
 * To suit the real-time 4-player game we'll be building in a subsequent tutorial, we don't want the match to start until all players have joined the game, so we've set both the *Min.Players* and the *Max.Players* to 4.
+* We've added a single Threshold for Absolute matching of players with skill level of zero. As we'll see in the later tutorial for [Real-Time Matchmaking](/Tutorials/Real-Time Services/Real-Time Matchmaking.md) we'll assume players for our TANK_BATTLE Match will have skill level zero.
 
 
 That is all that is needed to setup a real-time match in GameSparks!

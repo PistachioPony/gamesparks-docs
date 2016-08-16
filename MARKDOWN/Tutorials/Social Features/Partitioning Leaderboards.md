@@ -1,4 +1,5 @@
 ---
+nav_sort: 7
 src: /Tutorials/Social Features/Partitioning Leaderboards.md
 ---
 

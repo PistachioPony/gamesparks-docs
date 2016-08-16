@@ -120,6 +120,8 @@ You can use the Thresholds that you add to a Match configuration to define the c
 * **Threshold Period.** Set a period to control how long you want the matching process to continue trying to find a Match using a Threshold.
 * **Accept Minimum Players.** Match the players currently found in the Threshold period that meet the matching criteria, as soon as the number of players found and matched is equal to the value in the *Min. Players* field.
 
+<q>**At Least One!** You must add at least one Threshold to the Match. If you do not have at least one Threshold in the Match, when you try to matchmake from the client you will get this error: "matchShortCode: NOT_FOUND".</q> 
+
 <q>**Example.** Here, we'll use the Thresholds defined for our example Match configuration to explain how you can use Threshold Types and Periods, and how to use Accept Minimum Players for a Threshold.</q>
 
 ![](img/HowToMatchPlayers/7.png)  

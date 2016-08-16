@@ -1,4 +1,5 @@
 ---
+nav_sort: 2
 src: /Tutorials/Social Features/Configuring iOS Push Notifications.md
 ---
 

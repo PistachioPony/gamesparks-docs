@@ -1,4 +1,5 @@
 ---
+nav_sort: 5
 src: /Tutorials/Social Features/Creating Team Leaderboards.md
 ---
 

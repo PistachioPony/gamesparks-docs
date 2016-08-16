@@ -1,4 +1,5 @@
 ---
+nav_sort: 4
 src: /Tutorials/Social Features/Creating a Leaderboard.md
 ---
 

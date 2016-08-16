@@ -1,4 +1,5 @@
 ---
+nav_sort: 8
 src: /Tutorials/Social Features/Retrieving Leaderboard Entries.md
 ---
 

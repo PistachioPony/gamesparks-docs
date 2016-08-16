@@ -1,4 +1,5 @@
 ---
+nav_sort: 1
 src: /Tutorials/Social Features/Configuring Android Push Notifications.md
 
 ---
