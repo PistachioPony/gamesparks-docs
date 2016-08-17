@@ -7,6 +7,8 @@ src: /Documentation/Manage/Working with Dynamic Forms.md
 
 This tutorial is a step-by-step guide to creating Dynamic Forms. For this Tutorial, we will create Dynamic Forms for the management of Players in our game. Before starting this tutorial, it's vital to understand the [Dynamic Forms API](/API Documentation/Dynamic Forms API.md).
 
+Lastly, we give an example of how you can build pop-up behavior into a snippet for use on your Dynamic Forms.
+
 ## Basics of Dynamic Forms
 
 This section will cover the creation of a basic Screen and Snippet, and how to link them together.
@@ -50,7 +52,7 @@ As a rule of thumb, you want very little logic in the Screen itself as it should
 
 ### Creating a Snippet
 
-Snippets contain the logic of how your Dynamic Forms behave. Snippets should have meaningful names and Short Codes as Snippets are accessed by their Short Code. Following the trend where Screens shouldn't contain as little logic as possible, we'll create a Snippet that will execute the same Dummy Data as the Screen did before.
+Snippets contain the logic of how your Dynamic Forms behave. Snippets should have meaningful names and Short Codes as Snippets are accessed by their Short Code. Following the trend where Screens should contain as little logic as possible, we'll create a Snippet that will execute the same Dummy Data as the Screen did before.
 
 *5.* Navigate to the Snippets tab and create a snippet, giving it a Short Code of *player_search*.
 
@@ -97,7 +99,7 @@ Since Dynamic Forms are very flexible in the way you implement them, there certa
 
 ### Players Screen
 
-Our Players Screen will contain the code to execute the *player_search* Snippet as well as including the a placeholder for the *player_results* Snippet that will serve as a target where we want to render our search results.
+Our Players Screen will contain the code to execute the *player_search* Snippet as well as including a placeholder for the *player_results* Snippet that will serve as a target where we want to render our search results.
 
 *8.* In the Players Screen, replace the following code with this:
 
@@ -1053,3 +1055,32 @@ function update(data){
 The complete *player_master* Master Snippet with all sub-Snippets:
 
 ![](img/DynamicForms/15.png)
+
+## Dynamic Forms - Pop-Up example
+
+*1.* First, we have a snippet called *popup_bttn_view* with a button where we can call this popup modal. Here we send the variable *action=view* to the *popup_example* snippet when the button is pressed:
+
+```
+
+<gs-link snippet="popup_example?action=view" target="modal-small">
+    <button>Show Popup</button>
+</gs-link>
+
+```
+
+![](img/DynamicForms/16.png)
+
+*2.* Then in the snippet called *popup_example* we use that variable to let the pop-up snippet know when to show the pop-up and when to go back to the last screen
+
+![](img/DynamicForms/17.png)
+
+*3.* We can follow the steps for this snippet:
+
+![](img/DynamicForms/18.png)
+
+1. We sent *action=view* from the previous screen, so we can check this in a switch-case to see if we should view or exit the pop-up.
+2. If there is other data you want to send with the form, you can do that in the view method.
+3. In html we use handlebars to check if *exit* was sent in the form and, if not, we draw a simple title with some text and a button.
+4. The button triggers the same snippet, only this time we pass in the *action=exit* and the target is our original placeholder screen.
+5. The snippet runs again, only instead of view, we'll run the exit method which adds the exit variable to the form.
+6. Now when we run the html we close the modal and bring up the last screen again.

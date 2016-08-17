@@ -31,7 +31,7 @@ To create a new Match, click the ![](/img/fa/plus.png) icon and you will be pres
   * *Name* \- The Name field is a mandatory field used as an identifier to help the user find the Match in the Portal.
   * *Description* \- The Description is a mandatory field which should be used to describe the Match.
   * *Min. Players* \- The minimum number of players required for a Match to be found. This number will be used to find a Match, only if a Threshold is selected to accept this minimum number of players. Typically, a Match will not be found unless the maximum number of players is found. You can use this option to ensure that a Match is found on the basis of one of the Match Thresholds but for only the minimum number.
-  * *Max. Players* \- The number of players required for a Match to be found, if the minimum number of players is not accepted.
+  * *Max. Players* \- The number of players required for a Match to be found if the minimum number of players is not accepted.
   * *RealTime* \- Select for a Real-Time Match.
   * *Realtime Script* \- For a Real-Time Match, you can select a Realtime script, which will be run on the Real-Time server when the Real-Time session starts. See the Realtime scripts section [here](/Documentation/Configurator/Cloud Code.md).
   * *Drop In/Drop Out* \- Select for a Drop in/Drop out Match. In this type of Match, the player list found for the Match doesn't remain fixed after the Match is made. Players that meet all of the matching criteria can enter or leave the Match. There are two important constraints:
@@ -47,3 +47,5 @@ To create a new Match, click the ![](/img/fa/plus.png) icon and you will be pres
     * *Type* \- The type of range calculation to use when looking for a Match.  This can be *Absolute*, *Relative*, or *Percent*.
     * *Min/Max* \- The minimum and maximum values used for the type of range calculation used in the Threshold.
     * *Accept Min. Players* \- Select this option for a Threshold, if you want a Match to be made on the basis of the Threshold for the minimum number of players and not have to wait until the maximum number of players are found that fall within the Threshold range.
+
+  <q>**At Least One!** You must add at least one Threshold to a Match. If you do not have at least one Threshold in the Match, when you try to matchmake from the client you will get this error: "matchShortCode: NOT_FOUND".</q>
