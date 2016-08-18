@@ -5,35 +5,71 @@ src: /Documentation/Manage/Working with Dynamic Forms.md
 
 # Dynamic Forms
 
-This tutorial is a step-by-step guide to creating Dynamic Forms. For this Tutorial, we will create Dynamic Forms for the management of Players in our game. Before starting this tutorial, it's vital to understand the [Dynamic Forms API](/API Documentation/Dynamic Forms API.md).
+This tutorial is a step-by-step guide to creating Dynamic Forms. For this Tutorial, we'll create Dynamic Forms for the management of Players in our game.
 
 Lastly, we give an example of how you can build pop-up behavior into a snippet for use on your Dynamic Forms.
 
+<q>**Important!** Before you start this tutorial, it's vital that you understand the [Dynamic Forms API](/API Documentation/Dynamic Forms API.md).</q>
+
 ## Basics of Dynamic Forms
 
-This section will cover the creation of a basic Screen and Snippet, and how to link them together.
+This section covers:
+* How to create a basic Screen and a Snippet.
+* How to link a Screen and Snippet together.
 
 ### Creating a Screen
 
-Whenever creating Dynamic Forms, you should always start with a Screen. A Screen is powered by the structure of Snippets that you create. You can have as many Screens as you desire, however a Screen should have a meaningful name. In this tutorial, it will be called Players.
+Whenever you want to create a Dynamic Form, you should start with a Screen. A Screen is powered by the structure of Snippets that you create. You can have as many Screens as you desire, however a Screen should have a meaningful name. For this section, we'll call the Screen we create *Tutorial Players*.
 
-*1.* To create a Screen, simply navigate to the Manage section. From here, you will see a link labelled Admin Screens. Go here.
+*1.* To create a Screen, navigate to *Manage > Admin Screens*:
 
-![](img/DynamicForms/1.jpg)
+![](img/DynamicForms/19.png)
 
-In Admin Screens, you will see that the screen is split between the Screen Builder and Snapshots panels. The Snapshots panel works in a similar way to the Snapshots feature on the Game Overview page. It will backup and restore the state of your created Screens and Snippets.  
+In *Admin Screens*, you'll see that the screen is split between the *Screen Builder* and *Snapshots* panels:
 
-On the Screen Builder page, there are three sections. *Screens*, *Snippets* and *Charts*. Charts will not be covered here, instead you can find a separate tutorial on them [here](/Tutorials/Analytics, Segmentation and Game Management/Building Custom Analytics Dashboards.md). And an introduction to Collaborators and Capabilities that can be set on Screens and Snippets can be found [here](/Tutorials/Capabilities/README.md).
+![](img/DynamicForms/20.png)
 
-![](img/DynamicForms/2.jpg)
+#### Snapshots
 
-*2.* On the Screens section, click the '+' button to add a new Screen give it a name and a shortCode of *Players*. Once the Screen is created you will see a new tab appear on the GameSparks Management navigation bar. This will lead you to a new page where your snippets will be accessible:
+The *Snapshots* panel works in a similar way to the *Snapshots* feature on the *Game Overview* page - you can use it to backup and restore the state of your created Screens and Snippets.
 
-![](img/DynamicForms/3.jpg)
+<q>**Note:** The *Screen Snapshots* you create here are separate and distinct from the *Game Snapshots* you create from the *Overview* page.</q>
 
-Now that we have our Screen created, we can open the Screen Builder and enter some Dummy HTML code to test that the output is rendered as expected.
+#### Screen Builder
+On the *Screen Builder*, there are three tabs:
+* *Screens* - Create and configure Screens for your Dynamic Forms.
+* *Snippets* - Create and configure Snippets for your Screens.
+* *Charts* - Charts will not be covered here, instead you can find a separate tutorial on them [here](/Tutorials/Analytics, Segmentation and Game Management/Building Custom Analytics Dashboards.md).
 
-*3.* Add the following HTML in the left panel:
+<q>**Note:** There are three default Screens available when you create a game: *Leaderboards*, *Players*, and *Script Log*.</q>
+
+*2.* On the *Screen Builder*, click the plus ![](/img/fa/plus.png) icon. The *Create Screen* dialog appears:
+
+![](img/DynamicForms/22.png)
+
+Enter the details for the new Screen:
+* *Name* - Mandatory field for the name of the Screen.
+* *Short Code* - Mandatory field used to uniquely identify the Screen.
+* *Groups* - Optional field to assign a pre-configured Group to the Screen to control which users have read/write permissions to the Screen. For more details, see [Capabilities and User Permissions](/Tutorials/Capabilities/README.md)
+
+*3.* Click *Save*. When the Screen is created, it's added to the *Screen Builder* list and you'll see a new tab appear on the GameSparks *Manage* navigation bar:
+
+![](img/DynamicForms/23.png)
+
+
+<q>**No Screen Content?** If you click to open the new screen, the page will be blank. This is because you have not yet added any HTML to the Screen, rendered it, and saved the change. How to do this is covered in the next section.</q>
+
+### Adding GSML to Screens
+
+Here we'll open the default *Players* screen and put in some dummy GSML code and test that the output is rendered as expected.
+
+*1.* On the *Screen Builder*, click the edit ![](/img/fa/code.png) icon. The *Screen Builder - Players* appears:
+
+![](img/DynamicForms/24.png)
+
+You'll see the default GSML for this Screen in the left panel.
+
+*2.* Replace the default HTML with this "Dummy Data" GSML:
 
 ```
 <gs-title-block title="Test Title" padding="10">
@@ -42,29 +78,56 @@ This is Dummy Data
 
 ```
 
-You can open the Screen Builder by clicking the Edit Code ![](/img/fa/code.png) icon, and you can preview the rendered output by pressing the ![play](/img/fa/play.png) icon before deciding to save your changes.
+*3.* Click the play ![](/img/fa/play.png) icon to render the HTML into the right panel and preview it:
 
-![](img/DynamicForms/4.jpg)
+![](img/DynamicForms/25.png)
 
-*4.* Once you've saved your Screen, navigate to the newly created Players Screen where you will see the same rendered output as before.  
 
-As a rule of thumb, you want very little logic in the Screen itself as it should only act as a placeholder and an initiator for the Snippets.
+
+*4.* Click *Save* to save the changes to your Screen. You will receive a *Saved!* confirmation.
+
+*5.* Navigate to the updated *Players* Screen where you will see the same rendered output:
+
+![](img/DynamicForms/26.png)  
+
+<q>**Minimize Screen Logic!** As a rule of thumb, you'll want very little logic in the Screen itself, because it should only act as a placeholder and an initiator for the Snippets.</q>
 
 ### Creating a Snippet
 
-Snippets contain the logic of how your Dynamic Forms behave. Snippets should have meaningful names and Short Codes as Snippets are accessed by their Short Code. Following the trend where Screens should contain as little logic as possible, we'll create a Snippet that will execute the same Dummy Data as the Screen did before.
+Snippets contain the logic of how your Dynamic Forms behave. Snippets should have meaningful names and Short Codes because they are accessed by their Short Code. Following the design principle where Screens should contain as little logic as possible, we'll create a Snippet that will execute the same Dummy Data as the Screen we updated in the previous section.
 
-*5.* Navigate to the Snippets tab and create a snippet, giving it a Short Code of *player_search*.
+*1.* On the *Players Screen > Screen Builder* select the Snippets tab.
+
+*2.* Click the plus ![](/img/fa/plus.png) icon. The *Create Snippet* dialog appears:
+
+![](img/DynamicForms/27.png)
+
+Enter the details for the new Snippet:
+* *Name* - Mandatory field for the name of the Snippet.
+* *Short Code* - Mandatory field used to uniquely identify the Snippet.
+* *Groups* - Optional field to assign a pre-configured Group to the Snippet to control which users have read/write permissions to the Snippet. For more details, see [Capabilities and User Permissions](/Tutorials/Capabilities/README.md)
+
+*3.* Click *Save* to save the new Snippet, which is added to the list on the *Snippets* tab.
 
 ### The Snippet Builder
 
-The Snippet Builder view is divided into 4 quadrants. Moving around the view clockwise, the top-left quadrant is for JavaScript or Cloud Code that provides the logic and behaviour of the Dynamic Form. The top-right quadrant is for HTML / GSML or Handlebars code that renders the view. The bottom-right quadrant is the preview panel where the Dynamic Form will be rendered, including the logic provided by the JavaScript panel, once the ![play](/img/fa/play.png)  icon has been pressed. Finally, the bottom-right quadrant represents the JSON formatted response to the JavaScript / Cloud Code provided in the quadrant above it.
+*1.* On the *Snippets* tab, click the edit ![](/img/fa/code.png) icon for a *Snippet*. The *Snippet Builder* appears - here we'll edit *player_search*:
 
-*6.* Edit the Snippet code using the same GSML that we set for the Players Screen previously. Put this in the top-right quadrant, named Handlebars and save the changes.
+![](img/DynamicForms/28.png)
 
-![](img/DynamicForms/5.jpg)
+The Snippet Builder view is divided into 4 quadrants:
 
-Although there are many ways of writing the logic in Snippets, one of the more important things to consider when creating Snippets, is that ideally they should be self-contained and not dependent on other Snippets. This logic will be explained in more detail later on.
+**1** - The top-left quadrant is for JavaScript or Cloud Code that provides the logic and behaviour of the Dynamic Form.
+
+**2** - The top-right quadrant is for HTML / GSML or Handlebars code that renders the view.
+
+**3** - The bottom-right quadrant is the preview panel where the Dynamic Form will be rendered, including the logic provided by the JavaScript panel, when you click the ![play](/img/fa/play.png) icon.
+
+**4** - The bottom-left quadrant represents the JSON formatted response to the JavaScript / Cloud Code provided in the quadrant above it.
+
+*2.* Edit the Snippet code using the same GSML that we set for the Players Screen previously. Put this in the top-right, *Handlebars* quadrant and save the changes.
+
+<q>**Self-Contained Snippets!** Although there are many ways of writing the logic in Snippets, one of the more important things to consider when creating Snippets, is that ideally they should be self-contained and not dependent on other Snippets. This logic will be explained in more detail later on.</q>
 
 ### Snippet Workflow
 
