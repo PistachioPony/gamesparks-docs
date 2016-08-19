@@ -7,7 +7,7 @@ src: /Documentation/Manage/Working with Dynamic Forms.md
 
 Since Dynamic Forms are very flexible in the way you implement them, there certainly isn't one right way of creating them. This tutorial provides an example of the preferred way of implementing Dynamic Forms, highlighting their key features. You don't need to finish the full tutorial and understand all of the concepts to begin developing Dynamic Forms. This tutorial highlights only the basic capabilities within Dynamic Forms and, as a working example, we'll create Dynamic Forms for the management of Players in our game.
 
-Lastly, we give an example of how you can build pop-up behavior into a snippet for use on your Dynamic Forms.
+Lastly, we give an example of how you can build pop-up behavior into a Snippet for use on your Dynamic Forms.
 
 <q>**Important!** Before you start this tutorial, it's vital that you understand the [Dynamic Forms API](/API Documentation/Dynamic Forms API.md).</q>
 
@@ -59,7 +59,7 @@ Enter the details for the new Screen:
 
 <q>**No Screen Content?** If you click to open the new screen, the page will be blank. This is because you have not yet added any GSML to the Screen, rendered it, and saved the change. How to do this is covered in the next section.</q>
 
-### Adding GSML to Screens
+### Adding HTML/GSML to Screens
 
 Here we'll open the default *Players* screen and put in some dummy GSML code and test that the output is rendered as expected.
 
@@ -119,7 +119,7 @@ The *Snippet Builder* is divided into 4 quadrants:
 
 **1** - The top-left quadrant is for JavaScript or Cloud Code that provides the logic and behaviour of the Dynamic Form.
 
-**2** - The top-right quadrant is for HTML / GSML or Handlebars code that renders the view.
+**2** - The top-right quadrant is for adding HTML/GSML or Handlebars code that renders the view.
 
 **3** - The bottom-right quadrant is the preview panel where the Dynamic Form will be rendered when you click the ![play](/img/fa/play.png) icon, including the logic provided by the JavaScript panel.
 
@@ -176,7 +176,7 @@ Now that we have seen how to build a Dynamic Form by creating Screens and linkin
 
 Our *Players* Screen will contain the code to execute the *player_search* Snippet as well as including a placeholder for the *player_results* Snippet that will serve as a target where we want to render our search results.
 
-*1.* In the Players Screen, replace the following code with this:
+*1.* In the *Players Screen*, replace the following code with this:
 
 ```
 <gs-row>
@@ -380,7 +380,7 @@ We want to search for specific search criteria against the player. To do this, w
 
 The Achievement and Virtual Good Script Data that we retrieved earlier, will be passed onto the Handlebars quadrant, where we can manipulate our GSML based on it.  
 
-At the bottom of the GSML, we use Handlebars helpers (*if*, *each* and *unless*) to dynamically update the query display. The Handlebars code checks if an Achievement, Virtual Good, Segment exists and if so, iterates through each of them whilst refreshing the rendering of the GSML.
+At the bottom of the GSML, we use Handlebars helpers (*if*, *each* and *unless*) to dynamically update the query display. The Handlebars code checks if an Achievement, Virtual Good, or Segment exists and if so, iterates through each of them whilst refreshing the rendering of the GSML.
 
 *6.* Save the changes to the *user_query* Snippet and select Preview ![play](/img/fa/play.png).
 
@@ -424,7 +424,7 @@ Your query was: {{query}}
 
 This will simply output a title block containing our query data.
 
-*10.* Go to the Players Screen and submit a search. Note how we're accessing the data that was set in the JavaScript quadrant of the *player_search_results* Snippet, using the Handlebars notation *{{variable}}*:
+*10.* Go to the *Players* Screen and submit a search. Note how we're accessing the data that was set in the JavaScript quadrant of the *player_search_results* Snippet, using the Handlebars notation *{{variable}}*:
 
 ![](img/DynamicForms/11.png)
 
@@ -500,7 +500,7 @@ function view(data){
 </gs-title-block>
 ```
 
-*13.* Go to the Players Screen and submit another search.
+*13.* Go to the *Players* Screen and submit another search.
 
 The above code will display the number of records that were found, and if there are any results, it will iterate through them displaying basic information and adding a link to each of the results:   
 
@@ -740,7 +740,7 @@ function getDifference(balance, toSet){
 
 The code above will check if the action has been performed, and, if so, it will edit the currencies that were passed in.  
 
-*19.* Go back to the Players Screen, run the search, choose a result and ensure that the *player_currencies* placeholder has been populated:  
+*19.* Go back to the *Players* Screen, run the search, choose a result and ensure that the *player_currencies* placeholder has been populated:  
 
 ![](img/DynamicForms/14.png)
 
