@@ -48,4 +48,4 @@ To create a new Match, click the ![](/img/fa/plus.png) icon and you will be pres
     * *Min/Max* \- The minimum and maximum values used for the type of range calculation used in the Threshold.
     * *Accept Min. Players* \- Select this option for a Threshold, if you want a Match to be made on the basis of the Threshold for the minimum number of players and not have to wait until the maximum number of players are found that fall within the Threshold range.
 
-  <q>**At Least One!** You must add at least one Threshold to a Match. If you do not have at least one Threshold in the Match, when you try to matchmake from the client you will get this error: "matchShortCode: NOT_FOUND".</q>
+  <q>**At Least One!** You must add at least one Threshold to a Match. If you do not have at least one Threshold in the Match, when you try to matchmake from the client you will get an error.</q>

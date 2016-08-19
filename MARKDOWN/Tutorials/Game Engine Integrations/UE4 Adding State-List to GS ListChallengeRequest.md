@@ -5,9 +5,9 @@ src: /Tutorials/Game Engine Integrations/UE4 Adding State-List to GS ListChallen
 
 # UE4 Adding State-List to ListChallengeRequest
 
-If you are using the Unreal Engine 4 (UE4) with the GameSparks platform, this tutorial explains how to add State-List for the GameSparks ListChallengeRequest.
+If you are using the Unreal Engine 4 (UE4) with the GameSparks platform, this tutorial explains how to add State-List for the GameSparks [ListChallengeRequest](/API Documentation/Request API/Multiplayer/ListChallengeRequest.md).
 
-<q>**Pre-requisite!** In order for this to work, you'll need to set up some Challenges and issue them to the player you are authenticating with in UE4. If you call ListChallengeRequest by a player who is not involved in any challenges, you'll always get null back in the script-data, so you should set this up first.</q>
+<q>**Pre-requisite!** In order for this to work, you'll need to set up some Challenges and issue them to the player you are authenticating with in UE4. If you call *ListChallengeRequest* by a player who is not involved in any Challenges, you'll always get null back in the script-data, so you should set this up first.</q>
 
 
 *1.* To start, we'll set up *GS ListChallengeRequest* Node as below, and attached the response JSON string to print out to the screen. This is just for debugging, so we know exactly what we're receiving and if it's correct or not.

@@ -18,6 +18,8 @@ Parts of this tutorial follow on from the previous tutorials for making a tank-g
 
 The first thing we need to do is create a new real-time script and add it to our match. Real-time scripts operate in a similar way to Cloud Code scripts.
 
+<q>**More on RT Scripts?** For more details on creating and using Real-Time scripts, see this [RT Scripts](/Tutorials/Real-Time Services/Creating and Using Real-Time Scripts.md) tutorial.</q>
+
 To create a new RT-script:
 
 *1.* Go to *Configurator > Cloud Code* in your portal and select the *Realtime Scripts* drop-down.

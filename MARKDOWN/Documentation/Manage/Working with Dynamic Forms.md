@@ -5,7 +5,7 @@ src: /Documentation/Manage/Working with Dynamic Forms.md
 
 # Dynamic Forms
 
-This tutorial is a step-by-step guide to creating Dynamic Forms. For this Tutorial, we'll create Dynamic Forms for the management of Players in our game.
+Since Dynamic Forms are very flexible in the way you implement them, there certainly isn't one right way of creating them. This tutorial provides an example of the preferred way of implementing Dynamic Forms, highlighting their key features. You don't need to finish the full tutorial and understand all of the concepts to begin developing Dynamic Forms. This tutorial highlights only the basic capabilities within Dynamic Forms and, as a working example, we'll create Dynamic Forms for the management of Players in our game.
 
 Lastly, we give an example of how you can build pop-up behavior into a snippet for use on your Dynamic Forms.
 
@@ -15,17 +15,17 @@ Lastly, we give an example of how you can build pop-up behavior into a snippet f
 
 This section covers:
 * How to create a basic Screen and a Snippet.
-* How to link a Screen and Snippet together.
+* How to link a Screen and a Snippet together.
 
 ### Creating a Screen
 
-Whenever you want to create a Dynamic Form, you should start with a Screen. A Screen is powered by the structure of Snippets that you create. You can have as many Screens as you desire, however a Screen should have a meaningful name. For this section, we'll call the Screen we create *Tutorial Players*.
+Whenever you want to create a Dynamic Form, you should start with a Screen. A Screen is powered by the structure of Snippets that you create. You can have as many Screens as you want, however a Screen should have a meaningful name. In this section, we'll call the Screen we create *Tutorial Players*.
 
 *1.* To create a Screen, navigate to *Manage > Admin Screens*:
 
 ![](img/DynamicForms/19.png)
 
-In *Admin Screens*, you'll see that the screen is split between the *Screen Builder* and *Snapshots* panels:
+In *Admin Screens*, you'll see that the screen is split between the *Snapshots* and *Screen Builder* panels:
 
 ![](img/DynamicForms/20.png)
 
@@ -57,7 +57,7 @@ Enter the details for the new Screen:
 ![](img/DynamicForms/23.png)
 
 
-<q>**No Screen Content?** If you click to open the new screen, the page will be blank. This is because you have not yet added any HTML to the Screen, rendered it, and saved the change. How to do this is covered in the next section.</q>
+<q>**No Screen Content?** If you click to open the new screen, the page will be blank. This is because you have not yet added any GSML to the Screen, rendered it, and saved the change. How to do this is covered in the next section.</q>
 
 ### Adding GSML to Screens
 
@@ -67,9 +67,9 @@ Here we'll open the default *Players* screen and put in some dummy GSML code and
 
 ![](img/DynamicForms/24.png)
 
-You'll see the default GSML for this Screen in the left panel.
+You'll see the GSML for this default Screen in the left panel.
 
-*2.* Replace the default HTML with this "Dummy Data" GSML:
+*2.* Replace the GSML with this "Dummy Data" GSML:
 
 ```
 <gs-title-block title="Test Title" padding="10">
@@ -78,15 +78,15 @@ This is Dummy Data
 
 ```
 
-*3.* Click the play ![](/img/fa/play.png) icon to render the HTML into the right panel and preview it:
+*3.* Click the play ![](/img/fa/play.png) icon to render the GSML into the right panel and preview it:
 
 ![](img/DynamicForms/25.png)
 
 
 
-*4.* Click *Save* to save the changes to your Screen. You will receive a *Saved!* confirmation.
+*4.* Click *Save* to save the changes to your Screen. You'll get a *Saved!* confirmation.
 
-*5.* Navigate to the updated *Players* Screen where you will see the same rendered output:
+*5.* Navigate to the updated *Players* Screen where you'll see the same rendered output:
 
 ![](img/DynamicForms/26.png)  
 
@@ -111,46 +111,58 @@ Enter the details for the new Snippet:
 
 ### The Snippet Builder
 
-*1.* On the *Snippets* tab, click the edit ![](/img/fa/code.png) icon for a *Snippet*. The *Snippet Builder* appears - here we'll edit *player_search*:
+*1.* On the *Snippets* tab, click the edit ![](/img/fa/code.png) icon for a *Snippet*. The *Snippet Builder* - here we'll edit *player_search*:
 
 ![](img/DynamicForms/28.png)
 
-The Snippet Builder view is divided into 4 quadrants:
+The *Snippet Builder* is divided into 4 quadrants:
 
 **1** - The top-left quadrant is for JavaScript or Cloud Code that provides the logic and behaviour of the Dynamic Form.
 
 **2** - The top-right quadrant is for HTML / GSML or Handlebars code that renders the view.
 
-**3** - The bottom-right quadrant is the preview panel where the Dynamic Form will be rendered, including the logic provided by the JavaScript panel, when you click the ![play](/img/fa/play.png) icon.
+**3** - The bottom-right quadrant is the preview panel where the Dynamic Form will be rendered when you click the ![play](/img/fa/play.png) icon, including the logic provided by the JavaScript panel.
 
 **4** - The bottom-left quadrant represents the JSON formatted response to the JavaScript / Cloud Code provided in the quadrant above it.
 
-*2.* Edit the Snippet code using the same GSML that we set for the Players Screen previously. Put this in the top-right, *Handlebars* quadrant and save the changes.
+*2.* Edit the *Snippet* code using the same GSML that we set for the Players Screen previously. Put this in the top-right, *Handlebars* quadrant and save the changes.
 
-<q>**Self-Contained Snippets!** Although there are many ways of writing the logic in Snippets, one of the more important things to consider when creating Snippets, is that ideally they should be self-contained and not dependent on other Snippets. This logic will be explained in more detail later on.</q>
+<q>**Self-Contained Snippets!** Although there are many ways of writing the logic in Snippets, one of the more important things to consider when creating Snippets is that ideally they should be self-contained and not dependent on other Snippets. This logic will be explained in more detail later on.</q>
 
 ### Snippet Workflow
 
-Before we begin to design our Snippets, it's important to learn the flow of their creation using the Snippet Builder and the preferred order of using the quadrants. We can define variables for input values entered onto the corresponding Screen, or Script Data that needs to be accessed using Cloud Code. But, which one do we use first?  
-Normally, our first thought would be to know what Script Data the Snippet will require. Therefore, most Snippets will be initially created using the JavaScript quadrant *(1)*. To ensure we are getting the right data what is required for the Snippet at this stage, we can preview the Cloud Code using the ![play](/img/fa/play.png)  icon. This will generate a JSON formatted response in the bottom-left Response JSON quadrant *(2)*.
+Before we begin to design and build our Snippets, it's important to understand the flow of their creation using the *Snippet Builder* and the preferred order of using the quadrants on the Builder.
 
-Once we are happy that we have all the required data for the Snippet, we can design how it will be presented to the Screen by adding the HTML / GSML code for the elements we want to see *(3).* Using Handlebars, we can also access and manipulate the data from the JSON response. To test all of this, we can use the ![play](/img/fa/play.png)  icon to preview the rendering of the Snippet *(4)*.
+We can define variables for input values entered onto the corresponding Screen, or Script Data that needs to be accessed using Cloud Code. But, which one do we use first?
 
-However, this order may not always be the preferred way. For example, we might design a Screen using the Handlebars quadrant first, then realise we need to retrieve some more Script Data, by then calling that information using the JavaScript quadrant. As mentioned earlier, there are many routes to creating Snippets.
+The typical Snippet creation workflow breaks down into 4 steps:
+* *Step 1* - **Create Snippet Script Data.** Normally, our first thought would be to know what Script Data the Snippet will require. Therefore, we'll typically start the creation of most Snippets using the JavaScript quadrant **1**:
+* *Step 2* - **Check Scipt Data.** To ensure we are getting the right data that we require for the Snippet at this stage, we can preview the Cloud Code using the ![play](/img/fa/play.png)  icon. This will generate a JSON formatted response in the bottom-left JSON response quadrant **4**.
+* *Step 3* - **Design Snippet Screen Presentation.** Once we are happy that we have all the required data for the Snippet, we can design how it will be presented to the Screen by adding the HTML / GSML code for the elements we want to see in quadrant **2**. Using Handlebars, we can also access and manipulate the data from the JSON response.
+* *Step 4* - **Test Snippet Presentation.** To test all of this, we can use the ![play](/img/fa/play.png)  icon to preview the rendering of the Snippet in quadrant **3**.
+
+However, this order may not always be the preferred way. For example, we might design a Screen using the Handlebars quadrant first, then realize we need to retrieve some more Script Data by then calling that information using the JavaScript quadrant. As mentioned earlier, there are many routes to creating Snippets.
 
 ### Linking the Screen to the Snippet
 
 The next step is to remove the logic from the Screen itself, retaining only this code within the Snippet. Instead, we want to use the Players Screen to call the Snippet.
 
-*7.* In the Screen Builder, remove the existing GSML code and replace it with this:
+*1.* Select the *Screens* tab on the *Screen Builder*
+
+*2.* Click the edit ![](/img/fa/code.png) icon for the *Players* Screen. *Screen Builder - Players* appears.
+
+*3.* Remove the existing GSML code and replace it with this:
 
 ```
 <gs-snippet snippet="player_search"></gs-snippet>
+
 ```
 
-![](img/DynamicForms/6.jpg)
+*4.* Click the Click the play ![](/img/fa/play.png) icon to render the GSML into the right panel and preview it:
 
-As seen above, the Screen no longer contains any logic. It simply calls the Snippet using the *<gs-snippet>* tag with the value pointing at the *player_search* Snippet. Since there's no target provided, it will render the output across the entire page.
+![](img/DynamicForms/29.png)
+
+The Screen no longer contains any logic. It simply calls the Snippet using the *<gs-snippet>* tag with the value pointing at the *player_search* Snippet. The content of the Screen is now determined by what we have built into the Snippet.
 
 ### Master Snippets
 
@@ -158,13 +170,13 @@ A Master Snippet is a Snippet that can hold multiple Snippets that both manipula
 
 ## Dynamic Forms Player Search
 
-Since Dynamic Forms are very flexible in the way you implement them, there certainly isn't one right way of creating them. The following tutorial will only provide an example of the preferred way of implementing Dynamic Forms, highlighting their key features. It is not required to finish the full tutorial and understand all of the concepts to begin developing Dynamic Forms. This tutorial highlights only the basic capabilities within Dynamic Forms.
+Now that we have seen how to build a Dynamic Form by creating Screens and linking them to Snippets, we'll run through a concrete example of how to build a Dynamic Form for searching players in a game.
 
 ### Players Screen
 
-Our Players Screen will contain the code to execute the *player_search* Snippet as well as including a placeholder for the *player_results* Snippet that will serve as a target where we want to render our search results.
+Our *Players* Screen will contain the code to execute the *player_search* Snippet as well as including a placeholder for the *player_results* Snippet that will serve as a target where we want to render our search results.
 
-*8.* In the Players Screen, replace the following code with this:
+*1.* In the Players Screen, replace the following code with this:
 
 ```
 <gs-row>
@@ -178,8 +190,8 @@ Our Players Screen will contain the code to execute the *player_search* Snippet 
 <gs-row>
 <gs-placeholder id="player__results"></gs-placeholder>
 </gs-row>
-```
 
+```
 
 The above code gives us two rows, one containing the yet-to-be-implemented Player Search title bar and another row that will contain the results of whatever our Snippets submit.
 
@@ -187,7 +199,7 @@ The above code gives us two rows, one containing the yet-to-be-implemented Playe
 
 This Snippet will be solely responsible for displaying the *gs-query* and passing on the query input to the next "processing" Snippet once the Submit button is pressed.
 
-*9.* Replace the existing code in the *player_search* Snippet with the following:
+*2.* Replace the existing code in the *player_search* Snippet with the following:
 
 ```
 <gs-form snippet="player_search_results" target="player__results">
@@ -210,13 +222,13 @@ It's also worth noting that in the code, *user_query* is contained within a for
 
 We now want to create a *user_query* Snippet which we referred to earlier in our *player_search* Snippet.
 
-*10.* Create a *user_query* Snippet. This Snippet will contain the code for dynamically building a MongoDB query.  
+*3.* Create a *user_query* Snippet. This Snippet will contain the code for dynamically building a MongoDB query.  
 
 Using the preferred order of the quadrants, we initially need to know what Script Data the Snippet will require. In our example, we know that we want to query what Achievements and Virtual Goods the players have for this particular game.  
 
 To do this, we must first get a list of all the instances of a particular item using *Spark.getConfig()* and define that list within a local variable. Then, we have to set that list as Script Data, which can be modified using the HTML / GSML we wrote in the Handlebars quadrant.
 
-*11.* Add the following to the JavaScript quadrant for the *user_query* Snippet:
+*4.* Add the following to the JavaScript quadrant for the *user_query* Snippet:
 
 ```
 Spark.setScriptData("config", SnippetProcessor(Spark.getData().scriptData))
@@ -267,7 +279,7 @@ Here is the response from the code entered into the JavaScript quadrant, against
 
 We want to search for specific search criteria against the player. To do this, we can create a set of *<gs-query-field>* tags to hold the input data we provide to the Screen.
 
-*12.* Enter the following code into the Handlebars quadrant of the Snippet Builder:
+*5.* Enter the following code into the Handlebars quadrant of the Snippet Builder:
 
 ```
 <gs-query name="gsUserQuery" rules="{{config.rawRules}}">
@@ -370,13 +382,13 @@ The Achievement and Virtual Good Script Data that we retrieved earlier, will be 
 
 At the bottom of the GSML, we use Handlebars helpers (*if*, *each* and *unless*) to dynamically update the query display. The Handlebars code checks if an Achievement, Virtual Good, Segment exists and if so, iterates through each of them whilst refreshing the rendering of the GSML.
 
-*13.* Save the changes to the *user_query* Snippet and select Preview ![play](/img/fa/play.png).
+*6.* Save the changes to the *user_query* Snippet and select Preview ![play](/img/fa/play.png).
 
 ![](img/DynamicForms/9.png)
 
 The search feature is now complete.
 
-*14.* Select the Players tab on the GameSparks Management navigation bar. This will display the following rendered output:
+*7.* Select the Players tab on the GameSparks Management navigation bar. This will display the following rendered output:
 
 ![](img/DynamicForms/10.png)
 
@@ -386,7 +398,7 @@ You can see that the *user_query* has been rendered within the form. This allows
 
 When we click the Submit button on the Players Screen, all the data input into the form that was built using *player_search* Snippet will be collected and passed to the *player_search_results* Snippet, which does not yet exist. As the target of the form is defined as *player_results*, the output of this Snippet will be rendered there. We can now test that the query we've built is submitted correctly into the *player_search_results* Snippet.
 
-*15.* Create a new Snippet called *player_search_results* and enter the following into the JavaScript quadrant:
+*8.* Create a new Snippet called *player_search_results* and enter the following into the JavaScript quadrant:
 
 ```
 var query = Spark.data.scriptData.gsUserQuery;
@@ -396,11 +408,11 @@ Spark.setScriptData("query", JSON.stringify(query));
 
 *Spark.data.scriptData.*{_variable_} allows us to access the variable that's been passed into the Snippet.  
 
-*NOTE: *At this point, because the *player_search* Snippet hasn't been executed on our Players Screen, the variable in the example above (gsUserQuery) is null. Previewing ![play](/img/fa/play.png) the *user_query* Snippet at this point, would not produce any results.  
+<q>**Note:** At this point, because the *player_search* Snippet hasn't been executed on our Players Screen, the variable in the example above (gsUserQuery) is null. Previewing ![play](/img/fa/play.png) the *user_query* Snippet at this point, would not produce any results.</q>  
 
 *Spark.setScriptData* allows Script Data to be produced that will be later used in GSML / Handlebars code without requiring other Snippets to be executed.   
 
-*16.* Enter the following into the Handlebars quadrant:
+*9.* Enter the following into the Handlebars quadrant:
 
 ```
 <gs-row>
@@ -412,13 +424,13 @@ Your query was: {{query}}
 
 This will simply output a title block containing our query data.
 
-*17.* Go to the Players Screen and submit a search. Note how we're accessing the data that was set in the JavaScript quadrant of the *player_search_results* Snippet, using the Handlebars notation *{{variable}}*:
+*10.* Go to the Players Screen and submit a search. Note how we're accessing the data that was set in the JavaScript quadrant of the *player_search_results* Snippet, using the Handlebars notation *{{variable}}*:
 
 ![](img/DynamicForms/11.png)
 
 Now that we've validated that our query is being passed in with the form into *player_search_results* Snippet, we should query the mongo database and display the results.
 
-*18.* Add the following code to the JavaScript quadrant of the *player_search_results* Snippet:  
+*11.* Add the following code to the JavaScript quadrant of the *player_search_results* Snippet:  
 
 ```
 Spark.setScriptData("results", SnippetProcessor(Spark.getData().scriptData))
@@ -461,7 +473,7 @@ function view(data){
 
 *results* will have all of the data associated with each player that matched the query, limited to 5 search results for the tutorial.  
 
-*19.* Append the following GSML code to the *player_search_results* Handlebars quadrant:
+*12.* Append the following GSML code to the *player_search_results* Handlebars quadrant:
 
 ```
 <gs-title-block title="Results : {{results.limit}} of {{results.count}}">
@@ -488,7 +500,7 @@ function view(data){
 </gs-title-block>
 ```
 
-*20.* Go to the Players Screen and submit another search.
+*13.* Go to the Players Screen and submit another search.
 
 The above code will display the number of records that were found, and if there are any results, it will iterate through them displaying basic information and adding a link to each of the results:   
 
@@ -498,7 +510,7 @@ When the link is clicked, it will execute the yet-to-be-implemented *player_mast
 
 ### player_master Snippet
 
-*21.* Create a new Snippet called *player_master* and enter the following into the JavaScript quadrant:  
+*14.* Create a new Snippet called *player_master* and enter the following into the JavaScript quadrant:  
 
 ```
 Spark.setScriptData("form", SnippetProcessor(Spark.getData().scriptData))
@@ -520,7 +532,7 @@ function view(data){
 
 We could pass in the userName of the player from the *player_search_results* Snippet, however typically it's best practice to pass in as little data as possible into the Snippet and make it self-contained. This allows re-use of the Snippet in different Dynamic Forms without requiring any changes to be made in the code.  
 
-*22.* Enter the following GSML code into the Handlebars quadrant:
+*15.* Enter the following GSML code into the Handlebars quadrant:
 
 ```
 <gs-row>
@@ -569,7 +581,7 @@ This Snippet is responsible for displaying the currencies for the given player.
 
 First we will need to obtain the Currencies for the player and set them into the scriptData.  
 
-*23. *Create a new Snippet called *player_currencies* and enter the following Cloud Code into the JavaScript quadrant:
+*16. *Create a new Snippet called *player_currencies* and enter the following Cloud Code into the JavaScript quadrant:
 
 ```
 Spark.setScriptData("currencies", SnippetProcessor(Spark.getData().scriptData))
@@ -603,7 +615,7 @@ function view(data){
 
 When the Currencies are set we can then display them using GSML.  
 
-*24.* Enter the following GSML into the Handlebars quadrant:
+*17.* Enter the following GSML into the Handlebars quadrant:
 
 ```
 <gs-form snippet="player_currencies?action=update&playerId={{currencies.playerId}}" target="currencies__{{currencies.playerId}}">
@@ -666,9 +678,9 @@ When the Currencies are set we can then display them using GSML.
 </gs-form>
 ```
 
-As seen above, the Snippet is built as a form and is submitted to the placeholder that was set in *player_master.* it passes in an additional variable, *action* which is set to *edit*. We can now edit our *player_currencies* JavaScript to detect if this variable has been passed, and if so, edit the values and refresh the Snippet.  
+As seen above, the Snippet is built as a form and is submitted to the placeholder that was set in *player_master.* It passes in an additional variable, *action* which is set to *edit*. We can now edit our *player_currencies* JavaScript to detect if this variable has been passed, and if so, edit the values and refresh the Snippet.  
 
-*25.* Replace the Cloud Code in the *player_currencies* Snippet JavaScript quadrant with the following:
+*18.* Replace the Cloud Code in the *player_currencies* Snippet JavaScript quadrant with the following:
 
 ```
 Spark.setScriptData("currencies", SnippetProcessor(Spark.getData().scriptData))
@@ -726,9 +738,9 @@ function getDifference(balance, toSet){
 }
 ```
 
-The code above will check if action has been performed, and if so it will edit the currencies that were passed in.  
+The code above will check if the action has been performed, and, if so, it will edit the currencies that were passed in.  
 
-*26.* Go back to the Players Screen, run the search, choose a result and ensure that the *player_currencies* placeholder has been populated:  
+*19.* Go back to the Players Screen, run the search, choose a result and ensure that the *player_currencies* placeholder has been populated:  
 
 ![](img/DynamicForms/14.png)
 
@@ -736,11 +748,11 @@ The code above will check if action has been performed, and if so it will edit t
 
 The remaining three Snippets behave just like the *player_currencies* Snippet, in that they all obtain their own respective Script Data that is required to be displayed for that particular player.  They then allow the editing of that data, by invoking themselves with additional variables and finally rendering the changes in the placeholders which are located within the *player_master* Master Snippet.   
 
-*Congratulations!* If you have successfully followed everything up to this point, you should have a firm understanding of the Dynamic Forms workflow.   
+<q>**Congratulations!** If you have successfully followed everything up to this point, you should have a firm understanding of the Dynamic Forms workflow.</q>   
 
 The following steps are the final portions of code to be entered for the remaining Snippets that will fill the placeholders for the *player_master* Master Snippet.  
 
-*27.* Enter the following Cloud Code into the JavaScript quadrant for the *player_virtual_goods* Snippet:
+*20.* Enter the following Cloud Code into the JavaScript quadrant for the *player_virtual_goods* Snippet:
 
 ```
 Spark.setScriptData("form", SnippetProcessor(Spark.getData().scriptData))
@@ -821,7 +833,7 @@ function setVGoods(shortCode, owned, toSet){
 }
 ```
 
-*28.* Enter the following GSML into the Handlebars quadrant for the *player_virtual_goods* Snippet:
+*21.* Enter the following GSML into the Handlebars quadrant for the *player_virtual_goods* Snippet:
 
 ```
 <gs-form snippet="player_virtual_goods?action=update&playerId={{form.playerId}}" target="virtual__goods__{{form.playerId}}">
@@ -851,7 +863,7 @@ function setVGoods(shortCode, owned, toSet){
 </gs-form>
 ```
 
-*29.* Enter the following Cloud Code into the JavaScript quadrant for the *player_achievements* Snippet:
+*22.* Enter the following Cloud Code into the JavaScript quadrant for the *player_achievements* Snippet:
 
 ```
 Spark.setScriptData("form", SnippetProcessor(Spark.getData().scriptData))
@@ -924,7 +936,7 @@ function update(data){
 }
 ```
 
-*30.* Enter the following GSML into the Handlebars quadrant for the *player_achievements* Snippet:
+*23.* Enter the following GSML into the Handlebars quadrant for the *player_achievements* Snippet:
 
 ```
 <gs-title-block title="Achievements" padding="5" height="250">
@@ -987,7 +999,7 @@ function update(data){
 </gs-title-block>
 ```
 
-*31.* Enter the following Cloud Code into the JavaScript quadrant for the *player_details* Snippet:
+*24.* Enter the following Cloud Code into the JavaScript quadrant for the *player_details* Snippet:
 
 ```
 Spark.setScriptData("player", SnippetProcessor(Spark.getData().scriptData))
@@ -1055,7 +1067,7 @@ function update(data){
 }
 ```
 
-*32.* Enter the following GSML into the Handlebars quadrant for the *player_details* Snippet:
+*25.* Enter the following GSML into the Handlebars quadrant for the *player_details* Snippet:
 
 ```
 <gs-form snippet="player_details?action=update&playerId={{player.playerId}}" target="details__{{player.playerId}}">

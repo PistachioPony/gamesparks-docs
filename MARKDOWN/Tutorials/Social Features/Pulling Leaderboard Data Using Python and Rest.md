@@ -17,7 +17,7 @@ This tutorial attempts to solve this problem by offering a method to speed up Le
 
 ### Downloadables
 
-**Example Scripts** for this tutorial can be downloaded [here](http://repo.gamesparks.net.s3.amazonaws.com/docs/tutorial-assets/Pulling%20Leaderboard%20Data%20Using%20Python.zip).
+* **Example Scripts** for this tutorial can be downloaded [here](http://repo.gamesparks.net.s3.amazonaws.com/docs/tutorial-assets/Pulling%20Leaderboard%20Data%20Using%20Python.zip).
 
 We've included in this tutorial download:
 * JavaScript for the GameSparks callback used in this tutorial.
@@ -30,7 +30,7 @@ You'll notice that the python scripts have more content than described and discu
 
 We'll first need to create a custom-callback script, which will be the endpoint that our python program will post data to and receive a response from.
 
-For more information on how to create a custom callback, check out the tutorial [here](/Tutorials/Cloud Code and the Test Harness/Using Custom Callback Urls.md).
+<q>**More about Custom Callbacks?** Check out the tutorial [here](/Tutorials/Cloud Code and the Test Harness/Using Custom Callback Urls.md).</q>
 
 For this tutorial, let's call this callback *lbRequests*. It's not important what you call your callback. However, you'll have to keep track of the name and secret of your callback:
 
@@ -39,7 +39,7 @@ For this tutorial, let's call this callback *lbRequests*. It's not important wha
 
 ## Leaderboard Request Script
 
-This script is designed in several parts which are tied into the separate stages that the python program will go through. The script is designed this way so that you use the program to test multiple endpoints, Leaderboards, and Partitions instead of hard-coding all these parameters.
+This script is designed in several parts which are tied into the separate stages that the python program will go through. The script is designed this way so that you use the program to test multiple endpoints, Leaderboards, and Partitions, instead of hard-coding all these parameters.
 
 The callback script will have the following steps:
 
@@ -123,7 +123,8 @@ If the previous test requested a partition-id, then we'll send one from the prog
   * *lb-name*.
 * The key will be *test_part*.
 
-This code will be very similar to the code for the Leaderboard name check, but here the Leaderboard name is the *lb-name* and *partition-id* fields concatenated together to create the full Leaderboard name. We'll also have to add a period between the name and *partition-id* because the shortcode of a partitioned Leaderboard includes this. For example, if the Leaderboard name is *lbpart* and it has the partition *partition_1*, then the full name is *lbpart.partition_1*.
+This code will be very similar to the code for the Leaderboard name check, but here the Leaderboard name is the *lb-name* and *partition-id* fields concatenated to create the full Leaderboard name. We'll also have to add a period between the name and *partition-id* because the shortcode of a partitioned Leaderboard includes this:
+* For example, if the Leaderboard name is *lbpart* and it has the partition *partition_1*, then the full name is *lbpart.partition_1*.
 
 ```
 
@@ -157,7 +158,7 @@ So...
 
 *2.*  We then use the *getEntries()* function to get the current cursor and then iterate through that cursor to get the specific data we want to return. In this example, we're only interested in the player’s Id and rank, but you could adapt this for score or supplemental data if required.
 
-*3.* We then return an array of data we collected from each doc in the cursor.
+*3.* We then return an array of data we collected from each document in the cursor.
 
 ```
 
@@ -188,7 +189,7 @@ else if(requestRaw.key === 'pull_data'){
 
 The next step is to setup the python script. This will be a very simple script. It will have several steps:
 
-*1.* Setup some null variables which will be used to store the input from the user. Later they'll be null-checked to make sure we have valid data before trying to pull the data from the Leaderboard.
+*1.* Set up some null variables, which will be used to store the input from the user. Later they'll be null-checked to make sure we have valid data before trying to pull the data from the Leaderboard.
 
 *2.* Import the relevant packages:
 * *We will need the 'requests' package.*
@@ -229,7 +230,10 @@ The *request_details* field is important here, because it will be used to check 
 
 Our user-prompts are going to be simple. We'll print some dialog to the console and then save the user’s input. At each step, we'll send off a specific HTTP request with that information.
 
-To construct the request, we create a payload variable, which will store the post-data as a url-string. We'll then assign the post-headers (we only need to do this once), and then send the request with the callback URL, headers, and post-data.
+To construct the request:
+* We create a payload variable, which will store the post-data as a url-string.
+* We'll then assign the post-headers (we only need to do this once).
+* And then we send the request with the callback URL, headers, and post-data.
 
 When we’ve sent this once, all we need to do for any additional requests is change the payload and send the request again:
 
@@ -251,7 +255,9 @@ print('Step 1 - Please Enter the endpoint URL for your leaderboard callback.')
 
 ```
 
-The code-snippet above is incomplete, because the script gets quite repetitive - it's simply requesting input from the user, validating it, and then checking the next input. There is a complete example of the code available to download with this tutorial.
+The code-snippet above is incomplete, because the script gets quite repetitive - it's simply requesting input from the user, validating it, and then checking the next input.
+
+<q>**Complete Code?** Remember, there is a complete example of the code available to download with this tutorial - see top of page.</q>
 
 An important part is missing - when the user has entered the limit, you set the *request_details* variable to ‘true’:
 
@@ -322,7 +328,7 @@ So, we perform the following steps to append this data correctly:
 3.	Then we check to see if we have received the last of the data from the Leaderboard (that is, the requests are returning empty arrays) and add a final bracket to the end, and break out of the loop.
 4.	We also added in for the case where no data is returned from the Leaderboard. In this case, the program should break out of the loop and print an error.
 
-Once this loop has run, we should have a valid JSON string encapsulated with opening and closing array brackets. *Then* we save the file in the location given by the user.
+Once this loop has run, we should have a valid JSON string enclosed within one opening array bracket and one closing array bracket. *Then* we save the file in the location given by the user.
 
 
 ## Summary
