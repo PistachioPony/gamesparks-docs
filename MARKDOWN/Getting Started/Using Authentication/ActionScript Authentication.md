@@ -29,9 +29,9 @@ The previous tutorial showed us how to [Authenticate players](/Getting Started/U
 
 ## Setting up the Authentication and Registration
 
-Before creating any functions for *Authentication*, you will need a way to check if the GS module is connected to the Portal. Checking if a connection has been established before requesting any GameSparks API calls will stop exceptions being thrown.
+Before creating any functions for *Authentication*, you'll need a way to check if the GS module is connected to the Portal. Checking if a connection has been established before requesting any GameSparks API calls will stop exceptions being thrown.
 
-To do this, make a boolean which defaults to *false*. Once the GS module call back returns "available" upon connecting, set the boolean to *true*.
+To do this, make a boolean which defaults to *false*. Once the GS module callback returns "available" upon connecting, set the boolean to *true*.
 
 ```
     public function availabilityCallback(isAvailable : Boolean):void {
@@ -69,7 +69,7 @@ For the *AuthenticationRequest*, you'll need to submit a username and a password
 ```
 
 In this function, which we'll *'handleAuthenticationResponse'* to check if the response has any errors:
-* If the response does come back with errors, it means either the username or password wasn't recognised.
+* If the response does come back with errors, it means either the username or password wasn't recognized.
 * If the response comes back with no errors, assume the authentication has been successful and print the player's display name to the Logger.
 
 ```
@@ -83,7 +83,7 @@ In this function, which we'll *'handleAuthenticationResponse'* to check if the 
     }
 ```
 
-The *RegistrationResponse* function needs more information. If the response returns with errors it could be because the username that someone is trying to register with is already taken. It is useful to print this out by checking if the *'NewPlayer'* boolean is *false*.
+The *RegistrationResponse* function needs more information. If the response returns with errors it could be because the username that someone is trying to register with is already taken. It's useful to print this out by checking if the *'NewPlayer'* boolean is *false*.
 
 ```
     public function handleRegistrationResponse(response:RegistrationResponse):void {
@@ -137,6 +137,6 @@ The *Register* function is similar to the *Authenticate* function, except that i
 
 ![l](img/AS/3.png)
 
-*4.* Log in using the details you just registered. The user should be recognised and you should now be authenticated.
+*4.* Log in using the details you just registered. The user should be recognized and you should now be authenticated.
 
 ![l](img/AS/4.png)

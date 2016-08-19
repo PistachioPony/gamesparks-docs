@@ -19,7 +19,12 @@ To test your game and see if it is ready for Authentication, you will have to n
 
 ![](img/UsingAuthentication/2.png)
 
-Receiving a successful response is an indication of a successful registration. To validate this we can select the *AuthenticationRequest*, add our players' details into the JSON builder and after clicking Play, we will send an [AuthenticationRequest](/API Documentation/Request API/Authentication/AuthenticationRequest.md) and receive an AuthenticationResponse. In addition to receiving a successful Response, you will also notice that you've received an *authToken* for the current players session.
+Receiving a successful response is an indication of a successful registration. To validate this:
+1. We can select the *AuthenticationRequest*.
+2. Add our players' details into the JSON builder.
+3. After clicking Play, we'll send an [AuthenticationRequest](/API Documentation/Request API/Authentication/AuthenticationRequest.md) and receive an AuthenticationResponse.
+
+In addition to receiving a successful Response, you'll also notice that you've received an *authToken* for the current player's session.
  
 You have now successfully Registered and Authenticated a player. The next tutorial will show you how to set up the SDK of your choice for authentication with GameSparks.      
 

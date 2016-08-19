@@ -7,7 +7,7 @@ src: /Getting Started/Creating a Game/AndroidSDK Setup.md
 
 ## Introduction
 
-This tutorial will walk you through integrating GameSparks with your Android project on the Android Builder IDE. For the example test harness project that we supply as a sample:
+This tutorial will walk you through integrating GameSparks with your Android project on the Android Builder IDE. For the example Test Harness project that we supply as a sample:
 * The GameSparks Android SDK requires API 8 or greater.
 * The Test Harness requires API 11 or greater.
 
@@ -83,7 +83,7 @@ Our example looks like this:
 ```
 That will ensure that the API is ready to be used.
 
-Now, to initialise the GS module and connect our frontend to our backend! In any of your activity's Java code OnCreate function place the following:
+Now, to initialize the GS module and connect our frontend to our backend! In any of your activity's Java code OnCreate function place the following:
 
 ```
 
@@ -93,7 +93,7 @@ GSAndroidPlatform.initialise(this, "YOUR KEY", "YOUR SECRET", false, true);
 
 Now, you'll need an API key and secret, which you're given when you create a game on our platform, click [here](/Getting Started/Creating a Game/README.md) for a quick guide to show you how. Once that's done, now you need to start the connection.
 
-To do this, place this code in the activity's
+To do this, place this code in the activity's:
 
 ```
 @Override

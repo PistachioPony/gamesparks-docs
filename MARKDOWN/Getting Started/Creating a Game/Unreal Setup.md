@@ -7,11 +7,16 @@ src: /Getting Started/Creating a Game/Unreal Setup.md
 
 ## Introduction
 
-This tutorial will guide you through the process of setting up your Unreal game and integrating the GameSparks plugin.
+This tutorial guides you through the process of setting up your Unreal game and integrating the GameSparks plugin and explains:
+* How to download and integrate the GameSparks SDK into your game.
+* The different steps you will need to perform, depending on whether you are creating:
+  * A new game.
+  * A Blueprint only project.
+  * A mixed project.
 
 ## SDK Download and Setup
 
-You'll require the following to compile and run the Unreal Engine SDK provided by GameSparks.
+You'll require the following to compile and run the Unreal Engine SDK provided by GameSparks:
 
   * [Unreal Engine](https://www.unrealengine.com/dashboard).
   * GameSparks [SDK](https://bitbucket.org/gamesparks/gamesparks-cpp-unreal/downloads) for Unreal Engine.
@@ -19,7 +24,7 @@ You'll require the following to compile and run the Unreal Engine SDK provided b
     * Windows - [Visual Studio 2013](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx)
     * Mac OSX - [Xcode](https://developer.apple.com/xcode/download/)
 
-Once you've downloaded the required tools and installed them successfully, you're ready to start developing. The following tutorial walks you through integrating the GameSparks SDK into your game and guides you through the different steps that are needed, depending on whether you are creating a new game, an existing Blueprint, or a Mixed Project.
+Once you've downloaded the required tools and installed them successfully, you're ready to start developing.
 
 ## Creating a New Mixed Project
 
@@ -54,7 +59,7 @@ To enable the GameSparks SDK in your Unreal Engine Project, you'll have to grab 
 
 ![l](img/UR/3.png)
 
-In your project's build file (Located under *Source> ProjectFolder* folder) add "GameSparks" to the PublicDependencyModuleNames array:
+In your project's build file (Located under *Source> ProjectFolder* folder) add "GameSparks" to the *PublicDependencyModuleNames* array:
 
 ```
 
@@ -62,7 +67,7 @@ PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engi
 
 ```
 
-To compile the plugin, simply run the *.uproject* file (If you don't have Visual or XCode installed this step will not work). When the Project has been compiled, you'll want to connect it to GameSparks Service, to ensure everything's working as intended. Now you must create your own custom Blueprint Game Mode, which will contain the connection between the Game and the Service.
+To compile the plugin, simply run the *.uproject* file (If you don't have Visual or XCode installed this step will not work). When the Project has been compiled, you'll want to connect it to GameSparks Service to ensure everything's working as intended. Now you must create your own custom Blueprint Game Mode, which will contain the connection between the Game and the Service.
 
 To do this simply follow the steps shown:
 
@@ -84,7 +89,7 @@ For this tutorial we'll be using the pre-built "*Begin Play*" Event to connect t
 
 <q>**Note:** The "Connect" function will require your GameSparks *API* *Key* and *Secret* to work. If you've forgotten these, refer to the Game Set Up guide, which can be found [here](./README.md).</q>
 
-At this point, you'll want to receive feedback from the module to ensure that you have actually connected. To do this you need an *OnGameSparksAvailableDelegate* Event from the GameSparks component. By clicking on the GameSparks component you will see the Event has linked to it and can be clicked and dropped into the Event Graph.
+At this point, you'll want to receive feedback from the module to ensure that you have actually connected. To do this, you need an *OnGameSparksAvailableDelegate* Event from the GameSparks component. By clicking on the GameSparks component you will see the Event has linked to it and can be clicked and dropped into the Event Graph.
 
 When you've added the *OnGameSparksAvailableDelegate* Event, you'll get an extremely useful tool to check whether your GameSparks connection is valid. You can use the Event Graph to output some information about the connection to GameSparks:
 

@@ -187,7 +187,7 @@ else if(requestRaw.key === 'pull_data'){
 
 ## Python Script
 
-The next step is to setup the python script. This will be a very simple script. It will have several steps:
+The next step is to set up the python script. This will be a very simple script and will have several steps:
 
 *1.* Set up some null variables, which will be used to store the input from the user. Later they'll be null-checked to make sure we have valid data before trying to pull the data from the Leaderboard.
 
