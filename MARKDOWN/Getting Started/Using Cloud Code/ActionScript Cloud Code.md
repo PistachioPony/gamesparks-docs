@@ -35,8 +35,8 @@ You'll notice that from here on the tutorials will automatically connect to the 
 
 Start by creating a function that will save the player's location. This function will be logging an Event request. Similar to Authenticating and Registering, this function will build a request:
 * You will be requesting an Event that saves the player's position using the Short code *Set_Pos*. (For more information, see the [Using Cloud Code](./README.md) tutorial.)
-* The request builder will need an *Event Key* that looks for a *Short code* to log the Event.
-* For the *Set_Pos* Event, the request builder will also need an *Attribute* of type *JSON*.
+* The request builder will need an *Event Key* that looks for a *Short Code* to log the Event.
+* For the *Set_Pos* Event, the request builder will also need an *Attribute* of *Data Type* - *JSON*.
 * Declare a variable of type *Object*, which will save the location of your player. Add two properties to that variable to save the X and Y values.
 * To send that variable as a *JSON* through the request builder, use *.SetJSONEventAttribute("POS", VariableName)*. The attribute *POS* is the same as was made in the Portal tutorial. This will be used to save the player's location by passing in the X and Y values.
 
@@ -65,7 +65,7 @@ Optionally, you can have a Response handler which logs out when the Event is suc
     			}
 ```
 
-Create a function that will retrieve the position of the player by calling the *Get_Pos* Event. You'll need to build a request that is similar to the previously created set function, but this time you'll not need an attribute. It's important to set a *response* *handler* function as a parameter for the send() method:
+Create a function that will retrieve the position of the player by calling the *Get_Pos* Event. You'll need to build a request that is similar to the previously created *SetPos* function, but this time you'll won't need an Attribute. It's important to set a *response* *handler* function as a parameter for the send() method:
 
 ```
     		public function GetPos():void
@@ -76,10 +76,10 @@ Create a function that will retrieve the position of the player by calling the *
     			}
 ```
 
-In the response handler for the *Get_Pos* Event you will need to break down the response and retrieve the values that are passed in by *Script Data*.
+In the response handler for the *Get_Pos* Event you'll need to break down the response and retrieve the values that are passed in by *Script Data*.
 * Declare a variable of type *Object* and set it as the *Script Data* passed in through the response.
 * Declare two new variables of type *NUMBER* and set them as the X value or the Y value saved in the *JSON* *'POS'.* This is held in the *Script Data*.
-* Once your variable of type *Object* has been set as the *response's* *Script Data* you can access its values as you do in the Portal.
+* When your variable of type *Object* has been set as the *response's* *Script Data*, you can access its values as you do in the Portal.
 
 In this example, you can access the X value simply by using *script.POS.X*. After setting the two variables of type *NUMBER* as X and Y, simply set your player's location to the retrieved values.
 

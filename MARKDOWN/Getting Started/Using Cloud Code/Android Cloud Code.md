@@ -145,7 +145,7 @@ This will ensure that if the value 'email' isn't passed in through the scriptDat
 
 ### Registration Response
 
-Second, we'll navigate to *Configurator > Cloud Code > Responses* and add this to the Cloud code:
+Second, we'll navigate to *Configurator > Cloud Code > Responses* and add this to the Cloud Code:
 
 ```
 if(Spark.getData().scriptData){
