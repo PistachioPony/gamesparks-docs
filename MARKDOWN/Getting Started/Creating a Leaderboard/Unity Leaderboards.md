@@ -45,9 +45,9 @@ Next you'll need to create your Leaderboard.
 
 *1.* Navigate to *Configurator > Leaderboards*.
 
-*2.* Click the plus ![](/img/fa/plus.png) icon to add new Leaderboard. The *Create Leaderboard* dialog appears.
+*2.* Click the plus ![](/img/fa/plus.png) icon to add a new Leaderboard. The *Create Leaderboard* dialog appears.
 
-<q>**More on Leaderboards?** Most of the details you see here can be left as default but you can get more information about these attributes [here](/Documentation/Configurator/Leaderboards.md).</q>
+<q>**More on Leaderboards?** Most of the details you see here can be left as default for this tutorial but you can get more information about Leaderboard configuration [here](/Documentation/Configurator/Leaderboards.md).</q>
 
 *3.* The important details for us in this example are:
 * *Short Code*
@@ -63,11 +63,11 @@ Next you'll need to create your Leaderboard.
 
 Now you're ready to send some scores to your Leaderboard. However, before you go into Unity, you should test this Leaderboard in the *Test Harness*.
 
-After authenticating yourself as a Player, find your Event in the *LogEvent* tab, enter a score and send the Event.
+After authenticating yourself as a Player, find your Event in the *LogEvent* tab, enter a score, and send the Event.
 
 ![](img/UT/13.png)
 
-Immediately after you send the request, you will see orange message appear in the *Inspector* on the left. This is a *NewHighScoreMessage* and when you go back into Unity you are going to setup an Event listener to execute some code whenever a player gets this Message.
+Immediately after you send the request, you will see an orange message appear in the *Inspector*. This is a *NewHighScoreMessage* and when you go back into Unity you are going to set up an Event listener to execute some code whenever a player gets this Message.
 
 ![](img/UT/4.png)
 

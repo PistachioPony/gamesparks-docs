@@ -12,7 +12,7 @@ This tutorial assumes you have completed the [Creating an Achievement](/Getting 
 Here's what we'll cover in this tutorial:
 
 **Awarding an Achievement**
-  * Execute a *GS LogEventRequest* and call the Event that will award the currently authenticated player an Achievement.
+  * Execute a *GS LogEventRequest* and call the Event that will award an Achievement to the currently authenticated player.
 
 **Account Details Response**
 
@@ -29,7 +29,7 @@ Here's what we'll cover in this tutorial:
 
 ## Awarding An Achievement
 
-It's very simple to award an achievement to the Player using Unreal Engine SDK. All you have to do is call the Event that grants the authenticated player the Achievement, just like you did in the Achievements tutorial:
+It's very simple to award an Achievement to the player using Unreal Engine SDK. All you have to do is call the Event that grants the authenticated player the Achievement, just like you did in the Achievements tutorial:
 
 ![l](img/UR/1.png)
  

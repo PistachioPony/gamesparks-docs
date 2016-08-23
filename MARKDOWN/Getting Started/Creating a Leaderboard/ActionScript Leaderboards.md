@@ -32,9 +32,14 @@ For this tutorial, we've created a sample game that runs for 10 seconds. In thos
 
 ## Setting up the Event Log Request
 
-You'll need a function that calls the Event that submits the player's score. Make a function that builds the [LogEventRequest](/API Documentation/Request API/Player/LogEventRequest.md) to pass through the score value. The *requestBuilder* has been triggered for when the timer of the game reaches 0. The player's score will be sent after the game session ends. Call the previously made *Event key* of the Event (for more information see the Portal's Leaderboards tutorial) and set the *SCORE* attribute.
+You'll need a function that calls the Event that submits the player's score:
+* Make a function that builds the [LogEventRequest](/API Documentation/Request API/Player/LogEventRequest.md) to pass through the score value.
+* The *requestBuilder* has been triggered for when the timer of the game reaches 0.
+* The player's score will be sent after the game session ends.
+* Call the previously-made *Event key* of the Event (for more information see the Portal's Leaderboards [tutorial](./README.md)) and set the *SCORE* attribute.
 
 ```
+
 if (endTime <= now)
 	  {
 		timer.stop();
@@ -43,13 +48,17 @@ if (endTime <= now)
 		RestartBtn.enabled = true;
 		logger("Times up");
 	  }
+
 ```
 
 ## Setting up the Message Handlers
 
-Once you've set your *LogEventRequest* to upload the player's score, you can now set up a *NewHighScoreMessage* handler. *Handlers* are very useful tools, which allow you to intercept *messages* that are passed in to your authenticated player.
+Once you've set your *LogEventRequest* to upload the player's score, you can now set up a *NewHighScoreMessage* handler. Handlers are very useful tools, which allow you to intercept *messages* that are passed in to your authenticated player.
 
-For this tutorial, we'll be dealing with *NewHighScoreMessage*. We'll place the initialisation of the message handler in the same function which connects the *GS* *module*. To do this use *gs.getMessagerHandler()* and resume to choose which type of message you wish to intercept, followed by the function which will deal with the message. In our case *HighScoreMessageListener* is a variable of type *GS*.
+For this tutorial, we'll be dealing with *NewHighScoreMessage*.
+* We'll place the initialization of the message handler in the same function which connects the *GS* *module*.
+* To do this use *gs.getMessagerHandler()* and resume to choose which type of message you wish to intercept, followed by the function which will deal with the message.
+* In our case *HighScoreMessageListener* is a variable of type *GS*.
 
 ```
     	gs.getMessageHandler().setNewHighScoreMessageHandler(HighScoreMessageListener);

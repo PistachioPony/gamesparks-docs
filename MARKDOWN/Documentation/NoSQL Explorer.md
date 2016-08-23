@@ -10,15 +10,15 @@ From the NoSQL tab you have the ability to interact with the data stored on the
 
 ![](img/1.png)
 
-You can select the database you wish to look at from the drop down in the top left of the page (as highlighed above). For any given game there will be a PREVIEW listing in this list, along with an optional LIVE listing if your game is in the published state.
+You can select the database you wish to look at from the drop-down in the top left of the page (as highlighed above). For any given game there will be a PREVIEW listing in this list, along with an optional LIVE listing if your game is in the published state.
 
 ## Collection Drop Down Menu Filtering
 
-Each actions tab has a drop down menu containing the list of collections that are available in your database. The collection filter switches allow you to turn sections of the drop down menu on and off to make the list more manageable.
+Each *Actions* tab has a drop down menu containing the list of collections that are available in your database. The collection filter switches allow you to turn sections of the drop-down menu on and off to make the list more manageable.
 
 ![](img/2.png)
 
-The collection drop down can also be filtered manually be typing the name of the collection you are looking for in the field. The results are dynamically updated as you type.
+The collection drop-down can also be filtered manually be typing the name of the collection you are looking for in the field. The results are dynamically updated as you type.
 
 ![](img/3.png)
 
@@ -30,14 +30,21 @@ Once you have selected the correct DB you can choose from the following options 
 
 [MongoDB Find Manual](http://docs.mongodb.org/manual/reference/method/db.collection.find)
 
-From the Find tab you can execute queries against collections. For those of you with existing mongo experience, the find form builds a db.<collection>.find(<query>, <fields>).sort(<sort>).limit(<limit>).skip(<skip>) command based on the data populated in the form fields.
+From the *Find* tab you can execute queries against collections. For those of you with existing mongo experience, the find form builds a db.<collection>.find(<query>, <fields>).sort(<sort>).limit(<limit>).skip(<skip>) command based on the data populated in the form fields.
 
 * *Collection* : Select the collection you want to query.
-* *Query* : The query you want to execute in JSON form. To find players with displayName "testUser" the following JSON should be used {"displayName" : "testUser"}
-* *Sort* : The JSON representation of the sort for the query. To sort by userName in ascending order the following JSON should be used {"userName" : 1}
-* *Fields*: Allows you to limit the fields that are returned in the results. This is useful for collections with large document. To limit the results to only contain the userName and displayName the following JSON should be used : {"userName" : 1, "displayName" : 1}. 1 indicates inclusion and 0 indicates exclusion for a field. You cannot mix inclusion and exclusion in a single query
-* *Skip / Limit* : The number of documents to skip, useful for paging in combination with limit. To get the 3rd page of 10 documents per page, use skip=20 and limit=10. The maximum that the limit value can be set to for finds is 1000.
-The find tab allows you to export the results to a local file. Set up your query as normal and press the *Export* button. The maximum that the limit value can be set to for exports is 10000.
+* *Query* : The query you want to execute in JSON form:
+  * To find players with displayName "testUser" the following JSON should be used {"displayName" : "testUser"}
+* *Sort* : The JSON representation of the sort for the query:
+  * To sort by userName in ascending order the following JSON should be used {"userName" : 1}
+* *Fields*: Allows you to limit the fields that are returned in the results:
+  * This is useful for collections with large document.
+  * To limit the results to only contain the userName and displayName the following JSON should be used : {"userName" : 1, "displayName" : 1}. 1 indicates inclusion and 0 indicates exclusion for a field. You cannot mix inclusion and exclusion in a single query.
+* *Skip / Limit* : The number of documents to skip, useful for paging in combination with limit:
+  * To get the 3rd page of 10 documents per page, use skip=20 and limit=10.
+  * The maximum that the limit value can be set to for finds is 1000.
+
+The *Find* tab allows you to export the results to a local file. Set up your query as normal and press the *Export* button. The maximum that the limit value can be set to for exports is 10000.
 
 ### Insert
 

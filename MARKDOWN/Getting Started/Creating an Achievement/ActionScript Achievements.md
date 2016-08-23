@@ -12,7 +12,7 @@ After making an Event that awards your player an Achievement using Cloud Code in
 **Setting up the Account Details Request and Earning an Achievement**
 
   * Create a function which logs an Account Details request using the request builder.
-  * Create a function which handles the Account Details response and organises it in a way that can be displayed to the user.
+  * Create a function which handles the Account Details response and organizes it in a way that can be displayed to the user.
   * Log the Event which awards the authenticated Player an Achievement through Cloud Code.
 
 **Testing the Achievement**
@@ -63,7 +63,7 @@ For our example, we'll retrieve *Display name, currency, location*, and *Achieve
 
 ```
 
-Finally, to finish the *Achievement* setup, all you have to do is call the Event that awards the Player the '*Cloud Achievement'* that has been created in the Portal.
+Finally, to finish the *Achievement* set up, all you have to do is call the Event that awards the Player the '*Cloud Achievement'* that has been created in the Portal.
 
 In this tutorial, we're going to call the Event when the authenticated Player receives a highscore message:
 
@@ -78,12 +78,12 @@ In this tutorial, we're going to call the Event when the authenticated Player re
 
 ## Testing the Achievement
 
-*1.* Log in a Player and request the details to see everything is in order. You should receive the Player's *Display name, currency, location* and zero *Achievements*:
+*1.* Log in a player and request the details to see that everything is in order. You should receive the Player's *Display name, currency, location*, and zero *Achievements*:
 
-![l](img/AS/1.jpg)
+![](img/AS/1.jpg)
 
-*2.* Play the game and beat the highscore. Once the you've received a message informing you that you've beaten the highscore, you should automatically receive the *Achievement*.
+*2.* Play the game and beat the highscore. Once you've received a message informing you that you've beaten the highscore, you should automatically receive the *Achievement*.
 
 *3.* Request the account details again and check to see if the account has earned the *Achievement*:
 
-![l](img/AS/2.jpg)
+![](img/AS/2.jpg)

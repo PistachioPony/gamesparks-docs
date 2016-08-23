@@ -5,14 +5,14 @@ src: /API Documentation/NoSQL REST API.md
 
 # NoSQL Explorer REST API
 
-The GameSparks platform allows you to manage your NoSQL data via a REST interface, this is useful to allow you to control your game data via your own software. This REST API provides the same features found in the GameSparks Developer Portal [NoSQL Explorer](/Documentation/NoSQL Explorer.md).
+The GameSparks platform allows you to manage your NoSQL data via a REST interface. This is useful to allow you to control your game data via your own software. This REST API provides the same features found in the GameSparks Developer Portal [NoSQL Explorer](/Documentation/NoSQL Explorer.md).
 
 ## Authentication
 
 All REST API methods require the use of HTTP Basic Authentication to authenticate with the service. You need to provide the username and password you use to login to the portal. The REST endpoint is secured over HTTPS, so there is no need to worry about your credentials being exposed. To authenticate using Basic Authentication you will need to provide an "Authorization" header. The Authorization header is constructed as follows:
 
-  * Username and password are combined into a string "username:password"
-  * The resulting string literal is then encoded using the RFC2045-MIME variant of Base64, except not limited to 76 char/line[9]
+  * Username and password are combined into a string "username:password".
+  * The resulting string literal is then encoded using the RFC2045-MIME variant of Base64, except not limited to 76 char/line[9].
   * The authorization method and a space i.e. "Basic " is then put before the encoded string.
   * For example, if the user agent uses 'Aladdin' as the username and 'open sesame' as the password then the header is formed as follows:
 
@@ -24,9 +24,9 @@ Find data using the following URL. *POST: /rest/games/{gameApiKey}/mongo/{stag
 
 #### Parameters
 
-  * *gameApiKey* : The API key of you game and can be found on the overview page of the Portal Configurator.
-  * *stage* : Indicates which database stage, preview or live, to use
-  * *collection* : Indicates which collection to perform the action against
+  * *gameApiKey* : The API key of your game, which you can find on the *Overview* page of the Portal Configurator.
+  * *stage* : Indicates which database stage to use - *Preview* or *Live*.
+  * *collection* : Indicates which collection to perform the action against.
 
 #### Form Data (optional)
 
@@ -89,8 +89,8 @@ Insert data using the following URL. *POST: /rest/games/{gameApiKey}/mongo/{s
 
 #### Parameters
 
-  * *gameApiKey* : Is the API key of you game and can be found on the overview page of the Portal Configurator.
-  * *stage* : Indicates which database stage, preview or live, to use.
+  * *gameApiKey* : The API key of your game, which you can find on the *Overview* page of the Portal Configurator.
+  * *stage* : Indicates which database stage to use - *Preview* or *Live*.
   * *collection* : Indicates which collection to perform the action against.
 
 #### Form Data
@@ -120,8 +120,8 @@ Update data using the following URL. *POST: /rest/games/{gameApiKey}/mongo/{s
 
 #### Parameters
 
-  * *gameApiKey* : Is the API key of you game and can be found on the overview page of the Portal Configurator.
-  * *stage* : Indicates which database stage, preview or live, to use
+  * *gameApiKey* : The API key of your game, which you can find on the *Overview* page of the Portal Configurator.
+  * *stage* : Indicates which database stage to use - *Preview* or *Live*.
   * *collection* : Indicates which collection to perform the action against
 
 #### Form Data
@@ -152,9 +152,9 @@ Remove data using the following URL. *POST: /rest/games/{gameApiKey}/mongo/{s
 
 #### Parameters
 
-  * *gameApiKey* is the API key of you game and can be found on the overview page of the Portal Configurator.
-  * *stage* indicates which database stage, preview or live, to use.
-  * *collection* indicates which collection to perform the action against.
+* *gameApiKey* : The API key of your game, which you can find on the *Overview* page of the Portal Configurator.
+* *stage* : Indicates which database stage to use - *Preview* or *Live*.
+* *collection* : Indicates which collection to perform the action against
 
 #### Form Data
 
@@ -178,9 +178,9 @@ Aggregate data using the following URL. *POST: /rest/games/{gameApiKey}/mongo
 
 #### Parameters
 
-  * *gameApiKey* is the API key of you game and can be found on the overview page of the Portal Configurator.
-  * *stage* indicates which database stage, preview or live, to use.
-  * *collection* indicates which collection to perform the action against.
+* *gameApiKey* : The API key of your game, which you can find on the *Overview* page of the Portal Configurator.
+* *stage* : Indicates which database stage to use - *Preview* or *Live*.
+* *collection* : Indicates which collection to perform the action against
 
 #### Form Data
 
@@ -212,7 +212,10 @@ POST: /rest/games/{gameApiKey}/mongo/*{stage}/{collection}*/create 
 
 #### Parameters
 
-*   *gameApiKey* is the API key of you game and can be found on the overview page of the Portal Configurator. *stage* indicates which database stage, preview or live, to use. *collection* indicates which collection to perform the action against.
+* *gameApiKey* : The API key of your game, which you can find on the *Overview* page of the Portal Configurator.
+* *stage* : Indicates which database stage to use - *Preview* or *Live*.
+* *collection* : Indicates which collection to perform the action against.
+
 
 #### Form Data
 
@@ -240,9 +243,9 @@ Drop a collection using the following URL.
 
 #### Parameters
 
-*   *gameApiKey*: is the API key of you game and can be found on the overview page of the Portal Configurator.
-*   *stage*: indicates which database stage, preview or live, to use.
-*   *collection*: indicates which collection to perform the action against. Note that runtime collections that you create have their names prefixed with 'script.' and meta collections that you create have their names prefixed with 'meta.'.
+* *gameApiKey* : The API key of your game, which you can find on the *Overview* page of the Portal Configurator.
+* *stage* : Indicates which database stage to use - *Preview* or *Live*.
+* *collection* : Indicates which collection to perform the action against. Note that runtime collections that you create have their names prefixed with 'script.' and meta collections that you create have their names prefixed with 'meta.'.
 
 #### Example Request
 
@@ -264,9 +267,9 @@ POST: /rest/games/{gameApiKey}/mongo/{stage}/{collection}/stats
 
 #### Parameters
 
-*   *gameApiKey*: is the API key of you game and can be found on the overview page of the Portal Configurator.
-*   *stage*: indicates which database stage, preview or live, to use.
-*   *collection*: indicates which collection to perform the action against.
+* *gameApiKey* : The API key of your game, which you can find on the *Overview* page of the Portal Configurator.
+* *stage* : Indicates which database stage to use - *Preview* or *Live*.
+* *collection* : Indicates which collection to perform the action against.
 
 #### Example Request
 
@@ -304,9 +307,9 @@ POST: /rest/games/{gameApiKey}/mongo/{stage}/dbstats
 
 #### Parameters
 
-*   *gameApiKey*: is the API key of you game and can be found on the overview page of the Portal Configurator.
-*   *stage*: indicates which database stage, preview or live, to use.
-*   *collection*: indicates which collection to perform the action against.
+* *gameApiKey* : The API key of your game, which you can find on the *Overview* page of the Portal Configurator.
+* *stage* : Indicates which database stage to use - *Preview* or *Live*.
+* *collection* : Indicates which collection to perform the action against.
 
 #### Example Request
 
@@ -347,9 +350,9 @@ POST: /rest/games/{gameApiKey}/mongo/{stage}/{collection}/count
 
 #### Parameters
 
-*   *gameApiKey*: The API key of you game and can be found on the overview page of the Portal Configurator.
-*   *stage* :Indicates which database stage, preview or live, to use
-*   *collection* : Indicates which collection to perform the action against
+* *gameApiKey* : The API key of your game, which you can find on the *Overview* page of the Portal Configurator.
+* *stage* : Indicates which database stage to use - *Preview* or *Live*.
+* *collection* : Indicates which collection to perform the action against.
 
 #### Form Data (optional)
 

@@ -18,7 +18,7 @@ This tutorial shows you how to buy and consume goods using a shop interface:
 
 **Creating the Buy and Consume functions**
 
-  * Create a function to log the *BuyVirtualGoods* request and one for the *ConsumeVirtualGoods* request.
+  * Create a function to log the *BuyVirtualGoods* request and a function for the *ConsumeVirtualGoods* request.
   * Create a function to handle the *BuyVirtualGoods* request.
   * Create a function to handle the *ConsumeVirtualGoods* request which logs an Event to accredit the authenticated player with extra currency.
 
@@ -37,22 +37,30 @@ This tutorial shows you how to buy and consume goods using a shop interface:
 
 *1.* Create an Event that credits the authenticated player with extra *currency*.
 
-*2.* Add an *attribute* that will be used to indicate the amount to credit.
+*2.* Add an *Attribute* that will be used to indicate the amount to credit.
 
 You will log this Event whenever the authenticated player *consumes* a Gold Coin (Virtual Good).
 
-![l](img/AS/1.png)
+![](img/AS/1.png)
 
-*3.* In the Event *Cloud Code* create a variable that holds the amount being passed in the Event through the *CASH* attribute, and name it 'money'.
+*3.* In the Event *Cloud Code* create a variable that holds the amount being passed in the Event through the *CASH* Attribute, and call it *money*:
 
-*4.* Next, get the player object using *Spark.getPlayer()* and credit their *currency1* with the 'money' value.
+*4.* Next, get the player object using *Spark.getPlayer()* and credit their *currency1* with the *money* value.
 
-![l](img/AS/2.png)
+![](img/AS/2.png)
  
+Here's the Cloud Code:
 
-## Creating the Buy and Consume functions
+```
+var money = Spark.getData().CASH;
 
-*5.* Create a function which will log a *buy Request* when called by using [BuyVirtualGoodsRequest](/API Documentation/Request API/Store/BuyVirtualGoodsRequest.md). The *BuyVirtualGoods* request needs a *currency* type, a *quantity* and the *Short code* for the item to be purchased.
+Spark.getPlayer().credit1(money);
+
+```
+
+## Creating the Buy and Consume Functions
+
+*5.* Create a function which will log a *buyRequest* when called by using [BuyVirtualGoodsRequest](/API Documentation/Request API/Store/BuyVirtualGoodsRequest.md). The *BuyVirtualGoods* request needs a *currency* type, a *quantity*, and the *Short Code* for the item to be purchased.
 
 
 ```
@@ -63,7 +71,7 @@ You will log this Event whenever the authenticated player *consumes* a Gold Coin
     			}
 ```
 
-*6.* Create a function for the consumption of *Virtual Goods*, this will use the [ConsumeVirtualGoodRequest](/API Documentation/Request API/Store/ConsumeVirtualGoodRequest.md). The *ConsumeVirtualGoodRequest* needs a *quantity* and *Short code* of the item to be consumed.
+*6.* Create a function for the consumption of *Virtual Goods*, this will use the [ConsumeVirtualGoodRequest](/API Documentation/Request API/Store/ConsumeVirtualGoodRequest.md). The *ConsumeVirtualGoodRequest* needs a *quantity* and *Short Code* of the item to be consumed.
 
 ```
     	private function ConsumeItem():void
@@ -73,7 +81,11 @@ You will log this Event whenever the authenticated player *consumes* a Gold Coin
     			}
 ```
 
-*7.* Now you can make the *response* *handler* functions for your *consume* and *buy* requests. Both *response handlers* will be similar. For our tutorial, we won't need them to do much. Have the functions check the response for errors. If the response has no errors then send a *string* to the *logger*. For the *consume* *response*, if there are no errors, call the Event which accredits the player with extra *currency*. When either *response handler* reaches the end of their sequence, the shop data will be updated.
+*7.* Now you can make the *response* *handler* functions for your *consume* and *buy* requests. Both *response handlers* will be similar. For our tutorial, we won't need them to do much:
+* Have the functions check the response for errors.
+* If the response has no errors then send a *string* to the *logger*.
+* For the *consume* *response*, if there are no errors, call the Event which accredits the player with extra *currency*.
+* When either *response handler* reaches the end of their sequence, the shop data will be updated.
 
 ```
     	private function BuyResponse(response:BuyVirtualGoodResponse):void
@@ -107,9 +119,11 @@ You will log this Event whenever the authenticated player *consumes* a Gold Coin
     			}
 ```
 
-## Keeping track of player details
+## Keeping Track of Player Details
 
-*8.* To update the shop details, request the *account* *details* for the currently authenticated player. For the *currency* it's a simple text display. For the *Virtual* *Goods,* retrieve the *Virtual Goods* through *getVirtualGoods()* method, followed by the *Short code* of your *Virtual Good* which retrieves a *Number* of the *Virtual Goods* of that type.
+*8.* To update the shop details, request the *account* *details* for the currently authenticated player:
+* For the *currency* it's a simple text display.
+* For the *Virtual* *Goods,* retrieve the *Virtual Goods* through *getVirtualGoods()* method, followed by the *Short Code* of your *Virtual Good* which retrieves a *Number* of the *Virtual Goods* of that type.
 
 ```
     	private function UpdateDetailsForShop(response:AccountDetailsResponse):void
@@ -121,6 +135,8 @@ You will log this Event whenever the authenticated player *consumes* a Gold Coin
 
 ## Testing Virtual Goods
 
-Create a way for the player to *buy* and *consume* Virtual Goods in your project. Test your shop to make sure that when you click *buy*, the *currency* depletes in exchange for an increased amount of Virtual Goods. When you *consume* items the *currency* should go up but the amount of Virtual Goods owned should decrease.
+Create a way for the player to *buy* and *consume* Virtual Goods in your project. Test your shop to make sure that:
+* When you click *buy*, the *currency* depletes in exchange for an increased amount of Virtual Goods.
+* When you *consume* items, the *currency* should go up but the amount of Virtual Goods owned should decrease.
 
-![l](img/AS/3.jpg)
+![](img/AS/3.jpg)
