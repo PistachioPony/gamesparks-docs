@@ -6,33 +6,62 @@ src: /Documentation/NoSQL Explorer.md
 
 # NoSQL Explorer
 
+## Introduction
+
 From the NoSQL tab you have the ability to interact with the data stored on the platform.
 
-![](img/1.png)
+![](img/4.png)
 
-You can select the database you wish to look at from the drop-down in the top left of the page (as highlighed above). For any given game there will be a PREVIEW listing in this list, along with an optional LIVE listing if your game is in the published state.
+When you open the *NoSQL Explorer*, there are two main things to note:
+* Do you want to work with your game's PREVIEW stage database or LIVE stage Mongo database?
+* What operation do you want to perform against the database collections?
+
+### PREVIEW or LIVE Database?
+
+Each game has its own *PREVIEW stage* Mongo database. If you have taken a Snapshot of the game and published the game to LIVE stage, the game will also have a *LIVE stage* Mongo database:
+* The PREVIEW stage and the LIVE stage Mongo databases for a game are *entirely distinct and separate databases*.
+* You can select the database you wish to look at from the drop-down in the top left of the page. In the example above, only one game - *Test Game 1* - has been published to LIVE.
+
+### What Database Collection Operation?
+
+The *Actions* panel contains a series of tabs, each of which represents the different operations you can perform against the data in the selected database Collection. See below for a detailed account of how to work with these tabs.
 
 ## Collection Drop Down Menu Filtering
 
-Each *Actions* tab has a drop down menu containing the list of collections that are available in your database. The collection filter switches allow you to turn sections of the drop-down menu on and off to make the list more manageable.
+You can use the *Collection* drop-down on each *Actions* tab to select from the list of Collections that are available in your database. If the Collections list is a long list, you can use filter switches to turn on and off sections of the Collections list and make things more manageable.
 
-![](img/2.png)
+![](img/5.png)
 
-The collection drop-down can also be filtered manually be typing the name of the collection you are looking for in the field. The results are dynamically updated as you type.
+You can also filter the Collection list by starting to type the name of the Collection you want in the text entry field at the top of the drop-down. The list is dynamically updated as you type:
 
-![](img/3.png)
+![](img/6.png)
+
+## Output Panel
+
+The results for the operations you perform against a database Collection are returned into the *Output* panel. For example, here is the result for *Explain* for the *Find* tab:
+
+![](img/17.png)
+
+When the panel loads, the result is single-line formatted. You can click in the panel to re-format the result into a standard form:
+
+![](img/18.png)
+
+Click the cross ![](/img/fa/times.png) icon to clear the *Output* panel.
 
 ## Actions
 
-Once you have selected the correct DB you can choose from the following options in the Action section as highlighted above: *Find*, *Insert*, *Update*, *Remove*, *Aggregate*, *Create*, *Drop* and *Stats*.
+When you've selected the correct DB you can select one of the tabs in the *Actions* section: *Find*, *Count*, *Insert*, *Update*, *Remove*, *Index*, *Aggregate*, *Create*, *Drop*, and *Stats*.
 
 ### Find
 
 [MongoDB Find Manual](http://docs.mongodb.org/manual/reference/method/db.collection.find)
 
-From the *Find* tab you can execute queries against collections. For those of you with existing mongo experience, the find form builds a db.<collection>.find(<query>, <fields>).sort(<sort>).limit(<limit>).skip(<skip>) command based on the data populated in the form fields.
+From the *Find* tab you can execute queries against Collections:
+* If you have existing Mongo experience, the find form builds a db.<collection>.find(<query>, <fields>).sort(<sort>).limit(<limit>).skip(<skip>) command based on the data populated in the form fields:
 
-* *Collection* : Select the collection you want to query.
+![](img/7.png)
+
+* *Collection* : Select the Collection you want to query.
 * *Query* : The query you want to execute in JSON form:
   * To find players with displayName "testUser" the following JSON should be used {"displayName" : "testUser"}
 * *Sort* : The JSON representation of the sort for the query:
@@ -43,24 +72,44 @@ From the *Find* tab you can execute queries against collections. For those of yo
 * *Skip / Limit* : The number of documents to skip, useful for paging in combination with limit:
   * To get the 3rd page of 10 documents per page, use skip=20 and limit=10.
   * The maximum that the limit value can be set to for finds is 1000.
+* *Explain* button : Enter your query and click this button to get information about the query returned into the *Output* panel. You can review and analyse this information to optimize your query.
+* *Export* button : The *Find* tab allows you to export the results to a local file. Set up your query as normal and press the *Export* button. The maximum that the limit value can be set to for exports is 10000.
 
-The *Find* tab allows you to export the results to a local file. Set up your query as normal and press the *Export* button. The maximum that the limit value can be set to for exports is 10000.
+### Count
+
+[MongoDB Find Manual](http://docs.mongodb.org/manual/reference/method/db.collection.count)
+
+From the *Count* tab you can get a count of the number of documents in a Collection that match an optional query.
+
+![](img/8.png)
+
+* *Collection* : Select the Collection for which you want to get a count.
+* *Query* : The query you want to execute in JSON form:
+  * To find players with displayName “testUser” the following JSON should be used {“displayName” : “testUser”}.
+* *Explain* button : Enter your query and click this button to get information about the query returned into the *Output* panel. You can review and analyse this information to optimize your query.
 
 ### Insert
 
 [MongoDB Insert Manual](http://docs.mongodb.org/manual/reference/method/db.collection.insert)
 
-You can insert documents directly into a collection from the Insert tab. Add the document you want to insert into the Document field.
+From the *Insert* tab you can insert documents directly into a Collection.
 
-* If the document you supply does not have an \_id field, mongo will create one for you.
-* If the document you supply does have an \_id field and it is already in use within the collection the insert will fail.
+![](img/9.png)
+
+* *Collection* : Select the Collection into which you want to insert a document.
+* *Document* : Add the document you want to insert into the *Document* field.
+  * If the document you supply does not have an \_id field, mongo will create one for you.
+  * If the document you supply does have an \_id field and it is already in use within the collection the insert will fail.
 
 ### Update
 
 [MongoDB Update Manual](http://docs.mongodb.org/manual/reference/method/db.collection.update)
 
-From the Update tab you can modify an existing document(s) in a collection.
+From the *Update* tab you can modify an existing document(s) in a Collection.
 
+![](img/10.png)
+
+* *Collection* : Select the Collection which you want to update.
 * *Query* : The selection criteria for the update. Use the same query selectors as used in the Find method.
 * *Update* : The modifications to apply. 
 * *Multi* : Set to true if all documents meeting the criteria should be modified.
@@ -70,32 +119,63 @@ From the Update tab you can modify an existing document(s) in a collection.
 
 [MongoDB Remove Manual](http://docs.mongodb.org/manual/reference/method/db.collection.remove)
 
-Removes all documents matching the supplied query from a collection.
+From the *Remove* tab you can remove all documents matching the supplied query from a Collection.
 
-* *Query* : The selection criteria for the Remove operate. All documents matching this criteria will be removed.
+![](img/11.png)
+
+* *Collection* : Select the Collection from which you want to remove documents.
+* *Query* : The selection criteria for the Remove operation. All documents matching this criteria will be removed.
+
+### Index
+
+From the *Count* tab, you can view the indexes that have been created for a Collection.
+
+![](img/12.png)
+
+* *Collection* : Select the Collection for which you want to get indexes.
 
 ### Aggregate
 
 [MongoDB Aggregate Manual](http://docs.mongodb.org/manual/reference/method/db.collection.aggregate)
 
-Calculates aggregate values for data in the collection.
+From the *Aggregate* tab you can calculate aggregate values for data in the Collection.
 
-* *Pipeline* : A JSON array of pipeline commands. If you are supplying more than one pipeline stage you must wrap then within a JSON array.
+![](img/13.png)
+
+* *Collection* : Select the Collection for which you want to calculate aggregate values.
+* *Pipeline* : A JSON array of pipeline commands.
+  * If you are supplying more than one pipeline stage you must wrap then within a JSON array.
+* *Explain* button : Enter your query and click this button to get information about the query returned into the *Output* panel. You can review and analyse this information to optimize your query.
 
 ### Create
 
-Allows a new collection to be created. Collections can be created as runtime (non versioned) or metadata (versioned)
+From the *Create* tab, you can create a new Collection in the database:
+* Collections can be created as *Runtime* (non-versioned) or *Metadata* (versioned).
 
-* *Name* : The name to give the collection. Metadata collections are prefixed with "meta.", and runtime collections are prefixed with "script." within the database.
+![](img/14.png)
+
+* *Name* : The name to give the Collection. Within the database:
+  * Metadata collections are prefixed with "meta."
+  * Runtime collections are prefixed with "script.".
 
 ### Drop
 
 [MongoDB Drop Manual](http://docs.mongodb.org/manual/reference/command/drop)
 
-Allows you to permanently remove a collection form the database.
+From the *Drop* tab, you can permanently remove a Collection from the database.
+
+![](img/15.png)
+
+* *Collection* : Select the Collection you want to permanently remove.
 
 ### Stats
 
 [MongoDB Stats Manual](http://docs.mongodb.org/manual/reference/method/db.collection.stats)
 
-Returns statistics about the selected collection.
+From the *Stats* tab you can obtain statistics about the selected collection.
+
+![](img/16.png)
+
+* *Collection* : Select the Collection for which you want to get statistics.
+* *Stats* button : Shows the Collection statistics.
+* *DB Stats* button : Shows the database statistics.

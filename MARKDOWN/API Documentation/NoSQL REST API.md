@@ -13,7 +13,7 @@ All REST API methods require the use of HTTP Basic Authentication to authenticat
 
   * Username and password are combined into a string "username:password".
   * The resulting string literal is then encoded using the RFC2045-MIME variant of Base64, except not limited to 76 char/line[9].
-  * The authorization method and a space i.e. "Basic " is then put before the encoded string.
+  * The authorization method and a space, that is, "Basic " is then put before the encoded string.
   * For example, if the user agent uses 'Aladdin' as the username and 'open sesame' as the password then the header is formed as follows:
 
 Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
@@ -30,9 +30,12 @@ Find data using the following URL. *POST: /rest/games/{gameApiKey}/mongo/{stag
 
 #### Form Data (optional)
 
-  * *query* : The query you want to execute in JSON form. To find players with displayName “testUser” the following JSON should be used {“displayName” : “testUser”}.
-  * *sort* : The JSON representation of the sort for the query. To sort by userName in ascending order the following JSON should be used {“userName” : 1}.
-  * *fields* : Allows you to limit the fields that are returned in the results. This is useful for collections with large document. To limit the results to only contain the userName and displayName the following JSON should be used : {“userName” : 1, “displayName” : 1}. 1 indicates inclusion and 0 indicates exclusion for a field. You cannot mix inclusion and exclusion in a single query.
+  * *query* : The query you want to execute in JSON form:
+    * To find players with displayName “testUser” the following JSON should be used {“displayName” : “testUser”}.
+  * *sort* : The JSON representation of the sort for the query:
+    * To sort by userName in ascending order the following JSON should be used {“userName” : 1}.
+  * *fields* : Allows you to limit the fields that are returned in the results. This is useful for collections with large document:
+    * To limit the results to only contain the userName and displayName the following JSON should be used : {“userName” : 1, “displayName” : 1}. 1 indicates inclusion and 0 indicates exclusion for a field. You cannot mix inclusion and exclusion in a single query.
   * *skip* : The number of documents to skip, useful for paging in combination with limit.
   * *limit* : The maximum number of documents to return. The maximum that the limit value can be set to is 10000.
 
@@ -99,7 +102,9 @@ Insert data using the following URL. *POST: /rest/games/{gameApiKey}/mongo/{s
 
 #### Example Request
 
-POST: https://portal.gamesparks.net/rest/games/44ujrQ3BnudG/mongo/preview/analysis/insert Form Data - document : {"my key" : "my value"}
+POST: https://portal.gamesparks.net/rest/games/44ujrQ3BnudG/mongo/preview/analysis/insert
+
+Form Data - document : {"my key" : "my value"}
 
 #### Example Response
 
@@ -133,7 +138,9 @@ Update data using the following URL. *POST: /rest/games/{gameApiKey}/mongo/{s
 
 #### Example Request
 
-POST: https://portal.gamesparks.net/rest/games/44ujrQ3BnudG/mongo/preview/analysis/update Form Data - query : { "\_id": "my key" }, update : {"my data":"new value"}
+POST: https://portal.gamesparks.net/rest/games/44ujrQ3BnudG/mongo/preview/analysis/update
+
+Form Data - query : { "\_id": "my key" }, update : {"my data":"new value"}
 
 #### Example Response
 
@@ -162,7 +169,9 @@ Remove data using the following URL. *POST: /rest/games/{gameApiKey}/mongo/{s
 
 #### Example Request
 
-POST: https://portal.gamesparks.net/rest/games/44ujrQ3BnudG/mongo/preview/analysis/remove Form data - query : {"\_id": { "$oid": "539707414566be9a5c0ff373"}}
+POST: https://portal.gamesparks.net/rest/games/44ujrQ3BnudG/mongo/preview/analysis/remove
+
+Form data - query : {"\_id": { "$oid": "539707414566be9a5c0ff373"}}
 
 #### Example Response
 
@@ -356,7 +365,8 @@ POST: /rest/games/{gameApiKey}/mongo/{stage}/{collection}/count
 
 #### Form Data (optional)
 
-*   *query* : The query you want to execute in JSON form. To find players with displayName “testUser” the following JSON should be used {“displayName” : “testUser”}.
+*   *query* : The query you want to execute in JSON form:
+  * To find players with displayName “testUser” the following JSON should be used {“displayName” : “testUser”}.
 
 #### Example Request
 
