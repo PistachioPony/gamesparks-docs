@@ -13,7 +13,7 @@ The GameSparks API is a RESTful API that can be used to access game configuratio
 
 ## Schema
 
-* All API access is over HTTPS, and accessed from the https://portal.gamesparks.net for game management and https://apiKey.preview.gamesparks.net for service server.
+* All API access is over HTTPS, and accessed from the https://portal.gamesparks.net for game management and https://apiKey.{stage}.gamesparks.net for service server.
 * All data is sent and received as JSON.
 * All dates and timestamps are returned in ISO 8601 format:
 

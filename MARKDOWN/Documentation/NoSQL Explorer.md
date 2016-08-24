@@ -16,7 +16,7 @@ When you open the *NoSQL Explorer*, there are two main things to note:
 * Do you want to work with your game's PREVIEW stage database or LIVE stage Mongo database?
 * What operation do you want to perform against the database collections?
 
-### PREVIEW or LIVE Database?
+### PREVIEW Stage or LIVE Stage Database?
 
 Each game has its own *PREVIEW stage* Mongo database. If you have taken a Snapshot of the game and published the game to LIVE stage, the game will also have a *LIVE stage* Mongo database:
 * The PREVIEW stage and the LIVE stage Mongo databases for a game are *entirely distinct and separate databases*.
