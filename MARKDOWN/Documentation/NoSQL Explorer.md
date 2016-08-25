@@ -13,13 +13,13 @@ From the NoSQL tab you have the ability to interact with the data stored on the
 ![](img/4.png)
 
 When you open the *NoSQL Explorer*, there are two main things to note:
-* Do you want to work with your game's PREVIEW stage database or LIVE stage Mongo database?
+* Do you want to work with your game's PREVIEW stage or LIVE stage Mongo database?
 * What operation do you want to perform against the database collections?
 
 ### PREVIEW Stage or LIVE Stage Database?
 
-Each game has its own *PREVIEW stage* Mongo database. If you have taken a Snapshot of the game and published the game to LIVE stage, the game will also have a *LIVE stage* Mongo database:
-* The PREVIEW stage and the LIVE stage Mongo databases for a game are *entirely distinct and separate databases*.
+Each game has its own *PREVIEW stage* Mongo database. If you have taken a game Snapshot and published the game to LIVE stage, the game will also have a *LIVE stage* Mongo database:
+* The PREVIEW stage and the LIVE stage Mongo databases are *entirely distinct and separate databases*.
 * You can select the database you wish to look at from the drop-down in the top left of the page. In the example above, only one game - *Test Game 1* - has been published to LIVE.
 
 ### What Database Collection Operation?
@@ -57,7 +57,7 @@ When you've selected the correct DB you can select one of the tabs in the *Actio
 [MongoDB Find Manual](http://docs.mongodb.org/manual/reference/method/db.collection.find)
 
 From the *Find* tab you can execute queries against Collections:
-* If you have existing Mongo experience, the find form builds a db.<collection>.find(<query>, <fields>).sort(<sort>).limit(<limit>).skip(<skip>) command based on the data populated in the form fields:
+* If you have existing Mongo experience, the Find form builds a db.<collection>.find(<query>, <fields>).sort(<sort>).limit(<limit>).skip(<skip>) command based on the data populated in the form fields:
 
 ![](img/7.png)
 
@@ -67,12 +67,12 @@ From the *Find* tab you can execute queries against Collections:
 * *Sort* : The JSON representation of the sort for the query:
   * To sort by userName in ascending order the following JSON should be used {"userName" : 1}
 * *Fields*: Allows you to limit the fields that are returned in the results:
-  * This is useful for collections with large document.
+  * This is useful for Collections with large document.
   * To limit the results to only contain the userName and displayName the following JSON should be used : {"userName" : 1, "displayName" : 1}. 1 indicates inclusion and 0 indicates exclusion for a field. You cannot mix inclusion and exclusion in a single query.
 * *Skip / Limit* : The number of documents to skip, useful for paging in combination with limit:
   * To get the 3rd page of 10 documents per page, use skip=20 and limit=10.
   * The maximum that the limit value can be set to for finds is 1000.
-* *Explain* button : Enter your query and click this button to get information about the query returned into the *Output* panel. You can review and analyse this information to optimize your query.
+* *Explain* button : Enter your query and click this button to get information about the query returned into the *Output* panel. You can review and analyze this information to optimize your query.
 * *Export* button : The *Find* tab allows you to export the results to a local file. Set up your query as normal and press the *Export* button. The maximum that the limit value can be set to for exports is 10000.
 
 ### Count
@@ -86,7 +86,7 @@ From the *Count* tab you can get a count of the number of documents in a Collect
 * *Collection* : Select the Collection for which you want to get a count.
 * *Query* : The query you want to execute in JSON form:
   * To find players with displayName “testUser” the following JSON should be used {“displayName” : “testUser”}.
-* *Explain* button : Enter your query and click this button to get information about the query returned into the *Output* panel. You can review and analyse this information to optimize your query.
+* *Explain* button : Enter your query and click this button to get information about the query returned into the *Output* panel. You can review and analyze this information to optimize your query.
 
 ### Insert
 
@@ -99,7 +99,7 @@ From the *Insert* tab you can insert documents directly into a Collection.
 * *Collection* : Select the Collection into which you want to insert a document.
 * *Document* : Add the document you want to insert into the *Document* field.
   * If the document you supply does not have an \_id field, mongo will create one for you.
-  * If the document you supply does have an \_id field and it is already in use within the collection the insert will fail.
+  * If the document you supply does have an \_id field and it is already in use within the Collection the insert will fail.
 
 ### Update
 
@@ -128,7 +128,7 @@ From the *Remove* tab you can remove all documents matching the supplied query f
 
 ### Index
 
-From the *Count* tab, you can view the indexes that have been created for a Collection.
+From the *Index* tab, you can view the indexes that have been created for a Collection.
 
 ![](img/12.png)
 
@@ -145,7 +145,7 @@ From the *Aggregate* tab you can calculate aggregate values for data in the Coll
 * *Collection* : Select the Collection for which you want to calculate aggregate values.
 * *Pipeline* : A JSON array of pipeline commands.
   * If you are supplying more than one pipeline stage you must wrap then within a JSON array.
-* *Explain* button : Enter your query and click this button to get information about the query returned into the *Output* panel. You can review and analyse this information to optimize your query.
+* *Explain* button : Enter your query and click this button to get information about the query returned into the *Output* panel. You can review and analyze this information to optimize your query.
 
 ### Create
 
@@ -155,8 +155,8 @@ From the *Create* tab, you can create a new Collection in the database:
 ![](img/14.png)
 
 * *Name* : The name to give the Collection. Within the database:
-  * Metadata collections are prefixed with "meta."
-  * Runtime collections are prefixed with "script.".
+  * Metadata Collections are prefixed with "meta."
+  * Runtime Collections are prefixed with "script.".
 
 ### Drop
 

@@ -9,14 +9,15 @@ The GameSparks platform allows you to manage your NoSQL data via a REST interf
 
 ## Authentication
 
-All REST API methods require the use of HTTP Basic Authentication to authenticate with the service. You need to provide the username and password you use to login to the portal. The REST endpoint is secured over HTTPS, so there is no need to worry about your credentials being exposed. To authenticate using Basic Authentication you will need to provide an "Authorization" header. The Authorization header is constructed as follows:
-
+All REST API methods require the use of HTTP Basic Authentication to authenticate with the service;
+* You need to provide the username and password you use to login to the portal.
+* The REST endpoint is secured over HTTPS, so there's no need to worry about your credentials being exposed.
+* To authenticate using Basic Authentication you will need to provide an "Authorization" header. The Authorization header is constructed as follows:
   * Username and password are combined into a string "username:password".
   * The resulting string literal is then encoded using the RFC2045-MIME variant of Base64, except not limited to 76 char/line[9].
   * The authorization method and a space, that is, "Basic " is then put before the encoded string.
-  * For example, if the user agent uses 'Aladdin' as the username and 'open sesame' as the password then the header is formed as follows:
-
-Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
+  * For example, if the user agent uses 'Aladdin' as the username and 'open sesame' as the password, then the header is formed as follows:
+    * Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
 
 ## Find data
 
@@ -380,7 +381,66 @@ POST: https://portal.gamesparks.net/rest/games/44ujrQ3BnudG/mongo/preview/playe
 }
 ```
 
-*Errors*
+## Index
+
+View the indexes that have been created for a Collection.
+
+#### Parameters
+
+* *gameApiKey* : The API key of your game, which you can find on the *Overview* page of the Portal Configurator.
+* *stage* : Indicates which database stage to use - *Preview* or *Live*.
+* *collection* : Indicates which collection to perform the action against.
+
+#### Example Request
+
+POST: https://portal.gamesparks.net/rest/games/44ujrQ3BnudG/mongo/preview/player/index
+
+#### Example Response
+
+```
+[
+{
+    "v": 1,
+    "key": {
+      "_id": 1
+    },
+    "name": "_id_",
+    "ns": "301604-game-preview.player"
+  },
+  {
+    "v": 1,
+    "unique": true,
+    "key": {
+      "userName": 1
+    },
+    "name": "userName_1",
+    "ns": "301604-game-preview.player",
+    "background": true
+  },
+  {
+    "v": 1,
+    "key": {
+      "authTokens": 1
+    },
+    "name": "authTokens_1",
+    "ns": "301604-game-preview.player",
+    "background": true
+  },
+  {
+    "v": 1,
+    "key": {
+      "userName": 1,
+      "password": 1
+    },
+    "name": "userName_1_password_1",
+    "ns": "301604-game-preview.player",
+    "background": true
+  }
+ ]
+
+```
+
+## Errors
 
 If an error occurs with any of the NoSQL Explorer REST API calls an error response will be returned containing a response code and a message.
 
