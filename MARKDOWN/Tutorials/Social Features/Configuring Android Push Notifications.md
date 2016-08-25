@@ -6,7 +6,7 @@ src: /Tutorials/Social Features/Configuring Android Push Notifications.md
 
 # How to Configure Android Push Notifications
 
-Google allows push notifications through its Google Cloud Messaging service (GCM). In this exercise you'll learn how to set up your application with GCM, enable push notifications and get your GameSparks game set up to allow it to send notifications to your players on your behalf.
+Google allows push notifications through its Google Cloud Messaging service (GCM). In this tutorial, you'll learn how to set up your application with GCM, enable push notifications, and get your GameSparks game set up to allow it to send notifications to your players on your behalf.
 
 ## Setting up your Application with Google
 
@@ -15,7 +15,7 @@ Google allows push notifications through its Google Cloud Messaging service (GCM
 
 ![](img/AndroidPush/1.png)
 
-*2.* Once your application has been created you should be able to click the link to it and be presented with the *Overview* page.
+*2.* Once your application has been created, you should be able to click the link to it and be presented with the *Overview* page.
 
 *3.* Next, let's enable GCM for android:
 * Click *APIs & auth* and scroll down until you can see *Google Cloud Messaging for Android*.
@@ -44,11 +44,11 @@ Now that you have the API key, it's time to configure you GameSparks game to ena
 
 *2.* Click *Edit*. The *Edit Google Configuration* dialog appears.
 
-*3.* Enter the API key from the Google Developers Console into the *GCM Server API Key field* and click *Save*:
+*3.* Enter the API key from the Google Developers Console into the *GCM Server API Key field*:
 
 ![](img/AndroidPush/8.png)
 
-*4.* Click *Save*. You will then see the API key under the *Providers > Google* configuration:
+*4.* Click *Save*. You'll then see the API key under the *Providers > Google* configuration:
 
 ![](img/AndroidPush/9.png)
 

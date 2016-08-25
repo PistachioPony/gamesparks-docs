@@ -8,7 +8,7 @@ src: /Documentation/NoSQL Explorer.md
 
 ## Introduction
 
-From the NoSQL tab you have the ability to interact with the data stored on the platform.
+From the *NoSQL* tab you have the ability to interact with the data stored on the platform.
 
 ![](img/4.png)
 
@@ -18,15 +18,15 @@ When you open the *NoSQL Explorer*, there are two main things to note:
 
 ### PREVIEW Stage or LIVE Stage Database?
 
-Each game has its own *PREVIEW stage* Mongo database. If you have taken a game Snapshot and published the game to LIVE stage, the game will also have a *LIVE stage* Mongo database:
+Each game has its own *PREVIEW stage* Mongo database. If you've taken a game Snapshot and published the game to LIVE stage, the game will also have a *LIVE stage* Mongo database:
 * The PREVIEW stage and the LIVE stage Mongo databases are *entirely distinct and separate databases*.
-* You can select the database you wish to look at from the drop-down in the top left of the page. In the example above, only one game - *Test Game 1* - has been published to LIVE.
+* You can select the database you wish to look at from the drop-down in the top-left of the page. In the example above, only one game - *Test Game 1* - has been published to LIVE.
 
 ### What Database Collection Operation?
 
-The *Actions* panel contains a series of tabs, each of which represents the different operations you can perform against the data in the selected database Collection. See below for a detailed account of how to work with these tabs.
+The *Actions* panel contains a series of tabs, each of which represents the different operations you can perform against the data in the selected Mongo database. See below for a detailed account of how to work with these tabs.
 
-## Collection Drop Down Menu Filtering
+## Collection Drop-Down Menu Filtering
 
 You can use the *Collection* drop-down on each *Actions* tab to select from the list of Collections that are available in your database. If the Collections list is a long list, you can use filter switches to turn on and off sections of the Collections list and make things more manageable.
 
@@ -46,7 +46,7 @@ When the panel loads, the result is single-line formatted. You can click in the 
 
 ![](img/18.png)
 
-Click the cross ![](/img/fa/times.png) icon to clear the *Output* panel.
+Click the clear ![](/img/fa/times.png) icon to clear out the content of the *Output* panel.
 
 ## Actions
 
@@ -127,6 +127,8 @@ From the *Remove* tab you can remove all documents matching the supplied query f
 * *Query* : The selection criteria for the Remove operation. All documents matching this criteria will be removed.
 
 ### Index
+
+[MongoDB Index Manual](https://docs.mongodb.com/manual/reference/method/db.collection.getIndexes/#db.collection.getIndexes)
 
 From the *Index* tab, you can view the indexes that have been created for a Collection.
 
