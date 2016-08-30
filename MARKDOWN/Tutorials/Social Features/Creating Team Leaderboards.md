@@ -5,15 +5,19 @@ src: /Tutorials/Social Features/Creating Team Leaderboards.md
 
 # How to Create a Team Leaderboard
 
-Using the GameSparks platform, you can create Leaderboards that show the performance of a team, rather than the performance of a single players. For team-based Leaderboards, you need a few things in place. This post will take you through the process of getting them set up. In this example we'll create a team type called "Squad". When a player posts a score, the team they are in will be attributed with the score, and this can then be used on a Leaderboard for the team.
+Using the GameSparks platform, you can create Leaderboards that show the performance of a team, rather than the performance of a single players. For team-based Leaderboards, you need a few things in place. This tutorial will take you through the process of getting them set up.
+
+In this example, we'll create a team type called *Squad*. When a player posts a score, the team they are in will be credited with the score. This team score can then be used on a Leaderboard for the team.
 
 ## Creating a Team Type
 
-From the Teams menu in the Configurator, click the add icon to create your team type.
+*1.* Navigate to *Configurator > Teams*.
+
+*2.* Click the plus ![](/img/fa/plus.png) icon. The *Create Team Type* dialog appears:
 
 ![](img/TeamLDR/1.jpg)
 
-We've set the team to have a Maximum Members number of 5.
+Here we've called the team type *Squad* and set the team to have a maximum of 5 members (*Max Members*).
 
 ## Creating the Event
 
@@ -21,7 +25,7 @@ We'll create a simple high score event that takes a single score parameter.
 
 ![](img/TeamLDR/2.jpg)
 
-In this example, the score we are passing should be added to all the previous scores submitted towards that team. So we've set the "_Default Calc_" to sum them up. This will create the default Running Total for the event, allowing us to track the score for a player.
+In this example, the score we are passing should be added to all the previous scores submitted towards that team. So we've set the *Default Calc* to sum them up. This will create the default Running Total for the event, allowing us to track the score for a player.
 
 ## Creating the Team Running Total
 
@@ -29,38 +33,29 @@ We also want to track the score for the team. We'll need to create another Runni
 
 ![](img/TeamLDR/3.jpg)
 
-The key change in this running total is that we have set the "_Type_" parameter to the team type we want this running total to track. We are now in a position where the GameSparks platform is going to track a running total for each Squad, and will sum together each score submitted by each member.
+The key change in this running total is that we have set the *Type* parameter to the team type we want this running total to track. We are now in a position where the GameSparks platform is going to track a running total for each Squad, and will sum together each score submitted by each member.
 
 ## Creating the Leaderboard
 
-We create the leaderboard in the same we we would for personal leaderboards, but we'll specify the team type the leaderboard is for in the "_Type_" parameter.
+We create the Leaderboard in the same way we would for personal Leaderboards, but we'll specify the team type the Leaderboard is for in the *Type* parameter.
 
 ![](img/TeamLDR/4.jpg)
 
 ## Team Notifications
 
-Notifications are processed slightly differently for team personal leaderboards and based leaderboards. The differences are detailed in the table below: [su_table]
+Notifications are processed slightly differently for personal Leaderboards and team Leaderboards:
 
-Notification Personal Leaderboard Team Leaderboard
-
-New High Score
-When a player posts a new high score to this leaderboard, they will receive a NewHighScoreMessage
-When a player posts a new high score to this leaderboard, they will receive a NewTeamScoreMessage
-
-Social Notifications
- When a player beats his friends, they will receive a SocialRankChangedMessage
-When a player posts new high score to this leaderboard, the other team members will receive a NewTeamScoreMessage
-
-Top N Notifications
- When a player's rank is increased due to a new score being posted (and they are in the top N of the leaderboard) they will receive a GlobalRankChangedmessage
-When a teams rank is increased due to a new score being posted (and they are in the top N of the leaderboard) they will receive a TeamRankChangedmessage
-[/su_table]
+|Notification   |Personal Leaderboard  |Team Leaderboard
+|---|---|---|
+|New High Score   |When a player posts a new high score to this Leaderboard, they will receive a [NewHighScoreMessage](/API Documentation/Message API/Leaderboards/NewHighScoreMessage.md).|When a player posts a new high score to this Leaderboard, they will receive a [NewTeamScoreMessage](/API Documentation/Message API/Leaderboards/NewTeamScoreMessage.md).   |
+|Social Notifications  |When a player beats his friends, they will receive a [SocialRankChangedMessage](/API Documentation/Message API/Leaderboards/SocialRankChangedMessage.md).   |When a player posts new high score to this Leaderboard, the other team members will receive a [NewTeamScoreMessage](/API Documentation/Message API/Leaderboards/NewTeamScoreMessage.md). |
+|Top N Notifications  |When a player's rank is increased due to a new score being posted (and they are in the top N of the Leaderboard) they will receive a [GlobalRankChangedmessage](/API Documentation/Message API/Leaderboards/GlobalRankChangedMessage.md).   |When a teams rank is increased due to a new score being posted (and they are in the top N of the Leaderboard) they will receive a [TeamRankChangedmessage](/API Documentation/Message API/Teams/TeamRankChangedMessage.md). |
 
 ## Testing the Configuration
 
 ### Create the First Player
 
-Request
+#### Request
 
 ```
     {
@@ -71,7 +66,7 @@ Request
      "requestId": "1403266652739"
     }
 ```
-Response
+#### Response
 
 ```
     {
@@ -85,7 +80,9 @@ Response
 ```
 ### Create a Squad
 
-We'll use the CreateTeamRequest API to create a SQUAD that'Yorks owned by the current player. Request
+We'll use *CreateTeamRequest* to create a SQUAD that's owned by the current player.
+
+#### Request
 
 ```
     {
@@ -95,7 +92,9 @@ We'll use the CreateTeamRequest API to create a SQUAD that'Yorks owned by the cu
      "teamType": "SQUAD",
      "requestId": "1403266702171" }
 ```
-Response The response contains the team details, notice the current player is automatically added as a member.
+#### Response
+
+The response contains the team details, notice the current player is automatically added as a member.
 
 ```
     {
@@ -120,7 +119,7 @@ Response The response contains the team details, notice the current player is a
 ```
 ### Create the Second Player
 
-Request
+#### Request
 
 ```
     {
@@ -131,7 +130,8 @@ Request
      "requestId": "1403266652739"
     }
 ```
-Response
+
+#### Response
 
 ```
     {
@@ -142,10 +142,13 @@ Response
      "scriptData": null,
      "userId": "53a4274479b42ce7ea4c459b"
     }
+
 ```
 ### Join the Squad
 
-Request To join the squad, we'll pass in the teamId of the previously created team
+#### Request
+
+To join the squad, we'll pass in the teamId of the previously created team
 
 ```
     {
@@ -154,7 +157,10 @@ Request To join the squad, we'll pass in the teamId of the previously created te
      "requestId": "1403266924118"
     }
 ```
-Response The response contains the new team details, you'll see that the current player has now been added to the team as a member.
+
+#### Response
+
+The response contains the new team details, you'll see that the current player has now been added to the team as a member.
 
 ```
     {
@@ -184,7 +190,9 @@ Response The response contains the new team details, you'll see that the current
 ```
 ### Post a Score as Player 2
 
-Request We post a score of 10 into the platform.
+#### Request
+
+We post a score of 10 into the platform.
 
 ```
     {
@@ -194,7 +202,8 @@ Request We post a score of 10 into the platform.
      "requestId": "1403267110914"
     }
 ```
-Response
+
+#### Response
 
 ```
     {
@@ -204,7 +213,10 @@ Response
      "requestId": "1403267110914"
     }
 ```
-Message As we know this is the first score posted for this team we receive a NewHighScore message showing that the Squad we've created has a new high score of 10.
+
+#### Message
+
+Because we know this is the first score posted for this team, we receive a *NewTeamScoreMessage* showing that the Squad we've created has a new high score of 10.
 
 ```
     {
@@ -230,7 +242,7 @@ Message As we know this is the first score posted for this team we receive a New
 ```
 ### Authenticate as Player 1
 
-Request
+#### Request
 
 ```
     {
@@ -240,7 +252,8 @@ Request
      "requestId": "1403267256818"
     }
 ```
-Response
+
+#### Response
 
 ```
     {
@@ -252,9 +265,12 @@ Response
      "userId": "53a426ea79b42ce7ea4c4570"
     }
 ```
+
 ### Post a Score as Player 1
 
-Request This time we'll post a score of 15.
+#### Request
+
+This time we'll post a score of 15.
 
 ```
     {
@@ -265,7 +281,7 @@ Request This time we'll post a score of 15.
     }
 ```
 
-Response
+#### Response
 
 ```
 {
@@ -274,7 +290,10 @@ Response
  "scriptData": null
 }
 ```
-Message We receive a new TeamScoreMessage, showing that the teams score is now 25 (10 + 15)
+
+#### Message
+
+We receive a *NewTeamScoreMessage*, showing that the teams score is now 25 (10 + 15)
 
 ```
 {
@@ -295,4 +314,5 @@ Message We receive a new TeamScoreMessage, showing that the teams score is now 2
  "leaderboardShortCode": "SQUAD_LB",
  "leaderboardName": "Team LB"
 }
+
 ```

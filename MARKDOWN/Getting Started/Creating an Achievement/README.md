@@ -36,7 +36,7 @@ In this section you'll learn how to award an Achievement using custom Cloud Code
 
 <q>**More on Achievements?** For an in-depth guide about Achievements click [here](/Documentation/Configurator/Achievements.md).</q>
 
-![](img/Create/1.png)
+![](img/Create/8.png)
 
 <q>**Other Configuration Options?** All other Achievement configuration options that are not listed above can be left as default for this tutorial.</q>
 

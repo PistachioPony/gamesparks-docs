@@ -158,7 +158,7 @@ From the *Create* tab, you can create a new Collection in the database:
 
 * *Name* : The name to give the Collection. Within the database:
   * Metadata Collections are prefixed with "meta."
-  * Runtime Collections are prefixed with "script.".
+  * Runtime Collections are prefixed with "script."
 
 ### Drop
 
