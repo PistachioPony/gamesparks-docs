@@ -660,4 +660,4 @@ You can use *Custom Query* when you want more complex rules for grouping Pending
 
 A simple example of using this capability would be for players who only want to be matched with people playing in their own country. To do this, each *MatchMakingRequest* will contain Participant Data and a Custom Query to prevent the requesting player from being put into a Pending Match where there are players from another country.
 
-<q>**Using Custom Query!** Custom Query is not restricted to use for fine-tuning the matchmaking process but can be very usefully deployed elswhere.</q>
+<q>**Using Custom Query!** Custom Query is not restricted to use for fine-tuning the matchmaking process but can be very usefully deployed elsewhere.</q>

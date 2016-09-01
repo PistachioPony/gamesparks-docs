@@ -26,7 +26,7 @@ Each game has its own *PREVIEW stage* Mongo database. If you've taken a game Sna
 
 The *Actions* panel contains a series of tabs, each of which represents the different operations you can perform against the data in the selected Mongo database. See below for a detailed account of how to work with these tabs.
 
-## Collection Drop-Down Menu Filtering
+## Using Collection Drop-Down Menu Filtering
 
 You can use the *Collection* drop-down on each *Actions* tab to select from the list of Collections that are available in your database. If the Collections list is a long list, you can use filter switches to turn on and off sections of the Collections list and make things more manageable.
 
@@ -36,9 +36,9 @@ You can also filter the Collection list by starting to type the name of the Coll
 
 ![](img/6.png)
 
-## Output Panel
+## Working with the Output Panel
 
-The results for the operations you perform against a database Collection are returned into the *Output* panel. For example, here is the result for *Explain* for the *Find* tab:
+The results for the operations you perform against a database Collection are returned into the *Output* panel - you can click *Find* or *Explain* to get results. For example, here is the result for *Explain* for the *Find* tab:
 
 ![](img/17.png)
 
@@ -79,7 +79,7 @@ From the *Find* tab you can execute queries against Collections:
 
 [MongoDB Find Manual](http://docs.mongodb.org/manual/reference/method/db.collection.count)
 
-From the *Count* tab you can get a count of the number of documents in a Collection that match an optional query.
+From the *Count* tab you can get a count of the number of documents in a Collection that match a *Find* query.
 
 ![](img/8.png)
 

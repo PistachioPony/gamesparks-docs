@@ -5,9 +5,9 @@ src: /Tutorials/Social Features/Creating Team Leaderboards.md
 
 # How to Create a Team Leaderboard
 
-You can create Leaderboards that show the performance of a team rather than the performance of a single player. For team-based Leaderboards, you need a few things in place. This tutorial will take you through the process of getting them set up.
+You can create a Leaderboards that shows the performance of a *team* rather than the performance of a single player. For team-based Leaderboards, you need a few things in place. This tutorial will take you through the process of getting them set up.
 
-In this example, we'll create a team type called *Squad*. When a player posts a score, the team they are in will be credited with the score. This team score can then be used on a Leaderboard for the team.
+In this example, we'll create a team type called *Squad*. When a player posts a score, the team they belong to will be credited with the score. This team score can then be used on a Leaderboard for the team.
 
 ## Creating a Team Type
 
@@ -23,7 +23,7 @@ Here we've called the team type *Squad* and set the team to have a maximum of 5 
 
 ## Creating the Event
 
-We'll create a simple high score event that takes a single score parameter.
+We'll create a simple high score Event that takes a single score parameter.
 
 *1.* Navigate to *Configurator > Events*.
 
@@ -31,13 +31,13 @@ We'll create a simple high score event that takes a single score parameter.
 
 ![](img/TeamLDR/6.png)
 
-In this example, the score we are passing should be added to all the previous scores submitted towards that team. So we've set the *Default Calc* to sum them up. This will create the default Running Total for the event, allowing us to track the score for a player.
+In this example, the score we are passing should be added to all the previous scores submitted towards that team. So we've set the *Default Calc* to sum them up. This will create the default Running Total for the Event, allowing us to track the score for a player.
 
 *3.* Click *Save*.
 
 ## Creating the Team Running Total
 
-We also want to track the score for the team. We'll need to create another Running Total for the high score event, that tracks the value for a team rather than for a player.
+We also want to track the score for the team. We'll need to create another Running Total for the High Score Event, one that tracks the value for a *team* instead of tracking the score for a single player.
 
 *1.* Navigate to *Configurator > Leaderboards*.
 
@@ -48,7 +48,7 @@ We also want to track the score for the team. We'll need to create another Runni
 
 ![](img/TeamLDR/7.png)
 
-We select the *High Score* Event but the key change in this Running Total is that we have set the *Type* parameter to the team type we want this running total to track - *Squad*. We are now in a position where the GameSparks platform is going to track a Running Total for each Squad and will sum each score submitted by each member.
+We select the *High Score* Event but the key change in this Running Total is that we have set the *Type* parameter to the team type we want this running total to track - *Squad*. We are now in a position where the GameSparks platform is going to track a Running Total for each Squad and will sum each score submitted by each team member.
 
 *4.* Click *Save*.
 

@@ -19,7 +19,7 @@ All REST API methods require the use of HTTP Basic Authentication to authenticat
   * For example, if the user agent uses 'Aladdin' as the username and 'open sesame' as the password, then the header is formed as follows:
     * Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==
 
-## Find data
+## Find Data
 
 Find data using the following URL. *POST: /rest/games/{gameApiKey}/mongo/{stage}/{collection}/find*
 
@@ -87,7 +87,7 @@ POST: https://portal.gamesparks.net/rest/games/44ujrQ3BnudG/mongo/preview/playe
     ]
 ```
 
-## Insert data
+## Insert Data
 
 Insert data using the following URL. *POST: /rest/games/{gameApiKey}/mongo/{stage}/{collection}/insert*
 
@@ -120,7 +120,7 @@ Form Data - document : {"my key" : "my value"}
     ]
 ```
 
-## Update data
+## Update Data
 
 Update data using the following URL. *POST: /rest/games/{gameApiKey}/mongo/{stage}/{collection}/update*
 
@@ -154,7 +154,7 @@ Form Data - query : { "\_id": "my key" }, update : {"my data":"new value"}
     ]
 ```
 
-## Remove data
+## Remove Data
 
 Remove data using the following URL. *POST: /rest/games/{gameApiKey}/mongo/{stage}/{collection}/remove*
 
@@ -182,7 +182,7 @@ Form data - query : {"\_id": { "$oid": "539707414566be9a5c0ff373"}}
     }
 ```
 
-## Aggregate data
+## Aggregate Data
 
 Aggregate data using the following URL. *POST: /rest/games/{gameApiKey}/mongo/{stage}/{collection}/aggregate*
 
@@ -214,7 +214,7 @@ POST: https://portal.gamesparks.net/rest/games/44ujrQ3BnudG/mongo/preview/analy
 { "_id": "2014-06", "AvgSessionTime": 0 }
 ```
 
-## Create a collection
+## Create a Collection
 
 Create a collection using the following URL.
 
@@ -245,7 +245,7 @@ Form data - collectionType : meta
 }
 ```
 
-## Drop a collection
+## Drop a Collection
 
 Drop a collection using the following URL.
 
@@ -269,7 +269,7 @@ POST: https://portal.gamesparks.net/rest/games/44ujrQ3BnudG/mongo/preview/weapo
 }
 ```
 
-## Show collection statistics
+## Show Collection Statistics
 
 Show collection statistics using the following URL.
 
@@ -309,7 +309,7 @@ POST: https://portal.gamesparks.net/rest/games/44ujrQ3BnudG/mongo/preview/analy
 }
 ```
 
-## Show database statistics
+## Show Database Statistics
 
 Show database statistics using the following URL.
 
@@ -354,7 +354,7 @@ POST: https://portal.gamesparks.net/rest/games/44ujrQ3BnudG/mongo/preview/dbsta
 
 ## Count
 
-Count the number of documents in a collection that match an optional query using the following URL.
+Count the number of documents in a collection that match a *Find* query using the following URL.
 
 POST: /rest/games/{gameApiKey}/mongo/{stage}/{collection}/count
 
@@ -451,7 +451,7 @@ If an error occurs with any of the NoSQL Explorer REST API calls an error respo
 }
 ```
 
-#### Response code meanings
+#### Response Code Meanings
 
 
 |Code   | Description  |
