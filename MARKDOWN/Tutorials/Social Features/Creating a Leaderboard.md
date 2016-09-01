@@ -5,73 +5,140 @@ src: /Tutorials/Social Features/Creating a Leaderboard.md
 
 # How to Create and Use a Leaderboard
 
-In this exercise we create an Event with which to log player scores, then create a high score table using Leaderboards, and then test the configuration via the Test Harness.
+In this tutorial we follow an example of how to create and use a Leederboard. We'll:
+* Create an Event which we'll use to log player scores.
+* Create Leaderboard that will act as a high score table by arranging all the players' scores from highest to lowest.
+* Lastly, test the configuration in the Test Harness.
 
-## Create an Event
+## Creating an Event
 
-In this section we will use the Configurator to create an event that will allow your game code to post player scores into the GameSparks platform and have the platform store the highest score for each player. Go to Configurator/Events and click the plus icon to bring up the Create Event dialog.
+In this section we'll use the Configurator to create an Event that will allow your game code to post player scores into the GameSparks platform and have the platform store the highest score for each player.
+
+*1.* Go to *Configurator > Events*:
 
 ![](img/CreateUseLDR/1.png)
 
-Now fill in the event's details and click the plus icon to access the event's attributes.
+*2.* Click the plus ![](/img/fa/plus.png) icon. The *Create Event* dialog appears.
+
+*3.* Enter details for the new Event's details:
 
 ![](img/CreateUseLDR/2.png)
 
-Now fill in the event attribute details and click the Save button. The Name is the name of the attribute rather than the event, remembering that one event can have several attributes. The Short Code that you specify will be used as the key for the score that you post into the platform from your game code. Set the Data Type to Number in the case of a high score table because the incoming scores are integers and we want to be able to sort them into numerical order. In the case of a high score table we want to track the highest score posted by each of the game's players hence for Default Calc we choose the option 'Maximum'. This will result in one record per player been stored in the GameSparks platform and that record will contain the player's highest score. It's fine to leave Default Value blank.
+*4.* Click the plus ![](/img/fa/plus.png) icon to add an Attribute to the Event.
+
+*5.* Now fill in the Event Attribute details:
 
 ![](img/CreateUseLDR/3.png)
 
-## Create a Leaderboard
+* *Name* - The Name of the Attribute - remember that one Event can have several Attributes.
+* *Short Code* - This will be used as the key for the score that you post into the platform from your game code.
+* *Data Type* - Set to Number in the case of a high score table because the incoming scores are integers and we want to be able to sort them into numerical order.
+* *Default Value* - For our example, you can leave this blank.
+* *Default Calc* - In the case of a high score table we want to track the highest score posted by each of the game's players. Hence, we select *Maximum* for the default calculation. This will result in one record per player been stored in the GameSparks platform and that record will contain the player's highest score.
 
-In this section we will create a Leaderboard which arranges all the players' scores in order from highest to lowest. Start by going to Configurator/Leaderboards and clicking the plus icon to bring up the Create Leaderboard dialog. Don't click the 'Quick Create' button - that's an advanced feature.
+<q>**Note:** Leaderboards are driven by Running Totals. Any Events that you create with an Attribute which doesn't have *Default Calc* set to *Used in Script* will appear for selection as a Running Total when you configure a Leaderboard.</q>
+
+*6.* Click *Save*.
+
+## Creating a Leaderboard
+
+In this section we'll create a Leaderboard which arranges all the players' scores in order from highest to lowest.
+
+*1.* Start by going to *Configurator > Leaderboards*:
 
 ![](img/CreateUseLDR/4.png)
 
-Now fill in the Leaderboard details and click the Save button. Name and description are self-explanatory. The short code will be used when your game code posts scores in to the GameSparks platform. Set the Update Frequency to 'Real-time' and leave the other options off for now (they are advanced features that allow you to notify players when player positions in the Leaderboard changes). Then click the plus icon as indicated below to add fields to the Leaderboard.
+*2.* Click the plus ![](/img/fa/plus.png) icon. The *Create Leaderboard* dialog appears. Don't click the 'Quick Create' button - that's an advanced feature.
+
+*3.* Enter the Leaderboard details:
 
 ![](img/CreateUseLDR/5.png)
 
-Now fill in the field details. The Running Total and Summary fields will default to the attributes you created for the event above (or if you have already created other events you can select 'Score Event' and 'Score attribute' respectively from the drop downs). Note that Running Totals are an advanced topic that we don't need to worry about for this exercise. The FilterType is set to '\*' (wildcard) so that all values are included. The Filter Value is not relevant in this exercise. Finally the Sort field is set to DESC (descending) to order the Leaderboard from highest player score to lowest. Click save.
+* *Name* - Mandatory field for name of the Leaderboard.
+* *Description* - A mandatory field, typically used to describe the Leaderboard's purpose.
+* *Short Code* - A mandatory field which will be used when your game posts scores in to the GameSparks platform.
+* *Update Schedule* - Set this to *Real Time*.
+
+<q>**Other Configuration Options?** For our example, you can leave the other Leaderboard options at their default settings. (They are advanced features that allow you to notify players when player positions in the Leaderboard changes)</q>
+
+*4.* Click the plus ![](/img/fa/plus.png) icon to add a *Running Total* to the Leaderboard.
 
 ![](img/CreateUseLDR/6.png)
 
+*5.* Now fill in the *Running Total* details.
+
+* *Running Total* and *Summary* - These will default to the Attribute you created for the Event above (or if you have already created other Events you can select *Score Event* and *Score attribute* respectively from the drop downs). Note that Running Totals are an advanced topic that we don't need to worry about for this exercise.
+* *FilterType* - Set to '\*' (wildcard) so that all values are included.
+* *Filter Value* - This is not relevant in this example.
+* *Sort* - Set to DESC (descending) to order the Leaderboard from highest player score to lowest.
+
+*6.* Click *Save*.
+
+
+
 ## Testing the High Score Leaderboard and Event with the Test Harness
 
-In this section we will use the Test Harness to register some test players with the preview version of the game, authorise these players and post a score to the Leaderboard for each one. We will see the JSON requests and responses as well as asynchronous messages generated by the platform. We will then query the Leaderboard data in various ways.
+In this section we'll:
+* Use the Test Harness to register some test players with the preview version of the game.
+* Authorize these players and post a score to the Leaderboard for each one.
+* We'll see the JSON requests and responses as well as asynchronous messages generated by the platform.
+* We'll then query the Leaderboard data in various ways.
 
-### Register Test Players
+### Registering Test Players
 
-Go to the Test Harness section and select RegistrationRequest from the Authentication menu and change the userName and displayName as shown below.
+*1.* Go to the Test Harness section and select [RegistrationRequest](/API Documentation/Request API/Authentication/RegistrationRequest.md) from the *Authentication* menu and change the *userName* and *displayName* as shown below.
 
 ![](img/CreateUseLDR/7.png)
 
-To send this JSON request to the GameSparks platform press the Play icon.
+*2.* To send this JSON request to the GameSparks platform press the play ![](/img/fa/play.png) icon.
 
 ![](img/CreateUseLDR/8.png)
 
-The Inspector shows the request (in green text) that was sent sent to the GameSparks platform via the WebSocket and the response (in blue text).
+The *Inspector* shows the request (in green text) that was sent to the GameSparks platform via the WebSocket and the response (in blue text).
 
 ![](img/CreateUseLDR/9.png)
 
 Repeat the registration step for four additional users.
 
-### Authentication Test Player
+### Authenticating a Test Player
 
-Now authorise Player1. Select the AuthenticationRequest from the Authentication menu and change the userName to 'Player1' as shown below. Press the Play icon to send the request.
+Now we'll authorize Player1.
 
-![](img/CreateUseLDR/10.png)
+*1.* Select the [AuthenticationRequest](/API Documentation/Request API/Authentication/AuthenticationRequest.md) from the *Authentication* menu and change the *userName* to *Player1* as shown below.
 
-### Post a Score to the Leaderboard
+![](img/CreateUseLDR/16.png)
 
-To log a score for Player1, select SCORE_EVT from the LogEvent menu - this is the event you created above. Notice that the short code of the event attribute that we chose earlier, SCORE_ATTR, has been inserted as one of the keys in the JSON request. Change the value to 100 as shown and press the play icon. This will register a score of 100 for Player1.
+*2.* To send this JSON request to the GameSparks platform press the play ![](/img/fa/play.png) icon.
+
+![](img/CreateUseLDR/17.png)
+
+The *Inspector* shows the request (in green text) that was sent to the GameSparks platform via the WebSocket and the response (in blue text).
+
+![](img/CreateUseLDR/18.png)
+
+
+### Posting a Score to the Leaderboard
+
+*1.* To log a score for Player1, select *SCORE_EVT* from the LogEvent menu - this is the Event you created above. Notice that the Short Code of the Event Attribute that we chose earlier, *SCORE_ATTR*, has been inserted as one of the keys in the JSON request.
+
+*2.* Change the value to 100 as shown and press the play ![](/img/fa/play.png) icon. This will register a score of 100 for Player1:
 
 ![](img/CreateUseLDR/11.png)
 
-Note that as well as the request and response shown in the Inspector that there is also an asynchronous NewHighScoreMessage message (in orange text). This message includes the score posted as well as the global rank details. Every time a player beats their previous best they will receive a message of this type. If Player1 logs another score that is 10 or less they will not receive a NewHighScoreMessage. Now repeat the authorisation and log event step for the other four users that you registered. Use an increasing score for each user, e.g. 200 for Player2, 300 for Player3 etc.
+Note that as well as the request and response shown in the *Inspector* that there is also an asynchronous [NewHighScoreMessage](/API Documentation/Message API/Leaderboards/NewHighScoreMessage.md) (in orange text):
+* This message includes the score posted as well as the global rank details.
+* Every time a player beats their previous best they will receive a message of this type.
+* If Player1 logs another score that is 10 or less they will not receive a *NewHighScoreMessage*.
 
-### Retrieve Leaderboard Data
+*3.* Now repeat the authorization and log event step for the other four users that you registered. Use an increasing score for each user, fro example, 200 for Player2, 300 for Player3, and so on.
 
-To view the Leaderboard select LeaderBoardDataRequest from the Leaderboards menu. Change the leaderboardShortCode in the JSON request to HIGH_SCORE_LB, which is the short code that you used when you created the Leaderboard. Then click the Play icon. The response message can be seen in the Inspector and should contain entries for all five users that you logged score events for in the previous steps along with their ranks.
+### Retrieving Leaderboard Data
+
+*1.* To view the Leaderboard, select [LeaderboardDataRequest](/API Documentation/Request API/Leaderboards/LeaderboardDataRequest.md) from the Leaderboards menu.
+
+*2.* Change the *leaderboardShortCode* in the JSON request to *HIGH_SCORE_LB*, which is the Short Code that you used when you created the Leaderboard.
+
+*3.* Click the play ![](/img/fa/play.png) icon icon. The response message can be seen in the Inspector and should contain entries for all five users that you logged score events for in the previous steps along with their ranks.
 
 ![](img/CreateUseLDR/12.png)
 

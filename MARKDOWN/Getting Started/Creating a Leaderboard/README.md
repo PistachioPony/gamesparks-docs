@@ -36,7 +36,7 @@ In this tutorial, we'll go over the simple processes involved in creating an 
     * *Default Value* - This is the default value that would be used for this Event Attribute if it's not passed into the [LogEventRequest](/API Documentation/Request API/Player/LogEventRequest.md).
     * *Default Calculation* - This determines how values are tracked in the Running Totals.
 
-<q>**Note:** You don't need to understand fully the concept of Running Totals for the purposes of this tutorial. For the Event Attribute, we set *Default Calc* to *Maximum* because we want to track the highest score posted for your player in the example we're setting up. Any Event Attribute that you create which *doesn't have* the *Default Calc* set to *Used in Script* will appear for selection as a Running Total when you configure a Leaderboard. (You can learn more about Running Totals [here](/Documentation/Configurator/Running Totals.md).)</q>
+<q>**Note:** You don't need to understand fully the concept of Running Totals for the purposes of this tutorial. For the Event Attribute, we set *Default Calc* to *Maximum* because we want to track the highest score posted for your player in the example we're setting up. Any Event that you create with an Attribute which *doesn't have* the *Default Calc* set to *Used in Script* will appear for selection as a Running Total when you configure a Leaderboard. (You can learn more about Running Totals [here](/Documentation/Configurator/Running Totals.md).)</q>
 
 ![](img/CreatingALeaderboard/1.png)
 
